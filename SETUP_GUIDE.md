@@ -144,3 +144,51 @@ Edit `.github/workflows/daily.yml`, the line `cron: "10 22 * * 1-5"`. The five f
 That's it. Once Part 2 is done, you have a self-updating macro-risk tracker with a live webpage
 and a downloadable spreadsheet — no maintenance required beyond your weekly review of the
 manual indicators.
+
+---
+
+## Part 4 — The automated AI rating agent
+
+By default the tracker moves its *market* indicators (copper, oil, VIX, MOVE) automatically
+every day, and holds the *judgment* indicators (Taiwan tension, Hormuz status, China export
+curbs, etc.) at their baseline until a human edits them. The **agent** automates that second
+group too — so you never have to adjust numbers by hand.
+
+### How it works (and why it's trustworthy)
+The agent does **not** invent scores. For each judgment indicator it:
+1. **Searches** authoritative sources for the *current* status (live web search).
+2. **Classifies** that evidence strictly against a fixed rubric in `config/framework.yaml`
+   (band 0 = benign, 1 = watch, 2 = stress; or the latest published number).
+3. **Logs** the value, a confidence level, a one-line rationale, and the source links to
+   `data/agent_assessments.json` — every indicator, every run, fully auditable.
+
+Safety rails: a **low-confidence** result never flips the number — it keeps the prior value and
+is flagged for review. The deterministic engine still does all the math. And **you always win**:
+anything you pin in `manual_input.csv` overrides the agent. The full rubric is in **`FRAMEWORK.md`**.
+
+### Turning it on
+It's already wired into the workflow and needs only your `ANTHROPIC_API_KEY` secret (Part 2,
+Step 4). With that set:
+- **Every weekday:** market data + narrative refresh (free; reuses the last agent ratings).
+- **Every Monday:** the agent re-researches all judgment indicators.
+- **Anytime:** Actions tab → Run workflow (leave "Run the AI rating agent" ticked) for a full refresh now.
+
+No key set? Everything still runs — judgment indicators just stay at baseline until you edit them.
+
+### Overriding the agent
+Open `manual_input.csv` (edit it right on GitHub), put a number in the `value` column for any
+indicator to **pin** it, and commit. Blank = let the agent decide. The agent skips anything you've
+pinned and notes it in the audit log.
+
+### Reviewing what it did
+After an agent run, open `data/agent_assessments.json` in your repo. Each entry shows the value,
+confidence, rationale, and sources. The `review_flags` list at the bottom is your short worklist —
+indicators that were low-confidence or that changed — worth a 2-minute glance.
+
+### Cost & tuning
+- The agent makes one small web-grounded call per judgment indicator (~46 of them) on its run day.
+  Weekly cadence keeps this to roughly a **dollar or two a month** on the default model.
+- Cheaper: set a repository **variable** `AGENT_MODEL` to `claude-haiku-4-5-20251001`
+  (Settings → Secrets and variables → Actions → Variables). Haiku is a fraction of the cost.
+- Less often / more often: edit the second `cron` line in `.github/workflows/daily.yml`
+  (`30 13 * * 1` = Mondays; `* * 1,4` would be Mon & Thu, etc.).

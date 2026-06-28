@@ -99,3 +99,11 @@ data/history.csv         append-only daily log
 - Cadences differ: market indicators truly move daily; fundamentals are monthly/quarterly;
   policy items are event-driven. The tracker marks anything not freshly updated.
 - Informational analysis only — **not investment, legal, or financial advice.**
+
+## Automated rating agent (optional)
+`src/agent.py` can rate the judgment indicators for you: it web-searches the current status,
+classifies it against the rubric in `config/framework.yaml`, and logs reasoning + sources to
+`data/agent_assessments.json`. Low-confidence calls are held back; `manual_input.csv` overrides
+always win. Run locally with `python src/main.py --agent` (needs `ANTHROPIC_API_KEY`), or let the
+GitHub workflow run it weekly. Human-readable rubric: `FRAMEWORK.md` (regenerate with
+`python src/build_framework.py`). See `SETUP_GUIDE.md` Part 4.

@@ -1,0 +1,299 @@
+# =====================================================================
+# INDICATOR RATING FRAMEWORK
+# ---------------------------------------------------------------------
+# This file is the "credible, fact-based" core of the automated agent.
+# For each judgment-based indicator it defines:
+#   type    : "band"  -> the agent returns 0 (benign) / 1 (watch) / 2 (stress)
+#             "value" -> the agent returns the latest published NUMBER
+#                        (the good/warn thresholds in stories.yaml then band it)
+#   query   : a starting search hint
+#   rubric  : the explicit, checkable definition of each level
+#   sources : authoritative outlets the agent should prefer/verify against
+#
+# The agent (src/agent.py) MUST classify strictly per the rubric, cite what it
+# found, and report a confidence. Market indicators (copper, oil, VIX, MOVE) are
+# NOT here - they come from deterministic price feeds, not the agent.
+#
+# Editing a rubric here changes how the agent judges that indicator forever after.
+# =====================================================================
+
+indicators:
+
+  # ---------------- SET 1 ----------------
+  clearing_status:
+    type: band
+    query: "SEC US Treasury central clearing mandate 2026 2027 timeline status delay"
+    rubric: "0 = implementation on schedule, no delay; 1 = partial delay, phased relief, or notable industry pushback; 2 = mandate delayed, carved out, or paused."
+    sources: ["https://www.sec.gov", "https://www.dtcc.com", "https://www.risk.net"]
+
+  jgb30:
+    type: value
+    query: "Japan 30-year JGB yield today percent"
+    rubric: "Report the latest 30-year Japanese Government Bond yield as a percent (e.g. 3.4)."
+    sources: ["https://www.investing.com/rates-bonds/japan-30-year-bond-yield", "https://tradingeconomics.com/japan/government-bond-yield"]
+
+  plan_financing:
+    type: band
+    query: "Japan Takaichi fiscal stimulus plan financing JGB issuance market reaction"
+    rubric: "0 = funding path clear and market-accepted; 1 = financing unclear or causing yield pressure; 2 = disorderly (sharp yield spike or failed/under-covered auctions)."
+    sources: ["https://www.reuters.com/markets/asia", "https://www.bloomberg.com/markets"]
+
+  direct_lending_default:
+    type: value
+    query: "private credit direct lending default rate latest 2026 percent"
+    rubric: "Report the latest direct-lending / private-credit default rate as a percent (e.g. 3.0)."
+    sources: ["https://www.imf.org/en/Publications/GFSR", "https://pitchbook.com", "https://www.ft.com"]
+
+  redemption_gates:
+    type: band
+    query: "private credit fund redemption gates limits 2026"
+    rubric: "0 = no redemption gating; 1 = isolated funds limiting redemptions; 2 = widespread gating across large funds."
+    sources: ["https://www.ft.com", "https://www.bloomberg.com"]
+
+  new_imf_programs:
+    type: band
+    query: "IMF new program emerging market default missed coupon 2026"
+    rubric: "0 = calm, no new distress; 1 = rising (new IMF programs or missed coupons appearing); 2 = a cluster of sovereign defaults/programs at once."
+    sources: ["https://www.imf.org/en/News", "https://www.worldbank.org"]
+
+  china_ppi:
+    type: value
+    query: "China PPI producer price index year-on-year latest percent"
+    rubric: "Report the latest China PPI year-on-year change as a percent (negative = deflation, e.g. -2.5)."
+    sources: ["https://www.stats.gov.cn/english/", "https://tradingeconomics.com/china/producer-prices-change"]
+
+  trade_actions:
+    type: band
+    query: "new tariffs anti-dumping China export trade measures latest 2026"
+    rubric: "0 = calm; 1 = rising tariff/anti-dumping actions; 2 = escalating trade-war cycle with major new measures."
+    sources: ["https://www.reuters.com/business", "https://www.wto.org"]
+
+  license_flow:
+    type: band
+    query: "China rare earth magnet export licenses approvals status 2026"
+    rubric: "0 = licenses flowing normally; 1 = slowing/selective approvals; 2 = effectively frozen or new broad restrictions."
+    sources: ["https://www.reuters.com/markets/commodities", "https://www.csis.org"]
+
+  truce_status:
+    type: band
+    query: "US China rare earth trade truce November 2025 status extended expired"
+    rubric: "0 = truce extended/holding; 1 = truce expiring or fraying; 2 = truce lapsed / controls reimposed."
+    sources: ["https://www.reuters.com", "https://www.csis.org"]
+
+  hree_premium:
+    type: value
+    query: "heavy rare earth ex-China price premium multiple 2026"
+    rubric: "Report the approximate ex-China heavy-rare-earth price premium as a multiple of the China price (e.g. 3.0)."
+    sources: ["https://www.fastmarkets.com", "https://adamasintel.com"]
+
+  peg_deviation:
+    type: value
+    query: "largest stablecoin USDT USDC peg deviation depeg percent latest"
+    rubric: "Report the largest recent peg deviation of a major stablecoin as a percent away from $1 (e.g. 0.1)."
+    sources: ["https://www.coindesk.com", "https://defillama.com/stablecoins"]
+
+  stablecoin_supply:
+    type: value
+    query: "total stablecoin market cap supply USD billions latest"
+    rubric: "Report total USD stablecoin supply in billions of dollars (e.g. 280)."
+    sources: ["https://defillama.com/stablecoins", "https://www.theblock.co/data/stablecoins"]
+
+  genius_impl:
+    type: band
+    query: "GENIUS Act stablecoin regulation implementation 2026 status issues"
+    rubric: "0 = smooth implementation; 1 = gaps or compliance friction; 2 = significant problems or a major non-compliant failure."
+    sources: ["https://www.sec.gov", "https://www.federalreserve.gov", "https://www.coindesk.com/policy"]
+
+  # ---------------- SET 2 ----------------
+  ai_revenue_gap:
+    type: band
+    query: "AI capex versus revenue gap monetization concern 2026 hyperscaler"
+    rubric: "0 = gap closing / revenue catching up; 1 = wide but stable gap; 2 = gap widening fast or clear monetization disappointment."
+    sources: ["https://www.theinformation.com", "https://www.ft.com", "https://www.sequoiacap.com"]
+
+  gpu_refi_stress:
+    type: band
+    query: "GPU-backed debt data center financing refinancing stress 2026"
+    rubric: "0 = none; 1 = early signs of strain; 2 = acute refinancing stress or a notable default."
+    sources: ["https://www.ft.com", "https://www.bloomberg.com", "https://www.moodys.com"]
+
+  cmbs_office_delinq:
+    type: value
+    query: "CMBS office delinquency rate latest percent Trepp 2026"
+    rubric: "Report the latest CMBS office delinquency rate as a percent (e.g. 12.3)."
+    sources: ["https://www.trepp.com/trepptalk", "https://www.commercialsearch.com"]
+
+  regional_bank_stress:
+    type: band
+    query: "regional bank commercial real estate stress failures 2026"
+    rubric: "0 = calm; 1 = isolated regional-bank stress; 2 = a cluster of failures or sharp deposit flight."
+    sources: ["https://www.fdic.gov", "https://www.federalreserve.gov", "https://www.spglobal.com"]
+
+  govt_stability:
+    type: band
+    query: "France government stability budget no-confidence snap election latest"
+    rubric: "0 = stable government; 1 = fragile (minority govt, budget fights); 2 = collapse, snap election called, or presidential crisis."
+    sources: ["https://www.lemonde.fr/en/", "https://www.reuters.com/world/europe"]
+
+  rating_action:
+    type: band
+    query: "France sovereign credit rating outlook S&P Moody's Fitch latest"
+    rubric: "0 = stable outlook; 1 = negative outlook or watch; 2 = an actual downgrade."
+    sources: ["https://www.spglobal.com/ratings", "https://www.fitchratings.com", "https://www.moodys.com"]
+
+  subprime_auto_dpd:
+    type: value
+    query: "subprime auto loan 60+ day delinquency rate latest percent 2026"
+    rubric: "Report the latest subprime auto 60+ day delinquency rate as a percent (e.g. 6.2)."
+    sources: ["https://www.fitchratings.com", "https://www.coxautoinc.com/market-insights/"]
+
+  bnpl_delinq:
+    type: band
+    query: "buy now pay later BNPL delinquency trend 2026 Affirm Klarna"
+    rubric: "0 = stable; 1 = rising delinquencies; 2 = sharp spike or major BNPL lender distress."
+    sources: ["https://www.richmondfed.org", "https://www.cfpb.gov", "https://www.ft.com"]
+
+  dollar_reserve_share:
+    type: value
+    query: "US dollar share global FX reserves IMF COFER latest percent"
+    rubric: "Report the latest USD share of allocated global FX reserves as a percent (e.g. 56.8)."
+    sources: ["https://data.imf.org/cofer", "https://www.imf.org"]
+
+  weaponization_event:
+    type: band
+    query: "reserve weaponization sanctions asset freeze non-dollar settlement latest 2026"
+    rubric: "0 = none; 1 = new talk/agreements on non-dollar settlement or asset-freeze threats; 2 = a major new reserve freeze or settlement shift."
+    sources: ["https://www.reuters.com", "https://www.atlanticcouncil.org"]
+
+  insurer_exits:
+    type: band
+    query: "home insurer non-renewals market exits states 2026"
+    rubric: "0 = stable; 1 = rising non-renewals/exits; 2 = accelerating withdrawals across multiple states."
+    sources: ["https://www.naic.org", "https://www.insurancejournal.com"]
+
+  cat_losses:
+    type: band
+    query: "insured catastrophe losses severe season 2026 hurricane wildfire"
+    rubric: "0 = normal season; 1 = elevated catastrophe losses; 2 = a severe / record loss season underway."
+    sources: ["https://www.aon.com/reinsurance", "https://www.munichre.com", "https://www.swissre.com/institute/"]
+
+  ss_reform_news:
+    type: band
+    query: "US Social Security trust fund reform benefit cut pension news 2026"
+    rubric: "0 = no change; 1 = active reform debate or trust-fund warnings; 2 = concrete benefit cuts or an emergency measure."
+    sources: ["https://www.ssa.gov/oact/", "https://www.crfb.org"]
+
+  pension_leverage_event:
+    type: band
+    query: "pension fund leverage LDI margin crisis 2026"
+    rubric: "0 = none; 1 = visible pension-leverage stress; 2 = a UK-2022-style forced-selling blow-up."
+    sources: ["https://www.bankofengland.co.uk", "https://www.ft.com", "https://www.pionline.com"]
+
+  funded_ratio:
+    type: value
+    query: "large US public pension funded ratio latest percent 2026"
+    rubric: "Report a representative large US public-pension funded ratio as a percent (e.g. 78)."
+    sources: ["https://www.milliman.com", "https://equable.org"]
+
+  # ---------------- SET 3 ----------------
+  interconnection_months:
+    type: value
+    query: "US grid interconnection queue wait time median months latest LBNL"
+    rubric: "Report the latest median grid interconnection wait in months (e.g. 54)."
+    sources: ["https://emp.lbl.gov/queues", "https://www.ferc.gov"]
+
+  dc_moratoria:
+    type: band
+    query: "data center moratorium ban state legislation electricity backlash 2026"
+    rubric: "0 = none; 1 = several states weighing moratoria / rising backlash; 2 = widespread bans or major project cancellations."
+    sources: ["https://www.utilitydive.com", "https://www.datacenterdynamics.com"]
+
+  ai_power_pressure:
+    type: band
+    query: "data center power demand growth grid shortfall vs slowdown 2026"
+    rubric: "0 = easing (demand slowing / supply catching up); 1 = tight; 2 = acute shortfall (curtailments, emergencies)."
+    sources: ["https://www.iea.org", "https://www.woodmac.com", "https://www.spglobal.com/commodityinsights"]
+
+  mine_disruptions:
+    type: band
+    query: "major copper mine disruption outage strike 2026 Grasberg Kamoa"
+    rubric: "0 = none; 1 = some disruptions; 2 = a cluster of major outages tightening supply."
+    sources: ["https://www.mining.com", "https://www.reuters.com/markets/commodities"]
+
+  copper_deficit_timing:
+    type: band
+    query: "copper market balance surplus deficit ICSG forecast 2026"
+    rubric: "0 = surplus / well supplied; 1 = roughly balanced; 2 = in deficit (inventories drawing down)."
+    sources: ["https://icsg.org", "https://www.spglobal.com/commodityinsights"]
+
+  drought_chip_farm:
+    type: band
+    query: "drought Taiwan US Southwest major farming region chip fab water 2026"
+    rubric: "0 = no significant drought in key hubs; 1 = emerging drought in a chip/farm hub; 2 = acute drought disrupting chips or major crops."
+    sources: ["https://droughtmonitor.unl.edu", "https://www.reuters.com", "https://www.wri.org"]
+
+  reservoir_stress:
+    type: band
+    query: "Lake Mead Colorado River reservoir levels key basins latest 2026"
+    rubric: "0 = normal levels; 1 = low / below average; 2 = critical (near dead-pool or emergency cuts)."
+    sources: ["https://www.usbr.gov/lc/region/g4000/hourly/levels.html", "https://water.weather.gov"]
+
+  water_dispute:
+    type: band
+    query: "transboundary water dispute Nile GERD Indus escalation 2026"
+    rubric: "0 = calm; 1 = tense / negotiations stalled; 2 = open crisis or unilateral action."
+    sources: ["https://www.aljazeera.com", "https://www.reuters.com/world"]
+
+  fao_food_trend:
+    type: band
+    query: "FAO Food Price Index latest direction rising falling 2026"
+    rubric: "0 = falling/stable; 1 = elevated and rising; 2 = spiking sharply."
+    sources: ["https://www.fao.org/worldfoodsituation/foodpricesindex", "https://www.fao.org"]
+
+  china_export_curbs:
+    type: band
+    query: "China fertilizer export restrictions urea phosphate quota status 2026"
+    rubric: "0 = curbs lifted / normal exports; 1 = curbs in place; 2 = curbs tightened or extended."
+    sources: ["https://www.foodsecurityportal.org", "https://blogs.worldbank.org"]
+
+  hormuz_fertilizer:
+    type: band
+    query: "Strait of Hormuz sulfur ammonia fertilizer shipping disruption 2026"
+    rubric: "0 = inputs flowing normally; 1 = disrupted/elevated risk; 2 = inputs effectively cut by closure."
+    sources: ["https://www.fao.org", "https://blogs.worldbank.org", "https://www.reuters.com/markets/commodities"]
+
+  taiwan_tension:
+    type: band
+    query: "Taiwan Strait China military tension drills incidents latest 2026"
+    rubric: "0 = baseline tension; 1 = elevated (large drills, incidents, sharp escalation in rhetoric); 2 = crisis (blockade, clash, mobilization)."
+    sources: ["https://www.reuters.com/world/asia-pacific", "https://www.csis.org/programs/china-power-project"]
+
+  export_controls:
+    type: band
+    query: "semiconductor export controls ASML China escalation retaliation 2026"
+    rubric: "0 = stable regime; 1 = tightening controls; 2 = major new controls or Chinese retaliation."
+    sources: ["https://www.bis.doc.gov", "https://www.csis.org", "https://www.reuters.com/technology"]
+
+  fab_concentration:
+    type: band
+    query: "advanced chip fab geographic diversification Taiwan TSMC US Japan 2026"
+    rubric: "0 = meaningful diversification progressing; 1 = still highly concentrated; 2 = concentration worsening / diversification stalled."
+    sources: ["https://www.tsmc.com", "https://www.semiconductors.org", "https://www.reuters.com/technology"]
+
+  hormuz_redsea_status:
+    type: band
+    query: "Strait of Hormuz Red Sea shipping status open closed ceasefire latest 2026"
+    rubric: "0 = open and normal; 1 = contested (attacks, partial disruption, fragile ceasefire); 2 = effectively closed/blockaded."
+    sources: ["https://www.reuters.com/world/middle-east", "https://www.imo.org", "https://www.cfr.org"]
+
+  cable_incidents:
+    type: band
+    query: "undersea submarine cable damage cut Red Sea Hormuz Baltic latest 2026"
+    rubric: "0 = none; 1 = threats or minor incidents; 2 = a major cable cut causing outages."
+    sources: ["https://www.submarinecablemap.com", "https://www.reuters.com/technology", "https://www.lloydslist.com"]
+
+  treasury_clearing_rollout:
+    type: band
+    query: "US Treasury central clearing implementation capacity readiness 2026 2027"
+    rubric: "0 = smooth, on track; 1 = friction / capacity concerns; 2 = significant problems or disorderly rollout."
+    sources: ["https://www.sec.gov", "https://www.dtcc.com", "https://www.risk.net"]

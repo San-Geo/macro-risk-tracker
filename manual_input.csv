@@ -1,50 +1,51 @@
 indicator_id,value,note
-# Edit the 'value' column to update indicators that have no automatic feed.
-# Leave a value blank to fall back to the baseline in config/stories.yaml.
+# HUMAN OVERRIDE FILE. Put a number in 'value' to PIN an indicator; the agent will not change it.
+# Leave 'value' BLANK to let the AI agent decide (or fall back to the baseline if the agent is off).
+# Band indicators take 0/1/2; value indicators take the raw number (see FRAMEWORK.md).
 # Event indicators use a 0/1/2 scale (0 = benign, 1 = watch, 2 = stress).
-clearing_status,0,SEC central clearing on track
-jgb30,3.2,30y JGB yield %
-plan_financing,1,Takaichi plan financing clarity
-direct_lending_default,3.0,direct-lending default rate %
-redemption_gates,0,large-fund redemption gates
-new_imf_programs,1,new IMF programs / missed coupons
-china_ppi,-2.5,China PPI YoY %
-trade_actions,1,new tariff/anti-dumping actions
-license_flow,1,rare-earth export license flow
-truce_status,1,Nov-2025 pause status
-hree_premium,3.0,ex-China heavy REE price premium (x)
-peg_deviation,0.1,largest stablecoin max peg deviation %
-stablecoin_supply,280,total USD stablecoin supply $bn
-genius_impl,0,GENIUS implementation friction
-ai_revenue_gap,1,AI capex-vs-revenue gap concern
-gpu_refi_stress,0,GPU-backed debt refinancing stress
-cmbs_office_delinq,12.3,CMBS office delinquency %
-regional_bank_stress,0,regional-bank CRE stress
-govt_stability,1,France govt stability
-rating_action,0,France rating action
-subprime_auto_dpd,6.2,subprime auto 60+ DPD %
-bnpl_delinq,1,BNPL delinquency trend
-dollar_reserve_share,56.8,USD share of FX reserves %
-weaponization_event,0,reserve-weaponization / settlement shift
-insurer_exits,1,insurer non-renewals / exits
-cat_losses,1,catastrophe-loss pressure
-ss_reform_news,0,Social Security / pension reform shock
-pension_leverage_event,0,pension-fund leverage event
-funded_ratio,78,large public-pension funded ratio %
-interconnection_months,54,Set3 grid interconnection wait (months)
-dc_moratoria,1,Set3 data-center moratoria/backlash
-ai_power_pressure,1,Set3 AI power-demand pressure
-mine_disruptions,1,Set3 copper mine disruptions
-copper_deficit_timing,1,Set3 copper deficit timing
-drought_chip_farm,1,Set3 drought in chip/farm hub
-reservoir_stress,1,Set3 reservoir/basin stress
-water_dispute,0,Set3 transboundary water dispute
-fao_food_trend,1,Set3 food-price trend
-china_export_curbs,1,Set3 China fertilizer export curbs
-hormuz_fertilizer,1,Set3 Hormuz disruption to fertilizer inputs
-taiwan_tension,1,Set3 Taiwan/cross-strait tension
-export_controls,1,Set3 export-control escalation
-fab_concentration,1,Set3 single-point concentration
-hormuz_redsea_status,2,Set3 Hormuz/Red Sea status
-cable_incidents,1,Set3 undersea cable incidents
-treasury_clearing_rollout,0,Set3 Treasury-clearing rollout stress
+clearing_status,,SEC central clearing on track
+jgb30,,30y JGB yield %
+plan_financing,,Takaichi plan financing clarity
+direct_lending_default,,direct-lending default rate %
+redemption_gates,,large-fund redemption gates
+new_imf_programs,,new IMF programs / missed coupons
+china_ppi,,China PPI YoY %
+trade_actions,,new tariff/anti-dumping actions
+license_flow,,rare-earth export license flow
+truce_status,,Nov-2025 pause status
+hree_premium,,ex-China heavy REE price premium (x)
+peg_deviation,,largest stablecoin max peg deviation %
+stablecoin_supply,,total USD stablecoin supply $bn
+genius_impl,,GENIUS implementation friction
+ai_revenue_gap,,AI capex-vs-revenue gap concern
+gpu_refi_stress,,GPU-backed debt refinancing stress
+cmbs_office_delinq,,CMBS office delinquency %
+regional_bank_stress,,regional-bank CRE stress
+govt_stability,,France govt stability
+rating_action,,France rating action
+subprime_auto_dpd,,subprime auto 60+ DPD %
+bnpl_delinq,,BNPL delinquency trend
+dollar_reserve_share,,USD share of FX reserves %
+weaponization_event,,reserve-weaponization / settlement shift
+insurer_exits,,insurer non-renewals / exits
+cat_losses,,catastrophe-loss pressure
+ss_reform_news,,Social Security / pension reform shock
+pension_leverage_event,,pension-fund leverage event
+funded_ratio,,large public-pension funded ratio %
+interconnection_months,,Set3 grid interconnection wait (months)
+dc_moratoria,,Set3 data-center moratoria/backlash
+ai_power_pressure,,Set3 AI power-demand pressure
+mine_disruptions,,Set3 copper mine disruptions
+copper_deficit_timing,,Set3 copper deficit timing
+drought_chip_farm,,Set3 drought in chip/farm hub
+reservoir_stress,,Set3 reservoir/basin stress
+water_dispute,,Set3 transboundary water dispute
+fao_food_trend,,Set3 food-price trend
+china_export_curbs,,Set3 China fertilizer export curbs
+hormuz_fertilizer,,Set3 Hormuz disruption to fertilizer inputs
+taiwan_tension,,Set3 Taiwan/cross-strait tension
+export_controls,,Set3 export-control escalation
+fab_concentration,,Set3 single-point concentration
+hormuz_redsea_status,,Set3 Hormuz/Red Sea status
+cable_incidents,,Set3 undersea cable incidents
+treasury_clearing_rollout,,Set3 Treasury-clearing rollout stress

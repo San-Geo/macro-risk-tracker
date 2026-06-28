@@ -32,6 +32,15 @@
   .stale{ color:#999; font-style:italic; }
   footer{ color:var(--grey); font-size:12px; text-align:center; padding:24px; }
   .err{ background:#fde8e8; border:1px solid #f5b5b5; padding:14px; border-radius:8px; }
+  .panel{ background:#fff; border:1px solid var(--line); border-radius:10px; margin:14px 0; overflow:hidden; }
+  .phead{ padding:14px 18px; cursor:pointer; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center; }
+  .phead:hover{ background:#fafbfc; }
+  .pbody{ display:none; padding:0 18px 16px; }
+  .panel.open .pbody{ display:block; }
+  .phead .chev::after{ content:"\25BC"; font-size:11px; color:var(--grey); }
+  .panel.open .phead .chev::after{ content:"\25B2"; }
+  details summary{ cursor:pointer; }
+  a{ color:var(--blue); }
 </style>
 </head>
 <body>
@@ -50,6 +59,45 @@ function meter(l){
   return s+'</div>';
 }
 function fmt(v){ if(v===null||v===undefined) return '-'; return (typeof v==='number')? (Math.abs(v)<10? v.toFixed(2): v.toFixed(1)) : v; }
+function confColor(c){ c=(c||'').toLowerCase(); return c==='high'?'#2E7D32':c==='medium'?'#F5A623':c==='error'?'#C0392B':'#888'; }
+function statusOf(i){ const n=(i.note||'').toLowerCase();
+  if(n.includes('override')) return 'overridden'; if(i.applied) return 'applied'; return 'held'; }
+function reviewRows(arr){ return arr.map(i=>{
+  const src=(i.sources||[]).map(u=>`<a href="${u}" target="_blank" rel="noopener">src</a>`).join(' ');
+  return `<tr>
+    <td>${i.label}<div style="color:#999;font-size:11px">${i.story}</div></td>
+    <td>${fmt(i.value)}</td>
+    <td><span class="pill" style="background:${confColor(i.confidence)};text-transform:capitalize">${i.confidence||'-'}</span></td>
+    <td>${statusOf(i)}</td>
+    <td>${i.rationale||''} ${src}</td></tr>`;
+}).join(''); }
+function reviewPanel(d){
+  const r=d.agent_review;
+  if(!r||!r.items||!r.items.length){
+    return `<div class="narr"><strong>Agent review</strong>\nThe rating agent has not run yet \u2014 it will populate here after its first run (it runs weekly, or on demand from the Actions tab).</div>`;
+  }
+  const flags=new Set(r.review_flags||[]);
+  const flagged=r.items.filter(i=>flags.has(i.id));
+  const head=`<thead><tr><th>Indicator</th><th>Value</th><th>Confidence</th><th>Status</th><th>Why / sources</th></tr></thead>`;
+  const gen=r.generated? new Date(r.generated).toLocaleString(): 'n/a';
+  const flaggedTbl = flagged.length
+    ? `<table>${head}<tbody>${reviewRows(flagged)}</tbody></table>`
+    : `<div class="band" style="padding:6px 0">Nothing flagged \u2014 all ratings were confident and unchanged. \u2705</div>`;
+  return `<div class="panel" id="review">
+    <div class="phead" onclick="this.parentNode.classList.toggle('open')">
+      <span><strong>Agent review</strong> <span class="band">your weekly 2-minute check</span></span>
+      <span class="band"><b>${flagged.length}</b> flagged \u00B7 updated ${gen}${r.model?' \u00B7 '+r.model:''} <span class="chev"></span></span>
+    </div>
+    <div class="pbody">
+      <div class="band" style="margin:8px 0 4px">Needs a glance (low-confidence or changed since last run):</div>
+      ${flaggedTbl}
+      <details style="margin-top:12px"><summary class="band">Show all ${r.items.length} agent-rated indicators</summary>
+        <table style="margin-top:8px">${head}<tbody>${reviewRows(r.items)}</tbody></table>
+      </details>
+      <div class="band" style="margin-top:10px">To override any rating: edit <code>manual_input.csv</code> (put a number in <code>value</code>) and commit. Full reasoning log: <code>data/agent_assessments.json</code>.</div>
+    </div>
+  </div>`;
+}
 function render(d){
   document.getElementById('sub').textContent = `As of ${d.date}  -  generated ${d.generated_at}`;
   const a=d.aggregates;
@@ -60,6 +108,7 @@ function render(d){
     <div class="card"><div class="lbl">Set 3</div><div class="num" style="color:${bandColor(Math.round(a['3']))}">${a['3']}/10</div></div>
   </div>`;
   html += `<div class="narr"><strong>Daily brief</strong>\n${d.narrative||''}</div>`;
+  html += reviewPanel(d);
   const sorted=[...d.stories].sort((x,y)=>y.level-x.level);
   for(const s of sorted){
     html += `<div class="story"><h3>${s.name} <span class="band">(Set ${s.set})</span></h3>

@@ -1,0 +1,179 @@
+"""The grounded rating agent.
+
+For each judgment indicator defined in config/framework.yaml it:
+  1. calls Claude with the server-side web_search tool to find CURRENT status,
+  2. classifies strictly per the rubric (band 0/1/2, or a latest value),
+  3. records value + confidence + rationale + sources to data/agent_assessments.json.
+
+Trust model (why this is safe):
+  - The agent never invents a free-form score. It maps real, searched evidence
+    onto a fixed, human-written rubric (config/framework.yaml).
+  - Every rating is logged with its reasoning and source links -> fully auditable.
+  - Low-confidence calls do NOT flip the number; they retain the prior value and
+    are flagged for human review.
+  - Human overrides (manual_input.csv) are applied AFTER the agent and always win.
+  - The deterministic engine still does all the math; the agent only sets inputs.
+
+No SDK; uses stdlib urllib like narrative.py.
+"""
+import json, os, re, time, urllib.request, datetime
+import yaml
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+AGENT_MODEL = os.environ.get("AGENT_MODEL", "claude-sonnet-4-6")
+LOG_PATH = os.path.join(ROOT, "data", "agent_assessments.json")
+FRAMEWORK_PATH = os.path.join(ROOT, "config", "framework.yaml")
+API_URL = "https://api.anthropic.com/v1/messages"
+
+
+def load_framework():
+    with open(FRAMEWORK_PATH) as f:
+        return yaml.safe_load(f).get("indicators", {})
+
+
+def load_log():
+    if os.path.exists(LOG_PATH):
+        try:
+            with open(LOG_PATH) as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {"assessments": {}}
+
+
+def load_applied_values():
+    """Values from the last agent run that were actually applied -> used on
+    non-agent days so the agent's judgment persists between refreshes."""
+    log = load_log()
+    out = {}
+    for ind_id, a in log.get("assessments", {}).items():
+        if a.get("applied") and a.get("value") is not None:
+            out[ind_id] = a["value"]
+    return out
+
+
+def _extract_json(text):
+    text = text.strip()
+    text = re.sub(r"^```(json)?|```$", "", text, flags=re.MULTILINE).strip()
+    try:
+        return json.loads(text)
+    except Exception:
+        m = re.findall(r"\{.*\}", text, flags=re.DOTALL)
+        if m:
+            return json.loads(m[-1])
+        raise
+
+
+def _coerce(value, kind):
+    if value is None:
+        return None
+    if kind == "band":
+        return max(0, min(2, int(round(float(value)))))
+    return float(value)
+
+
+def assess_one(ind_id, spec, api_key, date, prior=None):
+    kind = spec.get("type", "band")
+    sources = ", ".join(spec.get("sources", [])) or "reputable primary sources"
+    if kind == "band":
+        out_rule = ('Return "value" as the integer 0, 1, or 2 that the rubric '
+                    "matches. Do not assign the most severe level (2) without clear evidence.")
+    else:
+        out_rule = ('Return "value" as a single number: the latest published figure '
+                    "in the indicator's natural units (no text, no % sign).")
+    prompt = (
+        f"You are a macro-risk research agent. Today is {date}. Determine the CURRENT "
+        f"real-world status of ONE indicator and classify it STRICTLY by the rubric.\n\n"
+        f"INDICATOR: {spec.get('query', ind_id)}\n"
+        f"RUBRIC: {spec.get('rubric','')}\n"
+        f"PREFER THESE SOURCES: {sources}\n\n"
+        "Use the web_search tool to find the most recent authoritative information "
+        "BEFORE answering. Base the rating only on what you actually find; do not guess. "
+        f"{out_rule} If you cannot find clear, recent evidence, set confidence to \"low\".\n\n"
+        "Respond with ONLY this JSON (no other text):\n"
+        '{"value": <number>, "confidence": "low|medium|high", '
+        '"as_of": "<YYYY-MM-DD or period>", '
+        '"rationale": "<=2 sentences citing what you found>", "sources": ["<url>", ...]}'
+    )
+    body = json.dumps({
+        "model": AGENT_MODEL,
+        "max_tokens": 1024,
+        "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
+        "messages": [{"role": "user", "content": prompt}],
+    }).encode()
+    req = urllib.request.Request(
+        API_URL, data=body,
+        headers={"content-type": "application/json", "x-api-key": api_key,
+                 "anthropic-version": "2023-06-01"})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        data = json.loads(r.read().decode())
+    text = "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
+    parsed = _extract_json(text)
+    parsed["value"] = _coerce(parsed.get("value"), kind)
+    parsed.setdefault("confidence", "low")
+    parsed.setdefault("rationale", "")
+    parsed.setdefault("sources", [])
+    parsed["type"] = kind
+    return parsed
+
+
+def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5):
+    """Assess each framework indicator. Returns (values_to_apply, log_dict)."""
+    overrides = overrides or set()
+    prior_log = load_log().get("assessments", {})
+    assessments, values, review = {}, {}, []
+
+    for ind_id, spec in framework.items():
+        if only_ids and ind_id not in only_ids:
+            # carry forward prior assessment unchanged
+            if ind_id in prior_log:
+                assessments[ind_id] = prior_log[ind_id]
+                if prior_log[ind_id].get("applied") and prior_log[ind_id].get("value") is not None:
+                    values[ind_id] = prior_log[ind_id]["value"]
+            continue
+        if ind_id in overrides:
+            assessments[ind_id] = {"value": None, "confidence": "n/a", "applied": False,
+                                   "note": "pinned by human override (manual_input.csv)",
+                                   "rationale": "", "sources": [], "as_of": date}
+            continue
+
+        prior = prior_log.get(ind_id)
+        try:
+            a = assess_one(ind_id, spec, api_key, date, prior)
+            conf = str(a.get("confidence", "low")).lower()
+            if conf == "low" or a.get("value") is None:
+                # don't flip on weak evidence: retain prior applied value if we have one
+                if prior and prior.get("value") is not None:
+                    a["value"], a["applied"] = prior["value"], True
+                    a["note"] = "low confidence; retained prior value"
+                else:
+                    a["applied"] = False
+                    a["note"] = "low confidence; left at baseline"
+                review.append(ind_id)
+            else:
+                a["applied"] = True
+                a["note"] = "applied"
+                if prior and prior.get("value") is not None and a["value"] != prior["value"]:
+                    review.append(ind_id)  # surface every change for the human to glance at
+            if a.get("applied") and a.get("value") is not None:
+                values[ind_id] = a["value"]
+            a["prior"] = (prior or {}).get("value")
+            assessments[ind_id] = a
+        except Exception as e:
+            # never break the run on a single indicator
+            keep = (prior or {}).get("value")
+            assessments[ind_id] = {"value": keep, "confidence": "error", "applied": keep is not None,
+                                   "note": f"agent error, kept prior: {e}", "rationale": "",
+                                   "sources": [], "as_of": date, "prior": keep}
+            if keep is not None:
+                values[ind_id] = keep
+            review.append(ind_id)
+        time.sleep(pause)
+
+    log = {"generated": datetime.datetime.utcnow().isoformat() + "Z", "date": date,
+           "model": AGENT_MODEL, "assessments": assessments, "review_flags": sorted(set(review))}
+    os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
+    with open(LOG_PATH, "w") as f:
+        json.dump(log, f, indent=2)
+    return values, log

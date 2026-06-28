@@ -21,6 +21,8 @@ def write_json(result, narrative, date, path):
         "aggregates": result["aggregates"], "narrative": narrative,
         "stories": result["stories"],
     }
+    if result.get("agent_review"):
+        payload["agent_review"] = result["agent_review"]
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(payload, f, indent=2)

@@ -1,13 +1,13 @@
 {
   "date": "2026-06-28",
-  "generated_at": "2026-06-28 17:17 UTC",
+  "generated_at": "2026-06-28 17:50 UTC",
   "aggregates": {
     "1": 5.3,
     "2": 4.6,
-    "3": 5.0,
+    "3": 5.1,
     "overall": 5.0
   },
-  "narrative": "# EOD Macro-Risk Brief | 28 June 2026\n\n**Headline:** Macro risk stable at 5.0/10 with 14 elevated stories and one de-escalation.\n\n**Level Changes:**\n\u2022 **Sea lanes & undersea cables** (7\u21926, Elevated): WTI crude fell 50\u00a2 to $69.23/bbl, reducing energy-driven geopolitical pressure on maritime routes and critical infrastructure.\n\n**Elevated Stories to Monitor (14 total):**\nNine financial-system risks span Treasury basis trades, Japan's JGB/carry exposure, opaque private credit, developing-world debt, CRE maturity walls, and hidden consumer leverage. Six supply-chain and structural risks include China's export deflation, critical minerals weaponization, AI financing circularity, lithography chokepoints, power-grid bottlenecks, and food-fertilizer fragility. Insurance retreat compounds tail-risk exposure.\n\n**Watch:** Japan fiscal/JGB/carry trade (level 6) remains the highest-risk trigger for rapid deleveraging across global markets.",
+  "narrative": "As of 2026-06-28: overall risk 5.0/10 (Set 1 5.3/10, Set 2 4.6/10, Set 3 5.1/10).\nNo story changed level versus the previous run. Daily market indicators moved within their current bands.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -33,26 +33,26 @@
         {
           "id": "move",
           "label": "MOVE index (Treasury volatility)",
-          "value": 66.79,
+          "value": 96,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
           "delta": 0.0,
           "source": "market:^MOVE",
           "cadence": "daily",
-          "stale": false
+          "stale": true
         },
         {
           "id": "clearing_status",
           "label": "SEC central clearing on track (0 ok / 1 slipping / 2 delayed)",
-          "value": 0.0,
+          "value": 0,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -68,14 +68,14 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 161.685,
+          "value": 156,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
           "delta": 0.0,
           "source": "market:JPY=X",
           "cadence": "daily",
-          "stale": false
+          "stale": true
         },
         {
           "id": "jgb30",
@@ -87,19 +87,19 @@
           "delta": 0.0,
           "source": "manual",
           "cadence": "daily",
-          "stale": false
+          "stale": true
         },
         {
           "id": "plan_financing",
           "label": "Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -134,19 +134,19 @@
           "delta": 0.0,
           "source": "manual",
           "cadence": "quarterly",
-          "stale": false
+          "stale": true
         },
         {
           "id": "redemption_gates",
           "label": "Large-fund redemption gates (0 none / 1 isolated / 2 widespread)",
-          "value": 0.0,
+          "value": 0,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -186,14 +186,14 @@
         {
           "id": "new_imf_programs",
           "label": "New IMF programs / missed coupons (0 calm / 1 rising / 2 cluster)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -216,31 +216,31 @@
           "delta": 0.0,
           "source": "manual",
           "cadence": "monthly",
-          "stale": false
+          "stale": true
         },
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.7897,
+          "value": 7.2,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
           "delta": 0.0,
           "source": "market:CNY=X",
           "cadence": "daily",
-          "stale": false
+          "stale": true
         },
         {
           "id": "trade_actions",
           "label": "New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -256,26 +256,26 @@
         {
           "id": "license_flow",
           "label": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         },
         {
           "id": "truce_status",
           "label": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         },
         {
           "id": "hree_premium",
@@ -287,7 +287,7 @@
           "delta": 0.0,
           "source": "manual",
           "cadence": "monthly",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -310,31 +310,31 @@
           "delta": 0.0,
           "source": "manual",
           "cadence": "daily",
-          "stale": false
+          "stale": true
         },
         {
           "id": "stablecoin_supply",
           "label": "Total USD stablecoin supply ($bn)",
-          "value": 280.0,
+          "value": 280,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "monthly",
-          "stale": false
+          "stale": true
         },
         {
           "id": "genius_impl",
           "label": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
-          "value": 0.0,
+          "value": 0,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -362,26 +362,26 @@
         {
           "id": "ai_revenue_gap",
           "label": "AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "quarterly",
-          "stale": false
+          "stale": true
         },
         {
           "id": "gpu_refi_stress",
           "label": "GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)",
-          "value": 0.0,
+          "value": 0,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -404,19 +404,19 @@
           "delta": 0.0,
           "source": "manual",
           "cadence": "monthly",
-          "stale": false
+          "stale": true
         },
         {
           "id": "regional_bank_stress",
           "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
-          "value": 0.0,
+          "value": 0,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -444,26 +444,26 @@
         {
           "id": "govt_stability",
           "label": "Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         },
         {
           "id": "rating_action",
           "label": "Rating action (0 stable / 1 negative outlook / 2 downgrade)",
-          "value": 0.0,
+          "value": 0,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -486,7 +486,7 @@
           "delta": 0.0,
           "source": "manual",
           "cadence": "monthly",
-          "stale": false
+          "stale": true
         },
         {
           "id": "unrate",
@@ -503,14 +503,14 @@
         {
           "id": "bnpl_delinq",
           "label": "BNPL delinquency trend (0 stable / 1 rising / 2 spiking)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 0.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "quarterly",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -526,14 +526,14 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4096.2998,
+          "value": 4300,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
           "delta": 0.0,
           "source": "market:GC=F",
           "cadence": "daily",
-          "stale": false
+          "stale": true
         },
         {
           "id": "dollar_reserve_share",
@@ -545,19 +545,19 @@
           "delta": 0.0,
           "source": "manual",
           "cadence": "quarterly",
-          "stale": false
+          "stale": true
         },
         {
           "id": "weaponization_event",
           "label": "Reserve-weaponization / settlement shift (0 none / 1 talk / 2 action)",
-          "value": 0.0,
+          "value": 0,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -573,14 +573,14 @@
         {
           "id": "insurer_exits",
           "label": "Insurer non-renewals / exits (0 stable / 1 rising / 2 accelerating)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         },
         {
           "id": "mortgage_delinq",
@@ -597,14 +597,14 @@
         {
           "id": "cat_losses",
           "label": "Catastrophe-loss pressure (0 normal / 1 elevated / 2 severe season)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -620,38 +620,38 @@
         {
           "id": "ss_reform_news",
           "label": "Social Security / pension reform shock (0 none / 1 debate / 2 cuts)",
-          "value": 0.0,
+          "value": 0,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         },
         {
           "id": "pension_leverage_event",
           "label": "Pension-fund leverage event, UK-2022 type (0 none / 1 stress / 2 blowup)",
-          "value": 0.0,
+          "value": 0,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         },
         {
           "id": "funded_ratio",
           "label": "Large public-pension funded ratio (%)",
-          "value": 78.0,
+          "value": 78,
           "band": 1,
           "baseline_band": 1,
           "weight": 0.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "annual",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -667,38 +667,38 @@
         {
           "id": "interconnection_months",
           "label": "Grid interconnection wait (months)",
-          "value": 54.0,
+          "value": 54,
           "band": 2,
           "baseline_band": 2,
           "weight": 0.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "quarterly",
-          "stale": false
+          "stale": true
         },
         {
           "id": "dc_moratoria",
           "label": "Data-center moratoria / backlash (0 none / 1 spreading / 2 widespread)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         },
         {
           "id": "ai_power_pressure",
           "label": "AI power-demand pressure (0 easing / 1 tight / 2 acute)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "quarterly",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -707,45 +707,45 @@
       "name": "Copper & the electrification deficit",
       "set": 3,
       "base_level": 4,
-      "raw_level": 4.25,
+      "raw_level": 4.0,
       "level": 4,
       "band": "Moderate",
       "indicators": [
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.207,
-          "band": 2,
+          "value": 5.4,
+          "band": 1,
           "baseline_band": 1,
           "weight": 0.5,
-          "delta": 0.25,
+          "delta": 0.0,
           "source": "market:HG=F",
           "cadence": "daily",
-          "stale": false
+          "stale": true
         },
         {
           "id": "mine_disruptions",
           "label": "Major mine disruptions (0 none / 1 some / 2 cluster)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         },
         {
           "id": "copper_deficit_timing",
           "label": "Deficit timing (0 surplus / 1 balanced / 2 deficit)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 0.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "quarterly",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -761,38 +761,38 @@
         {
           "id": "drought_chip_farm",
           "label": "Drought in a chip/farm hub (0 none / 1 emerging / 2 acute)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         },
         {
           "id": "reservoir_stress",
           "label": "Key reservoir / basin stress (0 normal / 1 low / 2 critical)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 0.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "quarterly",
-          "stale": false
+          "stale": true
         },
         {
           "id": "water_dispute",
           "label": "Transboundary water dispute escalation (0 calm / 1 tense / 2 crisis)",
-          "value": 0.0,
+          "value": 0,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -808,38 +808,38 @@
         {
           "id": "fao_food_trend",
           "label": "Food-price trend (0 falling / 1 elevated / 2 spiking)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 0.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "monthly",
-          "stale": false
+          "stale": true
         },
         {
           "id": "china_export_curbs",
           "label": "China fertilizer export curbs (0 lifted / 1 in place / 2 tightened)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         },
         {
           "id": "hormuz_fertilizer",
           "label": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -855,38 +855,38 @@
         {
           "id": "taiwan_tension",
           "label": "Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         },
         {
           "id": "export_controls",
           "label": "Export-control escalation (0 stable / 1 tightening / 2 retaliation)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 0.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         },
         {
           "id": "fab_concentration",
           "label": "Single-point concentration (0 easing / 1 high / 2 extreme)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 0.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "annual",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -895,45 +895,45 @@
       "name": "Sea lanes & undersea cables",
       "set": 3,
       "base_level": 7,
-      "raw_level": 6.5,
-      "level": 6,
-      "band": "Elevated",
+      "raw_level": 7.0,
+      "level": 7,
+      "band": "High",
       "indicators": [
         {
           "id": "hormuz_redsea_status",
           "label": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
-          "value": 2.0,
+          "value": 2,
           "band": 2,
           "baseline_band": 2,
           "weight": 1.0,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         },
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 69.23,
-          "band": 0,
+          "value": 95,
+          "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
-          "delta": -0.5,
+          "delta": 0.0,
           "source": "market:CL=F",
           "cadence": "daily",
-          "stale": false
+          "stale": true
         },
         {
           "id": "cable_incidents",
           "label": "Undersea cable incidents (0 none / 1 threatened / 2 cut)",
-          "value": 1.0,
+          "value": 1,
           "band": 1,
           "baseline_band": 1,
           "weight": 0.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     },
@@ -949,38 +949,38 @@
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 18.41,
+          "value": 17,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
           "delta": 0.0,
           "source": "market:^VIX",
           "cadence": "daily",
-          "stale": false
+          "stale": true
         },
         {
           "id": "move_ccp",
           "label": "Treasury volatility (MOVE)",
-          "value": 66.79,
+          "value": 96,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
           "delta": 0.0,
           "source": "market:^MOVE",
           "cadence": "daily",
-          "stale": false
+          "stale": true
         },
         {
           "id": "treasury_clearing_rollout",
           "label": "Treasury-clearing rollout stress (0 smooth / 1 friction / 2 problems)",
-          "value": 0.0,
+          "value": 0,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
           "delta": 0.0,
           "source": "manual",
           "cadence": "event",
-          "stale": false
+          "stale": true
         }
       ]
     }

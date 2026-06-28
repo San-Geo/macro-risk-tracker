@@ -17,7 +17,7 @@ import yaml
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-import score, fetch, narrative, report  # noqa: E402
+import score, fetch, narrative, report, agent  # noqa: E402
 
 
 def load_config():
@@ -44,6 +44,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--offline", action="store_true", help="skip network fetch")
     ap.add_argument("--no-ai", action="store_true", help="skip Claude narrative")
+    ap.add_argument("--agent", action="store_true",
+                    help="run the rating agent now (researches + rates judgment indicators)")
     ap.add_argument("--date", default=datetime.date.today().isoformat())
     args = ap.parse_args()
 
@@ -53,11 +55,58 @@ def main():
     if not args.offline:
         print("Fetching live indicators ...")
         values.update({k: v for k, v in fetch.fetch_all(config).items() if v is not None})
-        print(f"  got {len(values)} live values")
-    values.update(load_manual())  # manual overrides win
+        print(f"  got {len(values)} live market/data values")
+
+    # Human overrides: any indicator filled in manual_input.csv is pinned and wins.
+    manual = load_manual()
+    overrides = set(manual.keys())
+
+    # Agent: research + rate the judgment indicators per config/framework.yaml.
+    key = os.environ.get("ANTHROPIC_API_KEY")
+    if args.agent and key and not args.offline:
+        print("Running rating agent (web-search grounded) ...")
+        framework = agent.load_framework()
+        agent_values, alog = agent.run_agent(framework, key, args.date, overrides=overrides)
+        values.update(agent_values)
+        flags = alog.get("review_flags", [])
+        print(f"  agent rated {len(agent_values)} indicators; "
+              f"{len(flags)} flagged for review: {', '.join(flags) if flags else 'none'}")
+    else:
+        # Not running the agent this time: reuse its last applied assessments.
+        cached = agent.load_applied_values()
+        if cached:
+            values.update(cached)
+            print(f"  reusing {len(cached)} cached agent ratings "
+                  f"(run with --agent to refresh)")
+        if args.agent and not key:
+            print("  --agent requested but ANTHROPIC_API_KEY not set; using cached/baseline.")
+
+    values.update(manual)  # human overrides always win
 
     result = score.score_all(config, values)
     result["date"] = args.date
+
+    # Attach the agent's latest assessments (this run or last cached) for the dashboard panel.
+    alog = agent.load_log()
+    if alog.get("assessments"):
+        idmap = {}
+        for s in config["stories"]:
+            for ind in s.get("indicators", []):
+                idmap[ind["id"]] = (ind.get("label", ind["id"]), s["name"], s["set"])
+        flags = set(alog.get("review_flags", []))
+        items = []
+        for ind_id, a in alog["assessments"].items():
+            lbl, story, setno = idmap.get(ind_id, (ind_id, "", 0))
+            items.append({
+                "id": ind_id, "label": lbl, "story": story, "set": setno,
+                "value": a.get("value"), "confidence": a.get("confidence"),
+                "applied": a.get("applied"), "note": a.get("note", ""),
+                "rationale": a.get("rationale", ""), "sources": (a.get("sources") or [])[:3],
+                "as_of": a.get("as_of", ""),
+            })
+        items.sort(key=lambda x: (x["id"] not in flags, x["set"], x["label"]))
+        result["agent_review"] = {"generated": alog.get("generated"), "model": alog.get("model"),
+                                  "review_flags": sorted(flags), "items": items}
 
     hist = os.path.join(ROOT, "data", "history.csv")
     prev = None
