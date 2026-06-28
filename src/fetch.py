@@ -86,3 +86,61 @@ def fetch_all(config):
                 continue
             out[ind["id"]] = fetch_value(src)
     return out
+
+
+def fred_latest_dated(code):
+    s = fred_series(code)
+    return (s[-1][1], s[-1][0]) if s else (None, None)
+
+
+def fred_spread_dated(a, b):
+    sa, sb = dict(fred_series(a)), dict(fred_series(b))
+    common = sorted(set(sa) & set(sb))
+    if not common:
+        return (None, None)
+    d = common[-1]
+    return (round(sa[d] - sb[d], 4), d)
+
+
+def market_latest_dated(symbol):
+    import datetime as _dt
+    url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(symbol)}"
+           f"?range=5d&interval=1d")
+    data = json.loads(_get(url))
+    res = data["chart"]["result"][0]
+    ts = res.get("timestamp") or []
+    closes = res["indicators"]["quote"][0]["close"]
+    for i in range(len(closes) - 1, -1, -1):
+        if closes[i] is not None:
+            d = (_dt.datetime.utcfromtimestamp(ts[i]).date().isoformat()
+                 if i < len(ts) else None)
+            return (round(closes[i], 4), d)
+    return (res["meta"].get("regularMarketPrice"), None)
+
+
+def fetch_value_dated(source):
+    """Like fetch_value but returns (value, as_of_date)."""
+    try:
+        if source.startswith("fred_spread:"):
+            _, a, b = source.split(":")
+            return fred_spread_dated(a, b)
+        if source.startswith("fred:"):
+            return fred_latest_dated(source.split(":", 1)[1])
+        if source.startswith("market:"):
+            return market_latest_dated(source.split(":", 1)[1])
+    except Exception:
+        return (None, None)
+    return (None, None)
+
+
+def fetch_all_dated(config):
+    """Returns {indicator_id: {'value': v, 'as_of': date}} for all auto sources."""
+    out = {}
+    for s in config["stories"]:
+        for ind in s["indicators"]:
+            src = ind["source"]
+            if src == "manual":
+                continue
+            v, d = fetch_value_dated(src)
+            out[ind["id"]] = {"value": v, "as_of": d}
+    return out

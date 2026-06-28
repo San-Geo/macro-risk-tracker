@@ -17,7 +17,7 @@ import yaml
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-import score, fetch, narrative, report, agent  # noqa: E402
+import score, fetch, narrative, report, agent, enrich  # noqa: E402
 
 
 def load_config():
@@ -52,9 +52,11 @@ def main():
     config = load_config()
 
     values = {}
+    fetched = {}
     if not args.offline:
         print("Fetching live indicators ...")
-        values.update({k: v for k, v in fetch.fetch_all(config).items() if v is not None})
+        fetched = fetch.fetch_all_dated(config)
+        values.update({k: dv["value"] for k, dv in fetched.items() if dv["value"] is not None})
         print(f"  got {len(values)} live market/data values")
 
     # Human overrides: any indicator filled in manual_input.csv is pinned and wins.
@@ -109,6 +111,11 @@ def main():
                                   "review_flags": sorted(flags), "items": items}
 
     hist = os.path.join(ROOT, "data", "history.csv")
+    # Phase 1 enrichments (read history BEFORE appending today's row)
+    enrich.attach_trends(result, hist, args.date)
+    enrich.attach_provenance(result, alog if alog.get("assessments") else None, fetched, args.date)
+    result["data_health"] = enrich.data_health(config, fetched, alog, args.date, args.offline)
+
     prev = None
     latest_path = os.path.join(ROOT, "data", "latest.json")
     if os.path.exists(latest_path):

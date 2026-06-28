@@ -41,6 +41,14 @@
   .panel.open .phead .chev::after{ content:"\25B2"; }
   details summary{ cursor:pointer; }
   a{ color:var(--blue); }
+  .health{ display:flex; gap:16px; flex-wrap:wrap; align-items:center; background:#fff; border:1px solid var(--line);
+           border-radius:10px; padding:10px 16px; margin:12px 0; font-size:12.5px; color:var(--grey); }
+  .health .dot{ width:9px; height:9px; border-radius:50%; display:inline-block; margin-right:6px; vertical-align:middle; }
+  .health b{ color:#1a1a1a; }
+  .trend{ font-size:12.5px; font-weight:700; white-space:nowrap; }
+  .spark{ display:block; }
+  .asof{ color:#9a9a9a; white-space:nowrap; }
+  .prov{ display:inline-block; font-size:10px; color:#fff; background:#9aa; border-radius:4px; padding:0 5px; margin-left:4px; vertical-align:middle; }
 </style>
 </head>
 <body>
@@ -57,6 +65,39 @@ function meter(l){
   let s='<div class="meter">';
   for(let i=1;i<=10;i++) s += `<div class="seg" style="background:${i<=l?bandColor(l):'#e2e2e2'}"></div>`;
   return s+'</div>';
+}
+function sparkSVG(arr, color){
+  if(!arr||arr.length<2) return '';
+  const w=92,h=24,pad=2,mn=1,mx=10;
+  const x=i=>pad+i*(w-2*pad)/(arr.length-1);
+  const y=v=>h-pad-(v-mn)*(h-2*pad)/(mx-mn);
+  const pts=arr.map((v,i)=>`${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+  const lx=x(arr.length-1).toFixed(1), ly=y(arr[arr.length-1]).toFixed(1);
+  return `<svg class="spark" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
+    <polyline fill="none" stroke="${color}" stroke-width="1.6" stroke-linejoin="round"
+      stroke-linecap="round" points="${pts}"/>
+    <circle cx="${lx}" cy="${ly}" r="2.1" fill="${color}"/></svg>`;
+}
+function trendBadge(t){
+  if(!t) return '<span class="trend" style="color:#bbb">new</span>';
+  const c=t.change;
+  if(c>0) return `<span class="trend" style="color:#C0392B">&#9650; +${c}</span>`;
+  if(c<0) return `<span class="trend" style="color:#2E7D32">&#9660; ${c}</span>`;
+  return '<span class="trend" style="color:#9a9a9a">&#9679; flat</span>';
+}
+function healthBar(d){
+  const h=d.data_health; if(!h) return '';
+  const okPct = h.live_total? h.live_ok/h.live_total : 1;
+  const dot = h.offline? '#9a9a9a' : (okPct>=0.8? '#2E7D32' : okPct>=0.5? '#F5A623' : '#C0392B');
+  const feeds = h.offline? '<b>offline preview</b> (sample data)'
+    : `<b>${h.live_ok}/${h.live_total}</b> live feeds OK${h.fell_back? `, <b>${h.fell_back}</b> on baseline`:''}`;
+  const agent = h.agent_last
+    ? `agent last ran <b>${h.agent_days_ago}d ago</b> (${h.agent_last})${h.agent_flags? `, <b>${h.agent_flags}</b> flagged`:''}`
+    : 'agent has not run yet';
+  let ot='';
+  if(d.aggregates_trend&&d.aggregates_trend.overall){ ot = `overall ${trendBadge(d.aggregates_trend.overall)} vs ${d.aggregates_trend.overall.since}`; }
+  return `<div class="health"><span><span class="dot" style="background:${dot}"></span>${feeds}</span>
+    <span>${agent}</span>${ot?`<span>${ot}</span>`:''}</div>`;
 }
 function fmt(v){ if(v===null||v===undefined) return '-'; return (typeof v==='number')? (Math.abs(v)<10? v.toFixed(2): v.toFixed(1)) : v; }
 function confColor(c){ c=(c||'').toLowerCase(); return c==='high'?'#2E7D32':c==='medium'?'#F5A623':c==='error'?'#C0392B':'#888'; }
@@ -107,20 +148,33 @@ function render(d){
     <div class="card"><div class="lbl">Set 2</div><div class="num" style="color:${bandColor(Math.round(a['2']))}">${a['2']}/10</div></div>
     <div class="card"><div class="lbl">Set 3</div><div class="num" style="color:${bandColor(Math.round(a['3']))}">${a['3']}/10</div></div>
   </div>`;
+  html += healthBar(d);
   html += `<div class="narr"><strong>Daily brief</strong>\n${d.narrative||''}</div>`;
   html += reviewPanel(d);
   const sorted=[...d.stories].sort((x,y)=>y.level-x.level);
   for(const s of sorted){
+    const col=bandColor(s.level);
     html += `<div class="story"><h3>${s.name} <span class="band">(Set ${s.set})</span></h3>
-      <div class="row">${meter(s.level)}<div><span class="lvl" style="color:${bandColor(s.level)}">${s.level}/10</span> <span class="band">${s.band}</span></div></div>
-      <table><thead><tr><th>Indicator</th><th>Value</th><th>Band</th><th>&Delta;</th><th>Cadence</th><th>Source</th></tr></thead><tbody>`;
+      <div class="row">${meter(s.level)}
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <span class="lvl" style="color:${col}">${s.level}/10</span>
+          <span class="band">${s.band}</span>
+          ${trendBadge(s.trend)}<span class="asof">vs ${s.trend?s.trend.since:'\u2014'}</span>
+          ${sparkSVG(s.spark,col)}
+        </div></div>
+      <table><thead><tr><th>Indicator</th><th>Value</th><th>Band</th><th>&Delta;</th><th>Cadence</th><th>As of</th><th>Source</th></tr></thead><tbody>`;
     for(const ind of s.indicators){
       const bc = ind.band===null? '#999' : bandColor(ind.band<=0?1:ind.band===1?5:9);
+      const srcCell = ind.source_url
+        ? `<a href="${ind.source_url}" target="_blank" rel="noopener">${ind.provenance||'src'}</a>`
+        : (ind.provenance||ind.source);
       html += `<tr class="${ind.stale?'stale':''}">
         <td>${ind.label}</td><td>${fmt(ind.value)}</td>
         <td><span class="pill" style="background:${bc}">${ind.band===null?'-':ind.band}</span></td>
         <td>${ind.delta>0?'+':''}${ind.delta||0}</td>
-        <td>${ind.cadence}</td><td style="color:#888">${ind.source}${ind.stale?' (baseline)':''}</td></tr>`;
+        <td>${ind.cadence}</td>
+        <td class="asof">${ind.as_of||'\u2014'}</td>
+        <td style="color:#888">${srcCell}${ind.stale?' <span class="prov">baseline</span>':''}</td></tr>`;
     }
     html += `</tbody></table></div>`;
   }

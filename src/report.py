@@ -23,6 +23,10 @@ def write_json(result, narrative, date, path):
     }
     if result.get("agent_review"):
         payload["agent_review"] = result["agent_review"]
+    if result.get("data_health"):
+        payload["data_health"] = result["data_health"]
+    if result.get("aggregates_trend"):
+        payload["aggregates_trend"] = result["aggregates_trend"]
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(payload, f, indent=2)
