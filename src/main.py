@@ -17,7 +17,7 @@ import yaml
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-import score, fetch, narrative, report, agent, enrich  # noqa: E402
+import score, fetch, narrative, report, agent, enrich, alerts  # noqa: E402
 
 
 def load_config():
@@ -46,8 +46,15 @@ def main():
     ap.add_argument("--no-ai", action="store_true", help="skip Claude narrative")
     ap.add_argument("--agent", action="store_true",
                     help="run the rating agent now (researches + rates judgment indicators)")
+    ap.add_argument("--no-alert", action="store_true", help="don't send band-crossing alerts")
+    ap.add_argument("--test-alert", action="store_true", help="send a test alert and exit")
     ap.add_argument("--date", default=datetime.date.today().isoformat())
     args = ap.parse_args()
+
+    if args.test_alert:
+        print("Sending test alert ...")
+        alerts.send_test(os.environ)
+        return
 
     config = load_config()
 
@@ -135,6 +142,14 @@ def main():
     print(f"\nOverall {agg['overall']}/10  |  Set 1 {agg.get(1)}/10  |  Set 2 {agg.get(2)}/10  |  Set 3 {agg.get(3)}/10")
     print(f"Level changes today: {len(changes)}")
     print(f"Wrote: {latest_path}, {hist}, {xlsx}, dashboard/latest.json")
+
+    if not args.no_alert:
+        a = alerts.maybe_alert(result, prev, os.environ)
+        if a.get("sent"):
+            print(f"ALERT: {len(a['crossings'])} band crossing(s) sent -> {a['results']}")
+        elif a.get("reason") == "no band crossings" and prev:
+            print("Alerts: no band crossings since last run.")
+
     print("\n" + note)
 
 

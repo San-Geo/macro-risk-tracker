@@ -42,6 +42,29 @@ def load_log():
     return {"assessments": {}}
 
 
+def load_weights():
+    """{indicator_id: weight} from stories.yaml, for cross-check targeting."""
+    try:
+        with open(os.path.join(ROOT, "config", "stories.yaml")) as f:
+            cfg = yaml.safe_load(f)
+        return {ind["id"]: ind.get("weight", 0)
+                for s in cfg["stories"] for ind in s["indicators"]}
+    except Exception:
+        return {}
+
+
+def _disagree(a, b, kind, tol=0.2):
+    """True if two independent readings differ enough to distrust them."""
+    if a is None or b is None:
+        return True
+    if kind == "band":
+        return int(round(a)) != int(round(b))
+    if (a > 0) != (b > 0):
+        return True
+    denom = max(abs(a), abs(b), 1e-9)
+    return abs(a - b) / denom > tol
+
+
 def load_applied_values():
     """Values from the last agent run that were actually applied -> used on
     non-agent days so the agent's judgment persists between refreshes."""
@@ -73,7 +96,7 @@ def _coerce(value, kind):
     return float(value)
 
 
-def assess_one(ind_id, spec, api_key, date, prior=None):
+def assess_one(ind_id, spec, api_key, date, prior=None, model=None):
     kind = spec.get("type", "band")
     sources = ", ".join(spec.get("sources", [])) or "reputable primary sources"
     if kind == "band":
@@ -97,7 +120,7 @@ def assess_one(ind_id, spec, api_key, date, prior=None):
         '"rationale": "<=2 sentences citing what you found>", "sources": ["<url>", ...]}'
     )
     body = json.dumps({
-        "model": AGENT_MODEL,
+        "model": model or AGENT_MODEL,
         "max_tokens": 1024,
         "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
         "messages": [{"role": "user", "content": prompt}],
@@ -123,6 +146,9 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
     overrides = overrides or set()
     prior_log = load_log().get("assessments", {})
     assessments, values, review = {}, {}, []
+    weights = load_weights()
+    xcheck_min = float(os.environ.get("AGENT_CROSSCHECK_MIN_WEIGHT", "1.5") or 1.5)
+    model2 = os.environ.get("AGENT_MODEL_2")  # optional second model for the check
 
     for ind_id, spec in framework.items():
         if only_ids and ind_id not in only_ids:
@@ -141,6 +167,20 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
         prior = prior_log.get(ind_id)
         try:
             a = assess_one(ind_id, spec, api_key, date, prior)
+            # Cross-check the highest-weight indicators with a second independent read.
+            if weights.get(ind_id, 0) >= xcheck_min and a.get("value") is not None:
+                try:
+                    b = assess_one(ind_id, spec, api_key, date, prior, model=model2)
+                    disagree = _disagree(a.get("value"), b.get("value"), spec.get("type", "band"))
+                    a["crosscheck"] = {"second_value": b.get("value"), "agree": not disagree}
+                    if disagree:
+                        a["confidence"] = "low"  # demote -> handled conservatively below
+                        a["crosscheck"]["note"] = "two reads disagreed"
+                        a["rationale"] = ((a.get("rationale", "") +
+                            f" [cross-check: two reads disagreed ({a.get('value')} vs "
+                            f"{b.get('value')}); held for review]").strip())
+                except Exception as e:
+                    a["crosscheck"] = {"error": str(e)}
             conf = str(a.get("confidence", "low")).lower()
             if conf == "low" or a.get("value") is None:
                 # don't flip on weak evidence: retain prior applied value if we have one
@@ -171,7 +211,7 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
             review.append(ind_id)
         time.sleep(pause)
 
-    log = {"generated": datetime.datetime.utcnow().isoformat() + "Z", "date": date,
+    log = {"generated": datetime.datetime.now(datetime.timezone.utc).isoformat(), "date": date,
            "model": AGENT_MODEL, "assessments": assessments, "review_flags": sorted(set(review))}
     os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
     with open(LOG_PATH, "w") as f:

@@ -3,190 +3,299 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#1F4E79"/>
 <title>Global Macro Risk Tracker</title>
 <style>
-  :root{ --blue:#1F4E79; --grey:#595959; --line:#e3e3e3; }
+  :root{
+    --bg:#f4f6f9; --card:#ffffff; --line:#e6e9ee; --text:#161a1f; --muted:#677182;
+    --header:#1F4E79; --header2:#163a5c; --htext:#ffffff; --accent:#1F4E79;
+    --shadow:0 1px 2px rgba(16,24,40,.04), 0 1px 3px rgba(16,24,40,.07); --track:#eaecf0;
+  }
+  [data-theme="dark"]{
+    --bg:#0e1116; --card:#161b22; --line:#262d37; --text:#e7ebf0; --muted:#9aa6b4;
+    --header:#0c1422; --header2:#0a1018; --htext:#eaf1fb; --accent:#5b9bd5;
+    --shadow:0 1px 2px rgba(0,0,0,.5); --track:#222a34;
+  }
   *{ box-sizing:border-box; }
-  body{ font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin:0;
-        color:#1a1a1a; background:#f7f8fa; }
-  header{ background:var(--blue); color:#fff; padding:22px 20px; }
-  header h1{ margin:0; font-size:20px; }
-  header .sub{ opacity:.85; font-size:13px; margin-top:4px; }
-  .wrap{ max-width:1000px; margin:0 auto; padding:20px; }
-  .agg{ display:flex; gap:14px; flex-wrap:wrap; margin:16px 0 8px; }
-  .agg .card{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 18px; flex:1; min-width:150px; }
-  .agg .num{ font-size:30px; font-weight:700; }
-  .agg .lbl{ color:var(--grey); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
-  .narr{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 18px; margin:14px 0; white-space:pre-wrap; line-height:1.5; font-size:14px; }
-  .story{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin:12px 0; }
-  .story h3{ margin:0 0 6px; font-size:15px; }
-  .row{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
-  .meter{ display:flex; gap:3px; flex:1; min-width:220px; }
-  .seg{ height:16px; flex:1; border-radius:3px; background:#e2e2e2; }
-  .lvl{ font-weight:700; font-size:15px; white-space:nowrap; }
-  .band{ font-size:12px; color:var(--grey); }
-  table{ border-collapse:collapse; width:100%; margin-top:10px; font-size:12.5px; }
-  th,td{ text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); }
-  th{ color:var(--grey); font-weight:600; }
-  .pill{ display:inline-block; padding:1px 7px; border-radius:10px; color:#fff; font-size:11px; font-weight:600; }
-  .stale{ color:#999; font-style:italic; }
-  footer{ color:var(--grey); font-size:12px; text-align:center; padding:24px; }
-  .err{ background:#fde8e8; border:1px solid #f5b5b5; padding:14px; border-radius:8px; }
-  .panel{ background:#fff; border:1px solid var(--line); border-radius:10px; margin:14px 0; overflow:hidden; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+        margin:0; color:var(--text); background:var(--bg); -webkit-font-smoothing:antialiased;
+        transition:background .2s,color .2s; }
+  a{ color:var(--accent); text-decoration:none; } a:hover{ text-decoration:underline; }
+  header{ position:sticky; top:0; z-index:20; background:linear-gradient(120deg,var(--header),var(--header2));
+          color:var(--htext); padding:14px 0; box-shadow:var(--shadow); }
+  .hwrap{ max-width:1040px; margin:0 auto; padding:0 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  header h1{ margin:0; font-size:18px; font-weight:700; letter-spacing:-.2px; }
+  header .sub{ opacity:.82; font-size:12.5px; margin-top:3px; }
+  .tbtn{ background:rgba(255,255,255,.12); color:var(--htext); border:1px solid rgba(255,255,255,.18);
+         border-radius:9px; width:38px; height:34px; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+  .tbtn:hover{ background:rgba(255,255,255,.22); }
+  .wrap{ max-width:1040px; margin:0 auto; padding:20px; }
+  .section-label{ font-size:11px; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); font-weight:700; margin:18px 2px 8px; }
+
+  /* aggregate cards */
+  .agg{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  .agg .card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; box-shadow:var(--shadow); }
+  .agg .num{ font-size:30px; font-weight:800; letter-spacing:-1px; line-height:1; }
+  .agg .lbl{ color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.05em; font-weight:700; margin-bottom:6px; }
+  .agg .band{ font-size:12px; color:var(--muted); margin-top:4px; }
+
+  /* heat strip */
+  .heat{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px 14px; box-shadow:var(--shadow);
+         display:flex; gap:18px; flex-wrap:wrap; align-items:center; }
+  .hgroup{ display:flex; align-items:center; gap:8px; }
+  .hlabel{ font-size:11px; font-weight:700; color:var(--muted); }
+  .tiles{ display:flex; gap:5px; flex-wrap:wrap; }
+  .tile{ width:30px; height:28px; border-radius:7px; color:#fff; font-weight:700; font-size:12.5px;
+         display:flex; align-items:center; justify-content:center; text-shadow:0 1px 1px rgba(0,0,0,.28);
+         transition:transform .08s; }
+  .tile:hover{ transform:translateY(-2px); text-decoration:none; }
+  .legend{ display:flex; gap:10px; margin-left:auto; flex-wrap:wrap; }
+  .lg{ font-size:11px; color:var(--muted); display:flex; align-items:center; gap:4px; }
+  .sw{ width:11px; height:11px; border-radius:3px; display:inline-block; }
+
+  /* health */
+  .health{ display:flex; gap:18px; flex-wrap:wrap; align-items:center; background:var(--card); border:1px solid var(--line);
+           border-radius:12px; padding:10px 16px; box-shadow:var(--shadow); font-size:12.5px; color:var(--muted); }
+  .health .dot{ width:9px; height:9px; border-radius:50%; display:inline-block; margin-right:6px; }
+  .health b{ color:var(--text); }
+
+  /* narrative + panels */
+  .narr{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px; box-shadow:var(--shadow);
+         white-space:pre-wrap; line-height:1.55; font-size:14px; }
+  .panel{ background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); overflow:hidden; }
   .phead{ padding:14px 18px; cursor:pointer; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center; }
-  .phead:hover{ background:#fafbfc; }
+  .phead:hover{ background:rgba(127,127,127,.05); }
   .pbody{ display:none; padding:0 18px 16px; }
   .panel.open .pbody{ display:block; }
-  .phead .chev::after{ content:"\25BC"; font-size:11px; color:var(--grey); }
-  .panel.open .phead .chev::after{ content:"\25B2"; }
+  .chev::after{ content:"\25BC"; font-size:10px; color:var(--muted); margin-left:4px; }
+  .panel.open .chev::after{ content:"\25B2"; }
   details summary{ cursor:pointer; }
-  a{ color:var(--blue); }
-  .health{ display:flex; gap:16px; flex-wrap:wrap; align-items:center; background:#fff; border:1px solid var(--line);
-           border-radius:10px; padding:10px 16px; margin:12px 0; font-size:12.5px; color:var(--grey); }
-  .health .dot{ width:9px; height:9px; border-radius:50%; display:inline-block; margin-right:6px; vertical-align:middle; }
-  .health b{ color:#1a1a1a; }
+
+  /* story cards */
+  .story{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:15px 17px; box-shadow:var(--shadow); scroll-margin-top:74px; }
+  .story h3{ margin:0 0 10px; font-size:15.5px; font-weight:700; letter-spacing:-.2px; }
+  .story h3 .setpill{ font-size:11px; font-weight:600; color:var(--muted); background:rgba(127,127,127,.1); padding:1px 7px; border-radius:20px; margin-left:6px; }
+  .srow{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .gauge{ flex:1; min-width:200px; }
+  .gtrack{ position:relative; height:12px; border-radius:8px; background:var(--track); overflow:hidden; }
+  .gfill{ position:absolute; left:0; top:0; bottom:0; border-radius:8px; transition:width .35s ease; }
+  .gtrack .tick{ position:absolute; top:0; bottom:0; width:1px; background:var(--card); opacity:.6; }
+  .sright{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .lvl{ font-weight:800; font-size:19px; letter-spacing:-1px; } .lvl .den{ font-size:12px; color:var(--muted); font-weight:600; }
+  .bpill{ color:#fff; font-size:11px; font-weight:700; padding:2px 9px; border-radius:20px; text-shadow:0 1px 1px rgba(0,0,0,.2); }
   .trend{ font-size:12.5px; font-weight:700; white-space:nowrap; }
+  .asof{ color:var(--muted); white-space:nowrap; font-size:11.5px; }
   .spark{ display:block; }
-  .asof{ color:#9a9a9a; white-space:nowrap; }
-  .prov{ display:inline-block; font-size:10px; color:#fff; background:#9aa; border-radius:4px; padding:0 5px; margin-left:4px; vertical-align:middle; }
+
+  .tscroll{ overflow-x:auto; margin-top:12px; }
+  table{ border-collapse:collapse; width:100%; font-size:12.5px; min-width:520px; }
+  th,td{ text-align:left; padding:7px 9px; border-bottom:1px solid var(--line); }
+  th{ color:var(--muted); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:.03em; }
+  tr.stale td{ color:var(--muted); }
+  .pill{ display:inline-block; padding:1px 8px; border-radius:20px; color:#fff; font-size:11px; font-weight:700; }
+  .prov{ display:inline-block; font-size:10px; color:#fff; background:#94a3b8; border-radius:5px; padding:0 6px; margin-left:4px; }
+  [data-theme="dark"] .prov{ background:#475569; }
+
+  footer{ color:var(--muted); font-size:12px; text-align:center; padding:26px 16px; }
+  .err{ background:#fde8e8; border:1px solid #f5b5b5; color:#7a1c1c; padding:14px; border-radius:12px; }
+  [data-theme="dark"] .err{ background:#2a1414; border-color:#5a2a2a; color:#f0b5b5; }
+
+  /* loading skeleton */
+  .sk{ background:linear-gradient(90deg,var(--card) 0%,rgba(127,127,127,.08) 50%,var(--card) 100%);
+       background-size:200% 100%; animation:sh 1.3s infinite; border:1px solid var(--line); border-radius:14px; }
+  @keyframes sh{ 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+  @media(max-width:680px){
+    .agg{ grid-template-columns:repeat(2,1fr); }
+    .hwrap h1{ font-size:16px; }
+    .legend{ margin-left:0; width:100%; }
+  }
 </style>
 </head>
 <body>
 <header>
-  <h1>Global Macro Risk Tracker</h1>
-  <div class="sub" id="sub">loading...</div>
+  <div class="hwrap">
+    <div>
+      <h1>Global Macro Risk Tracker</h1>
+      <div class="sub" id="sub">loading\u2026</div>
+    </div>
+    <button id="themeBtn" class="tbtn" title="Toggle dark mode" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+  </div>
 </header>
-<div class="wrap" id="app">Loading latest.json ...</div>
-<footer>Informational analysis only - not investment, legal, or financial advice. Levels are a judgement, not a forecast.</footer>
+<div class="wrap" id="app">
+  <div class="sk" style="height:92px;margin-bottom:12px"></div>
+  <div class="sk" style="height:64px;margin-bottom:12px"></div>
+  <div class="sk" style="height:120px;margin-bottom:12px"></div>
+  <div class="sk" style="height:160px"></div>
+</div>
+<footer>Informational analysis only \u2014 not investment, legal, or financial advice. Levels are a judgement, not a forecast.</footer>
 <script>
+const moonIcon='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+const sunIcon='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+function setTheme(t){ document.documentElement.setAttribute('data-theme',t); try{localStorage.setItem('mrt-theme',t);}catch(e){}
+  const b=document.getElementById('themeBtn'); if(b) b.innerHTML = t==='dark'? sunIcon : moonIcon; }
+function toggleTheme(){ const c=document.documentElement.getAttribute('data-theme')||'light'; setTheme(c==='dark'?'light':'dark'); }
+function initTheme(){ let t=null; try{t=localStorage.getItem('mrt-theme');}catch(e){}
+  if(!t) t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light'; setTheme(t); }
+initTheme();
+
 function bandColor(l){ return l<=2?'#2E7D32':l<=4?'#8BC34A':l<=6?'#F5A623':l<=8?'#E8710A':'#C0392B'; }
 function bandName(l){ return l<=2?'Low':l<=4?'Moderate':l<=6?'Elevated':l<=8?'High':'Severe'; }
-function meter(l){
-  let s='<div class="meter">';
-  for(let i=1;i<=10;i++) s += `<div class="seg" style="background:${i<=l?bandColor(l):'#e2e2e2'}"></div>`;
-  return s+'</div>';
+function fmt(v){ if(v===null||v===undefined) return '-'; return (typeof v==='number')? (Math.abs(v)<10? v.toFixed(2): v.toFixed(1)) : v; }
+function confColor(c){ c=(c||'').toLowerCase(); return c==='high'?'#2E7D32':c==='medium'?'#F5A623':c==='error'?'#C0392B':'#888'; }
+
+function gauge(level){
+  let ticks=''; for(let i=1;i<10;i++) ticks+=`<span class="tick" style="left:${i*10}%"></span>`;
+  return `<div class="gauge"><div class="gtrack">${ticks}<div class="gfill" style="width:${level*10}%;background:${bandColor(level)}"></div></div></div>`;
 }
 function sparkSVG(arr, color){
   if(!arr||arr.length<2) return '';
-  const w=92,h=24,pad=2,mn=1,mx=10;
-  const x=i=>pad+i*(w-2*pad)/(arr.length-1);
-  const y=v=>h-pad-(v-mn)*(h-2*pad)/(mx-mn);
+  const w=96,h=26,pad=3,mn=1,mx=10;
+  const x=i=>pad+i*(w-2*pad)/(arr.length-1), y=v=>h-pad-(v-mn)*(h-2*pad)/(mx-mn);
   const pts=arr.map((v,i)=>`${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
-  const lx=x(arr.length-1).toFixed(1), ly=y(arr[arr.length-1]).toFixed(1);
   return `<svg class="spark" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
-    <polyline fill="none" stroke="${color}" stroke-width="1.6" stroke-linejoin="round"
-      stroke-linecap="round" points="${pts}"/>
-    <circle cx="${lx}" cy="${ly}" r="2.1" fill="${color}"/></svg>`;
+    <polyline fill="none" stroke="${color}" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" points="${pts}"/>
+    <circle cx="${x(arr.length-1).toFixed(1)}" cy="${y(arr[arr.length-1]).toFixed(1)}" r="2.2" fill="${color}"/></svg>`;
 }
 function trendBadge(t){
-  if(!t) return '<span class="trend" style="color:#bbb">new</span>';
+  if(!t) return '<span class="trend" style="color:var(--muted)">new</span>';
   const c=t.change;
-  if(c>0) return `<span class="trend" style="color:#C0392B">&#9650; +${c}</span>`;
-  if(c<0) return `<span class="trend" style="color:#2E7D32">&#9660; ${c}</span>`;
-  return '<span class="trend" style="color:#9a9a9a">&#9679; flat</span>';
+  if(c>0) return `<span class="trend" style="color:#C0392B">\u25B2 +${c}</span>`;
+  if(c<0) return `<span class="trend" style="color:#2E7D32">\u25BC ${c}</span>`;
+  return '<span class="trend" style="color:var(--muted)">\u25CF flat</span>';
+}
+function legend(){
+  return [[2,'Low'],[4,'Mod'],[6,'Elev'],[8,'High'],[10,'Sev']]
+    .map(([l,n])=>`<span class="lg"><span class="sw" style="background:${bandColor(l)}"></span>${n}</span>`).join('');
+}
+function heatStrip(d){
+  const bySet={};
+  for(const s of d.stories){ (bySet[s.set]=bySet[s.set]||[]).push(s); }
+  let groups='';
+  for(const set of Object.keys(bySet).sort()){
+    const tiles=bySet[set].map(s=>`<a class="tile" href="#story-${s.id}" title="${s.name} \u2014 ${s.level}/10 ${s.band}" style="background:${bandColor(s.level)}">${s.level}</a>`).join('');
+    groups+=`<div class="hgroup"><span class="hlabel">Set ${set}</span><div class="tiles">${tiles}</div></div>`;
+  }
+  return `<div class="heat">${groups}<div class="legend">${legend()}</div></div>`;
 }
 function healthBar(d){
   const h=d.data_health; if(!h) return '';
-  const okPct = h.live_total? h.live_ok/h.live_total : 1;
-  const dot = h.offline? '#9a9a9a' : (okPct>=0.8? '#2E7D32' : okPct>=0.5? '#F5A623' : '#C0392B');
-  const feeds = h.offline? '<b>offline preview</b> (sample data)'
-    : `<b>${h.live_ok}/${h.live_total}</b> live feeds OK${h.fell_back? `, <b>${h.fell_back}</b> on baseline`:''}`;
-  const agent = h.agent_last
-    ? `agent last ran <b>${h.agent_days_ago}d ago</b> (${h.agent_last})${h.agent_flags? `, <b>${h.agent_flags}</b> flagged`:''}`
-    : 'agent has not run yet';
-  let ot='';
-  if(d.aggregates_trend&&d.aggregates_trend.overall){ ot = `overall ${trendBadge(d.aggregates_trend.overall)} vs ${d.aggregates_trend.overall.since}`; }
-  return `<div class="health"><span><span class="dot" style="background:${dot}"></span>${feeds}</span>
-    <span>${agent}</span>${ot?`<span>${ot}</span>`:''}</div>`;
+  const okPct=h.live_total? h.live_ok/h.live_total : 1;
+  const dot=h.offline?'#9a9a9a':(okPct>=0.8?'#2E7D32':okPct>=0.5?'#F5A623':'#C0392B');
+  const feeds=h.offline?'<b>offline preview</b> (sample data)'
+    :`<b>${h.live_ok}/${h.live_total}</b> live feeds OK${h.fell_back?`, <b>${h.fell_back}</b> on baseline`:''}`;
+  const agent=h.agent_last?`agent ran <b>${h.agent_days_ago}d ago</b> (${h.agent_last})${h.agent_flags?`, <b>${h.agent_flags}</b> flagged`:''}`:'agent has not run yet';
+  let ot=''; if(d.aggregates_trend&&d.aggregates_trend.overall) ot=`overall ${trendBadge(d.aggregates_trend.overall)} vs ${d.aggregates_trend.overall.since}`;
+  return `<div class="health"><span><span class="dot" style="background:${dot}"></span>${feeds}</span><span>${agent}</span>${ot?`<span>${ot}</span>`:''}</div>`;
 }
-function fmt(v){ if(v===null||v===undefined) return '-'; return (typeof v==='number')? (Math.abs(v)<10? v.toFixed(2): v.toFixed(1)) : v; }
-function confColor(c){ c=(c||'').toLowerCase(); return c==='high'?'#2E7D32':c==='medium'?'#F5A623':c==='error'?'#C0392B':'#888'; }
-function statusOf(i){ const n=(i.note||'').toLowerCase();
-  if(n.includes('override')) return 'overridden'; if(i.applied) return 'applied'; return 'held'; }
+function statusOf(i){ const n=(i.note||'').toLowerCase(); if(n.includes('override')) return 'overridden'; if(i.applied) return 'applied'; return 'held'; }
 function reviewRows(arr){ return arr.map(i=>{
   const src=(i.sources||[]).map(u=>`<a href="${u}" target="_blank" rel="noopener">src</a>`).join(' ');
-  return `<tr>
-    <td>${i.label}<div style="color:#999;font-size:11px">${i.story}</div></td>
+  return `<tr><td>${i.label}<div style="color:var(--muted);font-size:11px">${i.story}</div></td>
     <td>${fmt(i.value)}</td>
     <td><span class="pill" style="background:${confColor(i.confidence)};text-transform:capitalize">${i.confidence||'-'}</span></td>
-    <td>${statusOf(i)}</td>
-    <td>${i.rationale||''} ${src}</td></tr>`;
+    <td>${statusOf(i)}</td><td>${i.rationale||''} ${src}</td></tr>`;
 }).join(''); }
 function reviewPanel(d){
   const r=d.agent_review;
-  if(!r||!r.items||!r.items.length){
-    return `<div class="narr"><strong>Agent review</strong>\nThe rating agent has not run yet \u2014 it will populate here after its first run (it runs weekly, or on demand from the Actions tab).</div>`;
-  }
-  const flags=new Set(r.review_flags||[]);
-  const flagged=r.items.filter(i=>flags.has(i.id));
+  if(!r||!r.items||!r.items.length) return `<div class="narr"><strong>Agent review</strong>\nThe rating agent has not run yet \u2014 it will populate here after its first run (weekly, or on demand from the Actions tab).</div>`;
+  const flags=new Set(r.review_flags||[]); const flagged=r.items.filter(i=>flags.has(i.id));
   const head=`<thead><tr><th>Indicator</th><th>Value</th><th>Confidence</th><th>Status</th><th>Why / sources</th></tr></thead>`;
-  const gen=r.generated? new Date(r.generated).toLocaleString(): 'n/a';
-  const flaggedTbl = flagged.length
-    ? `<table>${head}<tbody>${reviewRows(flagged)}</tbody></table>`
-    : `<div class="band" style="padding:6px 0">Nothing flagged \u2014 all ratings were confident and unchanged. \u2705</div>`;
-  return `<div class="panel" id="review">
-    <div class="phead" onclick="this.parentNode.classList.toggle('open')">
-      <span><strong>Agent review</strong> <span class="band">your weekly 2-minute check</span></span>
-      <span class="band"><b>${flagged.length}</b> flagged \u00B7 updated ${gen}${r.model?' \u00B7 '+r.model:''} <span class="chev"></span></span>
-    </div>
-    <div class="pbody">
-      <div class="band" style="margin:8px 0 4px">Needs a glance (low-confidence or changed since last run):</div>
-      ${flaggedTbl}
-      <details style="margin-top:12px"><summary class="band">Show all ${r.items.length} agent-rated indicators</summary>
-        <table style="margin-top:8px">${head}<tbody>${reviewRows(r.items)}</tbody></table>
-      </details>
-      <div class="band" style="margin-top:10px">To override any rating: edit <code>manual_input.csv</code> (put a number in <code>value</code>) and commit. Full reasoning log: <code>data/agent_assessments.json</code>.</div>
-    </div>
-  </div>`;
+  const gen=r.generated? new Date(r.generated).toLocaleString():'n/a';
+  const ft=flagged.length?`<div class="tscroll"><table>${head}<tbody>${reviewRows(flagged)}</tbody></table></div>`
+    :`<div class="asof" style="padding:6px 0">Nothing flagged \u2014 all ratings were confident and unchanged.</div>`;
+  return `<div class="panel" id="review"><div class="phead" onclick="this.parentNode.classList.toggle('open')">
+      <span><strong>Agent review</strong> <span class="asof">your weekly 2-minute check</span></span>
+      <span class="asof"><b>${flagged.length}</b> flagged \u00B7 updated ${gen}${r.model?' \u00B7 '+r.model:''}<span class="chev"></span></span></div>
+    <div class="pbody"><div class="asof" style="margin:8px 0 4px">Needs a glance (low-confidence or changed):</div>${ft}
+      <details style="margin-top:12px"><summary class="asof">Show all ${r.items.length} agent-rated indicators</summary>
+        <div class="tscroll"><table style="margin-top:8px">${head}<tbody>${reviewRows(r.items)}</tbody></table></div></details>
+      <div class="asof" style="margin-top:10px">Override any rating: edit <code>manual_input.csv</code> and commit. Full log: <code>data/agent_assessments.json</code>.</div></div></div>`;
+}
+
+let BACKTEST=null;
+function lineChart(dates, series){
+  const W=560,H=200,L=34,R=12,T=12,B=46, n=dates.length;
+  const x=i=> L + i*(W-L-R)/Math.max(1,n-1);
+  const y=v=> T + (10-v)*(H-T-B)/9;
+  let g='';
+  for(const lv of [2,4,6,8,10]) g+=`<line x1="${L}" y1="${y(lv)}" x2="${W-R}" y2="${y(lv)}" stroke="var(--line)" stroke-width="1"/><text x="${L-6}" y="${y(lv)+3}" text-anchor="end" font-size="9" fill="var(--muted)">${lv}</text>`;
+  let xl=''; for(const i of [0,Math.floor((n-1)/2),n-1]) xl+=`<text x="${x(i)}" y="${H-B+16}" text-anchor="middle" font-size="9" fill="var(--muted)">${dates[i]}</text>`;
+  let lines='';
+  for(const s of series){
+    const pts=s.levels.map((v,i)=>`${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+    lines+=`<polyline fill="none" stroke="${s.color}" stroke-width="${s.bold?2.6:1.7}" stroke-linejoin="round" stroke-linecap="round" points="${pts}" ${s.bold?'':'opacity="0.92"'}/>`;
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:600px">${g}${xl}${lines}</svg>`;
+}
+function backtestPanel(){
+  const bt=BACKTEST;
+  if(!bt) return `<div class="narr"><strong>Backtest / validation</strong>\nNot generated yet \u2014 run <code>python src/backtest.py</code> to replay 2020 &amp; 2022 through the engine.</div>`;
+  let body='';
+  for(const [name,ep] of Object.entries(bt.episodes)){
+    const arr=Object.values(ep.stories).map(s=>({name:s.name,levels:s.levels,move:Math.max(...s.levels)-s.levels[0],peak:Math.max(...s.levels)}));
+    arr.sort((a,b)=>b.move-a.move||b.peak-a.peak);
+    const top=arr.filter(s=>s.move>0).slice(0,5);
+    const series=[{name:'Overall',color:'var(--text)',levels:ep.overall,bold:true}]
+      .concat(top.map(s=>({name:s.name,color:bandColor(s.peak),levels:s.levels})));
+    const leg=series.map(s=>`<span class="lg"><span class="sw" style="background:${s.color}"></span>${s.name.length>28?s.name.slice(0,28)+'\u2026':s.name}</span>`).join('');
+    body+=`<div style="margin-bottom:18px"><div style="font-weight:700;font-size:13.5px">${name}</div>
+      <div class="asof" style="margin:2px 0 8px">${ep.note||''}</div>${lineChart(ep.dates,series)}
+      <div class="legend" style="margin-top:6px;margin-left:0">${leg}</div></div>`;
+  }
+  return `<div class="panel" id="backtest"><div class="phead" onclick="this.parentNode.classList.toggle('open')">
+    <span><strong>Backtest / validation</strong> <span class="asof">how the engine responds to real stress</span></span>
+    <span class="asof">${Object.keys(bt.episodes).length} episode(s)<span class="chev"></span></span></div>
+    <div class="pbody"><div class="asof" style="margin:8px 0 12px;line-height:1.5">${bt.scope||''}</div>${body}</div></div>`;
 }
 function render(d){
-  document.getElementById('sub').textContent = `As of ${d.date}  -  generated ${d.generated_at}`;
+  document.getElementById('sub').textContent=`As of ${d.date}  \u00B7  generated ${d.generated_at}`;
   const a=d.aggregates;
-  let html = `<div class="agg">
-    <div class="card"><div class="lbl">Overall</div><div class="num" style="color:${bandColor(Math.round(a.overall))}">${a.overall}/10</div><div class="band">${bandName(Math.round(a.overall))}</div></div>
-    <div class="card"><div class="lbl">Set 1</div><div class="num" style="color:${bandColor(Math.round(a['1']))}">${a['1']}/10</div></div>
-    <div class="card"><div class="lbl">Set 2</div><div class="num" style="color:${bandColor(Math.round(a['2']))}">${a['2']}/10</div></div>
-    <div class="card"><div class="lbl">Set 3</div><div class="num" style="color:${bandColor(Math.round(a['3']))}">${a['3']}/10</div></div>
-  </div>`;
-  html += healthBar(d);
-  html += `<div class="narr"><strong>Daily brief</strong>\n${d.narrative||''}</div>`;
-  html += reviewPanel(d);
+  const aggCard=(lbl,val,showBand)=>`<div class="card"><div class="lbl">${lbl}</div>
+    <div class="num" style="color:${bandColor(Math.round(val))}">${val}/10</div>
+    ${showBand?`<div class="band">${bandName(Math.round(val))}</div>`:''}</div>`;
+  let html=`<div class="agg">${aggCard('Overall',a.overall,true)}${aggCard('Set 1',a['1'])}${aggCard('Set 2',a['2'])}${aggCard('Set 3',a['3'])}</div>`;
+  html+=`<div class="section-label">Heat map \u2014 all stories</div>`+heatStrip(d);
+  html+=healthBar(d);
+  html+=`<div class="section-label">Summary</div>`;
+  html+=`<div class="narr"><strong>Daily brief</strong>\n${d.narrative||''}</div>`;
+  html+=reviewPanel(d);
+  html+=backtestPanel();
+  html+=`<div class="section-label">Stories (highest risk first)</div>`;
   const sorted=[...d.stories].sort((x,y)=>y.level-x.level);
   for(const s of sorted){
     const col=bandColor(s.level);
-    html += `<div class="story"><h3>${s.name} <span class="band">(Set ${s.set})</span></h3>
-      <div class="row">${meter(s.level)}
-        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-          <span class="lvl" style="color:${col}">${s.level}/10</span>
-          <span class="band">${s.band}</span>
+    html+=`<div class="story" id="story-${s.id}"><h3>${s.name}<span class="setpill">Set ${s.set}</span></h3>
+      <div class="srow">${gauge(s.level)}
+        <div class="sright">
+          <span class="lvl" style="color:${col}">${s.level}<span class="den">/10</span></span>
+          <span class="bpill" style="background:${col}">${s.band}</span>
           ${trendBadge(s.trend)}<span class="asof">vs ${s.trend?s.trend.since:'\u2014'}</span>
           ${sparkSVG(s.spark,col)}
         </div></div>
-      <table><thead><tr><th>Indicator</th><th>Value</th><th>Band</th><th>&Delta;</th><th>Cadence</th><th>As of</th><th>Source</th></tr></thead><tbody>`;
+      <div class="tscroll"><table><thead><tr><th>Indicator</th><th>Value</th><th>Band</th><th>&Delta;</th><th>Cadence</th><th>As of</th><th>Source</th></tr></thead><tbody>`;
     for(const ind of s.indicators){
-      const bc = ind.band===null? '#999' : bandColor(ind.band<=0?1:ind.band===1?5:9);
-      const srcCell = ind.source_url
-        ? `<a href="${ind.source_url}" target="_blank" rel="noopener">${ind.provenance||'src'}</a>`
-        : (ind.provenance||ind.source);
-      html += `<tr class="${ind.stale?'stale':''}">
-        <td>${ind.label}</td><td>${fmt(ind.value)}</td>
+      const bc=ind.band===null?'#999':bandColor(ind.band<=0?1:ind.band===1?5:9);
+      const srcCell=ind.source_url?`<a href="${ind.source_url}" target="_blank" rel="noopener">${ind.provenance||'src'}</a>`:(ind.provenance||ind.source);
+      html+=`<tr class="${ind.stale?'stale':''}"><td>${ind.label}</td><td>${fmt(ind.value)}</td>
         <td><span class="pill" style="background:${bc}">${ind.band===null?'-':ind.band}</span></td>
-        <td>${ind.delta>0?'+':''}${ind.delta||0}</td>
-        <td>${ind.cadence}</td>
+        <td>${ind.delta>0?'+':''}${ind.delta||0}</td><td>${ind.cadence}</td>
         <td class="asof">${ind.as_of||'\u2014'}</td>
-        <td style="color:#888">${srcCell}${ind.stale?' <span class="prov">baseline</span>':''}</td></tr>`;
+        <td style="color:var(--muted)">${srcCell}${ind.stale?' <span class="prov">baseline</span>':''}</td></tr>`;
     }
-    html += `</tbody></table></div>`;
+    html+=`</tbody></table></div></div>`;
   }
-  document.getElementById('app').innerHTML = html;
+  document.getElementById('app').innerHTML=html;
 }
-fetch('./latest.json?_='+Date.now())
-  .then(r=>{ if(!r.ok) throw new Error('latest.json not found ('+r.status+')'); return r.json(); })
-  .then(render)
-  .catch(e=>{ document.getElementById('app').innerHTML =
+Promise.all([
+  fetch('./latest.json?_='+Date.now()).then(r=>{ if(!r.ok) throw new Error('latest.json not found ('+r.status+')'); return r.json(); }),
+  fetch('./backtest.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null)
+]).then(([d,bt])=>{ BACKTEST=bt; render(d); })
+  .catch(e=>{ document.getElementById('app').innerHTML=
     `<div class="err"><strong>Could not load data.</strong><br>${e.message}<br><br>
-     Run <code>python src/main.py --offline --no-ai</code> first, then open this page from a local server
-     (e.g. <code>python -m http.server</code> inside the <code>dashboard/</code> folder), or deploy via GitHub Pages.</div>`; });
+     Run <code>python src/main.py --offline --no-ai</code>, then open this page via a local server
+     (<code>python -m http.server</code> in <code>dashboard/</code>) or deploy via GitHub Pages.</div>`; });
 </script>
 </body>
 </html>

@@ -192,3 +192,59 @@ indicators that were low-confidence or that changed — worth a 2-minute glance.
   (Settings → Secrets and variables → Actions → Variables). Haiku is a fraction of the cost.
 - Less often / more often: edit the second `cron` line in `.github/workflows/daily.yml`
   (`30 13 * * 1` = Mondays; `* * 1,4` would be Mon & Thu, etc.).
+
+---
+
+## Part 5 — Alerts & automatic config checks (Phase 2)
+
+### Band-crossing alerts (so you never have to check)
+The tracker can notify you **only when a story (or the overall level) crosses into a new risk
+band** — Low → Moderate → Elevated → High → Severe — versus the previous run. Small wiggles are
+ignored; you only hear from it when risk meaningfully changes.
+
+Pick any channel (all free, set as repo **Secrets** under Settings → Secrets and variables → Actions):
+
+- **Discord / Slack (easiest):** in your server, create an Incoming Webhook URL, then add a secret
+  `ALERT_WEBHOOK_URL` with that URL. The format is auto-detected.
+- **Telegram:** create a bot via @BotFather, get its token and your chat id, then add secrets
+  `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`.
+- **Email:** add `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, and `ALERT_EMAIL_TO`.
+
+Tuning: set a repository **variable** `ALERT_MIN_LEVEL` (e.g. `5`) to only be alerted about
+crossings at/above Elevated. Default `0` = all crossings, both up and down.
+
+Test it now: locally run `python src/main.py --test-alert` (with the env vars set), or just wait —
+the daily workflow sends alerts automatically when a crossing happens. Add `--no-alert` to any run
+to stay silent.
+
+### Automatic config checks (CI)
+A self-test (`tests/selftest.py`) now runs **on every push** (workflow `ci-selftest`) and as a
+**guard before each daily run**. It catches the kind of bug that would silently corrupt the
+tracker — most importantly a `baseline_band` that doesn't match the band its `baseline_value`
+maps to (which would make day-zero levels disagree with the published reports) — plus missing
+fields, bad thresholds, duplicate ids, framework gaps, and non-deterministic scoring. If anything
+is wrong, the check fails loudly instead of shipping bad numbers. Run it yourself anytime:
+`python tests/selftest.py`.
+
+---
+
+## Part 6 — Backtest & methodology (Phase 4)
+
+**Backtest.** `python src/backtest.py` replays documented historical values of the market/data
+indicators (the 2020 COVID dash-for-cash and the 2022 rate/MOVE shock) through the live scoring
+engine, and writes `dashboard/backtest.json`. The dashboard then shows, per episode, how the most
+affected stories' levels would have moved. Run `python src/backtest.py --live --start 2019-06-01
+--end 2026-06-01` to replay real history pulled from the live feeds instead.
+
+Honest scope (also shown on the dashboard): only the market/data indicators are varied; judgment
+indicators are held at baseline, so backtested levels reflect ONLY the market-driven component — a
+partial validation of the engine's mechanics, not a claim the tracker would have predicted events.
+
+**Methodology.** `METHODOLOGY.md` (versioned) documents the scoring math, the agent trust model, data
+sources, the backtest's limits, and an explicit "what this is and isn't." Read it before relying on
+the numbers.
+
+**Agent cross-checking.** The highest-weight indicators are rated twice; if the two independent reads
+disagree, the rating is held at low confidence and flagged for review instead of moving the meter on
+a single, possibly-wrong reading. Tune with the `AGENT_CROSSCHECK_MIN_WEIGHT` variable (default 1.5),
+and optionally set `AGENT_MODEL_2` to use a different model for the second opinion.

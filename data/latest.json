@@ -1,13 +1,13 @@
 {
   "date": "2026-06-28",
-  "generated_at": "2026-06-28 18:16 UTC",
+  "generated_at": "2026-06-28 18:36 UTC",
   "aggregates": {
     "1": 5.3,
     "2": 4.6,
-    "3": 5.0,
+    "3": 5.1,
     "overall": 5.0
   },
-  "narrative": "**HEADLINE**\nOverall macro risk stable at 5.0, with 14 elevated or higher risks persisting across financial, supply chain, and geopolitical domains.\n\n**LEVEL CHANGES**\n\u2022 **Sea lanes & undersea cables** (7\u21926, Elevated): WTI crude fell 50 cents to $69.23/bbl, reducing energy-driven shipping pressure but infrastructure vulnerability remains amid geopolitical tensions.\n\n**ELEVATED RISKS TO MONITOR**\nFourteen stories remain at Elevated or higher: Japan's carry-trade exposure (6), China's deflationary exports (6), critical minerals weaponization (6), AI circular financing (6), grid bottleneck (6), food fragility (6); plus Treasury basis leverage, private credit opacity, developing-world debt, CRE maturity wall, hidden consumer debt, insurance retreat, and lithography chokepoints (all 5).\n\n**WATCH CLOSEST**\nJapan fiscal/JGB/carry trade (6): largest single tail risk for sudden deleveraging shock.",
+  "narrative": "As of 2026-06-28: overall risk 5.0/10 (Set 1 5.3/10, Set 2 4.6/10, Set 3 5.1/10).\nNo story changed level versus the previous run. Daily market indicators moved within their current bands.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -36,17 +36,17 @@
         {
           "id": "move",
           "label": "MOVE index (Treasury volatility)",
-          "value": 66.79,
+          "value": 96,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
           "delta": 0.0,
           "source": "market:^MOVE",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-06-26",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "clearing_status",
@@ -65,14 +65,9 @@
         }
       ],
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s2_japan",
@@ -86,17 +81,17 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 161.685,
+          "value": 156,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
           "delta": 0.0,
           "source": "market:JPY=X",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/JPY=X",
-          "as_of": "2026-06-28",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "jgb30",
@@ -130,14 +125,9 @@
         }
       ],
       "spark": [
-        6,
         6
       ],
-      "trend": {
-        "prev": 6,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s3_private_credit",
@@ -195,14 +185,9 @@
         }
       ],
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s4_dev_debt",
@@ -260,14 +245,9 @@
         }
       ],
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s5_china_deflation",
@@ -296,17 +276,17 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.7975,
+          "value": 7.2,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
           "delta": 0.0,
           "source": "market:CNY=X",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/CNY=X",
-          "as_of": "2026-06-28",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "trade_actions",
@@ -325,14 +305,9 @@
         }
       ],
       "spark": [
-        6,
         6
       ],
-      "trend": {
-        "prev": 6,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s6_rare_earths",
@@ -390,14 +365,9 @@
         }
       ],
       "spark": [
-        6,
         6
       ],
-      "trend": {
-        "prev": 6,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s7_stablecoins",
@@ -455,14 +425,9 @@
         }
       ],
       "spark": [
-        4,
         4
       ],
-      "trend": {
-        "prev": 4,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s8_ai_capex",
@@ -520,14 +485,9 @@
         }
       ],
       "spark": [
-        6,
         6
       ],
-      "trend": {
-        "prev": 6,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s9_cre",
@@ -570,14 +530,9 @@
         }
       ],
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s10_france",
@@ -635,14 +590,9 @@
         }
       ],
       "spark": [
-        4,
         4
       ],
-      "trend": {
-        "prev": 4,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s11_consumer_debt",
@@ -700,14 +650,9 @@
         }
       ],
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s12_gold_dedollar",
@@ -721,17 +666,17 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4096.2998,
+          "value": 4300,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
           "delta": 0.0,
           "source": "market:GC=F",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/GC=F",
-          "as_of": "2026-06-26",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "dollar_reserve_share",
@@ -765,14 +710,9 @@
         }
       ],
       "spark": [
-        3,
         3
       ],
-      "trend": {
-        "prev": 3,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s13_insurance",
@@ -830,14 +770,9 @@
         }
       ],
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s14_pensions",
@@ -895,14 +830,9 @@
         }
       ],
       "spark": [
-        4,
         4
       ],
-      "trend": {
-        "prev": 4,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s15_ai_power",
@@ -960,38 +890,33 @@
         }
       ],
       "spark": [
-        6,
         6
       ],
-      "trend": {
-        "prev": 6,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s16_copper",
       "name": "Copper & the electrification deficit",
       "set": 3,
       "base_level": 4,
-      "raw_level": 4.25,
+      "raw_level": 4.0,
       "level": 4,
       "band": "Moderate",
       "indicators": [
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.207,
-          "band": 2,
+          "value": 5.4,
+          "band": 1,
           "baseline_band": 1,
           "weight": 0.5,
-          "delta": 0.25,
+          "delta": 0.0,
           "source": "market:HG=F",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/HG=F",
-          "as_of": "2026-06-26",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "mine_disruptions",
@@ -1025,14 +950,9 @@
         }
       ],
       "spark": [
-        4,
         4
       ],
-      "trend": {
-        "prev": 4,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s17_water",
@@ -1090,14 +1010,9 @@
         }
       ],
       "spark": [
-        4,
         4
       ],
-      "trend": {
-        "prev": 4,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s18_food_fertilizer",
@@ -1155,14 +1070,9 @@
         }
       ],
       "spark": [
-        6,
         6
       ],
-      "trend": {
-        "prev": 6,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s19_lithography",
@@ -1220,23 +1130,18 @@
         }
       ],
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s20_sea_lanes",
       "name": "Sea lanes & undersea cables",
       "set": 3,
       "base_level": 7,
-      "raw_level": 6.5,
-      "level": 6,
-      "band": "Elevated",
+      "raw_level": 7.0,
+      "level": 7,
+      "band": "High",
       "indicators": [
         {
           "id": "hormuz_redsea_status",
@@ -1256,17 +1161,17 @@
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 69.23,
-          "band": 0,
+          "value": 95,
+          "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
-          "delta": -0.5,
+          "delta": 0.0,
           "source": "market:CL=F",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/CL=F",
-          "as_of": "2026-06-26",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "cable_incidents",
@@ -1285,14 +1190,9 @@
         }
       ],
       "spark": [
-        7,
-        6
+        7
       ],
-      "trend": {
-        "prev": 7,
-        "since": "2026-06-28",
-        "change": -1
-      }
+      "trend": null
     },
     {
       "id": "s21_clearinghouses",
@@ -1306,32 +1206,32 @@
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 18.41,
+          "value": 17,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
           "delta": 0.0,
           "source": "market:^VIX",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/^VIX",
-          "as_of": "2026-06-26",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "move_ccp",
           "label": "Treasury volatility (MOVE)",
-          "value": 66.79,
+          "value": 96,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
           "delta": 0.0,
           "source": "market:^MOVE",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-06-26",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "treasury_clearing_rollout",
@@ -1350,30 +1250,18 @@
         }
       ],
       "spark": [
-        4,
         4
       ],
-      "trend": {
-        "prev": 4,
-        "since": "2026-06-28",
-        "change": 0
-      }
+      "trend": null
     }
   ],
   "data_health": {
-    "live_ok": 8,
+    "live_ok": 0,
     "live_total": 16,
-    "fell_back": 8,
+    "fell_back": 16,
     "agent_last": null,
     "agent_days_ago": null,
     "agent_flags": 0,
-    "offline": false
-  },
-  "aggregates_trend": {
-    "overall": {
-      "prev": 5.0,
-      "since": "2026-06-28",
-      "change": 0.0
-    }
+    "offline": true
   }
 }

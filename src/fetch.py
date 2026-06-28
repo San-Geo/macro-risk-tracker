@@ -118,6 +118,22 @@ def market_latest_dated(symbol):
     return (res["meta"].get("regularMarketPrice"), None)
 
 
+def market_series(symbol, rng="10y"):
+    """Return [(date, close)] daily history from Yahoo (ascending)."""
+    import datetime as _dt
+    url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(symbol)}"
+           f"?range={rng}&interval=1d")
+    data = json.loads(_get(url))
+    res = data["chart"]["result"][0]
+    ts = res.get("timestamp") or []
+    closes = res["indicators"]["quote"][0]["close"]
+    out = []
+    for t, c in zip(ts, closes):
+        if c is not None:
+            out.append((_dt.datetime.utcfromtimestamp(t).date().isoformat(), round(c, 4)))
+    return out
+
+
 def fetch_value_dated(source):
     """Like fetch_value but returns (value, as_of_date)."""
     try:

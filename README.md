@@ -107,3 +107,17 @@ classifies it against the rubric in `config/framework.yaml`, and logs reasoning 
 always win. Run locally with `python src/main.py --agent` (needs `ANTHROPIC_API_KEY`), or let the
 GitHub workflow run it weekly. Human-readable rubric: `FRAMEWORK.md` (regenerate with
 `python src/build_framework.py`). See `SETUP_GUIDE.md` Part 4.
+
+## Alerts & CI (Phase 2)
+`src/alerts.py` sends a notification only when a story or the overall level crosses a risk band
+(Low/Moderate/Elevated/High/Severe) vs the previous run. Configure any of: `ALERT_WEBHOOK_URL`
+(Discord/Slack), `TELEGRAM_BOT_TOKEN`+`TELEGRAM_CHAT_ID`, or SMTP email. `ALERT_MIN_LEVEL` tunes
+sensitivity. Test with `python src/main.py --test-alert`. `tests/selftest.py` validates the config
+(baseline-band integrity, fields, determinism) on every push and before each daily run.
+
+## Backtest & methodology (Phase 4)
+`src/backtest.py` replays documented 2020 & 2022 market history through the engine (sample mode) or
+real history (`--live`), writing `dashboard/backtest.json` for the dashboard's validation panel — only
+market indicators vary; judgment ones are held at baseline (partial validation). `METHODOLOGY.md` is
+the versioned methodology + limitations. The agent cross-checks high-weight indicators and flags
+disagreement (`AGENT_CROSSCHECK_MIN_WEIGHT`, optional `AGENT_MODEL_2`).
