@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Global Macro Risk Tracker</title>
+<style>
+  :root{ --blue:#1F4E79; --grey:#595959; --line:#e3e3e3; }
+  *{ box-sizing:border-box; }
+  body{ font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; margin:0;
+        color:#1a1a1a; background:#f7f8fa; }
+  header{ background:var(--blue); color:#fff; padding:22px 20px; }
+  header h1{ margin:0; font-size:20px; }
+  header .sub{ opacity:.85; font-size:13px; margin-top:4px; }
+  .wrap{ max-width:1000px; margin:0 auto; padding:20px; }
+  .agg{ display:flex; gap:14px; flex-wrap:wrap; margin:16px 0 8px; }
+  .agg .card{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 18px; flex:1; min-width:150px; }
+  .agg .num{ font-size:30px; font-weight:700; }
+  .agg .lbl{ color:var(--grey); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+  .narr{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 18px; margin:14px 0; white-space:pre-wrap; line-height:1.5; font-size:14px; }
+  .story{ background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin:12px 0; }
+  .story h3{ margin:0 0 6px; font-size:15px; }
+  .row{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .meter{ display:flex; gap:3px; flex:1; min-width:220px; }
+  .seg{ height:16px; flex:1; border-radius:3px; background:#e2e2e2; }
+  .lvl{ font-weight:700; font-size:15px; white-space:nowrap; }
+  .band{ font-size:12px; color:var(--grey); }
+  table{ border-collapse:collapse; width:100%; margin-top:10px; font-size:12.5px; }
+  th,td{ text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); }
+  th{ color:var(--grey); font-weight:600; }
+  .pill{ display:inline-block; padding:1px 7px; border-radius:10px; color:#fff; font-size:11px; font-weight:600; }
+  .stale{ color:#999; font-style:italic; }
+  footer{ color:var(--grey); font-size:12px; text-align:center; padding:24px; }
+  .err{ background:#fde8e8; border:1px solid #f5b5b5; padding:14px; border-radius:8px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Global Macro Risk Tracker</h1>
+  <div class="sub" id="sub">loading...</div>
+</header>
+<div class="wrap" id="app">Loading latest.json ...</div>
+<footer>Informational analysis only - not investment, legal, or financial advice. Levels are a judgement, not a forecast.</footer>
+<script>
+function bandColor(l){ return l<=2?'#2E7D32':l<=4?'#8BC34A':l<=6?'#F5A623':l<=8?'#E8710A':'#C0392B'; }
+function bandName(l){ return l<=2?'Low':l<=4?'Moderate':l<=6?'Elevated':l<=8?'High':'Severe'; }
+function meter(l){
+  let s='<div class="meter">';
+  for(let i=1;i<=10;i++) s += `<div class="seg" style="background:${i<=l?bandColor(l):'#e2e2e2'}"></div>`;
+  return s+'</div>';
+}
+function fmt(v){ if(v===null||v===undefined) return '-'; return (typeof v==='number')? (Math.abs(v)<10? v.toFixed(2): v.toFixed(1)) : v; }
+function render(d){
+  document.getElementById('sub').textContent = `As of ${d.date}  -  generated ${d.generated_at}`;
+  const a=d.aggregates;
+  let html = `<div class="agg">
+    <div class="card"><div class="lbl">Overall</div><div class="num" style="color:${bandColor(Math.round(a.overall))}">${a.overall}/10</div><div class="band">${bandName(Math.round(a.overall))}</div></div>
+    <div class="card"><div class="lbl">Set 1</div><div class="num" style="color:${bandColor(Math.round(a['1']))}">${a['1']}/10</div></div>
+    <div class="card"><div class="lbl">Set 2</div><div class="num" style="color:${bandColor(Math.round(a['2']))}">${a['2']}/10</div></div>
+    <div class="card"><div class="lbl">Set 3</div><div class="num" style="color:${bandColor(Math.round(a['3']))}">${a['3']}/10</div></div>
+  </div>`;
+  html += `<div class="narr"><strong>Daily brief</strong>\n${d.narrative||''}</div>`;
+  const sorted=[...d.stories].sort((x,y)=>y.level-x.level);
+  for(const s of sorted){
+    html += `<div class="story"><h3>${s.name} <span class="band">(Set ${s.set})</span></h3>
+      <div class="row">${meter(s.level)}<div><span class="lvl" style="color:${bandColor(s.level)}">${s.level}/10</span> <span class="band">${s.band}</span></div></div>
+      <table><thead><tr><th>Indicator</th><th>Value</th><th>Band</th><th>&Delta;</th><th>Cadence</th><th>Source</th></tr></thead><tbody>`;
+    for(const ind of s.indicators){
+      const bc = ind.band===null? '#999' : bandColor(ind.band<=0?1:ind.band===1?5:9);
+      html += `<tr class="${ind.stale?'stale':''}">
+        <td>${ind.label}</td><td>${fmt(ind.value)}</td>
+        <td><span class="pill" style="background:${bc}">${ind.band===null?'-':ind.band}</span></td>
+        <td>${ind.delta>0?'+':''}${ind.delta||0}</td>
+        <td>${ind.cadence}</td><td style="color:#888">${ind.source}${ind.stale?' (baseline)':''}</td></tr>`;
+    }
+    html += `</tbody></table></div>`;
+  }
+  document.getElementById('app').innerHTML = html;
+}
+fetch('./latest.json?_='+Date.now())
+  .then(r=>{ if(!r.ok) throw new Error('latest.json not found ('+r.status+')'); return r.json(); })
+  .then(render)
+  .catch(e=>{ document.getElementById('app').innerHTML =
+    `<div class="err"><strong>Could not load data.</strong><br>${e.message}<br><br>
+     Run <code>python src/main.py --offline --no-ai</code> first, then open this page from a local server
+     (e.g. <code>python -m http.server</code> inside the <code>dashboard/</code> folder), or deploy via GitHub Pages.</div>`; });
+</script>
+</body>
+</html>
