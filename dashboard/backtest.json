@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T11:33:33.515634+00:00",
+  "generated": "2026-06-29T22:15:16.217484+00:00",
   "version": "1.0",
   "mode": "sample",
   "scope": "Replays documented historical values of the market/data indicators through the live scoring engine. Judgment indicators are held at baseline (they have no historical series), so these levels reflect ONLY the market-driven component of each story - a partial validation of the engine's mechanics, not a claim the tracker would have predicted these events.",
@@ -17,6 +17,279 @@
     "real10"
   ],
   "episodes": {
+    "GFC (2008)": {
+      "dates": [
+        "2008-06-30",
+        "2008-09-30",
+        "2008-10-31",
+        "2008-11-30",
+        "2008-12-31",
+        "2009-03-31"
+      ],
+      "overall": [
+        5.9,
+        6.2,
+        5.9,
+        5.9,
+        5.8,
+        5.8
+      ],
+      "stories": {
+        "s1_basis_trade": {
+          "name": "Treasury basis trade (hidden leverage)",
+          "set": 1,
+          "levels": [
+            6,
+            7,
+            8,
+            8,
+            7,
+            7
+          ]
+        },
+        "s2_japan": {
+          "name": "Japan fiscal / JGB / carry trade",
+          "set": 1,
+          "levels": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s3_private_credit": {
+          "name": "Private credit's opaque expansion",
+          "set": 1,
+          "levels": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s4_dev_debt": {
+          "name": "Developing-world debt crisis",
+          "set": 3,
+          "levels": [
+            5,
+            5,
+            6,
+            5,
+            5,
+            5
+          ]
+        },
+        "s5_china_deflation": {
+          "name": "China's price spillover (deflation or cost-push)",
+          "set": 4,
+          "levels": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s6_rare_earths": {
+          "name": "Critical minerals as a weapon",
+          "set": 4,
+          "levels": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s7_stablecoins": {
+          "name": "Stablecoins & Treasury demand",
+          "set": 1,
+          "levels": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "s8_ai_capex": {
+          "name": "AI build-out circular financing",
+          "set": 2,
+          "levels": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ]
+        },
+        "s9_cre": {
+          "name": "CRE maturity wall / regional banks",
+          "set": 2,
+          "levels": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        "s10_france": {
+          "name": "France / eurozone fragility",
+          "set": 3,
+          "levels": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "s11_consumer_debt": {
+          "name": "Hidden consumer debt",
+          "set": 2,
+          "levels": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s12_gold_dedollar": {
+          "name": "Gold / de-dollarization",
+          "set": 3,
+          "levels": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        "s13_insurance": {
+          "name": "Insurance retreat",
+          "set": 2,
+          "levels": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        "s14_pensions": {
+          "name": "Pensions / demographics",
+          "set": 3,
+          "levels": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "s15_ai_power": {
+          "name": "AI power & the grid bottleneck",
+          "set": 5,
+          "levels": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s16_copper": {
+          "name": "Copper & the electrification deficit",
+          "set": 5,
+          "levels": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "s17_water": {
+          "name": "Water - the underpriced input",
+          "set": 5,
+          "levels": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "s18_food_fertilizer": {
+          "name": "Food & fertilizer fragility",
+          "set": 5,
+          "levels": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s19_lithography": {
+          "name": "The lithography (ASML) chokepoint",
+          "set": 4,
+          "levels": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        "s20_sea_lanes": {
+          "name": "Sea lanes & undersea cables",
+          "set": 4,
+          "levels": [
+            8,
+            7,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s21_clearinghouses": {
+          "name": "Clearinghouses (financial chokepoint)",
+          "set": 1,
+          "levels": [
+            5,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        }
+      },
+      "note": "The reference funding/credit crisis. Volatility, credit spreads and funding stress all hit extremes; clearinghouses, the basis trade, private credit and the consumer story respond hard."
+    },
     "COVID crash (2020)": {
       "dates": [
         "2020-01-31",
@@ -27,12 +300,12 @@
         "2020-06-30"
       ],
       "overall": [
-        5.0,
-        5.0,
-        5.3,
-        5.2,
-        5.1,
-        5.1
+        5.5,
+        5.5,
+        5.8,
+        5.7,
+        5.6,
+        5.6
       ],
       "stories": {
         "s1_basis_trade": {
@@ -84,7 +357,7 @@
           ]
         },
         "s5_china_deflation": {
-          "name": "China's exported deflation",
+          "name": "China's price spillover (deflation or cost-push)",
           "set": 4,
           "levels": [
             6,
@@ -300,12 +573,12 @@
         "2022-12-31"
       ],
       "overall": [
-        5.0,
-        5.1,
-        5.3,
-        5.2,
-        5.2,
-        5.1
+        5.6,
+        5.7,
+        5.9,
+        5.7,
+        5.8,
+        5.5
       ],
       "stories": {
         "s1_basis_trade": {
@@ -357,7 +630,7 @@
           ]
         },
         "s5_china_deflation": {
-          "name": "China's exported deflation",
+          "name": "China's price spillover (deflation or cost-push)",
           "set": 4,
           "levels": [
             6,
@@ -562,6 +835,233 @@
         }
       },
       "note": "Rates volatility (MOVE) elevated all year, peaking with the Oct-2022 UK gilt/LDI crisis; oil and the strong dollar add stress."
+    },
+    "SVB / regional banks (2023)": {
+      "dates": [
+        "2023-02-28",
+        "2023-03-15",
+        "2023-03-31",
+        "2023-05-31"
+      ],
+      "overall": [
+        5.5,
+        5.6,
+        5.5,
+        5.5
+      ],
+      "stories": {
+        "s1_basis_trade": {
+          "name": "Treasury basis trade (hidden leverage)",
+          "set": 1,
+          "levels": [
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s2_japan": {
+          "name": "Japan fiscal / JGB / carry trade",
+          "set": 1,
+          "levels": [
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s3_private_credit": {
+          "name": "Private credit's opaque expansion",
+          "set": 1,
+          "levels": [
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s4_dev_debt": {
+          "name": "Developing-world debt crisis",
+          "set": 3,
+          "levels": [
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        "s5_china_deflation": {
+          "name": "China's price spillover (deflation or cost-push)",
+          "set": 4,
+          "levels": [
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s6_rare_earths": {
+          "name": "Critical minerals as a weapon",
+          "set": 4,
+          "levels": [
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s7_stablecoins": {
+          "name": "Stablecoins & Treasury demand",
+          "set": 1,
+          "levels": [
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "s8_ai_capex": {
+          "name": "AI build-out circular financing",
+          "set": 2,
+          "levels": [
+            6,
+            7,
+            6,
+            6
+          ]
+        },
+        "s9_cre": {
+          "name": "CRE maturity wall / regional banks",
+          "set": 2,
+          "levels": [
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        "s10_france": {
+          "name": "France / eurozone fragility",
+          "set": 3,
+          "levels": [
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "s11_consumer_debt": {
+          "name": "Hidden consumer debt",
+          "set": 2,
+          "levels": [
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        "s12_gold_dedollar": {
+          "name": "Gold / de-dollarization",
+          "set": 3,
+          "levels": [
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        "s13_insurance": {
+          "name": "Insurance retreat",
+          "set": 2,
+          "levels": [
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        "s14_pensions": {
+          "name": "Pensions / demographics",
+          "set": 3,
+          "levels": [
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "s15_ai_power": {
+          "name": "AI power & the grid bottleneck",
+          "set": 5,
+          "levels": [
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s16_copper": {
+          "name": "Copper & the electrification deficit",
+          "set": 5,
+          "levels": [
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "s17_water": {
+          "name": "Water - the underpriced input",
+          "set": 5,
+          "levels": [
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "s18_food_fertilizer": {
+          "name": "Food & fertilizer fragility",
+          "set": 5,
+          "levels": [
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s19_lithography": {
+          "name": "The lithography (ASML) chokepoint",
+          "set": 4,
+          "levels": [
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        "s20_sea_lanes": {
+          "name": "Sea lanes & undersea cables",
+          "set": 4,
+          "levels": [
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        "s21_clearinghouses": {
+          "name": "Clearinghouses (financial chokepoint)",
+          "set": 1,
+          "levels": [
+            4,
+            5,
+            4,
+            4
+          ]
+        }
+      },
+      "note": "A deposit-run/duration crisis that showed mostly in RATE volatility (MOVE), not in VIX or credit spreads. A deliberately HARD case: the market component barely moves, because the stress lived in bank balance sheets the market feeds don't see - exactly what the judgment indicators exist to catch."
     }
   }
 }

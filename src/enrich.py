@@ -1,13 +1,14 @@
 """Phase 1 enrichments: per-story trend + sparkline, indicator provenance,
 and a data-health summary. All read-only/derived; no scoring logic here."""
 import csv, os, datetime
+import score
 
 
 def load_history(path):
-    """Return {story_id: [(date, level), ...]} ascending, from history.csv."""
-    series = {}
+    """Return ({story_id: [(date, level), ...]}, {date: method_version}) ascending."""
+    series, versions = {}, {}
     if not os.path.exists(path):
-        return series
+        return series, versions
     with open(path) as f:
         for row in csv.DictReader(f):
             try:
@@ -15,9 +16,11 @@ def load_history(path):
             except (ValueError, KeyError):
                 continue
             series.setdefault(row["story_id"], []).append((row["date"], lvl))
+            # rows written before versioning have no column -> "1.x" (pre-stamp)
+            versions[row["date"]] = (row.get("method_version") or "1.x")
     for k in series:
         series[k].sort(key=lambda x: x[0])
-    return series
+    return series, versions
 
 
 def _on_or_before(hist, cutoff):
@@ -33,7 +36,7 @@ def _on_or_before(hist, cutoff):
 def attach_trends(result, history_path, today_date, window_days=7, spark_n=16):
     """Add story['trend'] (vs ~window_days ago) and story['spark'] (recent levels).
     Reads history BEFORE today's row is appended, so it compares to prior runs."""
-    hist = load_history(history_path)
+    hist, versions = load_history(history_path)
     today = datetime.date.fromisoformat(today_date)
     cutoff = (today - datetime.timedelta(days=window_days)).isoformat()
     for s in result["stories"]:
@@ -44,12 +47,13 @@ def attach_trends(result, history_path, today_date, window_days=7, spark_n=16):
         s["trend"] = ({"prev": ref[1], "since": ref[0], "change": s["level"] - ref[1]}
                       if ref else None)
 
-    # overall aggregate trend (average across stories per historical date)
+    # overall aggregate trend: recompute each past date's overall with the CURRENT
+    # aggregator (history stores per-story levels), so the series is self-consistent.
     bydate = {}
     for h in hist.values():
         for d, l in h:
             bydate.setdefault(d, []).append(l)
-    overall_series = sorted((d, sum(v) / len(v)) for d, v in bydate.items())
+    overall_series = sorted((d, score.aggregate_overall(v)["overall"]) for d, v in bydate.items())
     refagg = None
     for d, a in overall_series:
         if d <= cutoff:
@@ -57,9 +61,13 @@ def attach_trends(result, history_path, today_date, window_days=7, spark_n=16):
     if refagg is None and overall_series:
         refagg = overall_series[0]
     if refagg:
+        cur_ver = getattr(score, "METHODOLOGY_VERSION", "1.0")
+        ref_ver = versions.get(refagg[0], "1.x")
         result["aggregates_trend"] = {
             "overall": {"prev": round(refagg[1], 1), "since": refagg[0],
-                        "change": round(result["aggregates"]["overall"] - refagg[1], 1)}}
+                        "change": round(result["aggregates"]["overall"] - refagg[1], 1),
+                        "crosses_methodology": ref_ver != cur_ver,
+                        "ref_version": ref_ver, "version": cur_ver}}
     return result
 
 

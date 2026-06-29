@@ -217,6 +217,7 @@
         <div class="k">Scout</div><div>Watches credible feeds for developments the tracker doesn't already capture and <b>proposes</b> additions (re-rate existing / coverage gap / new risk) with a materiality rating. It only proposes &mdash; a human approves.</div>
         <div class="k">Agent review</div><div>The AI rating agent's worklist. Each row separates the <b>FACT</b> (the load-bearing measured datum + primary source) from the rule-applied rating, so the meter is driven by facts, not vibes. Where authoritative sources disagree, the conflict is shown as <b>Dissent</b> and annotated rather than silently resolved. Confidence/applied/held/overridden and reasoning + sources are shown; low-confidence calls are flagged, not applied. Readings outside an indicator's plausible range are caught, marked <b>auto-corrected</b>, and held at the last trusted value.</div>
         <div class="k">Consistency checks</div><div>Deterministic whole-picture cross-checks that run after scoring. They flag ratings the rest of the board contradicts \u2014 e.g. a chokepoint rated "closed" while crude oil stays benign, or a positive China PPI when the story tracks deflation. These are review flags, not auto-corrections.</div>
+        <div class="k">Validation</div><div>Two honest tests. <b>Calibration</b> replays documented stress episodes (2008/2020/2022/2023) through the live engine and shows whether the overall rises and separates from a calm baseline (market indicators only, so a lower bound). <b>Dynamic range</b> shows the overall now spans ~4.7-9.0: it reaches High/Severe only under broad, correlated stress. <b>Sensitivity</b> ranks which indicators most move their story/set/overall, i.e. where a wrong fact matters most.</div>
         <div class="k">Backtest</div><div>Replays real 2020 &amp; 2022 market data through the engine to show it responds sensibly to stress. Only the market indicators vary (judgement ones are held at baseline), so it validates mechanics, not predictions.</div>
         <div class="k">Background</div><div>An expandable plain-language summary of each story, with a link to the full written brief (PDF).</div>
       </div>
@@ -225,7 +226,7 @@
       <div class="hgrid">
         <div class="k">Scoring</div><div>level = base level + the sum of each indicator's weighted delta, clamped to 1&ndash;10. Every move is arithmetic and auditable &mdash; no AI sets a number directly.</div>
         <div class="k">The AI's role</div><div>The agent only sets <i>inputs</i> (it reads current events and maps them onto fixed rubrics). The maths is deterministic, and a human override always wins.</div>
-        <div class="k">Aggregates</div><div>The "Overall" and per-Set scores at the top are simple averages of the story levels.</div>
+        <div class="k">Aggregates</div><div>Per-Set scores are averages of their story levels. <b>Overall</b> is tail-weighted: it blends the breadth average with the worst cluster (top third of stories) and adds a premium when many stories are High at once, so a broad correlated shock registers instead of being averaged away. Hover the Overall card for the breakdown.</div>
       </div>
     </div>
   </div>
@@ -363,8 +364,12 @@ function healthBar(d){
   const feeds=h.offline?'<b>offline preview</b> (sample data)'
     :`<b>${h.live_ok}/${h.live_total}</b> live feeds OK${h.fell_back?`, <b>${h.fell_back}</b> on baseline`:''}`;
   const agent=h.agent_last?`agent ran <b>${h.agent_days_ago}d ago</b> (${h.agent_last})${h.agent_flags?`, <b>${h.agent_flags}</b> flagged`:''}`:'agent has not run yet';
-  let ot=''; if(d.aggregates_trend&&d.aggregates_trend.overall) ot=`overall ${trendBadge(d.aggregates_trend.overall)} vs ${d.aggregates_trend.overall.since}`;
-  return `<div class="health"><span><span class="dot" style="background:${dot}"></span>${feeds}</span><span>${agent}</span>${ot?`<span>${ot}</span>`:''}</div>`;
+  let ot=''; if(d.aggregates_trend&&d.aggregates_trend.overall){ const t=d.aggregates_trend.overall;
+    ot=`overall ${trendBadge(t)} vs ${t.since}`;
+    if(t.crosses_methodology) ot=`overall vs ${t.since} <span class="htip" data-tip="Scoring methodology changed between then (v${t.ref_version}) and now (v${t.version}), so this delta mixes regimes and is not comparable. Story-level history is unaffected.">\u26A0 methodology changed (v${t.ref_version}\u2192v${t.version})</span>`;
+  }
+  const mv=d.method_version?`<span class="htip" data-tip="Scoring methodology version. Every saved history row is stamped with it so trends and backtests never silently mix scoring regimes.">methodology v${d.method_version}</span>`:'';
+  return `<div class="health"><span><span class="dot" style="background:${dot}"></span>${feeds}</span><span>${agent}</span>${ot?`<span>${ot}</span>`:''}${mv?`<span>${mv}</span>`:''}</div>`;
 }
 function consistencyPanel(d){
   const c=d.consistency;
@@ -423,6 +428,7 @@ function reviewPanel(d){
 }
 
 let BACKTEST=null;
+let VALIDATION=null;
 const BT_PALETTE=['#2563eb','#ea580c','#16a34a','#9333ea','#dc2626','#0891b2','#ca8a04'];
 const BT_DASH=['','7 3','2 4','10 3 2 3','5 4','1 4'];
 let SCOUT=null;
@@ -493,6 +499,47 @@ function lineChart(dates, series){
   }
   return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:600px">${g}${xl}${lines}</svg>`;
 }
+function validationPanel(){
+  const v=VALIDATION;
+  if(!v) return '';
+  const c=v.calibration||{}, s=v.sensitivity||{}, rg=c.range||{};
+  const bandFor=(x)=>x>=9?'Severe':x>=7?'High':x>=5?'Elevated':x>=3?'Moderate':'Low';
+  // dynamic-range bar
+  const lo=rg.floor_all_low, base=rg.baseline, hi=rg.ceiling_all_high;
+  const pct=(x)=>Math.max(0,Math.min(100,(x/10)*100));
+  const rangeBar=`<div style="margin:8px 0 4px">
+    <div style="position:relative;height:22px;background:linear-gradient(90deg,#2E7D32,#8BC34A,#F5A623,#E8710A,#C0392B);border-radius:5px;opacity:.25"></div>
+    <div style="position:relative;height:0">
+      <div style="position:absolute;left:${pct(lo)}%;top:-22px;height:22px;border-left:2px solid var(--text)"></div>
+      <div style="position:absolute;left:${pct(hi)}%;top:-22px;height:22px;border-left:2px solid var(--text)"></div>
+      <div style="position:absolute;left:${pct(lo)}%;width:${pct(hi)-pct(lo)}%;top:-22px;height:22px;background:var(--text);opacity:.12"></div>
+      <div style="position:absolute;left:${pct(base)}%;top:-22px;height:22px;border-left:2px dashed var(--accent)"></div>
+    </div>
+    <div class="asof" style="margin-top:6px">Achievable overall range: <b>${lo}</b> (all-clear) to <b>${hi}</b> (every story at max stress) \u00B7 resting baseline <b>${base}</b>. The tail-weighted overall reaches High/Severe only when many stories are stressed together \u2014 a broad, correlated cluster \u2014 not from a single spike.</div>
+  </div>`;
+  const rows=(c.episodes||[]).map(e=>`<tr>
+    <td>${e.name}</td>
+    <td>${e.start_overall} \u2192 <b>${e.peak_overall}</b></td>
+    <td><span class="pill" style="background:${bandColor(e.peak_overall)}">${e.peak_band}</span></td>
+    <td>${e.rose_into_event?'\u2191 yes':'\u2013'}</td>
+    <td>+${e.separation_vs_calm}</td></tr>`).join('');
+  const movers=(s.movers||[]).slice(0,8).map(m=>`<tr>
+    <td>${m.label}<div style="color:var(--muted);font-size:11px">${m.story}</div></td>
+    <td>${m.story_swing}</td><td>${m.set_swing}</td><td>${m.overall_swing}</td></tr>`).join('');
+  return `<div class="panel" id="validation"><div class="phead" onclick="this.parentNode.classList.toggle('open')">
+      <span><strong>Validation</strong> <span class="asof">calibration &amp; sensitivity</span></span>
+      <span class="asof">${(c.summary||{}).lit_elevated_or_higher||0}/${(c.summary||{}).n_episodes||0} episodes lit \u00B7 range ${lo}\u2013${hi}<span class="chev"></span></span></div>
+    <div class="pbody">
+      <div style="font-weight:700;margin-top:4px">Dynamic range of the overall gauge</div>
+      ${rangeBar}
+      <div style="font-weight:700;margin-top:12px">Calibration \u2014 documented stress episodes replayed through the engine</div>
+      <div class="asof" style="margin:4px 0">Market/data indicators only; judgment indicators held at baseline, so these are a LOWER BOUND, not a claim the tracker would have predicted the event. SVB is a deliberate hard case (the stress lived in bank balance sheets the market feeds don't see).</div>
+      <table class="tbl"><thead><tr><th>Episode</th><th>Overall (start\u2192peak)</th><th>Peak band</th><th>Rose in?</th><th>vs calm</th></tr></thead><tbody>${rows}</tbody></table>
+      <div style="font-weight:700;margin-top:12px">Sensitivity \u2014 which facts move the meter most</div>
+      <div class="asof" style="margin:4px 0">${s.note||''}</div>
+      <table class="tbl"><thead><tr><th>Indicator</th><th>Story \u0394</th><th>Set \u0394</th><th>Overall \u0394</th></tr></thead><tbody>${movers}</tbody></table>
+    </div></div>`;
+}
 function backtestPanel(){
   const bt=BACKTEST;
   if(!bt) return `<div class="narr"><strong>Backtest / validation</strong>\nNot generated yet \u2014 run <code>python src/backtest.py</code> to replay 2020 &amp; 2022 through the engine.</div>`;
@@ -523,9 +570,12 @@ function render(d){
     <div class="num" style="color:${bandColor(Math.round(val))}">${val}/10</div>
     ${showBand?`<div class="band">${bandName(Math.round(val))}</div>`:''}</div>`;
   const setKeys=Object.keys(a).filter(k=>k!=='overall').sort();
-  let cards=aggCard('Overall',a.overall,true);
+  const bk=d.overall_breakdown;
+  const ovTitle=bk?`Tail-weighted overall: breadth mean ${bk.breadth_mean}, worst-cluster (top ${bk.tail_k}) ${bk.tail_mean}, +${bk.correlated_premium} correlated premium (${bk.n_high_stories} stories at High+)`:'';
+  let cards=aggCard('Overall',a.overall,true,ovTitle);
   for(const k of setKeys) cards+=aggCard(setName(k,false),a[k],false,setName(k,true));
   let html=`<div class="agg">${cards}</div>`;
+  if(bk) html+=`<div class="asof" style="margin:-4px 0 8px">Overall is tail-weighted: it blends the breadth average (${bk.breadth_mean}) with the worst cluster (top ${bk.tail_k} stories = ${bk.tail_mean})${bk.correlated_premium>0?`, plus +${bk.correlated_premium} because ${bk.n_high_stories} stories are High at once`:''} — so a broad, correlated shock lifts it where a simple average wouldn't.</div>`;
   html+=`<div class="section-label">Heat map \u2014 all stories</div>`+heatStrip(d);
   html+=healthBar(d);
   html+=`<div class="health" style="gap:10px"><span><b>Brief:</b></span>
@@ -537,6 +587,7 @@ function render(d){
   html+=reviewPanel(d);
   html+=consistencyPanel(d);
   html+=backtestPanel();
+  html+=validationPanel();
   html+=`<div class="section-label">Stories (highest risk first)</div>`;
   const sorted=[...d.stories].sort((x,y)=>y.level-x.level);
   for(const s of sorted){
@@ -577,8 +628,9 @@ function render(d){
 Promise.all([
   fetch('./latest.json?_='+Date.now()).then(r=>{ if(!r.ok) throw new Error('latest.json not found ('+r.status+')'); return r.json(); }),
   fetch('./backtest.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
+  fetch('./validation.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
   fetch('./scout_queue.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null)
-]).then(([d,bt,sc])=>{ BACKTEST=bt; SCOUT=sc; render(d); })
+]).then(([d,bt,va,sc])=>{ BACKTEST=bt; VALIDATION=va; SCOUT=sc; render(d); })
   .catch(e=>{ document.getElementById('app').innerHTML=
     `<div class="err"><strong>Could not load data.</strong><br>${e.message}<br><br>
      Run <code>python src/main.py --offline --no-ai</code>, then open this page via a local server

@@ -32,6 +32,19 @@ PERTURBED = ["vix", "move", "move_ccp", "sofr_effr_spread", "hy_oas", "ig_oas",
 # Sources: CBOE VIX, ICE BofA OAS series (FRED BAMLH0A0HYM2 / BAMLC0A0CM),
 # ICE BofAML MOVE, EIA/WTI, COMEX copper, BLS UNRATE, Fed broad USD index, DFII10.
 SAMPLE = {
+  "GFC (2008)": {
+    "note": "The reference funding/credit crisis. Volatility, credit spreads and "
+            "funding stress all hit extremes; clearinghouses, the basis trade, private "
+            "credit and the consumer story respond hard.",
+    "points": [
+      ("2008-06-30", dict(vix=23, move=110, move_ccp=110, sofr_effr_spread=0.05, hy_oas=8.0, ig_oas=3.0, oil_price=140, copper_price=3.90, unrate=5.6, dxy=100, real10=1.8)),
+      ("2008-09-30", dict(vix=40, move=180, move_ccp=180, sofr_effr_spread=0.12, hy_oas=11.5, ig_oas=4.5, oil_price=100, copper_price=3.10, unrate=6.1, dxy=108, real10=1.6)),
+      ("2008-10-31", dict(vix=60, move=240, move_ccp=240, sofr_effr_spread=0.25, hy_oas=16.0, ig_oas=5.5, oil_price=68, copper_price=1.90, unrate=6.5, dxy=117, real10=2.4)),
+      ("2008-11-30", dict(vix=63, move=220, move_ccp=220, sofr_effr_spread=0.18, hy_oas=18.0, ig_oas=6.0, oil_price=54, copper_price=1.60, unrate=6.8, dxy=118, real10=2.0)),
+      ("2008-12-31", dict(vix=40, move=180, move_ccp=180, sofr_effr_spread=0.12, hy_oas=20.0, ig_oas=6.5, oil_price=40, copper_price=1.40, unrate=7.3, dxy=110, real10=1.0)),
+      ("2009-03-31", dict(vix=44, move=160, move_ccp=160, sofr_effr_spread=0.08, hy_oas=18.0, ig_oas=6.0, oil_price=48, copper_price=1.80, unrate=8.7, dxy=115, real10=1.5)),
+    ],
+  },
   "COVID crash (2020)": {
     "note": "Funding stress + volatility spike. Clearinghouses, the basis trade, "
             "credit and the unemployment-linked consumer story respond hard.",
@@ -54,6 +67,18 @@ SAMPLE = {
       ("2022-09-30", dict(vix=32, move=148, move_ccp=148, sofr_effr_spread=0.0, hy_oas=5.5, ig_oas=1.6, oil_price=79, copper_price=3.40, unrate=3.5, dxy=128, real10=1.0)),
       ("2022-10-31", dict(vix=26, move=157, move_ccp=157, sofr_effr_spread=0.0, hy_oas=4.9, ig_oas=1.5, oil_price=87, copper_price=3.50, unrate=3.7, dxy=126, real10=1.5)),
       ("2022-12-31", dict(vix=22, move=120, move_ccp=120, sofr_effr_spread=0.0, hy_oas=4.7, ig_oas=1.3, oil_price=80, copper_price=3.80, unrate=3.5, dxy=121, real10=1.5)),
+    ],
+  },
+  "SVB / regional banks (2023)": {
+    "note": "A deposit-run/duration crisis that showed mostly in RATE volatility (MOVE), "
+            "not in VIX or credit spreads. A deliberately HARD case: the market component "
+            "barely moves, because the stress lived in bank balance sheets the market "
+            "feeds don't see - exactly what the judgment indicators exist to catch.",
+    "points": [
+      ("2023-02-28", dict(vix=20, move=110, move_ccp=110, sofr_effr_spread=0.0, hy_oas=4.1, ig_oas=1.3, oil_price=77, copper_price=4.05, unrate=3.6, dxy=105, real10=1.5)),
+      ("2023-03-15", dict(vix=26, move=180, move_ccp=180, sofr_effr_spread=0.05, hy_oas=5.0, ig_oas=1.6, oil_price=68, copper_price=3.85, unrate=3.5, dxy=104, real10=1.2)),
+      ("2023-03-31", dict(vix=19, move=152, move_ccp=152, sofr_effr_spread=0.02, hy_oas=4.5, ig_oas=1.4, oil_price=76, copper_price=4.10, unrate=3.5, dxy=102, real10=1.15)),
+      ("2023-05-31", dict(vix=18, move=130, move_ccp=130, sofr_effr_spread=0.0, hy_oas=4.4, ig_oas=1.4, oil_price=68, copper_price=3.70, unrate=3.7, dxy=104, real10=1.5)),
     ],
   },
 }

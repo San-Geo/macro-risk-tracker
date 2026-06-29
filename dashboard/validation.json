@@ -1,0 +1,257 @@
+{
+  "generated": "2026-06-29T22:15:16.363458+00:00",
+  "version": "1.0",
+  "calibration": {
+    "calm_overall": 5.5,
+    "range": {
+      "floor_all_low": 4.7,
+      "baseline": 5.6,
+      "ceiling_all_high": 9.0
+    },
+    "episodes": [
+      {
+        "name": "GFC (2008)",
+        "note": "The reference funding/credit crisis. Volatility, credit spreads and funding stress all hit extremes; clearinghouses, the basis trade, private credit and the consumer story respond hard.",
+        "dates": [
+          "2008-06-30",
+          "2008-09-30",
+          "2008-10-31",
+          "2008-11-30",
+          "2008-12-31",
+          "2009-03-31"
+        ],
+        "overall": [
+          5.9,
+          6.2,
+          5.9,
+          5.9,
+          5.8,
+          5.8
+        ],
+        "start_overall": 5.9,
+        "peak_overall": 6.2,
+        "peak_band": "Elevated",
+        "peak_date": "2008-09-30",
+        "reached_elevated": true,
+        "reached_high": false,
+        "rose_into_event": true,
+        "separation_vs_calm": 0.7
+      },
+      {
+        "name": "COVID crash (2020)",
+        "note": "Funding stress + volatility spike. Clearinghouses, the basis trade, credit and the unemployment-linked consumer story respond hard.",
+        "dates": [
+          "2020-01-31",
+          "2020-02-29",
+          "2020-03-31",
+          "2020-04-30",
+          "2020-05-31",
+          "2020-06-30"
+        ],
+        "overall": [
+          5.5,
+          5.5,
+          5.8,
+          5.7,
+          5.6,
+          5.6
+        ],
+        "start_overall": 5.5,
+        "peak_overall": 5.8,
+        "peak_band": "Elevated",
+        "peak_date": "2020-03-31",
+        "reached_elevated": true,
+        "reached_high": false,
+        "rose_into_event": true,
+        "separation_vs_calm": 0.3
+      },
+      {
+        "name": "Rate & inflation shock (2022)",
+        "note": "Rates volatility (MOVE) elevated all year, peaking with the Oct-2022 UK gilt/LDI crisis; oil and the strong dollar add stress.",
+        "dates": [
+          "2022-01-31",
+          "2022-03-31",
+          "2022-06-30",
+          "2022-09-30",
+          "2022-10-31",
+          "2022-12-31"
+        ],
+        "overall": [
+          5.6,
+          5.7,
+          5.9,
+          5.7,
+          5.8,
+          5.5
+        ],
+        "start_overall": 5.6,
+        "peak_overall": 5.9,
+        "peak_band": "Elevated",
+        "peak_date": "2022-06-30",
+        "reached_elevated": true,
+        "reached_high": false,
+        "rose_into_event": true,
+        "separation_vs_calm": 0.4
+      },
+      {
+        "name": "SVB / regional banks (2023)",
+        "note": "A deposit-run/duration crisis that showed mostly in RATE volatility (MOVE), not in VIX or credit spreads. A deliberately HARD case: the market component barely moves, because the stress lived in bank balance sheets the market feeds don't see - exactly what the judgment indicators exist to catch.",
+        "dates": [
+          "2023-02-28",
+          "2023-03-15",
+          "2023-03-31",
+          "2023-05-31"
+        ],
+        "overall": [
+          5.5,
+          5.6,
+          5.5,
+          5.5
+        ],
+        "start_overall": 5.5,
+        "peak_overall": 5.6,
+        "peak_band": "Elevated",
+        "peak_date": "2023-03-15",
+        "reached_elevated": true,
+        "reached_high": false,
+        "rose_into_event": true,
+        "separation_vs_calm": 0.1
+      }
+    ],
+    "summary": {
+      "n_episodes": 4,
+      "lit_elevated_or_higher": 4,
+      "mean_separation": 0.38,
+      "finding": "The overall is now tail-weighted: it tracks the worst cluster of stories and adds a premium when many are High at once, so a broad correlated shock lifts it (range ~4.7-9.0). These episodes replay MARKET indicators only with judgment indicators held at baseline, so they remain a LOWER BOUND - a real crisis that also lit the judgment layer would read materially higher."
+    }
+  },
+  "sensitivity": {
+    "as_of_overall": 5.6,
+    "max_story_swing": 2,
+    "max_overall_swing": 0.2,
+    "movers": [
+      {
+        "id": "subprime_auto_dpd",
+        "label": "Subprime auto 60+ day delinquency (%)",
+        "story": "Hidden consumer debt",
+        "set": 2,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.5,
+        "overall_swing": 0.1
+      },
+      {
+        "id": "insurer_exits",
+        "label": "Insurer non-renewals / exits (0 stable / 1 rising / 2 accelerating)",
+        "story": "Insurance retreat",
+        "set": 2,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.5,
+        "overall_swing": 0.1
+      },
+      {
+        "id": "cat_losses",
+        "label": "Catastrophe-loss pressure (0 normal / 1 elevated / 2 severe season)",
+        "story": "Insurance retreat",
+        "set": 2,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.5,
+        "overall_swing": 0.1
+      },
+      {
+        "id": "usdjpy",
+        "label": "USD/JPY (yen strengthening = lower = risk)",
+        "story": "Japan fiscal / JGB / carry trade",
+        "set": 1,
+        "weight": 1.5,
+        "story_swing": 2,
+        "set_swing": 0.4,
+        "overall_swing": 0.2
+      },
+      {
+        "id": "license_flow",
+        "label": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
+        "story": "Critical minerals as a weapon",
+        "set": 4,
+        "weight": 1.5,
+        "story_swing": 2,
+        "set_swing": 0.4,
+        "overall_swing": 0.2
+      },
+      {
+        "id": "oil_price",
+        "label": "WTI crude oil (USD/bbl, CL=F)",
+        "story": "Sea lanes & undersea cables",
+        "set": 4,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.4,
+        "overall_swing": 0.2
+      },
+      {
+        "id": "new_imf_programs",
+        "label": "New IMF programs / missed coupons (0 calm / 1 rising / 2 cluster)",
+        "story": "Developing-world debt crisis",
+        "set": 3,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.4,
+        "overall_swing": 0.1
+      },
+      {
+        "id": "dollar_reserve_share",
+        "label": "USD share of FX reserves (%, IMF COFER)",
+        "story": "Gold / de-dollarization",
+        "set": 3,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.4,
+        "overall_swing": 0.1
+      },
+      {
+        "id": "taiwan_tension",
+        "label": "Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis)",
+        "story": "The lithography (ASML) chokepoint",
+        "set": 4,
+        "weight": 1.5,
+        "story_swing": 2,
+        "set_swing": 0.4,
+        "overall_swing": 0.1
+      },
+      {
+        "id": "peg_deviation",
+        "label": "Largest stablecoin max peg deviation (%)",
+        "story": "Stablecoins & Treasury demand",
+        "set": 1,
+        "weight": 1.5,
+        "story_swing": 2,
+        "set_swing": 0.4,
+        "overall_swing": 0.0
+      },
+      {
+        "id": "ig_oas",
+        "label": "US investment-grade OAS (%) - big-issuer proxy",
+        "story": "AI build-out circular financing",
+        "set": 2,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.1
+      },
+      {
+        "id": "gpu_refi_stress",
+        "label": "GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)",
+        "story": "AI build-out circular financing",
+        "set": 2,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.1
+      }
+    ],
+    "note": "Overall is the mean of all 21 story levels, so no single indicator can move it far - the headline is robust by construction. The leverage that matters is on each STORY: the indicators below are where a wrong fact does the most damage and most deserves cross-checking."
+  },
+  "scope": "Calibration replays documented MARKET-indicator history through the live engine with judgment indicators held at baseline (a lower bound, not a prediction claim). Sensitivity is exact and assumption-free on the current board."
+}

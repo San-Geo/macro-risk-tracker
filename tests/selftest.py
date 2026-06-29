@@ -127,6 +127,13 @@ def main():
             elif not (domains[st].get("authorities") and domains[st].get("framing")):
                 fail(f"domain set {st} missing framing or authorities")
 
+    # methodology version must exist and be documented in the changelog
+    mv = getattr(score, "METHODOLOGY_VERSION", None)
+    if not mv:
+        fail("score.METHODOLOGY_VERSION is not set")
+    elif mv not in getattr(score, "METHODOLOGY_CHANGELOG", {}):
+        fail(f"METHODOLOGY_VERSION {mv} has no METHODOLOGY_CHANGELOG entry")
+
     n_ind = len(seen_ind)
     print(f"Checked {len(stories)} stories, {n_ind} indicators, {len(framework)} framework rubrics.")
     for w in WARNS:

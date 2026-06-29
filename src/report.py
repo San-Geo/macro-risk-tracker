@@ -1,5 +1,6 @@
 """Write outputs: JSON, history CSV, a formula-driven Excel model, dashboard data."""
 import csv, json, os, datetime
+import score
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.formatting.rule import ColorScaleRule
@@ -31,6 +32,9 @@ def write_json(result, narrative, date, path):
         payload["sets"] = result["sets"]
     if result.get("consistency"):
         payload["consistency"] = result["consistency"]
+    if result.get("overall_breakdown"):
+        payload["overall_breakdown"] = result["overall_breakdown"]
+    payload["method_version"] = getattr(score, "METHODOLOGY_VERSION", "1.0")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(payload, f, indent=2)
@@ -40,12 +44,13 @@ def write_json(result, narrative, date, path):
 def append_history(result, date, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     new = not os.path.exists(path)
+    ver = getattr(score, "METHODOLOGY_VERSION", "1.0")
     with open(path, "a", newline="") as f:
         w = csv.writer(f)
         if new:
-            w.writerow(["date", "story_id", "name", "set", "level", "band", "raw_level"])
+            w.writerow(["date", "story_id", "name", "set", "level", "band", "raw_level", "method_version"])
         for s in result["stories"]:
-            w.writerow([date, s["id"], s["name"], s["set"], s["level"], s["band"], s["raw_level"]])
+            w.writerow([date, s["id"], s["name"], s["set"], s["level"], s["band"], s["raw_level"], ver])
 
 
 def _hdr(ws, row, headers, widths):
@@ -142,8 +147,8 @@ def build_workbook(config, result, narrative, date, history_path, path):
 
     # ---- Daily Log (rebuilt from history.csv) ----
     log = wb.create_sheet("Daily Log")
-    _hdr(log, 1, ["Date", "Story ID", "Name", "Set", "Level", "Band", "Raw"],
-         [12, 16, 30, 6, 8, 11, 8])
+    _hdr(log, 1, ["Date", "Story ID", "Name", "Set", "Level", "Band", "Raw", "Method"],
+         [12, 16, 30, 6, 8, 11, 8, 9])
     if os.path.exists(history_path):
         with open(history_path) as f:
             rows = list(csv.reader(f))[1:]

@@ -2,7 +2,7 @@
 
 *Auto-generated 2026-06-29 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 5.0/10** — Set 1 4.8, Set 2 5.2, Set 3 4.0, Set 4 6.0, Set 5 5.0.
+**Overall risk 5.6/10** — Set 1 4.8, Set 2 5.2, Set 3 4.0, Set 4 6.0, Set 5 5.0.
 
 
 ## Set 1 — Funding & Leverage

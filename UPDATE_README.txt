@@ -1,14 +1,15 @@
-UPDATE BUNDLE - preserves history (no data/ folder). TASK 2 of 2: per-domain authorities.
-NEW FILE: config/domains.yaml - maps each of the 5 mechanism sets to a specialist
-FRAMING (how a domain analyst reasons) + a curated list of primary-source AUTHORITIES
-(Funding->Fed FSR/OFR/BIS/NY Fed; Credit->FDIC/Fed/Trepp/KBRA/Moody's/S&P; Sovereign->
-IMF/World Bank/OECD/Treasury; Geoecon->Reuters/CSIS/ICG/IMF PortWatch/MOFCOM/USTR;
-Physical->IEA/EIA/USBR/Drought Monitor/FAO/ICSG/LBNL).
-CHANGED:
- - src/agent.py: each indicator is now rated with its set's specialist framing, and the
-   prompt prefers indicator-specific sources FIRST, then the domain authorities. Applies
-   to both the main read and the cross-check read. The desk is recorded on each rating.
- - src/main.py + dashboard/index.html: agent review shows the specialist "<desk> desk"
-   that produced each rating.
- - tests/selftest.py: guards that every story set has a domain entry (framing+authorities).
-APPLY: upload src/, config/, dashboard/. No workflow change. Takes effect next agent run.
+UPDATE BUNDLE - preserves history (no data/ folder). METHODOLOGY-VERSION STAMP.
+ - src/score.py: METHODOLOGY_VERSION (now "2.0") + METHODOLOGY_CHANGELOG, the single
+   source of truth. BUMP it whenever a change alters what a level means.
+ - src/report.py: history.csv now carries a `method_version` column; every row is
+   stamped. (Old rows without it read as "1.x".) latest.json carries method_version.
+ - src/enrich.py: the overall trend now (a) recomputes past overalls with the CURRENT
+   tail-weighted aggregator from stored per-story levels - fixing a mean/tail mismatch
+   the new aggregation introduced - and (b) flags when a trend comparison spans a
+   methodology change (crosses_methodology).
+ - dashboard/index.html: shows "methodology v2.0"; when the overall trend crosses a
+   version boundary it shows a "methodology changed" warning instead of a misleading
+   delta. tests/selftest.py guards that the version is set and documented.
+APPLY: upload src/ and dashboard/. Your existing history.csv keeps working - old rows
+read as v1.x, new rows are stamped v2.0, and the first cross-version comparison will
+flag itself rather than mislead. No workflow change.

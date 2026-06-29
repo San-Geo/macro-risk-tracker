@@ -7,6 +7,17 @@ story level  = clamp(base_level + sum(deltas), 1, 10)
 
 BANDS = [(2, "Low"), (4, "Moderate"), (6, "Elevated"), (8, "High"), (10, "Severe")]
 
+# Methodology version. BUMP THIS whenever a change alters what a level MEANS
+# (aggregation, banding, rubric thresholds, story reframes). Every saved history row
+# is stamped with it so trend lines and backtests never silently mix scoring regimes.
+METHODOLOGY_VERSION = "2.0"
+METHODOLOGY_CHANGELOG = {
+    "1.0": "Initial: plain-mean overall; original event rubrics; one-sided China PPI.",
+    "2.0": "2026-06: fact-anchored countable event rubrics; two-sided China PPI; "
+           "per-domain source authorities; agent sanity ranges + cross-checks; "
+           "consistency engine; tail-weighted, correlation-aware overall (replaces the mean).",
+}
+
 
 def band_for(value, direction, good, warn, center=0.0):
     if value is None:
@@ -68,11 +79,35 @@ def score_story(story, values):
     }
 
 
+def aggregate_overall(levels):
+    """Tail-weighted, correlation-aware overall.
+
+    The plain mean of 21 story levels crushed the range toward the centre and
+    washed out broad, correlated shocks (a single driver lighting up many stories).
+    Instead we blend the breadth average with the WORST CLUSTER (mean of the top
+    third of stories) and add a bounded premium when many stories are High at once -
+    the signature of a systemic, common-driver episode. A lone spike barely moves it;
+    a broad cluster pushes it toward High/Severe.
+    """
+    n = len(levels) or 1
+    s = sorted(levels, reverse=True)
+    k = max(1, round(n / 3))                       # top third = the worst cluster
+    mean_all = sum(levels) / n
+    tail_mean = sum(s[:k]) / k
+    n_high = sum(1 for x in levels if x >= 7)
+    premium = min(1.5, 0.3 * max(0, n_high - 2))   # correlated-breadth premium
+    overall = max(1, min(10, round(0.5 * mean_all + 0.5 * tail_mean + premium, 1)))
+    return {"overall": overall, "breadth_mean": round(mean_all, 1),
+            "tail_mean": round(tail_mean, 1), "tail_k": k,
+            "n_high_stories": n_high, "correlated_premium": round(premium, 1)}
+
+
 def score_all(config, values):
     stories = [score_story(s, values) for s in config["stories"]]
     by_set = {}
     for s in stories:
         by_set.setdefault(s["set"], []).append(s["level"])
     aggregates = {k: round(sum(v) / len(v), 1) for k, v in by_set.items()}
-    aggregates["overall"] = round(sum(s["level"] for s in stories) / len(stories), 1)
-    return {"stories": stories, "aggregates": aggregates}
+    brk = aggregate_overall([s["level"] for s in stories])
+    aggregates["overall"] = brk["overall"]
+    return {"stories": stories, "aggregates": aggregates, "overall_breakdown": brk}

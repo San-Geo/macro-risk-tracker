@@ -212,6 +212,13 @@ def main():
         print(f"  scout: {q.get('new_count', 0)} new, {q.get('pending_count', 0)} pending "
               f"(review on the dashboard, or `python src/scout.py --list`)")
 
+    # Validation harness: calibration vs history + sensitivity of the current board.
+    try:
+        import validate
+        v = validate.main()
+    except Exception as e:
+        print(f"  (validation skipped: {e})")
+
     print("\n" + note)
 
 
