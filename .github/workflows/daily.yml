@@ -4,7 +4,7 @@ name: daily-risk-tracker
 # You can also trigger it manually from the Actions tab.
 on:
   schedule:
-    - cron: "10 22 * * 1-5"
+    - cron: "0 13 * * 1-5"
   workflow_dispatch:
 
 permissions:
