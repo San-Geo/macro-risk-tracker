@@ -54,6 +54,26 @@ def load_weights():
         return {}
 
 
+def load_ind_sets():
+    """{indicator_id: set_number} from stories.yaml, for domain routing."""
+    try:
+        with open(os.path.join(ROOT, "config", "stories.yaml")) as f:
+            cfg = yaml.safe_load(f)
+        return {ind["id"]: s.get("set")
+                for s in cfg["stories"] for ind in s["indicators"]}
+    except Exception:
+        return {}
+
+
+def load_domains():
+    """{set_number: {label, framing, authorities}} from config/domains.yaml."""
+    try:
+        with open(os.path.join(ROOT, "config", "domains.yaml")) as f:
+            return (yaml.safe_load(f) or {}).get("domains", {}) or {}
+    except Exception:
+        return {}
+
+
 def _disagree(a, b, kind, tol=0.2):
     """True if two independent readings differ enough to distrust them."""
     if a is None or b is None:
@@ -97,9 +117,15 @@ def _coerce(value, kind):
     return float(value)
 
 
-def assess_one(ind_id, spec, api_key, date, prior=None, model=None):
+def assess_one(ind_id, spec, api_key, date, prior=None, model=None, domain=None):
     kind = spec.get("type", "band")
-    sources = ", ".join(spec.get("sources", [])) or "reputable primary sources"
+    # authorities: indicator-specific sources lead (most precise), domain authorities back them up
+    domain = domain or {}
+    auth = list(spec.get("authorities") or spec.get("sources") or [])
+    auth += [s for s in (domain.get("authorities") or []) if s not in auth]
+    sources = ", ".join(auth) or "reputable primary sources"
+    framing = domain.get("framing", "").strip()
+    framing_line = (framing + "\n\n") if framing else ""
     if kind == "band":
         out_rule = ('Return "value" as the integer 0, 1, or 2 that the rubric '
                     "matches. Do not assign the most severe level (2) without clear evidence.")
@@ -109,20 +135,32 @@ def assess_one(ind_id, spec, api_key, date, prior=None, model=None):
     prompt = (
         f"You are a macro-risk research agent. Today is {date}. Determine the CURRENT "
         f"real-world status of ONE indicator and classify it STRICTLY by the rubric.\n\n"
+        f"{framing_line}"
         f"INDICATOR: {spec.get('query', ind_id)}\n"
         f"RUBRIC: {spec.get('rubric','')}\n"
-        f"PREFER THESE SOURCES: {sources}\n\n"
+        f"PREFER THESE PRIMARY SOURCES: {sources}\n\n"
         "Use the web_search tool to find the most recent authoritative information "
-        "BEFORE answering. Base the rating only on what you actually find; do not guess. "
+        "BEFORE answering. Base the rating ONLY on what you actually find; do not guess.\n"
+        "Work in two separate steps so fact and interpretation never blur:\n"
+        " (1) FACT: pin down the single load-bearing measured fact - the number or "
+        "observable status, with its PRIMARY source and date. Quote it plainly.\n"
+        " (2) MAP: apply the rubric to that fact mechanically.\n"
+        "If authoritative sources MATERIALLY DISAGREE (different numbers, or different "
+        "characterisations of the same event), do NOT silently pick one: put your best "
+        "single reading in \"value\" and record each competing reading in \"dissent\" "
+        "with its source. Leave \"dissent\" as [] only when sources broadly agree.\n"
         f"{out_rule} If you cannot find clear, recent evidence, set confidence to \"low\".\n\n"
         "Respond with ONLY this JSON (no other text):\n"
         '{"value": <number>, "confidence": "low|medium|high", '
         '"as_of": "<YYYY-MM-DD or period>", '
-        '"rationale": "<=2 sentences citing what you found>", "sources": ["<url>", ...]}'
+        '"fact": "<the load-bearing fact verbatim, with primary source + date>", '
+        '"rationale": "<=2 sentences: how that fact maps to the rubric>", '
+        '"dissent": [{"view": "<competing reading and who reports it>", "source": "<url>"}], '
+        '"sources": ["<url>", ...]}'
     )
     body = json.dumps({
         "model": model or AGENT_MODEL,
-        "max_tokens": 1024,
+        "max_tokens": 1400,
         "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
         "messages": [{"role": "user", "content": prompt}],
     }).encode()
@@ -150,6 +188,14 @@ def assess_one(ind_id, spec, api_key, date, prior=None, model=None):
     parsed.setdefault("confidence", "low")
     parsed.setdefault("rationale", "")
     parsed.setdefault("sources", [])
+    parsed.setdefault("fact", "")
+    dissent = parsed.get("dissent") or []
+    if not isinstance(dissent, list):
+        dissent = []
+    parsed["dissent"] = dissent
+    # when sources genuinely disagree we annotate rather than over-claim: cap confidence
+    if dissent and str(parsed.get("confidence", "")).lower() == "high":
+        parsed["confidence"] = "medium"
     parsed["type"] = kind
     return parsed
 
@@ -177,6 +223,8 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
     prior_log = load_log().get("assessments", {})
     assessments, values, review = {}, {}, []
     weights = load_weights()
+    ind_sets = load_ind_sets()
+    domains = load_domains()
     xcheck_min = float(os.environ.get("AGENT_CROSSCHECK_MIN_WEIGHT", "1.5") or 1.5)
     model2 = os.environ.get("AGENT_MODEL_2")  # optional second model for the check
 
@@ -201,11 +249,14 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
     def _work(ind_id):
         spec = framework[ind_id]
         prior = prior_log.get(ind_id)
-        a = assess_one(ind_id, spec, api_key, date, prior)
+        domain = domains.get(ind_sets.get(ind_id)) or {}
+        a = assess_one(ind_id, spec, api_key, date, prior, domain=domain)
+        if domain.get("label"):
+            a["domain"] = domain["label"]
         # Cross-check the highest-weight indicators with a second independent read.
         if weights.get(ind_id, 0) >= xcheck_min and a.get("value") is not None:
             try:
-                b = assess_one(ind_id, spec, api_key, date, prior, model=model2)
+                b = assess_one(ind_id, spec, api_key, date, prior, model=model2, domain=domain)
                 disagree = _disagree(a.get("value"), b.get("value"), spec.get("type", "band"))
                 a["crosscheck"] = {"second_value": b.get("value"), "agree": not disagree}
                 if disagree:
@@ -270,6 +321,8 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
                 review.append(ind_id)  # surface every change for the human to glance at
         if a.get("applied") and a.get("value") is not None:
             values[ind_id] = a["value"]
+        if a.get("dissent"):
+            review.append(ind_id)  # sources disagree -> surface the annotated divergence
         a["prior"] = (prior or {}).get("value")
         assessments[ind_id] = a
 

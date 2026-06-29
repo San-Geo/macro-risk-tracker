@@ -42,16 +42,6 @@ rules:
       true cut should co-move with oil. Reconcile this with the Hormuz status read.
     severity: medium
 
-  - id: china_ppi_sign
-    name: "China PPI positive, contradicting the deflation thesis"
-    when:
-      - {indicator: china_ppi, field: value, op: ">", value: 0}
-    flag: >-
-      China PPI is reported POSITIVE while this story tracks EXPORTED DEFLATION.
-      China PPI has printed negative for an extended run; a positive figure is
-      unusual and is most often a sign error (magnitude reported without the
-      minus). Verify the signed YoY print from NBS before applying.
-    severity: high
 
   - id: mine_copper
     name: "Copper mine-disruption cluster, but copper price benign"
@@ -85,3 +75,15 @@ rules:
       unchanged. Concrete weaponization shows up in COFER over time; check that
       'action' isn't really escalated 'talk' (1).
     severity: low
+
+  - id: hormuz_twins
+    name: "Two Hormuz reads disagree on the same strait"
+    when:
+      - {indicator: hormuz_fertilizer, field: band, op: "==", value: 2}
+      - {indicator: hormuz_redsea_status, field: band, op: "<=", value: 1}
+    flag: >-
+      Gulf fertilizer inputs are rated CUT (2, i.e. closure) but the sea-lane
+      indicator rates the very same Strait of Hormuz only CONTESTED (<=1). They
+      track one physical chokepoint and must agree - align the fertilizer read
+      down to DISRUPTED (1) unless the strait is genuinely closed.
+    severity: high

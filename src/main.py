@@ -139,6 +139,8 @@ def main():
                 "applied": a.get("applied"), "note": a.get("note", ""),
                 "rationale": a.get("rationale", ""), "sources": (a.get("sources") or [])[:3],
                 "as_of": a.get("as_of", ""), "out_of_range": a.get("out_of_range", False),
+                "fact": a.get("fact", ""), "dissent": (a.get("dissent") or [])[:4],
+                "domain": a.get("domain", ""),
             })
         items.sort(key=lambda x: (x["id"] not in flags, x["set"], x["label"]))
         result["agent_review"] = {"generated": alog.get("generated"), "model": alog.get("model"),

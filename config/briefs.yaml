@@ -76,7 +76,7 @@ stories:
   s4_dev_debt:
     summary: "A strong dollar, high real rates, and heavy foreign-currency debt loads leave many developing economies vulnerable to a sudden stop. A cluster of sovereign defaults or new IMF programs would signal the slow-burn crisis turning acute."
   s5_china_deflation:
-    summary: "Weak domestic demand and industrial overcapacity are pushing Chinese producer prices into sustained deflation, which China exports through cheaper goods. It pressures global manufacturers and feeds trade tensions and tariff cycles."
+    summary: "China's factory-gate prices spill into global goods markets in BOTH directions: years of PPI deflation exported disinflation and squeezed competitors, while a sharp 2026 reversal to positive PPI (energy/commodity cost-push) now exports input-cost pressure. Either large swing is destabilising; the indicator is scored on the size of the move, not its sign."
   s6_rare_earths:
     summary: "China dominates the mining and especially the processing of rare earths and critical minerals, and has shown willingness to use export licensing as leverage. Supply chains for magnets and defense inputs have little near-term substitute."
   s7_stablecoins:

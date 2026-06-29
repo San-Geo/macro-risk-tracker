@@ -1,11 +1,14 @@
-UPDATE BUNDLE - preserves history (no data/ folder). Adds the "whole-picture" layer.
-NEW FILES: src/consistency.py, config/consistency.yaml
-CHANGED: config/framework.yaml (china_ppi + hormuz rubrics tightened),
-         src/main.py (+report.py) wire the consistency engine into latest.json,
-         dashboard/index.html (new "Consistency checks" panel),
-         tests/selftest.py (guards consistency rules against typo'd indicator IDs).
-WHAT IT DOES: after scoring, deterministic rules in config/consistency.yaml
-cross-check the whole board and flag internal contradictions (e.g. sea lane rated
-closed while oil is benign; positive China PPI vs the deflation thesis). Flags only
-- never silent rewrites. Add/edit rules freely; selftest validates them.
-APPLY: upload src/ + config/ + dashboard/ as usual. No workflow change this round.
+UPDATE BUNDLE - preserves history (no data/ folder). TASK 2 of 2: per-domain authorities.
+NEW FILE: config/domains.yaml - maps each of the 5 mechanism sets to a specialist
+FRAMING (how a domain analyst reasons) + a curated list of primary-source AUTHORITIES
+(Funding->Fed FSR/OFR/BIS/NY Fed; Credit->FDIC/Fed/Trepp/KBRA/Moody's/S&P; Sovereign->
+IMF/World Bank/OECD/Treasury; Geoecon->Reuters/CSIS/ICG/IMF PortWatch/MOFCOM/USTR;
+Physical->IEA/EIA/USBR/Drought Monitor/FAO/ICSG/LBNL).
+CHANGED:
+ - src/agent.py: each indicator is now rated with its set's specialist framing, and the
+   prompt prefers indicator-specific sources FIRST, then the domain authorities. Applies
+   to both the main read and the cross-check read. The desk is recorded on each rating.
+ - src/main.py + dashboard/index.html: agent review shows the specialist "<desk> desk"
+   that produced each rating.
+ - tests/selftest.py: guards that every story set has a domain entry (framing+authorities).
+APPLY: upload src/, config/, dashboard/. No workflow change. Takes effect next agent run.

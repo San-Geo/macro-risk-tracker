@@ -55,16 +55,19 @@ def main():
                 continue
 
             d, good, warn_t = ind["direction"], ind["good"], ind["warn"]
-            if d not in ("higher_worse", "lower_worse"):
+            center = ind.get("center", 0.0)
+            if d not in ("higher_worse", "lower_worse", "two_sided"):
                 fail(f"{iid}: bad direction '{d}'")
                 continue
             if d == "higher_worse" and not good < warn_t:
                 fail(f"{iid}: higher_worse needs good < warn (got {good}, {warn_t})")
             if d == "lower_worse" and not good > warn_t:
                 fail(f"{iid}: lower_worse needs good > warn (got {good}, {warn_t})")
+            if d == "two_sided" and not (0 <= good < warn_t):
+                fail(f"{iid}: two_sided needs 0 <= good < warn half-widths (got {good}, {warn_t})")
 
             # THE key check: baseline_band must equal the band baseline_value maps to.
-            computed = score.band_for(ind["baseline_value"], d, good, warn_t)
+            computed = score.band_for(ind["baseline_value"], d, good, warn_t, center)
             if computed != ind["baseline_band"]:
                 fail(f"{iid}: baseline_band={ind['baseline_band']} but baseline_value "
                      f"{ind['baseline_value']} maps to band {computed} "
@@ -111,6 +114,18 @@ def main():
                     fail(f"consistency rule '{rid}': field must be band|value")
                 if c.get("op") not in _cons.OPS:
                     fail(f"consistency rule '{rid}': bad op '{c.get('op')}'")
+
+    # every story set must have a domain entry (so domain routing can't silently miss)
+    dpath = os.path.join(ROOT, "config", "domains.yaml")
+    if os.path.exists(dpath):
+        with open(dpath) as f:
+            domains = (yaml.safe_load(f) or {}).get("domains", {}) or {}
+        story_sets = {s.get("set") for s in stories}
+        for st in story_sets:
+            if st not in domains:
+                fail(f"set {st} has no entry in domains.yaml")
+            elif not (domains[st].get("authorities") and domains[st].get("framing")):
+                fail(f"domain set {st} missing framing or authorities")
 
     n_ind = len(seen_ind)
     print(f"Checked {len(stories)} stories, {n_ind} indicators, {len(framework)} framework rubrics.")

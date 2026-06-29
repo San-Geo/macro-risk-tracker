@@ -187,16 +187,17 @@ stories:
 
   - id: s5_china_deflation
     set: 4
-    name: "China's exported deflation"
+    name: "China's price spillover (deflation or cost-push)"
     base_level: 6
     indicators:
       - id: china_ppi
-        label: "China PPI YoY (%) - more negative is worse"
+        label: "China PPI YoY (%) - large swing either way is worse"
         source: "manual"
         cadence: monthly
-        direction: lower_worse
-        good: -1.0
-        warn: -3.0
+        direction: two_sided
+        center: 0.0
+        good: 2.0
+        warn: 4.0
         baseline_value: -2.5
         baseline_band: 1
         weight: 1.0
@@ -245,6 +246,16 @@ stories:
         warn: 1
         baseline_value: 1
         baseline_band: 1
+        weight: 1.0
+      - id: re_blacklist
+        label: "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)"
+        source: "manual"
+        cadence: event
+        direction: higher_worse
+        good: 0
+        warn: 1
+        baseline_value: 0
+        baseline_band: 0
         weight: 1.0
       - id: hree_premium
         label: "Ex-China heavy rare-earth price premium (x China)"

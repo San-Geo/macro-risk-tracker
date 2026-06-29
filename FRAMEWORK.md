@@ -31,7 +31,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = implementation on schedule, no delay; 1 = partial delay, phased relief, or notable industry pushback; 2 = mandate delayed, carved out, or paused.
+**Rubric.** 0 = ON TRACK: SEC compliance dates unchanged (cash 2026-12-31, repo 2027-06-30), no new extension sought. 1 = SLIPPING: an official extension granted, OR exemptive-relief requests pending, OR readiness surveys show <60% of firms confident of meeting the deadline. 2 = DELAYED: a SECOND formal deadline extension announced, or a deadline passed without compliance. Cite the SEC order or an industry readiness survey.
 
 **What the agent searches.** SEC US Treasury central clearing mandate 2026 2027 timeline status delay
 
@@ -58,7 +58,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = funding path clear and market-accepted; 1 = financing unclear or causing yield pressure; 2 = disorderly (sharp yield spike or failed/under-covered auctions).
+**Rubric.** Judge by the JGB market's reaction to the fiscal plan. 0 = OK: 10y JGB yield stable and supplementary budget specifies funding, auctions well covered (bid-to-cover >3). 1 = UNCLEAR: funding path unspecified OR 10y JGB yield up >25bps on fiscal news but auctions still clearing. 2 = DISORDERLY: a failed/tailing JGB auction (bid-to-cover <2 or a long tail), an emergency BOJ operation, or a >50bps yield spike on fiscal concern. Cite the auction result or yield move.
 
 **What the agent searches.** Japan Takaichi fiscal stimulus plan financing JGB issuance market reaction
 
@@ -85,7 +85,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = no redemption gating; 1 = isolated funds limiting redemptions; 2 = widespread gating across large funds.
+**Rubric.** COUNT named private-credit/BDC funds with redemption gates or quarterly repurchase caps active in the same quarter. 0 = NONE. 1 = ISOLATED: 1-2 funds gating. 2 = WIDESPREAD: >=3 of the largest funds, or gated funds with combined AUM > $100bn. Name the funds and the quarter.
 
 **What the agent searches.** private credit fund redemption gates limits 2026
 
@@ -126,7 +126,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 0.5  
 
-**Rubric.** 0 = smooth implementation; 1 = gaps or compliance friction; 2 = significant problems or a major non-compliant failure.
+**Rubric.** Track GENIUS Act stablecoin rulemaking vs the statutory 2026-07-18 deadline. 0 = SMOOTH: final rules issued on schedule, no major agency divergence. 1 = GAPS: rules still in proposed/comment stage near the deadline, OR documented inter-agency divergence (e.g. OCC vs FDIC). 2 = PROBLEMS: deadline missed without final rules, a court stay, or a compliance-failure event. Cite the rule status.
 
 **What the agent searches.** GENIUS Act stablecoin regulation implementation 2026 status issues
 
@@ -139,7 +139,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 0.5  
 
-**Rubric.** 0 = smooth, on track; 1 = friction / capacity concerns; 2 = significant problems or disorderly rollout.
+**Rubric.** Track UST central-clearing readiness vs deadlines (cash 2026-12-31, repo 2027-06-30). 0 = SMOOTH: on track, broad readiness. 1 = FRICTION: documentation backlog, pending exemptive relief, or readiness surveys <60% confident. 2 = PROBLEMS: a deadline extension, a major participant unable to comply, or an operational failure in testing. Cite TBAC/SEC/industry survey.
 
 **What the agent searches.** US Treasury central clearing implementation capacity readiness 2026 2027
 
@@ -155,7 +155,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = gap closing / revenue catching up; 1 = wide but stable gap; 2 = gap widening fast or clear monetization disappointment.
+**Rubric.** Compare hyperscaler AI capex growth vs AI-attributable revenue growth for the latest reported quarter. 0 = CLOSING: AI-revenue growth >= capex growth. 1 = WIDE: capex growth exceeds AI-revenue growth but AI revenue is still accelerating YoY. 2 = WIDENING FAST: capex growth outpaces AND AI-revenue growth decelerates QoQ, or a hyperscaler raises capex while cutting its AI-revenue outlook. Cite the capex and AI-revenue figures.
 
 **What the agent searches.** AI capex versus revenue gap monetization concern 2026 hyperscaler
 
@@ -168,7 +168,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = none; 1 = early signs of strain; 2 = acute refinancing stress or a notable default.
+**Rubric.** 0 = NONE: GPU/data-center-backed debt refinancing normally. 1 = SIGNS: banks offloading AI/data-center debt at a discount, a named borrower facing a refinancing wall, or a rating watch on GPU-backed paper. 2 = ACUTE: a confirmed default, distressed exchange, or failed refinancing of GPU-backed debt. Name the issuer.
 
 **What the agent searches.** GPU-backed debt data center financing refinancing stress 2026
 
@@ -195,7 +195,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.5  
 
-**Rubric.** 0 = calm; 1 = isolated regional-bank stress; 2 = a cluster of failures or sharp deposit flight.
+**Rubric.** COUNT CRE-driven regional-bank failures or named distress events in the trailing 6 months. 0 = CALM: none. 1 = ISOLATED: 1-2 firm-specific failures/distress, described by supervisors as idiosyncratic. 2 = CLUSTER: >=3 CRE-linked failures, or a supervisory warning of systemic regional-bank CRE stress. Cite the FDIC failed-bank list.
 
 **What the agent searches.** regional bank commercial real estate stress failures 2026
 
@@ -222,7 +222,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 0.5  
 
-**Rubric.** 0 = stable; 1 = rising delinquencies; 2 = sharp spike or major BNPL lender distress.
+**Rubric.** Use a reported BNPL delinquency series (Affirm 30+ DPD, LendingTree survey, Fed brief). 0 = STABLE: delinquency flat or down YoY. 1 = RISING: late-payment/delinquency up YoY but provider charge-offs contained (<3%). 2 = SPIKING: a named provider's 30+ DPD up >100bps YoY, or charge-offs >5%. Cite the figure.
 
 **What the agent searches.** buy now pay later BNPL delinquency trend 2026 Affirm Klarna
 
@@ -235,7 +235,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = stable; 1 = rising non-renewals/exits; 2 = accelerating withdrawals across multiple states.
+**Rubric.** COUNT US states with active insurer market exits or non-renewal waves. 0 = STABLE: isolated, <5 states, stable outlook. 1 = RISING: elevated across 5-15 states but some markets stabilizing. 2 = ACCELERATING: >15 states, OR a top-10 insurer fully exiting a major state market. Cite state DOI / AM Best.
 
 **What the agent searches.** home insurer non-renewals market exits states 2026
 
@@ -248,7 +248,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = normal season; 1 = elevated catastrophe losses; 2 = a severe / record loss season underway.
+**Rubric.** Use YTD insured-catastrophe-loss totals vs the 10-year average (Gallagher Re/Aon/Swiss Re). 0 = NORMAL: YTD <= 10y average and no single event >$10bn. 1 = ELEVATED: YTD above the 10y average, OR one event >$10bn. 2 = SEVERE SEASON: YTD >150% of average, OR a single event >$30bn. Cite the figure and source.
 
 **What the agent searches.** insured catastrophe losses severe season 2026 hurricane wildfire
 
@@ -264,7 +264,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = calm, no new distress; 1 = rising (new IMF programs or missed coupons appearing); 2 = a cluster of sovereign defaults/programs at once.
+**Rubric.** COUNT sovereign-distress events in the trailing 6 months. 0 = CALM: no new IMF programs or missed coupons. 1 = RISING: 1-2 new IMF arrangements, OR a single sovereign missed coupon/standstill. 2 = CLUSTER: >=3 sovereigns newly in IMF programs or in default/missed-coupon in the window. List the countries.
 
 **What the agent searches.** IMF new program emerging market default missed coupon 2026
 
@@ -277,7 +277,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = stable government; 1 = fragile (minority govt, budget fights); 2 = collapse, snap election called, or presidential crisis.
+**Rubric.** 0 = STABLE: government holds a working majority. 1 = FRAGILE: minority/hung parliament relying on Article 49.3 or surviving no-confidence votes, but governing. 2 = COLLAPSE: government fell on a confidence vote, PM resigned, or a snap election/dissolution was called. State the latest vote/event and date.
 
 **What the agent searches.** France government stability budget no-confidence snap election latest
 
@@ -290,7 +290,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = stable outlook; 1 = negative outlook or watch; 2 = an actual downgrade.
+**Rubric.** Use the most recent action from S&P/Moody's/Fitch. 0 = STABLE: all stable outlooks, no recent cut. 1 = NEGATIVE OUTLOOK: at least one agency on negative outlook/watch. 2 = DOWNGRADE: an actual rating cut in the trailing 12 months. Cite the agency, date, and rating.
 
 **What the agent searches.** France sovereign credit rating outlook S&P Moody's Fitch latest
 
@@ -317,7 +317,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = none; 1 = new talk/agreements on non-dollar settlement or asset-freeze threats; 2 = a major new reserve freeze or settlement shift.
+**Rubric.** 0 = NONE: no new reserve freeze or settlement-system shift. 1 = TALK: new non-dollar settlement agreements/launches (BRICS Pay, gold-unit) or official rhetoric, but no new sovereign reserve seizure. 2 = ACTION: a new sovereign reserve freeze/seizure, OR a major economy operationally moving reserve settlement off USD. Name the event.
 
 **What the agent searches.** reserve weaponization sanctions asset freeze non-dollar settlement latest 2026
 
@@ -330,7 +330,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = no change; 1 = active reform debate or trust-fund warnings; 2 = concrete benefit cuts or an emergency measure.
+**Rubric.** Track US Social Security/pension legislative status. 0 = NONE: no change to trust-fund outlook or reform activity. 1 = DEBATE: trustees report worsens the depletion date or reform actively debated, but no enacted cuts. 2 = CUTS: an automatic benefit reduction triggered, or legislation enacting cuts. Cite the trustees report or bill.
 
 **What the agent searches.** US Social Security trust fund reform benefit cut pension news 2026
 
@@ -343,7 +343,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = none; 1 = visible pension-leverage stress; 2 = a UK-2022-style forced-selling blow-up.
+**Rubric.** 0 = NONE: LDI buffers adequate, no margin stress (cite TPR/ESMA). 1 = STRESS: a regulator flags LDI/pension liquidity risk, or a margin-call episode without forced selling. 2 = BLOWUP: forced gilt/bond selling by pension/LDI funds, or a central-bank intervention to halt it. State the episode.
 
 **What the agent searches.** pension fund leverage LDI margin crisis 2026
 
@@ -366,28 +366,28 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 
 ## Set 4 — Geoeconomics & Trade Weapons
 
-### China PPI YoY (%) - more negative is worse  
+### China PPI YoY (%) - large swing either way is worse  
 
-*Story:* China's exported deflation  
+*Story:* China's price spillover (deflation or cost-push)  
 *Indicator id:* `china_ppi`  
 *Type:* value  
-*Bands from thresholds:* good ≤ -1.0, warn ≈ -3.0  
+*Bands from thresholds:* good ≤ 2.0, warn ≈ 4.0  
 *Weight on the meter:* 1.0  
 
-**Rubric.** Report the latest China PPI year-on-year change as a percent (negative = deflation, e.g. -2.5).
+**Rubric.** Report China PPI year-on-year as a SIGNED percent EXACTLY as published by the National Bureau of Statistics (NBS), keeping the sign. This indicator is TWO-SIDED: a large move in EITHER direction is a price-spillover shock - deep deflation (very negative) exports disinflation, sharp cost-push inflation (very positive) exports input-cost pressure. Just report the signed number and the release month; the engine scores it on the SIZE of the move, not the sign. State the figure, the month, and the NBS release date. If you cannot confirm a clearly signed official figure, return low confidence so the prior is held.
 
-**What the agent searches.** China PPI producer price index year-on-year latest percent
+**What the agent searches.** China PPI producer price index year-on-year latest percent NBS
 
 **Authoritative sources.** https://www.stats.gov.cn/english/, https://tradingeconomics.com/china/producer-prices-change
 
 ### New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating)  
 
-*Story:* China's exported deflation  
+*Story:* China's price spillover (deflation or cost-push)  
 *Indicator id:* `trade_actions`  
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = calm; 1 = rising tariff/anti-dumping actions; 2 = escalating trade-war cycle with major new measures.
+**Rubric.** COUNT new major-economy trade measures (tariffs, anti-dumping, export bans) in the trailing 3 months. 0 = CALM: none. 1 = RISING: 1-3 new measures but within a managed truce. 2 = ESCALATING: >=4 new measures, OR a broad tariff round (>=10% across a sector), OR an explicit truce breakdown. List the measures.
 
 **What the agent searches.** new tariffs anti-dumping China export trade measures latest 2026
 
@@ -400,7 +400,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.5  
 
-**Rubric.** 0 = licenses flowing normally; 1 = slowing/selective approvals; 2 = effectively frozen or new broad restrictions.
+**Rubric.** 0 = FLOWING: rare-earth/magnet export licenses issued on normal timelines to most applicants. 1 = SLOWING: non-automatic licensing with whitelists, review >30 days, or licenses only to a handful of producers. 2 = FROZEN: a categorical export halt or suspension of magnet/HREE licenses. Cite MOFCOM/customs or named-exporter reports.
 
 **What the agent searches.** China rare earth magnet export licenses approvals status 2026
 
@@ -413,11 +413,24 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = truce extended/holding; 1 = truce expiring or fraying; 2 = truce lapsed / controls reimposed.
+**Rubric.** Track the specific Nov-2025 US-China minerals truce (nominal expiry 2026-11-10). 0 = EXTENDED/holding: in force, no breach. 1 = EXPIRING/fraying: <90 days to expiry with no renewal, OR a partial breach (e.g. new entity-list additions). 2 = LAPSED: truce expired or formally abandoned / controls reimposed.
 
 **What the agent searches.** US China rare earth trade truce November 2025 status extended expired
 
 **Authoritative sources.** https://www.reuters.com, https://www.csis.org
+
+### US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)  
+
+*Story:* Critical minerals as a weapon  
+*Indicator id:* `re_blacklist`  
+*Type:* band  
+*Weight on the meter:* 1.0  
+
+**Rubric.** Count the FACT, do not interpret severity. 0 = NO US domestic rare-earth producer is on China's MOFCOM export-control / entity list. 1 = ENTITY-SPECIFIC: one or more named US producers are listed (e.g. MP Materials, USA Rare Earth) but the restriction is firm-specific. 2 = SECTOR-WIDE: the listing is broadened to a categorical ban covering the US rare-earth sector or all dual-use transfers to US producers as a class. State which firms are listed and the listing date.
+
+**What the agent searches.** China MOFCOM export control entity list US rare earth producers MP Materials USA Rare Earth
+
+**Authoritative sources.** https://www.mofcom.gov.cn, https://www.reuters.com, https://www.csis.org
 
 ### Ex-China heavy rare-earth price premium (x China)  
 
@@ -440,7 +453,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.5  
 
-**Rubric.** 0 = baseline tension; 1 = elevated (large drills, incidents, sharp escalation in rhetoric); 2 = crisis (blockade, clash, mobilization).
+**Rubric.** 0 = CALM: routine activity. 1 = ELEVATED: large-scale PLA drills, blockade rehearsals, or assertive patrols, but no kinetic clash or blockade. 2 = CRISIS: an actual blockade, a kinetic clash, or full mobilization. State the latest military event and date.
 
 **What the agent searches.** Taiwan Strait China military tension drills incidents latest 2026
 
@@ -453,7 +466,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 0.5  
 
-**Rubric.** 0 = stable regime; 1 = tightening controls; 2 = major new controls or Chinese retaliation.
+**Rubric.** COUNT active semiconductor export-control escalations (trailing 3 months). 0 = STABLE: no new measures. 1 = TIGHTENING: new US/allied controls OR new entity-list additions. 2 = RETALIATION: the target country enacts countermeasures (counter-controls, legal retaliation, equipment bans). List the measures on each side.
 
 **What the agent searches.** semiconductor export controls ASML China escalation retaliation 2026
 
@@ -466,7 +479,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 0.5  
 
-**Rubric.** 0 = meaningful diversification progressing; 1 = still highly concentrated; 2 = concentration worsening / diversification stalled.
+**Rubric.** Measure the share of leading-edge (<=3nm) capacity outside Taiwan. 0 = EASING: >25% outside Taiwan and rising. 1 = HIGH: 10-25% outside Taiwan; diversification underway but Taiwan dominant. 2 = EXTREME: <10% outside Taiwan AND no operational overseas leading-edge fab. Cite capacity figures.
 
 **What the agent searches.** advanced chip fab geographic diversification Taiwan TSMC US Japan 2026
 
@@ -479,7 +492,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = open and normal; 1 = contested (attacks, partial disruption, fragile ceasefire); 2 = effectively closed/blockaded.
+**Rubric.** Rate Strait of Hormuz / Red Sea transit. 0 = open, traffic ~normal. 1 = CONTESTED: threatened, partially disrupted, moving under naval-escorted convoys, OR a ceasefire / MOU / active de-escalation in effect even if volumes are reduced. 2 = CLOSED: commercial transit physically/legally halted at well under ~25% of normal with NO functioning convoy workaround. Apply 2 ONLY if a corroborating market signal is consistent with a closure (notably crude oil elevated); if oil is benign, treat it as contested (1), not closed. Convoys moving, talks underway, or a signed truce CAP this at 1.
 
 **What the agent searches.** Strait of Hormuz Red Sea shipping status open closed ceasefire latest 2026
 
@@ -492,7 +505,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 0.5  
 
-**Rubric.** 0 = none; 1 = threats or minor incidents; 2 = a major cable cut causing outages.
+**Rubric.** 0 = NONE: no recent damage to major submarine cables. 1 = THREATENED: credible threats, anchor-dragging incidents, or a single repaired cut. 2 = CUT: >=1 major cable currently severed and unrepaired causing connectivity loss, or multiple simultaneous cuts. Name the cable(s) and date.
 
 **What the agent searches.** undersea submarine cable damage cut Red Sea Hormuz Baltic latest 2026
 
@@ -522,7 +535,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = none; 1 = several states weighing moratoria / rising backlash; 2 = widespread bans or major project cancellations.
+**Rubric.** COUNT jurisdictions with enacted data-center moratoria or construction pauses. 0 = NONE. 1 = SPREADING: bills introduced or local pauses in 1-10 jurisdictions. 2 = WIDESPREAD: a statewide moratorium enacted, OR >10 jurisdictions with enacted pauses/cancellations. List the jurisdictions.
 
 **What the agent searches.** data center moratorium ban state legislation electricity backlash 2026
 
@@ -535,7 +548,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = easing (demand slowing / supply catching up); 1 = tight; 2 = acute shortfall (curtailments, emergencies).
+**Rubric.** Use grid-operator/IEA evidence on data-center power. 0 = EASING: interconnection queues shortening, no curtailment. 1 = TIGHT: queues long and lengthening, projects delayed for power, but no forced curtailment. 2 = ACUTE: confirmed curtailment of data-center load, a declared grid emergency, or a power-scarcity-driven moratorium. Cite IEA/grid operator.
 
 **What the agent searches.** data center power demand growth grid shortfall vs slowdown 2026
 
@@ -548,7 +561,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = none; 1 = some disruptions; 2 = a cluster of major outages tightening supply.
+**Rubric.** COUNT top-20-by-output copper mines with confirmed production cuts/outages currently active. 0 = NONE. 1 = SOME: 1-2 mines with reduced output. 2 = CLUSTER: >=3 major mines disrupted, OR lost output large enough that institutions forecast a market deficit. Name the mines.
 
 **What the agent searches.** major copper mine disruption outage strike 2026 Grasberg Kamoa
 
@@ -561,7 +574,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 0.5  
 
-**Rubric.** 0 = surplus / well supplied; 1 = roughly balanced; 2 = in deficit (inventories drawing down).
+**Rubric.** Use the latest ICSG (or MS/JPM/ING consensus) refined-copper balance forecast for the current year. 0 = SURPLUS: official forecast a surplus. 1 = BALANCED: forecast within +/-100kt of balance. 2 = DEFICIT: forecast a refined deficit. Cite the ICSG forecast and number.
 
 **What the agent searches.** copper market balance surplus deficit ICSG forecast 2026
 
@@ -574,7 +587,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = no significant drought in key hubs; 1 = emerging drought in a chip/farm hub; 2 = acute drought disrupting chips or major crops.
+**Rubric.** Use a drought monitor for a named chip/agri hub (US Southwest, Taiwan). 0 = NONE: normal precipitation/snowpack. 1 = EMERGING: 'severe' (D2) drought OR snowpack 20-50% below normal, no production impact yet. 2 = ACUTE: 'extreme/exceptional' (D3-D4) OR a confirmed production curtailment / water-rationing order at a fab or farm region. Cite the monitor.
 
 **What the agent searches.** drought Taiwan US Southwest major farming region chip fab water 2026
 
@@ -587,7 +600,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 0.5  
 
-**Rubric.** 0 = normal levels; 1 = low / below average; 2 = critical (near dead-pool or emergency cuts).
+**Rubric.** Track a key reservoir (e.g. Lake Mead) level vs its critical threshold. 0 = NORMAL: storage >50% of capacity. 1 = LOW: 30-50% of capacity, or below the date-average. 2 = CRITICAL: <30% of capacity, OR within 15 feet of a power-generation/dead-pool threshold. Cite the USBR level.
 
 **What the agent searches.** Lake Mead Colorado River reservoir levels key basins latest 2026
 
@@ -600,7 +613,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 0.5  
 
-**Rubric.** 0 = calm; 1 = tense / negotiations stalled; 2 = open crisis or unilateral action.
+**Rubric.** Track named transboundary disputes (Indus, Nile/GERD, etc.). 0 = CALM: treaties functioning. 1 = TENSE: a treaty suspended/contested or official threats exchanged, no kinetic action. 2 = CRISIS: an armed clash, a deliberate flow cut-off carried out, or a war threat tied to a dam/river. State the dispute and latest action.
 
 **What the agent searches.** transboundary water dispute Nile GERD Indus escalation 2026
 
@@ -613,7 +626,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 0.5  
 
-**Rubric.** 0 = falling/stable; 1 = elevated and rising; 2 = spiking sharply.
+**Rubric.** Use the FAO Food Price Index (monthly). 0 = FALLING: index down MoM and YoY. 1 = ELEVATED: index rising or at a multi-year high but MoM change <3%. 2 = SPIKING: MoM increase >=5%, or a 3-month rise >=10%. Cite the index value and month.
 
 **What the agent searches.** FAO Food Price Index latest direction rising falling 2026
 
@@ -626,7 +639,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = curbs lifted / normal exports; 1 = curbs in place; 2 = curbs tightened or extended.
+**Rubric.** 0 = LIFTED: no active Chinese fertilizer export restrictions. 1 = IN PLACE: existing quotas/suspensions continue unchanged (e.g. phosphate suspension, urea quota). 2 = TIGHTENED: a NEW or broadened restriction in the trailing 3 months (added product, lower quota, longer suspension). Cite NDRC/customs and the specific measure.
 
 **What the agent searches.** China fertilizer export restrictions urea phosphate quota status 2026
 
@@ -639,7 +652,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** 0 = inputs flowing normally; 1 = disrupted/elevated risk; 2 = inputs effectively cut by closure.
+**Rubric.** Rate Gulf fertilizer/sulfur/ammonia INPUT flow through the same Strait of Hormuz that hormuz_redsea_status tracks - the two MUST agree on whether the strait is open/contested/closed. 0 = inputs flowing ~normally. 1 = DISRUPTED: flows reduced, costs/insurance elevated, but moving (including under naval-escorted convoys or a partial reopening / ceasefire / MOU). 2 = CUT: input transit effectively halted by a genuine closure - apply ONLY if the strait is rated CLOSED (2) and a market signal corroborates it (crude oil elevated). Convoys moving, a signed truce, or benign oil CAP this at 1, even if volumes are far below normal.
 
 **What the agent searches.** Strait of Hormuz sulfur ammonia fertilizer shipping disruption 2026
 

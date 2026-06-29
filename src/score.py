@@ -8,9 +8,18 @@ story level  = clamp(base_level + sum(deltas), 1, 10)
 BANDS = [(2, "Low"), (4, "Moderate"), (6, "Elevated"), (8, "High"), (10, "Severe")]
 
 
-def band_for(value, direction, good, warn):
+def band_for(value, direction, good, warn, center=0.0):
     if value is None:
         return None
+    if direction == "two_sided":
+        # risk grows as the value departs a neutral center in EITHER direction;
+        # good/warn are the half-width thresholds on |value - center|.
+        d = abs(value - center)
+        if d <= good:
+            return 0
+        if d <= warn:
+            return 1
+        return 2
     if direction == "higher_worse":
         if value <= good:
             return 0
@@ -40,7 +49,7 @@ def score_story(story, values):
         used_baseline = ind["id"] not in values or values[ind["id"]] is None
         if used_baseline:
             v = ind.get("baseline_value")
-        b = band_for(v, ind["direction"], ind["good"], ind["warn"])
+        b = band_for(v, ind["direction"], ind["good"], ind["warn"], ind.get("center", 0.0))
         base_b = ind.get("baseline_band", 0)
         d = round(ind["weight"] * ((b if b is not None else base_b) - base_b) / 2.0, 3)
         deltas.append(d)

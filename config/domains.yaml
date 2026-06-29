@@ -1,0 +1,96 @@
+# =====================================================================
+# PER-DOMAIN SOURCE AUTHORITIES  (Task 2)
+# ---------------------------------------------------------------------
+# Each of the five mechanism sets gets a specialist FRAMING (how a domain
+# analyst reasons) and a curated list of AUTHORITIES (primary sources the
+# agent must prefer). When the agent rates an indicator, it adopts the
+# framing for that indicator's set and prepends the set's authorities to any
+# indicator-specific sources already in framework.yaml.
+#
+# This is the auditable version of "a trained specialist per subject": the
+# sourcing and reasoning are scoped to the domain, but every call stays
+# inspectable and every URL is a primary/official source, not an aggregator.
+#
+# `set` numbers match config/stories.yaml:
+#   1 Funding & Leverage    2 Credit, Consumers & Valuations
+#   3 Sovereigns & Monetary Order   4 Geoeconomics & Trade Weapons
+#   5 Physical & Resource Limits
+# =====================================================================
+
+domains:
+
+  1:
+    label: "Funding & Leverage"
+    framing: >-
+      Reason like a funding-market / financial-plumbing analyst. Weigh leverage,
+      margin, dealer balance sheets, and settlement mechanics. Corroborate any
+      event read against rates, spreads, and volatility (SOFR-EFFR, MOVE, repo).
+      Do not call a funding stress without a corroborating market signal.
+    authorities:
+      - "https://www.federalreserve.gov/publications/financial-stability-report.htm"
+      - "https://www.financialresearch.gov"
+      - "https://www.bis.org"
+      - "https://www.newyorkfed.org/markets"
+      - "https://www.sec.gov"
+      - "https://www.sifma.org"
+
+  2:
+    label: "Credit, Consumers & Valuations"
+    framing: >-
+      Reason like a credit analyst. Anchor to hard delinquency, default, and
+      charge-off data and to spreads; distinguish idiosyncratic events from
+      systemic ones, and prefer the latest reported figure over commentary.
+    authorities:
+      - "https://www.fdic.gov"
+      - "https://www.federalreserve.gov"
+      - "https://www.newyorkfed.org/microeconomics/hhdc"
+      - "https://www.trepp.com"
+      - "https://www.kbra.com"
+      - "https://www.moodys.com"
+      - "https://www.spglobal.com/ratings"
+
+  3:
+    label: "Sovereigns & the Monetary Order"
+    framing: >-
+      Reason like a sovereign / rates strategist. Anchor to official reserve and
+      debt data and to formal rating actions. Separate rhetoric and intentions
+      from executed action; "talk" and "action" are different bands.
+    authorities:
+      - "https://www.imf.org"
+      - "https://data.imf.org"
+      - "https://www.worldbank.org"
+      - "https://www.oecd.org"
+      - "https://home.treasury.gov"
+      - "https://www.bis.org"
+
+  4:
+    label: "Geoeconomics & Trade Weapons"
+    framing: >-
+      Reason like a geoeconomics analyst. Anchor to official measures (entity
+      lists, tariff notices, transit data) rather than headlines. Corroborate any
+      disruption or "closure" claim with a price or volume signal, and cap an
+      escalation read that no market signal supports.
+    authorities:
+      - "https://www.reuters.com/markets"
+      - "https://www.csis.org"
+      - "https://www.crisisgroup.org"
+      - "https://portwatch.imf.org"
+      - "https://english.mofcom.gov.cn"
+      - "https://ustr.gov"
+      - "https://www.federalregister.gov"
+
+  5:
+    label: "Physical & Resource Limits"
+    framing: >-
+      Reason like a commodities / infrastructure analyst. Anchor to physical data
+      - storage levels, drought indices, supply-demand balances, queue times. The
+      top band requires a CONFIRMED physical impact or a corroborating price move,
+      not a forecast or a warning alone.
+    authorities:
+      - "https://www.iea.org"
+      - "https://www.eia.gov"
+      - "https://www.usbr.gov"
+      - "https://droughtmonitor.unl.edu"
+      - "https://www.fao.org/worldfoodsituation/foodpricesindex"
+      - "https://www.icsg.org"
+      - "https://emp.lbl.gov"
