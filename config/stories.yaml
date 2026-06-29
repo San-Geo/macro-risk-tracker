@@ -23,6 +23,13 @@ meta:
   as_of: "2026-06-25"
   bands: { low: "1-2", moderate: "3-4", elevated: "5-6", high: "7-8", severe: "9-10" }
 
+# Named, mechanism-based sets (regrouped from the original 3 editorial sets).
+sets:
+  1: { name: "Funding & Leverage",                short: "Funding" }
+  2: { name: "Credit, Consumers & Valuations",    short: "Credit" }
+  3: { name: "Sovereigns & the Monetary Order",   short: "Sovereign" }
+  4: { name: "Geoeconomics & Trade Weapons",      short: "Geoecon" }
+  5: { name: "Physical & Resource Limits",        short: "Physical" }
 stories:
 
   # ---------------- SET 1 ----------------
@@ -142,7 +149,7 @@ stories:
         weight: 1.0
 
   - id: s4_dev_debt
-    set: 1
+    set: 3
     name: "Developing-world debt crisis"
     base_level: 5
     indicators:
@@ -179,7 +186,7 @@ stories:
         weight: 1.0
 
   - id: s5_china_deflation
-    set: 1
+    set: 4
     name: "China's exported deflation"
     base_level: 6
     indicators:
@@ -215,7 +222,7 @@ stories:
         weight: 1.0
 
   - id: s6_rare_earths
-    set: 1
+    set: 4
     name: "Critical minerals as a weapon"
     base_level: 6
     indicators:
@@ -354,7 +361,7 @@ stories:
         weight: 1.5
 
   - id: s10_france
-    set: 2
+    set: 3
     name: "France / eurozone fragility"
     base_level: 4
     indicators:
@@ -428,7 +435,7 @@ stories:
         weight: 0.5
 
   - id: s12_gold_dedollar
-    set: 2
+    set: 3
     name: "Gold / de-dollarization"
     base_level: 3
     indicators:
@@ -501,7 +508,7 @@ stories:
         weight: 1.0
 
   - id: s14_pensions
-    set: 2
+    set: 3
     name: "Pensions / demographics"
     base_level: 4
     indicators:
@@ -538,7 +545,7 @@ stories:
 
   # ---------------- SET 3 (Chokepoints) ----------------
   - id: s15_ai_power
-    set: 3
+    set: 5
     name: "AI power & the grid bottleneck"
     base_level: 6
     indicators:
@@ -576,7 +583,7 @@ stories:
         note: "Wood Mac saw a late-2025 slowdown; watch capex guidance."
 
   - id: s16_copper
-    set: 3
+    set: 5
     name: "Copper & the electrification deficit"
     base_level: 4
     indicators:
@@ -614,7 +621,7 @@ stories:
         weight: 0.5
 
   - id: s17_water
-    set: 3
+    set: 5
     name: "Water - the underpriced input"
     base_level: 4
     indicators:
@@ -650,7 +657,7 @@ stories:
         weight: 0.5
 
   - id: s18_food_fertilizer
-    set: 3
+    set: 5
     name: "Food & fertilizer fragility"
     base_level: 6
     indicators:
@@ -687,7 +694,7 @@ stories:
         weight: 1.0
 
   - id: s19_lithography
-    set: 3
+    set: 4
     name: "The lithography (ASML) chokepoint"
     base_level: 5
     indicators:
@@ -723,7 +730,7 @@ stories:
         weight: 0.5
 
   - id: s20_sea_lanes
-    set: 3
+    set: 4
     name: "Sea lanes & undersea cables"
     base_level: 7
     indicators:
@@ -760,7 +767,7 @@ stories:
         weight: 0.5
 
   - id: s21_clearinghouses
-    set: 3
+    set: 1
     name: "Clearinghouses (financial chokepoint)"
     base_level: 4
     indicators:

@@ -56,15 +56,16 @@ def main():
                "as overridden in the audit log).\n")
     out.append("---\n")
 
-    by_set = {1: [], 2: [], 3: []}
+    by_set = {}
     for ind_id, spec in fw.items():
         m = meta.get(ind_id, {})
-        by_set.get(m.get("set", 1), by_set[1]).append((ind_id, spec, m))
+        by_set.setdefault(m.get("set", 1), []).append((ind_id, spec, m))
 
-    set_titles = {1: "Set 1 \u2014 Hidden leverage", 2: "Set 2 \u2014 Extend & pretend",
-                  3: "Set 3 \u2014 Chokepoints"}
-    for set_no in (1, 2, 3):
-        out.append(f"## {set_titles[set_no]}\n")
+    with open(os.path.join(ROOT, "config", "stories.yaml")) as f:
+        set_names = (yaml.safe_load(f).get("sets") or {})
+    for set_no in sorted(by_set):
+        nm = (set_names.get(set_no) or {}).get("name", f"Set {set_no}")
+        out.append(f"## Set {set_no} \u2014 {nm}\n")
         for ind_id, spec, m in by_set[set_no]:
             kind = spec.get("type", "band")
             out.append(f"### {m.get('label', ind_id)}  \n")

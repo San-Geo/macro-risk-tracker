@@ -96,6 +96,7 @@ def main():
 
     result = score.score_all(config, values)
     result["date"] = args.date
+    result["sets"] = config.get("sets", {})
 
     # Attach per-story background + full-brief link (from config/briefs.yaml).
     briefs_path = os.path.join(ROOT, "config", "briefs.yaml")
@@ -104,14 +105,20 @@ def main():
             with open(briefs_path) as f:
                 briefs = yaml.safe_load(f) or {}
             set_pdf = briefs.get("set_pdf", {})
+            orig = briefs.get("original_set", {})
+            combined = briefs.get("combined_pdf")
+            pages = briefs.get("pages", {})
             bmap = briefs.get("stories", {})
             for s in result["stories"]:
                 b = bmap.get(s["id"], {})
                 if b.get("summary"):
                     s["summary"] = b["summary"]
-                url = set_pdf.get(s["set"]) or set_pdf.get(str(s["set"]))
-                if url:
-                    s["brief_url"] = url
+                if combined:
+                    pg = pages.get(s["id"])
+                    s["brief_url"] = f"{combined}#page={pg}" if pg else combined
+                else:
+                    osn = orig.get(s["id"])
+                    s["brief_url"] = set_pdf.get(osn) or set_pdf.get(str(osn))
         except Exception as e:
             print(f"  (briefs.yaml skipped: {e})")
 
@@ -159,7 +166,11 @@ def main():
                                  os.path.join(ROOT, "output", "macro_risk_tracker.xlsx"))
 
     agg = result["aggregates"]
-    print(f"\nOverall {agg['overall']}/10  |  Set 1 {agg.get(1)}/10  |  Set 2 {agg.get(2)}/10  |  Set 3 {agg.get(3)}/10")
+    sets_cfg = config.get("sets", {})
+    set_str = "  |  ".join(
+        f"{(sets_cfg.get(k) or {}).get('short', 'Set '+str(k))} {agg.get(k)}/10"
+        for k in sorted(x for x in agg if x != "overall"))
+    print(f"\nOverall {agg['overall']}/10  |  {set_str}")
     print(f"Level changes today: {len(changes)}")
     print(f"Wrote: {latest_path}, {hist}, {xlsx}, dashboard/latest.json")
 

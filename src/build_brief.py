@@ -36,18 +36,21 @@ def build():
     else:
         agg = {}
 
+    set_names = (yaml.safe_load(open(os.path.join(ROOT, "config", "stories.yaml"))).get("sets") or {})
     out = ["# Global Macro Intelligence — Living Brief",
            f"\n*Auto-generated {datetime.date.today().isoformat()} from the live tracker. "
-           "This always reflects the current set of stories (including any added since the "
-           "original Set 1–3 briefs). For the full curated write-ups, see the Set PDFs.*\n"]
+           "This always reflects the current set of stories (including any the scout has added). "
+           "For the full curated write-ups, see the combined 2026 Edition brief.*\n"]
     if agg:
-        out.append(f"**Overall risk {agg.get('overall','-')}/10** — "
-                   f"Set 1 {agg.get('1','-')}, Set 2 {agg.get('2','-')}, Set 3 {agg.get('3','-')}.\n")
+        sk = sorted(k for k in agg if k != "overall")
+        ss = ", ".join(f"{(set_names.get(k) or {}).get('short', 'Set '+str(k))} {agg.get(k,'-')}" for k in sk)
+        out.append(f"**Overall risk {agg.get('overall','-')}/10** — {ss}.\n")
     by_set = {}
     for s in stories:
         by_set.setdefault(s["set"], []).append(s)
     for st in sorted(by_set):
-        out.append(f"\n## Set {st}\n")
+        nm = (set_names.get(st) or {}).get("name", f"Set {st}")
+        out.append(f"\n## Set {st} — {nm}\n")
         for s in by_set[st]:
             lv = levels.get(s["id"], {})
             lvl = lv.get("level", s["base_level"])

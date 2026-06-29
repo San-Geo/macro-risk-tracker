@@ -22,7 +22,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 
 ---
 
-## Set 1 — Hidden leverage
+## Set 1 — Funding & Leverage
 
 ### SEC central clearing on track (0 ok / 1 slipping / 2 delayed)  
 
@@ -91,6 +91,172 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 
 **Authoritative sources.** https://www.ft.com, https://www.bloomberg.com
 
+### Largest stablecoin max peg deviation (%)  
+
+*Story:* Stablecoins & Treasury demand  
+*Indicator id:* `peg_deviation`  
+*Type:* value  
+*Bands from thresholds:* good ≤ 0.5, warn ≈ 2.0  
+*Weight on the meter:* 1.5  
+
+**Rubric.** Report the largest recent peg deviation of a major stablecoin as a percent away from $1 (e.g. 0.1).
+
+**What the agent searches.** largest stablecoin USDT USDC peg deviation depeg percent latest
+
+**Authoritative sources.** https://www.coindesk.com, https://defillama.com/stablecoins
+
+### Total USD stablecoin supply ($bn)  
+
+*Story:* Stablecoins & Treasury demand  
+*Indicator id:* `stablecoin_supply`  
+*Type:* value  
+*Bands from thresholds:* good ≤ 350, warn ≈ 600  
+*Weight on the meter:* 0.5  
+
+**Rubric.** Report total USD stablecoin supply in billions of dollars (e.g. 280).
+
+**What the agent searches.** total stablecoin market cap supply USD billions latest
+
+**Authoritative sources.** https://defillama.com/stablecoins, https://www.theblock.co/data/stablecoins
+
+### GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)  
+
+*Story:* Stablecoins & Treasury demand  
+*Indicator id:* `genius_impl`  
+*Type:* band  
+*Weight on the meter:* 0.5  
+
+**Rubric.** 0 = smooth implementation; 1 = gaps or compliance friction; 2 = significant problems or a major non-compliant failure.
+
+**What the agent searches.** GENIUS Act stablecoin regulation implementation 2026 status issues
+
+**Authoritative sources.** https://www.sec.gov, https://www.federalreserve.gov, https://www.coindesk.com/policy
+
+### Treasury-clearing rollout stress (0 smooth / 1 friction / 2 problems)  
+
+*Story:* Clearinghouses (financial chokepoint)  
+*Indicator id:* `treasury_clearing_rollout`  
+*Type:* band  
+*Weight on the meter:* 0.5  
+
+**Rubric.** 0 = smooth, on track; 1 = friction / capacity concerns; 2 = significant problems or disorderly rollout.
+
+**What the agent searches.** US Treasury central clearing implementation capacity readiness 2026 2027
+
+**Authoritative sources.** https://www.sec.gov, https://www.dtcc.com, https://www.risk.net
+
+
+## Set 2 — Credit, Consumers & Valuations
+
+### AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast)  
+
+*Story:* AI build-out circular financing  
+*Indicator id:* `ai_revenue_gap`  
+*Type:* band  
+*Weight on the meter:* 1.0  
+
+**Rubric.** 0 = gap closing / revenue catching up; 1 = wide but stable gap; 2 = gap widening fast or clear monetization disappointment.
+
+**What the agent searches.** AI capex versus revenue gap monetization concern 2026 hyperscaler
+
+**Authoritative sources.** https://www.theinformation.com, https://www.ft.com, https://www.sequoiacap.com
+
+### GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)  
+
+*Story:* AI build-out circular financing  
+*Indicator id:* `gpu_refi_stress`  
+*Type:* band  
+*Weight on the meter:* 1.0  
+
+**Rubric.** 0 = none; 1 = early signs of strain; 2 = acute refinancing stress or a notable default.
+
+**What the agent searches.** GPU-backed debt data center financing refinancing stress 2026
+
+**Authoritative sources.** https://www.ft.com, https://www.bloomberg.com, https://www.moodys.com
+
+### CMBS office delinquency rate (%)  
+
+*Story:* CRE maturity wall / regional banks  
+*Indicator id:* `cmbs_office_delinq`  
+*Type:* value  
+*Bands from thresholds:* good ≤ 8.0, warn ≈ 12.0  
+*Weight on the meter:* 1.0  
+
+**Rubric.** Report the latest CMBS office delinquency rate as a percent (e.g. 12.3).
+
+**What the agent searches.** CMBS office delinquency rate latest percent Trepp 2026
+
+**Authoritative sources.** https://www.trepp.com/trepptalk, https://www.commercialsearch.com
+
+### Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)  
+
+*Story:* CRE maturity wall / regional banks  
+*Indicator id:* `regional_bank_stress`  
+*Type:* band  
+*Weight on the meter:* 1.5  
+
+**Rubric.** 0 = calm; 1 = isolated regional-bank stress; 2 = a cluster of failures or sharp deposit flight.
+
+**What the agent searches.** regional bank commercial real estate stress failures 2026
+
+**Authoritative sources.** https://www.fdic.gov, https://www.federalreserve.gov, https://www.spglobal.com
+
+### Subprime auto 60+ day delinquency (%)  
+
+*Story:* Hidden consumer debt  
+*Indicator id:* `subprime_auto_dpd`  
+*Type:* value  
+*Bands from thresholds:* good ≤ 5.5, warn ≈ 6.5  
+*Weight on the meter:* 1.0  
+
+**Rubric.** Report the latest subprime auto 60+ day delinquency rate as a percent (e.g. 6.2).
+
+**What the agent searches.** subprime auto loan 60+ day delinquency rate latest percent 2026
+
+**Authoritative sources.** https://www.fitchratings.com, https://www.coxautoinc.com/market-insights/
+
+### BNPL delinquency trend (0 stable / 1 rising / 2 spiking)  
+
+*Story:* Hidden consumer debt  
+*Indicator id:* `bnpl_delinq`  
+*Type:* band  
+*Weight on the meter:* 0.5  
+
+**Rubric.** 0 = stable; 1 = rising delinquencies; 2 = sharp spike or major BNPL lender distress.
+
+**What the agent searches.** buy now pay later BNPL delinquency trend 2026 Affirm Klarna
+
+**Authoritative sources.** https://www.richmondfed.org, https://www.cfpb.gov, https://www.ft.com
+
+### Insurer non-renewals / exits (0 stable / 1 rising / 2 accelerating)  
+
+*Story:* Insurance retreat  
+*Indicator id:* `insurer_exits`  
+*Type:* band  
+*Weight on the meter:* 1.0  
+
+**Rubric.** 0 = stable; 1 = rising non-renewals/exits; 2 = accelerating withdrawals across multiple states.
+
+**What the agent searches.** home insurer non-renewals market exits states 2026
+
+**Authoritative sources.** https://www.naic.org, https://www.insurancejournal.com
+
+### Catastrophe-loss pressure (0 normal / 1 elevated / 2 severe season)  
+
+*Story:* Insurance retreat  
+*Indicator id:* `cat_losses`  
+*Type:* band  
+*Weight on the meter:* 1.0  
+
+**Rubric.** 0 = normal season; 1 = elevated catastrophe losses; 2 = a severe / record loss season underway.
+
+**What the agent searches.** insured catastrophe losses severe season 2026 hurricane wildfire
+
+**Authoritative sources.** https://www.aon.com/reinsurance, https://www.munichre.com, https://www.swissre.com/institute/
+
+
+## Set 3 — Sovereigns & the Monetary Order
+
 ### New IMF programs / missed coupons (0 calm / 1 rising / 2 cluster)  
 
 *Story:* Developing-world debt crisis  
@@ -103,6 +269,102 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 **What the agent searches.** IMF new program emerging market default missed coupon 2026
 
 **Authoritative sources.** https://www.imf.org/en/News, https://www.worldbank.org
+
+### Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election)  
+
+*Story:* France / eurozone fragility  
+*Indicator id:* `govt_stability`  
+*Type:* band  
+*Weight on the meter:* 1.0  
+
+**Rubric.** 0 = stable government; 1 = fragile (minority govt, budget fights); 2 = collapse, snap election called, or presidential crisis.
+
+**What the agent searches.** France government stability budget no-confidence snap election latest
+
+**Authoritative sources.** https://www.lemonde.fr/en/, https://www.reuters.com/world/europe
+
+### Rating action (0 stable / 1 negative outlook / 2 downgrade)  
+
+*Story:* France / eurozone fragility  
+*Indicator id:* `rating_action`  
+*Type:* band  
+*Weight on the meter:* 1.0  
+
+**Rubric.** 0 = stable outlook; 1 = negative outlook or watch; 2 = an actual downgrade.
+
+**What the agent searches.** France sovereign credit rating outlook S&P Moody's Fitch latest
+
+**Authoritative sources.** https://www.spglobal.com/ratings, https://www.fitchratings.com, https://www.moodys.com
+
+### USD share of FX reserves (%, IMF COFER)  
+
+*Story:* Gold / de-dollarization  
+*Indicator id:* `dollar_reserve_share`  
+*Type:* value  
+*Bands from thresholds:* good ≤ 57.0, warn ≈ 54.0  
+*Weight on the meter:* 1.0  
+
+**Rubric.** Report the latest USD share of allocated global FX reserves as a percent (e.g. 56.8).
+
+**What the agent searches.** US dollar share global FX reserves IMF COFER latest percent
+
+**Authoritative sources.** https://data.imf.org/cofer, https://www.imf.org
+
+### Reserve-weaponization / settlement shift (0 none / 1 talk / 2 action)  
+
+*Story:* Gold / de-dollarization  
+*Indicator id:* `weaponization_event`  
+*Type:* band  
+*Weight on the meter:* 1.0  
+
+**Rubric.** 0 = none; 1 = new talk/agreements on non-dollar settlement or asset-freeze threats; 2 = a major new reserve freeze or settlement shift.
+
+**What the agent searches.** reserve weaponization sanctions asset freeze non-dollar settlement latest 2026
+
+**Authoritative sources.** https://www.reuters.com, https://www.atlanticcouncil.org
+
+### Social Security / pension reform shock (0 none / 1 debate / 2 cuts)  
+
+*Story:* Pensions / demographics  
+*Indicator id:* `ss_reform_news`  
+*Type:* band  
+*Weight on the meter:* 1.0  
+
+**Rubric.** 0 = no change; 1 = active reform debate or trust-fund warnings; 2 = concrete benefit cuts or an emergency measure.
+
+**What the agent searches.** US Social Security trust fund reform benefit cut pension news 2026
+
+**Authoritative sources.** https://www.ssa.gov/oact/, https://www.crfb.org
+
+### Pension-fund leverage event, UK-2022 type (0 none / 1 stress / 2 blowup)  
+
+*Story:* Pensions / demographics  
+*Indicator id:* `pension_leverage_event`  
+*Type:* band  
+*Weight on the meter:* 1.0  
+
+**Rubric.** 0 = none; 1 = visible pension-leverage stress; 2 = a UK-2022-style forced-selling blow-up.
+
+**What the agent searches.** pension fund leverage LDI margin crisis 2026
+
+**Authoritative sources.** https://www.bankofengland.co.uk, https://www.ft.com, https://www.pionline.com
+
+### Large public-pension funded ratio (%)  
+
+*Story:* Pensions / demographics  
+*Indicator id:* `funded_ratio`  
+*Type:* value  
+*Bands from thresholds:* good ≤ 80, warn ≈ 70  
+*Weight on the meter:* 0.5  
+
+**Rubric.** Report a representative large US public-pension funded ratio as a percent (e.g. 78).
+
+**What the agent searches.** large US public pension funded ratio latest percent 2026
+
+**Authoritative sources.** https://www.milliman.com, https://equable.org
+
+
+## Set 4 — Geoeconomics & Trade Weapons
 
 ### China PPI YoY (%) - more negative is worse  
 
@@ -171,251 +433,73 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 
 **Authoritative sources.** https://www.fastmarkets.com, https://adamasintel.com
 
-### Largest stablecoin max peg deviation (%)  
+### Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis)  
 
-*Story:* Stablecoins & Treasury demand  
-*Indicator id:* `peg_deviation`  
-*Type:* value  
-*Bands from thresholds:* good ≤ 0.5, warn ≈ 2.0  
-*Weight on the meter:* 1.5  
-
-**Rubric.** Report the largest recent peg deviation of a major stablecoin as a percent away from $1 (e.g. 0.1).
-
-**What the agent searches.** largest stablecoin USDT USDC peg deviation depeg percent latest
-
-**Authoritative sources.** https://www.coindesk.com, https://defillama.com/stablecoins
-
-### Total USD stablecoin supply ($bn)  
-
-*Story:* Stablecoins & Treasury demand  
-*Indicator id:* `stablecoin_supply`  
-*Type:* value  
-*Bands from thresholds:* good ≤ 350, warn ≈ 600  
-*Weight on the meter:* 0.5  
-
-**Rubric.** Report total USD stablecoin supply in billions of dollars (e.g. 280).
-
-**What the agent searches.** total stablecoin market cap supply USD billions latest
-
-**Authoritative sources.** https://defillama.com/stablecoins, https://www.theblock.co/data/stablecoins
-
-### GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)  
-
-*Story:* Stablecoins & Treasury demand  
-*Indicator id:* `genius_impl`  
-*Type:* band  
-*Weight on the meter:* 0.5  
-
-**Rubric.** 0 = smooth implementation; 1 = gaps or compliance friction; 2 = significant problems or a major non-compliant failure.
-
-**What the agent searches.** GENIUS Act stablecoin regulation implementation 2026 status issues
-
-**Authoritative sources.** https://www.sec.gov, https://www.federalreserve.gov, https://www.coindesk.com/policy
-
-
-## Set 2 — Extend & pretend
-
-### AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast)  
-
-*Story:* AI build-out circular financing  
-*Indicator id:* `ai_revenue_gap`  
-*Type:* band  
-*Weight on the meter:* 1.0  
-
-**Rubric.** 0 = gap closing / revenue catching up; 1 = wide but stable gap; 2 = gap widening fast or clear monetization disappointment.
-
-**What the agent searches.** AI capex versus revenue gap monetization concern 2026 hyperscaler
-
-**Authoritative sources.** https://www.theinformation.com, https://www.ft.com, https://www.sequoiacap.com
-
-### GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)  
-
-*Story:* AI build-out circular financing  
-*Indicator id:* `gpu_refi_stress`  
-*Type:* band  
-*Weight on the meter:* 1.0  
-
-**Rubric.** 0 = none; 1 = early signs of strain; 2 = acute refinancing stress or a notable default.
-
-**What the agent searches.** GPU-backed debt data center financing refinancing stress 2026
-
-**Authoritative sources.** https://www.ft.com, https://www.bloomberg.com, https://www.moodys.com
-
-### CMBS office delinquency rate (%)  
-
-*Story:* CRE maturity wall / regional banks  
-*Indicator id:* `cmbs_office_delinq`  
-*Type:* value  
-*Bands from thresholds:* good ≤ 8.0, warn ≈ 12.0  
-*Weight on the meter:* 1.0  
-
-**Rubric.** Report the latest CMBS office delinquency rate as a percent (e.g. 12.3).
-
-**What the agent searches.** CMBS office delinquency rate latest percent Trepp 2026
-
-**Authoritative sources.** https://www.trepp.com/trepptalk, https://www.commercialsearch.com
-
-### Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)  
-
-*Story:* CRE maturity wall / regional banks  
-*Indicator id:* `regional_bank_stress`  
+*Story:* The lithography (ASML) chokepoint  
+*Indicator id:* `taiwan_tension`  
 *Type:* band  
 *Weight on the meter:* 1.5  
 
-**Rubric.** 0 = calm; 1 = isolated regional-bank stress; 2 = a cluster of failures or sharp deposit flight.
+**Rubric.** 0 = baseline tension; 1 = elevated (large drills, incidents, sharp escalation in rhetoric); 2 = crisis (blockade, clash, mobilization).
 
-**What the agent searches.** regional bank commercial real estate stress failures 2026
+**What the agent searches.** Taiwan Strait China military tension drills incidents latest 2026
 
-**Authoritative sources.** https://www.fdic.gov, https://www.federalreserve.gov, https://www.spglobal.com
+**Authoritative sources.** https://www.reuters.com/world/asia-pacific, https://www.csis.org/programs/china-power-project
 
-### Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election)  
+### Export-control escalation (0 stable / 1 tightening / 2 retaliation)  
 
-*Story:* France / eurozone fragility  
-*Indicator id:* `govt_stability`  
-*Type:* band  
-*Weight on the meter:* 1.0  
-
-**Rubric.** 0 = stable government; 1 = fragile (minority govt, budget fights); 2 = collapse, snap election called, or presidential crisis.
-
-**What the agent searches.** France government stability budget no-confidence snap election latest
-
-**Authoritative sources.** https://www.lemonde.fr/en/, https://www.reuters.com/world/europe
-
-### Rating action (0 stable / 1 negative outlook / 2 downgrade)  
-
-*Story:* France / eurozone fragility  
-*Indicator id:* `rating_action`  
-*Type:* band  
-*Weight on the meter:* 1.0  
-
-**Rubric.** 0 = stable outlook; 1 = negative outlook or watch; 2 = an actual downgrade.
-
-**What the agent searches.** France sovereign credit rating outlook S&P Moody's Fitch latest
-
-**Authoritative sources.** https://www.spglobal.com/ratings, https://www.fitchratings.com, https://www.moodys.com
-
-### Subprime auto 60+ day delinquency (%)  
-
-*Story:* Hidden consumer debt  
-*Indicator id:* `subprime_auto_dpd`  
-*Type:* value  
-*Bands from thresholds:* good ≤ 5.5, warn ≈ 6.5  
-*Weight on the meter:* 1.0  
-
-**Rubric.** Report the latest subprime auto 60+ day delinquency rate as a percent (e.g. 6.2).
-
-**What the agent searches.** subprime auto loan 60+ day delinquency rate latest percent 2026
-
-**Authoritative sources.** https://www.fitchratings.com, https://www.coxautoinc.com/market-insights/
-
-### BNPL delinquency trend (0 stable / 1 rising / 2 spiking)  
-
-*Story:* Hidden consumer debt  
-*Indicator id:* `bnpl_delinq`  
+*Story:* The lithography (ASML) chokepoint  
+*Indicator id:* `export_controls`  
 *Type:* band  
 *Weight on the meter:* 0.5  
 
-**Rubric.** 0 = stable; 1 = rising delinquencies; 2 = sharp spike or major BNPL lender distress.
+**Rubric.** 0 = stable regime; 1 = tightening controls; 2 = major new controls or Chinese retaliation.
 
-**What the agent searches.** buy now pay later BNPL delinquency trend 2026 Affirm Klarna
+**What the agent searches.** semiconductor export controls ASML China escalation retaliation 2026
 
-**Authoritative sources.** https://www.richmondfed.org, https://www.cfpb.gov, https://www.ft.com
+**Authoritative sources.** https://www.bis.doc.gov, https://www.csis.org, https://www.reuters.com/technology
 
-### USD share of FX reserves (%, IMF COFER)  
+### Single-point concentration (0 easing / 1 high / 2 extreme)  
 
-*Story:* Gold / de-dollarization  
-*Indicator id:* `dollar_reserve_share`  
-*Type:* value  
-*Bands from thresholds:* good ≤ 57.0, warn ≈ 54.0  
-*Weight on the meter:* 1.0  
-
-**Rubric.** Report the latest USD share of allocated global FX reserves as a percent (e.g. 56.8).
-
-**What the agent searches.** US dollar share global FX reserves IMF COFER latest percent
-
-**Authoritative sources.** https://data.imf.org/cofer, https://www.imf.org
-
-### Reserve-weaponization / settlement shift (0 none / 1 talk / 2 action)  
-
-*Story:* Gold / de-dollarization  
-*Indicator id:* `weaponization_event`  
+*Story:* The lithography (ASML) chokepoint  
+*Indicator id:* `fab_concentration`  
 *Type:* band  
-*Weight on the meter:* 1.0  
-
-**Rubric.** 0 = none; 1 = new talk/agreements on non-dollar settlement or asset-freeze threats; 2 = a major new reserve freeze or settlement shift.
-
-**What the agent searches.** reserve weaponization sanctions asset freeze non-dollar settlement latest 2026
-
-**Authoritative sources.** https://www.reuters.com, https://www.atlanticcouncil.org
-
-### Insurer non-renewals / exits (0 stable / 1 rising / 2 accelerating)  
-
-*Story:* Insurance retreat  
-*Indicator id:* `insurer_exits`  
-*Type:* band  
-*Weight on the meter:* 1.0  
-
-**Rubric.** 0 = stable; 1 = rising non-renewals/exits; 2 = accelerating withdrawals across multiple states.
-
-**What the agent searches.** home insurer non-renewals market exits states 2026
-
-**Authoritative sources.** https://www.naic.org, https://www.insurancejournal.com
-
-### Catastrophe-loss pressure (0 normal / 1 elevated / 2 severe season)  
-
-*Story:* Insurance retreat  
-*Indicator id:* `cat_losses`  
-*Type:* band  
-*Weight on the meter:* 1.0  
-
-**Rubric.** 0 = normal season; 1 = elevated catastrophe losses; 2 = a severe / record loss season underway.
-
-**What the agent searches.** insured catastrophe losses severe season 2026 hurricane wildfire
-
-**Authoritative sources.** https://www.aon.com/reinsurance, https://www.munichre.com, https://www.swissre.com/institute/
-
-### Social Security / pension reform shock (0 none / 1 debate / 2 cuts)  
-
-*Story:* Pensions / demographics  
-*Indicator id:* `ss_reform_news`  
-*Type:* band  
-*Weight on the meter:* 1.0  
-
-**Rubric.** 0 = no change; 1 = active reform debate or trust-fund warnings; 2 = concrete benefit cuts or an emergency measure.
-
-**What the agent searches.** US Social Security trust fund reform benefit cut pension news 2026
-
-**Authoritative sources.** https://www.ssa.gov/oact/, https://www.crfb.org
-
-### Pension-fund leverage event, UK-2022 type (0 none / 1 stress / 2 blowup)  
-
-*Story:* Pensions / demographics  
-*Indicator id:* `pension_leverage_event`  
-*Type:* band  
-*Weight on the meter:* 1.0  
-
-**Rubric.** 0 = none; 1 = visible pension-leverage stress; 2 = a UK-2022-style forced-selling blow-up.
-
-**What the agent searches.** pension fund leverage LDI margin crisis 2026
-
-**Authoritative sources.** https://www.bankofengland.co.uk, https://www.ft.com, https://www.pionline.com
-
-### Large public-pension funded ratio (%)  
-
-*Story:* Pensions / demographics  
-*Indicator id:* `funded_ratio`  
-*Type:* value  
-*Bands from thresholds:* good ≤ 80, warn ≈ 70  
 *Weight on the meter:* 0.5  
 
-**Rubric.** Report a representative large US public-pension funded ratio as a percent (e.g. 78).
+**Rubric.** 0 = meaningful diversification progressing; 1 = still highly concentrated; 2 = concentration worsening / diversification stalled.
 
-**What the agent searches.** large US public pension funded ratio latest percent 2026
+**What the agent searches.** advanced chip fab geographic diversification Taiwan TSMC US Japan 2026
 
-**Authoritative sources.** https://www.milliman.com, https://equable.org
+**Authoritative sources.** https://www.tsmc.com, https://www.semiconductors.org, https://www.reuters.com/technology
+
+### Hormuz/Red Sea status (0 open / 1 contested / 2 closed)  
+
+*Story:* Sea lanes & undersea cables  
+*Indicator id:* `hormuz_redsea_status`  
+*Type:* band  
+*Weight on the meter:* 1.0  
+
+**Rubric.** 0 = open and normal; 1 = contested (attacks, partial disruption, fragile ceasefire); 2 = effectively closed/blockaded.
+
+**What the agent searches.** Strait of Hormuz Red Sea shipping status open closed ceasefire latest 2026
+
+**Authoritative sources.** https://www.reuters.com/world/middle-east, https://www.imo.org, https://www.cfr.org
+
+### Undersea cable incidents (0 none / 1 threatened / 2 cut)  
+
+*Story:* Sea lanes & undersea cables  
+*Indicator id:* `cable_incidents`  
+*Type:* band  
+*Weight on the meter:* 0.5  
+
+**Rubric.** 0 = none; 1 = threats or minor incidents; 2 = a major cable cut causing outages.
+
+**What the agent searches.** undersea submarine cable damage cut Red Sea Hormuz Baltic latest 2026
+
+**Authoritative sources.** https://www.submarinecablemap.com, https://www.reuters.com/technology, https://www.lloydslist.com
 
 
-## Set 3 — Chokepoints
+## Set 5 — Physical & Resource Limits
 
 ### Grid interconnection wait (months)  
 
@@ -560,82 +644,4 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 **What the agent searches.** Strait of Hormuz sulfur ammonia fertilizer shipping disruption 2026
 
 **Authoritative sources.** https://www.fao.org, https://blogs.worldbank.org, https://www.reuters.com/markets/commodities
-
-### Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis)  
-
-*Story:* The lithography (ASML) chokepoint  
-*Indicator id:* `taiwan_tension`  
-*Type:* band  
-*Weight on the meter:* 1.5  
-
-**Rubric.** 0 = baseline tension; 1 = elevated (large drills, incidents, sharp escalation in rhetoric); 2 = crisis (blockade, clash, mobilization).
-
-**What the agent searches.** Taiwan Strait China military tension drills incidents latest 2026
-
-**Authoritative sources.** https://www.reuters.com/world/asia-pacific, https://www.csis.org/programs/china-power-project
-
-### Export-control escalation (0 stable / 1 tightening / 2 retaliation)  
-
-*Story:* The lithography (ASML) chokepoint  
-*Indicator id:* `export_controls`  
-*Type:* band  
-*Weight on the meter:* 0.5  
-
-**Rubric.** 0 = stable regime; 1 = tightening controls; 2 = major new controls or Chinese retaliation.
-
-**What the agent searches.** semiconductor export controls ASML China escalation retaliation 2026
-
-**Authoritative sources.** https://www.bis.doc.gov, https://www.csis.org, https://www.reuters.com/technology
-
-### Single-point concentration (0 easing / 1 high / 2 extreme)  
-
-*Story:* The lithography (ASML) chokepoint  
-*Indicator id:* `fab_concentration`  
-*Type:* band  
-*Weight on the meter:* 0.5  
-
-**Rubric.** 0 = meaningful diversification progressing; 1 = still highly concentrated; 2 = concentration worsening / diversification stalled.
-
-**What the agent searches.** advanced chip fab geographic diversification Taiwan TSMC US Japan 2026
-
-**Authoritative sources.** https://www.tsmc.com, https://www.semiconductors.org, https://www.reuters.com/technology
-
-### Hormuz/Red Sea status (0 open / 1 contested / 2 closed)  
-
-*Story:* Sea lanes & undersea cables  
-*Indicator id:* `hormuz_redsea_status`  
-*Type:* band  
-*Weight on the meter:* 1.0  
-
-**Rubric.** 0 = open and normal; 1 = contested (attacks, partial disruption, fragile ceasefire); 2 = effectively closed/blockaded.
-
-**What the agent searches.** Strait of Hormuz Red Sea shipping status open closed ceasefire latest 2026
-
-**Authoritative sources.** https://www.reuters.com/world/middle-east, https://www.imo.org, https://www.cfr.org
-
-### Undersea cable incidents (0 none / 1 threatened / 2 cut)  
-
-*Story:* Sea lanes & undersea cables  
-*Indicator id:* `cable_incidents`  
-*Type:* band  
-*Weight on the meter:* 0.5  
-
-**Rubric.** 0 = none; 1 = threats or minor incidents; 2 = a major cable cut causing outages.
-
-**What the agent searches.** undersea submarine cable damage cut Red Sea Hormuz Baltic latest 2026
-
-**Authoritative sources.** https://www.submarinecablemap.com, https://www.reuters.com/technology, https://www.lloydslist.com
-
-### Treasury-clearing rollout stress (0 smooth / 1 friction / 2 problems)  
-
-*Story:* Clearinghouses (financial chokepoint)  
-*Indicator id:* `treasury_clearing_rollout`  
-*Type:* band  
-*Weight on the meter:* 0.5  
-
-**Rubric.** 0 = smooth, on track; 1 = friction / capacity concerns; 2 = significant problems or disorderly rollout.
-
-**What the agent searches.** US Treasury central clearing implementation capacity readiness 2026 2027
-
-**Authoritative sources.** https://www.sec.gov, https://www.dtcc.com, https://www.risk.net
 

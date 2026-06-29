@@ -34,7 +34,7 @@
   .section-label{ font-size:11px; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); font-weight:700; margin:18px 2px 8px; }
 
   /* aggregate cards */
-  .agg{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  .agg{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
   .agg .card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; box-shadow:var(--shadow); }
   .agg .num{ font-size:30px; font-weight:800; letter-spacing:-1px; line-height:1; }
   .agg .lbl{ color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.05em; font-weight:700; margin-bottom:6px; }
@@ -319,12 +319,15 @@ function legend(){
     .map(([l,n])=>`<span class="lg"><span class="sw" style="background:${bandColor(l)}"></span>${n}</span>`).join('');
 }
 function heatStrip(d){
+  const sets=d.sets||{};
+  const lbl=k=>{ const s=sets[k]||sets[String(k)]; return s?s.short:('Set '+k); };
+  const full=k=>{ const s=sets[k]||sets[String(k)]; return s?s.name:('Set '+k); };
   const bySet={};
   for(const s of d.stories){ (bySet[s.set]=bySet[s.set]||[]).push(s); }
   let groups='';
   for(const set of Object.keys(bySet).sort()){
     const tiles=bySet[set].map(s=>`<a class="tile" href="#story-${s.id}" title="${s.name} \u2014 ${s.level}/10 ${s.band}" style="background:${bandColor(s.level)}">${s.level}</a>`).join('');
-    groups+=`<div class="hgroup"><span class="hlabel">Set ${set}</span><div class="tiles">${tiles}</div></div>`;
+    groups+=`<div class="hgroup"><span class="hlabel" title="${full(set)}">${lbl(set)}</span><div class="tiles">${tiles}</div></div>`;
   }
   return `<div class="heat">${groups}<div class="legend">${legend()}</div></div>`;
 }
@@ -448,16 +451,19 @@ function backtestPanel(){
 function render(d){
   document.getElementById('sub').textContent=`As of ${d.date}  \u00B7  generated ${d.generated_at}`;
   const a=d.aggregates;
-  const aggCard=(lbl,val,showBand)=>`<div class="card"><div class="lbl">${lbl}</div>
+  const sets=d.sets||{};
+  const setName=(k,full)=>{ const s=sets[k]||sets[String(k)]; return s?(full?s.name:s.short):('Set '+k); };
+  const aggCard=(lbl,val,showBand,title)=>`<div class="card"${title?` title="${title}"`:''}><div class="lbl">${lbl}</div>
     <div class="num" style="color:${bandColor(Math.round(val))}">${val}/10</div>
     ${showBand?`<div class="band">${bandName(Math.round(val))}</div>`:''}</div>`;
-  let html=`<div class="agg">${aggCard('Overall',a.overall,true)}${aggCard('Set 1',a['1'])}${aggCard('Set 2',a['2'])}${aggCard('Set 3',a['3'])}</div>`;
+  const setKeys=Object.keys(a).filter(k=>k!=='overall').sort();
+  let cards=aggCard('Overall',a.overall,true);
+  for(const k of setKeys) cards+=aggCard(setName(k,false),a[k],false,setName(k,true));
+  let html=`<div class="agg">${cards}</div>`;
   html+=`<div class="section-label">Heat map \u2014 all stories</div>`+heatStrip(d);
   html+=healthBar(d);
-  html+=`<div class="health" style="gap:10px"><span><b>Briefs:</b></span>
-    <a href="briefs/Global_Macro_Intelligence_Brief_Set1.pdf" target="_blank" rel="noopener">Set 1 \u2197</a>
-    <a href="briefs/Global_Macro_Intelligence_Brief_Set2.pdf" target="_blank" rel="noopener">Set 2 \u2197</a>
-    <a href="briefs/Global_Macro_Intelligence_Brief_Set3.pdf" target="_blank" rel="noopener">Set 3 \u2197</a>
+  html+=`<div class="health" style="gap:10px"><span><b>Brief:</b></span>
+    <a href="briefs/Global_Macro_Intelligence_Brief_2026.pdf" target="_blank" rel="noopener"><b>Global Macro Intelligence Brief \u2014 2026 Edition</b> (5 sections, 21 stories) \u2197</a>
     <a href="briefs/living_brief.html" target="_blank" rel="noopener">Living brief (auto-updated) \u2197</a></div>`;
   html+=`<div class="section-label">Summary</div>`;
   html+=`<div class="narr"><strong>Daily brief</strong>\n${d.narrative||''}</div>`;
@@ -468,7 +474,7 @@ function render(d){
   const sorted=[...d.stories].sort((x,y)=>y.level-x.level);
   for(const s of sorted){
     const col=bandColor(s.level);
-    html+=`<div class="story" id="story-${s.id}"><h3>${s.name}<span class="setpill">Set ${s.set}</span></h3>
+    html+=`<div class="story" id="story-${s.id}"><h3>${s.name}<span class="setpill" title="${setName(s.set,true)}">${setName(s.set,false)}</span></h3>
       <div class="srow">${gauge(s.level)}
         <div class="sright">
           <span class="lvl" style="color:${col}">${s.level}<span class="den">/10</span></span>

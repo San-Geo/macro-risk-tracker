@@ -7,10 +7,64 @@
 # set_pdf paths are served from dashboard/briefs/ on GitHub Pages.
 # =====================================================================
 
+# The current polished brief: one combined document, five mechanism-based
+# sections, 21 write-ups renumbered 1-21. main.py builds each story's
+# "Full brief" link as combined_pdf#page=<pages[id]> so it jumps to that story.
+combined_pdf: "briefs/Global_Macro_Intelligence_Brief_2026.pdf"
+pages:
+  s1_basis_trade: 6
+  s2_japan: 9
+  s3_private_credit: 12
+  s7_stablecoins: 15
+  s21_clearinghouses: 18
+  s8_ai_capex: 23
+  s9_cre: 26
+  s11_consumer_debt: 29
+  s13_insurance: 33
+  s4_dev_debt: 38
+  s10_france: 41
+  s12_gold_dedollar: 44
+  s14_pensions: 47
+  s5_china_deflation: 52
+  s6_rare_earths: 55
+  s19_lithography: 58
+  s20_sea_lanes: 62
+  s15_ai_power: 67
+  s16_copper: 71
+  s17_water: 74
+  s18_food_fertilizer: 77
+
 set_pdf:
   1: "briefs/Global_Macro_Intelligence_Brief_Set1.pdf"
   2: "briefs/Global_Macro_Intelligence_Brief_Set2.pdf"
   3: "briefs/Global_Macro_Intelligence_Brief_Set3.pdf"
+
+# Which ORIGINAL published brief each story's full write-up lives in. The tracker
+# now groups stories by mechanism (see `sets` in stories.yaml), but the polished
+# PDFs are still the original 3-set documents, so "Full brief" links point here.
+# (Regenerate the PDFs into the new 5-set structure to retire this mapping.)
+original_set:
+  s1_basis_trade: 1
+  s2_japan: 1
+  s3_private_credit: 1
+  s4_dev_debt: 1
+  s5_china_deflation: 1
+  s6_rare_earths: 1
+  s7_stablecoins: 1
+  s8_ai_capex: 2
+  s9_cre: 2
+  s10_france: 2
+  s11_consumer_debt: 2
+  s12_gold_dedollar: 2
+  s13_insurance: 2
+  s14_pensions: 2
+  s15_ai_power: 3
+  s16_copper: 3
+  s17_water: 3
+  s18_food_fertilizer: 3
+  s19_lithography: 3
+  s20_sea_lanes: 3
+  s21_clearinghouses: 3
 
 stories:
   s1_basis_trade:

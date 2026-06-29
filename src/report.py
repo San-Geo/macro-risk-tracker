@@ -27,6 +27,8 @@ def write_json(result, narrative, date, path):
         payload["data_health"] = result["data_health"]
     if result.get("aggregates_trend"):
         payload["aggregates_trend"] = result["aggregates_trend"]
+    if result.get("sets"):
+        payload["sets"] = result["sets"]
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(payload, f, indent=2)
@@ -116,16 +118,19 @@ def build_workbook(config, result, narrative, date, history_path, path):
         for c in range(1, 8):
             dash.cell(rr, c).border = BORDER
     last = start + len(config["stories"]) - 1
-    # aggregates
+    # aggregates (one row per set, dynamic)
     agg_row = last + 2
-    dash.cell(agg_row, 1, "Aggregate - Set 1").font = Font(name=ARIAL, bold=True)
-    dash.cell(agg_row, 6, f"=ROUND(AVERAGEIF($C${start}:$C${last},1,$F${start}:$F${last}),1)").font = Font(name=ARIAL, bold=True)
-    dash.cell(agg_row + 1, 1, "Aggregate - Set 2").font = Font(name=ARIAL, bold=True)
-    dash.cell(agg_row + 1, 6, f"=ROUND(AVERAGEIF($C${start}:$C${last},2,$F${start}:$F${last}),1)").font = Font(name=ARIAL, bold=True)
-    dash.cell(agg_row + 2, 1, "Aggregate - Set 3").font = Font(name=ARIAL, bold=True)
-    dash.cell(agg_row + 2, 6, f"=ROUND(AVERAGEIF($C${start}:$C${last},3,$F${start}:$F${last}),1)").font = Font(name=ARIAL, bold=True)
-    dash.cell(agg_row + 3, 1, "Aggregate - Overall").font = Font(name=ARIAL, bold=True)
-    dash.cell(agg_row + 3, 6, f"=ROUND(AVERAGE($F${start}:$F${last}),1)").font = Font(name=ARIAL, bold=True)
+    set_nums = sorted({s["set"] for s in config["stories"]})
+    set_names = (config.get("sets") or {})
+    for k, sn in enumerate(set_nums):
+        nm = (set_names.get(sn) or {}).get("name", f"Set {sn}")
+        dash.cell(agg_row + k, 1, f"Aggregate - {nm}").font = Font(name=ARIAL, bold=True)
+        dash.cell(agg_row + k, 6,
+                  f"=ROUND(AVERAGEIF($C${start}:$C${last},{sn},$F${start}:$F${last}),1)"
+                  ).font = Font(name=ARIAL, bold=True)
+    orow = agg_row + len(set_nums)
+    dash.cell(orow, 1, "Aggregate - Overall").font = Font(name=ARIAL, bold=True)
+    dash.cell(orow, 6, f"=ROUND(AVERAGE($F${start}:$F${last}),1)").font = Font(name=ARIAL, bold=True)
     dash.conditional_formatting.add(
         f"F{start}:F{last}",
         ColorScaleRule(start_type="num", start_value=1, start_color="2E7D32",

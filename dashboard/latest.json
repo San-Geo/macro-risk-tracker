@@ -1,13 +1,15 @@
 {
   "date": "2026-06-29",
-  "generated_at": "2026-06-29 10:21 UTC",
+  "generated_at": "2026-06-29 11:33 UTC",
   "aggregates": {
-    "1": 5.3,
-    "2": 4.6,
-    "3": 5.0,
+    "1": 4.8,
+    "3": 4.0,
+    "4": 6.0,
+    "2": 5.2,
+    "5": 5.0,
     "overall": 5.0
   },
-  "narrative": "**HEADLINE**\nMacro risk holding steady at 5.0 overall, with 14 stories at elevated level or above and one modest improvement in sea-lane vulnerabilities.\n\n**LEVEL CHANGES**\n\u2022 **Sea lanes & undersea cables** (7\u21926): WTI crude fell 50\u00a2 to $70.1/bbl, reducing energy-supply-disruption pressure on chokepoint transit risk, though infrastructure remains exposed.\n\n**ELEVATED RISKS TO MONITOR**\nJapan's fiscal-JGB-carry trade (6), China's exported deflation (6), critical minerals weaponization (6), AI build-out circular financing (6), AI power-grid bottleneck (6), and food-fertilizer fragility (6) remain highest-severity stories. Treasury basis trades, private credit opacity, developing-world debt, CRE maturity walls, hidden consumer debt, insurance retreat, and lithography chokepoints all sit at level 5.\n\n**WATCH CLOSEST**\nJapan fiscal/JGB/carry trade at level 6\u2014structural unwind risk if BoJ tightens or yen reprices.",
+  "narrative": "As of 2026-06-29: overall risk 5.0/10 (Set 1 4.8/10, Set 2 5.2/10, Set 3 4.0/10, Set 4 6.0/10, Set 5 5.0/10).\nNo story changed level versus the previous run. Daily market indicators moved within their current bands.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -36,17 +38,17 @@
         {
           "id": "move",
           "label": "MOVE index (Treasury volatility)",
-          "value": 66.79,
+          "value": 96,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
           "delta": 0.0,
           "source": "market:^MOVE",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-06-26",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "clearing_status",
@@ -65,16 +67,11 @@
         }
       ],
       "summary": "Hedge funds run a highly leveraged arbitrage between Treasury cash bonds and futures. It is a major source of liquidity, but a spike in funding costs or Treasury volatility can force rapid unwinds, as briefly happened in March 2020 and again in 2025.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set1.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=6",
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s2_japan",
@@ -88,17 +85,17 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 161.883,
+          "value": 156,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
           "delta": 0.0,
           "source": "market:JPY=X",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/JPY=X",
-          "as_of": "2026-06-29",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "jgb30",
@@ -132,16 +129,11 @@
         }
       ],
       "summary": "Decades of near-zero rates made Japan the funding leg of a vast global carry trade. As the BoJ normalizes and JGB yields rise, fiscal financing gets harder and carry unwinds can transmit stress worldwide - the August 2024 mini-crash was a preview.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set1.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=9",
       "spark": [
-        6,
         6
       ],
-      "trend": {
-        "prev": 6,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s3_private_credit",
@@ -199,21 +191,16 @@
         }
       ],
       "summary": "Lending has migrated from banks to lightly regulated private-credit funds, where assets are marked infrequently and leverage is opaque. Defaults are rising from a low base; the risk is that losses surface suddenly rather than being visible in real time.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set1.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=12",
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s4_dev_debt",
       "name": "Developing-world debt crisis",
-      "set": 1,
+      "set": 3,
       "base_level": 5,
       "raw_level": 5.0,
       "level": 5,
@@ -266,21 +253,16 @@
         }
       ],
       "summary": "A strong dollar, high real rates, and heavy foreign-currency debt loads leave many developing economies vulnerable to a sudden stop. A cluster of sovereign defaults or new IMF programs would signal the slow-burn crisis turning acute.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set1.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=38",
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s5_china_deflation",
       "name": "China's exported deflation",
-      "set": 1,
+      "set": 4,
       "base_level": 6,
       "raw_level": 6.0,
       "level": 6,
@@ -304,17 +286,17 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.7814,
+          "value": 7.2,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
           "delta": 0.0,
           "source": "market:CNY=X",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/CNY=X",
-          "as_of": "2026-06-29",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "trade_actions",
@@ -333,21 +315,16 @@
         }
       ],
       "summary": "Weak domestic demand and industrial overcapacity are pushing Chinese producer prices into sustained deflation, which China exports through cheaper goods. It pressures global manufacturers and feeds trade tensions and tariff cycles.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set1.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=52",
       "spark": [
-        6,
         6
       ],
-      "trend": {
-        "prev": 6,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s6_rare_earths",
       "name": "Critical minerals as a weapon",
-      "set": 1,
+      "set": 4,
       "base_level": 6,
       "raw_level": 6.0,
       "level": 6,
@@ -400,16 +377,11 @@
         }
       ],
       "summary": "China dominates the mining and especially the processing of rare earths and critical minerals, and has shown willingness to use export licensing as leverage. Supply chains for magnets and defense inputs have little near-term substitute.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set1.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=55",
       "spark": [
-        6,
         6
       ],
-      "trend": {
-        "prev": 6,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s7_stablecoins",
@@ -467,16 +439,11 @@
         }
       ],
       "summary": "Dollar stablecoins have become sizeable holders of short-term Treasuries, linking crypto plumbing to the funding market. A large redemption wave could force rapid T-bill selling; the GENIUS Act's implementation is the key regulatory variable.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set1.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=15",
       "spark": [
-        4,
         4
       ],
-      "trend": {
-        "prev": 4,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s8_ai_capex",
@@ -534,16 +501,11 @@
         }
       ],
       "summary": "AI infrastructure spending vastly exceeds current AI revenue, increasingly financed with debt and circular vendor arrangements. If monetization disappoints or GPU-backed financing strains, the capex cycle could reverse sharply.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set2.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=23",
       "spark": [
-        6,
         6
       ],
-      "trend": {
-        "prev": 6,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s9_cre",
@@ -586,21 +548,16 @@
         }
       ],
       "summary": "A wall of commercial real-estate loans - especially office - matures into higher rates and lower valuations, concentrated at regional banks. Rising delinquencies and 'extend and pretend' practices defer, rather than resolve, the losses.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set2.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=26",
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s10_france",
       "name": "France / eurozone fragility",
-      "set": 2,
+      "set": 3,
       "base_level": 4,
       "raw_level": 4.0,
       "level": 4,
@@ -653,16 +610,11 @@
         }
       ],
       "summary": "France combines a wide deficit, a fragmented parliament, and recurring budget standoffs, widening its spread over Germany. Political instability or a rating downgrade would test eurozone cohesion at its second-largest economy.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set2.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=41",
       "spark": [
-        4,
         4
       ],
-      "trend": {
-        "prev": 4,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s11_consumer_debt",
@@ -720,21 +672,16 @@
         }
       ],
       "summary": "Beneath headline figures, subprime auto and buy-now-pay-later delinquencies are climbing, and the labor market is the swing factor. A rise in unemployment would convert stretched-but-current borrowers into defaults quickly.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set2.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=29",
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s12_gold_dedollar",
       "name": "Gold / de-dollarization",
-      "set": 2,
+      "set": 3,
       "base_level": 3,
       "raw_level": 3.0,
       "level": 3,
@@ -743,17 +690,17 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4050.1001,
+          "value": 4300,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
           "delta": 0.0,
           "source": "market:GC=F",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/GC=F",
-          "as_of": "2026-06-29",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "dollar_reserve_share",
@@ -787,16 +734,11 @@
         }
       ],
       "summary": "Central banks are accumulating gold and building non-dollar settlement arrangements at the margin. It is a slow erosion rather than a sudden shift, but reserve 'weaponization' events can accelerate diversification away from the dollar.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set2.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=44",
       "spark": [
-        3,
         3
       ],
-      "trend": {
-        "prev": 3,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s13_insurance",
@@ -854,21 +796,16 @@
         }
       ],
       "summary": "Insurers are retreating from climate-exposed markets through non-renewals and exits, shifting risk onto homeowners and state backstops. Severe catastrophe seasons strain the system and feed into housing and mortgage stress.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set2.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=33",
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s14_pensions",
       "name": "Pensions / demographics",
-      "set": 2,
+      "set": 3,
       "base_level": 4,
       "raw_level": 4.0,
       "level": 4,
@@ -921,21 +858,16 @@
         }
       ],
       "summary": "Aging demographics and underfunded public pensions create slow fiscal pressure, while leveraged liability-driven strategies can blow up fast - as the UK gilt/LDI crisis showed in 2022. Benefit-reform fights are the political pressure valve.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set2.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=47",
       "spark": [
-        4,
         4
       ],
-      "trend": {
-        "prev": 4,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s15_ai_power",
       "name": "AI power & the grid bottleneck",
-      "set": 3,
+      "set": 5,
       "base_level": 6,
       "raw_level": 6.0,
       "level": 6,
@@ -988,40 +920,35 @@
         }
       ],
       "summary": "Data-center electricity demand is colliding with multi-year grid interconnection queues and slow capacity additions. Whether this is an acute shortfall or eases depends on the pace of AI build-out versus new supply - forecasts diverge widely.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set3.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=67",
       "spark": [
-        6,
         6
       ],
-      "trend": {
-        "prev": 6,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s16_copper",
       "name": "Copper & the electrification deficit",
-      "set": 3,
+      "set": 5,
       "base_level": 4,
-      "raw_level": 4.25,
+      "raw_level": 4.0,
       "level": 4,
       "band": "Moderate",
       "indicators": [
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.181,
-          "band": 2,
+          "value": 5.4,
+          "band": 1,
           "baseline_band": 1,
           "weight": 0.5,
-          "delta": 0.25,
+          "delta": 0.0,
           "source": "market:HG=F",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/HG=F",
-          "as_of": "2026-06-29",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "mine_disruptions",
@@ -1055,21 +982,16 @@
         }
       ],
       "summary": "Electrification and AI infrastructure point to structural copper deficits as demand outruns new mine supply, which takes a decade to build. Price is the live signal; mine disruptions and inventory draws would confirm tightening.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set3.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=71",
       "spark": [
-        4,
         4
       ],
-      "trend": {
-        "prev": 4,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s17_water",
       "name": "Water - the underpriced input",
-      "set": 3,
+      "set": 5,
       "base_level": 4,
       "raw_level": 4.0,
       "level": 4,
@@ -1122,21 +1044,16 @@
         }
       ],
       "summary": "Water is systematically underpriced yet essential to chip fabrication, agriculture, and power. Droughts in key hubs (Taiwan's fabs, major farming regions) and transboundary disputes can disrupt supply chains in ways markets rarely price in advance.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set3.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=74",
       "spark": [
-        4,
         4
       ],
-      "trend": {
-        "prev": 4,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s18_food_fertilizer",
       "name": "Food & fertilizer fragility",
-      "set": 3,
+      "set": 5,
       "base_level": 6,
       "raw_level": 6.0,
       "level": 6,
@@ -1189,21 +1106,16 @@
         }
       ],
       "summary": "Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set3.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=77",
       "spark": [
-        6,
         6
       ],
-      "trend": {
-        "prev": 6,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s19_lithography",
       "name": "The lithography (ASML) chokepoint",
-      "set": 3,
+      "set": 4,
       "base_level": 5,
       "raw_level": 5.0,
       "level": 5,
@@ -1256,25 +1168,20 @@
         }
       ],
       "summary": "ASML is the sole maker of EUV lithography machines, with Zeiss the sole optics supplier - a single point of failure for advanced chips. Export controls, retaliation, or any disruption to this chain would ripple across the entire tech economy.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set3.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=58",
       "spark": [
-        5,
         5
       ],
-      "trend": {
-        "prev": 5,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     },
     {
       "id": "s20_sea_lanes",
       "name": "Sea lanes & undersea cables",
-      "set": 3,
+      "set": 4,
       "base_level": 7,
-      "raw_level": 6.5,
-      "level": 6,
-      "band": "Elevated",
+      "raw_level": 7.0,
+      "level": 7,
+      "band": "High",
       "indicators": [
         {
           "id": "hormuz_redsea_status",
@@ -1294,17 +1201,17 @@
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 70.1,
-          "band": 0,
+          "value": 95,
+          "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
-          "delta": -0.5,
+          "delta": 0.0,
           "source": "market:CL=F",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/CL=F",
-          "as_of": "2026-06-29",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "cable_incidents",
@@ -1323,21 +1230,16 @@
         }
       ],
       "summary": "A few maritime chokepoints and undersea cables carry most global trade and data. The 2026 Hormuz/Red Sea disruptions showed how quickly closures spike energy and shipping costs; cable cuts are a parallel, under-watched vulnerability.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set3.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=62",
       "spark": [
-        7,
-        6
+        7
       ],
-      "trend": {
-        "prev": 7,
-        "since": "2026-06-29",
-        "change": -1
-      }
+      "trend": null
     },
     {
       "id": "s21_clearinghouses",
       "name": "Clearinghouses (financial chokepoint)",
-      "set": 3,
+      "set": 1,
       "base_level": 4,
       "raw_level": 4.0,
       "level": 4,
@@ -1346,32 +1248,32 @@
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 18.4,
+          "value": 17,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
           "delta": 0.0,
           "source": "market:^VIX",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/^VIX",
-          "as_of": "2026-06-29",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "move_ccp",
           "label": "Treasury volatility (MOVE)",
-          "value": 66.79,
+          "value": 96,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
           "delta": 0.0,
           "source": "market:^MOVE",
           "cadence": "daily",
-          "stale": false,
+          "stale": true,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-06-26",
-          "provenance": "Market"
+          "as_of": "",
+          "provenance": "Baseline"
         },
         {
           "id": "treasury_clearing_rollout",
@@ -1390,32 +1292,42 @@
         }
       ],
       "summary": "Central counterparties now concentrate the system's risk by design, and Treasury central-clearing mandates will route more activity through them. In a volatility spike, procyclical margin calls can amplify stress - they are a systemic single point of failure.",
-      "brief_url": "briefs/Global_Macro_Intelligence_Brief_Set3.pdf",
+      "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=18",
       "spark": [
-        4,
         4
       ],
-      "trend": {
-        "prev": 4,
-        "since": "2026-06-29",
-        "change": 0
-      }
+      "trend": null
     }
   ],
   "data_health": {
-    "live_ok": 8,
+    "live_ok": 0,
     "live_total": 16,
-    "fell_back": 8,
+    "fell_back": 16,
     "agent_last": null,
     "agent_days_ago": null,
     "agent_flags": 0,
-    "offline": false
+    "offline": true
   },
-  "aggregates_trend": {
-    "overall": {
-      "prev": 5.0,
-      "since": "2026-06-29",
-      "change": 0.0
+  "sets": {
+    "1": {
+      "name": "Funding & Leverage",
+      "short": "Funding"
+    },
+    "2": {
+      "name": "Credit, Consumers & Valuations",
+      "short": "Credit"
+    },
+    "3": {
+      "name": "Sovereigns & the Monetary Order",
+      "short": "Sovereign"
+    },
+    "4": {
+      "name": "Geoeconomics & Trade Weapons",
+      "short": "Geoecon"
+    },
+    "5": {
+      "name": "Physical & Resource Limits",
+      "short": "Physical"
     }
   }
 }

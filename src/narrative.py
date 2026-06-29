@@ -25,8 +25,9 @@ def diff_changes(today, yesterday):
 
 def template_narrative(today, changes):
     agg = today["aggregates"]
-    lines = [f"As of {today['date']}: overall risk {agg['overall']}/10 "
-             f"(Set 1 {agg.get(1,'-')}/10, Set 2 {agg.get(2,'-')}/10, Set 3 {agg.get(3,'-')}/10)."]
+    set_keys = sorted(x for x in agg if x != "overall")
+    set_str = ", ".join(f"Set {k} {agg.get(k,'-')}/10" for k in set_keys)
+    lines = [f"As of {today['date']}: overall risk {agg['overall']}/10 ({set_str})."]
     if not changes:
         lines.append("No story changed level versus the previous run. "
                      "Daily market indicators moved within their current bands.")

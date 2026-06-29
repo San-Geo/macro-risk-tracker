@@ -61,8 +61,9 @@ def format_message(crossings, today):
         lines.append(f"{arrow[c['dir']]} {c['name']} ({c['old']}->{c['new']}/10): "
                      f"{c['old_band']} -> {c['new_band']}")
     agg = today["aggregates"]
-    lines += ["", f"Overall {agg['overall']}/10 | Set1 {agg.get('1','-')} "
-                  f"Set2 {agg.get('2','-')} Set3 {agg.get('3','-')}"]
+    set_keys = sorted(k for k in agg if k != "overall")
+    set_str = " ".join(f"S{k} {agg.get(k,'-')}" for k in set_keys)
+    lines += ["", f"Overall {agg['overall']}/10 | {set_str}"]
     return "\n".join(lines)
 
 
