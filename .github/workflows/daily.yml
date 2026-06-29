@@ -10,6 +10,11 @@ on:
     - cron: "0 12 * * 1"      # 12:00 UTC Monday (pre-open) - agent refresh (captures the weekend)
   workflow_dispatch:   # a manual run from the Actions tab always does a full agent + scout pass
 
+# Only one run at a time; a new run supersedes a stuck one.
+concurrency:
+  group: tracker
+  cancel-in-progress: true
+
 permissions:
   contents: write
   pages: write
@@ -18,6 +23,7 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v5
 
@@ -46,6 +52,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           AGENT_MODEL: ${{ vars.AGENT_MODEL || 'claude-sonnet-4-6' }}
+          AGENT_CONCURRENCY: ${{ vars.AGENT_CONCURRENCY || '4' }}
           SCOUT_MODEL: ${{ vars.SCOUT_MODEL || 'claude-sonnet-4-6' }}
           # Optional alert channels (set as repo secrets; any/all/none):
           ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
