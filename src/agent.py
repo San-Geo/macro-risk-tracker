@@ -16,7 +16,8 @@ Trust model (why this is safe):
 
 No SDK; uses stdlib urllib like narrative.py.
 """
-import json, os, re, time, urllib.request, datetime
+import json, os, re, time, urllib.request, urllib.error, datetime
+import concurrent.futures
 import yaml
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -129,8 +130,20 @@ def assess_one(ind_id, spec, api_key, date, prior=None, model=None):
         API_URL, data=body,
         headers={"content-type": "application/json", "x-api-key": api_key,
                  "anthropic-version": "2023-06-01"})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        data = json.loads(r.read().decode())
+    data = None
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=120) as r:
+                data = json.loads(r.read().decode())
+            break
+        except urllib.error.HTTPError as e:
+            # back off and retry on rate-limit (429) / overloaded (529); re-raise anything else
+            if e.code in (429, 529) and attempt < 3:
+                time.sleep(2 ** attempt + 1)
+                continue
+            raise
+    if data is None:
+        raise RuntimeError("no response from API")
     text = "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
     parsed = _extract_json(text)
     parsed["value"] = _coerce(parsed.get("value"), kind)
@@ -150,9 +163,10 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
     xcheck_min = float(os.environ.get("AGENT_CROSSCHECK_MIN_WEIGHT", "1.5") or 1.5)
     model2 = os.environ.get("AGENT_MODEL_2")  # optional second model for the check
 
+    # 1) Overrides and carry-forwards are instant; only the rest need a (slow) web call.
+    to_assess = []
     for ind_id, spec in framework.items():
         if only_ids and ind_id not in only_ids:
-            # carry forward prior assessment unchanged
             if ind_id in prior_log:
                 assessments[ind_id] = prior_log[ind_id]
                 if prior_log[ind_id].get("applied") and prior_log[ind_id].get("value") is not None:
@@ -163,53 +177,74 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
                                    "note": "pinned by human override (manual_input.csv)",
                                    "rationale": "", "sources": [], "as_of": date}
             continue
+        to_assess.append(ind_id)
 
+    # 2) Assess concurrently - each indicator is an independent web-search call, so a small
+    #    worker pool cuts wall-time several-fold. Tune politeness with AGENT_CONCURRENCY.
+    def _work(ind_id):
+        spec = framework[ind_id]
         prior = prior_log.get(ind_id)
-        try:
-            a = assess_one(ind_id, spec, api_key, date, prior)
-            # Cross-check the highest-weight indicators with a second independent read.
-            if weights.get(ind_id, 0) >= xcheck_min and a.get("value") is not None:
+        a = assess_one(ind_id, spec, api_key, date, prior)
+        # Cross-check the highest-weight indicators with a second independent read.
+        if weights.get(ind_id, 0) >= xcheck_min and a.get("value") is not None:
+            try:
+                b = assess_one(ind_id, spec, api_key, date, prior, model=model2)
+                disagree = _disagree(a.get("value"), b.get("value"), spec.get("type", "band"))
+                a["crosscheck"] = {"second_value": b.get("value"), "agree": not disagree}
+                if disagree:
+                    a["confidence"] = "low"  # demote -> handled conservatively below
+                    a["crosscheck"]["note"] = "two reads disagreed"
+                    a["rationale"] = ((a.get("rationale", "") +
+                        f" [cross-check: two reads disagreed ({a.get('value')} vs "
+                        f"{b.get('value')}); held for review]").strip())
+            except Exception as e:
+                a["crosscheck"] = {"error": str(e)}
+        return a
+
+    workers = max(1, int(os.environ.get("AGENT_CONCURRENCY", "4") or 4))
+    results = {}
+    if to_assess:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as ex:
+            futs = {ex.submit(_work, iid): iid for iid in to_assess}
+            for fut in concurrent.futures.as_completed(futs):
+                iid = futs[fut]
                 try:
-                    b = assess_one(ind_id, spec, api_key, date, prior, model=model2)
-                    disagree = _disagree(a.get("value"), b.get("value"), spec.get("type", "band"))
-                    a["crosscheck"] = {"second_value": b.get("value"), "agree": not disagree}
-                    if disagree:
-                        a["confidence"] = "low"  # demote -> handled conservatively below
-                        a["crosscheck"]["note"] = "two reads disagreed"
-                        a["rationale"] = ((a.get("rationale", "") +
-                            f" [cross-check: two reads disagreed ({a.get('value')} vs "
-                            f"{b.get('value')}); held for review]").strip())
+                    results[iid] = fut.result()
                 except Exception as e:
-                    a["crosscheck"] = {"error": str(e)}
-            conf = str(a.get("confidence", "low")).lower()
-            if conf == "low" or a.get("value") is None:
-                # don't flip on weak evidence: retain prior applied value if we have one
-                if prior and prior.get("value") is not None:
-                    a["value"], a["applied"] = prior["value"], True
-                    a["note"] = "low confidence; retained prior value"
-                else:
-                    a["applied"] = False
-                    a["note"] = "low confidence; left at baseline"
-                review.append(ind_id)
-            else:
-                a["applied"] = True
-                a["note"] = "applied"
-                if prior and prior.get("value") is not None and a["value"] != prior["value"]:
-                    review.append(ind_id)  # surface every change for the human to glance at
-            if a.get("applied") and a.get("value") is not None:
-                values[ind_id] = a["value"]
-            a["prior"] = (prior or {}).get("value")
-            assessments[ind_id] = a
-        except Exception as e:
-            # never break the run on a single indicator
+                    results[iid] = {"__error__": str(e)}
+
+    # 3) Apply confidence gating in framework order (deterministic, no network).
+    for ind_id in to_assess:
+        prior = prior_log.get(ind_id)
+        a = results.get(ind_id)
+        if a is None or "__error__" in a:
             keep = (prior or {}).get("value")
             assessments[ind_id] = {"value": keep, "confidence": "error", "applied": keep is not None,
-                                   "note": f"agent error, kept prior: {e}", "rationale": "",
-                                   "sources": [], "as_of": date, "prior": keep}
+                                   "note": f"agent error, kept prior: {(a or {}).get('__error__', 'no result')}",
+                                   "rationale": "", "sources": [], "as_of": date, "prior": keep}
             if keep is not None:
                 values[ind_id] = keep
             review.append(ind_id)
-        time.sleep(pause)
+            continue
+        conf = str(a.get("confidence", "low")).lower()
+        if conf == "low" or a.get("value") is None:
+            # don't flip on weak evidence: retain prior applied value if we have one
+            if prior and prior.get("value") is not None:
+                a["value"], a["applied"] = prior["value"], True
+                a["note"] = "low confidence; retained prior value"
+            else:
+                a["applied"] = False
+                a["note"] = "low confidence; left at baseline"
+            review.append(ind_id)
+        else:
+            a["applied"] = True
+            a["note"] = "applied"
+            if prior and prior.get("value") is not None and a["value"] != prior["value"]:
+                review.append(ind_id)  # surface every change for the human to glance at
+        if a.get("applied") and a.get("value") is not None:
+            values[ind_id] = a["value"]
+        a["prior"] = (prior or {}).get("value")
+        assessments[ind_id] = a
 
     log = {"generated": datetime.datetime.now(datetime.timezone.utc).isoformat(), "date": date,
            "model": AGENT_MODEL, "assessments": assessments, "review_flags": sorted(set(review))}
