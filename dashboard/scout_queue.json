@@ -1,5 +1,177 @@
 {
-  "items": {},
-  "last_error": "Expecting ',' delimiter: line 82 column 6 (char 8218)",
-  "generated": "2026-06-29"
+  "items": {
+    "us-iran-ceasefire-mou-signed-june-17-hormuz-re-c-7b6e5b": {
+      "headline": "US-Iran ceasefire MOU signed June 17; Hormuz re-closed June 20 after Israeli Lebanon strikes; US Navy announced 'widened route' June 27 \u2014 strait status remains contested",
+      "summary": "A 60-day ceasefire MOU was signed June 17 requiring Iran to allow free Hormuz transit, but Iran re-closed the strait on June 20 citing Israeli attacks in Lebanon; on June 27 the US Navy's JMIC announced a widened passage near Oman as a de-facto challenge to Iranian control, leaving the strait's status ambiguous and oil markets volatile (WTI near $81, down from a ~$120 wartime high).",
+      "as_of": "2026-06-27",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz",
+        "https://discoveryalert.com.au/us-iran-strait-hormuz-oil-prices-2026-ceasefire-market/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Strait of Hormuz is the single most material chokepoint in the tracker. Iran re-closed the strait within 72 hours of the June 17 MOU on the pretext of Israeli Lebanon strikes; the US Navy's June 27 'widened route' announcement is an unprecedented direct challenge to Iranian sovereignty claims and signals active brinkmanship. The status should be coded 1 (contested) moving toward 2 \u2014 this is not a resolved situation. With ~20\u201327% of seaborne oil transiting the strait, any re-escalation reverts WTI toward wartime highs and transmits immediately into CPI, EM debt, and food/fertilizer (s18) indicators. The WTI indicator should be updated to ~$81 (down from $120 wartime high, but fragile).",
+      "status": "pending",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "id": "us-iran-ceasefire-mou-signed-june-17-hormuz-re-c-7b6e5b"
+    },
+    "boj-raises-policy-rate-to-1-0-at-june-16-mpm-haw-9b4d3c": {
+      "headline": "BOJ raises policy rate to 1.0% at June 16 MPM; hawkish board members call for hikes every 'few months' toward 2% neutral; 10-year JGB yield at ~2.61\u20132.65%",
+      "summary": "The Bank of Japan lifted its policy rate to 1.0% on June 16 and simultaneously cut its JGB purchase plan to ~\u00a5200bn/month. BOJ Deputy Governor Himino and board member Tamura both signaled further hikes every few months targeting a ~2% neutral rate, with Tamura warning that if upside inflation risks intensify the BOJ should 'accelerate the pace of rate hikes without hesitation.'",
+      "as_of": "2026-06-25",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://think.ing.com/snaps/stronger-than-expected-1q26-gdp-to-support-the-bojs-rate-hike-in-june-a/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield (%)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The June 16 BOJ rate hike to 1% \u2014 combined with accelerated QT (JGB purchases halved to \u00a5200bn/month) and explicit board rhetoric toward a 2% neutral \u2014 is a step-change for the carry trade and JGB market. The 10-year JGB is at 2.61\u20132.65%, a multi-decade high that, combined with Japan's fiscal arithmetic, pressures carry-trade unwinds and USD/JPY volatility. The 30-year JGB yield indicator and Takaichi plan financing clarity indicators both need updating. The July 31 MPM is the next critical watch date.",
+      "status": "pending",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "id": "boj-raises-policy-rate-to-1-0-at-june-16-mpm-haw-9b4d3c"
+    },
+    "china-blacklists-mp-materials-and-usa-rare-earth-52a7a3": {
+      "headline": "China blacklists MP Materials and USA Rare Earth on June 22 \u2014 targeting the two US government-backed domestic producers with categorical dual-use export bans",
+      "summary": "On June 22, China's MOFCOM placed 10 US entities on its export control list, with MP Materials (Mountain Pass mine) and USA Rare Earth (Texas mine-to-magnet) being the strategically significant targets; the action bars any entity worldwide from transferring Chinese-origin dual-use goods to these firms \u2014 a tighter 'categorical prohibition' vs. the prior license-based regime. Simultaneously, China's Finance Ministry barred ~46 US firms from Chinese government procurement.",
+      "as_of": "2026-06-22",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/6/22/china-adds-10-us-firms-including-rare-earth-miner-to-export-control-list",
+        "https://discoveryalert.com.au/china-rare-earth-export-controls-processing-chokepoint-2026/",
+        "https://www.stocktitan.net/articles/china-rare-earth-export-controls-mp-usa-rare-earth-june-2026"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s6_rare_earths",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US domestic RE producer blacklist status (0 none / 1 entity-specific ban / 2 sector-wide ban)",
+        "type": "band",
+        "rubric": "0 = no US rare-earth producers on China's export control entity list; 1 = named entity-specific bans in place (current: MP Materials + USA Rare Earth blacklisted, barring Chinese dual-use equipment/tech transfers globally); 2 = China escalates to sector-wide prohibition covering all US-linked rare-earth processors or imposes production quota cuts targeting Western supply chains. Sources: MOFCOM entity list updates, company SEC filings, USGS supply-chain reports.",
+        "sources": [
+          "https://www.aljazeera.com/news/2026/6/22/china-adds-10-us-firms-including-rare-earth-miner-to-export-control-list",
+          "https://discoveryalert.com.au/china-rare-earth-export-controls-processing-chokepoint-2026/"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s6 indicators track export license flow and the Nov-2025 pause expiry, but do not capture the new 'categorical entity designation' instrument that China is now deploying. Blacklisting the US government's two flagship domestic rare-earth producers directly attacks the strategic diversification effort \u2014 cutting off their access to Chinese processing equipment, IP, and tech transfers \u2014 and signals willingness to escalate to sector-wide controls. This new instrument warrants a dedicated indicator, especially with the November 10 pause window approaching and neodymium-praseodymium oxide prices up ~6x since January 2026.",
+      "status": "pending",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "id": "china-blacklists-mp-materials-and-usa-rare-earth-52a7a3"
+    },
+    "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
+      "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
+      "summary": "Treasury's FinCEN and OFAC issued a joint proposed rule on April 9 to implement GENIUS Act AML and sanctions compliance requirements for permitted payment stablecoin issuers, with all implementing regulations due by July 18, 2026 (one year post-enactment). The 1:1 T-bill/cash reserve mandate means stablecoin supply growth directly drives marginal Treasury demand \u2014 a structural new buyer class for short-dated debt.",
+      "as_of": "2026-04-09",
+      "sources": [
+        "https://home.treasury.gov/news/press-releases/sb0435",
+        "https://www.gibsondunn.com/the-genius-act-a-new-era-of-stablecoin-regulation/",
+        "https://en.wikipedia.org/wiki/GENIUS_Act"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "With the July 18 regulatory deadline imminent and the proposed AML rule still in comment period, implementation friction is rising toward '1 gaps' \u2014 not because of political opposition but because the 120-day licensing window, state-vs-federal framework reconciliation, and Big Tech exclusion rules all create compliance uncertainty. More importantly, the Treasury-demand vector (stablecoins mandated to hold T-bills 1:1) is now a live market structural factor as total USD stablecoin supply is growing; this indicator needs monitoring for both friction and the T-bill demand boost that could affect s1 (basis trade) and s12 (de-dollarization) dynamics.",
+      "status": "pending",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1"
+    },
+    "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
+      "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
+      "summary": "BofA Global Research estimates hyperscaler capital expenditures could approach $800 billion in 2026, a 67% increase from 2025, trending toward $1 trillion in 2027; investor scrutiny over whether economic returns will justify this level of investment and how quickly spending translates into sustained earnings growth remains the key risk, with Amundi flagging AI capex as the main equity support even as macro uncertainty rises.",
+      "as_of": "2026-06-15",
+      "sources": [
+        "https://olui2.fs.ml.com/publish/content/application/pdf/gwmol/me-cio-weekly-letter.pdf",
+        "https://research-center.amundi.com/article/global-investment-views-june-2026"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s8_ai_capex",
+      "target_indicator": "AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "An $800bn capex run-rate (+67% YoY) with investor uncertainty explicitly flagged by major sell-side and buy-side houses moves the capex-vs-revenue gap indicator firmly to '2 \u2014 widening fast.' The scale now implies massive debt issuance by hyperscalers (relevant to US IG OAS in s8) and grid/power demand acceleration (relevant to s15_ai_power). At ~$1 trillion in 2027 projections, this is no longer a sector risk but a macro balance-sheet risk \u2014 especially if the Middle East shock raises cost of capital while revenue ramp lags.",
+      "status": "pending",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "id": "bofa-estimates-ai-hyperscaler-capex-approaching--36c944"
+    },
+    "eba-june-2026-risk-assessment-eu-eea-headline-in-61a55e": {
+      "headline": "EBA June 2026 Risk Assessment: EU/EEA headline inflation rising to 3.0\u20133.1% on energy shock; EA GDP slowing to 0.9%; bank-NBFI linkages up 10.4% YoY \u2014 energy-driven credit risk spreading beyond directly exposed sectors",
+      "summary": "The EBA's June 2026 Risk Assessment Report finds euro area inflation rising from 2.1% to 3.0% (EU: 2.5% to 3.1%) driven by Middle East energy prices, EA GDP growth slowing to just 0.9%, and EU bank exposures to non-bank financial institutions (NBFIs) rising 10.4% YoY \u2014 creating a compounding channel where energy inflation, tighter monetary conditions, and bank-NBFI linkages could trigger broader asset-quality deterioration beyond directly energy-exposed portfolios.",
+      "as_of": "2026-06-01",
+      "sources": [
+        "https://www.eba.europa.eu/publications-and-media/publications/risk-assessment-report-june-2026",
+        "https://research-center.amundi.com/article/global-investment-views-june-2026"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "European energy-stagflation & bank-NBFI contagion channel",
+        "why": "The Middle East conflict has created a persistent energy-price shock that is simultaneously driving euro area inflation back above 3%, compressing EA GDP to near-stagnation (0.9%), forcing the ECB into a hawkish pause, and widening EU bank exposures to NBFIs by over 10% YoY. This creates a novel compounding risk loop not captured by the existing s10_france story (which focuses on OAT-Bund spreads and political stability) nor s20_sea_lanes (which tracks Hormuz status and WTI). The EBA explicitly flags that second-order credit-quality deterioration \u2014 spreading beyond directly energy-exposed sectors via tighter financial conditions and bank-NBFI linkages \u2014 is the key systemic threat to EU banking in 2H 2026.",
+        "proposed_level": 6,
+        "set": "Set 3",
+        "indicators": [
+          {
+            "label": "Euro area HICP energy component YoY (%)",
+            "type": "value",
+            "rubric": "Tracks the energy sub-index of euro area HICP inflation (Eurostat monthly release). Values >10% signal acute pass-through risk to core inflation and ECB hawkish pivot; 5\u201310% = elevated; <5% = contained. Current: materially elevated driven by post-Hormuz oil/gas prices.",
+            "sources": [
+              "https://www.eba.europa.eu/publications-and-media/publications/risk-assessment-report-june-2026",
+              "https://ec.europa.eu/eurostat"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "EU bank-to-NBFI exposure growth YoY (%)",
+            "type": "value",
+            "rubric": "Tracks YoY growth in EU/EEA bank exposures to non-bank financial institutions (OFC category in EBA FINREP data). >10% = rising linkage risk (current: +10.4%); >20% = systemic concern; <5% = stable. A rapid build-up amplifies contagion in a stress scenario where NBFI assets (private credit, leveraged loans) come under pressure.",
+            "sources": [
+              "https://www.eba.europa.eu/publications-and-media/publications/risk-assessment-report-june-2026"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "EA GDP growth vs ECB rate path divergence (0 aligned / 1 diverging / 2 stagflation trap)",
+            "type": "band",
+            "rubric": "0 = ECB easing in line with slowing growth (soft landing); 1 = ECB on hold or hiking while EA GDP <1.5% (current: EA at 0.9%, ECB hawkish pause); 2 = EA GDP contracting while ECB holds/hikes due to persistent energy inflation \u2014 stagflation scenario with acute credit deterioration risk across household and corporate portfolios.",
+            "sources": [
+              "https://www.eba.europa.eu/publications-and-media/publications/risk-assessment-report-june-2026",
+              "https://research-center.amundi.com/article/global-investment-views-june-2026"
+            ],
+            "suggested_weight": 0.35
+          }
+        ]
+      },
+      "rationale": "The EBA's June 2026 RAR is a primary supervisory source, not a market opinion piece. It documents a materializing feedback loop: Middle East energy shock \u2192 euro area inflation reacceleration \u2192 ECB hawkish pause \u2192 compressed growth \u2192 widening bank-NBFI linkages \u2192 latent credit deterioration risk across EU bank portfolios. This is structurally distinct from s10_france (political fragility) and s20_sea_lanes (Hormuz status/WTI): it is a second-order financial-stability channel specific to EU/EEA banking. With EA GDP at 0.9% and Euribor rates moving upward simultaneously, the risk of a EU-specific stagflation credit event in 2H 2026 is material and currently untracked.",
+      "status": "pending",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "id": "eba-june-2026-risk-assessment-eu-eea-headline-in-61a55e"
+    }
+  },
+  "generated": "2026-06-29",
+  "model": "claude-sonnet-4-6",
+  "new_count": 6,
+  "pending_count": 6
 }
