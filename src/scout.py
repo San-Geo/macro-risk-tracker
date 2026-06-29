@@ -20,7 +20,7 @@ then does anything reach the config. This preserves the tracker's human-final de
   python src/scout.py --status <id> dismissed|approved
   python src/scout.py --snippet <id>       # print a paste-ready YAML snippet to merge
 """
-import argparse, datetime, hashlib, json, os, re, urllib.request
+import argparse, datetime, hashlib, json, os, re, time, urllib.request, urllib.error
 import yaml
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -105,8 +105,20 @@ def discover(api_key, date, inventory, days=7, max_items=6, model=None):
     req = urllib.request.Request(API_URL, data=body, headers={
         "content-type": "application/json", "x-api-key": api_key,
         "anthropic-version": "2023-06-01"})
-    with urllib.request.urlopen(req, timeout=180) as r:
-        data = json.loads(r.read().decode())
+    data = None
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                data = json.loads(r.read().decode())
+            break
+        except urllib.error.HTTPError as e:
+            # the scout runs right after the agent's burst, so 429s are common; back off and retry
+            if e.code in (429, 529) and attempt < 3:
+                time.sleep(2 ** attempt + 2)
+                continue
+            raise
+    if data is None:
+        raise RuntimeError("no response from API")
     text = "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
     return _extract_json_array(text)
 

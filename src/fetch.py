@@ -8,20 +8,50 @@
 Any failure returns None so the scorer falls back to the baseline/last value.
 Be a polite citizen: short timeouts, no hammering.
 """
-import csv, io, json, urllib.request, urllib.error
+import csv, io, json, os, time, urllib.request, urllib.error, urllib.parse
 
-UA = {"User-Agent": "macro-risk-tracker/1.0 (personal use)"}
-TIMEOUT = 15
+UA = {"User-Agent": "Mozilla/5.0 (compatible; macro-risk-tracker/1.0)"}
+TIMEOUT = 25
 
 
 def _get(url):
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-        return r.read().decode("utf-8", "replace")
+    last = None
+    for attempt in range(3):
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+                return r.read().decode("utf-8", "replace")
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
+            last = e
+            time.sleep(1.5 * (attempt + 1))
+    raise last if last else RuntimeError("fetch failed")
 
 
 def fred_series(code):
-    """Return list of (date, value) ascending, skipping '.' missing rows."""
+    """Return list of (date, value) ascending, skipping missing rows.
+
+    Uses the official FRED API when FRED_API_KEY is set (more reliable from
+    datacenter IPs like GitHub Actions), otherwise the keyless CSV endpoint.
+    """
+    key = os.environ.get("FRED_API_KEY")
+    if key:
+        url = (f"https://api.stlouisfed.org/fred/series/observations?series_id={code}"
+               f"&api_key={key}&file_type=json&sort_order=asc")
+        try:
+            obs = json.loads(_get(url)).get("observations", [])
+            rows = []
+            for o in obs:
+                raw = (o.get("value") or "").strip()
+                if raw in (".", ""):
+                    continue
+                try:
+                    rows.append((o.get("date"), float(raw)))
+                except ValueError:
+                    pass
+            if rows:
+                return rows
+        except Exception:
+            pass  # fall through to the keyless CSV endpoint
     url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={code}"
     rows = []
     for row in csv.reader(io.StringIO(_get(url))):

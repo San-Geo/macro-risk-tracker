@@ -39,7 +39,7 @@ stories:
     base_level: 5
     indicators:
       - id: sofr_effr_spread
-        label: "SOFR minus EFFR (bps)"
+        label: "SOFR minus EFFR (%)"
         source: "fred_spread:SOFR:EFFR"
         cadence: daily
         direction: higher_worse
@@ -116,7 +116,7 @@ stories:
     base_level: 5
     indicators:
       - id: hy_oas
-        label: "US high-yield OAS (bps)"
+        label: "US high-yield OAS (%, ≈310bps)"
         source: "fred:BAMLH0A0HYM2"
         cadence: daily
         direction: higher_worse
@@ -302,7 +302,7 @@ stories:
     base_level: 6
     indicators:
       - id: ig_oas
-        label: "US investment-grade OAS (bps) - big-issuer proxy"
+        label: "US investment-grade OAS (%) - big-issuer proxy"
         source: "fred:BAMLC0A0CM"
         cadence: daily
         direction: higher_worse
@@ -366,7 +366,7 @@ stories:
     base_level: 4
     indicators:
       - id: oat_bund
-        label: "OAT-Bund 10y spread (bps)"
+        label: "OAT-Bund 10y spread (%)"
         source: "fred_spread:IRLTLT01FRM156N:IRLTLT01DEM156N"
         cadence: monthly
         direction: higher_worse
@@ -375,7 +375,7 @@ stories:
         baseline_value: 0.72
         baseline_band: 1
         weight: 1.0
-        note: "FRED rates in percent; spread shown in pp (0.72 = 72bps)."
+        note: "FRED rates in percent; spread shown in percentage points (0.72% = 72bps)."
       - id: govt_stability
         label: "Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election)"
         source: "manual"

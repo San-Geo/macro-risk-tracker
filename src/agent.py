@@ -154,6 +154,23 @@ def assess_one(ind_id, spec, api_key, date, prior=None, model=None):
     return parsed
 
 
+def _in_range(value, spec):
+    """Plausibility gate. Returns (ok, reason). Band values must be 0-2; value
+    indicators must fall within the [min,max] declared in framework.yaml (if any)."""
+    if value is None:
+        return True, ""
+    if str(spec.get("type", "band")) == "band":
+        if value < 0 or value > 2:
+            return False, f"band reading {value} is outside 0-2"
+        return True, ""
+    lo, hi = spec.get("min"), spec.get("max")
+    if lo is not None and value < lo:
+        return False, f"reading {value} below the plausible floor ({lo})"
+    if hi is not None and value > hi:
+        return False, f"reading {value} above the plausible ceiling ({hi})"
+    return True, ""
+
+
 def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5):
     """Assess each framework indicator. Returns (values_to_apply, log_dict)."""
     overrides = overrides or set()
@@ -214,6 +231,7 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
                     results[iid] = {"__error__": str(e)}
 
     # 3) Apply confidence gating in framework order (deterministic, no network).
+    sanity_on = os.environ.get("AGENT_SANITY", "1") not in ("0", "false", "no")
     for ind_id in to_assess:
         prior = prior_log.get(ind_id)
         a = results.get(ind_id)
@@ -226,6 +244,15 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
                 values[ind_id] = keep
             review.append(ind_id)
             continue
+        # Sanity range check: a reading outside plausible bounds is almost certainly a
+        # bad parse/hallucination, so auto-correct by holding the last trusted value.
+        if sanity_on:
+            ok, why = _in_range(a.get("value"), framework[ind_id])
+            if not ok:
+                a["out_of_range"] = True
+                a["confidence"] = "low"  # routes into the hold-at-last-trusted-value path below
+                a["rationale"] = ((a.get("rationale", "") +
+                    f" [sanity check: {why}; auto-held at last trusted value]").strip())
         conf = str(a.get("confidence", "low")).lower()
         if conf == "low" or a.get("value") is None:
             # don't flip on weak evidence: retain prior applied value if we have one

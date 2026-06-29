@@ -215,7 +215,7 @@
         <div class="k">Countdown bar</div><div>At the top: a live countdown to the next scheduled data refresh and AI agent run (the agent runs Monday morning UTC, capturing the weekend). Times are the schedule; GitHub may run a few minutes late.</div>
         <div class="k">Data health</div><div>How many live feeds updated vs fell back to baseline, when the AI agent last ran, and the overall trend &mdash; a trust check at a glance.</div>
         <div class="k">Scout</div><div>Watches credible feeds for developments the tracker doesn't already capture and <b>proposes</b> additions (re-rate existing / coverage gap / new risk) with a materiality rating. It only proposes &mdash; a human approves.</div>
-        <div class="k">Agent review</div><div>The AI rating agent's worklist: its confidence, whether each rating was applied/held/overridden, and its reasoning + sources. Low-confidence calls are flagged, not applied.</div>
+        <div class="k">Agent review</div><div>The AI rating agent's worklist: its confidence, whether each rating was applied/held/overridden, and its reasoning + sources. Low-confidence calls are flagged, not applied. Readings that land outside an indicator's plausible range (a likely misread) are caught automatically, marked <b>auto-corrected</b>, and held at the last trusted value.</div>
         <div class="k">Backtest</div><div>Replays real 2020 &amp; 2022 market data through the engine to show it responds sensibly to stress. Only the market indicators vary (judgement ones are held at baseline), so it validates mechanics, not predictions.</div>
         <div class="k">Background</div><div>An expandable plain-language summary of each story, with a link to the full written brief (PDF).</div>
       </div>
@@ -365,13 +365,14 @@ function healthBar(d){
   let ot=''; if(d.aggregates_trend&&d.aggregates_trend.overall) ot=`overall ${trendBadge(d.aggregates_trend.overall)} vs ${d.aggregates_trend.overall.since}`;
   return `<div class="health"><span><span class="dot" style="background:${dot}"></span>${feeds}</span><span>${agent}</span>${ot?`<span>${ot}</span>`:''}</div>`;
 }
-function statusOf(i){ const n=(i.note||'').toLowerCase(); if(n.includes('override')) return 'overridden'; if(i.applied) return 'applied'; return 'held'; }
+function statusOf(i){ const n=(i.note||'').toLowerCase(); if(n.includes('override')) return 'overridden'; if(i.out_of_range) return '<span style="color:#C0392B;font-weight:700">auto-corrected</span>'; if(i.applied) return 'applied'; return 'held'; }
 function reviewRows(arr){ return arr.map(i=>{
   const src=(i.sources||[]).map(u=>`<a href="${u}" target="_blank" rel="noopener">src</a>`).join(' ');
+  const rangeTag=i.out_of_range?`<span class="pill" style="background:#C0392B;color:#fff;margin-right:4px">out of range</span>`:'';
   return `<tr><td>${i.label}<div style="color:var(--muted);font-size:11px">${i.story}</div></td>
     <td>${fmt(i.value)}</td>
     <td><span class="pill" style="background:${confColor(i.confidence)};text-transform:capitalize">${i.confidence||'-'}</span></td>
-    <td>${statusOf(i)}</td><td>${i.rationale||''} ${src}</td></tr>`;
+    <td>${statusOf(i)}</td><td>${rangeTag}${i.rationale||''} ${src}</td></tr>`;
 }).join(''); }
 function reviewPanel(d){
   const r=d.agent_review;

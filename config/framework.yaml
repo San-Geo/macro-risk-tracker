@@ -28,6 +28,8 @@ indicators:
 
   jgb30:
     type: value
+    min: 0
+    max: 10
     query: "Japan 30-year JGB yield today percent"
     rubric: "Report the latest 30-year Japanese Government Bond yield as a percent (e.g. 3.4)."
     sources: ["https://www.investing.com/rates-bonds/japan-30-year-bond-yield", "https://tradingeconomics.com/japan/government-bond-yield"]
@@ -40,6 +42,8 @@ indicators:
 
   direct_lending_default:
     type: value
+    min: 0
+    max: 25
     query: "private credit direct lending default rate latest 2026 percent"
     rubric: "Report the latest direct-lending / private-credit default rate as a percent (e.g. 3.0)."
     sources: ["https://www.imf.org/en/Publications/GFSR", "https://pitchbook.com", "https://www.ft.com"]
@@ -58,6 +62,8 @@ indicators:
 
   china_ppi:
     type: value
+    min: -15
+    max: 15
     query: "China PPI producer price index year-on-year latest percent"
     rubric: "Report the latest China PPI year-on-year change as a percent (negative = deflation, e.g. -2.5)."
     sources: ["https://www.stats.gov.cn/english/", "https://tradingeconomics.com/china/producer-prices-change"]
@@ -82,18 +88,24 @@ indicators:
 
   hree_premium:
     type: value
+    min: 1
+    max: 25
     query: "heavy rare earth ex-China price premium multiple 2026"
     rubric: "Report the approximate ex-China heavy-rare-earth price premium as a multiple of the China price (e.g. 3.0)."
     sources: ["https://www.fastmarkets.com", "https://adamasintel.com"]
 
   peg_deviation:
     type: value
+    min: 0
+    max: 10
     query: "largest stablecoin USDT USDC peg deviation depeg percent latest"
     rubric: "Report the largest recent peg deviation of a major stablecoin as a percent away from $1 (e.g. 0.1)."
     sources: ["https://www.coindesk.com", "https://defillama.com/stablecoins"]
 
   stablecoin_supply:
     type: value
+    min: 50
+    max: 1500
     query: "total stablecoin market cap supply USD billions latest"
     rubric: "Report total USD stablecoin supply in billions of dollars (e.g. 280)."
     sources: ["https://defillama.com/stablecoins", "https://www.theblock.co/data/stablecoins"]
@@ -119,6 +131,8 @@ indicators:
 
   cmbs_office_delinq:
     type: value
+    min: 0
+    max: 40
     query: "CMBS office delinquency rate latest percent Trepp 2026"
     rubric: "Report the latest CMBS office delinquency rate as a percent (e.g. 12.3)."
     sources: ["https://www.trepp.com/trepptalk", "https://www.commercialsearch.com"]
@@ -143,6 +157,8 @@ indicators:
 
   subprime_auto_dpd:
     type: value
+    min: 0
+    max: 25
     query: "subprime auto loan 60+ day delinquency rate latest percent 2026"
     rubric: "Report the latest subprime auto 60+ day delinquency rate as a percent (e.g. 6.2)."
     sources: ["https://www.fitchratings.com", "https://www.coxautoinc.com/market-insights/"]
@@ -155,6 +171,8 @@ indicators:
 
   dollar_reserve_share:
     type: value
+    min: 30
+    max: 80
     query: "US dollar share global FX reserves IMF COFER latest percent"
     rubric: "Report the latest USD share of allocated global FX reserves as a percent (e.g. 56.8)."
     sources: ["https://data.imf.org/cofer", "https://www.imf.org"]
@@ -191,6 +209,8 @@ indicators:
 
   funded_ratio:
     type: value
+    min: 30
+    max: 130
     query: "large US public pension funded ratio latest percent 2026"
     rubric: "Report a representative large US public-pension funded ratio as a percent (e.g. 78)."
     sources: ["https://www.milliman.com", "https://equable.org"]
@@ -198,6 +218,8 @@ indicators:
   # ---------------- SET 3 ----------------
   interconnection_months:
     type: value
+    min: 0
+    max: 180
     query: "US grid interconnection queue wait time median months latest LBNL"
     rubric: "Report the latest median grid interconnection wait in months (e.g. 54)."
     sources: ["https://emp.lbl.gov/queues", "https://www.ferc.gov"]
