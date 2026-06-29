@@ -1,6 +1,6 @@
 {
   "date": "2026-06-29",
-  "generated_at": "2026-06-29 11:42 UTC",
+  "generated_at": "2026-06-29 12:50 UTC",
   "aggregates": {
     "1": 4.8,
     "3": 4.0,
@@ -9,7 +9,7 @@
     "5": 5.0,
     "overall": 5.0
   },
-  "narrative": "# EOD Macro-Risk Brief | 29 June 2026\n\n**Headline:** Overall macro risk holds at 5.0/10 with 14 stories at elevated or higher levels; one intra-day improvement offset by persistent structural vulnerabilities.\n\n**Changes:**\n\u2022 **Sea lanes & undersea cables** (7\u21926): WTI crude fell 50\u00a2 to $69.8/bbl, reducing energy-driven shipping pressure. Risk remains elevated; geopolitical exposure to chokepoints undiminished.\n\n**Persistent Elevated Stories (unchanged):**\nJapan fiscal/JGB/carry trade, China deflation, critical minerals weaponization, AI build-out circular financing, AI power/grid bottleneck, and food/fertilizer fragility all remain at level 6. Treasury basis leverage, private credit opacity, developing-world debt, CRE maturity wall, hidden consumer debt, insurance retreat, and lithography chokepoint hold at level 5.\n\n**Highest-risk watch:** Japan fiscal/JGB/carry trade (6/10)\u2014unwind dynamics remain structurally unstable and systemically contagious.",
+  "narrative": "**HEADLINE**\nMacro risk remains elevated across 14 concurrent vulnerabilities with no change in overall positioning; structural leverage, supply-chain concentration, and geopolitical exposure dominate the risk surface.\n\n**STORY CHANGES**\nNo risk levels moved today.\n\n**ELEVATED STORIES (14 active)**\n\u2022 **Japan fiscal/JGB/carry trade** (Level 6): Structural imbalance in public debt and yen funding costs poses spillover risk to global rate markets.\n\u2022 **China's exported deflation** (Level 6): Sustained price pressure from low-cost exports constrains margin recovery in downstream economies.\n\u2022 **Critical minerals as weapon** (Level 6): Concentrated supply chains in battery and tech materials remain exposed to geopolitical interruption.\n\u2022 **AI build-out circular financing** (Level 6): Self-reinforcing debt structures funding chip demand lack transparency on underlying collateral quality.\n\u2022 **AI power & grid bottleneck** (Level 6): Electricity supply constraints may force capital reallocation away from data-center expansion.\n\u2022 **Food & fertilizer fragility** (Level 6): Concentrated logistics and input sourcing leave food systems vulnerable to supply shocks.\n\u2022 **Sea lanes & undersea cables** (Level 6): Critical trade and data routes remain exposed to disruption.\n\n**WATCH**\nJapan's fiscal/carry-trade nexus\u2014three-level elevation creates leverage cascade risk across global bond and FX markets.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -70,6 +70,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=6",
       "spark": [
         5,
+        5,
         5
       ],
       "trend": {
@@ -90,7 +91,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 161.829,
+          "value": 161.888,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -136,6 +137,7 @@
       "summary": "Decades of near-zero rates made Japan the funding leg of a vast global carry trade. As the BoJ normalizes and JGB yields rise, fiscal financing gets harder and carry unwinds can transmit stress worldwide - the August 2024 mini-crash was a preview.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=9",
       "spark": [
+        6,
         6,
         6
       ],
@@ -204,6 +206,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=12",
       "spark": [
         5,
+        5,
         5
       ],
       "trend": {
@@ -271,6 +274,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=38",
       "spark": [
         5,
+        5,
         5
       ],
       "trend": {
@@ -306,7 +310,7 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.7836,
+          "value": 6.7842,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -337,6 +341,7 @@
       "summary": "Weak domestic demand and industrial overcapacity are pushing Chinese producer prices into sustained deflation, which China exports through cheaper goods. It pressures global manufacturers and feeds trade tensions and tariff cycles.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=52",
       "spark": [
+        6,
         6,
         6
       ],
@@ -405,6 +410,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=55",
       "spark": [
         6,
+        6,
         6
       ],
       "trend": {
@@ -471,6 +477,7 @@
       "summary": "Dollar stablecoins have become sizeable holders of short-term Treasuries, linking crypto plumbing to the funding market. A large redemption wave could force rapid T-bill selling; the GENIUS Act's implementation is the key regulatory variable.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=15",
       "spark": [
+        4,
         4,
         4
       ],
@@ -539,6 +546,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=23",
       "spark": [
         6,
+        6,
         6
       ],
       "trend": {
@@ -590,6 +598,7 @@
       "summary": "A wall of commercial real-estate loans - especially office - matures into higher rates and lower valuations, concentrated at regional banks. Rising delinquencies and 'extend and pretend' practices defer, rather than resolve, the losses.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=26",
       "spark": [
+        5,
         5,
         5
       ],
@@ -658,6 +667,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=41",
       "spark": [
         4,
+        4,
         4
       ],
       "trend": {
@@ -725,6 +735,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=29",
       "spark": [
         5,
+        5,
         5
       ],
       "trend": {
@@ -745,7 +756,7 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4050.3,
+          "value": 4060.0,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -791,6 +802,7 @@
       "summary": "Central banks are accumulating gold and building non-dollar settlement arrangements at the margin. It is a slow erosion rather than a sudden shift, but reserve 'weaponization' events can accelerate diversification away from the dollar.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=44",
       "spark": [
+        3,
         3,
         3
       ],
@@ -859,6 +871,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=33",
       "spark": [
         5,
+        5,
         5
       ],
       "trend": {
@@ -925,6 +938,7 @@
       "summary": "Aging demographics and underfunded public pensions create slow fiscal pressure, while leveraged liability-driven strategies can blow up fast - as the UK gilt/LDI crisis showed in 2022. Benefit-reform fights are the political pressure valve.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=47",
       "spark": [
+        4,
         4,
         4
       ],
@@ -993,6 +1007,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=67",
       "spark": [
         6,
+        6,
         6
       ],
       "trend": {
@@ -1013,7 +1028,7 @@
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.1875,
+          "value": 6.192,
           "band": 2,
           "baseline_band": 1,
           "weight": 0.5,
@@ -1059,6 +1074,7 @@
       "summary": "Electrification and AI infrastructure point to structural copper deficits as demand outruns new mine supply, which takes a decade to build. Price is the live signal; mine disruptions and inventory draws would confirm tightening.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=71",
       "spark": [
+        4,
         4,
         4
       ],
@@ -1127,6 +1143,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=74",
       "spark": [
         4,
+        4,
         4
       ],
       "trend": {
@@ -1193,6 +1210,7 @@
       "summary": "Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=77",
       "spark": [
+        6,
         6,
         6
       ],
@@ -1261,6 +1279,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=58",
       "spark": [
         5,
+        5,
         5
       ],
       "trend": {
@@ -1296,7 +1315,7 @@
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 69.8,
+          "value": 70.11,
           "band": 0,
           "baseline_band": 1,
           "weight": 1.0,
@@ -1328,6 +1347,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=62",
       "spark": [
         7,
+        6,
         6
       ],
       "trend": {
@@ -1348,7 +1368,7 @@
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 18.3,
+          "value": 18.25,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -1394,6 +1414,7 @@
       "summary": "Central counterparties now concentrate the system's risk by design, and Treasury central-clearing mandates will route more activity through them. In a volatility spike, procyclical margin calls can amplify stress - they are a systemic single point of failure.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=18",
       "spark": [
+        4,
         4,
         4
       ],
