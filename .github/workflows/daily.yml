@@ -1,6 +1,6 @@
 name: daily-risk-tracker
 
-# Runs every weekday at 22:10 UTC (after US market close). Adjust as you like.
+# Runs every weekday at 13:00 UTC (before US market open). Adjust as you like.
 # You can also trigger it manually from the Actions tab.
 on:
   schedule:
