@@ -2,7 +2,7 @@
 
 *Auto-generated 2026-06-29 from the live tracker. This always reflects the current set of stories (including any added since the original Set 1–3 briefs). For the full curated write-ups, see the Set PDFs.*
 
-**Overall risk 5.0/10** — Set 1 5.3, Set 2 4.6, Set 3 5.0.
+**Overall risk 5.0/10** — Set 1 5.3, Set 2 4.6, Set 3 5.1.
 
 
 ## Set 1
@@ -127,7 +127,7 @@ ASML is the sole maker of EUV lithography machines, with Zeiss the sole optics s
 
 *Indicators watched:* Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis), Export-control escalation (0 stable / 1 tightening / 2 retaliation), Single-point concentration (0 easing / 1 high / 2 extreme)
 
-### Sea lanes & undersea cables — 6/10 (Elevated)
+### Sea lanes & undersea cables — 7/10 (High)
 
 A few maritime chokepoints and undersea cables carry most global trade and data. The 2026 Hormuz/Red Sea disruptions showed how quickly closures spike energy and shipping costs; cable cuts are a parallel, under-watched vulnerability.
 

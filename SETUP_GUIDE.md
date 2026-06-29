@@ -89,7 +89,7 @@ That's it — the daily job will publish your dashboard here:
 4. Wait ~1–2 minutes. A green check means success.
 5. Open your Pages URL from Step 5. Your live dashboard is up.
 
-From now on it runs **by itself every weekday** (after the US market close) and refreshes the page
+From now on it runs **by itself every weekday at 12:00 UTC** (pre-US-open, so a morning check shows what moved overnight/over the weekend) and refreshes the page
 and the spreadsheet. You don't have to do anything.
 
 ---
@@ -117,7 +117,7 @@ Reviewing these once a week — and sanity-checking any level that moved — is 
 ### Change how often it runs
 Edit `.github/workflows/daily.yml`, the line `cron: "10 22 * * 1-5"`. The five fields are
 `minute hour day month weekday` in **UTC**. Examples:
-- Every day at 22:10 UTC: `10 22 * * *`
+- Every day at 12:00 UTC: `0 12 * * *`
 - 6:00 AM Seattle (≈14:00 UTC): `0 14 * * 1-5`
 
 ---
@@ -169,8 +169,8 @@ anything you pin in `manual_input.csv` overrides the agent. The full rubric is i
 ### Turning it on
 It's already wired into the workflow and needs only your `ANTHROPIC_API_KEY` secret (Part 2,
 Step 4). With that set:
-- **Every weekday:** market data + narrative refresh (free; reuses the last agent ratings).
-- **Every Monday:** the agent re-researches all judgment indicators.
+- **Every weekday at 12:00 UTC (pre-open):** market data + narrative refresh (free; reuses the last agent ratings).
+- **Every Monday at 12:00 UTC:** the agent re-researches all judgment indicators (capturing the weekend). The dashboard shows a live countdown to the next run.
 - **Anytime:** Actions tab → Run workflow (leave "Run the AI rating agent" ticked) for a full refresh now.
 
 No key set? Everything still runs — judgment indicators just stay at baseline until you edit them.
@@ -191,7 +191,9 @@ indicators that were low-confidence or that changed — worth a 2-minute glance.
 - Cheaper: set a repository **variable** `AGENT_MODEL` to `claude-haiku-4-5-20251001`
   (Settings → Secrets and variables → Actions → Variables). Haiku is a fraction of the cost.
 - Less often / more often: edit the second `cron` line in `.github/workflows/daily.yml`
-  (`30 13 * * 1` = Mondays; `* * 1,4` would be Mon & Thu, etc.).
+  (`0 12 * * 1` = Mondays 12:00 UTC; `0 12 * * 1,4` would be Mon & Thu, etc.). If you change the
+  schedule, also update the `SCHEDULE` constant near the top of `dashboard/index.html` so the
+  countdown stays in sync.
 
 ---
 

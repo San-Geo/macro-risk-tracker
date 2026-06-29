@@ -127,7 +127,13 @@
   .swatch{ display:inline-block; width:11px; height:11px; border-radius:3px; vertical-align:middle; margin-right:3px; }
   @media(max-width:560px){ .hgrid{ grid-template-columns:1fr; gap:2px 0; } .hgrid .k{ margin-top:8px; } }
 
-  th.tip{ cursor:help; position:relative; text-decoration:underline dotted var(--muted); text-underline-offset:3px; }
+  .sched{ display:flex; gap:8px 18px; flex-wrap:wrap; justify-content:center; align-items:center;
+          font-size:12px; color:var(--muted); margin-bottom:14px; }
+  .sched b{ color:var(--text); font-variant-numeric:tabular-nums; }
+  .sched .seg{ display:flex; align-items:center; gap:6px; }
+  .sched .live{ width:7px; height:7px; border-radius:50%; background:#2E7D32; display:inline-block; animation:pulse 2s infinite; }
+  .sched .soon{ background:#F5A623; }
+  @keyframes pulse{ 0%,100%{opacity:1} 50%{opacity:.25} }
   th.tip:focus{ outline:none; }
   th.tip::after{ content:attr(data-tip); position:absolute; top:140%; left:0; z-index:30;
     background:var(--text); color:var(--card); font-weight:500; text-transform:none; letter-spacing:0;
@@ -156,11 +162,14 @@
     </div>
   </div>
 </header>
-<div class="wrap" id="app">
-  <div class="sk" style="height:92px;margin-bottom:12px"></div>
-  <div class="sk" style="height:64px;margin-bottom:12px"></div>
-  <div class="sk" style="height:120px;margin-bottom:12px"></div>
-  <div class="sk" style="height:160px"></div>
+<div class="wrap">
+  <div id="sched" class="sched" title="Scheduled times are UTC; GitHub Actions may run a few minutes late."></div>
+  <div id="app">
+    <div class="sk" style="height:92px;margin-bottom:12px"></div>
+    <div class="sk" style="height:64px;margin-bottom:12px"></div>
+    <div class="sk" style="height:120px;margin-bottom:12px"></div>
+    <div class="sk" style="height:160px"></div>
+  </div>
 </div>
 <div class="modal-bd" id="help" onclick="if(event.target===this)closeHelp()">
   <div class="modal" role="dialog" aria-modal="true" aria-label="How to read this tracker">
@@ -204,6 +213,7 @@
       <h3>The panels</h3>
       <div class="hgrid">
         <div class="k">Heat map</div><div>All stories as colour-coded tiles for a two-second scan. Click a tile to jump to that story.</div>
+        <div class="k">Countdown bar</div><div>At the top: a live countdown to the next scheduled data refresh and AI agent run (the agent runs Monday morning UTC, capturing the weekend). Times are the schedule; GitHub may run a few minutes late.</div>
         <div class="k">Data health</div><div>How many live feeds updated vs fell back to baseline, when the AI agent last ran, and the overall trend &mdash; a trust check at a glance.</div>
         <div class="k">Scout</div><div>Watches credible feeds for developments the tracker doesn't already capture and <b>proposes</b> additions (re-rate existing / coverage gap / new risk) with a materiality rating. It only proposes &mdash; a human approves.</div>
         <div class="k">Agent review</div><div>The AI rating agent's worklist: its confidence, whether each rating was applied/held/overridden, and its reasoning + sources. Low-confidence calls are flagged, not applied.</div>
@@ -230,6 +240,50 @@ function toggleTheme(){ const c=document.documentElement.getAttribute('data-them
 function initTheme(){ let t=null; try{t=localStorage.getItem('mrt-theme');}catch(e){}
   if(!t) t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light'; setTheme(t); }
 initTheme();
+
+// ---- next-run countdown (mirrors .github/workflows/daily.yml crons, all UTC) ----
+const SCHEDULE = {
+  agent: { dows:[1],          hour:12, min:0, label:"agent run" },   // Monday 12:00 UTC
+  data:  { dows:[1,2,3,4,5],  hour:12, min:0, label:"data refresh" } // weekdays 12:00 UTC
+};
+function nextRun(spec){
+  const now=new Date();
+  for(let i=0;i<15;i++){
+    const d=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate()+i,spec.hour,spec.min,0));
+    if(spec.dows.includes(d.getUTCDay()) && d.getTime()>now.getTime()) return d;
+  }
+  return null;
+}
+function lastRun(spec){
+  const now=new Date();
+  for(let i=0;i<15;i++){
+    const d=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate()-i,spec.hour,spec.min,0));
+    if(spec.dows.includes(d.getUTCDay()) && d.getTime()<=now.getTime()) return d;
+  }
+  return null;
+}
+function fmtLeft(ms){
+  let s=Math.max(0,Math.floor(ms/1000));
+  const d=Math.floor(s/86400); s-=d*86400;
+  const h=Math.floor(s/3600); s-=h*3600;
+  const m=Math.floor(s/60); s-=m*60;
+  return (d?d+"d ":"")+(h||d?String(h).padStart(2,"0")+"h ":"")+String(m).padStart(2,"0")+"m "+String(s).padStart(2,"0")+"s";
+}
+function localOf(d){ return d.toLocaleString(undefined,{weekday:"short",hour:"numeric",minute:"2-digit"}); }
+function utcOf(d){ const dow=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][d.getUTCDay()];
+  return `${dow} ${String(d.getUTCHours()).padStart(2,"0")}:${String(d.getUTCMinutes()).padStart(2,"0")} UTC`; }
+function segHTML(spec){
+  const now=new Date(), nx=nextRun(spec), lr=lastRun(spec);
+  const running = lr && (now.getTime()-lr.getTime() < 30*60*1000);  // within ~30 min of a scheduled time
+  if(running) return `<span class="seg"><span class="live soon"></span>${spec.label[0].toUpperCase()+spec.label.slice(1)} <b>running\u2026</b></span>`;
+  return `<span class="seg"><span class="live"></span>Next ${spec.label} <b>in ${fmtLeft(nx-now)}</b> `
+       + `<span style="opacity:.85">(${utcOf(nx)} \u00B7 ${localOf(nx)} your time)</span></span>`;
+}
+function tickSchedule(){
+  const el=document.getElementById("sched"); if(!el) return;
+  el.innerHTML = segHTML(SCHEDULE.agent) + segHTML(SCHEDULE.data);
+}
+tickSchedule(); setInterval(tickSchedule,1000);
 
 function openHelp(){ document.getElementById('help').classList.add('open'); document.body.style.overflow='hidden'; }
 function closeHelp(){ document.getElementById('help').classList.remove('open'); document.body.style.overflow=''; }
