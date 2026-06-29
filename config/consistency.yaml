@@ -1,0 +1,87 @@
+# =====================================================================
+# CROSS-INDICATOR CONSISTENCY RULES  ("the whole-picture check")
+# ---------------------------------------------------------------------
+# The rating agent grades each indicator in ISOLATION. These rules look at
+# every indicator together AFTER scoring and flag internal contradictions -
+# e.g. a sea lane rated "closed" while crude oil is benign. The logic is the
+# same triangulation a human analyst does ("if that were really true, this
+# other number would have moved"), expressed as explicit, checkable rules.
+#
+# A rule fires when ALL of its `when` conditions hold. Each condition reads a
+# single indicator's `band` (0 benign / 1 watch / 2 stress) or raw `value`,
+# and compares it with an operator (== != > >= < <=).
+#
+# Rules FLAG; they never silently rewrite a rating. A contradiction means we
+# genuinely don't know which of two reads is right, so the disciplined move is
+# to surface it and let the deterministic engine + human sign-off resolve it -
+# not to fabricate a "corrected" number. Add rules freely; they are audited by
+# tests/selftest.py against the real indicator IDs.
+# =====================================================================
+
+rules:
+
+  - id: hormuz_oil
+    name: "Sea lane rated closed, but crude is benign"
+    when:
+      - {indicator: hormuz_redsea_status, field: band, op: "==", value: 2}
+      - {indicator: oil_price, field: band, op: "==", value: 0}
+    flag: >-
+      Hormuz/Red Sea is rated CLOSED (2) while WTI sits in the benign band. The
+      Strait carries ~20% of seaborne oil; a genuine closure spikes crude. The
+      'closed' read most likely overshoots 'contested' (1) - confirm transit
+      data and cross-read against the oil tape before trusting the level move.
+    severity: high
+
+  - id: hormuz_fert_oil
+    name: "Gulf fertilizer inputs rated cut, but crude is benign"
+    when:
+      - {indicator: hormuz_fertilizer, field: band, op: "==", value: 2}
+      - {indicator: oil_price, field: band, op: "==", value: 0}
+    flag: >-
+      Gulf input flow is rated CUT (2) but crude is benign. Same chokepoint, so a
+      true cut should co-move with oil. Reconcile this with the Hormuz status read.
+    severity: medium
+
+  - id: china_ppi_sign
+    name: "China PPI positive, contradicting the deflation thesis"
+    when:
+      - {indicator: china_ppi, field: value, op: ">", value: 0}
+    flag: >-
+      China PPI is reported POSITIVE while this story tracks EXPORTED DEFLATION.
+      China PPI has printed negative for an extended run; a positive figure is
+      unusual and is most often a sign error (magnitude reported without the
+      minus). Verify the signed YoY print from NBS before applying.
+    severity: high
+
+  - id: mine_copper
+    name: "Copper mine-disruption cluster, but copper price benign"
+    when:
+      - {indicator: mine_disruptions, field: band, op: "==", value: 2}
+      - {indicator: copper_price, field: band, op: "==", value: 0}
+    flag: >-
+      Copper mine disruptions are rated a CLUSTER (2) but the copper price is
+      benign. A real supply shock lifts price; one of the two reads is likely
+      stale. Check the disruption dates against the price.
+    severity: medium
+
+  - id: gates_spreads
+    name: "Redemption gates widespread, but HY spreads benign"
+    when:
+      - {indicator: redemption_gates, field: band, op: "==", value: 2}
+      - {indicator: hy_oas, field: band, op: "==", value: 0}
+    flag: >-
+      Large-fund redemption gates are rated WIDESPREAD (2) but high-yield spreads
+      are benign. Broad gating usually coincides with visible credit stress;
+      confirm the gates are systemic, not a couple of isolated funds.
+    severity: medium
+
+  - id: weaponization_reserves
+    name: "Reserve weaponization 'action', but USD reserve share flat"
+    when:
+      - {indicator: weaponization_event, field: band, op: "==", value: 2}
+      - {indicator: dollar_reserve_share, field: band, op: "==", value: 0}
+    flag: >-
+      Reserve-weaponization is rated ACTION (2) but the USD share of reserves is
+      unchanged. Concrete weaponization shows up in COFER over time; check that
+      'action' isn't really escalated 'talk' (1).
+    severity: low

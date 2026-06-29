@@ -29,6 +29,8 @@ def write_json(result, narrative, date, path):
         payload["aggregates_trend"] = result["aggregates_trend"]
     if result.get("sets"):
         payload["sets"] = result["sets"]
+    if result.get("consistency"):
+        payload["consistency"] = result["consistency"]
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(payload, f, indent=2)

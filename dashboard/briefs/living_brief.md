@@ -2,12 +2,12 @@
 
 *Auto-generated 2026-06-29 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 5.2/10** — Set 1 5.2, Set 2 5.5, Set 3 4.2, Set 4 5.8, Set 5 5.5.
+**Overall risk 5.0/10** — Set 1 4.8, Set 2 5.2, Set 3 4.0, Set 4 6.0, Set 5 5.0.
 
 
 ## Set 1 — Funding & Leverage
 
-### Treasury basis trade (hidden leverage) — 6/10 (Elevated)
+### Treasury basis trade (hidden leverage) — 5/10 (Elevated)
 
 Hedge funds run a highly leveraged arbitrage between Treasury cash bonds and futures. It is a major source of liquidity, but a spike in funding costs or Treasury volatility can force rapid unwinds, as briefly happened in March 2020 and again in 2025.
 
@@ -19,7 +19,7 @@ Decades of near-zero rates made Japan the funding leg of a vast global carry tra
 
 *Indicators watched:* USD/JPY (yen strengthening = lower = risk), 30-year JGB yield (%), Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)
 
-### Private credit's opaque expansion — 6/10 (Elevated)
+### Private credit's opaque expansion — 5/10 (Elevated)
 
 Lending has migrated from banks to lightly regulated private-credit funds, where assets are marked infrequently and leverage is opaque. Defaults are rising from a low base; the risk is that losses surface suddenly rather than being visible in real time.
 
@@ -46,19 +46,19 @@ AI infrastructure spending vastly exceeds current AI revenue, increasingly finan
 
 *Indicators watched:* US investment-grade OAS (%) - big-issuer proxy, AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast), GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)
 
-### CRE maturity wall / regional banks — 6/10 (Elevated)
+### CRE maturity wall / regional banks — 5/10 (Elevated)
 
 A wall of commercial real-estate loans - especially office - matures into higher rates and lower valuations, concentrated at regional banks. Rising delinquencies and 'extend and pretend' practices defer, rather than resolve, the losses.
 
 *Indicators watched:* CMBS office delinquency rate (%), Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)
 
-### Hidden consumer debt — 6/10 (Elevated)
+### Hidden consumer debt — 5/10 (Elevated)
 
 Beneath headline figures, subprime auto and buy-now-pay-later delinquencies are climbing, and the labor market is the swing factor. A rise in unemployment would convert stretched-but-current borrowers into defaults quickly.
 
 *Indicators watched:* Subprime auto 60+ day delinquency (%), US unemployment rate (%), BNPL delinquency trend (0 stable / 1 rising / 2 spiking)
 
-### Insurance retreat — 4/10 (Moderate)
+### Insurance retreat — 5/10 (Elevated)
 
 Insurers are retreating from climate-exposed markets through non-renewals and exits, shifting risk onto homeowners and state backstops. Severe catastrophe seasons strain the system and feed into housing and mortgage stress.
 
@@ -79,7 +79,7 @@ France combines a wide deficit, a fragmented parliament, and recurring budget st
 
 *Indicators watched:* OAT-Bund 10y spread (%), Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election), Rating action (0 stable / 1 negative outlook / 2 downgrade)
 
-### Gold / de-dollarization — 4/10 (Moderate)
+### Gold / de-dollarization — 3/10 (Moderate)
 
 Central banks are accumulating gold and building non-dollar settlement arrangements at the margin. It is a slow erosion rather than a sudden shift, but reserve 'weaponization' events can accelerate diversification away from the dollar.
 
@@ -112,7 +112,7 @@ ASML is the sole maker of EUV lithography machines, with Zeiss the sole optics s
 
 *Indicators watched:* Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis), Export-control escalation (0 stable / 1 tightening / 2 retaliation), Single-point concentration (0 easing / 1 high / 2 extreme)
 
-### Sea lanes & undersea cables — 6/10 (Elevated)
+### Sea lanes & undersea cables — 7/10 (High)
 
 A few maritime chokepoints and undersea cables carry most global trade and data. The 2026 Hormuz/Red Sea disruptions showed how quickly closures spike energy and shipping costs; cable cuts are a parallel, under-watched vulnerability.
 
@@ -133,13 +133,13 @@ Electrification and AI infrastructure point to structural copper deficits as dem
 
 *Indicators watched:* Copper price (USD/lb, COMEX HG=F), Major mine disruptions (0 none / 1 some / 2 cluster), Deficit timing (0 surplus / 1 balanced / 2 deficit)
 
-### Water - the underpriced input — 5/10 (Elevated)
+### Water - the underpriced input — 4/10 (Moderate)
 
 Water is systematically underpriced yet essential to chip fabrication, agriculture, and power. Droughts in key hubs (Taiwan's fabs, major farming regions) and transboundary disputes can disrupt supply chains in ways markets rarely price in advance.
 
 *Indicators watched:* Drought in a chip/farm hub (0 none / 1 emerging / 2 acute), Key reservoir / basin stress (0 normal / 1 low / 2 critical), Transboundary water dispute escalation (0 calm / 1 tense / 2 crisis)
 
-### Food & fertilizer fragility — 7/10 (High)
+### Food & fertilizer fragility — 6/10 (Elevated)
 
 Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag.
 

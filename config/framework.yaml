@@ -65,7 +65,7 @@ indicators:
     min: -15
     max: 15
     query: "China PPI producer price index year-on-year latest percent"
-    rubric: "Report the latest China PPI year-on-year change as a percent (negative = deflation, e.g. -2.5)."
+    rubric: "Report China PPI year-on-year as a SIGNED percent EXACTLY as published by NBS, keeping the minus sign. China PPI has been in DEFLATION (negative) for an extended run, so a NEGATIVE number is expected and a POSITIVE number is a red flag - if you find a positive print, re-verify against the official NBS release before reporting it, and if you cannot confirm a clearly signed figure, return low confidence so the prior value is held. Deeper deflation (more negative) = worse. Do NOT report the absolute magnitude; -3.9 and 3.9 are opposite signals."
     sources: ["https://www.stats.gov.cn/english/", "https://tradingeconomics.com/china/producer-prices-change"]
 
   trade_actions:
@@ -305,7 +305,7 @@ indicators:
   hormuz_redsea_status:
     type: band
     query: "Strait of Hormuz Red Sea shipping status open closed ceasefire latest 2026"
-    rubric: "0 = open and normal; 1 = contested (attacks, partial disruption, fragile ceasefire); 2 = effectively closed/blockaded."
+    rubric: "Rate Strait of Hormuz / Red Sea transit. 0 = open, traffic ~normal. 1 = CONTESTED: threatened, partially disrupted, moving under naval-escorted convoys, OR a ceasefire / MOU / active de-escalation in effect even if volumes are reduced. 2 = CLOSED: commercial transit physically/legally halted at well under ~25% of normal with NO functioning convoy workaround. Apply 2 ONLY if a corroborating market signal is consistent with a closure (notably crude oil elevated); if oil is benign, treat it as contested (1), not closed. Convoys moving, talks underway, or a signed truce CAP this at 1."
     sources: ["https://www.reuters.com/world/middle-east", "https://www.imo.org", "https://www.cfr.org"]
 
   cable_incidents:

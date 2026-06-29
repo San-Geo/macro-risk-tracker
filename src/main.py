@@ -17,7 +17,7 @@ import yaml
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-import score, fetch, narrative, report, agent, enrich, alerts  # noqa: E402
+import score, fetch, narrative, report, agent, enrich, alerts, consistency  # noqa: E402
 
 
 def load_config():
@@ -143,6 +143,22 @@ def main():
         items.sort(key=lambda x: (x["id"] not in flags, x["set"], x["label"]))
         result["agent_review"] = {"generated": alog.get("generated"), "model": alog.get("model"),
                                   "review_flags": sorted(flags), "items": items}
+
+    # Whole-picture consistency: deterministic cross-indicator contradiction checks.
+    try:
+        result["consistency"] = consistency.run(result)
+    except Exception as e:
+        result["consistency"] = {"checked": 0, "flags": [], "error": str(e)}
+    cflags = result["consistency"].get("flags", [])
+    if cflags and result.get("agent_review"):
+        rf = set(result["agent_review"].get("review_flags", []))
+        rated = {it["id"] for it in result["agent_review"].get("items", [])}
+        for f in cflags:
+            for ind in f.get("indicators", []):
+                if ind["id"] in rated:
+                    rf.add(ind["id"])
+        result["agent_review"]["review_flags"] = sorted(rf)
+        result["agent_review"]["items"].sort(key=lambda x: (x["id"] not in rf, x["set"], x["label"]))
 
     hist = os.path.join(ROOT, "data", "history.csv")
     # Phase 1 enrichments (read history BEFORE appending today's row)

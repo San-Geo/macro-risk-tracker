@@ -216,6 +216,7 @@
         <div class="k">Data health</div><div>How many live feeds updated vs fell back to baseline, when the AI agent last ran, and the overall trend &mdash; a trust check at a glance.</div>
         <div class="k">Scout</div><div>Watches credible feeds for developments the tracker doesn't already capture and <b>proposes</b> additions (re-rate existing / coverage gap / new risk) with a materiality rating. It only proposes &mdash; a human approves.</div>
         <div class="k">Agent review</div><div>The AI rating agent's worklist: its confidence, whether each rating was applied/held/overridden, and its reasoning + sources. Low-confidence calls are flagged, not applied. Readings that land outside an indicator's plausible range (a likely misread) are caught automatically, marked <b>auto-corrected</b>, and held at the last trusted value.</div>
+        <div class="k">Consistency checks</div><div>Deterministic whole-picture cross-checks that run after scoring. They flag ratings the rest of the board contradicts \u2014 e.g. a chokepoint rated "closed" while crude oil stays benign, or a positive China PPI when the story tracks deflation. These are review flags, not auto-corrections.</div>
         <div class="k">Backtest</div><div>Replays real 2020 &amp; 2022 market data through the engine to show it responds sensibly to stress. Only the market indicators vary (judgement ones are held at baseline), so it validates mechanics, not predictions.</div>
         <div class="k">Background</div><div>An expandable plain-language summary of each story, with a link to the full written brief (PDF).</div>
       </div>
@@ -365,6 +366,32 @@ function healthBar(d){
   let ot=''; if(d.aggregates_trend&&d.aggregates_trend.overall) ot=`overall ${trendBadge(d.aggregates_trend.overall)} vs ${d.aggregates_trend.overall.since}`;
   return `<div class="health"><span><span class="dot" style="background:${dot}"></span>${feeds}</span><span>${agent}</span>${ot?`<span>${ot}</span>`:''}</div>`;
 }
+function consistencyPanel(d){
+  const c=d.consistency;
+  if(!c) return '';
+  const flags=c.flags||[];
+  const sevColor={high:'#C0392B',medium:'#E8710A',low:'#F5A623'};
+  if(!flags.length){
+    return `<div class="panel" id="consistency"><div class="phead" onclick="this.parentNode.classList.toggle('open')">
+      <span><strong>Consistency checks</strong> <span class="asof">whole-picture cross-checks</span></span>
+      <span class="asof">\u2713 no contradictions \u00B7 ${c.checked||0} rules<span class="chev"></span></span></div>
+      <div class="pbody"><div class="asof" style="padding:8px 0;line-height:1.5">Every rule passed \u2014 no indicator is rated in a way the rest of the board contradicts (e.g. a chokepoint rated closed while its price signal stays benign).</div></div></div>`;
+  }
+  const rows=flags.map(f=>{
+    const inv=(f.indicators||[]).map(i=>`<span class="pill" style="background:var(--track);color:var(--text)">${i.label}: ${fmt(i.value)}${i.band!=null?' (band '+i.band+')':''}</span>`).join(' ');
+    return `<div style="padding:10px 0;border-top:1px solid var(--line)">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+        <span class="pill" style="background:${sevColor[f.severity]||'#E8710A'};color:#fff;text-transform:capitalize">${f.severity}</span>
+        <strong>${f.name}</strong></div>
+      <div style="line-height:1.5;margin-bottom:6px">${f.message}</div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px">${inv}</div></div>`;
+  }).join('');
+  return `<div class="panel open" id="consistency"><div class="phead" onclick="this.parentNode.classList.toggle('open')">
+      <span><strong>Consistency checks</strong> <span class="asof">whole-picture cross-checks</span></span>
+      <span class="asof"><b style="color:#C0392B">${flags.length}</b> contradiction${flags.length>1?'s':''} \u00B7 ${c.checked||0} rules<span class="chev"></span></span></div>
+    <div class="pbody"><div class="asof" style="margin:6px 0;line-height:1.5">These ratings disagree with the rest of the board. Each is a cross-check a human analyst would run (\u201cif that were true, this other number would have moved\u201d). They are flags for review, not auto-corrections \u2014 reconcile via <code>manual_input.csv</code> if a read is wrong.</div>
+      ${rows}</div></div>`;
+}
 function statusOf(i){ const n=(i.note||'').toLowerCase(); if(n.includes('override')) return 'overridden'; if(i.out_of_range) return '<span style="color:#C0392B;font-weight:700">auto-corrected</span>'; if(i.applied) return 'applied'; return 'held'; }
 function reviewRows(arr){ return arr.map(i=>{
   const src=(i.sources||[]).map(u=>`<a href="${u}" target="_blank" rel="noopener">src</a>`).join(' ');
@@ -430,7 +457,8 @@ function scoutPanel(){
   let right, body;
   if(errored){
     right=`<span style="color:#E8710A">last scan didn't complete</span> \u00B7 retries next run`;
-    body=`<div class="asof" style="padding:8px 0;line-height:1.5">\u26A0\uFE0F The last scan couldn't complete (it will retry automatically on the next run). Last successful check: <b>${date}</b>.</div>`;
+    body=`<div class="asof" style="padding:8px 0;line-height:1.5">\u26A0\uFE0F The last scan couldn't complete (it will retry automatically on the next run). Last successful check: <b>${date}</b>.`
+      +(q.last_error?`<div style="margin-top:6px;font-family:monospace;font-size:11px;color:var(--muted);word-break:break-word">reason: ${String(q.last_error).slice(0,300)}</div>`:'')+`</div>`;
   } else if(pend.length){
     right=`<b>${pend.length}</b> to review \u00B7 scanned ${date}`;
     body=pend.map(scoutItem).join('');
@@ -503,6 +531,7 @@ function render(d){
   html+=`<div class="narr"><strong>Daily brief</strong>\n${d.narrative||''}</div>`;
   html+=scoutPanel();
   html+=reviewPanel(d);
+  html+=consistencyPanel(d);
   html+=backtestPanel();
   html+=`<div class="section-label">Stories (highest risk first)</div>`;
   const sorted=[...d.stories].sort((x,y)=>y.level-x.level);

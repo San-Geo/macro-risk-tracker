@@ -97,6 +97,21 @@ def main():
     if r1 != r2:
         fail("scoring is not deterministic")
 
+    # consistency rules must reference real indicator IDs and valid ops/fields
+    all_ind_ids = {i["id"] for st in stories for i in st["indicators"]}
+    cpath = os.path.join(ROOT, "config", "consistency.yaml")
+    if os.path.exists(cpath):
+        import consistency as _cons
+        for rule in _cons.load_rules(cpath):
+            rid = rule.get("id", "?")
+            for c in rule.get("when", []):
+                if c.get("indicator") not in all_ind_ids:
+                    fail(f"consistency rule '{rid}': unknown indicator '{c.get('indicator')}'")
+                if c.get("field", "band") not in ("band", "value"):
+                    fail(f"consistency rule '{rid}': field must be band|value")
+                if c.get("op") not in _cons.OPS:
+                    fail(f"consistency rule '{rid}': bad op '{c.get('op')}'")
+
     n_ind = len(seen_ind)
     print(f"Checked {len(stories)} stories, {n_ind} indicators, {len(framework)} framework rubrics.")
     for w in WARNS:

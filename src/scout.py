@@ -71,8 +71,23 @@ def _extract_json_array(text):
         d = json.loads(text)
         return d if isinstance(d, list) else d.get("items", d.get("developments", []))
     except Exception:
-        m = re.search(r"\[.*\]", text, flags=re.DOTALL)
-        return json.loads(m.group(0)) if m else []
+        pass
+    start = text.find("[")
+    if start == -1:
+        return []
+    frag = text[start:]
+    try:
+        return json.loads(frag)
+    except Exception:
+        pass
+    # salvage a truncated array: keep complete objects, drop the dangling tail, re-close
+    last = frag.rfind("}")
+    if last != -1:
+        try:
+            return json.loads(frag[:last + 1] + "]")
+        except Exception:
+            pass
+    return []
 
 
 def discover(api_key, date, inventory, days=7, max_items=6, model=None):
@@ -98,7 +113,7 @@ def discover(api_key, date, inventory, days=7, max_items=6, model=None):
         '"proposed_story":{...},"rationale":"why it matters / why this class"}'
     )
     body = json.dumps({
-        "model": model or SCOUT_MODEL, "max_tokens": 3000,
+        "model": model or SCOUT_MODEL, "max_tokens": 8000,
         "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 6}],
         "messages": [{"role": "user", "content": prompt}],
     }).encode()
