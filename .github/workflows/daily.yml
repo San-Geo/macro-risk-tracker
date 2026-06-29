@@ -1,11 +1,14 @@
 name: daily-risk-tracker
 
-# Runs every weekday at 13:00 UTC (before US market open). Adjust as you like.
-# You can also trigger it manually from the Actions tab.
+# Two cadences:
+#   * every weekday  -> refresh live market data + narrative (free; reuses last agent ratings)
+#   * every Monday   -> ALSO run the AI rating agent (researches each judgment indicator)
+# Manually running it from the Actions tab always does a full agent pass.
 on:
   schedule:
-    - cron: "0 13 * * 1-5"
-  workflow_dispatch:
+    - cron: "0 12 * * 1-5"    # 12:00 UTC weekdays (pre-US-open) - market refresh
+    - cron: "0 12 * * 1"      # 12:00 UTC Monday (pre-open) - agent refresh (captures the weekend)
+  workflow_dispatch:   # a manual run from the Actions tab always does a full agent + scout pass
 
 permissions:
   contents: write
@@ -16,28 +19,58 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
       - name: Install deps
         run: pip install -r requirements.txt
 
-      - name: Run tracker (live data + AI narrative)
+      - name: Decide whether to run the agent
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ github.event.schedule }}" = "0 12 * * 1" ]; then
+            echo "flag=--agent" >> "$GITHUB_OUTPUT"
+            echo "Agent: ON for this run (manual dispatch or Monday schedule)"
+          else
+            echo "flag=" >> "$GITHUB_OUTPUT"
+            echo "Agent: off (weekday market refresh only)"
+          fi
+
+      - name: Config self-test (guard)
+        run: python tests/selftest.py
+
+      - name: Run tracker
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          AGENT_MODEL: ${{ vars.AGENT_MODEL || 'claude-sonnet-4-6' }}
+          SCOUT_MODEL: ${{ vars.SCOUT_MODEL || 'claude-sonnet-4-6' }}
+          # Optional alert channels (set as repo secrets; any/all/none):
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ALERT_MIN_LEVEL: ${{ vars.ALERT_MIN_LEVEL || '0' }}
         run: |
-          python src/main.py || python src/main.py --offline --no-ai
+          if [ "${{ steps.mode.outputs.flag }}" = "--agent" ] && [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::warning::ANTHROPIC_API_KEY secret is not set - the agent cannot research events; levels will stay at last ratings."
+          fi
+          python src/main.py ${{ steps.mode.outputs.flag }} --scout \
+            || { echo "::warning::Primary run failed; falling back to offline (baseline) mode."; python src/main.py --offline --no-ai --no-alert; }
 
       - name: Commit updated data
         run: |
           git config user.name  "risk-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/ dashboard/ output/ || true
-          git commit -m "EOD update $(date -u +%F)" || echo "no changes"
-          git push || echo "nothing to push"
+          if git diff --cached --quiet; then
+            echo "No file changes this run."
+          else
+            git commit -m "update $(date -u +%F)"
+            git push && echo "Pushed updated data to the repo." \
+              || echo "::error::git push FAILED - check Settings > Actions > Workflow permissions (needs Read and write)."
+          fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
