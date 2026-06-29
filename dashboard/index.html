@@ -182,6 +182,7 @@
       <h3>The risk level &amp; bands</h3>
       <div class="hgrid">
         <div class="k">Level (1&ndash;10)</div><div>Each story's headline score. Higher = more attention warranted. It starts from an analyst-set base level and is nudged by the indicators below.</div>
+        <div class="k">Sections</div><div>The 21 stories are grouped into five mechanism-based sets &mdash; Funding &amp; Leverage, Credit/Consumers &amp; Valuations, Sovereigns &amp; the Monetary Order, Geoeconomics &amp; Trade Weapons, and Physical &amp; Resource Limits &mdash; so stories that move for the same reason sit together and each set's average means something. Hover a set name for its full title.</div>
         <div class="k">Bands</div><div>Levels group into five bands:
           <span class="swatch" style="background:#2E7D32"></span><b>Low</b> (1&ndash;2),
           <span class="swatch" style="background:#8BC34A"></span><b>Moderate</b> (3&ndash;4),
@@ -308,11 +309,12 @@ function sparkSVG(arr, color){
     <circle cx="${x(arr.length-1).toFixed(1)}" cy="${y(arr[arr.length-1]).toFixed(1)}" r="2.2" fill="${color}"/></svg>`;
 }
 function trendBadge(t){
-  if(!t) return '<span class="trend" style="color:var(--muted)">new</span>';
+  if(!t) return '<span class="trend" style="color:var(--muted)" title="No prior run on record yet \u2014 this is a new story or first reading.">new</span>';
   const c=t.change;
-  if(c>0) return `<span class="trend" style="color:#C0392B">\u25B2 +${c}</span>`;
-  if(c<0) return `<span class="trend" style="color:#2E7D32">\u25BC ${c}</span>`;
-  return '<span class="trend" style="color:var(--muted)">\u25CF flat</span>';
+  const tip=`title="Change in this story's level versus the previous recorded run (${t.since||'last run'})."`;
+  if(c>0) return `<span class="trend" style="color:#C0392B" ${tip}>\u25B2 +${c}</span>`;
+  if(c<0) return `<span class="trend" style="color:#2E7D32" ${tip}>\u25BC ${c}</span>`;
+  return `<span class="trend" style="color:var(--muted)" ${tip}>\u25CF flat</span>`;
 }
 function legend(){
   return [[2,'Low'],[4,'Mod'],[6,'Elev'],[8,'High'],[10,'Sev']]
@@ -477,8 +479,8 @@ function render(d){
     html+=`<div class="story" id="story-${s.id}"><h3>${s.name}<span class="setpill" title="${setName(s.set,true)}">${setName(s.set,false)}</span></h3>
       <div class="srow">${gauge(s.level)}
         <div class="sright">
-          <span class="lvl" style="color:${col}">${s.level}<span class="den">/10</span></span>
-          <span class="bpill" style="background:${col}">${s.band}</span>
+          <span class="lvl" style="color:${col}" title="Headline risk score from 1 to 10 \u2014 higher means more attention warranted.">${s.level}<span class="den">/10</span></span>
+          <span class="bpill" style="background:${col}" title="Severity band for this level: Low (1\u20132) \u00B7 Moderate (3\u20134) \u00B7 Elevated (5\u20136) \u00B7 High (7\u20138) \u00B7 Severe (9\u201310).">${s.band}</span>
           ${trendBadge(s.trend)}<span class="asof">vs ${s.trend?s.trend.since:'\u2014'}</span>
           ${sparkSVG(s.spark,col)}
         </div></div>`;
