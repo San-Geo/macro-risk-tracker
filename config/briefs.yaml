@@ -1,0 +1,57 @@
+# =====================================================================
+# Brief integration: per-story background + a link to the full write-up.
+# This is decoupled from stories.yaml (scoring) on purpose, so editing a
+# write-up never risks the scoring config. main.py merges `summary` and the
+# set's brief PDF into each story for the dashboard's "Background" panel.
+# New stories added by the scout get a draft summary here automatically.
+# set_pdf paths are served from dashboard/briefs/ on GitHub Pages.
+# =====================================================================
+
+set_pdf:
+  1: "briefs/Global_Macro_Intelligence_Brief_Set1.pdf"
+  2: "briefs/Global_Macro_Intelligence_Brief_Set2.pdf"
+  3: "briefs/Global_Macro_Intelligence_Brief_Set3.pdf"
+
+stories:
+  s1_basis_trade:
+    summary: "Hedge funds run a highly leveraged arbitrage between Treasury cash bonds and futures. It is a major source of liquidity, but a spike in funding costs or Treasury volatility can force rapid unwinds, as briefly happened in March 2020 and again in 2025."
+  s2_japan:
+    summary: "Decades of near-zero rates made Japan the funding leg of a vast global carry trade. As the BoJ normalizes and JGB yields rise, fiscal financing gets harder and carry unwinds can transmit stress worldwide - the August 2024 mini-crash was a preview."
+  s3_private_credit:
+    summary: "Lending has migrated from banks to lightly regulated private-credit funds, where assets are marked infrequently and leverage is opaque. Defaults are rising from a low base; the risk is that losses surface suddenly rather than being visible in real time."
+  s4_dev_debt:
+    summary: "A strong dollar, high real rates, and heavy foreign-currency debt loads leave many developing economies vulnerable to a sudden stop. A cluster of sovereign defaults or new IMF programs would signal the slow-burn crisis turning acute."
+  s5_china_deflation:
+    summary: "Weak domestic demand and industrial overcapacity are pushing Chinese producer prices into sustained deflation, which China exports through cheaper goods. It pressures global manufacturers and feeds trade tensions and tariff cycles."
+  s6_rare_earths:
+    summary: "China dominates the mining and especially the processing of rare earths and critical minerals, and has shown willingness to use export licensing as leverage. Supply chains for magnets and defense inputs have little near-term substitute."
+  s7_stablecoins:
+    summary: "Dollar stablecoins have become sizeable holders of short-term Treasuries, linking crypto plumbing to the funding market. A large redemption wave could force rapid T-bill selling; the GENIUS Act's implementation is the key regulatory variable."
+  s8_ai_capex:
+    summary: "AI infrastructure spending vastly exceeds current AI revenue, increasingly financed with debt and circular vendor arrangements. If monetization disappoints or GPU-backed financing strains, the capex cycle could reverse sharply."
+  s9_cre:
+    summary: "A wall of commercial real-estate loans - especially office - matures into higher rates and lower valuations, concentrated at regional banks. Rising delinquencies and 'extend and pretend' practices defer, rather than resolve, the losses."
+  s10_france:
+    summary: "France combines a wide deficit, a fragmented parliament, and recurring budget standoffs, widening its spread over Germany. Political instability or a rating downgrade would test eurozone cohesion at its second-largest economy."
+  s11_consumer_debt:
+    summary: "Beneath headline figures, subprime auto and buy-now-pay-later delinquencies are climbing, and the labor market is the swing factor. A rise in unemployment would convert stretched-but-current borrowers into defaults quickly."
+  s12_gold_dedollar:
+    summary: "Central banks are accumulating gold and building non-dollar settlement arrangements at the margin. It is a slow erosion rather than a sudden shift, but reserve 'weaponization' events can accelerate diversification away from the dollar."
+  s13_insurance:
+    summary: "Insurers are retreating from climate-exposed markets through non-renewals and exits, shifting risk onto homeowners and state backstops. Severe catastrophe seasons strain the system and feed into housing and mortgage stress."
+  s14_pensions:
+    summary: "Aging demographics and underfunded public pensions create slow fiscal pressure, while leveraged liability-driven strategies can blow up fast - as the UK gilt/LDI crisis showed in 2022. Benefit-reform fights are the political pressure valve."
+  s15_ai_power:
+    summary: "Data-center electricity demand is colliding with multi-year grid interconnection queues and slow capacity additions. Whether this is an acute shortfall or eases depends on the pace of AI build-out versus new supply - forecasts diverge widely."
+  s16_copper:
+    summary: "Electrification and AI infrastructure point to structural copper deficits as demand outruns new mine supply, which takes a decade to build. Price is the live signal; mine disruptions and inventory draws would confirm tightening."
+  s17_water:
+    summary: "Water is systematically underpriced yet essential to chip fabrication, agriculture, and power. Droughts in key hubs (Taiwan's fabs, major farming regions) and transboundary disputes can disrupt supply chains in ways markets rarely price in advance."
+  s18_food_fertilizer:
+    summary: "Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag."
+  s19_lithography:
+    summary: "ASML is the sole maker of EUV lithography machines, with Zeiss the sole optics supplier - a single point of failure for advanced chips. Export controls, retaliation, or any disruption to this chain would ripple across the entire tech economy."
+  s20_sea_lanes:
+    summary: "A few maritime chokepoints and undersea cables carry most global trade and data. The 2026 Hormuz/Red Sea disruptions showed how quickly closures spike energy and shipping costs; cable cuts are a parallel, under-watched vulnerability."
+  s21_clearinghouses:
+    summary: "Central counterparties now concentrate the system's risk by design, and Treasury central-clearing mandates will route more activity through them. In a volatility spike, procyclical margin calls can amplify stress - they are a systemic single point of failure."

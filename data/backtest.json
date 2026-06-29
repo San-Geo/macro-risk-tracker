@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-28T18:36:38.011855+00:00",
+  "generated": "2026-06-29T09:20:29.750370+00:00",
   "version": "1.0",
   "mode": "sample",
   "scope": "Replays documented historical values of the market/data indicators through the live scoring engine. Judgment indicators are held at baseline (they have no historical series), so these levels reflect ONLY the market-driven component of each story - a partial validation of the engine's mechanics, not a claim the tracker would have predicted these events.",

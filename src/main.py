@@ -47,6 +47,8 @@ def main():
     ap.add_argument("--agent", action="store_true",
                     help="run the rating agent now (researches + rates judgment indicators)")
     ap.add_argument("--no-alert", action="store_true", help="don't send band-crossing alerts")
+    ap.add_argument("--scout", action="store_true",
+                    help="run the overnight-event scout (proposes new indicators/stories)")
     ap.add_argument("--test-alert", action="store_true", help="send a test alert and exit")
     ap.add_argument("--date", default=datetime.date.today().isoformat())
     args = ap.parse_args()
@@ -94,6 +96,24 @@ def main():
 
     result = score.score_all(config, values)
     result["date"] = args.date
+
+    # Attach per-story background + full-brief link (from config/briefs.yaml).
+    briefs_path = os.path.join(ROOT, "config", "briefs.yaml")
+    if os.path.exists(briefs_path):
+        try:
+            with open(briefs_path) as f:
+                briefs = yaml.safe_load(f) or {}
+            set_pdf = briefs.get("set_pdf", {})
+            bmap = briefs.get("stories", {})
+            for s in result["stories"]:
+                b = bmap.get(s["id"], {})
+                if b.get("summary"):
+                    s["summary"] = b["summary"]
+                url = set_pdf.get(s["set"]) or set_pdf.get(str(s["set"]))
+                if url:
+                    s["brief_url"] = url
+        except Exception as e:
+            print(f"  (briefs.yaml skipped: {e})")
 
     # Attach the agent's latest assessments (this run or last cached) for the dashboard panel.
     alog = agent.load_log()
@@ -143,12 +163,25 @@ def main():
     print(f"Level changes today: {len(changes)}")
     print(f"Wrote: {latest_path}, {hist}, {xlsx}, dashboard/latest.json")
 
+    try:
+        import build_brief
+        build_brief.build()
+    except Exception as e:
+        print(f"  (living brief skipped: {e})")
+
     if not args.no_alert:
         a = alerts.maybe_alert(result, prev, os.environ)
         if a.get("sent"):
             print(f"ALERT: {len(a['crossings'])} band crossing(s) sent -> {a['results']}")
         elif a.get("reason") == "no band crossings" and prev:
             print("Alerts: no band crossings since last run.")
+
+    if args.scout and key and not args.offline:
+        import scout
+        print("Running overnight-event scout ...")
+        q = scout.run_scout(config, key, args.date)
+        print(f"  scout: {q.get('new_count', 0)} new, {q.get('pending_count', 0)} pending "
+              f"(review on the dashboard, or `python src/scout.py --list`)")
 
     print("\n" + note)
 

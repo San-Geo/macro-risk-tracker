@@ -71,6 +71,8 @@
   .chev::after{ content:"\25BC"; font-size:10px; color:var(--muted); margin-left:4px; }
   .panel.open .chev::after{ content:"\25B2"; }
   details summary{ cursor:pointer; }
+  details.bg{ margin-top:10px; } details.bg summary{ font-weight:600; }
+  details.bg summary:hover{ color:var(--text); }
 
   /* story cards */
   .story{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:15px 17px; box-shadow:var(--shadow); scroll-margin-top:74px; }
@@ -106,6 +108,34 @@
        background-size:200% 100%; animation:sh 1.3s infinite; border:1px solid var(--line); border-radius:14px; }
   @keyframes sh{ 0%{background-position:200% 0} 100%{background-position:-200% 0} }
 
+  .modal-bd{ position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; z-index:50; overflow-y:auto; padding:18px; }
+  .modal-bd.open{ display:block; }
+  .modal{ background:var(--card); color:var(--text); max-width:780px; margin:24px auto; border-radius:16px;
+          border:1px solid var(--line); box-shadow:0 24px 70px rgba(0,0,0,.35); }
+  .modal-head{ position:sticky; top:0; background:var(--card); display:flex; justify-content:space-between;
+               align-items:center; padding:15px 20px; border-bottom:1px solid var(--line); border-radius:16px 16px 0 0; }
+  .modal-head h2{ margin:0; font-size:16.5px; }
+  .modal .x{ cursor:pointer; border:none; background:transparent; color:var(--muted); font-size:24px; line-height:1; padding:0 4px; }
+  .modal .x:hover{ color:var(--text); }
+  .modal-body{ padding:6px 20px 24px; }
+  .modal-body h3{ font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--accent);
+                  margin:20px 0 8px; font-weight:700; }
+  .modal-body p.intro{ font-size:13px; color:var(--muted); line-height:1.55; margin:12px 0 0; }
+  .hgrid{ display:grid; grid-template-columns:140px 1fr; gap:9px 14px; align-items:start; font-size:13px; line-height:1.5; }
+  .hgrid .k{ font-weight:700; }
+  .hgrid code{ background:rgba(127,127,127,.12); padding:1px 5px; border-radius:4px; font-size:12px; }
+  .swatch{ display:inline-block; width:11px; height:11px; border-radius:3px; vertical-align:middle; margin-right:3px; }
+  @media(max-width:560px){ .hgrid{ grid-template-columns:1fr; gap:2px 0; } .hgrid .k{ margin-top:8px; } }
+
+  th.tip{ cursor:help; position:relative; text-decoration:underline dotted var(--muted); text-underline-offset:3px; }
+  th.tip:focus{ outline:none; }
+  th.tip::after{ content:attr(data-tip); position:absolute; top:140%; left:0; z-index:30;
+    background:var(--text); color:var(--card); font-weight:500; text-transform:none; letter-spacing:0;
+    font-size:11.5px; line-height:1.45; padding:7px 9px; border-radius:7px; width:max-content; max-width:230px;
+    white-space:normal; box-shadow:0 6px 20px rgba(0,0,0,.28); opacity:0; pointer-events:none; transition:opacity .12s; }
+  th.tip:hover::after, th.tip:focus::after{ opacity:1; }
+  th.tip.r::after{ left:auto; right:0; }
+
   @media(max-width:680px){
     .agg{ grid-template-columns:repeat(2,1fr); }
     .hwrap h1{ font-size:16px; }
@@ -120,7 +150,10 @@
       <h1>Global Macro Risk Tracker</h1>
       <div class="sub" id="sub">loading\u2026</div>
     </div>
-    <button id="themeBtn" class="tbtn" title="Toggle dark mode" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+    <div style="display:flex;gap:8px">
+      <button id="helpBtn" class="tbtn" title="What do these mean?" aria-label="Help" onclick="openHelp()">?</button>
+      <button id="themeBtn" class="tbtn" title="Toggle dark mode" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+    </div>
   </div>
 </header>
 <div class="wrap" id="app">
@@ -128,6 +161,64 @@
   <div class="sk" style="height:64px;margin-bottom:12px"></div>
   <div class="sk" style="height:120px;margin-bottom:12px"></div>
   <div class="sk" style="height:160px"></div>
+</div>
+<div class="modal-bd" id="help" onclick="if(event.target===this)closeHelp()">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="How to read this tracker">
+    <div class="modal-head"><h2>How to read this tracker</h2><button class="x" onclick="closeHelp()" aria-label="Close">&times;</button></div>
+    <div class="modal-body">
+      <p class="intro">This tracker turns live data and current events into a 1&ndash;10 risk level for each
+      "story" (a macro risk theme). Nothing here is a forecast or financial advice &mdash; the levels are a
+      transparent, rules-based judgement of how much attention each risk warrants right now.</p>
+
+      <h3>The risk level &amp; bands</h3>
+      <div class="hgrid">
+        <div class="k">Level (1&ndash;10)</div><div>Each story's headline score. Higher = more attention warranted. It starts from an analyst-set base level and is nudged by the indicators below.</div>
+        <div class="k">Bands</div><div>Levels group into five bands:
+          <span class="swatch" style="background:#2E7D32"></span><b>Low</b> (1&ndash;2),
+          <span class="swatch" style="background:#8BC34A"></span><b>Moderate</b> (3&ndash;4),
+          <span class="swatch" style="background:#F5A623"></span><b>Elevated</b> (5&ndash;6),
+          <span class="swatch" style="background:#E8710A"></span><b>High</b> (7&ndash;8),
+          <span class="swatch" style="background:#C0392B"></span><b>Severe</b> (9&ndash;10). The colour follows the band.</div>
+        <div class="k">Gauge bar</div><div>The horizontal bar under each story fills to its level and is coloured by band &mdash; a quick visual of where it sits.</div>
+      </div>
+
+      <h3>The trend triangle &amp; sparkline</h3>
+      <div class="hgrid">
+        <div class="k">&#9650; / &#9660; / &#9679;</div><div><span style="color:#C0392B">&#9650; red</span> = the level <b>rose</b> since the comparison date; <span style="color:#2E7D32">&#9660; green</span> = it <b>fell</b>; <span style="color:var(--muted)">&#9679; flat</span> = unchanged. "new" means there isn't enough history yet.</div>
+        <div class="k">vs &lt;date&gt;</div><div>The date the trend is measured against (about a week earlier), so you see direction, not just today's value.</div>
+        <div class="k">Sparkline</div><div>The little line next to a story is its level over recent runs &mdash; the shape of its path.</div>
+      </div>
+
+      <h3>The indicator table</h3>
+      <p class="intro">Each story is driven by a handful of indicators &mdash; the measurable signals that move its level.</p>
+      <div class="hgrid">
+        <div class="k">Indicator</div><div>One measurable signal feeding the story (a market price, an economic series, or a current-events status).</div>
+        <div class="k">Value</div><div>The latest reading. A number for data indicators (e.g. a spread or price), or a 0/1/2 status for event indicators.</div>
+        <div class="k">Band (0/1/2)</div><div>Each indicator is bucketed: <b>0 = benign</b>, <b>1 = watch</b>, <b>2 = stress</b>, using its thresholds. This is what the engine acts on.</div>
+        <div class="k">&Delta; (delta)</div><div>How much this indicator is currently pushing the story's level up (+) or down (&minus;) versus its normal baseline. At baseline it contributes 0.</div>
+        <div class="k">Cadence</div><div><code>daily</code> = refreshed from a live feed every run; <code>event</code> = updated when something happens (AI-rated or human-set), not on a clock.</div>
+        <div class="k">As of</div><div>The date of the underlying reading, so you know how fresh it is.</div>
+        <div class="k">Source</div><div>Where the number comes from, as a clickable link: <b>FRED</b>/<b>Market</b> = automatic live feed; <b>Agent</b> = AI-rated against a written rubric; <b>Baseline</b> = currently using the analyst's starting value (no live update yet).</div>
+      </div>
+
+      <h3>The panels</h3>
+      <div class="hgrid">
+        <div class="k">Heat map</div><div>All stories as colour-coded tiles for a two-second scan. Click a tile to jump to that story.</div>
+        <div class="k">Data health</div><div>How many live feeds updated vs fell back to baseline, when the AI agent last ran, and the overall trend &mdash; a trust check at a glance.</div>
+        <div class="k">Scout</div><div>Watches credible feeds for developments the tracker doesn't already capture and <b>proposes</b> additions (re-rate existing / coverage gap / new risk) with a materiality rating. It only proposes &mdash; a human approves.</div>
+        <div class="k">Agent review</div><div>The AI rating agent's worklist: its confidence, whether each rating was applied/held/overridden, and its reasoning + sources. Low-confidence calls are flagged, not applied.</div>
+        <div class="k">Backtest</div><div>Replays real 2020 &amp; 2022 market data through the engine to show it responds sensibly to stress. Only the market indicators vary (judgement ones are held at baseline), so it validates mechanics, not predictions.</div>
+        <div class="k">Background</div><div>An expandable plain-language summary of each story, with a link to the full written brief (PDF).</div>
+      </div>
+
+      <h3>How the number is made (and who controls it)</h3>
+      <div class="hgrid">
+        <div class="k">Scoring</div><div>level = base level + the sum of each indicator's weighted delta, clamped to 1&ndash;10. Every move is arithmetic and auditable &mdash; no AI sets a number directly.</div>
+        <div class="k">The AI's role</div><div>The agent only sets <i>inputs</i> (it reads current events and maps them onto fixed rubrics). The maths is deterministic, and a human override always wins.</div>
+        <div class="k">Aggregates</div><div>The "Overall" and per-Set scores at the top are simple averages of the story levels.</div>
+      </div>
+    </div>
+  </div>
 </div>
 <footer>Informational analysis only \u2014 not investment, legal, or financial advice. Levels are a judgement, not a forecast.</footer>
 <script>
@@ -139,6 +230,10 @@ function toggleTheme(){ const c=document.documentElement.getAttribute('data-them
 function initTheme(){ let t=null; try{t=localStorage.getItem('mrt-theme');}catch(e){}
   if(!t) t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light'; setTheme(t); }
 initTheme();
+
+function openHelp(){ document.getElementById('help').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeHelp(){ document.getElementById('help').classList.remove('open'); document.body.style.overflow=''; }
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeHelp(); });
 
 function bandColor(l){ return l<=2?'#2E7D32':l<=4?'#8BC34A':l<=6?'#F5A623':l<=8?'#E8710A':'#C0392B'; }
 function bandName(l){ return l<=2?'Low':l<=4?'Moderate':l<=6?'Elevated':l<=8?'High':'Severe'; }
@@ -215,6 +310,52 @@ function reviewPanel(d){
 }
 
 let BACKTEST=null;
+const BT_PALETTE=['#2563eb','#ea580c','#16a34a','#9333ea','#dc2626','#0891b2','#ca8a04'];
+const BT_DASH=['','7 3','2 4','10 3 2 3','5 4','1 4'];
+let SCOUT=null;
+function classMeta(c){
+  return c==='new_risk' ? {label:'New risk', color:'#C0392B'}
+       : c==='story_gap' ? {label:'Coverage gap', color:'#E8710A'}
+       : {label:'Re-rate existing', color:'#1F4E79'};
+}
+function scoutItem(it){
+  const cm=classMeta(it.classification);
+  const mat=(it.materiality||'').toLowerCase();
+  const matCol=mat==='high'?'#C0392B':mat==='medium'?'#F5A623':'#888';
+  const src=(it.sources||[]).map(u=>`<a href="${u}" target="_blank" rel="noopener">src</a>`).join(' ');
+  let action='';
+  if(it.classification==='existing_indicator') action=`Re-rate <b>${it.target_indicator||it.target_story||'?'}</b>.`;
+  else if(it.classification==='story_gap'){ const pi=it.proposed_indicator||{}; action=`Proposes indicator <b>${pi.label||'?'}</b> under <b>${it.target_story||'?'}</b>.`; }
+  else if(it.classification==='new_risk'){ const ps=it.proposed_story||{}; action=`Proposes new story <b>${ps.name||'?'}</b> (level ${ps.proposed_level||'?'}).`; }
+  return `<div style="border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:9px">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:4px">
+      <span class="pill" style="background:${cm.color}">${cm.label}</span>
+      <span class="pill" style="background:${matCol};text-transform:capitalize">${it.materiality||'?'}</span>
+      <span class="asof">${it.as_of||it.first_seen||''}</span></div>
+    <div style="font-weight:700;font-size:13.5px">${it.headline||''}</div>
+    <div style="font-size:12.5px;margin:3px 0;line-height:1.5">${it.summary||''}</div>
+    <div class="asof">${action} ${src} \u00B7 <code>scout.py --apply ${it.id}</code></div></div>`;
+}
+function scoutPanel(){
+  const q=SCOUT;
+  if(!q||!q.items){
+    return `<div class="narr"><strong>Scout \u2014 new developments</strong>\nNot run yet \u2014 it scans credible feeds for events the tracker doesn't already capture and proposes additions for your review (it never changes anything itself).</div>`;
+  }
+  const pend=Object.values(q.items).filter(i=>i.status==='pending')
+    .sort((a,b)=>(b.materiality||'').localeCompare(a.materiality||''));
+  const gen=q.generated||'';
+  const body = pend.length
+    ? pend.map(scoutItem).join('')
+    : `<div class="asof" style="padding:6px 0">No new proposals \u2014 nothing material the tracker isn't already watching. \u2705</div>`;
+  return `<div class="panel" id="scout"><div class="phead" onclick="this.parentNode.classList.toggle('open')">
+    <span><strong>Scout \u2014 new developments</strong> <span class="asof">what's not yet on the tracker</span></span>
+    <span class="asof"><b>${pend.length}</b> to review \u00B7 scanned ${gen}<span class="chev"></span></span></div>
+    <div class="pbody"><div class="asof" style="margin:8px 0 10px;line-height:1.5">
+      The scout proposes; it never changes the tracker. Merge a proposal in one step with
+      <code>python src/scout.py --apply &lt;id&gt;</code> (it runs the self-test and rolls back
+      automatically if anything breaks), or dismiss with
+      <code>--status &lt;id&gt; dismissed</code>.</div>${body}</div></div>`;
+}
 function lineChart(dates, series){
   const W=560,H=200,L=34,R=12,T=12,B=46, n=dates.length;
   const x=i=> L + i*(W-L-R)/Math.max(1,n-1);
@@ -225,7 +366,7 @@ function lineChart(dates, series){
   let lines='';
   for(const s of series){
     const pts=s.levels.map((v,i)=>`${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
-    lines+=`<polyline fill="none" stroke="${s.color}" stroke-width="${s.bold?2.6:1.7}" stroke-linejoin="round" stroke-linecap="round" points="${pts}" ${s.bold?'':'opacity="0.92"'}/>`;
+    lines+=`<polyline fill="none" stroke="${s.color}" stroke-width="${s.bold?2.8:1.9}" stroke-linejoin="round" stroke-linecap="round" ${s.dash?`stroke-dasharray="${s.dash}"`:''} points="${pts}" ${s.bold?'':'opacity="0.95"'}/>`;
   }
   return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:600px">${g}${xl}${lines}</svg>`;
 }
@@ -237,8 +378,9 @@ function backtestPanel(){
     const arr=Object.values(ep.stories).map(s=>({name:s.name,levels:s.levels,move:Math.max(...s.levels)-s.levels[0],peak:Math.max(...s.levels)}));
     arr.sort((a,b)=>b.move-a.move||b.peak-a.peak);
     const top=arr.filter(s=>s.move>0).slice(0,5);
-    const series=[{name:'Overall',color:'var(--text)',levels:ep.overall,bold:true}]
-      .concat(top.map(s=>({name:s.name,color:bandColor(s.peak),levels:s.levels})));
+    const series=[{name:'Overall',color:'var(--text)',levels:ep.overall,bold:true,dash:''}]
+      .concat(top.map((s,i)=>({name:s.name,color:BT_PALETTE[i%BT_PALETTE.length],
+        dash:BT_DASH[i%BT_DASH.length],levels:s.levels})));
     const leg=series.map(s=>`<span class="lg"><span class="sw" style="background:${s.color}"></span>${s.name.length>28?s.name.slice(0,28)+'\u2026':s.name}</span>`).join('');
     body+=`<div style="margin-bottom:18px"><div style="font-weight:700;font-size:13.5px">${name}</div>
       <div class="asof" style="margin:2px 0 8px">${ep.note||''}</div>${lineChart(ep.dates,series)}
@@ -258,8 +400,14 @@ function render(d){
   let html=`<div class="agg">${aggCard('Overall',a.overall,true)}${aggCard('Set 1',a['1'])}${aggCard('Set 2',a['2'])}${aggCard('Set 3',a['3'])}</div>`;
   html+=`<div class="section-label">Heat map \u2014 all stories</div>`+heatStrip(d);
   html+=healthBar(d);
+  html+=`<div class="health" style="gap:10px"><span><b>Briefs:</b></span>
+    <a href="briefs/Global_Macro_Intelligence_Brief_Set1.pdf" target="_blank" rel="noopener">Set 1 \u2197</a>
+    <a href="briefs/Global_Macro_Intelligence_Brief_Set2.pdf" target="_blank" rel="noopener">Set 2 \u2197</a>
+    <a href="briefs/Global_Macro_Intelligence_Brief_Set3.pdf" target="_blank" rel="noopener">Set 3 \u2197</a>
+    <a href="briefs/living_brief.html" target="_blank" rel="noopener">Living brief (auto-updated) \u2197</a></div>`;
   html+=`<div class="section-label">Summary</div>`;
   html+=`<div class="narr"><strong>Daily brief</strong>\n${d.narrative||''}</div>`;
+  html+=scoutPanel();
   html+=reviewPanel(d);
   html+=backtestPanel();
   html+=`<div class="section-label">Stories (highest risk first)</div>`;
@@ -273,8 +421,19 @@ function render(d){
           <span class="bpill" style="background:${col}">${s.band}</span>
           ${trendBadge(s.trend)}<span class="asof">vs ${s.trend?s.trend.since:'\u2014'}</span>
           ${sparkSVG(s.spark,col)}
-        </div></div>
-      <div class="tscroll"><table><thead><tr><th>Indicator</th><th>Value</th><th>Band</th><th>&Delta;</th><th>Cadence</th><th>As of</th><th>Source</th></tr></thead><tbody>`;
+        </div></div>`;
+    if(s.summary||s.brief_url){
+      const link = s.brief_url?`<a href="${s.brief_url}" target="_blank" rel="noopener">Full brief \u2197</a>`:'';
+      html+=`<details class="bg"><summary class="asof">Background${link?' \u00B7 '+link:''}</summary>
+        <div style="font-size:12.5px;line-height:1.55;margin:6px 0 2px">${s.summary||''}</div></details>`;
+    }
+    html+=`<div class="tscroll"><table><thead><tr><th>Indicator</th><th>Value</th>`+
+      `<th class="tip" tabindex="0" data-tip="Each indicator is bucketed: 0 = benign, 1 = watch, 2 = stress.">Band</th>`+
+      `<th class="tip" tabindex="0" data-tip="How much this indicator is currently pushing the story's level up or down vs its normal baseline (0 = at baseline).">&Delta;</th>`+
+      `<th class="tip" tabindex="0" data-tip="daily = refreshed from a live feed each run; event = updated when something happens (AI-rated or human-set).">Cadence</th>`+
+      `<th>As of</th>`+
+      `<th class="tip r" tabindex="0" data-tip="Where the value comes from: FRED / Market = live feed, Agent = AI-rated against a rubric, Baseline = analyst's starting value.">Source</th>`+
+      `</tr></thead><tbody>`;
     for(const ind of s.indicators){
       const bc=ind.band===null?'#999':bandColor(ind.band<=0?1:ind.band===1?5:9);
       const srcCell=ind.source_url?`<a href="${ind.source_url}" target="_blank" rel="noopener">${ind.provenance||'src'}</a>`:(ind.provenance||ind.source);
@@ -290,8 +449,9 @@ function render(d){
 }
 Promise.all([
   fetch('./latest.json?_='+Date.now()).then(r=>{ if(!r.ok) throw new Error('latest.json not found ('+r.status+')'); return r.json(); }),
-  fetch('./backtest.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null)
-]).then(([d,bt])=>{ BACKTEST=bt; render(d); })
+  fetch('./backtest.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
+  fetch('./scout_queue.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null)
+]).then(([d,bt,sc])=>{ BACKTEST=bt; SCOUT=sc; render(d); })
   .catch(e=>{ document.getElementById('app').innerHTML=
     `<div class="err"><strong>Could not load data.</strong><br>${e.message}<br><br>
      Run <code>python src/main.py --offline --no-ai</code>, then open this page via a local server

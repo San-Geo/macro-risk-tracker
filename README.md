@@ -121,3 +121,9 @@ real history (`--live`), writing `dashboard/backtest.json` for the dashboard's v
 market indicators vary; judgment ones are held at baseline (partial validation). `METHODOLOGY.md` is
 the versioned methodology + limitations. The agent cross-checks high-weight indicators and flags
 disagreement (`AGENT_CROSSCHECK_MIN_WEIGHT`, optional `AGENT_MODEL_2`).
+
+## Overnight-event scout (Phase 5)
+`src/scout.py` scans credible feeds for developments the tracker doesn't already capture and triages
+each into re-rate-existing / coverage-gap / new-risk, writing proposals to `data/scout_queue.json`
+(shown on the dashboard's Scout panel). It only proposes — `--status` approves/dismisses and `--snippet`
+emits paste-ready YAML. Runs in the daily workflow; needs `ANTHROPIC_API_KEY`. See SETUP_GUIDE Part 7.

@@ -248,3 +248,57 @@ the numbers.
 disagree, the rating is held at low confidence and flagged for review instead of moving the meter on
 a single, possibly-wrong reading. Tune with the `AGENT_CROSSCHECK_MIN_WEIGHT` variable (default 1.5),
 and optionally set `AGENT_MODEL_2` to use a different model for the second opinion.
+
+---
+
+## Part 7 — The overnight-event scout
+
+The rating agent answers a fixed question ("re-rate the 46 known indicators"). The **scout**
+answers an open one: *"did something material happen that the tracker doesn't already capture?"*
+
+Each run (it's wired into the daily workflow, one cheap web-grounded call) the scout scans credible
+feeds for recent developments and triages each into:
+- **Re-rate existing** — already captured by an indicator; the rating agent will handle it.
+- **Coverage gap** — fits an existing story but no indicator captures it; it proposes a new indicator + rubric.
+- **New risk** — fits no existing story; it proposes a new story stub (name, why, a proposed 1–10, rubric).
+
+**It proposes; it never changes anything.** Proposals land in a review queue (`data/scout_queue.json`)
+and on the dashboard's **Scout** panel with status `pending`. You stay in control:
+
+```
+python src/scout.py --list                     # see pending proposals
+python src/scout.py --status <id> approved      # or: dismissed
+python src/scout.py --snippet <id>              # paste-ready YAML to merge an approved proposal
+```
+
+Approving is a two-step you do deliberately: mark it approved, then paste the `--snippet` YAML into
+`config/stories.yaml` (and `config/framework.yaml` for a new rubric) and commit. The self-test runs on
+that commit, so a malformed addition is caught before it ships. Tune the scan window with `--days`,
+and the model with the `SCOUT_MODEL` repo variable.
+
+Why this design: an LLM scanning the news at 3am *will* surface false positives. The value is entirely
+in the triage discipline and the human gate — the scout widens what the tracker can notice without ever
+letting unvetted machine output move your numbers.
+
+---
+
+## Part 8 — One-step approval & the briefs
+
+**Smoother approval.** Instead of pasting YAML by hand, merge an approved scout proposal in one step:
+
+```
+python src/scout.py --apply <id>
+```
+
+This backs up the config, inserts the new indicator/story and its rubric, validates that the files
+still parse, **runs the self-test**, and — if anything fails — **rolls everything back cleanly** so a
+bad proposal can never corrupt your config. On success it marks the proposal `applied`; you then just
+commit `config/`. (`--snippet` is still there if you prefer to review/paste manually.)
+
+**The briefs in the tracker.** The three polished Set PDFs are served from `dashboard/briefs/` and
+linked from the dashboard (a "Briefs" row, and a "Full brief" link on each story's Background panel).
+Each story also shows an inline **Background** summary, kept in `config/briefs.yaml` (decoupled from the
+scoring config so editing prose never risks the math). A **living brief** (`dashboard/briefs/living_brief.html`)
+is regenerated on every run from the current stories + latest levels, so any story the scout adds shows
+up automatically — that's the "auto-updating brief." The curated Set PDFs remain the deep-dive
+originals; regenerate them deliberately when you want a new polished edition.
