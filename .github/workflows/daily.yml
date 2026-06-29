@@ -51,6 +51,7 @@ jobs:
       - name: Run tracker
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}   # optional: free key from fred.stlouisfed.org makes FRED feeds reliable from CI
           AGENT_MODEL: ${{ vars.AGENT_MODEL || 'claude-sonnet-4-6' }}
           AGENT_CONCURRENCY: ${{ vars.AGENT_CONCURRENCY || '4' }}
           SCOUT_MODEL: ${{ vars.SCOUT_MODEL || 'claude-sonnet-4-6' }}
