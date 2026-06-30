@@ -117,9 +117,10 @@ def _coerce(value, kind):
     return float(value)
 
 
-def assess_one(ind_id, spec, api_key, date, prior=None, model=None, domain=None):
-    kind = spec.get("type", "band")
-    # authorities: indicator-specific sources lead (most precise), domain authorities back them up
+ASI1_URL = "https://api.asi1.ai/v1/chat/completions"
+
+
+def _build_prompt(spec, date, domain, kind):
     domain = domain or {}
     auth = list(spec.get("authorities") or spec.get("sources") or [])
     auth += [s for s in (domain.get("authorities") or []) if s not in auth]
@@ -132,15 +133,15 @@ def assess_one(ind_id, spec, api_key, date, prior=None, model=None, domain=None)
     else:
         out_rule = ('Return "value" as a single number: the latest published figure '
                     "in the indicator's natural units (no text, no % sign).")
-    prompt = (
+    return (
         f"You are a macro-risk research agent. Today is {date}. Determine the CURRENT "
         f"real-world status of ONE indicator and classify it STRICTLY by the rubric.\n\n"
         f"{framing_line}"
-        f"INDICATOR: {spec.get('query', ind_id)}\n"
+        f"INDICATOR: {spec.get('query', '')}\n"
         f"RUBRIC: {spec.get('rubric','')}\n"
         f"PREFER THESE PRIMARY SOURCES: {sources}\n\n"
-        "Use the web_search tool to find the most recent authoritative information "
-        "BEFORE answering. Base the rating ONLY on what you actually find; do not guess.\n"
+        "Research the most recent authoritative information BEFORE answering (use web "
+        "search/tools if available). Base the rating ONLY on what you actually find; do not guess.\n"
         "Work in two separate steps so fact and interpretation never blur:\n"
         " (1) FACT: pin down the single load-bearing measured fact - the number or "
         "observable status, with its PRIMARY source and date. Quote it plainly.\n"
@@ -158,9 +159,33 @@ def assess_one(ind_id, spec, api_key, date, prior=None, model=None, domain=None)
         '"dissent": [{"view": "<competing reading and who reports it>", "source": "<url>"}], '
         '"sources": ["<url>", ...]}'
     )
+
+
+def _post_json(req, timeout=120):
+    last = None
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return json.loads(r.read().decode())
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 529, 503) and attempt < 3:
+                time.sleep(2 ** attempt + 1)
+                continue
+            raise
+        except (urllib.error.URLError, TimeoutError) as e:
+            last = e
+            if attempt < 3:
+                time.sleep(2 ** attempt + 1)
+                continue
+            raise
+    if last:
+        raise last
+    raise RuntimeError("no response from API")
+
+
+def _call_anthropic(prompt, model, api_key):
     body = json.dumps({
-        "model": model or AGENT_MODEL,
-        "max_tokens": 1400,
+        "model": model or AGENT_MODEL, "max_tokens": 1400,
         "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
         "messages": [{"role": "user", "content": prompt}],
     }).encode()
@@ -168,22 +193,28 @@ def assess_one(ind_id, spec, api_key, date, prior=None, model=None, domain=None)
         API_URL, data=body,
         headers={"content-type": "application/json", "x-api-key": api_key,
                  "anthropic-version": "2023-06-01"})
-    data = None
-    for attempt in range(4):
-        try:
-            with urllib.request.urlopen(req, timeout=120) as r:
-                data = json.loads(r.read().decode())
-            break
-        except urllib.error.HTTPError as e:
-            # back off and retry on rate-limit (429) / overloaded (529); re-raise anything else
-            if e.code in (429, 529) and attempt < 3:
-                time.sleep(2 ** attempt + 1)
-                continue
-            raise
-    if data is None:
-        raise RuntimeError("no response from API")
-    text = "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
-    parsed = _extract_json(text)
+    data = _post_json(req)
+    return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
+
+
+def _call_asi1(prompt, model, api_key):
+    """ASI1 (asi1.ai) is an OpenAI-compatible, agentic endpoint - a genuinely
+    independent provider for the cross-check. It does its own research; there is no
+    Anthropic-style web_search tool to pass."""
+    body = json.dumps({
+        "model": model or "asi1", "max_tokens": 1500, "temperature": 0, "stream": False,
+        "messages": [{"role": "user", "content": prompt}],
+    }).encode()
+    req = urllib.request.Request(
+        ASI1_URL, data=body,
+        headers={"Content-Type": "application/json", "Accept": "application/json",
+                 "Authorization": f"Bearer {api_key}"})
+    data = _post_json(req)
+    ch = (data.get("choices") or [{}])[0]
+    return (ch.get("message") or {}).get("content", "") or ""
+
+
+def _finalize(parsed, kind):
     parsed["value"] = _coerce(parsed.get("value"), kind)
     parsed.setdefault("confidence", "low")
     parsed.setdefault("rationale", "")
@@ -193,11 +224,20 @@ def assess_one(ind_id, spec, api_key, date, prior=None, model=None, domain=None)
     if not isinstance(dissent, list):
         dissent = []
     parsed["dissent"] = dissent
-    # when sources genuinely disagree we annotate rather than over-claim: cap confidence
     if dissent and str(parsed.get("confidence", "")).lower() == "high":
         parsed["confidence"] = "medium"
     parsed["type"] = kind
     return parsed
+
+
+def assess_one(ind_id, spec, api_key, date, prior=None, model=None, domain=None, provider="anthropic"):
+    kind = spec.get("type", "band")
+    prompt = _build_prompt(spec, date, domain, kind)
+    if provider == "asi1":
+        text = _call_asi1(prompt, model or "asi1", api_key)
+    else:
+        text = _call_anthropic(prompt, model, api_key)
+    return _finalize(_extract_json(text), kind)
 
 
 def _in_range(value, spec):
@@ -226,7 +266,22 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
     ind_sets = load_ind_sets()
     domains = load_domains()
     xcheck_min = float(os.environ.get("AGENT_CROSSCHECK_MIN_WEIGHT", "1.5") or 1.5)
-    model2 = os.environ.get("AGENT_MODEL_2")  # optional second model for the check
+    # Second-opinion routing for the cross-check. AGENT_MODEL_2 names the model;
+    # an "asi1*" model uses the ASI1 provider (key in ASI1_API_KEY) for genuine
+    # cross-provider independence. Anything else stays on Anthropic.
+    m2 = os.environ.get("AGENT_MODEL_2")
+    if m2 and m2.lower().startswith("asi1"):
+        asi1_key = os.environ.get("ASI1_API_KEY")
+        if asi1_key:
+            xprovider, xkey, xmodel = "asi1", asi1_key, m2
+        else:
+            xprovider, xkey, xmodel = "anthropic", api_key, None
+            print("  (AGENT_MODEL_2 is asi1 but ASI1_API_KEY is unset; "
+                  "cross-check falls back to the primary model)")
+    elif m2:
+        xprovider, xkey, xmodel = "anthropic", api_key, m2
+    else:
+        xprovider, xkey, xmodel = "anthropic", api_key, None
 
     # 1) Overrides and carry-forwards are instant; only the rest need a (slow) web call.
     to_assess = []
@@ -256,17 +311,20 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
         # Cross-check the highest-weight indicators with a second independent read.
         if weights.get(ind_id, 0) >= xcheck_min and a.get("value") is not None:
             try:
-                b = assess_one(ind_id, spec, api_key, date, prior, model=model2, domain=domain)
+                b = assess_one(ind_id, spec, xkey, date, prior, model=xmodel,
+                               domain=domain, provider=xprovider)
                 disagree = _disagree(a.get("value"), b.get("value"), spec.get("type", "band"))
-                a["crosscheck"] = {"second_value": b.get("value"), "agree": not disagree}
+                checker = (xmodel or AGENT_MODEL) if xprovider == "anthropic" else xmodel
+                a["crosscheck"] = {"second_value": b.get("value"), "agree": not disagree,
+                                   "by": checker, "provider": xprovider}
                 if disagree:
                     a["confidence"] = "low"  # demote -> handled conservatively below
                     a["crosscheck"]["note"] = "two reads disagreed"
                     a["rationale"] = ((a.get("rationale", "") +
-                        f" [cross-check: two reads disagreed ({a.get('value')} vs "
+                        f" [cross-check ({checker}): two reads disagreed ({a.get('value')} vs "
                         f"{b.get('value')}); held for review]").strip())
             except Exception as e:
-                a["crosscheck"] = {"error": str(e)}
+                a["crosscheck"] = {"error": str(e), "provider": xprovider}
         return a
 
     workers = max(1, int(os.environ.get("AGENT_CONCURRENCY", "4") or 4))

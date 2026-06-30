@@ -401,6 +401,12 @@ function statusOf(i){ const n=(i.note||'').toLowerCase(); if(n.includes('overrid
 function reviewRows(arr){ return arr.map(i=>{
   const src=(i.sources||[]).map(u=>`<a href="${u}" target="_blank" rel="noopener">src</a>`).join(' ');
   const rangeTag=i.out_of_range?`<span class="pill" style="background:#C0392B;color:#fff;margin-right:4px">out of range</span>`:'';
+  let xc='';
+  if(i.crosscheck&&i.crosscheck.by){ const c=i.crosscheck;
+    xc = c.agree===false
+      ? `<span class="pill" style="background:#E8710A;color:#fff;margin-right:4px" title="independent second read by ${c.by} disagreed">\u26A0 ${c.by} disagreed</span>`
+      : `<span class="pill" style="background:var(--track);color:var(--text);margin-right:4px" title="independent second read by ${c.by} agreed">\u2713 checked by ${c.by}</span>`;
+  }
   const factLine=i.fact?`<div style="margin-bottom:3px"><span style="font-weight:700;color:var(--accent)">FACT:</span> ${i.fact}</div>`:'';
   const dissent=(i.dissent&&i.dissent.length)?`<div style="margin-top:4px;padding-left:8px;border-left:2px solid #E8710A">
     <span style="font-weight:700;color:#E8710A">Dissent (${i.dissent.length}):</span> `
@@ -408,7 +414,7 @@ function reviewRows(arr){ return arr.map(i=>{
   return `<tr><td>${i.label}<div style="color:var(--muted);font-size:11px">${i.story}${i.domain?` \u00B7 <span style="color:var(--accent)">${i.domain} desk</span>`:''}</div></td>
     <td>${fmt(i.value)}</td>
     <td><span class="pill" style="background:${confColor(i.confidence)};text-transform:capitalize">${i.confidence||'-'}</span></td>
-    <td>${statusOf(i)}</td><td>${rangeTag}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
+    <td>${statusOf(i)}</td><td>${rangeTag}${xc}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
 }).join(''); }
 function reviewPanel(d){
   const r=d.agent_review;
