@@ -303,10 +303,178 @@
       "first_seen": "2026-06-30",
       "last_seen": "2026-06-30",
       "id": "genius-act-implementation-rulemaking-underway-oc-090741"
+    },
+    "japan-10y-jgb-yield-at-2-65-yen-at-40-year-low-1-b560d5": {
+      "headline": "Japan 10y JGB yield at ~2.65%, yen at 40-year low ~161/USD as BOJ slows QT taper",
+      "summary": "Japan's 10-year JGB yield has risen to ~2.65\u20132.67% (near 30-year highs) as the yen has sunk to ~161 per dollar, its weakest in four decades, even as the BOJ at its June 17 meeting slowed the pace of bond tapering from \u00a5400bn to \u00a5200bn per quarter at maturities up to 10 years. BOJ Governor Ueda and board member Tamura both reiterated support for further rate hikes, with the next decision on July 31, keeping carry-trade unwind risk elevated.",
+      "as_of": "2026-06-30",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://finimize.com/content/japans-10-year-jgb-yield-keeps-climbing-on-fiscal-nerves",
+        "https://www.abnamro.com/research/en/our-research/japan-the-land-of-the-rising-yields"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "USD/JPY and 30-year JGB yield \u2014 update: 10y at 2.65%, USD/JPY ~161 (40-year yen low); BOJ slowed QT taper Jun 17, next decision Jul 31. Takaichi plan financing clarity: 1 unclear (\u00a5370T 2040 public-private investment target reported by Nikkei, adding bond-issuance fear).",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "All three existing s2 indicators are moving adversely in the same week: the yen is at a 40-year low (heightening carry-unwind risk), 10y JGB yields are near multi-decade highs (raising debt-service cost on Japan's ~250% debt/GDP), and the BOJ's June 17 taper slowdown signals it is still constrained in normalizing \u2014 a classic fiscal dominance signal. The Nikkei-reported \u00a5370T investment target adds financing uncertainty. Materiality is high because Japanese repatriation flows can tighten global sovereign yields, especially US Treasuries.",
+      "status": "pending",
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "id": "japan-10y-jgb-yield-at-2-65-yen-at-40-year-low-1-b560d5"
+    },
+    "china-blacklists-mp-materials-and-usa-rare-earth-362ffa": {
+      "headline": "China blacklists MP Materials and USA Rare Earth on June 22, targeting US domestic producers",
+      "summary": "China's MOFCOM on June 22, 2026 added 10 US entities \u2014 including MP Materials (Mountain Pass mine) and USA Rare Earth \u2014 to its export control list, effectively barring Chinese firms from supplying dual-use items to them and prohibiting any third-party globally from transferring Chinese-origin dual-use goods to the named companies. China's Finance Ministry simultaneously barred ~46 US firms (Lockheed, Boeing, General Atomics subsidiaries) from government procurement, framed as retaliation for the Pentagon's June expansion of its Chinese-military-companies list.",
+      "as_of": "2026-06-22",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/6/22/china-adds-10-us-firms-including-rare-earth-miner-to-export-control-list",
+        "https://source.benchmarkminerals.com/article/china-targets-us-rare-earth-and-defence-linked-entities-with-dual-use-export-ban",
+        "https://www.stocktitan.net/articles/china-rare-earth-export-controls-mp-usa-rare-earth-june-2026"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "US domestic RE producer blacklist \u2014 update: escalate from 0 (none) to 1 (entity-specific ban). MP Materials and USA Rare Earth \u2014 the two flagship US government-backed domestic producers \u2014 are now on China's export control list with an effective categorical prohibition (not merely a licensing hurdle) on receiving Chinese-origin dual-use inputs. The broader Nov-2025 pause (status: 0 extended) holds through Nov 10, 2026, but this entity action sits outside that pause scope.",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "This is a direct hit on the US domestic rare-earth build-out strategy: the two companies most central to reducing US-China dependency (MP Materials at Mountain Pass, USA Rare Earth in Texas) are now blocked from Chinese equipment and technology inputs. The existing tracker's 'US domestic RE producer blacklist' indicator was designed for exactly this scenario and should move from 0 to 1. It also signals Beijing's willingness to escalate toward sector-wide restrictions (moving toward a 2), and creates financing/partnership risk for both companies. Defense, EV, and semiconductor supply chains are directly exposed.",
+      "status": "pending",
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "id": "china-blacklists-mp-materials-and-usa-rare-earth-362ffa"
+    },
+    "genius-act-implementing-regulations-missed-key-j-098843": {
+      "headline": "GENIUS Act implementing regulations missed key June/July 2026 deadlines; Tether reciprocity still unresolved",
+      "summary": "As of late May 2026, no primary federal regulator (OCC, Fed, FDIC) had finalized GENIUS Act rules, against a statutory deadline of July 18, 2026 (18 months after enactment), meaning the effective compliance date defaults to January 2027 at the earliest. Tether's reciprocity determination \u2014 required for USDT to continue serving US businesses \u2014 has also not been issued, creating a potential supply disruption for the world's largest stablecoin.",
+      "as_of": "2026-06-30",
+      "sources": [
+        "https://www.spark.money/research/genius-act-stablecoin-regulation-explained",
+        "https://occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
+        "https://home.treasury.gov/news/press-releases/sb0435"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS implementation friction \u2014 update: move from 0 (smooth) to 1 (gaps). The primary rulemaking deadline of July 18, 2026 is being missed by all three federal regulators; Tether's foreign-issuer reciprocity determination remains outstanding as of May 2026; multiple parallel agency rulemakings are running in parallel without coordination finalization. The effective date slips to January 2027 unless rules are finalized within 120 days from whenever they are issued.",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The GENIUS Act was designed partly to mandate Treasury-bill-backed stablecoin reserves, potentially creating a new structural bid for short-dated US government paper. Regulatory slippage delays that demand channel and extends legal ambiguity for ~$250B+ in stablecoin supply. Tether's unresolved status is particularly material: USDT is the dominant global stablecoin and its forced restructuring or US-market exit would be a significant liquidity event. The tracker's existing friction indicator is the right home, and should move to 1 (gaps).",
+      "status": "pending",
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "id": "genius-act-implementing-regulations-missed-key-j-098843"
+    },
+    "us-fy2026-deficit-hits-1-2-trillion-in-8-months--aac357": {
+      "headline": "US FY2026 deficit hits $1.2 trillion in 8 months, on track for $2T+, as OBBBA adds $3.4T over 10 years",
+      "summary": "The US Treasury confirmed a $1.2 trillion federal deficit for the first eight months of FY2026 (October 2025\u2013May 2026), including $293 billion in May alone, with Treasury's own projections flagging a $2 trillion-plus full-year outcome. The One Big Beautiful Bill Act (signed July 4, 2025) scored by CBO at $3.4 trillion in additional deficits over 10 years \u2014 with spending cuts deferred to 2027 \u2014 has pushed 10-year Treasury yields to ~4.48% and the Yale Budget Lab projects debt/GDP reaching 183% by 2054 under OBBBA.",
+      "as_of": "2026-06-10",
+      "sources": [
+        "https://www.crfb.org/press-releases/treasury-confirms-12-trillion-deficit-first-8-months-fy-2026",
+        "https://budgetlab.yale.edu/research/long-term-impacts-one-big-beautiful-bill-act",
+        "https://www.usbank.com/investing/financial-perspectives/market-news/interest-rates-affect-bonds.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "proposed_indicator": {
+        "label": "US_fiscal_trajectory_score",
+        "type": "band",
+        "rubric": "0 = deficit on declining path, debt/GDP stabilizing; 1 = deficit stable but elevated (>$1.5T/yr), debt/GDP drifting up; 2 = deficit accelerating (>$2T/yr), OBBBA-driven structural deterioration, term premium rising >50bps vs prior year. Current reading: 2.",
+        "sources": [
+          "https://www.crfb.org/press-releases/treasury-confirms-12-trillion-deficit-first-8-months-fy-2026",
+          "https://budgetlab.yale.edu/research/long-term-impacts-one-big-beautiful-bill-act",
+          "https://fiscaldata.treasury.gov/static-data/published-reports/treasury_bulletin/Treasury_Bulletin_2026_06.pdf"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s4_dev_debt story tracks developing-world debt via the broad dollar index, US 10y real yield, and IMF program count. But the US fiscal trajectory itself is now a primary global macro risk driver: OBBBA-induced $3.4T in additional 10-year deficits, a $2T+ current-year gap, and CBO/Yale projections of debt/GDP at 156\u2013183% by 2054 are materially pushing up US real yields (the s4 indicator) and threatening the dollar's reserve-currency premium. A dedicated US fiscal trajectory indicator captures the upstream driver that is causing the real-yield and dollar moves already in s4, and is not currently explicitly tracked. Materiality is high because rising US term premium spills directly into EM borrowing costs and global financial conditions.",
+      "status": "pending",
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "id": "us-fy2026-deficit-hits-1-2-trillion-in-8-months--aac357"
+    },
+    "us-iran-conflict-onset-feb-27-drives-fed-toward--06ec2e": {
+      "headline": "US-Iran conflict (onset Feb 27) drives Fed toward rate hikes, EU inflation re-accelerates to 3%, global growth cut to 2.5%",
+      "summary": "A US-Iran military conflict that began on February 27, 2026 has triggered sharp energy price increases that are forcing a global macro regime shift: the Fed's June 2026 projections now show median expectations for one to two rate hikes in 2026 (vs. earlier cut expectations), eurozone headline inflation is forecast to rise from 2.1% to 3.0% in 2026, EU GDP growth has been cut to just 0.9%, and the World Bank has trimmed global growth to 2.5%. Oil prices have partially eased as US-Iran peace talks progress, but supply uncertainty remains.",
+      "as_of": "2026-06-17",
+      "sources": [
+        "https://www.eba.europa.eu/publications-and-media/publications/risk-assessment-report-june-2026",
+        "https://www.usbank.com/investing/financial-perspectives/market-news/interest-rates-affect-bonds.html",
+        "https://www.worldbank.org/en/publication/global-economic-prospects"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US-Iran conflict & Middle East energy shock",
+        "why": "A direct US-Iran military conflict begun February 27, 2026 has created a persistent energy-price shock that is simultaneously re-inflating advanced economies, forcing the Fed toward rate hikes rather than cuts, compressing EU growth to near-stagnation, raising Middle East geopolitical tail risk (including potential Hormuz disruption beyond the s20 lane-status indicator), and cutting global growth to 2.5%. This is a discrete new geopolitical event not captured by any single existing story \u2014 it interacts with s20 (sea lanes/Hormuz), s18 (food/fertilizer via energy input costs), s10 (France/eurozone fragility via energy-driven inflation), and s2 (Japan via energy import costs), but is the common upstream driver across all of them.",
+        "proposed_level": 8,
+        "set": "Set 4",
+        "indicators": [
+          {
+            "label": "US_Iran_ceasefire_status",
+            "type": "band",
+            "rubric": "0 = formal ceasefire / peace agreement in force; 1 = active hostilities paused / talks ongoing but fragile; 2 = active hostilities ongoing or re-escalation. Current reading: 1 (talks progressing, oil back near pre-war levels per Jun 29 data, but no formal agreement).",
+            "sources": [
+              "https://www.usbank.com/investing/financial-perspectives/market-news/interest-rates-affect-bonds.html",
+              "https://tradingeconomics.com/japan/government-bond-yield"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Middle_East_energy_shock_CPI_premium_bps",
+            "type": "value",
+            "rubric": "Basis points of CPI inflation attributable to Middle East energy shock vs. pre-conflict baseline (EBA/ECB estimates). Threshold: >50bps = elevated; >100bps = severe. Current: EU headline up ~90bps vs. prior forecast (2.1% to 3.0%).",
+            "sources": [
+              "https://www.eba.europa.eu/publications-and-media/publications/risk-assessment-report-june-2026"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Fed_rate_hike_probability_2026",
+            "type": "value",
+            "rubric": "Market-implied probability of at least one Fed rate hike by Dec 2026 (%). Threshold: <20% = benign; 20-50% = elevated; >50% = acute tightening risk. Current: Fed June SEP median shows 1-2 hikes, implying >50%.",
+            "sources": [
+              "https://www.usbank.com/investing/financial-perspectives/market-news/interest-rates-affect-bonds.html"
+            ],
+            "suggested_weight": 0.35
+          }
+        ]
+      },
+      "rationale": "The US-Iran conflict is a discrete new geopolitical shock not present in the existing tracker at all. It is the single most important new macro development of 2026 H1: it has inverted the Fed's rate path from cuts to potential hikes, re-inflated the eurozone above target, compressed EU GDP growth to 0.9%, and knocked 0.3pp off the World Bank's global growth forecast. While s20 tracks sea-lane status and WTI, it does not capture the monetary-policy transmission of the shock (Fed hike risk, EU stagflation), which is the most systemically important channel. A new story is warranted to track the conflict's macro-financial ramifications distinct from the physical supply-chain angle.",
+      "status": "pending",
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "id": "us-iran-conflict-onset-feb-27-drives-fed-toward--06ec2e"
+    },
+    "hyperscaler-ai-capex-approaching-800b-in-2026-67-88f633": {
+      "headline": "Hyperscaler AI capex approaching $800B in 2026 (+67% YoY), regulatory and revenue-gap scrutiny intensifying",
+      "summary": "BofA Global Research estimates hyperscaler capital expenditures could approach $800 billion in 2026 \u2014 a 67% increase from 2025 \u2014 trending toward $1 trillion in 2027, while investor scrutiny over whether economic returns will justify this level of spending remains acute. The concentration of this capex in a small number of mega-cap issuers means any shift in sentiment or financing conditions carries outsized market risk.",
+      "as_of": "2026-06-15",
+      "sources": [
+        "https://olui2.fs.ml.com/publish/content/application/pdf/gwmol/me-cio-weekly-letter.pdf"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s8_ai_capex",
+      "target_indicator": "AI capex-vs-revenue gap concern \u2014 update: move from 1 (wide) toward 2 (widening fast). BofA's $800B 2026 hyperscaler capex estimate (+67% YoY) with no commensurate revenue confirmation benchmark shifts the gap indicator. US IG OAS proxy: monitor for spread widening as large-scale debt issuance by hyperscalers (Microsoft, Google, Amazon, Meta) to fund capex continues to increase supply.",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The $800B figure from a major sell-side house (BofA, dated June 15, 2026) is a new high-water mark for AI infrastructure spending estimates, a 67% single-year jump. This directly feeds s8's core concern: circular financing where debt-funded capex is justified by AI revenue projections that have not yet materialized. The existing capex-vs-revenue gap indicator should be updated, and the GPU-backed debt refinancing stress indicator should be flagged as a watch item given the scale of new issuance. Materiality is medium (not yet acute) but the trajectory is the concern.",
+      "status": "pending",
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "id": "hyperscaler-ai-capex-approaching-800b-in-2026-67-88f633"
     }
   },
   "generated": "2026-06-30",
   "model": "claude-sonnet-4-6",
-  "new_count": 0,
-  "pending_count": 12
+  "new_count": 6,
+  "pending_count": 18
 }
