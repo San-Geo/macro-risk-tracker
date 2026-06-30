@@ -142,9 +142,11 @@ def main():
                 "fact": a.get("fact", ""), "dissent": (a.get("dissent") or [])[:4],
                 "domain": a.get("domain", ""),
                 "crosscheck": a.get("crosscheck"),
+                "parse": a.get("parse"),
             })
         items.sort(key=lambda x: (x["id"] not in flags, x["set"], x["label"]))
         result["agent_review"] = {"generated": alog.get("generated"), "model": alog.get("model"),
+                                  "crosscheck": alog.get("crosscheck"),
                                   "review_flags": sorted(flags), "items": items}
 
     # Whole-picture consistency: deterministic cross-indicator contradiction checks.

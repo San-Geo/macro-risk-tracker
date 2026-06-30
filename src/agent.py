@@ -97,16 +97,56 @@ def load_applied_values():
     return out
 
 
+def _salvage_fields(text):
+    """Last resort when the JSON won't parse (usually a raw double-quote embedded in
+    the 'fact' prose). The load-bearing 'value' sits first in the schema and is a bare
+    number, so a targeted regex recovers the SCORE even when the prose is broken -
+    the read stays usable instead of being discarded."""
+    out = {}
+    m = re.search(r'"value"\s*:\s*(-?\d+(?:\.\d+)?)', text)
+    if m:
+        out["value"] = float(m.group(1))
+    m = re.search(r'"confidence"\s*:\s*"?(low|medium|high)"?', text, re.I)
+    if m:
+        out["confidence"] = m.group(1).lower()
+    m = re.search(r'"as_of"\s*:\s*"([^"]+)"', text)
+    if m:
+        out["as_of"] = m.group(1)
+    keys = "value|confidence|as_of|fact|rationale|dissent|sources"
+    for fld in ("fact", "rationale"):
+        m = re.search(r'"%s"\s*:\s*"(.*?)"\s*,\s*"(?:%s)"\s*:' % (fld, keys), text, re.DOTALL)
+        if m:
+            out[fld] = m.group(1).replace('"', "'")
+    if "value" in out:
+        out["parse"] = "repaired"
+    return out
+
+
 def _extract_json(text):
     text = text.strip()
     text = re.sub(r"^```(json)?|```$", "", text, flags=re.MULTILINE).strip()
+    block = text
+    m = re.search(r"\{.*\}", text, flags=re.DOTALL)
+    if m:
+        block = m.group(0)
+    for candidate in (text, block):
+        try:
+            return json.loads(candidate)
+        except Exception:
+            pass
+    # light repair: drop trailing commas, normalise smart quotes, then retry
+    repaired = re.sub(r",\s*([}\]])", r"\1", block)
+    repaired = (repaired.replace("\u201c", '"').replace("\u201d", '"')
+                        .replace("\u2018", "'").replace("\u2019", "'"))
     try:
-        return json.loads(text)
+        return json.loads(repaired)
     except Exception:
-        m = re.findall(r"\{.*\}", text, flags=re.DOTALL)
-        if m:
-            return json.loads(m[-1])
-        raise
+        pass
+    # field salvage guarantees the score survives a broken-quote response
+    salv = _salvage_fields(text)
+    if "value" in salv:
+        return salv
+    raise ValueError("could not parse or salvage agent JSON")
 
 
 def _coerce(value, kind):
@@ -151,7 +191,9 @@ def _build_prompt(spec, date, domain, kind):
         "single reading in \"value\" and record each competing reading in \"dissent\" "
         "with its source. Leave \"dissent\" as [] only when sources broadly agree.\n"
         f"{out_rule} If you cannot find clear, recent evidence, set confidence to \"low\".\n\n"
-        "Respond with ONLY this JSON (no other text):\n"
+        "Respond with ONLY a single-line, valid, minified JSON object and nothing else. "
+        "Inside string values use single quotes only - NEVER the double-quote character - "
+        "so the JSON always parses:\n"
         '{"value": <number>, "confidence": "low|medium|high", '
         '"as_of": "<YYYY-MM-DD or period>", '
         '"fact": "<the load-bearing fact verbatim, with primary source + date>", '
@@ -229,7 +271,6 @@ def _finalize(parsed, kind):
     parsed["type"] = kind
     return parsed
 
-
 def assess_one(ind_id, spec, api_key, date, prior=None, model=None, domain=None, provider="anthropic"):
     kind = spec.get("type", "band")
     prompt = _build_prompt(spec, date, domain, kind)
@@ -269,7 +310,11 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
     # Second-opinion routing for the cross-check. AGENT_MODEL_2 names the model;
     # an "asi1*" model uses the ASI1 provider (key in ASI1_API_KEY) for genuine
     # cross-provider independence. Anything else stays on Anthropic.
-    m2 = os.environ.get("AGENT_MODEL_2")
+    # Tolerate common mis-entries: a value pasted as "AGENT_MODEL_2=asi1" (KEY=value
+    # form) or wrapped in quotes/backticks/spaces -> reduce to just the model name.
+    m2 = (os.environ.get("AGENT_MODEL_2") or "").strip().strip("`\"'").strip()
+    if "=" in m2:
+        m2 = m2.split("=")[-1].strip().strip("`\"'").strip()
     if m2 and m2.lower().startswith("asi1"):
         asi1_key = os.environ.get("ASI1_API_KEY")
         if asi1_key:
@@ -385,7 +430,9 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
         assessments[ind_id] = a
 
     log = {"generated": datetime.datetime.now(datetime.timezone.utc).isoformat(), "date": date,
-           "model": AGENT_MODEL, "assessments": assessments, "review_flags": sorted(set(review))}
+           "model": AGENT_MODEL, "assessments": assessments, "review_flags": sorted(set(review)),
+           "crosscheck": {"provider": xprovider, "model": (xmodel or AGENT_MODEL),
+                          "independent": xprovider != "anthropic"}}
     os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
     with open(LOG_PATH, "w") as f:
         json.dump(log, f, indent=2)

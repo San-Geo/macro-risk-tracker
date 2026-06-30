@@ -164,10 +164,10 @@ def sensitivity(config):
         "max_story_swing": max((m["story_swing"] for m in movers), default=0),
         "max_overall_swing": max((m["overall_swing"] for m in movers), default=0),
         "movers": movers[:12],
-        "note": ("Overall is the mean of all 21 story levels, so no single indicator can "
-                 "move it far - the headline is robust by construction. The leverage that "
-                 "matters is on each STORY: the indicators below are where a wrong fact "
-                 "does the most damage and most deserves cross-checking."),
+        "note": ("The overall is tail-weighted, not a flat mean, so a single indicator "
+                 "still can't swing it far - the headline is robust by construction. The "
+                 "leverage that matters is on each STORY: the indicators below are where a "
+                 "wrong fact does the most damage and most deserves cross-checking."),
     }
 
 

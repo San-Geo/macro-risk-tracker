@@ -401,6 +401,7 @@ function statusOf(i){ const n=(i.note||'').toLowerCase(); if(n.includes('overrid
 function reviewRows(arr){ return arr.map(i=>{
   const src=(i.sources||[]).map(u=>`<a href="${u}" target="_blank" rel="noopener">src</a>`).join(' ');
   const rangeTag=i.out_of_range?`<span class="pill" style="background:#C0392B;color:#fff;margin-right:4px">out of range</span>`:'';
+  const parseTag=i.parse==='repaired'?`<span class="pill" style="background:#F5A623;color:#fff;margin-right:4px" title="the agent's JSON was malformed; the score was recovered but the fact text may be partial">fact recovered</span>`:'';
   let xc='';
   if(i.crosscheck&&i.crosscheck.by){ const c=i.crosscheck;
     xc = c.agree===false
@@ -414,7 +415,7 @@ function reviewRows(arr){ return arr.map(i=>{
   return `<tr><td>${i.label}<div style="color:var(--muted);font-size:11px">${i.story}${i.domain?` \u00B7 <span style="color:var(--accent)">${i.domain} desk</span>`:''}</div></td>
     <td>${fmt(i.value)}</td>
     <td><span class="pill" style="background:${confColor(i.confidence)};text-transform:capitalize">${i.confidence||'-'}</span></td>
-    <td>${statusOf(i)}</td><td>${rangeTag}${xc}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
+    <td>${statusOf(i)}</td><td>${rangeTag}${parseTag}${xc}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
 }).join(''); }
 function reviewPanel(d){
   const r=d.agent_review;
@@ -424,10 +425,16 @@ function reviewPanel(d){
   const gen=r.generated? new Date(r.generated).toLocaleString():'n/a';
   const ft=flagged.length?`<div class="tscroll"><table>${head}<tbody>${reviewRows(flagged)}</tbody></table></div>`
     :`<div class="asof" style="padding:6px 0">Nothing flagged \u2014 all ratings were confident and unchanged.</div>`;
+  let xcLine='';
+  if(r.crosscheck){ const c=r.crosscheck;
+    xcLine = c.independent
+      ? `<div class="asof" style="margin:6px 0 0;color:#2E7D32">\u2713 Cross-check uses an independent provider: <b>${c.model}</b>.</div>`
+      : `<div class="asof" style="margin:6px 0 0">Cross-check is running on the <b>same model</b> (${c.model}). For an independent second opinion, set repository <b>variable</b> AGENT_MODEL_2=asi1 and <b>secret</b> ASI1_API_KEY.</div>`;
+  }
   return `<div class="panel" id="review"><div class="phead" onclick="this.parentNode.classList.toggle('open')">
       <span><strong>Agent review</strong> <span class="asof">your weekly 2-minute check</span></span>
       <span class="asof"><b>${flagged.length}</b> flagged \u00B7 updated ${gen}${r.model?' \u00B7 '+r.model:''}<span class="chev"></span></span></div>
-    <div class="pbody"><div class="asof" style="margin:8px 0 4px">Needs a glance (low-confidence or changed):</div>${ft}
+    <div class="pbody">${xcLine}<div class="asof" style="margin:8px 0 4px">Needs a glance (low-confidence or changed):</div>${ft}
       <details style="margin-top:12px"><summary class="asof">Show all ${r.items.length} agent-rated indicators</summary>
         <div class="tscroll"><table style="margin-top:8px">${head}<tbody>${reviewRows(r.items)}</tbody></table></div></details>
       <div class="asof" style="margin-top:10px">Override any rating: edit <code>manual_input.csv</code> and commit. Full log: <code>data/agent_assessments.json</code>.</div></div></div>`;
