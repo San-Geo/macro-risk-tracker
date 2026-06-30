@@ -358,16 +358,26 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
             try:
                 b = assess_one(ind_id, spec, xkey, date, prior, model=xmodel,
                                domain=domain, provider=xprovider)
-                disagree = _disagree(a.get("value"), b.get("value"), spec.get("type", "band"))
+                kind = spec.get("type", "band")
+                b_val = b.get("value")
                 checker = (xmodel or AGENT_MODEL) if xprovider == "anthropic" else xmodel
-                a["crosscheck"] = {"second_value": b.get("value"), "agree": not disagree,
-                                   "by": checker, "provider": xprovider}
-                if disagree:
-                    a["confidence"] = "low"  # demote -> handled conservatively below
-                    a["crosscheck"]["note"] = "two reads disagreed"
-                    a["rationale"] = ((a.get("rationale", "") +
-                        f" [cross-check ({checker}): two reads disagreed ({a.get('value')} vs "
-                        f"{b.get('value')}); held for review]").strip())
+                # A second read of 0/None on a VALUE indicator almost always means the
+                # checker couldn't retrieve the figure - not a genuine contradiction.
+                # Treat that as "unverified" so it doesn't demote a well-sourced number;
+                # a differing BAND (0/1/2) is still a real disagreement.
+                if kind != "band" and (b_val is None or b_val == 0) and a.get("value"):
+                    a["crosscheck"] = {"second_value": b_val, "agree": None, "by": checker,
+                                       "provider": xprovider, "note": "second read could not confirm"}
+                else:
+                    disagree = _disagree(a.get("value"), b_val, kind)
+                    a["crosscheck"] = {"second_value": b_val, "agree": not disagree,
+                                       "by": checker, "provider": xprovider}
+                    if disagree:
+                        a["confidence"] = "low"  # demote -> handled conservatively below
+                        a["crosscheck"]["note"] = "two reads disagreed"
+                        a["rationale"] = ((a.get("rationale", "") +
+                            f" [cross-check ({checker}): two reads disagreed ({a.get('value')} vs "
+                            f"{b_val}); held for review]").strip())
             except Exception as e:
                 a["crosscheck"] = {"error": str(e), "provider": xprovider}
         return a

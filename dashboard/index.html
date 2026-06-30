@@ -32,6 +32,23 @@
   .tbtn:hover{ background:rgba(255,255,255,.22); }
   .wrap{ max-width:1040px; margin:0 auto; padding:20px; }
   .section-label{ font-size:11px; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); font-weight:700; margin:18px 2px 8px; }
+  .gist{ background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px 20px; box-shadow:var(--shadow); margin-bottom:12px; }
+  .gistnum{ font-size:34px; font-weight:800; letter-spacing:-.02em; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .gistnum .den{ font-size:16px; font-weight:600; color:var(--muted); }
+  .gistband{ font-size:12px; font-weight:700; color:#fff; padding:3px 10px; border-radius:999px; }
+  .gisttxt{ font-size:16px; line-height:1.55; margin:12px 0 2px; }
+  .gistmv{ display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-top:8px; font-size:12.5px; }
+  .gistmv .mv{ background:var(--track); border-radius:999px; padding:3px 9px; }
+  .anchor{ position:relative; height:26px; margin:14px 0 4px; }
+  .atrack{ position:absolute; top:11px; left:0; right:0; height:5px; border-radius:3px;
+    background:linear-gradient(90deg,#2E7D32 0%,#8BC34A 28%,#F5A623 52%,#E8710A 74%,#C0392B 100%); }
+  .amark{ position:absolute; top:5px; width:3px; height:17px; border-radius:2px; transform:translateX(-50%); box-shadow:0 0 0 2px var(--card); }
+  .atick{ position:absolute; top:7px; width:2px; height:13px; background:var(--muted); opacity:.7; transform:translateX(-50%); }
+  .aend{ position:absolute; top:16px; font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; }
+  .aend.l{ left:0; } .aend.r{ right:0; }
+  .plainq{ font-size:14px; font-weight:600; color:var(--text); margin:18px 2px 6px; display:flex; gap:7px; align-items:baseline; }
+  .plainq::before{ content:"\\203A"; color:var(--accent); font-weight:800; }
+  .sgist{ font-size:13.5px; line-height:1.5; color:var(--muted); margin:2px 0 10px; max-width:64ch; }
 
   /* aggregate cards */
   .agg{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
@@ -155,6 +172,7 @@
       <div class="sub" id="sub">loading\u2026</div>
     </div>
     <div style="display:flex;gap:8px">
+      <button id="modeBtn" class="tbtn" style="width:auto;padding:0 12px;font-weight:600" title="Reading level" onclick="toggleMode()">Plain</button>
       <button id="helpBtn" class="tbtn" title="What do these mean?" aria-label="Help" onclick="openHelp()">?</button>
       <button id="themeBtn" class="tbtn" title="Toggle dark mode" onclick="toggleTheme()" aria-label="Toggle theme"></button>
     </div>
@@ -176,6 +194,12 @@
       <p class="intro">This tracker turns live data and current events into a 1&ndash;10 risk level for each
       "story" (a macro risk theme). Nothing here is a forecast or financial advice &mdash; the levels are a
       transparent, rules-based judgement of how much attention each risk warrants right now.</p>
+
+      <h3>Plain vs Expert (the button top-right)</h3>
+      <div class="hgrid">
+        <div class="k">Plain</div><div>The default. Plain-English names, a one-line "what it is and why it matters" under each story, and a state-of-the-world summary up top. The summary line and the "what changed" list are generated automatically from the scores, so they always match the numbers.</div>
+        <div class="k">Expert</div><div>The full view: original terminology, the tail-weighted aggregation note, and every panel's technical framing. Nothing is hidden in Plain mode &mdash; Expert just adds the jargon and the methodology detail. Your choice is remembered on this device.</div>
+      </div>
 
       <h3>The risk level &amp; bands</h3>
       <div class="hgrid">
@@ -241,6 +265,20 @@ function toggleTheme(){ const c=document.documentElement.getAttribute('data-them
 function initTheme(){ let t=null; try{t=localStorage.getItem('mrt-theme');}catch(e){}
   if(!t) t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light'; setTheme(t); }
 initTheme();
+
+// ---- Plain <-> Expert reading mode (defaults to Plain for first-time/public readers) ----
+let MODE = 'plain';
+let LAST_D = null;
+function setMode(m){ MODE = (m==='expert')?'expert':'plain';
+  try{localStorage.setItem('mrt-mode',MODE);}catch(e){}
+  document.documentElement.setAttribute('data-mode',MODE);
+  const b=document.getElementById('modeBtn');
+  if(b){ b.textContent = MODE==='plain'?'Plain':'Expert';
+    b.title = MODE==='plain'?'Reading level: Plain \u2014 tap for Expert (full jargon + detail)':'Reading level: Expert \u2014 tap for Plain'; }
+  if(LAST_D) render(LAST_D); }
+function toggleMode(){ setMode(MODE==='plain'?'expert':'plain'); }
+function initMode(){ let m=null; try{m=localStorage.getItem('mrt-mode');}catch(e){} setMode(m==='expert'?'expert':'plain'); }
+initMode();
 
 // ---- next-run countdown (mirrors .github/workflows/daily.yml crons, all UTC) ----
 const SCHEDULE = {
@@ -346,13 +384,16 @@ function legend(){
 }
 function heatStrip(d){
   const sets=d.sets||{};
-  const lbl=k=>{ const s=sets[k]||sets[String(k)]; return s?s.short:('Set '+k); };
-  const full=k=>{ const s=sets[k]||sets[String(k)]; return s?s.name:('Set '+k); };
+  const psets=(MODE==='plain'&&d.plain&&d.plain.sets)||null;
+  const pstory=(d.plain&&d.plain.stories)||{};
+  const slbl=s=>(MODE==='plain'&&pstory[s.id]&&pstory[s.id].label)||s.name;
+  const lbl=k=>{ if(psets){const p=psets[k]||psets[String(k)]; if(p)return p.short||p.name;} const s=sets[k]||sets[String(k)]; return s?s.short:('Set '+k); };
+  const full=k=>{ if(psets){const p=psets[k]||psets[String(k)]; if(p)return p.name||p.short;} const s=sets[k]||sets[String(k)]; return s?s.name:('Set '+k); };
   const bySet={};
   for(const s of d.stories){ (bySet[s.set]=bySet[s.set]||[]).push(s); }
   let groups='';
   for(const set of Object.keys(bySet).sort()){
-    const tiles=bySet[set].map(s=>`<a class="tile" href="#story-${s.id}" title="${s.name} \u2014 ${s.level}/10 ${s.band}" style="background:${bandColor(s.level)}">${s.level}</a>`).join('');
+    const tiles=bySet[set].map(s=>`<a class="tile" href="#story-${s.id}" title="${slbl(s)} \u2014 ${s.level}/10 ${s.band}" style="background:${bandColor(s.level)}">${s.level}</a>`).join('');
     groups+=`<div class="hgroup"><span class="hlabel" title="${full(set)}">${lbl(set)}</span><div class="tiles">${tiles}</div></div>`;
   }
   return `<div class="heat">${groups}<div class="legend">${legend()}</div></div>`;
@@ -406,6 +447,8 @@ function reviewRows(arr){ return arr.map(i=>{
   if(i.crosscheck&&i.crosscheck.by){ const c=i.crosscheck;
     xc = c.agree===false
       ? `<span class="pill" style="background:#E8710A;color:#fff;margin-right:4px" title="independent second read by ${c.by} disagreed">\u26A0 ${c.by} disagreed</span>`
+      : c.agree===null
+      ? `<span class="pill" style="background:var(--track);color:var(--muted);margin-right:4px" title="${c.by} could not retrieve a figure to confirm this value">${c.by}: no confirm</span>`
       : `<span class="pill" style="background:var(--track);color:var(--text);margin-right:4px" title="independent second read by ${c.by} agreed">\u2713 checked by ${c.by}</span>`;
   }
   const factLine=i.fact?`<div style="margin-bottom:3px"><span style="font-weight:700;color:var(--accent)">FACT:</span> ${i.fact}</div>`:'';
@@ -574,11 +617,62 @@ function backtestPanel(){
     <span class="asof">${Object.keys(bt.episodes).length} episode(s)<span class="chev"></span></span></div>
     <div class="pbody"><div class="asof" style="margin:8px 0 12px;line-height:1.5">${bt.scope||''}</div>${body}</div></div>`;
 }
+// Plain-mode "state of the world" header. Generated ENTIRELY from the scored board
+// (levels, trends, the overall) so it can never drift from the numbers.
+function gistHeader(d){
+  const a=d.aggregates, ov=a.overall, bnd=bandName(Math.round(ov)), col=bandColor(Math.round(ov));
+  const phrase={Low:'well below its normal range',Moderate:'below normal',Elevated:'a little above normal',
+    High:'running high',Severe:'at crisis levels'}[bnd]||'around normal';
+  const base=(typeof VALIDATION!=='undefined'&&VALIDATION&&VALIDATION.calibration&&VALIDATION.calibration.range
+    &&VALIDATION.calibration.range.baseline)||null;
+  const pl=(d.plain&&d.plain.stories)||{};
+  const plab=s=>(pl[s.id]&&pl[s.id].label)||s.name;
+  let rose=0,fell=0; for(const s of d.stories){ if(s.trend){ if(s.trend.change>0)rose++; else if(s.trend.change<0)fell++; } }
+  const dir=rose>fell?'and rising':fell>rose?'and easing':'and holding steady';
+  const top=[...d.stories].sort((x,y)=>y.level-x.level);
+  const hi=top.filter(s=>s.level>=7).slice(0,3);
+  const dl=(hi.length?hi:top.slice(0,2)).map(plab);
+  const driverStr=dl.length>1?dl.slice(0,-1).join(', ')+' and '+dl[dl.length-1]:(dl[0]||'a mix of areas');
+  const sev=top.some(s=>s.level>=9)?'Some areas are at crisis level.':
+            top.some(s=>s.level>=7)?'A few areas are running high \u2014 worth a look.':
+            'Nothing is at crisis level right now.';
+  const LO=4.7,HI=9.0, pos=v=>Math.max(0,Math.min(100,(v-LO)/(HI-LO)*100));
+  const anchor=`<div class="anchor"><div class="atrack"></div>`+
+    (base?`<div class="atick" style="left:${pos(base)}%" title="usual level \u2248 ${base}"></div>`:'')+
+    `<div class="amark" style="left:${pos(ov)}%;background:${col}"></div>
+     <span class="aend l">calm</span><span class="aend r">crisis</span></div>`;
+  const movers=d.stories.filter(s=>s.trend&&Math.abs(s.trend.change)>=1)
+    .sort((x,y)=>Math.abs(y.trend.change)-Math.abs(x.trend.change)).slice(0,6)
+    .map(s=>`<span class="mv"><b style="color:${s.trend.change>0?'#C0392B':'#2E7D32'}">${s.trend.change>0?'\u25B2':'\u25BC'}</b> ${plab(s)} \u2192 ${s.band}</span>`).join('');
+  return `<div class="gist">
+    <div class="gistnum" style="color:${col}">${ov}<span class="den">/10</span>
+      <span class="gistband" style="background:${col}">${bnd}</span>
+      ${base?`<span class="asof">usual \u2248 ${base}</span>`:''}</div>
+    ${anchor}
+    <p class="gisttxt">Overall risk is <b>${phrase}</b> ${dir}. The main pressures right now are <b>${driverStr}</b>. ${sev}</p>
+    ${movers?`<div class="gistmv"><span class="asof">What changed:</span> ${movers}</div>`:''}
+  </div>`;
+}
+const PLAIN_Q={
+  scout:"What's happening in the world that isn't on the tracker yet?",
+  review:"Which numbers did the AI just check \u2014 and which need a human glance?",
+  consistency:"Does the board contradict itself anywhere?",
+  backtest:"Does this gauge actually react when a real crisis hits?",
+  validation:"Can you trust this gauge? How it was stress-tested, and how high it can go."
+};
+function plainQ(key){ return MODE==='plain'&&PLAIN_Q[key]?`<div class="plainq">${PLAIN_Q[key]}</div>`:''; }
+
 function render(d){
+  LAST_D=d;
   document.getElementById('sub').textContent=`As of ${d.date}  \u00B7  generated ${d.generated_at}`;
   const a=d.aggregates;
   const sets=d.sets||{};
-  const setName=(k,full)=>{ const s=sets[k]||sets[String(k)]; return s?(full?s.name:s.short):('Set '+k); };
+  const psets=(MODE==='plain'&&d.plain&&d.plain.sets)||null;
+  const setName=(k,full)=>{ if(psets){ const p=psets[k]||psets[String(k)]; if(p) return full?(p.name||p.short):(p.short||p.name); }
+    const s=sets[k]||sets[String(k)]; return s?(full?s.name:s.short):('Set '+k); };
+  const pstory=(d.plain&&d.plain.stories)||{};
+  const plabel=s=>(MODE==='plain'&&pstory[s.id]&&pstory[s.id].label)||s.name;
+  const pgist=s=>(MODE==='plain'&&pstory[s.id]&&pstory[s.id].gist)||'';
   const aggCard=(lbl,val,showBand,title)=>`<div class="card"${title?` title="${title}"`:''}><div class="lbl">${lbl}</div>
     <div class="num" style="color:${bandColor(Math.round(val))}">${val}/10</div>
     ${showBand?`<div class="band">${bandName(Math.round(val))}</div>`:''}</div>`;
@@ -587,8 +681,9 @@ function render(d){
   const ovTitle=bk?`Tail-weighted overall: breadth mean ${bk.breadth_mean}, worst-cluster (top ${bk.tail_k}) ${bk.tail_mean}, +${bk.correlated_premium} correlated premium (${bk.n_high_stories} stories at High+)`:'';
   let cards=aggCard('Overall',a.overall,true,ovTitle);
   for(const k of setKeys) cards+=aggCard(setName(k,false),a[k],false,setName(k,true));
-  let html=`<div class="agg">${cards}</div>`;
-  if(bk) html+=`<div class="asof" style="margin:-4px 0 8px">Overall is tail-weighted: it blends the breadth average (${bk.breadth_mean}) with the worst cluster (top ${bk.tail_k} stories = ${bk.tail_mean})${bk.correlated_premium>0?`, plus +${bk.correlated_premium} because ${bk.n_high_stories} stories are High at once`:''} — so a broad, correlated shock lifts it where a simple average wouldn't.</div>`;
+  let html = (MODE==='plain') ? gistHeader(d) : '';
+  html+=`<div class="agg">${cards}</div>`;
+  if(MODE!=='plain' && bk) html+=`<div class="asof" style="margin:-4px 0 8px">Overall is tail-weighted: it blends the breadth average (${bk.breadth_mean}) with the worst cluster (top ${bk.tail_k} stories = ${bk.tail_mean})${bk.correlated_premium>0?`, plus +${bk.correlated_premium} because ${bk.n_high_stories} stories are High at once`:''} — so a broad, correlated shock lifts it where a simple average wouldn't.</div>`;
   html+=`<div class="section-label">Heat map \u2014 all stories</div>`+heatStrip(d);
   html+=healthBar(d);
   html+=`<div class="health" style="gap:10px"><span><b>Brief:</b></span>
@@ -596,16 +691,17 @@ function render(d){
     <a href="briefs/living_brief.html" target="_blank" rel="noopener">Living brief (auto-updated) \u2197</a></div>`;
   html+=`<div class="section-label">Summary</div>`;
   html+=`<div class="narr"><strong>Daily brief</strong>\n${d.narrative||''}</div>`;
-  html+=scoutPanel();
-  html+=reviewPanel(d);
-  html+=consistencyPanel(d);
-  html+=backtestPanel();
-  html+=validationPanel();
+  html+=plainQ('scout')+scoutPanel();
+  html+=plainQ('review')+reviewPanel(d);
+  html+=plainQ('consistency')+consistencyPanel(d);
+  html+=plainQ('backtest')+backtestPanel();
+  html+=plainQ('validation')+validationPanel();
   html+=`<div class="section-label">Stories (highest risk first)</div>`;
   const sorted=[...d.stories].sort((x,y)=>y.level-x.level);
   for(const s of sorted){
     const col=bandColor(s.level);
-    html+=`<div class="story" id="story-${s.id}"><h3>${s.name}<span class="setpill htip" data-tip="${setName(s.set,true)} \u2014 one of five mechanism-based sets.">${setName(s.set,false)}</span></h3>
+    html+=`<div class="story" id="story-${s.id}"><h3>${plabel(s)}<span class="setpill htip" data-tip="${setName(s.set,true)} \u2014 one of five mechanism-based sets.">${setName(s.set,false)}</span></h3>
+      ${pgist(s)?`<p class="sgist">${pgist(s)}</p>`:''}
       <div class="srow">${gauge(s.level)}
         <div class="sright">
           <span class="lvl htip" style="color:${col}" data-tip="Headline risk score from 1 to 10 \u2014 higher means more attention warranted.">${s.level}<span class="den">/10</span></span>

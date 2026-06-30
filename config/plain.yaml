@@ -1,0 +1,76 @@
+# Plain-language layer for the Plain <-> Expert toggle.
+# Editing this file changes ONLY how things are worded in Plain mode. It never
+# touches scoring, levels, or any number. Each story gist is one plain sentence in
+# "what it is -> why it matters" shape, for a reader who is not an economist.
+
+sets:
+  1: {short: "Borrowing", name: "Borrowing & hidden leverage"}
+  2: {short: "Loans", name: "Loans & consumers"}
+  3: {short: "Governments", name: "Governments & money"}
+  4: {short: "Trade", name: "Trade & geopolitics"}
+  5: {short: "Resources", name: "Physical limits"}
+
+stories:
+  s1_basis_trade:
+    label: "Hidden leverage in US government bonds"
+    gist: "Hedge funds borrow heavily to trade US government bonds; if that trade unwinds fast it can freeze the market everyone treats as safe."
+  s2_japan:
+    label: "Japan's rates and the global cash carry trade"
+    gist: "Cheap Japanese money has funded bets worldwide for years; as Japan's interest rates rise, pulling that money home can ripple through global markets."
+  s3_private_credit:
+    label: "Private lending you can't see into"
+    gist: "A fast-growing pile of loans sits outside the banks with little public disclosure, so stress there is hard to spot until it is already large."
+  s4_dev_debt:
+    label: "Debt stress in developing countries"
+    gist: "Many poorer nations owe more than they can comfortably repay; a wave of defaults can spread and pull in their lenders."
+  s5_china_deflation:
+    label: "China's prices spilling into the world"
+    gist: "Big swings in China's factory prices - falling or rising - get exported to everyone else as cheaper goods or higher input costs."
+  s6_rare_earths:
+    label: "Rare-earth minerals used as a weapon"
+    gist: "China controls most of the world's rare-earth processing and is now restricting it, squeezing US defense and high-tech manufacturing."
+  s7_stablecoins:
+    label: "Crypto dollars and US government debt"
+    gist: "Stablecoins must hold US Treasuries as backing, so their rapid growth - or a sudden wobble - now feeds straight back into the government-debt market."
+  s8_ai_capex:
+    label: "The AI spending boom"
+    gist: "Enormous borrowing to build AI data centers is racing ahead of the revenue meant to justify it, concentrating the risk in a few giant companies."
+  s9_cre:
+    label: "Commercial real estate and small banks"
+    gist: "Half-empty offices and loans coming due strain the regional banks that hold them - a slow-burning credit risk."
+  s10_france:
+    label: "France and eurozone stability"
+    gist: "A politically gridlocked, heavily indebted France is the soft spot that could reopen broader euro-area stress."
+  s11_consumer_debt:
+    label: "Household debt strain"
+    gist: "Rising late payments on car loans and buy-now-pay-later show households stretching - an early warning on consumer health."
+  s12_gold_dedollar:
+    label: "Gold and moving away from the dollar"
+    gist: "Central banks stockpiling gold and building non-dollar payment systems slowly chip away at the dollar's dominance."
+  s13_insurance:
+    label: "Insurers pulling back"
+    gist: "As disaster losses climb, insurers raise prices or quit whole regions, leaving homes and assets exposed."
+  s14_pensions:
+    label: "Pensions and an aging population"
+    gist: "Aging populations and underfunded pensions strain public budgets; leveraged pension funds can also break in a sudden rate shock, as the UK saw in 2022."
+  s15_ai_power:
+    label: "AI's strain on the power grid"
+    gist: "AI data centers need more electricity than the grid can quickly supply, triggering curtailments, building moratoria, and multi-year connection queues."
+  s16_copper:
+    label: "Copper for electrification"
+    gist: "Electrifying everything needs far more copper than mines can deliver, and major mine outages are tightening supply further."
+  s17_water:
+    label: "Water as a hidden constraint"
+    gist: "Droughts and shrinking reservoirs threaten chip factories, farms, and power generation - an underpriced input with no substitute."
+  s18_food_fertilizer:
+    label: "Food and fertilizer supply"
+    gist: "Export curbs and shipping disruptions to fertilizer raise the risk of higher food prices down the line."
+  s19_lithography:
+    label: "The chipmaking chokepoint"
+    gist: "The most advanced chips depend on one Dutch tool-maker and Taiwan's factories; any disruption there hits the entire tech economy."
+  s20_sea_lanes:
+    label: "Shipping lanes and undersea cables"
+    gist: "Key straits like Hormuz and the undersea cables carrying the internet are vulnerable chokepoints for global trade and data."
+  s21_clearinghouses:
+    label: "The financial system's plumbing"
+    gist: "Clearinghouses sit at the center of every market; if one seized up under stress, it would jam trading everywhere at once."

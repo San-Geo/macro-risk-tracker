@@ -122,6 +122,15 @@ def main():
         except Exception as e:
             print(f"  (briefs.yaml skipped: {e})")
 
+    # Attach the plain-language layer (config/plain.yaml) for the Plain/Expert toggle.
+    plain_path = os.path.join(ROOT, "config", "plain.yaml")
+    if os.path.exists(plain_path):
+        try:
+            with open(plain_path) as f:
+                result["plain"] = yaml.safe_load(f) or {}
+        except Exception as e:
+            print(f"  (plain.yaml skipped: {e})")
+
     # Attach the agent's latest assessments (this run or last cached) for the dashboard panel.
     alog = agent.load_log()
     if alog.get("assessments"):

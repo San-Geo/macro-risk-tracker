@@ -35,6 +35,8 @@ def write_json(result, narrative, date, path):
     if result.get("overall_breakdown"):
         payload["overall_breakdown"] = result["overall_breakdown"]
     payload["method_version"] = getattr(score, "METHODOLOGY_VERSION", "1.0")
+    if result.get("plain"):
+        payload["plain"] = result["plain"]
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(payload, f, indent=2)
