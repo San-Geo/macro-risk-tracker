@@ -54,6 +54,8 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}   # optional: free key from fred.stlouisfed.org makes FRED feeds reliable from CI
           AGENT_MODEL: ${{ vars.AGENT_MODEL || 'claude-sonnet-4-6' }}
           AGENT_CONCURRENCY: ${{ vars.AGENT_CONCURRENCY || '4' }}
+          AGENT_MODEL_2: ${{ vars.AGENT_MODEL_2 }}            # optional: independent cross-check model, e.g. 'asi1'
+          ASI1_API_KEY: ${{ secrets.ASI1_API_KEY }}           # required only if AGENT_MODEL_2 starts with 'asi1'
           SCOUT_MODEL: ${{ vars.SCOUT_MODEL || 'claude-sonnet-4-6' }}
           # Optional alert channels (set as repo secrets; any/all/none):
           ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
