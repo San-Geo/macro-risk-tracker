@@ -2,12 +2,12 @@
 
 *Auto-generated 2026-06-30 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 5.6/10** — Set 1 4.8, Set 2 5.2, Set 3 4.0, Set 4 6.0, Set 5 5.0.
+**Overall risk 5.8/10** — Set 1 5.2, Set 2 5.0, Set 3 4.8, Set 4 6.2, Set 5 5.5.
 
 
 ## Set 1 — Funding & Leverage
 
-### Treasury basis trade (hidden leverage) — 5/10 (Elevated)
+### Treasury basis trade (hidden leverage) — 6/10 (Elevated)
 
 Hedge funds run a highly leveraged arbitrage between Treasury cash bonds and futures. It is a major source of liquidity, but a spike in funding costs or Treasury volatility can force rapid unwinds, as briefly happened in March 2020 and again in 2025.
 
@@ -19,7 +19,7 @@ Decades of near-zero rates made Japan the funding leg of a vast global carry tra
 
 *Indicators watched:* USD/JPY (yen strengthening = lower = risk), 30-year JGB yield (%), Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)
 
-### Private credit's opaque expansion — 5/10 (Elevated)
+### Private credit's opaque expansion — 6/10 (Elevated)
 
 Lending has migrated from banks to lightly regulated private-credit funds, where assets are marked infrequently and leverage is opaque. Defaults are rising from a low base; the risk is that losses surface suddenly rather than being visible in real time.
 
@@ -58,7 +58,7 @@ Beneath headline figures, subprime auto and buy-now-pay-later delinquencies are 
 
 *Indicators watched:* Subprime auto 60+ day delinquency (%), US unemployment rate (%), BNPL delinquency trend (0 stable / 1 rising / 2 spiking)
 
-### Insurance retreat — 5/10 (Elevated)
+### Insurance retreat — 4/10 (Moderate)
 
 Insurers are retreating from climate-exposed markets through non-renewals and exits, shifting risk onto homeowners and state backstops. Severe catastrophe seasons strain the system and feed into housing and mortgage stress.
 
@@ -73,19 +73,19 @@ A strong dollar, high real rates, and heavy foreign-currency debt loads leave ma
 
 *Indicators watched:* Broad US dollar index (FRED DTWEXBGS), US 10y real yield (TIPS, %), New IMF programs / missed coupons (0 calm / 1 rising / 2 cluster)
 
-### France / eurozone fragility — 4/10 (Moderate)
+### France / eurozone fragility — 5/10 (Elevated)
 
 France combines a wide deficit, a fragmented parliament, and recurring budget standoffs, widening its spread over Germany. Political instability or a rating downgrade would test eurozone cohesion at its second-largest economy.
 
 *Indicators watched:* OAT-Bund 10y spread (%), Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election), Rating action (0 stable / 1 negative outlook / 2 downgrade)
 
-### Gold / de-dollarization — 3/10 (Moderate)
+### Gold / de-dollarization — 4/10 (Moderate)
 
 Central banks are accumulating gold and building non-dollar settlement arrangements at the margin. It is a slow erosion rather than a sudden shift, but reserve 'weaponization' events can accelerate diversification away from the dollar.
 
 *Indicators watched:* Gold price (USD/oz), USD share of FX reserves (%, IMF COFER), Reserve-weaponization / settlement shift (0 none / 1 talk / 2 action)
 
-### Pensions / demographics — 4/10 (Moderate)
+### Pensions / demographics — 5/10 (Elevated)
 
 Aging demographics and underfunded public pensions create slow fiscal pressure, while leveraged liability-driven strategies can blow up fast - as the UK gilt/LDI crisis showed in 2022. Benefit-reform fights are the political pressure valve.
 
@@ -100,19 +100,19 @@ China's factory-gate prices spill into global goods markets in BOTH directions: 
 
 *Indicators watched:* China PPI YoY (%) - large swing either way is worse, USD/CNY (yuan depreciation = higher = risk), New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating)
 
-### Critical minerals as a weapon — 6/10 (Elevated)
+### Critical minerals as a weapon — 7/10 (High)
 
 China dominates the mining and especially the processing of rare earths and critical minerals, and has shown willingness to use export licensing as leverage. Supply chains for magnets and defense inputs have little near-term substitute.
 
 *Indicators watched:* Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen), Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed), US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban), Ex-China heavy rare-earth price premium (x China)
 
-### The lithography (ASML) chokepoint — 5/10 (Elevated)
+### The lithography (ASML) chokepoint — 6/10 (Elevated)
 
 ASML is the sole maker of EUV lithography machines, with Zeiss the sole optics supplier - a single point of failure for advanced chips. Export controls, retaliation, or any disruption to this chain would ripple across the entire tech economy.
 
 *Indicators watched:* Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis), Export-control escalation (0 stable / 1 tightening / 2 retaliation), Single-point concentration (0 easing / 1 high / 2 extreme)
 
-### Sea lanes & undersea cables — 7/10 (High)
+### Sea lanes & undersea cables — 6/10 (Elevated)
 
 A few maritime chokepoints and undersea cables carry most global trade and data. The 2026 Hormuz/Red Sea disruptions showed how quickly closures spike energy and shipping costs; cable cuts are a parallel, under-watched vulnerability.
 
@@ -133,13 +133,13 @@ Electrification and AI infrastructure point to structural copper deficits as dem
 
 *Indicators watched:* Copper price (USD/lb, COMEX HG=F), Major mine disruptions (0 none / 1 some / 2 cluster), Deficit timing (0 surplus / 1 balanced / 2 deficit)
 
-### Water - the underpriced input — 4/10 (Moderate)
+### Water - the underpriced input — 5/10 (Elevated)
 
 Water is systematically underpriced yet essential to chip fabrication, agriculture, and power. Droughts in key hubs (Taiwan's fabs, major farming regions) and transboundary disputes can disrupt supply chains in ways markets rarely price in advance.
 
 *Indicators watched:* Drought in a chip/farm hub (0 none / 1 emerging / 2 acute), Key reservoir / basin stress (0 normal / 1 low / 2 critical), Transboundary water dispute escalation (0 calm / 1 tense / 2 crisis)
 
-### Food & fertilizer fragility — 6/10 (Elevated)
+### Food & fertilizer fragility — 7/10 (High)
 
 Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag.
 

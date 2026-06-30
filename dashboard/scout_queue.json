@@ -168,10 +168,145 @@
       "first_seen": "2026-06-29",
       "last_seen": "2026-06-29",
       "id": "eba-june-2026-risk-assessment-eu-eea-headline-in-61a55e"
+    },
+    "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
+      "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
+      "summary": "June 26\u201329 2026: the US and Iran exchanged fresh strikes near the Strait of Hormuz after Iran attacked Bahrain and Kuwait following new US air strikes. A Trump administration official confirmed a 'stand down for now' Sunday evening, but Hormuz traffic remains under IRGC pressure; oil futures sit near $69\u201372/bbl after spiking to $114 in March.",
+      "as_of": "2026-06-29",
+      "sources": [
+        "https://www.cnn.com/2026/06/28/world/live-news/iran-war-strikes-trump",
+        "https://fortune.com/2026/06/28/stock-market-today-dow-futures-oil-prices-us-iran-ceasefire-talks-oil-prices-hormuz/",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://www.britannica.com/event/2026-Iran-war"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Hormuz status indicator is the primary read-point for s20_sea_lanes. Current situation: ceasefire violently broken on June 26\u201329, Iran strikes Bahrain and Kuwait, US retaliates, Hormuz traffic partially re-disrupted after IRGC claims sovereignty over waterway management under the June 17 MOU. The indicator should be marked '1 contested' (not full closure, but tanker convoys require naval escort and Iran is demanding toll/control rights post-60-day window). WTI ~$69, Brent ~$72 \u2014 still materially elevated vs pre-war ~$55 \u2014 confirms partial resolution but persistent risk premium. This is the highest-materiality single development of the week.",
+      "status": "pending",
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a"
+    },
+    "boj-officials-signal-rate-hikes-every-few-months-17d037": {
+      "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
+      "summary": "BOJ Governor Ueda reaffirmed rate-hike commitment on June 25; board member Tamura called for hikes 'every few months' targeting a neutral rate near 2%. Japan 30yr JGB yield sits at 3.88% (up ~97bps YoY) and 10yr at ~2.61%, with USD/JPY around 159\u2013160 \u2014 yen weakening alongside rising domestic yields is an atypical and destabilizing combination.",
+      "as_of": "2026-06-29",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://tradingeconomics.com/japan/30-year-bond-yield",
+        "https://www.stonex.com/en-us/insights/japan-yield-curve-pressure-threatens-global-carry-trades/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield (%)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The 30yr JGB yield at 3.88% \u2014 up nearly 100bps year-on-year \u2014 is a direct hit to the s2_japan story's 30yr JGB indicator. StoneX notes markets appear 'unwilling to allow both the yen and the long end of the JGB curve to remain simultaneously protected,' and BofA has revised its USD/JPY year-end forecast lower to 152. Combined yen weakness (USD/JPY ~159) and surging super-long yields signal mounting fiscal sustainability concern and growing carry-unwind tail risk. The July 31 BOJ meeting is a live catalyst. The 'Takaichi plan financing clarity' sub-indicator should remain at '1 unclear' given the simultaneous yen weakness and fiscal spending pressure.",
+      "status": "pending",
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "id": "boj-officials-signal-rate-hikes-every-few-months-17d037"
+    },
+    "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
+      "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
+      "summary": "China's MOFCOM on June 22, 2026 added 10 US entities to its export control list, including MP Materials (Mountain Pass mine, CA) and USA Rare Earth (Texas mine-to-magnet project), prohibiting Chinese firms from supplying dual-use items to them with immediate effect. The action was framed as retaliation for the Pentagon adding ~80 Chinese firms to its military-companies list in early June.",
+      "as_of": "2026-06-22",
+      "sources": [
+        "https://intellectia.ai/blog/china-rare-earth-export-controls-june-2026",
+        "https://www.aljazeera.com/news/2026/6/22/china-adds-10-us-firms-including-rare-earth-miner-to-export-control-list",
+        "https://source.benchmarkminerals.com/article/china-targets-us-rare-earth-and-defence-linked-entities-with-dual-use-export-ban",
+        "https://discoveryalert.com.au/china-rare-earth-export-controls-processing-chokepoint-2026/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "This is a direct, precise hit on the 'US domestic RE producer blacklist' indicator in s6_rare_earths. The measure moves the indicator from '0 none' to '1 entity-specific ban'. The ban targets the two largest US domestic producers\u2014MP Materials (Mountain Pass) and USA Rare Earth\u2014which are central to US government-backed supply-chain diversification. Benchmark Minerals confirms the ban is entity-specific rather than blanket, but analysts at Discovery Alert warn it establishes precedent for escalation to sector-wide. NdPr oxide prices have already surged sixfold between January\u2013June 2026 per other data, further validating the stress. The Nov-2025 pause remains nominally in place until Nov 2026 but this action effectively creates parallel, direct suppression of US domestic capacity.",
+      "status": "pending",
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "id": "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6"
+    },
+    "hyperscaler-ai-capex-approaches-800bn-in-2026-67-03d0a0": {
+      "headline": "Hyperscaler AI capex approaches $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027 \u2014 revenue gap concern widens",
+      "summary": "BofA Global Research (June 15 CIO letter) estimates hyperscaler capex could reach $800 billion in 2026, a 67% increase from 2025, and trend toward $1 trillion in 2027. Investor scrutiny remains high over whether economic returns will justify the spending, with broad AI infrastructure debt and concentration risk elevated.",
+      "as_of": "2026-06-15",
+      "sources": [
+        "https://olui2.fs.ml.com/publish/content/application/pdf/gwmol/me-cio-weekly-letter.pdf"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s8_ai_capex",
+      "target_indicator": "AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "BofA's estimate of $800bn in hyperscaler capex for 2026 (+67% YoY) directly updates the s8_ai_capex story. The gap concern indicator should be marked '2 widening fast': capex is scaling geometrically while revenue is not matching pace. The BofA CIO letter itself flags investor scrutiny over 'whether the economic return will ultimately justify this level of investment.' The BlackRock macro outlook similarly notes that 'the AI-enthralled market narrative' echoes prior euphoria cycles. The scale of debt issuance underpinning these data-center builds is the systemic link to the 'GPU-backed debt refinancing stress' and US IG OAS proxies in the same story.",
+      "status": "pending",
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "id": "hyperscaler-ai-capex-approaches-800bn-in-2026-67-03d0a0"
+    },
+    "iran-claims-sovereign-control-over-hormuz-mariti-2e0a6b": {
+      "headline": "Iran claims sovereign control over Hormuz maritime management post-MOU \u2014 structural chokepoint sovereignty risk now embedded in ceasefire terms",
+      "summary": "The June 17 US\u2013Iran MOU allows Hormuz transit 'with no charge for 60 days only,' after which Iran and Oman will determine 'future administration and maritime services.' Iran's IRGC also redefined Hormuz as a 'vast operational area' extending from Jask to Siri Island in May 2026. Multiple analysts warn Iran has achieved de-facto leverage over global oil flow regardless of the final deal.",
+      "as_of": "2026-06-29",
+      "sources": [
+        "https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://www.cnbc.com/2026/05/28/oil-prices-us-strikes-in-iran-revive-strait-of-hormuz-turmoil-fears.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Hormuz sovereignty/toll risk (0 free passage / 1 contested management / 2 Iran toll/control enforced)",
+        "type": "band",
+        "rubric": "0 = Hormuz operates under international freedom-of-navigation norms with no state claiming administrative control; 1 = MOU or ceasefire terms grant Iran/Oman co-management rights, transit operationally possible but under negotiated terms with 60-day sunset clauses and recurring re-escalation risk; 2 = Iran actively enforcing tolls, restricting allied nation shipping, or formally asserting sovereign control recognized in international frameworks. Current reading: 1. Review trigger: expiry of 60-day MOU window (~mid-August 2026) or new IRGC interdiction incident.",
+        "sources": [
+          "https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz",
+          "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+        ],
+        "suggested_weight": 0.35
+      },
+      "proposed_story": null,
+      "rationale": "The existing s20_sea_lanes story tracks whether Hormuz is 'open/contested/closed' on an operational basis, but the June 17 MOU introduces a structurally new risk dimension: Iran has extracted a clause giving it co-management and future toll rights over the world's most critical oil chokepoint. This is not captured by the binary open/closed indicator. Even when Hormuz is operationally transitable, embedded toll-and-sovereignty provisions create a recurring extortion risk for oil importers (Japan, India, South Korea, China) and a potential WTO/UNCLOS challenge. A separate indicator for this structural shift is warranted to distinguish between 'ships are moving' (operational) and 'Iran has legitimized control' (strategic/structural).",
+      "status": "pending",
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "id": "iran-claims-sovereign-control-over-hormuz-mariti-2e0a6b"
+    },
+    "genius-act-implementation-rulemaking-underway-oc-090741": {
+      "headline": "GENIUS Act implementation rulemaking underway \u2014 OCC/Treasury/FinCEN NPRMs active, 18-month compliance clock running since July 2025",
+      "summary": "The GENIUS Act (signed July 18, 2025) is now in multi-agency implementation: OCC issued proposed rules on stablecoin issuance requirements, while Treasury/FinCEN/OFAC issued joint AML/sanctions NPRMs. The effective date is the earlier of January 2027 or 120 days after final rules are issued, but rulemaking complexity and interagency coordination gaps could cause friction ahead of the deadline.",
+      "as_of": "2026-06-30",
+      "sources": [
+        "https://occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
+        "https://home.treasury.gov/news/press-releases/sb0435",
+        "https://www.paulhastings.com/insights/crypto-policy-tracker/the-genius-act-a-comprehensive-guide-to-us-stablecoin-regulation"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The GENIUS Act is law (July 2025) but the OCC, FinCEN, and OFAC are still in proposed-rulemaking phase as of mid-2026, with the compliance clock running toward a January 2027 hard deadline. The OCC bulletin confirms that the majority of rules are proposed but not finalized; FinCEN/OFAC AML/sanctions rules were issued separately in April 2026, still in comment period. This multi-agency divergence in rulemaking timelines \u2014 and the challenge of coordinating federal vs. state supervisory regimes under \u00a710 billion thresholds \u2014 places this indicator at '1 gaps' rather than '0 smooth'. The risk is that issuers face conflicting or delayed final guidance, delaying the stablecoin Treasury-demand dynamic the tracker monitors. Current total USD stablecoin supply is growing rapidly (28%+ YoY per WEF data), making regulatory clarity increasingly urgent.",
+      "status": "pending",
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "id": "genius-act-implementation-rulemaking-underway-oc-090741"
     }
   },
-  "generated": "2026-06-29",
+  "generated": "2026-06-30",
   "model": "claude-sonnet-4-6",
   "new_count": 6,
-  "pending_count": 6
+  "pending_count": 12
 }
