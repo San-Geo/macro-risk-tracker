@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-30",
-  "generated_at": "2026-06-30 16:10 UTC",
+  "date": "2026-07-01",
+  "generated_at": "2026-07-01 14:07 UTC",
   "aggregates": {
     "1": 5.2,
     "3": 4.5,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 5.8
   },
-  "narrative": "**HEADLINE**\nOverall macro risk ticked up to 5.8, driven by escalating AI infrastructure strain and consumer debt stress offsetting modest pension relief.\n\n**STORIES WITH LEVEL CHANGES**\n\n\u2022 **Hidden consumer debt: 5 \u2192 6 (Elevated).** Subprime auto 60+ day delinquencies rose 0.5 percentage points to 6.8%; signals weakening household payment capacity and potential downstream credit losses.\n\n\u2022 **AI power & the grid bottleneck: 6 \u2192 7 (High).** Data-center moratoria have spread to widespread status and acute power-demand pressure persists; constrains AI capex rollout and risks brownouts in grid-stressed regions.\n\n\u2022 **Food & fertilizer fragility: 7 \u2192 6 (Elevated).** China's tightened fertilizer export curbs remain in place but broader supply conditions have stabilized; reduces near-term crop-cost volatility risk.\n\n\u2022 **Pensions / demographics: 5 \u2192 4 (Moderate).** Public-pension funded ratios improved to 87.6% and Social Security debate remains at discussion stage; reduces acute fiscal cliff risk in near term.\n\n**HIGHEST RISK TO WATCH**\nAI power & the grid bottleneck at level 7\u2014widespread moratoria combined with acute demand pressure risks sustained infrastructure investment delays and regional supply disruptions.",
+  "narrative": "**HEADLINE**\nMacro risk remains elevated at 5.8 overall, with critical minerals and AI infrastructure constraints at High level driving structural vulnerabilities across finance, supply chains, and geopolitics.\n\n**NO LEVEL CHANGES RECORDED TODAY**\nThe dataset shows no intraday shifts; all risks remain at their standing levels.\n\n**ELEVATED RISKS PERSISTING (15 stories)**\nKey structural pressures holding steady:\n- **Critical minerals weaponization** (Level 7) and **AI power/grid bottleneck** (Level 7) remain the two highest-risk domains, creating cascading exposure across tech and industrial sectors.\n- **Hidden leverage** via Treasury basis trades, Japanese carry positioning, and private credit opacity (all Level 6) sustain systemic fragility in shadow finance.\n- **China's price spillover, hidden consumer debt, and food/fertilizer fragility** (Level 6) compound real-economy stress.\n- **CRE maturity walls and eurozone fragility** (Level 5) pose regional banking and sovereign risks.\n\n**WATCH PRIORITY**\nCritical minerals supply concentration remains the highest-risk chokepoint with no off-ramps visible.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -23,7 +23,7 @@
         {
           "id": "sofr_effr_spread",
           "label": "SOFR minus EFFR (%)",
-          "value": -0.01,
+          "value": 0.05,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -32,7 +32,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/SOFR",
-          "as_of": "2026-06-29",
+          "as_of": "2026-06-30",
           "provenance": "FRED"
         },
         {
@@ -78,6 +78,7 @@
         6,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -98,7 +99,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 162.657,
+          "value": 162.384,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -107,7 +108,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/JPY=X",
-          "as_of": "2026-06-30",
+          "as_of": "2026-07-01",
           "provenance": "Market"
         },
         {
@@ -153,6 +154,7 @@
         6,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -173,7 +175,7 @@
         {
           "id": "hy_oas",
           "label": "US high-yield OAS (%, \u2248310bps)",
-          "value": 2.8,
+          "value": 2.75,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -182,7 +184,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
-          "as_of": "2026-06-29",
+          "as_of": "2026-06-30",
           "provenance": "FRED"
         },
         {
@@ -228,6 +230,7 @@
         6,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -263,7 +266,7 @@
         {
           "id": "real10",
           "label": "US 10y real yield (TIPS, %)",
-          "value": 2.18,
+          "value": 2.16,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -272,7 +275,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/DFII10",
-          "as_of": "2026-06-26",
+          "as_of": "2026-06-29",
           "provenance": "FRED"
         },
         {
@@ -294,6 +297,7 @@
       "summary": "A strong dollar, high real rates, and heavy foreign-currency debt loads leave many developing economies vulnerable to a sudden stop. A cluster of sovereign defaults or new IMF programs would signal the slow-burn crisis turning acute.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=29",
       "spark": [
+        5,
         5,
         5,
         5,
@@ -338,7 +342,7 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.7751,
+          "value": 6.7788,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -347,7 +351,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CNY=X",
-          "as_of": "2026-06-30",
+          "as_of": "2026-07-01",
           "provenance": "Market"
         },
         {
@@ -369,6 +373,7 @@
       "summary": "China's factory-gate prices spill into global goods markets in BOTH directions: years of PPI deflation exported disinflation and squeezed competitors, while a sharp 2026 reversal to positive PPI (energy/commodity cost-push) now exports input-cost pressure. Either large swing is destabilising; the indicator is scored on the size of the move, not its sign.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=39",
       "spark": [
+        6,
         6,
         6,
         6,
@@ -468,6 +473,7 @@
         6,
         7,
         7,
+        7,
         7
       ],
       "trend": {
@@ -543,6 +549,7 @@
         4,
         4,
         4,
+        4,
         4
       ],
       "trend": {
@@ -572,7 +579,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
-          "as_of": "2026-06-29",
+          "as_of": "2026-06-30",
           "provenance": "FRED"
         },
         {
@@ -609,6 +616,7 @@
       "summary": "AI infrastructure spending vastly exceeds current AI revenue, increasingly financed with debt and circular vendor arrangements. If monetization disappoints or GPU-backed financing strains, the capex cycle could reverse sharply.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=18",
       "spark": [
+        6,
         6,
         6,
         6,
@@ -676,6 +684,7 @@
         6,
         6,
         6,
+        5,
         5,
         5,
         5
@@ -753,6 +762,7 @@
         4,
         5,
         5,
+        5,
         5
       ],
       "trend": {
@@ -828,6 +838,7 @@
         6,
         5,
         5,
+        6,
         6
       ],
       "trend": {
@@ -848,7 +859,7 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4048.3999,
+          "value": 4105.8999,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -857,7 +868,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/GC=F",
-          "as_of": "2026-06-30",
+          "as_of": "2026-07-01",
           "provenance": "Market"
         },
         {
@@ -898,6 +909,7 @@
         3,
         3,
         3,
+        4,
         4,
         4,
         4,
@@ -978,6 +990,7 @@
         4,
         4,
         4,
+        4,
         4
       ],
       "trend": {
@@ -1053,6 +1066,7 @@
         4,
         5,
         5,
+        4,
         4
       ],
       "trend": {
@@ -1128,6 +1142,7 @@
         6,
         6,
         6,
+        7,
         7
       ],
       "trend": {
@@ -1148,7 +1163,7 @@
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.2555,
+          "value": 6.209,
           "band": 2,
           "baseline_band": 1,
           "weight": 0.5,
@@ -1157,7 +1172,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/HG=F",
-          "as_of": "2026-06-30",
+          "as_of": "2026-07-01",
           "provenance": "Market"
         },
         {
@@ -1194,6 +1209,7 @@
       "summary": "Electrification and AI infrastructure point to structural copper deficits as demand outruns new mine supply, which takes a decade to build. Price is the live signal; mine disruptions and inventory draws would confirm tightening.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=52",
       "spark": [
+        4,
         4,
         4,
         4,
@@ -1278,6 +1294,7 @@
         5,
         5,
         5,
+        5,
         5
       ],
       "trend": {
@@ -1353,6 +1370,7 @@
         6,
         7,
         7,
+        6,
         6
       ],
       "trend": {
@@ -1428,6 +1446,7 @@
         5,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -1463,7 +1482,7 @@
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 69.83,
+          "value": 69.08,
           "band": 0,
           "baseline_band": 1,
           "weight": 1.0,
@@ -1472,7 +1491,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CL=F",
-          "as_of": "2026-06-30",
+          "as_of": "2026-07-01",
           "provenance": "Market"
         },
         {
@@ -1503,6 +1522,7 @@
         6,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -1523,7 +1543,7 @@
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 16.86,
+          "value": 16.71,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -1532,7 +1552,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^VIX",
-          "as_of": "2026-06-30",
+          "as_of": "2026-07-01",
           "provenance": "Market"
         },
         {
@@ -1569,6 +1589,7 @@
       "summary": "Central counterparties now concentrate the system's risk by design, and Treasury central-clearing mandates will route more activity through them. In a volatility spike, procyclical margin calls can amplify stress - they are a systemic single point of failure.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=14",
       "spark": [
+        4,
         4,
         4,
         4,
@@ -2975,7 +2996,7 @@
     "live_total": 16,
     "fell_back": 0,
     "agent_last": "2026-06-30",
-    "agent_days_ago": 0,
+    "agent_days_ago": 1,
     "agent_flags": 37,
     "offline": false
   },
@@ -3032,7 +3053,7 @@
             "label": "US high-yield OAS (%, \u2248310bps)",
             "story": "Private credit's opaque expansion",
             "band": 0,
-            "value": 2.8
+            "value": 2.75
           }
         ]
       }
@@ -3046,5 +3067,115 @@
     "n_high_stories": 2,
     "correlated_premium": 0.0
   },
-  "method_version": "2.0"
+  "method_version": "2.0",
+  "plain": {
+    "sets": {
+      "1": {
+        "short": "Borrowing",
+        "name": "Borrowing & hidden leverage"
+      },
+      "2": {
+        "short": "Loans",
+        "name": "Loans & consumers"
+      },
+      "3": {
+        "short": "Governments",
+        "name": "Governments & money"
+      },
+      "4": {
+        "short": "Trade",
+        "name": "Trade & geopolitics"
+      },
+      "5": {
+        "short": "Resources",
+        "name": "Physical limits"
+      }
+    },
+    "stories": {
+      "s1_basis_trade": {
+        "label": "Hidden leverage in US government bonds",
+        "gist": "Hedge funds borrow heavily to trade US government bonds; if that trade unwinds fast it can freeze the market everyone treats as safe."
+      },
+      "s2_japan": {
+        "label": "Japan's rates and the global cash carry trade",
+        "gist": "Cheap Japanese money has funded bets worldwide for years; as Japan's interest rates rise, pulling that money home can ripple through global markets."
+      },
+      "s3_private_credit": {
+        "label": "Private lending you can't see into",
+        "gist": "A fast-growing pile of loans sits outside the banks with little public disclosure, so stress there is hard to spot until it is already large."
+      },
+      "s4_dev_debt": {
+        "label": "Debt stress in developing countries",
+        "gist": "Many poorer nations owe more than they can comfortably repay; a wave of defaults can spread and pull in their lenders."
+      },
+      "s5_china_deflation": {
+        "label": "China's prices spilling into the world",
+        "gist": "Big swings in China's factory prices - falling or rising - get exported to everyone else as cheaper goods or higher input costs."
+      },
+      "s6_rare_earths": {
+        "label": "Rare-earth minerals used as a weapon",
+        "gist": "China controls most of the world's rare-earth processing and is now restricting it, squeezing US defense and high-tech manufacturing."
+      },
+      "s7_stablecoins": {
+        "label": "Crypto dollars and US government debt",
+        "gist": "Stablecoins must hold US Treasuries as backing, so their rapid growth - or a sudden wobble - now feeds straight back into the government-debt market."
+      },
+      "s8_ai_capex": {
+        "label": "The AI spending boom",
+        "gist": "Enormous borrowing to build AI data centers is racing ahead of the revenue meant to justify it, concentrating the risk in a few giant companies."
+      },
+      "s9_cre": {
+        "label": "Commercial real estate and small banks",
+        "gist": "Half-empty offices and loans coming due strain the regional banks that hold them - a slow-burning credit risk."
+      },
+      "s10_france": {
+        "label": "France and eurozone stability",
+        "gist": "A politically gridlocked, heavily indebted France is the soft spot that could reopen broader euro-area stress."
+      },
+      "s11_consumer_debt": {
+        "label": "Household debt strain",
+        "gist": "Rising late payments on car loans and buy-now-pay-later show households stretching - an early warning on consumer health."
+      },
+      "s12_gold_dedollar": {
+        "label": "Gold and moving away from the dollar",
+        "gist": "Central banks stockpiling gold and building non-dollar payment systems slowly chip away at the dollar's dominance."
+      },
+      "s13_insurance": {
+        "label": "Insurers pulling back",
+        "gist": "As disaster losses climb, insurers raise prices or quit whole regions, leaving homes and assets exposed."
+      },
+      "s14_pensions": {
+        "label": "Pensions and an aging population",
+        "gist": "Aging populations and underfunded pensions strain public budgets; leveraged pension funds can also break in a sudden rate shock, as the UK saw in 2022."
+      },
+      "s15_ai_power": {
+        "label": "AI's strain on the power grid",
+        "gist": "AI data centers need more electricity than the grid can quickly supply, triggering curtailments, building moratoria, and multi-year connection queues."
+      },
+      "s16_copper": {
+        "label": "Copper for electrification",
+        "gist": "Electrifying everything needs far more copper than mines can deliver, and major mine outages are tightening supply further."
+      },
+      "s17_water": {
+        "label": "Water as a hidden constraint",
+        "gist": "Droughts and shrinking reservoirs threaten chip factories, farms, and power generation - an underpriced input with no substitute."
+      },
+      "s18_food_fertilizer": {
+        "label": "Food and fertilizer supply",
+        "gist": "Export curbs and shipping disruptions to fertilizer raise the risk of higher food prices down the line."
+      },
+      "s19_lithography": {
+        "label": "The chipmaking chokepoint",
+        "gist": "The most advanced chips depend on one Dutch tool-maker and Taiwan's factories; any disruption there hits the entire tech economy."
+      },
+      "s20_sea_lanes": {
+        "label": "Shipping lanes and undersea cables",
+        "gist": "Key straits like Hormuz and the undersea cables carrying the internet are vulnerable chokepoints for global trade and data."
+      },
+      "s21_clearinghouses": {
+        "label": "The financial system's plumbing",
+        "gist": "Clearinghouses sit at the center of every market; if one seized up under stress, it would jam trading everywhere at once."
+      }
+    }
+  }
 }

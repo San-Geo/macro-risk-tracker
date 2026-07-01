@@ -471,10 +471,156 @@
       "first_seen": "2026-06-30",
       "last_seen": "2026-06-30",
       "id": "hyperscaler-ai-capex-approaching-800b-in-2026-67-88f633"
+    },
+    "china-blacklists-mp-materials-usa-rare-earth-ent-5daba7": {
+      "headline": "China blacklists MP Materials & USA Rare Earth \u2014 entity-specific export control ban on key US domestic RE producers (June 22, 2026)",
+      "summary": "China's MOFCOM added MP Materials and USA Rare Earth (alongside 8 other US defence firms) to its export control list on June 22, barring global transfers of Chinese-origin dual-use goods to these entities \u2014 directly targeting the two US-government-backed companies meant to reduce American dependency on Chinese rare earths. The move signals Beijing's willingness to escalate from licensing hurdles toward categorical entity blacklisting, and raises the spectre of sector-wide restrictions ahead of the November 10, 2026 suspension expiry.",
+      "as_of": "2026-06-22",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/6/22/china-adds-10-us-firms-including-rare-earth-miner-to-export-control-list",
+        "https://intellectia.ai/blog/china-rare-earth-export-controls-june-2026",
+        "https://discoveryalert.com.au/china-rare-earth-export-controls-processing-chokepoint-2026/",
+        "https://www.stocktitan.net/articles/china-rare-earth-export-controls-mp-usa-rare-earth-june-2026"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "US domestic RE producer blacklist",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The June 22 MOFCOM action directly triggers the 's6_rare_earths' indicator 'US domestic RE producer blacklist', shifting it from 0 (none) to 1 (entity-specific ban). MP Materials and USA Rare Earth are the two flagship US-government-backed domestic RE producers; their blacklisting imposes extraterritorial compliance obligations on any global firm transferring Chinese-origin dual-use materials to them, materially raising financing and equipment-sourcing risk. The Nov-10 suspension clock is also now live, making the 'Nov-2025 pause status' sub-indicator increasingly relevant.",
+      "status": "pending",
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01",
+      "id": "china-blacklists-mp-materials-usa-rare-earth-ent-5daba7"
+    },
+    "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
+      "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
+      "summary": "Following the US\u2013Iran ceasefire on April 8, tanker traffic through the Strait of Hormuz rose in early June via ship-to-ship transfers in the Gulf of Oman, but the IEA's June 17 Oil Market Report cautions that mines must still be cleared and supply chains normalised before full recovery \u2014 leaving the strait in a 'contested/partially open' state. ~20% of global oil supply and ~20% of global LNG were disrupted from late February; Qatar declared Force Majeure and LNG liquefaction damage is expected to cut ~120 bcm of supply through 2030.",
+      "as_of": "2026-06-17",
+      "sources": [
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war",
+        "https://www.congress.gov/crs-product/R45281"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Hormuz/Red Sea status indicator should be updated from 2 (closed) toward 1 (contested) \u2014 the strait is no longer fully blocked but remains operationally impaired (mines, below-par traffic, mine-sweeping operations ongoing per IEA June 17 report). WTI/Brent remain elevated. The disruption is also the primary exogenous driver cascading into s18_food_fertilizer (urea/sulfur), s5_china_deflation (export surge partly driven by inventory build ahead of further disruption), s2_japan (energy import stress), and s11_consumer_debt (fuel costs on household budgets).",
+      "status": "pending",
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01",
+      "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554"
+    },
+    "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
+      "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
+      "summary": "At his inaugural FOMC meeting on June 17, new Fed Chair Kevin Warsh eliminated forward guidance entirely, slashed the policy statement to 132 words, and declined to submit his own dot-plot projection \u2014 while nine of eighteen other participants projected at least one rate hike in 2026. MUFG described the event as triggering 'the largest front-end UST selloffs since 2008' at an FOMC event, with 10-year Treasury yields jumping intraday to 4.49%. Warsh launched five task forces to overhaul Fed communications, balance sheet, data, AI/productivity, and inflation frameworks.",
+      "as_of": "2026-06-17",
+      "sources": [
+        "https://gfmag.com/news/fed-scraps-forward-guidance-under-chair-kevin-warsh/",
+        "https://fortune.com/2026/06/17/kevin-warsh-first-fed-meeting-rates-steady-forward-guidance-dropped/",
+        "https://www.lordabbett.com/en-us/financial-advisor/insights/markets-and-economy/2026/june-fed-meeting-policy-signals-from-the-new-chairman.html",
+        "https://www.mufgresearch.com/rates/june-2026-fed-rates-call-update/",
+        "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260617.pdf"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Fed communication regime (0 forward-guidance / 1 data-dependent ambiguity / 2 active opacity)",
+        "type": "band",
+        "rubric": "0 = Fed provides explicit forward guidance and dot-plot with chair participation (pre-Warsh norm); 1 = forward guidance dropped, chair abstains from dot-plot, data-dependency declared \u2014 market reaction function unclear (current state); 2 = dot-plot formally abandoned, active suppression of communication, policy surprise rate elevated (>2 surprises per year)",
+        "sources": [
+          "https://gfmag.com/news/fed-scraps-forward-guidance-under-chair-kevin-warsh/",
+          "https://www.mufgresearch.com/rates/june-2026-fed-rates-call-update/",
+          "https://fortune.com/2026/06/20/fed-chair-kevin-warsh-forward-guidance-other-policymakers/"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The abolition of forward guidance is a structural regime shift in the primary mechanism through which the Fed suppresses short-rate volatility \u2014 a direct input into s1_basis_trade (MOVE index) and s21_clearinghouses (Treasury-clearing rollout stress). The MOVE index and front-end UST volatility are already tracked, but there is no indicator capturing the Fed's communication regime itself, which is now the independent variable driving those measures. The hawkish dot skew (9/18 see hikes) also materially re-prices the risk-free rate baseline for s3_private_credit, s8_ai_capex, and s9_cre maturity walls. A story_gap rather than new_risk because the transmission runs through existing stories, but the causal mechanism (communication opacity) is untracked.",
+      "status": "pending",
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01",
+      "id": "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7"
+    },
+    "china-fixed-asset-investment-collapsed-4-1-yoy-i-b24586": {
+      "headline": "China fixed-asset investment collapsed 4.1% YoY in Jan\u2013May 2026, steepest drop since COVID; property investment down 16.2%",
+      "summary": "Official Chinese data released in June showed fixed-asset investment fell 4.1% year-on-year in the first five months of 2026 \u2014 the worst reading since the height of the COVID-19 pandemic in May 2020 \u2014 driven by a 16.2% plunge in property investment. Manufacturing investment rose only 0.4%, consistent with overcapacity concerns, while exports surged 19.4% in May (partly stockpiling ahead of further supply-chain disruption), deepening the deflation-via-export-surplus dynamic.",
+      "as_of": "2026-06-30",
+      "sources": [
+        "https://www.deloitte.com/us/en/insights/topics/economy/global-economic-outlook/weekly-update.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s5_china_deflation",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "China fixed-asset investment YoY (%, Jan\u2013May rolling)",
+        "type": "value",
+        "rubric": "Tracks the pace of domestic demand creation; readings above 0% = demand support for prices; 0 to -3% = mild contraction / deflationary risk; below -3% = acute domestic demand collapse reinforcing export-surplus deflation spillover. Current: -4.1% (acute zone). Sources: National Bureau of Statistics of China, monthly release.",
+        "sources": [
+          "https://www.deloitte.com/us/en/insights/topics/economy/global-economic-outlook/weekly-update.html"
+        ],
+        "suggested_weight": 0.12
+      },
+      "proposed_story": null,
+      "rationale": "The existing s5_china_deflation story tracks PPI, USD/CNY, and tariff actions, but has no indicator for the underlying domestic demand weakness that is the root cause of the deflationary export surplus. A -4.1% FAI print \u2014 worst since COVID \u2014 combined with -16.2% property investment materially worsens the China PPI trajectory (more oversupply, more export dumping) and is a leading indicator for further CNY depreciation pressure and new anti-dumping actions globally. The story_gap is the absence of a domestic-demand health indicator within s5.",
+      "status": "pending",
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01",
+      "id": "china-fixed-asset-investment-collapsed-4-1-yoy-i-b24586"
+    },
+    "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca": {
+      "headline": "Japan yen hits 4-decade lows; 10yr JGB at ~2.65%; BoJ July 31 hike decision imminent amid Middle East energy import stress",
+      "summary": "The yen weakened to its lowest levels in four decades in late June 2026, with the 10-year JGB yield climbing to ~2.67% before easing to ~2.61\u20132.65% by June 30, as the Fed's hawkish Warsh pivot widened the US\u2013Japan rate differential. BoJ Governor Ueda reaffirmed readiness to raise rates further, with the next policy decision due July 31; board member Tamura publicly backed rate increases every few months. Japan's heavy reliance on Middle Eastern oil imports (~70% via Hormuz) amplifies the fiscal and current-account stress from the Hormuz disruption.",
+      "as_of": "2026-06-30",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.abnamro.com/research/en/our-research/japan-the-land-of-the-rising-yields"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "USD/JPY (yen strengthening = lower = risk)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Multiple s2_japan indicators are flashing simultaneously: USD/JPY at 4-decade highs (risk direction = yen weakening), 10yr JGB at 2.65% (elevated vs. prior), and a July 31 BoJ hike decision that \u2014 if it materialises \u2014 could trigger rapid yen rebound and carry-trade unwind (echoing the Aug-2024 episode). The Hormuz energy shock adds a novel compounding factor (import-cost surge pressuring Japan's current account). Both the USD/JPY and 30yr JGB indicators need live updating; the Takaichi plan financing clarity indicator also warrants review given new fiscal pressures from energy costs.",
+      "status": "pending",
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01",
+      "id": "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca"
+    },
+    "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
+      "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
+      "summary": "The Strait of Hormuz blockade since late February 2026 has choked off over 30% of global urea exports and roughly 45% of global sulfur supply \u2014 both essential fertilizer inputs \u2014 from Gulf producers. The UN World Food Programme and The Food Policy Institute warn of long-term food price increases comparable to the 2022 food crisis, with corn and wheat production costs surging. Even with the partial June reopening, mine-clearing delays mean full supply normalisation will take months.",
+      "as_of": "2026-06-17",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war",
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s18_food_fertilizer",
+      "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The s18_food_fertilizer indicator 'Hormuz/Gulf disruption to fertilizer inputs' should move from 1 (disrupted) toward 2 (cut) given that roughly 30\u201350% of global urea and 45% of sulfur exports transiting Hormuz were blocked for ~3 months. The partial June reopening moderates the reading but does not resolve it \u2014 mines remain, Qatar LNG liquefaction infrastructure is damaged, and WFP is already warning of a 2022-style food price crisis. Food-price-trend and China fertilizer export-curbs indicators within s18 also warrant concurrent review given that China's Hormuz-driven inventory build of its own inputs may further tighten global availability.",
+      "status": "pending",
+      "first_seen": "2026-07-01",
+      "last_seen": "2026-07-01",
+      "id": "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f"
     }
   },
-  "generated": "2026-06-30",
+  "generated": "2026-07-01",
   "model": "claude-sonnet-4-6",
   "new_count": 6,
-  "pending_count": 18
+  "pending_count": 24
 }
