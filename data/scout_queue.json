@@ -617,10 +617,179 @@
       "first_seen": "2026-07-01",
       "last_seen": "2026-07-01",
       "id": "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f"
+    },
+    "strait-of-hormuz-remains-effectively-closed-bren-98679f": {
+      "headline": "Strait of Hormuz Remains Effectively Closed \u2014 Brent ~$105/bbl, OECD Oil Inventories at 2003 Lows",
+      "summary": "Since February 28, 2026, Iranian forces have blocked the Strait of Hormuz following U.S.-Israel strikes on Iran, cutting ~11 mb/d of Middle Eastern output and driving Brent to average ~$105/bbl in June\u2013July. The EIA reports OECD oil inventories are the lowest since 2003, with a projected 7.6 mb/d inventory draw in Q3 2026.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.eia.gov/pressroom/releases/press589.php",
+        "https://www.brookings.edu/articles/from-chokepoint-to-crisis-the-strait-of-hormuz-and-global-oil-markets/",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Strait of Hormuz is the dominant active risk driving global macro right now. The indicator 'Hormuz/Red Sea status' maps directly and should now read 2 (closed). WTI/Brent crude ($105/bbl) also updates the WTI crude indicator. This is the most material single development of the past 7 days and prior weeks, with OECD inventories at 20-year lows and a $3.7 mb/d deficit projected for Q2 2026.",
+      "status": "pending",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "id": "strait-of-hormuz-remains-effectively-closed-bren-98679f"
+    },
+    "hormuz-closure-severs-30-46-of-global-seaborne-f-e10884": {
+      "headline": "Hormuz Closure Severs ~30\u201346% of Global Seaborne Fertilizer Supply; Food Inflation Risk Escalating",
+      "summary": "The Persian Gulf provides ~30\u201335% of global urea exports and ~20\u201330% of ammonia exports, all of which transit the Strait of Hormuz, which has been effectively closed since March 4, 2026. The WEF and UNCTAD warn that prolonged disruption will tighten fertilizer availability for India, Brazil, and China, driving up global food production costs.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.weforum.org/stories/2026/04/beyond-oil-lng-commodities-impacted-closure-hormuz-strait/",
+        "https://unctad.org/publication/strait-hormuz-disruptions-implications-global-trade-and-development",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s18_food_fertilizer",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Hormuz/Gulf disruption to fertilizer inputs",
+        "type": "band",
+        "rubric": "0 = Strait open, fertilizer flows normal; 1 = partial disruption or re-routing, costs rising; 2 = Strait effectively closed (current), Gulf fertilizer exports blocked",
+        "sources": [
+          "https://www.weforum.org/stories/2026/04/beyond-oil-lng-commodities-impacted-closure-hormuz-strait/",
+          "https://unctad.org/publication/strait-hormuz-disruptions-implications-global-trade-and-development"
+        ],
+        "suggested_weight": 0.35
+      },
+      "proposed_story": null,
+      "rationale": "The s18_food_fertilizer story already tracks 'Hormuz/Gulf disruption to fertilizer inputs' as an indicator concept (listed as label in tracker), but its current rubric was calibrated for a lower-severity scenario. The Hormuz closure at this scale (46% of global urea trade cut off) is a step-change that needs the indicator explicitly set to 2 and weighted materially. The existing indicator label exists but the tracker lacks a current value and sourced rubric \u2014 classifying as story_gap to force a formal update.",
+      "status": "pending",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "id": "hormuz-closure-severs-30-46-of-global-seaborne-f-e10884"
+    },
+    "japan-yen-at-4-decade-low-160-usd-despite-73bn-i-324c05": {
+      "headline": "Japan Yen at 4-Decade Low (~160/USD) Despite $73bn Intervention; BOJ 10y JGB Hits Near-30-Year High at 2.7%+",
+      "summary": "Japan spent over \u00a511.7 trillion ($72.8bn) in FX intervention from April\u2013May 2026 and raised rates to a multi-decade high, yet USD/JPY remains pinned near 160. The 10-year JGB yield climbed to ~2.7% (highest in ~30 years), and the 30-year JGB hit 3.88% in late June, as PM Takaichi's reflationary stance and dovish BOJ board nominees cloud the policy outlook.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.cnbc.com/2026/06/19/japan-yen-intervention-boj-rate-hike.html",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://tradingeconomics.com/japan/30-year-bond-yield",
+        "https://www.stonex.com/en-us/insights/japan-yield-curve-pressure-threatens-global-carry-trades/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "USD/JPY (yen strengthening = lower = risk)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "USD/JPY near 160 is a four-decade extreme despite massive intervention and a rate hike \u2014 a direct update to s2's USD/JPY indicator (risk = high, rate is elevated not lower). The 30y JGB at 3.88% and 10y at 2.7%+ simultaneously update the '30-year JGB yield' indicator. The BOJ policy conflict with PM Takaichi's reflationary nominations raises 'Takaichi plan financing clarity' to 2 (disorderly signals). All three s2 indicators need updating.",
+      "status": "pending",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "id": "japan-yen-at-4-decade-low-160-usd-despite-73bn-i-324c05"
+    },
+    "u-s-tariff-authority-cliff-section-122-expires-j-f30557": {
+      "headline": "U.S. Tariff Authority Cliff: Section 122 Expires July 24 \u2014 Administration Pivoting to Sections 301 & 232",
+      "summary": "After the Supreme Court struck down IEEPA tariffs in February 2026 and the Court of International Trade ruled Section 122 tariffs illegal (May 7), the Section 122 10% across-the-board surcharge automatically expires July 24, 2026. The administration is now racing to reconstruct tariff barriers via expanded Sections 301 and 232 investigations covering 16 countries and ~75% of U.S. imports, with final determinations expected in July 2026.",
+      "as_of": "2026-07-02",
+      "sources": [
+        "https://www.atlanticcouncil.org/programs/geoeconomics-center/trump-tariff-tracker/",
+        "https://en.wikipedia.org/wiki/Tariffs_in_the_second_Trump_administration"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US Tariff Legal Architecture Collapse & Reconstruction",
+        "why": "The legal basis for ~60% of U.S. import tariff revenue has been twice struck down (IEEPA Feb 2026, Section 122 ruled illegal May 2026 and expiring July 24). The administration is simultaneously rebuilding tariff walls via Sections 301/232 covering virtually all U.S. imports, creating acute policy uncertainty for trade flows, supply chains, inflation, and EM export economies. A July 24 expiration without Congressional extension or new executive orders triggers an abrupt tariff collapse that markets have not priced.",
+        "proposed_level": 7,
+        "set": 3,
+        "indicators": [
+          {
+            "label": "Section 122 expiry / successor authority status (0 = stable legal basis / 1 = gap risk / 2 = authority lapsed or contested)",
+            "type": "band",
+            "rubric": "0 = Congress extends or new authority firmly in place; 1 = active legal challenge, transition underway; 2 = authority lapses with no replacement, tariff revenue collapses",
+            "sources": [
+              "https://www.atlanticcouncil.org/programs/geoeconomics-center/trump-tariff-tracker/",
+              "https://en.wikipedia.org/wiki/Tariffs_in_the_second_Trump_administration"
+            ],
+            "suggested_weight": 0.4
+          },
+          {
+            "label": "Average effective US tariff rate (%)",
+            "type": "value",
+            "rubric": "Tracks post-legal-challenge effective rate (was 27% peak Apr 2025, fell to ~11.8% by Apr 2026); large drop signals demand destruction reversal and inflation relief but revenue shock",
+            "sources": [
+              "https://en.wikipedia.org/wiki/Tariffs_in_the_second_Trump_administration"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Section 301/232 investigation pace (0 = normal / 1 = accelerated / 2 = emergency final rules)",
+            "type": "band",
+            "rubric": "0 = investigations proceeding on normal timelines; 1 = expedited, covering >50% of imports; 2 = emergency final determinations covering >75% of imports issued ahead of July 24 expiry",
+            "sources": [
+              "https://www.atlanticcouncil.org/programs/geoeconomics-center/trump-tariff-tracker/"
+            ],
+            "suggested_weight": 0.25
+          }
+        ]
+      },
+      "rationale": "No existing tracker story captures the systemic legal fragility of U.S. tariff architecture. The July 24, 2026 Section 122 expiry is a hard binary event within the next 22 days. Legal reconstruction via Sections 301/232 covering nearly all U.S. imports is an escalation with no clear precedent. The risk is two-sided: expiry creates an inflationary deflation shock (tariff revenues collapse, import surges); aggressive Section 301/232 replacement risks WTO retaliation and further court challenges. This is structurally distinct from existing trade war stories and has a hard near-term trigger date.",
+      "status": "pending",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "id": "u-s-tariff-authority-cliff-section-122-expires-j-f30557"
+    },
+    "genius-act-implementing-regulations-miss-july-18-91ae93": {
+      "headline": "GENIUS Act Implementing Regulations Miss July 18 Deadline \u2014 Six Agencies Still Finalizing Rules",
+      "summary": "The GENIUS Act (enacted July 18, 2025) mandated that six federal agencies finalize stablecoin rules within 18 months or 120 days after final regulations, whichever is earlier \u2014 a statutory deadline of July 18, 2026. As of early July 2026, no agency has issued final rules, with comment periods only closed as of June 9, placing the entire regulatory apparatus for a ~$250bn+ stablecoin market in legal limbo. Tether's foreign-issuer Treasury determination also remains unissued.",
+      "as_of": "2026-07-02",
+      "sources": [
+        "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors",
+        "https://www.spark.money/research/genius-act-stablecoin-regulation-explained",
+        "https://occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-3.html"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The GENIUS Act's July 18, 2026 statutory implementation deadline is being missed \u2014 six agencies have not finalized rules as of the current date (July 2, 2026). This directly triggers the 'GENIUS implementation friction' indicator from 0 to at least 1 (gaps) and arguably 2 (problems), given that Tether's foreign-issuer determination is also unresolved. The effective date defaulting to January 2027 creates a 6-month limbo period for the $250bn+ stablecoin market, relevant to Treasury demand and the broader s7 story.",
+      "status": "pending",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "id": "genius-act-implementing-regulations-miss-july-18-91ae93"
+    },
+    "world-bank-cuts-em-global-growth-to-2-5-for-2026-be2ac5": {
+      "headline": "World Bank Cuts EM/Global Growth to 2.5% for 2026; Developing-World Borrowing Costs Surge on Energy Shock",
+      "summary": "The World Bank's June 2026 Global Economic Prospects cuts global growth to 2.5% and flags that rising EMDE borrowing costs \u2014 driven by Middle East energy prices at their highest since 2022 \u2014 are undermining fiscal space in the most indebted developing economies. Low-income country growth is revised down 0.3pp to 5.4%, with fiscal pressures threatening debt servicing capacity.",
+      "as_of": "2026-06-20",
+      "sources": [
+        "https://www.worldbank.org/en/publication/global-economic-prospects",
+        "https://research-center.amundi.com/article/global-investment-views-june-2026"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s4_dev_debt",
+      "target_indicator": "New IMF programs / missed coupons (0 calm / 1 rising / 2 cluster)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The World Bank's formal downgrade of global and EM growth, explicitly citing energy shock-driven tightening of EMDE financial conditions and rising debt servicing stress, is a material update to s4_dev_debt. The combination of higher oil-import bills, weaker EM currencies, and compressed fiscal space raises the probability of new IMF programs and missed coupons from the most vulnerable LICs, pushing the 'New IMF programs / missed coupons' indicator from 0 toward 1 (rising). The broad USD dollar index and 10y real yield indicators within s4 also need updating given the energy-shock inflation dynamics.",
+      "status": "pending",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "id": "world-bank-cuts-em-global-growth-to-2-5-for-2026-be2ac5"
     }
   },
-  "generated": "2026-07-01",
+  "generated": "2026-07-02",
   "model": "claude-sonnet-4-6",
   "new_count": 6,
-  "pending_count": 24
+  "pending_count": 30
 }
