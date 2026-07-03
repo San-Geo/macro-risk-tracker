@@ -90,7 +90,7 @@ stories:
         note: "Carry-unwind signature is a fast yen surge."
       - id: jgb30
         label: "30-year JGB yield (%)"
-        source: "manual"
+        source: "mof_jgb:30"
         cadence: daily
         direction: higher_worse
         good: 3.4
@@ -275,7 +275,7 @@ stories:
     indicators:
       - id: peg_deviation
         label: "Largest stablecoin max peg deviation (%)"
-        source: "manual"
+        source: "llama:largest_peg_dev"
         cadence: daily
         direction: higher_worse
         good: 0.5
@@ -286,8 +286,8 @@ stories:
         note: "USDC briefly hit ~$0.87 (13%) in Mar 2023."
       - id: stablecoin_supply
         label: "Total USD stablecoin supply ($bn)"
-        source: "manual"
-        cadence: monthly
+        source: "llama:stablecoin_total_bn"
+        cadence: daily
         direction: higher_worse
         good: 350
         warn: 600

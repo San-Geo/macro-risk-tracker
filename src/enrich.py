@@ -78,6 +78,10 @@ def source_url(source):
         return f"https://fred.stlouisfed.org/series/{source.split(':', 1)[1]}"
     if source.startswith("market:"):
         return f"https://finance.yahoo.com/quote/{source.split(':', 1)[1]}"
+    if source.startswith("mof_jgb:"):
+        return "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/index.htm"
+    if source.startswith("llama:"):
+        return "https://defillama.com/stablecoins"
     return ""
 
 
@@ -86,6 +90,10 @@ def source_kind(source):
         return "FRED"
     if source.startswith("market:"):
         return "Market"
+    if source.startswith("mof_jgb:"):
+        return "MOF"
+    if source.startswith("llama:"):
+        return "DefiLlama"
     return "Agent/manual"
 
 

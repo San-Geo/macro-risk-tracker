@@ -88,10 +88,19 @@ def _disagree(a, b, kind, tol=0.2):
 
 def load_applied_values():
     """Values from the last agent run that were actually applied -> used on
-    non-agent days so the agent's judgment persists between refreshes."""
+    non-agent days so the agent's judgment persists between refreshes.
+    Filtered to indicators STILL in the framework: if an indicator has been
+    converted to a direct feed (removed from framework.yaml), its stale cached
+    agent value must not override the live feed."""
     log = load_log()
+    try:
+        current = set(load_framework().keys())
+    except Exception:
+        current = None
     out = {}
     for ind_id, a in log.get("assessments", {}).items():
+        if current is not None and ind_id not in current:
+            continue
         if a.get("applied") and a.get("value") is not None:
             out[ind_id] = a["value"]
     return out

@@ -92,6 +92,101 @@ def market_latest(symbol):
     return res["meta"].get("regularMarketPrice")
 
 
+# ---- Japan MOF: official daily JGB constant-maturity yields (keyless CSV) ----
+# The CSV uses Japanese era dates (e.g. "R7.6.24" = Reiwa 7 = 2025... era base: R1=2019,
+# H1=1989, S1=1926) and "-" for holidays/gaps. We take the last row with a numeric value
+# in the requested maturity column.
+MOF_JGB_URLS = [
+    "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv",
+    "https://www.mof.go.jp/jgbs/reference/interest_rate/jgbcm.csv",
+]
+
+
+def _era_to_iso(datestr):
+    m = (datestr or "").strip()
+    base = {"R": 2018, "H": 1988, "S": 1925}.get(m[:1].upper())
+    if not base:
+        return m  # already western or unknown; pass through
+    try:
+        era_y, mo, dy = m[1:].split(".")
+        return f"{base + int(era_y)}-{int(mo):02d}-{int(dy):02d}"
+    except Exception:
+        return m
+
+
+def mof_jgb_latest(maturity="30"):
+    """(value, iso_date) for the latest official JGB constant-maturity yield."""
+    last_err = None
+    for url in MOF_JGB_URLS:
+        try:
+            text = _get(url)
+        except Exception as e:
+            last_err = e
+            continue
+        rows = list(csv.reader(io.StringIO(text)))
+        # find the header row containing the maturity labels (e.g. "30Y" or "30")
+        col = None
+        for r in rows[:6]:
+            for j, cell in enumerate(r):
+                c = cell.strip().upper().replace("YEAR", "Y").replace(" ", "")
+                if c in (f"{maturity}Y", maturity):
+                    col = j
+                    break
+            if col is not None:
+                break
+        if col is None:
+            continue
+        for r in reversed(rows):
+            if len(r) > col:
+                cell = r[col].strip()
+                try:
+                    return (round(float(cell), 3), _era_to_iso(r[0]))
+                except ValueError:
+                    continue
+    if last_err:
+        raise last_err
+    raise ValueError("MOF JGB: maturity column not found")
+
+
+# ---- DefiLlama: free stablecoin aggregates (keyless JSON) ----
+# One HTTP call serves both indicators (total supply + largest-coin peg deviation),
+# cached per process/run.
+LLAMA_STABLES_URL = "https://stablecoins.llama.fi/stablecoins?includePrices=true"
+_llama_cache = {}
+
+
+def _llama_stables():
+    if "data" not in _llama_cache:
+        _llama_cache["data"] = json.loads(_get(LLAMA_STABLES_URL))
+    return _llama_cache["data"]
+
+
+def _usd_circ(asset):
+    c = asset.get("circulating") or {}
+    v = c.get("peggedUSD")
+    return float(v) if isinstance(v, (int, float)) else 0.0
+
+
+def llama_stablecoin_total_bn():
+    """Total circulating USD-pegged stablecoin supply, in $bn."""
+    assets = _llama_stables().get("peggedAssets", [])
+    total = sum(_usd_circ(a) for a in assets if a.get("pegType") == "peggedUSD")
+    return round(total / 1e9, 1) if total > 0 else None
+
+
+def llama_largest_peg_dev_pct():
+    """Absolute peg deviation (%) of the LARGEST USD stablecoin (usually USDT)."""
+    assets = [a for a in _llama_stables().get("peggedAssets", [])
+              if a.get("pegType") == "peggedUSD"]
+    if not assets:
+        return None
+    big = max(assets, key=_usd_circ)
+    price = big.get("price")
+    if not isinstance(price, (int, float)) or price <= 0:
+        return None
+    return round(abs(price - 1.0) * 100, 2)
+
+
 def fetch_value(source):
     try:
         if source.startswith("fred_spread:"):
@@ -101,6 +196,12 @@ def fetch_value(source):
             return fred_latest(source.split(":", 1)[1])
         if source.startswith("market:"):
             return market_latest(source.split(":", 1)[1])
+        if source.startswith("mof_jgb:"):
+            return mof_jgb_latest(source.split(":", 1)[1])[0]
+        if source == "llama:stablecoin_total_bn":
+            return llama_stablecoin_total_bn()
+        if source == "llama:largest_peg_dev":
+            return llama_largest_peg_dev_pct()
     except (urllib.error.URLError, KeyError, ValueError, TimeoutError, Exception):
         return None
     return None  # manual or unknown
@@ -166,6 +267,7 @@ def market_series(symbol, rng="10y"):
 
 def fetch_value_dated(source):
     """Like fetch_value but returns (value, as_of_date)."""
+    import datetime as _dt
     try:
         if source.startswith("fred_spread:"):
             _, a, b = source.split(":")
@@ -174,6 +276,12 @@ def fetch_value_dated(source):
             return fred_latest_dated(source.split(":", 1)[1])
         if source.startswith("market:"):
             return market_latest_dated(source.split(":", 1)[1])
+        if source.startswith("mof_jgb:"):
+            return mof_jgb_latest(source.split(":", 1)[1])
+        if source == "llama:stablecoin_total_bn":
+            return (llama_stablecoin_total_bn(), _dt.date.today().isoformat())
+        if source == "llama:largest_peg_dev":
+            return (llama_largest_peg_dev_pct(), _dt.date.today().isoformat())
     except Exception:
         return (None, None)
     return (None, None)

@@ -719,7 +719,7 @@ function render(d){
       `<th class="tip" tabindex="0" data-tip="How much this indicator is currently pushing the story's level up or down vs its normal baseline (0 = at baseline).">&Delta;</th>`+
       `<th class="tip" tabindex="0" data-tip="daily = refreshed from a live feed each run; event = updated when something happens (AI-rated or human-set).">Cadence</th>`+
       `<th>As of</th>`+
-      `<th class="tip r" tabindex="0" data-tip="Where the value comes from: FRED / Market = live feed, Agent = AI-rated against a rubric, Baseline = analyst's starting value.">Source</th>`+
+      `<th class="tip r" tabindex="0" data-tip="Where the value comes from: FRED / Market / MOF / DefiLlama = live official or aggregator feed, Agent = AI-rated against a rubric, Baseline = analyst's starting value.">Source</th>`+
       `</tr></thead><tbody>`;
     for(const ind of s.indicators){
       const bc=ind.band===null?'#999':bandColor(ind.band<=0?1:ind.band===1?5:9);
