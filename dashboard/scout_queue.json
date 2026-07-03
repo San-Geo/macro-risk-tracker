@@ -786,10 +786,157 @@
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-02",
       "id": "world-bank-cuts-em-global-growth-to-2-5-for-2026-be2ac5"
+    },
+    "iran-re-asserts-route-control-over-strait-of-hor-558290": {
+      "headline": "Iran re-asserts route control over Strait of Hormuz days into fragile ceasefire; oil near $72 but shipping volumes at ~30% of pre-war levels",
+      "summary": "On July 2, 2026, Iran's joint military command warned all tankers to use Tehran-approved routes or face 'a forceful response,' just hours after US-Iranian diplomats met in Qatar. Commercial transits remain far below pre-war levels of ~130 vessels/day, insurance remains prohibitively expensive, and analysts warn oil markets are underpricing persistent supply risk.",
+      "as_of": "2026-07-02",
+      "sources": [
+        "https://www.pbs.org/newshour/world/iran-warns-oil-tankers-to-use-approved-routes-in-strait-of-hormuz-or-face-a-forceful-response",
+        "https://www.cnbc.com/2026/06/29/strait-of-hormuz-shipping-iran-oil-war-us.html",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Hormuz remains the primary open story; the July 2 Iranian route-control ultimatum is a fresh escalation within the ongoing ceasefire window. The strait is currently 'contested' (score 1\u2192borderline 2): Iran controls routing, transits are ~30% of normal, and a formal toll/control regime is being negotiated. WTI/Brent at ~$72 has fallen sharply from the ~$188 wartime high but analysts say inventory-rebuilding demand could push back toward $80. The Hormuz/Red Sea status indicator and WTI crude indicator both need updating; the undersea-cable sub-indicator is also elevated given mine-laying reports.",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "id": "iran-re-asserts-route-control-over-strait-of-hor-558290"
+    },
+    "yen-craters-to-4-decade-low-30-year-jgb-yield-ri-33974c": {
+      "headline": "Yen craters to 4-decade low; 30-year JGB yield rises to ~4.04%, highest since 1999 \u2014 carry-trade unwind risk acute",
+      "summary": "As of July 1-2, 2026, USD/JPY hit levels not seen in four decades while the 30-year JGB yield touched 4.04% \u2014 up ~108bps over the past year. The BOJ faces the impossible trinity of defending the yen, capping JGB yields, and normalising policy amid Middle East-driven energy inflation, with a new dovish board appointee signalling conflicting policy signals.",
+      "as_of": "2026-07-02",
+      "sources": [
+        "https://wolfstreet.com/2026/07/01/yen-craters-to-4-decade-low-jgb-yields-at-3-decade-highs-monetary-policy-mess-comes-home-to-roost/",
+        "https://tradingeconomics.com/japan/30-year-bond-yield",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.stonex.com/en-us/insights/japan-yield-curve-pressure-threatens-global-carry-trades/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield (%)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The 30yr JGB at 4.04% and the yen at a 40-year low are simultaneous extremes that directly update both the USD/JPY and 30yr JGB yield indicators in s2_japan. The Takaichi plan financing clarity indicator should also move to '2 disorderly' given the new dovish BOJ board appointment (Ayano Sato) contradicting Ueda's hawkish tightening rhetoric, creating governance uncertainty. This is not a new story but the magnitude (4-decade yen low + 30yr JGB near 4%) materially worsens the carry-trade unwind risk tracked under s2.",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "id": "yen-craters-to-4-decade-low-30-year-jgb-yield-ri-33974c"
+    },
+    "china-s-november-2026-extraterritorial-rare-eart-e3963c": {
+      "headline": "China's November 2026 extraterritorial rare-earth enforcement deadline looms; US rare-earth imports still 85%+ below 2024 levels for controlled compounds",
+      "summary": "The October 2025 rare-earth controls suspended extraterritorial enforcement until November 10, 2026 \u2014 now only ~19 weeks away. CSIS data show US yttrium imports remain near historic lows, European approval rates for controlled-compound licenses are below 25%, and China's MIIT drafted new domestic production penalties in April 2026 that tighten the whole supply chain.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
+        "https://informedclearly.com/en/geopolitics/54246/china-rare-earth-export-controls-2026"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s6_rare_earths",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Nov-2026 extraterritorial enforcement countdown (weeks to activation / 0 extended / 1 on track to activate / 2 activated)",
+        "type": "band",
+        "rubric": "0 = suspension extended again by diplomatic deal; 1 = on track to activate Nov 10, 2026 with no new deal (current); 2 = activated early or de-facto activated via aggressive enforcement actions before deadline. Score 1 currently with ~19 weeks remaining and no credible suspension deal in sight.",
+        "sources": [
+          "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
+          "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+          "https://www.certivo.com/blog-details/china-rare-earth-export-controls-2026-what-new-licensing-rules-mean-for-manufacturers"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s6_rare_earths tracker has an indicator 'Nov-2025 pause status' that is now stale \u2014 the Nov-2025 pause was implemented and the relevant live risk is whether the Nov-2026 extraterritorial enforcement date (which extends Chinese regulatory jurisdiction to any product containing \u22650.1% Chinese-origin rare earths, globally) will activate. No current indicator captures this countdown clock. With the Iran war consuming diplomatic bandwidth, a new deal to extend the pause looks unlikely, making this a near-term binary event risk.",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "id": "china-s-november-2026-extraterritorial-rare-eart-e3963c"
+    },
+    "genius-act-full-rulemaking-deadline-of-july-18-2-67b23f": {
+      "headline": "GENIUS Act full-rulemaking deadline of July 18, 2026 approaches; Treasury/FinCEN AML proposed rule issued April 2026 but licensing, capital, and reserve regulations remain in proposed/comment stage",
+      "summary": "The GENIUS Act (enacted July 18, 2025) mandated that all primary regulations \u2014 covering licensing, capital, liquidity, and reserve standards for permitted payment stablecoin issuers \u2014 be promulgated by July 18, 2026. With the deadline two weeks away, the only issued rule is a FinCEN/OFAC AML proposed rule from April 2026; core prudential regulations are not yet final, creating a legal gap for the ~$250bn stablecoin market.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://www.gibsondunn.com/the-genius-act-a-new-era-of-stablecoin-regulation/",
+        "https://home.treasury.gov/news/press-releases/sb0435",
+        "https://www.federalregister.gov/documents/2025/09/19/2025-18226/genius-act-implementation"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The July 18, 2026 statutory rulemaking deadline for core GENIUS Act prudential regulations (licensing, capital, reserve standards) is 15 days away and core rules are not yet finalised \u2014 only the AML proposed rule has been issued (April 2026). This moves the GENIUS implementation friction indicator from '0 smooth' to '1 gaps': permitted issuers cannot fully comply with a framework whose licensing and reserve regulations do not yet exist in final form, creating legal uncertainty for a ~$250bn market that is directly connected to Treasury-bill demand (the s7_stablecoins story's core mechanism).",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "id": "genius-act-full-rulemaking-deadline-of-july-18-2-67b23f"
+    },
+    "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec": {
+      "headline": "Iran war energy shock drives Hormuz fertilizer disruption; Gulf fertilizer exports (especially Qatar LNG-linked urea) severely curtailed since March 2026",
+      "summary": "The effective closure of the Strait of Hormuz since March 2026 has cut off Qatar's LNG-linked urea exports and Iraq/Kuwait's ammonia shipments, with CSIS noting crude oil and fertilizer prices have 'risen sharply' reflecting the region's role in global supply chains. The spring/summer planting disruption could propagate into 2026-27 crop-year food price pressure.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://www.csis.org/analysis/strait-hormuz-8-charts",
+        "https://www.congress.gov/crs-product/R45281",
+        "https://www.brookings.edu/articles/from-chokepoint-to-crisis-the-strait-of-hormuz-and-global-oil-markets/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s18_food_fertilizer",
+      "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Hormuz/Gulf fertilizer indicator in s18_food_fertilizer should be moved to '2 cut': roughly 27% of world maritime crude trade was blocked since March 4, Qatar LNG-derived urea and Gulf ammonia/phosphate routes are severed, and CSIS explicitly flags fertilizer price spikes alongside oil. This is highly material for the 2026-27 agricultural season as northern-hemisphere planting decisions are being made now under severe input-price uncertainty. The food-price-trend indicator should also move toward '2 spiking' from 'elevated'.",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "id": "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec"
+    },
+    "japan-s-energy-import-crisis-deepens-as-hormuz-c-e531e3": {
+      "headline": "Japan's energy import crisis deepens as Hormuz closure compounds BOJ policy bind \u2014 new macro feedback loop not captured in existing indicators",
+      "summary": "Japan sources ~90% of its oil from Middle East suppliers transiting Hormuz; the strait's near-closure since March 2026 has created an acute energy import shock on top of the yen collapse, pushing Japanese inflation higher and leaving the BOJ caught between tightening (to defend the yen) and easing (to offset the energy recession). This interaction between s2_japan and s20_sea_lanes is a structural feedback not tracked by any existing indicator.",
+      "as_of": "2026-07-02",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://wolfstreet.com/2026/07/01/yen-craters-to-4-decade-low-jgb-yields-at-3-decade-highs-monetary-policy-mess-comes-home-to-roost/",
+        "https://www.resolutionfoundation.org/publications/the-macroeconomic-policy-outlook-q2-2026/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japan energy-import stress from Hormuz (0 normal / 1 elevated cost / 2 acute shortage)",
+        "type": "band",
+        "rubric": "0 = Hormuz fully open, Japan energy imports at normal volumes and prices; 1 = Hormuz contested, Japan paying significant premium or sourcing alternatives at higher cost, BOJ policy complicated by stagflationary impulse (CURRENT \u2014 Japan relies on ~90% Middle East oil, Hormuz near-closed since March 2026, 10yr JGB at 2.70%, 30yr at 4.04%, yen at 40yr low); 2 = acute shortage, rationing, or emergency IEA drawdown triggered for Japan specifically.",
+        "sources": [
+          "https://tradingeconomics.com/japan/government-bond-yield",
+          "https://wolfstreet.com/2026/07/01/yen-craters-to-4-decade-low-jgb-yields-at-3-decade-highs-monetary-policy-mess-comes-home-to-roost/",
+          "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The s2_japan story tracks fiscal/JGB/carry risk in isolation, but a material new dimension has emerged: Japan's 90% dependence on Middle Eastern oil transiting Hormuz means the Iran war directly and severely worsens Japan's import bill, amplifies yen weakness (more USD needed for oil), raises domestic inflation (complicating BOJ), and increases the risk of a disorderly policy response. This cross-story feedback \u2014 Hormuz shock feeding into JGB/yen instability \u2014 is not captured by any existing s2 or s20 indicator and represents a systemic amplification channel that could accelerate the carry-trade unwind scenario. Score currently: 1 (elevated cost, no acute shortage yet due to IEA releases and Saudi pipeline diversions).",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "id": "japan-s-energy-import-crisis-deepens-as-hormuz-c-e531e3"
     }
   },
-  "generated": "2026-07-02",
+  "generated": "2026-07-03",
   "model": "claude-sonnet-4-6",
   "new_count": 6,
-  "pending_count": 30
+  "pending_count": 36
 }

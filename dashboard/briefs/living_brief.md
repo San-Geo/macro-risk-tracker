@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-07-02 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-07-03 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 5.8/10** — Set 1 5.2, Set 2 5.2, Set 3 4.5, Set 4 6.2, Set 5 5.5.
+**Overall risk 5.8/10** — Set 1 5.2, Set 2 5.2, Set 3 4.8, Set 4 6.2, Set 5 5.5.
 
 
 ## Set 1 — Funding & Leverage
@@ -67,7 +67,7 @@ Insurers are retreating from climate-exposed markets through non-renewals and ex
 
 ## Set 3 — Sovereigns & the Monetary Order
 
-### Developing-world debt crisis — 5/10 (Elevated)
+### Developing-world debt crisis — 6/10 (Elevated)
 
 A strong dollar, high real rates, and heavy foreign-currency debt loads leave many developing economies vulnerable to a sudden stop. A cluster of sovereign defaults or new IMF programs would signal the slow-burn crisis turning acute.
 

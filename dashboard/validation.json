@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-02T13:32:05.025139+00:00",
+  "generated": "2026-07-03T13:44:32.331973+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -161,36 +161,6 @@
         "overall_swing": 0.1
       },
       {
-        "id": "new_imf_programs",
-        "label": "New IMF programs / missed coupons (0 calm / 1 rising / 2 cluster)",
-        "story": "Developing-world debt crisis",
-        "set": 3,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.0
-      },
-      {
-        "id": "oat_bund",
-        "label": "OAT-Bund 10y spread (%)",
-        "story": "France / eurozone fragility",
-        "set": 3,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.0
-      },
-      {
-        "id": "govt_stability",
-        "label": "Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election)",
-        "story": "France / eurozone fragility",
-        "set": 3,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.0
-      },
-      {
         "id": "license_flow",
         "label": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
         "story": "Critical minerals as a weapon",
@@ -208,7 +178,27 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.5,
-        "overall_swing": 0.0
+        "overall_swing": 0.1
+      },
+      {
+        "id": "oat_bund",
+        "label": "OAT-Bund 10y spread (%)",
+        "story": "France / eurozone fragility",
+        "set": 3,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.5,
+        "overall_swing": 0.1
+      },
+      {
+        "id": "govt_stability",
+        "label": "Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election)",
+        "story": "France / eurozone fragility",
+        "set": 3,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.5,
+        "overall_swing": 0.1
       },
       {
         "id": "usdjpy",
@@ -249,6 +239,16 @@
         "story_swing": 2,
         "set_swing": 0.4,
         "overall_swing": 0.0
+      },
+      {
+        "id": "china_ppi",
+        "label": "China PPI YoY (%) - large swing either way is worse",
+        "story": "China's price spillover (deflation or cost-push)",
+        "set": 4,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.4
       }
     ],
     "note": "The overall is tail-weighted, not a flat mean, so a single indicator still can't swing it far - the headline is robust by construction. The leverage that matters is on each STORY: the indicators below are where a wrong fact does the most damage and most deserves cross-checking."

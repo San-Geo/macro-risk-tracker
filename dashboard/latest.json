@@ -1,15 +1,15 @@
 {
-  "date": "2026-07-02",
-  "generated_at": "2026-07-02 13:30 UTC",
+  "date": "2026-07-03",
+  "generated_at": "2026-07-03 13:42 UTC",
   "aggregates": {
     "1": 5.2,
-    "3": 4.5,
+    "3": 4.8,
     "4": 6.2,
     "2": 5.2,
     "5": 5.5,
     "overall": 5.8
   },
-  "narrative": "# EOD MACRO-RISK BRIEF | 2 July 2026\n\n**Overall risk stands at 5.8/10\u2014Elevated\u2014with no intraday moves but two High-level structural vulnerabilities persistent.**\n\nNo risk levels changed today. However, two stories remain at High (7/10):\n- **AI power & the grid bottleneck**: Electricity capacity constraints threaten AI infrastructure scaling; grid investment lag creates supply-demand mismatch.\n- **Critical minerals as a weapon**: Concentrated supply chains in strategic commodities expose economies to supply disruption or coercion.\n\nNine additional risks sit at Elevated (6/10), spanning financial leverage (Treasury basis trades, private credit opacity), geopolitical spillovers (China deflation, sea lanes), and structural imbalances (CRE maturity wall, hidden consumer debt, lithography chokepoint).\n\n**Watch**: AI power & grid bottleneck\u2014energy constraints may become the binding constraint on AI capex assumptions embedded across equity and credit valuations.",
+  "narrative": "# EOD Macro-Risk Brief | 2026-07-03\n\n**Headline:** Overall risk stable at 5.8, but developing-world debt crisis escalated to Elevated on higher US real yields.\n\n**Stories with level changes:**\n\u2022 **Developing-world debt crisis** (5\u21926, now Elevated): US 10y real yield rose 50bps to 2.25%, widening debt service costs for emerging markets and increasing refinancing pressure.\n\n**Highest-risk watch:** Critical minerals as a weapon and AI power & grid bottleneck both remain at level 7 (High); the latter poses acute infrastructure constraints as build-out accelerates.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -80,6 +80,7 @@
         6,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -100,7 +101,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 161.122,
+          "value": 161.242,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -109,7 +110,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/JPY=X",
-          "as_of": "2026-07-02",
+          "as_of": "2026-07-03",
           "provenance": "Market"
         },
         {
@@ -157,6 +158,7 @@
         6,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -177,7 +179,7 @@
         {
           "id": "hy_oas",
           "label": "US high-yield OAS (%, \u2248310bps)",
-          "value": 2.75,
+          "value": 2.74,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -186,7 +188,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
-          "as_of": "2026-06-30",
+          "as_of": "2026-07-01",
           "provenance": "FRED"
         },
         {
@@ -234,6 +236,7 @@
         6,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -247,8 +250,8 @@
       "name": "Developing-world debt crisis",
       "set": 3,
       "base_level": 5,
-      "raw_level": 5.0,
-      "level": 5,
+      "raw_level": 5.5,
+      "level": 6,
       "band": "Elevated",
       "indicators": [
         {
@@ -269,16 +272,16 @@
         {
           "id": "real10",
           "label": "US 10y real yield (TIPS, %)",
-          "value": 2.2,
-          "band": 0,
+          "value": 2.25,
+          "band": 1,
           "baseline_band": 0,
           "weight": 1.0,
-          "delta": 0.0,
+          "delta": 0.5,
           "source": "fred:DFII10",
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/DFII10",
-          "as_of": "2026-06-30",
+          "as_of": "2026-07-01",
           "provenance": "FRED"
         },
         {
@@ -311,12 +314,13 @@
         5,
         5,
         5,
-        5
+        5,
+        6
       ],
       "trend": {
         "prev": 5,
         "since": "2026-06-29",
-        "change": 0
+        "change": 1
       }
     },
     {
@@ -346,7 +350,7 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.7742,
+          "value": 6.7694,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -355,7 +359,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CNY=X",
-          "as_of": "2026-07-02",
+          "as_of": "2026-07-03",
           "provenance": "Market"
         },
         {
@@ -377,6 +381,7 @@
       "summary": "China's factory-gate prices spill into global goods markets in BOTH directions: years of PPI deflation exported disinflation and squeezed competitors, while a sharp 2026 reversal to positive PPI (energy/commodity cost-push) now exports input-cost pressure. Either large swing is destabilising; the indicator is scored on the size of the move, not its sign.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=39",
       "spark": [
+        6,
         6,
         6,
         6,
@@ -480,6 +485,7 @@
         7,
         7,
         7,
+        7,
         7
       ],
       "trend": {
@@ -557,6 +563,7 @@
         4,
         4,
         4,
+        4,
         4
       ],
       "trend": {
@@ -586,7 +593,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
-          "as_of": "2026-06-30",
+          "as_of": "2026-07-01",
           "provenance": "FRED"
         },
         {
@@ -623,6 +630,7 @@
       "summary": "AI infrastructure spending vastly exceeds current AI revenue, increasingly financed with debt and circular vendor arrangements. If monetization disappoints or GPU-backed financing strains, the capex cycle could reverse sharply.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=18",
       "spark": [
+        6,
         6,
         6,
         6,
@@ -692,6 +700,7 @@
         6,
         6,
         6,
+        5,
         5,
         5,
         5,
@@ -773,6 +782,7 @@
         5,
         5,
         5,
+        5,
         5
       ],
       "trend": {
@@ -808,7 +818,7 @@
         {
           "id": "unrate",
           "label": "US unemployment rate (%)",
-          "value": 4.3,
+          "value": 4.2,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -817,7 +827,7 @@
           "cadence": "monthly",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/UNRATE",
-          "as_of": "2026-05-01",
+          "as_of": "2026-06-01",
           "provenance": "FRED"
         },
         {
@@ -850,6 +860,7 @@
         5,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -870,7 +881,7 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4131.0,
+          "value": 4178.8999,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -879,7 +890,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/GC=F",
-          "as_of": "2026-07-02",
+          "as_of": "2026-07-03",
           "provenance": "Market"
         },
         {
@@ -920,6 +931,7 @@
         3,
         3,
         3,
+        4,
         4,
         4,
         4,
@@ -1004,6 +1016,7 @@
         4,
         4,
         4,
+        4,
         4
       ],
       "trend": {
@@ -1079,6 +1092,7 @@
         4,
         5,
         5,
+        4,
         4,
         4,
         4
@@ -1158,6 +1172,7 @@
         6,
         7,
         7,
+        7,
         7
       ],
       "trend": {
@@ -1178,7 +1193,7 @@
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.1905,
+          "value": 6.213,
           "band": 2,
           "baseline_band": 1,
           "weight": 0.5,
@@ -1187,7 +1202,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/HG=F",
-          "as_of": "2026-07-02",
+          "as_of": "2026-07-03",
           "provenance": "Market"
         },
         {
@@ -1224,6 +1239,7 @@
       "summary": "Electrification and AI infrastructure point to structural copper deficits as demand outruns new mine supply, which takes a decade to build. Price is the live signal; mine disruptions and inventory draws would confirm tightening.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=52",
       "spark": [
+        4,
         4,
         4,
         4,
@@ -1312,6 +1328,7 @@
         5,
         5,
         5,
+        5,
         5
       ],
       "trend": {
@@ -1387,6 +1404,7 @@
         6,
         7,
         7,
+        6,
         6,
         6,
         6
@@ -1466,6 +1484,7 @@
         6,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -1501,7 +1520,7 @@
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 67.57,
+          "value": 68.66,
           "band": 0,
           "baseline_band": 1,
           "weight": 1.0,
@@ -1510,7 +1529,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CL=F",
-          "as_of": "2026-07-02",
+          "as_of": "2026-07-03",
           "provenance": "Market"
         },
         {
@@ -1543,6 +1562,7 @@
         6,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -1563,7 +1583,7 @@
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 16.23,
+          "value": 15.93,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -1572,7 +1592,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^VIX",
-          "as_of": "2026-07-02",
+          "as_of": "2026-07-03",
           "provenance": "Market"
         },
         {
@@ -1609,6 +1629,7 @@
       "summary": "Central counterparties now concentrate the system's risk by design, and Treasury central-clearing mandates will route more activity through them. In a volatility spike, procyclical margin calls can amplify stress - they are a systemic single point of failure.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=14",
       "spark": [
+        4,
         4,
         4,
         4,
@@ -3017,7 +3038,7 @@
     "live_total": 16,
     "fell_back": 0,
     "agent_last": "2026-06-30",
-    "agent_days_ago": 2,
+    "agent_days_ago": 3,
     "agent_flags": 37,
     "offline": false
   },
@@ -3074,7 +3095,7 @@
             "label": "US high-yield OAS (%, \u2248310bps)",
             "story": "Private credit's opaque expansion",
             "band": 0,
-            "value": 2.75
+            "value": 2.74
           }
         ]
       }
@@ -3082,7 +3103,7 @@
   },
   "overall_breakdown": {
     "overall": 5.8,
-    "breadth_mean": 5.3,
+    "breadth_mean": 5.4,
     "tail_mean": 6.3,
     "tail_k": 7,
     "n_high_stories": 2,
