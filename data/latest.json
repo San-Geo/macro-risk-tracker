@@ -1,6 +1,6 @@
 {
   "date": "2026-07-03",
-  "generated_at": "2026-07-03 21:41 UTC",
+  "generated_at": "2026-07-03 22:14 UTC",
   "aggregates": {
     "1": 5.4,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.2
   },
-  "narrative": "**HEADLINE**\nMacro risk remains elevated at 6.2, with three High-rated threats\u2014Japan carry-trade unwinding, critical minerals weaponization, and AI power constraints\u2014posing systemic spillover potential.\n\n**STORIES WITH LEVEL CHANGES**\nNo stories changed risk level today.\n\n**ELEVATED OR HIGHER RISKS (15 active)**\n- **Japan fiscal/JGB/carry trade (Level 7, High):** Structural imbalance in JGB yields and yen carry positioning creates acute unwinding risk; could trigger forced deleveraging across global markets.\n- **Critical minerals as weapon (Level 7, High):** Geopolitical control of rare earths and battery metals threatens supply chains; direct exposure to industrial and energy transition timelines.\n- **AI power & grid bottleneck (Level 7, High):** Data center demand outpacing grid capacity; infrastructure lag risks compute-driven financing models and stranded capex.\n- **Treasury basis / Private credit / Hidden consumer debt / Food fragility / Lithography chokepoint / Sea lanes (Levels 5\u20136, Elevated):** Secondary leverage, opacity, and supply concentration amplify contagion vectors.\n\n**WATCH**\nJapan fiscal/carry unwind\u2014most proximate trigger for cross-asset volatility given leverage embedded in global portfolios.",
+  "narrative": "# EOD Macro-Risk Brief | 2026-07-03\n\n**Overall macro risk stands at 6.2 (High), with no intraday level changes but persistent elevation across structural vulnerabilities.**\n\nNo stories moved today. Fifteen risks remain at Elevated or High bands:\n\n\u2022 **High-band risks** (3 stories): Japan fiscal/JGB/carry trade (7), Critical minerals weaponization (7), and AI power grid bottleneck (7) anchor the top tier.\n\n\u2022 **Elevated-band risks** (12 stories) span financial leverage (Treasury basis trades, private credit opacity, hidden consumer debt), macro imbalances (China deflation/cost-push spillover, developing-world debt, eurozone fragility), and supply-chain chokepoints (ASML lithography, sea lanes/undersea cables, food/fertilizer, water constraints, AI financing circularity).\n\n**Watch closest:** Japan's carry-trade unwind and structural fiscal stress (level 7)\u2014reversal dynamics could trigger rapid deleveraging across correlated markets.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -73,6 +73,7 @@
         5,
         5,
         5,
+        6,
         6,
         6,
         6,
@@ -163,6 +164,7 @@
         6,
         6,
         7,
+        7,
         7
       ],
       "trend": {
@@ -233,6 +235,7 @@
         5,
         5,
         5,
+        6,
         6,
         6,
         6,
@@ -323,6 +326,7 @@
         5,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -389,6 +393,7 @@
       "summary": "China's factory-gate prices spill into global goods markets in BOTH directions: years of PPI deflation exported disinflation and squeezed competitors, while a sharp 2026 reversal to positive PPI (energy/commodity cost-push) now exports input-cost pressure. Either large swing is destabilising; the indicator is scored on the size of the move, not its sign.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=39",
       "spark": [
+        6,
         6,
         6,
         6,
@@ -498,6 +503,7 @@
         7,
         7,
         7,
+        7,
         7
       ],
       "trend": {
@@ -564,6 +570,7 @@
       "summary": "Dollar stablecoins have become sizeable holders of short-term Treasuries, linking crypto plumbing to the funding market. A large redemption wave could force rapid T-bill selling; the GENIUS Act's implementation is the key regulatory variable.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=12",
       "spark": [
+        4,
         4,
         4,
         4,
@@ -658,6 +665,7 @@
         6,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -718,6 +726,7 @@
         6,
         6,
         6,
+        5,
         5,
         5,
         5,
@@ -807,6 +816,7 @@
         5,
         5,
         5,
+        5,
         5
       ],
       "trend": {
@@ -889,6 +899,7 @@
         6,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -961,6 +972,7 @@
         3,
         3,
         3,
+        4,
         4,
         4,
         4,
@@ -1053,6 +1065,7 @@
         4,
         4,
         4,
+        4,
         4
       ],
       "trend": {
@@ -1128,6 +1141,7 @@
         4,
         5,
         5,
+        4,
         4,
         4,
         4,
@@ -1215,6 +1229,7 @@
         7,
         7,
         7,
+        7,
         7
       ],
       "trend": {
@@ -1281,6 +1296,7 @@
       "summary": "Electrification and AI infrastructure point to structural copper deficits as demand outruns new mine supply, which takes a decade to build. Price is the live signal; mine disruptions and inventory draws would confirm tightening.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=52",
       "spark": [
+        4,
         4,
         4,
         4,
@@ -1375,6 +1391,7 @@
         5,
         5,
         5,
+        5,
         5
       ],
       "trend": {
@@ -1455,6 +1472,7 @@
         6,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -1528,6 +1546,7 @@
         5,
         5,
         5,
+        6,
         6,
         6,
         6,
@@ -1615,6 +1634,7 @@
         6,
         6,
         6,
+        6,
         6
       ],
       "trend": {
@@ -1681,6 +1701,7 @@
       "summary": "Central counterparties now concentrate the system's risk by design, and Treasury central-clearing mandates will route more activity through them. In a volatility spike, procyclical margin calls can amplify stress - they are a systemic single point of failure.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=14",
       "spark": [
+        4,
         4,
         4,
         4,
@@ -1795,6 +1816,11 @@
         },
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://www.proskauer.com/report/proskauers-private-credit-default-index-reveals-rate-of-273-for-q1-2026",
+          "matched": "2.73"
+        },
         "tier": "glance"
       },
       {
@@ -1825,6 +1851,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "not_found",
+          "url": "https://occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-3.html"
+        },
         "tier": "glance"
       },
       {
@@ -1855,6 +1885,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "unreachable",
+          "url": "https://www.congress.gov/crs-product/IN12674"
+        },
         "tier": "glance"
       },
       {
@@ -1885,6 +1919,11 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://www.brecorder.com/news/amp/40428168",
+          "matched": "0.2"
+        },
         "tier": "glance"
       },
       {
@@ -1915,6 +1954,9 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "glance"
       },
       {
@@ -1949,6 +1991,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "unreachable",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001820953/000162828026032105/affirmfq326shareholderle.htm"
+        },
         "tier": "glance"
       },
       {
@@ -1978,6 +2024,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "unreachable",
+          "url": "https://www.multihousingnews.com/cmbs-delinquency-rates/"
+        },
         "tier": "glance"
       },
       {
@@ -2008,6 +2058,9 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "glance"
       },
       {
@@ -2038,6 +2091,11 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://www.resultsense.com/news/2026-05-06-banks-offload-ai-data-centre-debt/",
+          "matched": "4.2"
+        },
         "tier": "glance"
       },
       {
@@ -2068,6 +2126,9 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "glance"
       },
       {
@@ -2104,6 +2165,9 @@
         },
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "act"
       },
       {
@@ -2138,6 +2202,11 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://wolfstreet.com/2026/05/19/auto-loan-balances-debt-to-income-ratio-and-delinquencies-of-subprime-prime-auto-loans-in-q1-2026-how-bad-is-it/",
+          "matched": "6.8"
+        },
         "tier": "glance"
       },
       {
@@ -2168,6 +2237,11 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://www.milliman.com/en/insight/public-pension-funding-index-april-2026",
+          "matched": "83.7"
+        },
         "tier": "glance"
       },
       {
@@ -2198,6 +2272,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "unreachable",
+          "url": "https://www.imf.org/en/news/articles/2026/05/26/pr26170-burkina-faso-staff-completes-article-iv-reaches-sla-fifth-review-ecf-first-review-rsf"
+        },
         "tier": "glance"
       },
       {
@@ -2228,6 +2306,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "not_found",
+          "url": "https://ratings.moodys.com/ratings-news/453186"
+        },
         "tier": "glance"
       },
       {
@@ -2258,6 +2340,9 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "glance"
       },
       {
@@ -2292,6 +2377,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "unreachable",
+          "url": "https://www.ssa.gov/oact/trsum/"
+        },
         "tier": "glance"
       },
       {
@@ -2330,6 +2419,11 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://source.benchmarkminerals.com/article/ex-china-rare-earths-premium-to-grow-especially-for-heavies",
+          "matched": "4.5"
+        },
         "tier": "glance"
       },
       {
@@ -2360,6 +2454,9 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "glance"
       },
       {
@@ -2390,6 +2487,9 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "glance"
       },
       {
@@ -2424,6 +2524,11 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3357974/us-china-rare-earth-clash-20-fragile-truce-tested-tit-tat-moves-return",
+          "matched": "3357974"
+        },
         "tier": "glance"
       },
       {
@@ -2460,6 +2565,9 @@
         },
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "act"
       },
       {
@@ -2490,6 +2598,9 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "glance"
       },
       {
@@ -2520,6 +2631,9 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "glance"
       },
       {
@@ -2550,6 +2664,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "not_found",
+          "url": "https://www.utilitydive.com/news/pjm-doe-emergency-order-curtail-data-centers/820571/"
+        },
         "tier": "glance"
       },
       {
@@ -2584,6 +2702,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "not_found",
+          "url": "https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/030426-china-to-maintain-phosphate-export-suspension-despite-middle-east-war-sources"
+        },
         "tier": "glance"
       },
       {
@@ -2618,6 +2740,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "not_found",
+          "url": "https://www.datacenterdynamics.com/en/news/ocasio-cortez-and-sanders-introduce-ai-data-center-moratorium-act/"
+        },
         "tier": "glance"
       },
       {
@@ -2656,6 +2782,11 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://icsg.org/",
+          "matched": "2.1"
+        },
         "tier": "glance"
       },
       {
@@ -2690,6 +2821,9 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "glance"
       },
       {
@@ -2724,6 +2858,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "unreachable",
+          "url": "https://emp.lbl.gov/queues"
+        },
         "tier": "glance"
       },
       {
@@ -2758,6 +2896,11 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://straits.live/is-the-strait-of-hormuz-open",
+          "matched": "8.0"
+        },
         "tier": "glance"
       },
       {
@@ -2788,6 +2931,11 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://www.usbr.gov/lc/region/g4000/hourly/levels.html",
+          "matched": "4000"
+        },
         "tier": "glance"
       },
       {
@@ -2818,6 +2966,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "not_found",
+          "url": "https://www.mining.com/freeport-delays-grasberg-full-restart-to-early-2028/"
+        },
         "tier": "glance"
       },
       {
@@ -2852,6 +3004,9 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "glance"
       },
       {
@@ -2877,6 +3032,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "unreachable",
+          "url": "https://www.sec.gov/newsroom/press-releases/2025-43-sec-extends-compliance-dates-provides-temporary-exemption-rule-related-clearing-us-treasury"
+        },
         "tier": "ok"
       },
       {
@@ -2898,6 +3057,7 @@
         "crosscheck": null,
         "parse": "repaired",
         "vintage": null,
+        "citecheck": null,
         "tier": "ok"
       },
       {
@@ -2923,6 +3083,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "unreachable",
+          "url": "https://www.reuters.com/world/europe/french-government-face-no-confidence-vote-over-heatwave-handling-2026-07-02/"
+        },
         "tier": "ok"
       },
       {
@@ -2948,6 +3112,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "not_found",
+          "url": "https://www.esma.europa.eu/sites/default/files/2026-06/ESMA50-1949966494-4208_LDI_funds_-_recent_developments_and_methods_for_liquidity_stress_testing_0.pdf"
+        },
         "tier": "ok"
       },
       {
@@ -2973,6 +3141,10 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "unreachable",
+          "url": "https://data.imf.org/en/news/imf%20data%20brief%20march%2027"
+        },
         "tier": "ok"
       },
       {
@@ -2998,6 +3170,11 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://www.stats.gov.cn/english/PressRelease/202606/t20260611_1963929.html",
+          "matched": "3.9"
+        },
         "tier": "ok"
       },
       {
@@ -3019,6 +3196,7 @@
         "crosscheck": null,
         "parse": "repaired",
         "vintage": null,
+        "citecheck": null,
         "tier": "ok"
       },
       {
@@ -3049,6 +3227,9 @@
         },
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "ok"
       },
       {
@@ -3074,6 +3255,9 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
         "tier": "ok"
       },
       {
@@ -3099,6 +3283,11 @@
         "crosscheck": null,
         "parse": null,
         "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://www.fao.org/worldfoodsituation/foodpricesindex/en",
+          "matched": "130.3"
+        },
         "tier": "ok"
       }
     ]

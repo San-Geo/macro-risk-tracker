@@ -23,7 +23,11 @@
       "domain": "Funding & Leverage",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "unreachable",
+        "url": "https://www.sec.gov/newsroom/press-releases/2025-43-sec-extends-compliance-dates-provides-temporary-exemption-rule-related-clearing-us-treasury"
+      }
     },
     "plan_financing": {
       "value": 1,
@@ -48,7 +52,12 @@
       "domain": "Funding & Leverage",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "verified",
+        "url": "https://www.brecorder.com/news/amp/40428168",
+        "matched": "0.2"
+      }
     },
     "direct_lending_default": {
       "value": 2.73,
@@ -93,7 +102,12 @@
       },
       "applied": true,
       "note": "applied",
-      "prior": 2.73
+      "prior": 2.73,
+      "citecheck": {
+        "verdict": "verified",
+        "url": "https://www.proskauer.com/report/proskauers-private-credit-default-index-reveals-rate-of-273-for-q1-2026",
+        "matched": "2.73"
+      }
     },
     "redemption_gates": {
       "value": 2,
@@ -122,7 +136,11 @@
       "domain": "Funding & Leverage",
       "applied": true,
       "note": "applied",
-      "prior": 2
+      "prior": 2,
+      "citecheck": {
+        "verdict": "unreachable",
+        "url": "https://www.congress.gov/crs-product/IN12674"
+      }
     },
     "new_imf_programs": {
       "value": 1,
@@ -147,7 +165,11 @@
       "domain": "Sovereigns & the Monetary Order",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "unreachable",
+        "url": "https://www.imf.org/en/news/articles/2026/05/26/pr26170-burkina-faso-staff-completes-article-iv-reaches-sla-fifth-review-ecf-first-review-rsf"
+      }
     },
     "china_ppi": {
       "value": 3.9,
@@ -165,7 +187,12 @@
       "domain": "Geoeconomics & Trade Weapons",
       "applied": true,
       "note": "applied",
-      "prior": 3.9
+      "prior": 3.9,
+      "citecheck": {
+        "verdict": "verified",
+        "url": "https://www.stats.gov.cn/english/PressRelease/202606/t20260611_1963929.html",
+        "matched": "3.9"
+      }
     },
     "trade_actions": {
       "value": 2,
@@ -215,7 +242,10 @@
       },
       "applied": true,
       "note": "low confidence; retained prior value",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     },
     "truce_status": {
       "value": 1,
@@ -244,7 +274,12 @@
       "domain": "Geoeconomics & Trade Weapons",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "verified",
+        "url": "https://www.scmp.com/news/china/diplomacy/article/3357974/us-china-rare-earth-clash-20-fragile-truce-tested-tit-tat-moves-return",
+        "matched": "3357974"
+      }
     },
     "re_blacklist": {
       "value": 1,
@@ -265,7 +300,10 @@
       "domain": "Geoeconomics & Trade Weapons",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     },
     "hree_premium": {
       "value": 4.5,
@@ -299,7 +337,12 @@
       "domain": "Geoeconomics & Trade Weapons",
       "applied": true,
       "note": "applied",
-      "prior": 4.5
+      "prior": 4.5,
+      "citecheck": {
+        "verdict": "verified",
+        "url": "https://source.benchmarkminerals.com/article/ex-china-rare-earths-premium-to-grow-especially-for-heavies",
+        "matched": "4.5"
+      }
     },
     "genius_impl": {
       "value": 1,
@@ -327,7 +370,11 @@
       "domain": "Funding & Leverage",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "not_found",
+        "url": "https://occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-3.html"
+      }
     },
     "ai_revenue_gap": {
       "value": 1,
@@ -369,7 +416,12 @@
       "domain": "Credit, Consumers & Valuations",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "verified",
+        "url": "https://www.resultsense.com/news/2026-05-06-banks-offload-ai-data-centre-debt/",
+        "matched": "4.2"
+      }
     },
     "cmbs_office_delinq": {
       "value": 11.2,
@@ -391,7 +443,11 @@
       "domain": "Credit, Consumers & Valuations",
       "applied": true,
       "note": "applied",
-      "prior": 11.2
+      "prior": 11.2,
+      "citecheck": {
+        "verdict": "unreachable",
+        "url": "https://www.multihousingnews.com/cmbs-delinquency-rates/"
+      }
     },
     "regional_bank_stress": {
       "value": 1,
@@ -424,7 +480,10 @@
       },
       "applied": true,
       "note": "low confidence; retained prior value",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     },
     "govt_stability": {
       "value": 1,
@@ -444,7 +503,11 @@
       "domain": "Sovereigns & the Monetary Order",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "unreachable",
+        "url": "https://www.reuters.com/world/europe/french-government-face-no-confidence-vote-over-heatwave-handling-2026-07-02/"
+      }
     },
     "rating_action": {
       "value": 2,
@@ -470,7 +533,11 @@
       "domain": "Sovereigns & the Monetary Order",
       "applied": true,
       "note": "applied",
-      "prior": 2
+      "prior": 2,
+      "citecheck": {
+        "verdict": "not_found",
+        "url": "https://ratings.moodys.com/ratings-news/453186"
+      }
     },
     "subprime_auto_dpd": {
       "value": 6.8,
@@ -499,7 +566,12 @@
       "domain": "Credit, Consumers & Valuations",
       "applied": true,
       "note": "applied",
-      "prior": 6.8
+      "prior": 6.8,
+      "citecheck": {
+        "verdict": "verified",
+        "url": "https://wolfstreet.com/2026/05/19/auto-loan-balances-debt-to-income-ratio-and-delinquencies-of-subprime-prime-auto-loans-in-q1-2026-how-bad-is-it/",
+        "matched": "6.8"
+      }
     },
     "bnpl_delinq": {
       "value": 1,
@@ -528,7 +600,11 @@
       "domain": "Credit, Consumers & Valuations",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "unreachable",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001820953/000162828026032105/affirmfq326shareholderle.htm"
+      }
     },
     "dollar_reserve_share": {
       "value": 56.77,
@@ -546,7 +622,11 @@
       "domain": "Sovereigns & the Monetary Order",
       "applied": true,
       "note": "applied",
-      "prior": 56.77
+      "prior": 56.77,
+      "citecheck": {
+        "verdict": "unreachable",
+        "url": "https://data.imf.org/en/news/imf%20data%20brief%20march%2027"
+      }
     },
     "weaponization_event": {
       "value": 1,
@@ -572,7 +652,10 @@
       "domain": "Sovereigns & the Monetary Order",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     },
     "insurer_exits": {
       "value": 1,
@@ -599,7 +682,10 @@
       "domain": "Credit, Consumers & Valuations",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     },
     "cat_losses": {
       "value": 0,
@@ -623,7 +709,10 @@
       "domain": "Credit, Consumers & Valuations",
       "applied": true,
       "note": "applied",
-      "prior": 0
+      "prior": 0,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     },
     "ss_reform_news": {
       "value": 1,
@@ -653,7 +742,11 @@
       "domain": "Sovereigns & the Monetary Order",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "unreachable",
+        "url": "https://www.ssa.gov/oact/trsum/"
+      }
     },
     "pension_leverage_event": {
       "value": 0,
@@ -671,7 +764,11 @@
       "domain": "Sovereigns & the Monetary Order",
       "applied": true,
       "note": "applied",
-      "prior": 0
+      "prior": 0,
+      "citecheck": {
+        "verdict": "not_found",
+        "url": "https://www.esma.europa.eu/sites/default/files/2026-06/ESMA50-1949966494-4208_LDI_funds_-_recent_developments_and_methods_for_liquidity_stress_testing_0.pdf"
+      }
     },
     "funded_ratio": {
       "value": 87.6,
@@ -695,7 +792,12 @@
       "domain": "Sovereigns & the Monetary Order",
       "applied": true,
       "note": "applied",
-      "prior": 87.6
+      "prior": 87.6,
+      "citecheck": {
+        "verdict": "verified",
+        "url": "https://www.milliman.com/en/insight/public-pension-funding-index-april-2026",
+        "matched": "83.7"
+      }
     },
     "interconnection_months": {
       "value": 60.0,
@@ -723,7 +825,11 @@
       "domain": "Physical & Resource Limits",
       "applied": true,
       "note": "applied",
-      "prior": 55.0
+      "prior": 55.0,
+      "citecheck": {
+        "verdict": "unreachable",
+        "url": "https://emp.lbl.gov/queues"
+      }
     },
     "dc_moratoria": {
       "value": 2,
@@ -754,7 +860,11 @@
       "domain": "Physical & Resource Limits",
       "applied": true,
       "note": "applied",
-      "prior": 2
+      "prior": 2,
+      "citecheck": {
+        "verdict": "not_found",
+        "url": "https://www.datacenterdynamics.com/en/news/ocasio-cortez-and-sanders-introduce-ai-data-center-moratorium-act/"
+      }
     },
     "ai_power_pressure": {
       "value": 2,
@@ -779,7 +889,11 @@
       "domain": "Physical & Resource Limits",
       "applied": true,
       "note": "applied",
-      "prior": 2
+      "prior": 2,
+      "citecheck": {
+        "verdict": "not_found",
+        "url": "https://www.utilitydive.com/news/pjm-doe-emergency-order-curtail-data-centers/820571/"
+      }
     },
     "mine_disruptions": {
       "value": 2,
@@ -806,7 +920,11 @@
       "domain": "Physical & Resource Limits",
       "applied": true,
       "note": "applied",
-      "prior": 2
+      "prior": 2,
+      "citecheck": {
+        "verdict": "not_found",
+        "url": "https://www.mining.com/freeport-delays-grasberg-full-restart-to-early-2028/"
+      }
     },
     "copper_deficit_timing": {
       "value": 0,
@@ -838,7 +956,12 @@
       "domain": "Physical & Resource Limits",
       "applied": true,
       "note": "applied",
-      "prior": 0
+      "prior": 0,
+      "citecheck": {
+        "verdict": "verified",
+        "url": "https://icsg.org/",
+        "matched": "2.1"
+      }
     },
     "drought_chip_farm": {
       "value": 2,
@@ -869,7 +992,10 @@
       "domain": "Physical & Resource Limits",
       "applied": true,
       "note": "applied",
-      "prior": 2
+      "prior": 2,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     },
     "reservoir_stress": {
       "value": 2,
@@ -894,7 +1020,12 @@
       "domain": "Physical & Resource Limits",
       "applied": true,
       "note": "applied",
-      "prior": 2
+      "prior": 2,
+      "citecheck": {
+        "verdict": "verified",
+        "url": "https://www.usbr.gov/lc/region/g4000/hourly/levels.html",
+        "matched": "4000"
+      }
     },
     "water_dispute": {
       "value": 1,
@@ -926,7 +1057,10 @@
       "domain": "Physical & Resource Limits",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     },
     "fao_food_trend": {
       "value": 1,
@@ -944,7 +1078,12 @@
       "domain": "Physical & Resource Limits",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "verified",
+        "url": "https://www.fao.org/worldfoodsituation/foodpricesindex/en",
+        "matched": "130.3"
+      }
     },
     "china_export_curbs": {
       "value": 2,
@@ -975,7 +1114,11 @@
       "domain": "Physical & Resource Limits",
       "applied": true,
       "note": "applied",
-      "prior": 2
+      "prior": 2,
+      "citecheck": {
+        "verdict": "not_found",
+        "url": "https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/030426-china-to-maintain-phosphate-export-suspension-despite-middle-east-war-sources"
+      }
     },
     "hormuz_fertilizer": {
       "value": 1,
@@ -1007,7 +1150,12 @@
       "domain": "Physical & Resource Limits",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "verified",
+        "url": "https://straits.live/is-the-strait-of-hormuz-open",
+        "matched": "8.0"
+      }
     },
     "taiwan_tension": {
       "value": 1,
@@ -1033,7 +1181,10 @@
       },
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     },
     "export_controls": {
       "value": 2,
@@ -1061,7 +1212,10 @@
       "domain": "Geoeconomics & Trade Weapons",
       "applied": true,
       "note": "applied",
-      "prior": 2
+      "prior": 2,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     },
     "fab_concentration": {
       "value": 2,
@@ -1087,7 +1241,10 @@
       "domain": "Geoeconomics & Trade Weapons",
       "applied": true,
       "note": "applied",
-      "prior": 2
+      "prior": 2,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     },
     "hormuz_redsea_status": {
       "value": 1,
@@ -1114,7 +1271,10 @@
       "domain": "Geoeconomics & Trade Weapons",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     },
     "cable_incidents": {
       "value": 1,
@@ -1141,7 +1301,10 @@
       "domain": "Geoeconomics & Trade Weapons",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     },
     "treasury_clearing_rollout": {
       "value": 1,
@@ -1168,7 +1331,10 @@
       "domain": "Funding & Leverage",
       "applied": true,
       "note": "applied",
-      "prior": 1
+      "prior": 1,
+      "citecheck": {
+        "verdict": "skipped"
+      }
     }
   },
   "review_flags": [

@@ -2,13 +2,12 @@
   "items": {
     "us-iran-ceasefire-mou-signed-june-17-hormuz-re-c-7b6e5b": {
       "headline": "US-Iran ceasefire MOU signed June 17; Hormuz re-closed June 20 after Israeli Lebanon strikes; US Navy announced 'widened route' June 27 \u2014 strait status remains contested",
-      "summary": "Following the Feb 28 US-Israel strike on Iran and Iran's closure of the Strait of Hormuz, the IEA and EIA confirm the largest oil supply disruption in history; despite a ceasefire on Apr 8 and partial ship-to-ship transfers resuming in early June, mine clearing is ongoing, flows remain far below pre-war levels, and Brent averaged $105/bbl through June-July per EIA's June STEO.",
-      "as_of": "2026-07-02",
+      "summary": "The June 17 US-Iran memorandum of understanding established a 60-day ceasefire framework, but Iran re-closed the strait on June 20 citing Israeli strikes in Lebanon; the US Navy announced a widened Hormuz route on June 27. As of July 1\u20133, WTO data shows a ~95% drop in crude tanker traffic since February and ADNOC warns full flow restoration may not occur until 2027 even under a deal.",
+      "as_of": "2026-07-03",
       "sources": [
-        "https://www.eia.gov/pressroom/releases/press589.php",
-        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
         "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
-        "https://www.brookings.edu/articles/from-chokepoint-to-crisis-the-strait-of-hormuz-and-global-oil-markets/"
+        "https://commonslibrary.parliament.uk/research-briefings/cbp-10636/",
+        "https://www.pbs.org/newshour/world/iran-and-u-s-reach-an-initial-deal-to-extend-the-ceasefire-and-open-the-strait-of-hormuz-but-challenges-remain"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -16,12 +15,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Status should be coded 2 (effectively closed / contested with mines uncleared); WTI/Brent at ~$105/bbl is a direct indicator update; IEA confirmed 'greatest threat to global energy security in history' and tanker traffic remains far below pre-war levels despite ceasefire \u2014 this is the dominant macro shock of H1 2026 and the indicator values need urgent refresh.",
+      "rationale": "The Hormuz status indicator should move from 1 (contested) toward 2 (effectively closed for practical commerce): WTO data shows ~95% drop in crude tanker shipments, ADNOC projects no full restoration until 2027, and the June 20 re-closure post-MOU shows the ceasefire is not holding for shipping. WTI/Brent are materially elevated. This is the most systemically important active risk on the tracker right now.",
       "status": "pending",
       "first_seen": "2026-06-29",
       "last_seen": "2026-07-03",
       "id": "us-iran-ceasefire-mou-signed-june-17-hormuz-re-c-7b6e5b",
-      "sightings": 2
+      "sightings": 3
     },
     "boj-raises-policy-rate-to-1-0-at-june-16-mpm-haw-9b4d3c": {
       "headline": "BOJ raises policy rate to 1.0% at June 16 MPM; hawkish board members call for hikes every 'few months' toward 2% neutral; 10-year JGB yield at ~2.61\u20132.65%",
@@ -582,11 +581,12 @@
     },
     "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca": {
       "headline": "Japan yen hits 4-decade lows; 10yr JGB at ~2.65%; BoJ July 31 hike decision imminent amid Middle East energy import stress",
-      "summary": "The yen weakened to its lowest levels in four decades in late June 2026, with the 10-year JGB yield climbing to ~2.67% before easing to ~2.61\u20132.65% by June 30, as the Fed's hawkish Warsh pivot widened the US\u2013Japan rate differential. BoJ Governor Ueda reaffirmed readiness to raise rates further, with the next policy decision due July 31; board member Tamura publicly backed rate increases every few months. Japan's heavy reliance on Middle Eastern oil imports (~70% via Hormuz) amplifies the fiscal and current-account stress from the Hormuz disruption.",
-      "as_of": "2026-06-30",
+      "summary": "As of July 2\u20133, the yen has depreciated to levels not seen in 40 years amid wide US-Japan rate differentials and energy import costs from the Hormuz shock. The 10-year JGB yield climbed above 2.7%; BOJ board member Tamura explicitly called for 25bp hikes 'every few months' toward a 2% neutral rate; Finance Minister Katayama issued a formal warning on July 3. A more dovish BOJ board appointee (Sato) simultaneously signaled accommodative bias, creating internal split.",
+      "as_of": "2026-07-03",
       "sources": [
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.abnamro.com/research/en/our-research/japan-the-land-of-the-rising-yields"
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -594,11 +594,12 @@
       "target_indicator": "USD/JPY (yen strengthening = lower = risk)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Multiple s2_japan indicators are flashing simultaneously: USD/JPY at 4-decade highs (risk direction = yen weakening), 10yr JGB at 2.65% (elevated vs. prior), and a July 31 BoJ hike decision that \u2014 if it materialises \u2014 could trigger rapid yen rebound and carry-trade unwind (echoing the Aug-2024 episode). The Hormuz energy shock adds a novel compounding factor (import-cost surge pressuring Japan's current account). Both the USD/JPY and 30yr JGB indicators need live updating; the Takaichi plan financing clarity indicator also warrants review given new fiscal pressures from energy costs.",
+      "rationale": "USD/JPY at a four-decade high is a direct, high-materiality update to the s2_japan risk story. The yen weakness simultaneously signals carry-trade stress and fiscal financing pressure, and the BOJ board split (Tamura hawkish, Sato dovish) introduces policy uncertainty that raises the 'Takaichi plan financing clarity' indicator. The Finance Ministry verbal intervention on July 3 is a fresh catalyst. All three s2_japan indicators are moving adversely in the same week.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
-      "id": "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca"
+      "last_seen": "2026-07-03",
+      "id": "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca",
+      "sightings": 2
     },
     "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
       "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
@@ -645,12 +646,12 @@
     },
     "hormuz-closure-severs-30-46-of-global-seaborne-f-e10884": {
       "headline": "Hormuz Closure Severs ~30\u201346% of Global Seaborne Fertilizer Supply; Food Inflation Risk Escalating",
-      "summary": "The Persian Gulf provides ~30\u201335% of global urea exports and ~20\u201330% of ammonia exports, all of which transit the Strait of Hormuz, which has been effectively closed since March 4, 2026. The WEF and UNCTAD warn that prolonged disruption will tighten fertilizer availability for India, Brazil, and China, driving up global food production costs.",
-      "as_of": "2026-07-01",
+      "summary": "The OECD June 2026 Economic Outlook and World Bank flag the Iran conflict's energy shock as the primary global macro risk, with Gulf energy infrastructure damaged, Hormuz LNG flows at near zero, and headline inflation rising across advanced economies. Secondary effects on food and fertilizer (Persian Gulf fertilizer inputs disrupted) are accelerating; the Hormuz closure also disrupted LPG/ammonia feedstock flows that supply South and Southeast Asian fertilizer production.",
+      "as_of": "2026-07-03",
       "sources": [
-        "https://www.weforum.org/stories/2026/04/beyond-oil-lng-commodities-impacted-closure-hormuz-strait/",
-        "https://unctad.org/publication/strait-hormuz-disruptions-implications-global-trade-and-development",
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+        "https://www.oecd.org/en/publications/2026/06/oecd-economic-outlook-volume-2026-issue-1_8be0dba6/full-report/general-assessment-of-the-macroeconomic-situation_fe9bdcd6.html",
+        "https://www.worldbank.org/en/publication/global-economic-prospects",
+        "https://commonslibrary.parliament.uk/research-briefings/cbp-10636/"
       ],
       "materiality": "high",
       "classification": "story_gap",
@@ -667,11 +668,12 @@
         "suggested_weight": 0.35
       },
       "proposed_story": null,
-      "rationale": "The s18_food_fertilizer story already tracks 'Hormuz/Gulf disruption to fertilizer inputs' as an indicator concept (listed as label in tracker), but its current rubric was calibrated for a lower-severity scenario. The Hormuz closure at this scale (46% of global urea trade cut off) is a step-change that needs the indicator explicitly set to 2 and weighted materially. The existing indicator label exists but the tracker lacks a current value and sourced rubric \u2014 classifying as story_gap to force a formal update.",
+      "rationale": "s18_food_fertilizer already has a 'Hormuz/Gulf disruption to fertilizer inputs' indicator but it was set to 0 (clear) at tracker inception. The Iran war and Hormuz closure have materially activated this indicator: Gulf LNG/LPG exports (critical for ammonia synthesis in Asia) collapsed alongside crude, and OECD explicitly flags food security impacts. This indicator needs to move to 2 (cut) given WTO data showing 95% drop in tanker traffic and confirmed LNG shutdowns. This is not captured by the existing 'Food-price trend' or 'China fertilizer export curbs' indicators.",
       "status": "pending",
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-02",
-      "id": "hormuz-closure-severs-30-46-of-global-seaborne-f-e10884"
+      "last_seen": "2026-07-03",
+      "id": "hormuz-closure-severs-30-46-of-global-seaborne-f-e10884",
+      "sightings": 2
     },
     "japan-yen-at-4-decade-low-160-usd-despite-73bn-i-324c05": {
       "headline": "Japan Yen at 4-Decade Low (~160/USD) Despite $73bn Intervention; BOJ 10y JGB Hits Near-30-Year High at 2.7%+",
@@ -984,13 +986,12 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "China's Oct 2025 rare-earth export control suspension expires Nov 10, 2026 \u2014 now less than 19 weeks away \u2014 and CSIS data confirm US yttrium imports remain near 94% below pre-restriction baselines through Feb 2026; licensing continues to discriminate against US vs European buyers, and China imposed additional dual-use controls on Japan in early 2026, tightening the multi-country squeeze.",
-      "as_of": "2026-07-01",
+      "summary": "The second-wave Chinese rare-earth export control suspension (covering 12 of 17 REEs) expires November 10, 2026. CSIS data show yttrium exports to the US remain ~70% below January 2025 levels even in February 2026; aerospace manufacturers are rationing supply. New US-allied magnet capacity (Australia Lynas, US DoD-subsidized plants) is just beginning to come online in summer 2026 but cannot close the gap before the November expiry deadline.",
+      "as_of": "2026-07-03",
       "sources": [
         "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later",
-        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
-        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
-        "https://www.spglobal.com/energy/en/news-research/latest-news/metals/012726-rare-earth-supply-bottlenecks-set-to-persist-in-2026"
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impact-on-businesses-and-industries/",
+        "https://epthinktank.eu/2025/11/24/chinas-rare-earth-export-restrictions/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -998,12 +999,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Nov 2025 pause status indicator should now be coded 1 (expiring) given the Nov 10, 2026 hard deadline is now within a single quarter and no extension has been announced; US import flows remain structurally impaired despite the nominal suspension, qualifying this as an escalating rather than resolved risk. The dual-use expansion targeting Japan in early 2026 also raises the 'export license flow' indicator toward 1 (slowing) for allied defense-relevant supply chains.",
+      "rationale": "The Nov-10-2026 expiry of China's second-wave suspension is now approximately 18 weeks away, and the tracker's 'Nov-2025 pause status' indicator needs updating to reflect that: (a) it is now correctly the 'Nov-2026 expiry'; (b) China has explicitly threatened early re-imposition if US Section 301 probes expand; and (c) actual export volumes (yttrium down ~70%) show the licensing regime is already functioning as a de facto partial restriction. The indicator should move toward 1 (expiring) given the proximity and China's stated threat posture.",
       "status": "pending",
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 2
+      "sightings": 3
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -1212,10 +1213,100 @@
       "last_seen": "2026-07-03",
       "sightings": 1,
       "id": "global-lng-market-faces-structural-120-bcm-cumul-bb5617"
+    },
+    "ustr-section-301-forced-labor-tariff-hearings-be-aeae10": {
+      "headline": "USTR Section 301 forced-labor tariff hearings begin July 7; Section 122 global 10% surcharge expires ~July 24 \u2014 multi-economy tariff cliff imminent",
+      "summary": "USTR proposed 10\u201312.5% forced-labor tariffs on 60 economies on June 2, 2026; public hearings start July 7 with the goal of finalizing duties before the Section 122 surcharge expires around July 24. China has threatened to resume rare-earth export restrictions if new Section 301 probes targeting it proceed, and the US-China Board of Trade comment window closes July 10.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://www.dorsey.com/newsresources/publications/client-alerts/2026/6/new-section-301-tariffs",
+        "https://www.whitecase.com/insight-alert/ustr-proposes-10-125-tariffs-section-301-investigations-regulation-imports-produced",
+        "https://asiatimes.com/2026/03/us-warned-of-china-rare-earth-curbs-if-section-301-tariffs-expand"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s5_china_deflation",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US tariff-cliff transition risk (0 smooth / 1 friction / 2 cliff-edge)",
+        "type": "band",
+        "rubric": "0 = Section 122 replaced cleanly by Section 301 with no gap or escalation; 1 = procedural delay or partial coverage gap causes uncertainty for importers; 2 = Section 122 lapses without replacement OR China retaliates with renewed rare-earth/soybean curbs in response to new Section 301 actions",
+        "sources": [
+          "https://www.whitecase.com/insight-alert/ustr-proposes-10-125-tariffs-section-301-investigations-regulation-imports-produced",
+          "https://www.dorsey.com/newsresources/publications/client-alerts/2026/6/new-section-301-tariffs"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The existing s5_china_deflation story tracks tariff/anti-dumping actions, but the imminent July 24 tariff-cliff \u2014 where the Section 122 surcharge expires and must be replaced by Section 301 forced-labor duties covering 60 economies \u2014 is a distinct structural transition risk not captured by the current 'New tariff/anti-dumping actions' indicator. The hearing starts THIS WEEK (July 7) and China has explicitly threatened rare-earth retaliation if Section 301 probes expand, directly linking this to s6_rare_earths as well. A new indicator is needed for the tariff-cliff transition mechanics.",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "sightings": 1,
+      "id": "ustr-section-301-forced-labor-tariff-hearings-be-aeae10"
+    },
+    "new-risk-iran-war-creates-a-sovereign-energy-cre-4cd594": {
+      "headline": "New risk: Iran War creates a sovereign energy-credit shock for Gulf petrostates \u2014 fiscal buffers depleting, GCC dollar-peg credibility under stress",
+      "summary": "All Persian Gulf nations (Saudi Arabia, UAE, Iraq, Qatar, Kuwait) have experienced sharply lower oil export revenues since the Hormuz disruption began February 28, 2026, even though global oil prices rose. Saudi Aramco pipeline exports (Red Sea route) partially mitigate this, but Iraq, Qatar (LNG), and Kuwait face near-total export shutdown. GCC sovereign wealth fund drawdowns and dollar-peg defense costs are rising, with knock-on effects for EM dollar bond markets and petrodollar recycling into US Treasuries.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://commonslibrary.parliament.uk/research-briefings/cbp-10636/",
+        "https://www.oecd.org/en/publications/2026/06/oecd-economic-outlook-volume-2026-issue-1_8be0dba6/full-report/general-assessment-of-the-macroeconomic-situation_fe9bdcd6.html"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "GCC petro-state fiscal stress & dollar-peg credibility",
+        "why": "The 2026 Iran war has produced a paradox where global oil prices rose sharply but Gulf producer export revenues collapsed due to Hormuz closure. Iraq, Qatar, and Kuwait face near-zero LNG/crude export volumes. Saudi Arabia is partially insulated via the East-West pipeline but fiscal breakeven oil prices ($70\u201390/bbl for most GCC states) are at risk if the disruption persists into H2 2026. GCC sovereign wealth funds are drawing down reserves; petrodollar recycling into US Treasuries is declining at a time when the US fiscal deficit is widening. Dollar-peg credibility (especially Kuwaiti dinar, Qatari riyal) is under pressure. This is distinct from s4_dev_debt (which focuses on EM borrowers) and s20_sea_lanes (which focuses on shipping logistics) \u2014 it captures the fiscal-sovereign-credit-petrodollar nexus.",
+        "proposed_level": 7,
+        "set": "Set 3",
+        "indicators": [
+          {
+            "label": "GCC export revenue loss vs. pre-conflict baseline (%, 3-month rolling avg)",
+            "type": "value",
+            "rubric": "Estimated % decline in aggregate GCC crude+LNG export revenues vs. Jan 2026 baseline, sourced from IEA/OPEC monthly oil market reports. Values above -30% = moderate stress; above -50% = severe; above -70% = crisis (triggers SWF liquidation pressure).",
+            "sources": [
+              "https://www.iea.org/topics/oil-market-report",
+              "https://www.opec.org/opec_web/en/publications/338.htm"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "GCC dollar-peg stress (0 stable / 1 forward premium rising / 2 peg under attack)",
+            "type": "band",
+            "rubric": "0 = USD/SAR, USD/QAR, USD/KWD 12-month NDF forwards within 0.5% of spot peg; 1 = NDF forwards showing >0.5% devaluation premium or CDS spreads widening >50bp; 2 = explicit peg defense operations, IMF consultation, or GCC central bank emergency liquidity action.",
+            "sources": [
+              "https://www.bloomberg.com/markets/currencies",
+              "https://www.imf.org/en/Publications/WEO"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Petrodollar Treasury demand proxy (0 stable / 1 declining / 2 net selling)",
+            "type": "band",
+            "rubric": "0 = Gulf-region custodial Treasury holdings (TIC data) flat or rising; 1 = month-over-month decline >$10bn for two consecutive months; 2 = net selling >$30bn/month or evidence of SWF reallocation away from USD assets.",
+            "sources": [
+              "https://home.treasury.gov/data/treasury-international-capital-tic-system",
+              "https://www.ft.com/sovereign-wealth-funds"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "No existing story captures the feedback loop between Gulf export revenue collapse \u2192 GCC SWF drawdown \u2192 reduced petrodollar recycling \u2192 US Treasury demand decline \u2192 term premium pressure. This is a second-order financial shock from the Iran War that operates through sovereign credit and dollar-peg channels rather than through shipping logistics (s20) or EM debt (s4). With the Hormuz ceasefire fragile and ADNOC projecting no full flow restoration until 2027, this stress is likely to persist and intensify through H2 2026, warranting a dedicated story at proposed_level 7.",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "sightings": 1,
+      "id": "new-risk-iran-war-creates-a-sovereign-energy-cre-4cd594"
     }
   },
   "generated": "2026-07-03",
   "model": "claude-sonnet-4-6",
   "new_count": 2,
-  "pending_count": 44
+  "pending_count": 46
 }
