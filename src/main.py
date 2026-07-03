@@ -94,6 +94,30 @@ def main():
 
     values.update(manual)  # human overrides always win
 
+    # Deterministic citation check (no AI, plain HTTP): verify agent facts against
+    # their cited URLs. Runs when the agent just ran, or once as backfill if the
+    # stored log has never been checked. Zero API cost; failures never break the run.
+    if not args.offline and os.environ.get("CITE_CHECK", "1") not in ("0", "false", "no"):
+        try:
+            import citecheck
+            alog2 = agent.load_log()
+            assessments = alog2.get("assessments") or {}
+            unchecked = any(a.get("applied") and a.get("sources") and "citecheck" not in a
+                            for a in assessments.values())
+            if assessments and (args.agent or unchecked):
+                print("Citation check: verifying agent facts against cited URLs ...")
+                citecheck.run_citecheck(alog2)
+                with open(agent.LOG_PATH, "w") as f:
+                    json.dump(alog2, f, indent=2)
+                counts = {}
+                for a in assessments.values():
+                    v = (a.get("citecheck") or {}).get("verdict")
+                    if v:
+                        counts[v] = counts.get(v, 0) + 1
+                print(f"  citecheck: {counts}")
+        except Exception as e:
+            print(f"  (citation check skipped: {e})")
+
     result = score.score_all(config, values)
     result["date"] = args.date
     result["sets"] = config.get("sets", {})
@@ -164,6 +188,7 @@ def main():
                 "crosscheck": a.get("crosscheck"),
                 "parse": a.get("parse"),
                 "vintage": a.get("vintage"),
+                "citecheck": a.get("citecheck"),
                 "tier": tier,
             })
         items.sort(key=lambda x: ({"act": 0, "glance": 1, "ok": 2}[x["tier"]], x["set"], x["label"]))
@@ -203,6 +228,9 @@ def main():
     result["narrative"] = note
 
     report.append_history(result, args.date, hist)
+    ih = os.path.join(ROOT, "data", "indicator_history.csv")
+    report.append_indicator_history(result, args.date, ih)
+    report.write_indicator_history_json(ih, os.path.join(ROOT, "dashboard", "indicator_history.json"))
     payload = report.write_json(result, note, args.date, latest_path)
     report.write_json(result, note, args.date, os.path.join(ROOT, "dashboard", "latest.json"))
     xlsx = report.build_workbook(config, result, note, args.date, hist,

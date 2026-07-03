@@ -55,6 +55,49 @@ def append_history(result, date, path):
             w.writerow([date, s["id"], s["name"], s["set"], s["level"], s["band"], s["raw_level"], ver])
 
 
+def append_indicator_history(result, date, path):
+    """Append-only per-INDICATOR record: the raw material for sparklines, the future
+    track record, and any later backtest of the judgment layer. One row per indicator
+    per run; re-running the same date replaces that date's rows (idempotent)."""
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    header = ["date", "indicator_id", "story_id", "value", "band", "provenance", "as_of"]
+    rows = []
+    if os.path.exists(path):
+        with open(path, newline="") as f:
+            r = list(csv.reader(f))
+        rows = [row for row in r[1:] if row and row[0] != date]
+    for s in result["stories"]:
+        for ind in s["indicators"]:
+            rows.append([date, ind["id"], s["id"],
+                         "" if ind.get("value") is None else ind["value"],
+                         "" if ind.get("band") is None else ind["band"],
+                         ind.get("provenance", ""), ind.get("as_of", "")])
+    with open(path, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(header)
+        w.writerows(rows)
+
+
+def write_indicator_history_json(csv_path, out_path, keep=30):
+    """Compact per-indicator series (last `keep` runs) for the dashboard sparklines."""
+    if not os.path.exists(csv_path):
+        return
+    series = {}
+    with open(csv_path, newline="") as f:
+        for row in list(csv.reader(f))[1:]:
+            if len(row) < 5 or not row[3]:
+                continue
+            try:
+                v = float(row[3])
+            except ValueError:
+                continue
+            series.setdefault(row[1], []).append({"d": row[0], "v": v})
+    out = {k: sorted(v, key=lambda x: x["d"])[-keep:] for k, v in series.items()}
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    with open(out_path, "w") as f:
+        json.dump(out, f, separators=(",", ":"))
+
+
 def _hdr(ws, row, headers, widths):
     for c, (h, wd) in enumerate(zip(headers, widths), 1):
         cell = ws.cell(row=row, column=c, value=h)

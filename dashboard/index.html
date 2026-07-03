@@ -459,7 +459,7 @@ function reviewRows(arr){ return arr.map(i=>{
   return `<tr><td>${i.label}<div style="color:var(--muted);font-size:11px">${i.story}${i.domain?` \u00B7 <span style="color:var(--accent)">${i.domain} desk</span>`:''}</div></td>
     <td>${fmt(i.value)}</td>
     <td><span class="pill" style="background:${confColor(i.confidence)};text-transform:capitalize">${i.confidence||'-'}</span></td>
-    <td>${statusOf(i)}</td><td>${rangeTag}${vinTag}${parseTag}${xc}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
+    <td>${statusOf(i)}</td><td>${rangeTag}${vinTag}${parseTag}${citeTag(i)}${xc}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
 }).join(''); }
 function reviewPanel(d){
   const r=d.agent_review;
@@ -483,6 +483,11 @@ function reviewPanel(d){
       ? `<div class="asof" style="margin:6px 0 0;color:#2E7D32">\u2713 Cross-check uses an independent provider: <b>${c.model}</b>.</div>`
       : `<div class="asof" style="margin:6px 0 0">Cross-check is running on the <b>same model</b> (${c.model}). For an independent second opinion, set repository <b>variable</b> AGENT_MODEL_2=asi1 and <b>secret</b> ASI1_API_KEY.</div>`;
   }
+  const cc=r.items.map(i=>(i.citecheck||{}).verdict).filter(Boolean);
+  if(cc.length){
+    const nv=cc.filter(v=>v==='verified').length, nf=cc.filter(v=>v==='not_found').length, nu=cc.filter(v=>v==='unreachable').length;
+    xcLine+=`<div class="asof htip" style="margin:4px 0 0" data-tip="A deterministic script (no AI) fetched each cited URL and looked for the applied number or a key figure from the fact, verbatim. 'not found' is often a paywall/PDF/script-rendered page - a prompt to click, not proof of error.">\u2713 <b style="color:#2E7D32">${nv}</b> facts machine-verified at their cited source${nf?` \u00B7 <b style="color:#E8710A">${nf}</b> not found`:''}${nu?` \u00B7 ${nu} unreachable`:''}.</div>`;
+  }
   const rc=act.length?`<b style="color:#E8710A">${act.length}</b> need action`:'\u2713 0 need action';
   return `<div class="panel" id="review"><div class="phead" onclick="this.parentNode.classList.toggle('open')">
       <span><strong>Agent review</strong> <span class="asof">your weekly 2-minute check</span></span>
@@ -499,6 +504,25 @@ let VALIDATION=null;
 const BT_PALETTE=['#2563eb','#ea580c','#16a34a','#9333ea','#dc2626','#0891b2','#ca8a04'];
 const BT_DASH=['','7 3','2 4','10 3 2 3','5 4','1 4'];
 let SCOUT=null;
+let IHIST=null;
+function miniSpark(id){
+  const s=IHIST&&IHIST[id]; if(!s||s.length<3) return '';
+  const vals=s.map(p=>p.v), mn=Math.min(...vals), mx=Math.max(...vals);
+  if(mn===mx) return '';
+  const w=58,h=14,pad=2;
+  const x=i=>pad+i*(w-2*pad)/(vals.length-1), y=v=>h-pad-(v-mn)*(h-2*pad)/(mx-mn);
+  const pts=vals.map((v,i)=>`${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+  const tip=`recent runs: ${vals.slice(-6).map(v=>+v.toFixed(2)).join(' \u2192 ')}`;
+  return ` <svg class="htip" data-tip="${tip}" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="vertical-align:-2px;opacity:.75">
+    <polyline fill="none" stroke="var(--muted)" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" points="${pts}"/>
+    <circle cx="${x(vals.length-1).toFixed(1)}" cy="${y(vals[vals.length-1]).toFixed(1)}" r="1.8" fill="var(--muted)"/></svg>`;
+}
+function citeTag(i){
+  const c=i.citecheck; if(!c||!c.verdict||c.verdict==='skipped') return '';
+  if(c.verdict==='verified') return `<span class="pill htip" style="background:#2E7D32;color:#fff;margin-right:4px" data-tip="Deterministic check (no AI): the number ${c.matched?`'${c.matched}' `:''}was found verbatim at the cited page. Confirms the citation matches the fact.">\u2713 at source</span>`;
+  if(c.verdict==='not_found') return `<span class="pill htip" style="background:#F5A623;color:#fff;margin-right:4px" data-tip="The cited page was fetched but the key number wasn't found in it. Often a paywall summary, PDF, or script-rendered page - occasionally a misquoted fact. Worth a click, not proof of error.">not found at source</span>`;
+  return `<span class="pill htip" style="background:#8a8f98;color:#fff;margin-right:4px" data-tip="The cited URL(s) couldn't be fetched (link rot, 403, or timeout). The fact is unverified either way.">source unreachable</span>`;
+}
 function classMeta(c){
   return c==='new_risk' ? {label:'New risk', color:'#C0392B'}
        : c==='story_gap' ? {label:'Coverage gap', color:'#E8710A'}
@@ -767,7 +791,7 @@ function render(d){
       const bc=ind.band===null?'#999':bandColor(ind.band<=0?1:ind.band===1?5:9);
       const srcCell=ind.source_url?`<a href="${ind.source_url}" target="_blank" rel="noopener">${ind.provenance||'src'}</a>`:(ind.provenance||ind.source);
       const ageWarn=ind.stale_for_cadence?`<span class="htip" style="color:#E8710A;font-weight:700;cursor:default" data-tip="This data is ${Math.round(ind.age_days/30)||1} month(s) old for a ${ind.cadence} indicator \u2014 the underlying source hasn't published (or the agent hasn't found) anything fresher. The value may lag reality."> \u23F3</span>`:'';
-      html+=`<tr class="${ind.stale?'stale':''}"><td>${ind.label}</td><td>${fmt(ind.value)}</td>
+      html+=`<tr class="${ind.stale?'stale':''}"><td>${ind.label}</td><td>${fmt(ind.value)}${miniSpark(ind.id)}</td>
         <td><span class="pill" style="background:${bc}">${ind.band===null?'-':ind.band}</span></td>
         <td>${ind.delta>0?'+':''}${ind.delta||0}</td><td>${ind.cadence}</td>
         <td class="asof">${ind.as_of||'\u2014'}${ageWarn}</td>
@@ -781,8 +805,9 @@ Promise.all([
   fetch('./latest.json?_='+Date.now()).then(r=>{ if(!r.ok) throw new Error('latest.json not found ('+r.status+')'); return r.json(); }),
   fetch('./backtest.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
   fetch('./validation.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
-  fetch('./scout_queue.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null)
-]).then(([d,bt,va,sc])=>{ BACKTEST=bt; VALIDATION=va; SCOUT=sc; render(d); })
+  fetch('./scout_queue.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
+  fetch('./indicator_history.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null)
+]).then(([d,bt,va,sc,ih])=>{ BACKTEST=bt; VALIDATION=va; SCOUT=sc; IHIST=ih; render(d); })
   .catch(e=>{ document.getElementById('app').innerHTML=
     `<div class="err"><strong>Could not load data.</strong><br>${e.message}<br><br>
      Run <code>python src/main.py --offline --no-ai</code>, then open this page via a local server
