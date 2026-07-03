@@ -138,6 +138,20 @@ def discover(api_key, date, inventory, days=7, max_items=6, model=None):
     return _extract_json_array(text)
 
 
+def _target_key(c):
+    """What a proposal is ABOUT, independent of headline wording. Re-worded reports of
+    the same development must merge into one card, not multiply."""
+    cls = c.get("classification", "")
+    if cls == "existing_indicator":
+        return f"rerate|{c.get('target_story','')}|{c.get('target_indicator','')}"
+    if cls == "story_gap":
+        lbl = ((c.get("proposed_indicator") or {}).get("label") or "")
+        norm = re.sub(r"[^a-z0-9]+", "", lbl.lower())[:32]
+        return f"gap|{c.get('target_story','')}|{norm}"
+    nm = re.sub(r"[^a-z0-9]+", "", ((c.get("proposed_story") or {}).get("name") or "").lower())[:32]
+    return f"new|{nm}"
+
+
 def run_scout(config, api_key, date, days=7, max_items=6, discover_fn=discover):
     """Discover + triage + merge into the queue (dedup, never overwrite human status)."""
     inventory = build_inventory(config)
@@ -151,6 +165,11 @@ def run_scout(config, api_key, date, days=7, max_items=6, discover_fn=discover):
         q["generated"] = date
         save_queue(q)
         return q
+    # index existing OPEN items by target so re-worded duplicates merge
+    by_target = {}
+    for iid, it in items.items():
+        if it.get("status") == "pending":
+            by_target.setdefault(_target_key(it), iid)
     for c in candidates or []:
         cls = c.get("classification")
         if cls not in CLASSES:
@@ -158,18 +177,24 @@ def run_scout(config, api_key, date, days=7, max_items=6, discover_fn=discover):
         if str(c.get("materiality", "")).lower() not in ("medium", "high"):
             continue
         cid = _id(c.get("headline", ""))
-        if cid in items:
-            # keep human status/first_seen; refresh evidence fields only
+        tkey = _target_key(c)
+        existing = items.get(cid) and cid or by_target.get(tkey)
+        if existing:
+            # same development (same headline OR same target): merge as a new sighting.
+            it = items[existing]
             for k in ("summary", "as_of", "sources", "rationale", "materiality"):
                 if c.get(k):
-                    items[cid][k] = c[k]
-            items[cid]["last_seen"] = date
+                    it[k] = c[k]
+            it["last_seen"] = date
+            it["sightings"] = int(it.get("sightings", 1)) + 1
             continue
         c["status"] = "pending"
         c["first_seen"] = date
         c["last_seen"] = date
+        c["sightings"] = 1
         c["id"] = cid
         items[cid] = c
+        by_target[tkey] = cid
         new_count += 1
     q["items"] = items
     q["generated"] = date

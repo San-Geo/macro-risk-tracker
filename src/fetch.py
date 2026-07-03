@@ -8,7 +8,7 @@
 Any failure returns None so the scorer falls back to the baseline/last value.
 Be a polite citizen: short timeouts, no hammering.
 """
-import csv, io, json, os, time, urllib.request, urllib.error, urllib.parse
+import csv, io, json, os, re, time, urllib.request, urllib.error, urllib.parse
 
 UA = {"User-Agent": "Mozilla/5.0 (compatible; macro-risk-tracker/1.0)"}
 TIMEOUT = 25
@@ -104,9 +104,12 @@ MOF_JGB_URLS = [
 
 def _era_to_iso(datestr):
     m = (datestr or "").strip()
+    w = re.match(r"^(\d{4})[./-](\d{1,2})[./-](\d{1,2})$", m)
+    if w:  # already a western date -> normalize to ISO
+        return f"{int(w.group(1))}-{int(w.group(2)):02d}-{int(w.group(3)):02d}"
     base = {"R": 2018, "H": 1988, "S": 1925}.get(m[:1].upper())
     if not base:
-        return m  # already western or unknown; pass through
+        return m  # unknown format; pass through
     try:
         era_y, mo, dy = m[1:].split(".")
         return f"{base + int(era_y)}-{int(mo):02d}-{int(dy):02d}"

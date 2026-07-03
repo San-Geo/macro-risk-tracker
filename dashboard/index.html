@@ -442,6 +442,7 @@ function statusOf(i){ const n=(i.note||'').toLowerCase(); if(n.includes('overrid
 function reviewRows(arr){ return arr.map(i=>{
   const src=(i.sources||[]).map(u=>`<a href="${u}" target="_blank" rel="noopener">src</a>`).join(' ');
   const rangeTag=i.out_of_range?`<span class="pill" style="background:#C0392B;color:#fff;margin-right:4px">out of range</span>`:'';
+  const vinTag=i.vintage==='rejected'?`<span class="pill" style="background:#E8710A;color:#fff;margin-right:4px" title="the new read was based on OLDER source data than the prior applied value; the newer vintage was kept">older data rejected</span>`:'';
   const parseTag=i.parse==='repaired'?`<span class="pill" style="background:#F5A623;color:#fff;margin-right:4px" title="the agent's JSON was malformed; the score was recovered but the fact text may be partial">fact recovered</span>`:'';
   let xc='';
   if(i.crosscheck&&i.crosscheck.by){ const c=i.crosscheck;
@@ -458,26 +459,36 @@ function reviewRows(arr){ return arr.map(i=>{
   return `<tr><td>${i.label}<div style="color:var(--muted);font-size:11px">${i.story}${i.domain?` \u00B7 <span style="color:var(--accent)">${i.domain} desk</span>`:''}</div></td>
     <td>${fmt(i.value)}</td>
     <td><span class="pill" style="background:${confColor(i.confidence)};text-transform:capitalize">${i.confidence||'-'}</span></td>
-    <td>${statusOf(i)}</td><td>${rangeTag}${parseTag}${xc}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
+    <td>${statusOf(i)}</td><td>${rangeTag}${vinTag}${parseTag}${xc}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
 }).join(''); }
 function reviewPanel(d){
   const r=d.agent_review;
   if(!r||!r.items||!r.items.length) return `<div class="narr"><strong>Agent review</strong>\nThe rating agent has not run yet \u2014 it will populate here after its first run (weekly, or on demand from the Actions tab).</div>`;
-  const flags=new Set(r.review_flags||[]); const flagged=r.items.filter(i=>flags.has(i.id));
+  const flags=new Set(r.review_flags||[]);
+  const tierOf=i=> i.tier || (
+    ((i.crosscheck&&i.crosscheck.agree===false)||i.out_of_range||i.vintage==='rejected'
+      ||['low','error'].includes(String(i.confidence||'').toLowerCase())) ? 'act'
+    : flags.has(i.id) ? 'glance' : 'ok');
+  const act=r.items.filter(i=>tierOf(i)==='act');
+  const glance=r.items.filter(i=>tierOf(i)==='glance');
   const head=`<thead><tr><th>Indicator</th><th>Value</th><th>Confidence</th><th>Status</th><th>Why / sources</th></tr></thead>`;
   const gen=r.generated? new Date(r.generated).toLocaleString():'n/a';
-  const ft=flagged.length?`<div class="tscroll"><table>${head}<tbody>${reviewRows(flagged)}</tbody></table></div>`
-    :`<div class="asof" style="padding:6px 0">Nothing flagged \u2014 all ratings were confident and unchanged.</div>`;
+  const actT=act.length?`<div class="tscroll"><table>${head}<tbody>${reviewRows(act)}</tbody></table></div>`
+    :`<div class="asof" style="padding:6px 0;color:#2E7D32">\u2713 Nothing needs a decision \u2014 no holds, disagreements, or failed reads this run.</div>`;
+  const glanceT=glance.length?`<details style="margin-top:10px"${act.length?'':' open'}><summary class="asof"><b>${glance.length}</b> changed or annotated \u2014 informational, applied normally</summary>
+      <div class="tscroll"><table style="margin-top:8px">${head}<tbody>${reviewRows(glance)}</tbody></table></div></details>`:'';
   let xcLine='';
   if(r.crosscheck){ const c=r.crosscheck;
     xcLine = c.independent
       ? `<div class="asof" style="margin:6px 0 0;color:#2E7D32">\u2713 Cross-check uses an independent provider: <b>${c.model}</b>.</div>`
       : `<div class="asof" style="margin:6px 0 0">Cross-check is running on the <b>same model</b> (${c.model}). For an independent second opinion, set repository <b>variable</b> AGENT_MODEL_2=asi1 and <b>secret</b> ASI1_API_KEY.</div>`;
   }
+  const rc=act.length?`<b style="color:#E8710A">${act.length}</b> need action`:'\u2713 0 need action';
   return `<div class="panel" id="review"><div class="phead" onclick="this.parentNode.classList.toggle('open')">
       <span><strong>Agent review</strong> <span class="asof">your weekly 2-minute check</span></span>
-      <span class="asof"><b>${flagged.length}</b> flagged \u00B7 updated ${gen}${r.model?' \u00B7 '+r.model:''}<span class="chev"></span></span></div>
-    <div class="pbody">${xcLine}<div class="asof" style="margin:8px 0 4px">Needs a glance (low-confidence or changed):</div>${ft}
+      <span class="asof">${rc} \u00B7 ${glance.length} changed \u00B7 ${gen}${r.model?' \u00B7 '+r.model:''}<span class="chev"></span></span></div>
+    <div class="pbody">${xcLine}<div class="asof" style="margin:8px 0 4px"><b>Action needed</b> \u2014 held, rejected, or disagreed; the board is using a prior/held value until you decide:</div>${actT}
+      ${glanceT}
       <details style="margin-top:12px"><summary class="asof">Show all ${r.items.length} agent-rated indicators</summary>
         <div class="tscroll"><table style="margin-top:8px">${head}<tbody>${reviewRows(r.items)}</tbody></table></div></details>
       <div class="asof" style="margin-top:10px">Override any rating: edit <code>manual_input.csv</code> and commit. Full log: <code>data/agent_assessments.json</code>.</div></div></div>`;
@@ -493,11 +504,20 @@ function classMeta(c){
        : c==='story_gap' ? {label:'Coverage gap', color:'#E8710A'}
        : {label:'Re-rate existing', color:'#1F4E79'};
 }
-function scoutItem(it){
+function scoutTargetKey(it){
+  const cls=it.classification||'';
+  const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'').slice(0,32);
+  if(cls==='existing_indicator') return `rerate|${it.target_story||''}|${it.target_indicator||''}`;
+  if(cls==='story_gap') return `gap|${it.target_story||''}|${norm((it.proposed_indicator||{}).label)}`;
+  return `new|${norm((it.proposed_story||{}).name)}`;
+}
+function scoutItem(it, extra){
   const cm=classMeta(it.classification);
   const mat=(it.materiality||'').toLowerCase();
   const matCol=mat==='high'?'#C0392B':mat==='medium'?'#F5A623':'#888';
   const src=(it.sources||[]).map(u=>`<a href="${u}" target="_blank" rel="noopener">src</a>`).join(' ');
+  const n=(extra&&extra.count)||it.sightings||1;
+  const seen=n>1?`<span class="pill" style="background:var(--track);color:var(--text)" title="the scout has surfaced this same development ${n} times (re-worded reports merge into one card)">seen ${n}\u00D7</span>`:'';
   let action='';
   if(it.classification==='existing_indicator') action=`Re-rate <b>${it.target_indicator||it.target_story||'?'}</b>.`;
   else if(it.classification==='story_gap'){ const pi=it.proposed_indicator||{}; action=`Proposes indicator <b>${pi.label||'?'}</b> under <b>${it.target_story||'?'}</b>.`; }
@@ -506,7 +526,7 @@ function scoutItem(it){
     <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:4px">
       <span class="pill" style="background:${cm.color}">${cm.label}</span>
       <span class="pill" style="background:${matCol};text-transform:capitalize">${it.materiality||'?'}</span>
-      <span class="asof">${it.as_of||it.first_seen||''}</span></div>
+      ${seen}<span class="asof">${it.as_of||it.first_seen||''}</span></div>
     <div style="font-weight:700;font-size:13.5px">${it.headline||''}</div>
     <div style="font-size:12.5px;margin:3px 0;line-height:1.5">${it.summary||''}</div>
     <div class="asof">${action} ${src} \u00B7 <code>scout.py --apply ${it.id}</code></div></div>`;
@@ -526,8 +546,30 @@ function scoutPanel(){
     body=`<div class="asof" style="padding:8px 0;line-height:1.5">\u26A0\uFE0F The last scan couldn't complete (it will retry automatically on the next run). Last successful check: <b>${date}</b>.`
       +(q.last_error?`<div style="margin-top:6px;font-family:monospace;font-size:11px;color:var(--muted);word-break:break-word">reason: ${String(q.last_error).slice(0,300)}</div>`:'')+`</div>`;
   } else if(pend.length){
-    right=`<b>${pend.length}</b> to review \u00B7 scanned ${date}`;
-    body=pend.map(scoutItem).join('');
+    // group re-worded duplicates by TARGET (newest representative wins, count shown)
+    const groups=new Map();
+    for(const it of pend){
+      const k=scoutTargetKey(it);
+      if(!groups.has(k)) groups.set(k,{rep:it,count:it.sightings||1});
+      else { const g=groups.get(k); g.count+=(it.sightings||1);
+        if((it.last_seen||it.as_of||'')>(g.rep.last_seen||g.rep.as_of||'')) g.rep=it; }
+    }
+    // re-rate proposals older than the last agent run are superseded by construction:
+    // the agent has since re-researched that indicator with fresh evidence.
+    const agentDate=(LAST_D&&LAST_D.data_health&&LAST_D.data_health.agent_last)||'';
+    const fresh=[],superseded=[];
+    for(const g of groups.values()){
+      const isRerate=g.rep.classification==='existing_indicator';
+      const seen=g.rep.last_seen||g.rep.as_of||'';
+      (isRerate&&agentDate&&seen<agentDate?superseded:fresh).push(g);
+    }
+    fresh.sort((a,b)=>(b.rep.materiality||'').localeCompare(a.rep.materiality||''));
+    right=`<b>${fresh.length}</b> to review \u00B7 scanned ${date}`;
+    body=fresh.map(g=>scoutItem(g.rep,{count:g.count})).join('');
+    if(superseded.length){
+      body+=`<details style="margin-top:6px"><summary class="asof">${superseded.length} older re-rate proposal${superseded.length>1?'s':''} superseded \u2014 the agent has re-rated ${superseded.length>1?'these indicators':'this indicator'} since (${agentDate})</summary>
+        <div style="margin-top:8px;opacity:.75">${superseded.map(g=>scoutItem(g.rep,{count:g.count})).join('')}</div></details>`;
+    }
   } else {
     right=`<b style="color:#2E7D32">\u2713 No new developments</b> \u00B7 last checked ${date}`;
     body=`<div class="asof" style="padding:8px 0;line-height:1.55"><b style="color:#2E7D32">\u2713 No new developments flagged this run.</b> The scout checked credible feeds on <b>${date}</b> and found nothing material that the tracker isn't already watching. This is the normal, healthy state on a quiet week \u2014 the panel fills only when something new crosses its bar.</div>`;
@@ -724,10 +766,11 @@ function render(d){
     for(const ind of s.indicators){
       const bc=ind.band===null?'#999':bandColor(ind.band<=0?1:ind.band===1?5:9);
       const srcCell=ind.source_url?`<a href="${ind.source_url}" target="_blank" rel="noopener">${ind.provenance||'src'}</a>`:(ind.provenance||ind.source);
+      const ageWarn=ind.stale_for_cadence?`<span class="htip" style="color:#E8710A;font-weight:700;cursor:default" data-tip="This data is ${Math.round(ind.age_days/30)||1} month(s) old for a ${ind.cadence} indicator \u2014 the underlying source hasn't published (or the agent hasn't found) anything fresher. The value may lag reality."> \u23F3</span>`:'';
       html+=`<tr class="${ind.stale?'stale':''}"><td>${ind.label}</td><td>${fmt(ind.value)}</td>
         <td><span class="pill" style="background:${bc}">${ind.band===null?'-':ind.band}</span></td>
         <td>${ind.delta>0?'+':''}${ind.delta||0}</td><td>${ind.cadence}</td>
-        <td class="asof">${ind.as_of||'\u2014'}</td>
+        <td class="asof">${ind.as_of||'\u2014'}${ageWarn}</td>
         <td style="color:var(--muted)">${srcCell}${ind.stale?' <span class="prov">baseline</span>':''}</td></tr>`;
     }
     html+=`</tbody></table></div></div>`;

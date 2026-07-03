@@ -86,10 +86,13 @@ indicators:
   license_flow:
     type: band
     query: China rare earth magnet export licenses approvals status 2026
-    rubric: '0 = FLOWING: rare-earth/magnet export licenses issued on normal timelines to most applicants.
-      1 = SLOWING: non-automatic licensing with whitelists, review >30 days, or licenses only to a handful
-      of producers. 2 = FROZEN: a categorical export halt or suspension of magnet/HREE licenses. Cite
-      MOFCOM/customs or named-exporter reports.'
+    rubric: 'Judge China''s rare-earth export licensing regime by APPROVAL BREADTH and PROCESSING TIME
+      per MOFCOM announcements and credible trade reporting. 0 = FLOWING: general/blanket licences cover
+      most export volume AND typical approvals <30 days, no new categories restricted in the trailing
+      3 months. 1 = SLOWING: case-by-case or whitelist licensing (approvals limited to named producers/end-users),
+      OR typical processing >30 days, OR a new category added to the control list in the trailing 3 months.
+      2 = FROZEN: categorical denials to a country/sector, OR no new licences issued for >30 days, OR
+      an announced suspension of export licensing.'
     sources:
     - https://www.reuters.com/markets/commodities
     - https://www.csis.org
@@ -176,10 +179,13 @@ indicators:
   regional_bank_stress:
     type: band
     query: regional bank commercial real estate stress failures 2026
-    rubric: 'COUNT CRE-driven regional-bank failures or named distress events in the trailing 6 months.
-      0 = CALM: none. 1 = ISOLATED: 1-2 firm-specific failures/distress, described by supervisors as idiosyncratic.
-      2 = CLUSTER: >=3 CRE-linked failures, or a supervisory warning of systemic regional-bank CRE stress.
-      Cite the FDIC failed-bank list.'
+    rubric: 'Count US bank failures on the FDIC failed-bank list in the trailing 6 months where FDIC/Fed/OCC
+      materials or credible reporting cite CRE/real-estate exposure as a contributing factor. 0 = CALM:
+      zero such failures AND no new public enforcement action or supervisory statement citing regional-bank
+      CRE concentration in the trailing 6 months. 1 = ISOLATED: 1-2 such failures (each <$10bn assets),
+      OR >=1 new public enforcement action/consent order citing CRE concentration. 2 = CLUSTER: >=3 such
+      failures in 6 months, OR any single CRE-linked failure >$10bn assets, OR a coordinated supervisory
+      action (e.g. interagency statement, emergency facility) aimed at regional-bank CRE stress.'
     sources:
     - https://www.fdic.gov
     - https://www.federalreserve.gov

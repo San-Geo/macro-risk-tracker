@@ -97,6 +97,28 @@ def source_kind(source):
     return "Agent/manual"
 
 
+STALENESS_BUDGET_DAYS = {"daily": 10, "weekly": 21, "monthly": 60, "quarterly": 150, "annual": 430}
+
+
+def _age_days(as_of, today_date):
+    """Days between the LATEST date parseable from as_of and today; None if unparseable."""
+    if not as_of:
+        return None
+    s = str(as_of)
+    dates = [(int(y), int(m), int(d) if d else 28)
+             for y, m, d in __import__("re").findall(r"(\d{4})[-/](\d{1,2})(?:[-/](\d{1,2}))?", s)]
+    for y, q in __import__("re").findall(r"(\d{4})[-\s]?Q([1-4])", s):
+        dates.append((int(y), int(q) * 3, 28))
+    if not dates:
+        return None
+    y, m, d = max(dates)
+    try:
+        then = datetime.date(y, m, min(d, 28))
+        return (datetime.date.fromisoformat(today_date) - then).days
+    except ValueError:
+        return None
+
+
 def attach_provenance(result, agent_log, fetched, today_date):
     """Add as_of + source_url + provenance kind to every indicator."""
     assess = (agent_log or {}).get("assessments", {})
@@ -117,6 +139,12 @@ def attach_provenance(result, agent_log, fetched, today_date):
             if ind.get("stale") and not as_of:
                 kind = "Baseline"
             ind["source_url"], ind["as_of"], ind["provenance"] = url, as_of, kind
+            # staleness budget: is the data older than its declared cadence warrants?
+            budget = STALENESS_BUDGET_DAYS.get(ind.get("cadence"))
+            age = _age_days(as_of, today_date) if budget else None
+            if age is not None and age > budget:
+                ind["age_days"] = age
+                ind["stale_for_cadence"] = True
     return result
 
 

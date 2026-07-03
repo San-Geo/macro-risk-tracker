@@ -290,6 +290,22 @@ def assess_one(ind_id, spec, api_key, date, prior=None, model=None, domain=None,
     return _finalize(_extract_json(text), kind)
 
 
+def _as_of_key(s):
+    """Parse an as_of string into a sortable (year, month, day) key.
+    Tolerates 'YYYY-MM-DD', 'YYYY-MM', 'YYYY-Qn', 'YYYY/M/D' and dates embedded in
+    longer strings like '2026-Q2 (as of 2026-06-30)' (takes the LATEST date found).
+    Returns None when nothing parseable - callers must skip the check then."""
+    if not s:
+        return None
+    s = str(s)
+    keys = []
+    for y, m, d in re.findall(r"(\d{4})[-/](\d{1,2})(?:[-/](\d{1,2}))?", s):
+        keys.append((int(y), int(m), int(d) if d else 28))
+    for y, q in re.findall(r"(\d{4})[-\s]?Q([1-4])", s, re.I):
+        keys.append((int(y), int(q) * 3, 28))  # quarter -> its closing month
+    return max(keys) if keys else None
+
+
 def _in_range(value, spec):
     """Plausibility gate. Returns (ok, reason). Band values must be 0-2; value
     indicators must fall within the [min,max] declared in framework.yaml (if any)."""
@@ -426,6 +442,21 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
                 a["confidence"] = "low"  # routes into the hold-at-last-trusted-value path below
                 a["rationale"] = ((a.get("rationale", "") +
                     f" [sanity check: {why}; auto-held at last trusted value]").strip())
+        # Vintage guard: if the new read is based on OLDER source data than the prior
+        # applied read and the value differs, the board must not move on stale vintage
+        # (live bug: subprime auto moved 6.11 [Mar data] -> 6.80 [Feb data]). Keep the
+        # newer-vintage prior and flag for a human glance.
+        if (prior and prior.get("value") is not None and a.get("value") is not None
+                and a.get("value") != prior.get("value")):
+            new_k, old_k = _as_of_key(a.get("as_of")), _as_of_key(prior.get("as_of"))
+            if new_k and old_k and new_k < old_k:
+                a["vintage"] = "rejected"
+                a["rationale"] = ((a.get("rationale", "") +
+                    f" [vintage guard: new read is {a.get('as_of')} data but the prior "
+                    f"applied value was {prior.get('as_of')} data; kept the newer vintage]").strip())
+                a["value"], a["as_of"] = prior["value"], prior.get("as_of")
+                a["confidence"] = "medium" if str(a.get("confidence", "")).lower() == "high" else a.get("confidence")
+                review.append(ind_id)
         conf = str(a.get("confidence", "low")).lower()
         if conf == "low" or a.get("value") is None:
             # don't flip on weak evidence: retain prior applied value if we have one

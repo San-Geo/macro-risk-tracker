@@ -142,6 +142,17 @@ def main():
         items = []
         for ind_id, a in alog["assessments"].items():
             lbl, story, setno = idmap.get(ind_id, (ind_id, "", 0))
+            cc = a.get("crosscheck") or {}
+            conf = str(a.get("confidence", "")).lower()
+            # Triage tier: ACT = something was held/rejected/failed and needs a human
+            # decision; GLANCE = value changed or sources dissent (informational).
+            if (cc.get("agree") is False or a.get("out_of_range")
+                    or a.get("vintage") == "rejected" or conf in ("low", "error")):
+                tier = "act"
+            elif ind_id in flags:
+                tier = "glance"
+            else:
+                tier = "ok"
             items.append({
                 "id": ind_id, "label": lbl, "story": story, "set": setno,
                 "value": a.get("value"), "confidence": a.get("confidence"),
@@ -152,8 +163,10 @@ def main():
                 "domain": a.get("domain", ""),
                 "crosscheck": a.get("crosscheck"),
                 "parse": a.get("parse"),
+                "vintage": a.get("vintage"),
+                "tier": tier,
             })
-        items.sort(key=lambda x: (x["id"] not in flags, x["set"], x["label"]))
+        items.sort(key=lambda x: ({"act": 0, "glance": 1, "ok": 2}[x["tier"]], x["set"], x["label"]))
         result["agent_review"] = {"generated": alog.get("generated"), "model": alog.get("model"),
                                   "crosscheck": alog.get("crosscheck"),
                                   "review_flags": sorted(flags), "items": items}
