@@ -3,12 +3,18 @@ name: daily-risk-tracker
 # Two cadences:
 #   * every weekday  -> refresh live market data + narrative (free; reuses last agent ratings)
 #   * every Monday   -> ALSO run the AI rating agent (researches each judgment indicator)
-# Manually running it from the Actions tab always does a full agent pass.
+# Manual runs from the Actions tab are FREE by default (data refresh + redeploy only);
+# tick the "run_agent" box to also run the AI agent (uses API credits).
 on:
   schedule:
     - cron: "0 12 * * 1-5"    # 12:00 UTC weekdays (pre-US-open) - market refresh
     - cron: "0 12 * * 1"      # 12:00 UTC Monday (pre-open) - agent refresh (captures the weekend)
-  workflow_dispatch:   # a manual run from the Actions tab always does a full agent + scout pass
+  workflow_dispatch:
+    inputs:
+      run_agent:
+        description: "Run the AI rating agent (uses API credits). Leave unchecked to only refresh data + redeploy the site - no agent, no API cost."
+        type: boolean
+        default: false
 
 # Only one run at a time; a new run supersedes a stuck one.
 concurrency:
@@ -37,12 +43,12 @@ jobs:
       - name: Decide whether to run the agent
         id: mode
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ github.event.schedule }}" = "0 12 * * 1" ]; then
+          if [ "${{ github.event.inputs.run_agent }}" = "true" ] || [ "${{ github.event.schedule }}" = "0 12 * * 1" ]; then
             echo "flag=--agent" >> "$GITHUB_OUTPUT"
-            echo "Agent: ON for this run (manual dispatch or Monday schedule)"
+            echo "Agent: ON for this run (you ticked run_agent, or it's the Monday schedule)"
           else
             echo "flag=" >> "$GITHUB_OUTPUT"
-            echo "Agent: off (weekday market refresh only)"
+            echo "Agent: OFF - market refresh + redeploy only, no API cost"
           fi
 
       - name: Config self-test (guard)
