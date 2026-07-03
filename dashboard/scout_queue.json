@@ -2,12 +2,13 @@
   "items": {
     "us-iran-ceasefire-mou-signed-june-17-hormuz-re-c-7b6e5b": {
       "headline": "US-Iran ceasefire MOU signed June 17; Hormuz re-closed June 20 after Israeli Lebanon strikes; US Navy announced 'widened route' June 27 \u2014 strait status remains contested",
-      "summary": "A 60-day ceasefire MOU was signed June 17 requiring Iran to allow free Hormuz transit, but Iran re-closed the strait on June 20 citing Israeli attacks in Lebanon; on June 27 the US Navy's JMIC announced a widened passage near Oman as a de-facto challenge to Iranian control, leaving the strait's status ambiguous and oil markets volatile (WTI near $81, down from a ~$120 wartime high).",
-      "as_of": "2026-06-27",
+      "summary": "Following the Feb 28 US-Israel strike on Iran and Iran's closure of the Strait of Hormuz, the IEA and EIA confirm the largest oil supply disruption in history; despite a ceasefire on Apr 8 and partial ship-to-ship transfers resuming in early June, mine clearing is ongoing, flows remain far below pre-war levels, and Brent averaged $105/bbl through June-July per EIA's June STEO.",
+      "as_of": "2026-07-02",
       "sources": [
+        "https://www.eia.gov/pressroom/releases/press589.php",
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
         "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
-        "https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz",
-        "https://discoveryalert.com.au/us-iran-strait-hormuz-oil-prices-2026-ceasefire-market/"
+        "https://www.brookings.edu/articles/from-chokepoint-to-crisis-the-strait-of-hormuz-and-global-oil-markets/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -15,11 +16,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Strait of Hormuz is the single most material chokepoint in the tracker. Iran re-closed the strait within 72 hours of the June 17 MOU on the pretext of Israeli Lebanon strikes; the US Navy's June 27 'widened route' announcement is an unprecedented direct challenge to Iranian sovereignty claims and signals active brinkmanship. The status should be coded 1 (contested) moving toward 2 \u2014 this is not a resolved situation. With ~20\u201327% of seaborne oil transiting the strait, any re-escalation reverts WTI toward wartime highs and transmits immediately into CPI, EM debt, and food/fertilizer (s18) indicators. The WTI indicator should be updated to ~$81 (down from $120 wartime high, but fragile).",
+      "rationale": "Status should be coded 2 (effectively closed / contested with mines uncleared); WTI/Brent at ~$105/bbl is a direct indicator update; IEA confirmed 'greatest threat to global energy security in history' and tanker traffic remains far below pre-war levels despite ceasefire \u2014 this is the dominant macro shock of H1 2026 and the indicator values need urgent refresh.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "id": "us-iran-ceasefire-mou-signed-june-17-hormuz-re-c-7b6e5b"
+      "last_seen": "2026-07-03",
+      "id": "us-iran-ceasefire-mou-signed-june-17-hormuz-re-c-7b6e5b",
+      "sightings": 2
     },
     "boj-raises-policy-rate-to-1-0-at-june-16-mpm-haw-9b4d3c": {
       "headline": "BOJ raises policy rate to 1.0% at June 16 MPM; hawkish board members call for hikes every 'few months' toward 2% neutral; 10-year JGB yield at ~2.61\u20132.65%",
@@ -74,12 +76,13 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "Treasury's FinCEN and OFAC issued a joint proposed rule on April 9 to implement GENIUS Act AML and sanctions compliance requirements for permitted payment stablecoin issuers, with all implementing regulations due by July 18, 2026 (one year post-enactment). The 1:1 T-bill/cash reserve mandate means stablecoin supply growth directly drives marginal Treasury demand \u2014 a structural new buyer class for short-dated debt.",
-      "as_of": "2026-04-09",
+      "summary": "Six federal agencies (OCC, FDIC, NCUA, Treasury, FinCEN, OFAC) face a statutory July 18, 2026 deadline to finalize GENIUS Act stablecoin implementing regulations; as of late June no agency had issued final rules, Tether's foreign-issuer reciprocity determination remained unpublished, and the Federal Reserve had not yet issued its proposed rule, creating an acute implementation-friction event in the next 15 days.",
+      "as_of": "2026-07-03",
       "sources": [
-        "https://home.treasury.gov/news/press-releases/sb0435",
-        "https://www.gibsondunn.com/the-genius-act-a-new-era-of-stablecoin-regulation/",
-        "https://en.wikipedia.org/wiki/GENIUS_Act"
+        "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors",
+        "https://www.spark.money/research/genius-act-stablecoin-regulation-explained",
+        "https://www.brookings.edu/articles/next-steps-for-genius-payment-stablecoins/",
+        "https://home.treasury.gov/news/press-releases/sb0435"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -87,11 +90,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "With the July 18 regulatory deadline imminent and the proposed AML rule still in comment period, implementation friction is rising toward '1 gaps' \u2014 not because of political opposition but because the 120-day licensing window, state-vs-federal framework reconciliation, and Big Tech exclusion rules all create compliance uncertainty. More importantly, the Treasury-demand vector (stablecoins mandated to hold T-bills 1:1) is now a live market structural factor as total USD stablecoin supply is growing; this indicator needs monitoring for both friction and the T-bill demand boost that could affect s1 (basis trade) and s12 (de-dollarization) dynamics.",
+      "rationale": "This indicator should be updated to 2 (problems): six agencies are simultaneously finalizing rules under a 15-day deadline with no final rules yet issued, Tether's foreign-issuer status is unresolved, and the Fed has not yet published its proposed rule. A missed deadline would create legal ambiguity for the entire ~$250bn USD stablecoin market and its Treasury-bill demand implications \u2014 a direct risk to the Treasury demand dimension of this story.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1"
+      "last_seen": "2026-07-03",
+      "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
+      "sightings": 2
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -884,12 +888,12 @@
     },
     "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec": {
       "headline": "Iran war energy shock drives Hormuz fertilizer disruption; Gulf fertilizer exports (especially Qatar LNG-linked urea) severely curtailed since March 2026",
-      "summary": "The effective closure of the Strait of Hormuz since March 2026 has cut off Qatar's LNG-linked urea exports and Iraq/Kuwait's ammonia shipments, with CSIS noting crude oil and fertilizer prices have 'risen sharply' reflecting the region's role in global supply chains. The spring/summer planting disruption could propagate into 2026-27 crop-year food price pressure.",
-      "as_of": "2026-07-03",
+      "summary": "The ongoing Strait of Hormuz crisis has severely disrupted Gulf fertilizer production and exports; the Persian Gulf accounts for ~30-35% of global urea exports and ~20-30% of ammonia exports, and Qatar's LNG disruption (Ras Laffan partially damaged) compounds the ammonia/urea input shock, triggering FAO food security alerts and supply shortfalls in South and Southeast Asia.",
+      "as_of": "2026-07-01",
       "sources": [
-        "https://www.csis.org/analysis/strait-hormuz-8-charts",
-        "https://www.congress.gov/crs-product/R45281",
-        "https://www.brookings.edu/articles/from-chokepoint-to-crisis-the-strait-of-hormuz-and-global-oil-markets/"
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://ieefa.org/impact-middle-east-crisis-global-energy-markets",
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -897,11 +901,12 @@
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz/Gulf fertilizer indicator in s18_food_fertilizer should be moved to '2 cut': roughly 27% of world maritime crude trade was blocked since March 4, Qatar LNG-derived urea and Gulf ammonia/phosphate routes are severed, and CSIS explicitly flags fertilizer price spikes alongside oil. This is highly material for the 2026-27 agricultural season as northern-hemisphere planting decisions are being made now under severe input-price uncertainty. The food-price-trend indicator should also move toward '2 spiking' from 'elevated'.",
+      "rationale": "This indicator should immediately be coded 2 (cut): Ras Laffan LNG trains damaged, GCC urea/ammonia exports severely disrupted, and ~30% of globally traded fertilizer normally transits Hormuz. The story's food-price trend indicator also warrants upgrade toward 2 (spiking) given South/Southeast Asian fuel and food shortages. This is a compounding shock linking s18, s20, and s4 (developing-world debt) that the tracker must register as a cascading cross-story event.",
       "status": "pending",
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "id": "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec"
+      "id": "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec",
+      "sightings": 2
     },
     "japan-s-energy-import-crisis-deepens-as-hormuz-c-e531e3": {
       "headline": "Japan's energy import crisis deepens as Hormuz closure compounds BOJ policy bind \u2014 new macro feedback loop not captured in existing indicators",
@@ -979,11 +984,11 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "The Nov-10-2026 expiry of China's suspension of extraterritorial October 2025 rare-earth export controls is now within a four-month horizon; yttrium exports to the US remain at roughly 30% of pre-restriction levels and aerospace manufacturers are rationing material. A 2026 CSIS analysis confirms that even during the suspension, actual volumes of heavy rare earths (dysprosium, terbium) have dried up due to China's dual-use licensing restrictions targeting Japan.",
+      "summary": "China's Oct 2025 rare-earth export control suspension expires Nov 10, 2026 \u2014 now less than 19 weeks away \u2014 and CSIS data confirm US yttrium imports remain near 94% below pre-restriction baselines through Feb 2026; licensing continues to discriminate against US vs European buyers, and China imposed additional dual-use controls on Japan in early 2026, tightening the multi-country squeeze.",
       "as_of": "2026-07-01",
       "sources": [
         "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later",
-        "https://www.certivo.com/blog-details/china-rare-earth-export-controls-2026-what-new-licensing-rules-mean-for-manufacturers",
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
         "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
         "https://www.spglobal.com/energy/en/news-research/latest-news/metals/012726-rare-earth-supply-bottlenecks-set-to-persist-in-2026"
       ],
@@ -993,11 +998,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The pause status should move to 1 (expiring): the Nov-10-2026 suspension deadline is now materially close, with no confirmed extension. Supply data shows the 'pause' has not restored flows \u2014 yttrium at ~30% of pre-restriction levels, heavy rare earth compounds for Japan cut via dual-use rules. The indicator should now flag that extraterritorial enforcement activation is the base-case risk absent a new diplomatic deal.",
+      "rationale": "The Nov 2025 pause status indicator should now be coded 1 (expiring) given the Nov 10, 2026 hard deadline is now within a single quarter and no extension has been announced; US import flows remain structurally impaired despite the nominal suspension, qualifying this as an escalating rather than resolved risk. The dual-use expansion targeting Japan in early 2026 also raises the 'export license flow' indicator toward 1 (slowing) for allied defense-relevant supply chains.",
       "status": "pending",
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c"
+      "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
+      "sightings": 2
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -1118,10 +1124,98 @@
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
       "id": "iran-mou-60-day-nuclear-clock-failure-scenario-c-44bce4"
+    },
+    "japan-30-yr-jgb-hits-4-04-and-yen-slides-to-4-de-25bb7f": {
+      "headline": "Japan 30-yr JGB hits 4.04% and yen slides to 4-decade low on July 2 \u2014 BOJ governance split deepens",
+      "summary": "On July 2, 2026, Japan's 30-year JGB yield rose to 4.04% and the 10-year climbed above 2.7%; the yen fell to a four-decade low driven by carry-trade persistence and wide rate differentials; PM Takaichi simultaneously appointed dovish new BOJ board member Ayano Sato (signalling weak inflation expectations), directly contradicting Governor Ueda's reiterated hawkish guidance and raising fiscal-monetary coordination risk.",
+      "as_of": "2026-07-02",
+      "sources": [
+        "https://tradingeconomics.com/japan/30-year-bond-yield",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.stonex.com/en-us/insights/japan-yield-curve-pressure-threatens-global-carry-trades/",
+        "https://www.forbes.com/sites/investor-hub/article/how-japan-bond-market-affects-your-portfolio/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "BOJ internal governance friction (0 unified / 1 mixed signals / 2 overt split)",
+        "type": "band",
+        "rubric": "0 = BOJ board and PM office aligned on policy direction; 1 = newly appointed board members sending conflicting signals vs governor (current: Sato appointment vs Ueda hawkish guidance); 2 = public board dissent or PM directly overriding BOJ independence",
+        "sources": [
+          "https://tradingeconomics.com/japan/government-bond-yield",
+          "https://www.stonex.com/en-us/insights/japan-yield-curve-pressure-threatens-global-carry-trades/"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan indicators (USD/JPY, 30-yr JGB yield, Takaichi plan financing clarity) do not capture the new specific risk of a BOJ board governance split \u2014 Takaichi appointing a dovish member (Sato) while Ueda maintains a tightening bias creates a credibility-destroying internal contradiction that could trigger disorderly JGB repricing. This is a new, material sub-risk within the story that needs its own indicator. The 30-yr JGB at 4.04% and 10-yr at 2.7% also need immediate numerical updates.",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "sightings": 1,
+      "id": "japan-30-yr-jgb-hits-4-04-and-yen-slides-to-4-de-25bb7f"
+    },
+    "global-lng-market-faces-structural-120-bcm-cumul-bb5617": {
+      "headline": "Global LNG market faces structural 120 bcm cumulative supply loss 2026-2030 from Qatar infrastructure damage",
+      "summary": "IEA's April 2026 Gas Market Report quantified that damage to Qatari LNG liquefaction infrastructure at Ras Laffan \u2014 where two of 14 trains were damaged \u2014 will cause a cumulative loss of approximately 120 billion cubic meters of LNG supply between 2026 and 2030, permanently delaying the anticipated global LNG supply wave and reshaping European and Asian energy security for years.",
+      "as_of": "2026-06-17",
+      "sources": [
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+        "https://ieefa.org/impact-middle-east-crisis-global-energy-markets"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "LNG Infrastructure Destruction & Multi-Year Supply Gap",
+        "why": "The Ras Laffan damage is not a temporary Hormuz-transit disruption (already captured in s20_sea_lanes) but a durable destruction of physical LNG liquefaction capacity. A 120 bcm cumulative loss 2026-2030 means the pre-war global LNG supply wave \u2014 which was expected to ease European and Asian energy prices \u2014 is structurally delayed. This creates multi-year energy inflation, locks Europe into Russian and US LNG dependency at high cost, pressures sovereign balances of Asian importers, and alters the economics of power-intensive AI data centers and electrification investment globally. No existing story captures permanent LNG infrastructure destruction as distinct from sea-lane access.",
+        "proposed_level": 8,
+        "set": "Set 5",
+        "indicators": [
+          {
+            "label": "Qatar Ras Laffan LNG capacity restoration (% of pre-war nameplate online)",
+            "type": "value",
+            "rubric": "Target: 100% = pre-war; currently ~86% (2 of 14 trains offline); below 75% = acute; 75-90% = impaired; 90-100% = recovering. Sources: IEA Gas Market Report, IEEFA LNG Tracker.",
+            "sources": [
+              "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+              "https://ieefa.org/impact-middle-east-crisis-global-energy-markets"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Asian LNG spot price premium over TTF ($/MMBtu)",
+            "type": "value",
+            "rubric": "Measures demand-side stress on Asian importers; >$3 = elevated; >$6 = acute; negative = surplus. Tracks whether LNG shortage is pricing vulnerable economies (Pakistan, Bangladesh, Vietnam) out of the market.",
+            "sources": [
+              "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Global LNG supply offline share (% of 2025 export capacity)",
+            "type": "value",
+            "rubric": "IEA confirmed ~25% of global LNG offline in early April 2026 (Qatar + Australian Cyclone Narelle + Russian constraints); <10% = normal; 10-20% = elevated; >20% = crisis.",
+            "sources": [
+              "https://ieefa.org/impact-middle-east-crisis-global-energy-markets"
+            ],
+            "suggested_weight": 0.35
+          }
+        ]
+      },
+      "rationale": "Existing s20_sea_lanes captures the Hormuz/Red Sea status and WTI crude price but does not track the permanent or multi-year destruction of LNG production infrastructure \u2014 a structurally different risk horizon. The IEA's quantification of 120 bcm cumulative loss through 2030 is a new, material finding that implies sustained energy inflation, European strategic dependency shifts, and long-duration stress for Asian LNG-importing sovereigns. This warrants a dedicated new story node in Set 5 (physical resource chokepoints).",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "sightings": 1,
+      "id": "global-lng-market-faces-structural-120-bcm-cumul-bb5617"
     }
   },
   "generated": "2026-07-03",
   "model": "claude-sonnet-4-6",
-  "new_count": 6,
-  "pending_count": 42
+  "new_count": 2,
+  "pending_count": 44
 }
