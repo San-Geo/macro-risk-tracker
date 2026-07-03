@@ -933,10 +933,195 @@
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
       "id": "japan-s-energy-import-crisis-deepens-as-hormuz-c-e531e3"
+    },
+    "boj-hikes-to-1-signals-path-to-2-neutral-yen-sti-3cae3a": {
+      "headline": "BOJ hikes to 1%, signals path to 2% neutral \u2014 yen still hits 4-decade low, 10y JGB clears 2.7%",
+      "summary": "The Bank of Japan raised its policy rate to 1% in late June 2026 with Deputy Governor Himino citing upside inflation risks from Middle East energy pass-through, yet USD/JPY has collapsed to four-decade lows because US rate expectations remain elevated and carry trades persist. The 10-year JGB yield climbed above 2.7% on July 2, its highest in three weeks, as markets price further BOJ hikes even as yen weakness deepens the stagflationary squeeze.",
+      "as_of": "2026-07-02",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "USD/JPY (yen strengthening = lower = risk)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "USD/JPY at four-decade lows (extreme risk-on reading for this indicator) combined with 10y JGB at 2.7%+ directly updates s2_japan's two primary market indicators. BOJ hiking to 1% while yen still collapses signals carry-trade stress and potential disorderly unwind \u2014 a core tail risk for this story. The 30y JGB yield and Takaichi financing-clarity indicators should also be re-checked given BOJ's aggressive tightening signal.",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "id": "boj-hikes-to-1-signals-path-to-2-neutral-yen-sti-3cae3a"
+    },
+    "us-iran-mou-signed-june-19-hormuz-nominally-re-o-bf0fae": {
+      "headline": "US-Iran MOU signed June 19: Hormuz nominally re-opened, but full oil-flow restoration may take months and 60-day nuclear clock is running",
+      "summary": "A 14-point US-Iran memorandum of understanding signed ~June 19 in Geneva commits Iran to arrange safe Hormuz passage and ends the US naval blockade in exchange for sanctions relief discussions, but experts warn mine-sweeping alone will take weeks and the 60-day window to resolve Iran's enriched-uranium stockpile is extraordinarily compressed. If the nuclear talks collapse, Iran retains leverage to re-close the strait.",
+      "as_of": "2026-06-30",
+      "sources": [
+        "https://www.csis.org/analysis/united-states-and-iran-announce-deal-end-war-state-play",
+        "https://www.cfr.org/articles/is-a-u-s-iran-deal-within-reach-six-key-issues-that-could-shape-a-ceasefire",
+        "https://commonslibrary.parliament.uk/research-briefings/cbp-10637/",
+        "https://www.pbs.org/newshour/world/iran-and-u-s-reach-an-initial-deal-to-extend-the-ceasefire-and-open-the-strait-of-hormuz-but-challenges-remain"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Hormuz status indicator should move from 2 (closed) toward 1 (contested/transitional): the MOU commits to re-opening but physical clearance lags, the 60-day nuclear negotiation cliff could trigger re-closure, and Iran's negotiating position still includes claims over strait governance. WTI has dropped on deal optimism but remains elevated vs pre-war. This is the single highest-materiality geopolitical de-escalation of the past week and directly governs s20_sea_lanes and indirectly s18_food_fertilizer and s4_dev_debt.",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "id": "us-iran-mou-signed-june-19-hormuz-nominally-re-o-bf0fae"
+    },
+    "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
+      "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
+      "summary": "The Nov-10-2026 expiry of China's suspension of extraterritorial October 2025 rare-earth export controls is now within a four-month horizon; yttrium exports to the US remain at roughly 30% of pre-restriction levels and aerospace manufacturers are rationing material. A 2026 CSIS analysis confirms that even during the suspension, actual volumes of heavy rare earths (dysprosium, terbium) have dried up due to China's dual-use licensing restrictions targeting Japan.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later",
+        "https://www.certivo.com/blog-details/china-rare-earth-export-controls-2026-what-new-licensing-rules-mean-for-manufacturers",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
+        "https://www.spglobal.com/energy/en/news-research/latest-news/metals/012726-rare-earth-supply-bottlenecks-set-to-persist-in-2026"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The pause status should move to 1 (expiring): the Nov-10-2026 suspension deadline is now materially close, with no confirmed extension. Supply data shows the 'pause' has not restored flows \u2014 yttrium at ~30% of pre-restriction levels, heavy rare earth compounds for Japan cut via dual-use rules. The indicator should now flag that extraterritorial enforcement activation is the base-case risk absent a new diplomatic deal.",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c"
+    },
+    "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
+      "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
+      "summary": "On approximately July 2-3 2026, Treasury's FinCEN and OFAC issued a joint proposed rule implementing GENIUS Act anti-money laundering and sanctions compliance requirements for permitted payment stablecoin issuers, with the statute's one-year rulemaking deadline falling July 18, 2026. The proposed rule, still in notice-and-comment phase, means key implementation regulations will not be final by the statutory deadline, creating a compliance gap for issuers.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://home.treasury.gov/news/press-releases/sb0435",
+        "https://www.gibsondunn.com/the-genius-act-a-new-era-of-stablecoin-regulation/",
+        "https://www.paulhastings.com/insights/crypto-policy-tracker/the-genius-act-a-comprehensive-guide-to-us-stablecoin-regulation"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "GENIUS Act was signed July 18 2025; regulations were due July 18 2026 but FinCEN/OFAC only issued a proposed (not final) rule in the final days before deadline. This confirms a 'gaps' reading (score 1) on the implementation friction indicator: issuers face regulatory uncertainty on AML/sanctions compliance exactly as stablecoin supply continues to expand rapidly, creating systemic risk to Treasury-demand dynamics if a large issuer faces a compliance event.",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "id": "treasury-fincen-propose-genius-act-aml-sanctions-d8c824"
+    },
+    "boj-rate-hikes-failing-to-stem-yen-collapse-para-240a95": {
+      "headline": "BOJ rate hikes failing to stem yen collapse: paradox creates carry-unwind cliff with no existing indicator capturing hike-vs-FX divergence",
+      "summary": "Despite BOJ hiking to 1% and Board Member Tamura signaling a path to 2% 'at intervals of a few months', USD/JPY has sunk to four-decade lows as US rate expectations remain elevated \u2014 creating a toxic combination where tighter BOJ policy squeezes domestic balance sheets while the carry trade continues to fund leveraged positions in US assets. No current s2_japan indicator captures the BOJ-hike-pace vs yen-depreciation divergence that would trigger a sudden carry unwind.",
+      "as_of": "2026-07-02",
+      "sources": [
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "BOJ policy rate vs USD/JPY divergence index (hike-pace adequacy)",
+        "type": "band",
+        "rubric": "0 = BOJ hikes keeping pace with yen depreciation pressure (USD/JPY stable or strengthening yen at <145); 1 = BOJ hiking but yen still weakening (USD/JPY 145-160, carry trade persisting despite hikes); 2 = BOJ hiking aggressively but yen at multi-decade lows (USD/JPY >160), signalling imminent forced carry unwind or intervention. Current reading: 2.",
+        "sources": [
+          "https://tradingeconomics.com/japan/interest-rate",
+          "https://tradingeconomics.com/japan/government-bond-yield",
+          "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan indicators track USD/JPY level and JGB yields independently, but do not capture the dangerous divergence between the BOJ's hiking cycle and ongoing yen weakness \u2014 the very configuration that in August 2024 triggered the global carry-unwind shock. A composite divergence indicator would give early warning of the threshold where Japanese institutional investors (life insurers, pension funds) are forced to repatriate foreign assets, amplifying global bond and equity dislocations.",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "id": "boj-rate-hikes-failing-to-stem-yen-collapse-para-240a95"
+    },
+    "iran-mou-60-day-nuclear-clock-failure-scenario-c-44bce4": {
+      "headline": "Iran MOU 60-day nuclear clock: failure scenario could re-close Hormuz and create a new macro regime not covered by any existing story",
+      "summary": "The June 19 MOU between the US and Iran gives only 60 days to resolve Iran's highly enriched uranium stockpile and nuclear program \u2014 issues that took years to negotiate in the 2015 JCPOA. If the 60-day window expires without agreement (mid-August 2026), Iran retains the legal and military option to re-close Hormuz, which would re-trigger a global energy crisis with second-order inflation, EM debt stress, and food-price spikes that cross-cut at least six existing tracker stories simultaneously.",
+      "as_of": "2026-06-30",
+      "sources": [
+        "https://www.csis.org/analysis/united-states-and-iran-announce-deal-end-war-state-play",
+        "https://www.cfr.org/articles/is-a-u-s-iran-deal-within-reach-six-key-issues-that-could-shape-a-ceasefire",
+        "https://commonslibrary.parliament.uk/research-briefings/cbp-10637/",
+        "https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Iran MOU nuclear-clock / Hormuz re-closure cliff",
+        "why": "The June 19, 2026 US-Iran memorandum of understanding opens a 60-day window (expiring ~mid-August 2026) to negotiate Iran's nuclear program, sanctions relief, and Hormuz governance. Historical precedent (JCPOA negotiations took 2+ years) and current divergences (Israel not party; Iran demanding sovereignty over Hormuz; GCC demanding missile limits) make breakdown a credible base-case risk. A Hormuz re-closure would simultaneously spike WTI, reignite EM sovereign spreads, worsen Japan's energy import bill, increase food/fertilizer costs, and accelerate de-dollarization pressures \u2014 cross-cutting s4, s18, s20, s2, s12, and s5. No existing story captures the specific 60-day diplomatic countdown or the re-closure scenario as a discrete, time-bounded risk.",
+        "proposed_level": 7,
+        "set": "Set 4 (Geopolitical chokepoints)",
+        "indicators": [
+          {
+            "label": "Iran-MOU negotiation status (0 = on track / 1 = stalled / 2 = collapsed)",
+            "type": "band",
+            "rubric": "0 = substantive nuclear talks progressing, confidence-building measures being implemented; 1 = talks stalled, deadlines missed, US-Iran rhetorical escalation; 2 = MOU formally collapsed or Iran announces resumption of enrichment / closure of Hormuz. Current: 0 (just signed, clock started).",
+            "sources": [
+              "https://www.csis.org/analysis/united-states-and-iran-announce-deal-end-war-state-play",
+              "https://commonslibrary.parliament.uk/research-briefings/cbp-10637/"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Days remaining in 60-day MOU window",
+            "type": "value",
+            "rubric": "Countdown from June 19 signing. Below 30 days with status=1 triggers escalation watch; zero days with status=1 or 2 triggers crisis protocol.",
+            "sources": [
+              "https://www.cfr.org/articles/is-a-u-s-iran-deal-within-reach-six-key-issues-that-could-shape-a-ceasefire"
+            ],
+            "suggested_weight": 0.2
+          },
+          {
+            "label": "Hormuz physical re-opening completeness (0 = fully clear / 1 = partially operational / 2 = effectively closed)",
+            "type": "band",
+            "rubric": "Tracks mine-clearing progress, insurance-market re-opening of war-risk cover, and actual tanker traffic resumption. Current: 1 (MOU signed, physical clearance ongoing, insurance market cautious).",
+            "sources": [
+              "https://www.pbs.org/newshour/world/iran-and-u-s-reach-an-initial-deal-to-extend-the-ceasefire-and-open-the-strait-of-hormuz-but-challenges-remain",
+              "https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "WTI crude oil (USD/bbl) \u2014 re-closure scenario proxy",
+            "type": "value",
+            "rubric": "Tracks energy market pricing of re-closure risk. Spike above $100 on MOU breakdown fears = escalation signal; sustained above $120 = crisis.",
+            "sources": [
+              "https://www.cfr.org/articles/is-a-u-s-iran-deal-within-reach-six-key-issues-that-could-shape-a-ceasefire"
+            ],
+            "suggested_weight": 0.15
+          }
+        ]
+      },
+      "rationale": "The Iran MOU nuclear 60-day clock is a discrete, time-bounded, high-consequence risk that no existing tracker story explicitly monitors. s20_sea_lanes tracks current Hormuz status, but not the forward diplomatic cliff that could flip it back to 'closed' within weeks. Given cross-story contagion (energy\u2192inflation\u2192EM debt\u2192Japan stagflation\u2192food prices\u2192de-dollarization), this deserves a standalone story at level 7 with active countdown monitoring through mid-August 2026.",
+      "status": "pending",
+      "first_seen": "2026-07-03",
+      "last_seen": "2026-07-03",
+      "id": "iran-mou-60-day-nuclear-clock-failure-scenario-c-44bce4"
     }
   },
   "generated": "2026-07-03",
   "model": "claude-sonnet-4-6",
   "new_count": 6,
-  "pending_count": 36
+  "pending_count": 42
 }
