@@ -1,19 +1,22 @@
-UPDATE BUNDLE - preserves history (no data/ folder). WORKFLOW HARDENING (CI race + re-run fix).
-Your run was healthy (19/19 feeds; citation checker's live debut: 12 verified, 6 not
-found, 10 unreachable, 14 skipped). Two pieces of CI plumbing failed around it:
- 1. PUSH RACE (.github/workflows/daily.yml): the bot's push was rejected because the
-    branch moved during the run (your web-UI uploads land as commits). The commit step
-    now rebases onto the latest main and retries up to 3x, with freshly generated data
-    files winning any conflict. The old error message wrongly blamed permissions; the
-    new one distinguishes a permissions problem from a moving branch.
- 2. RE-RUN ARTIFACT CLASH (.github/workflows/daily.yml): re-running a failed run leaves
-    the first attempt's "github-pages" artifact behind and deploy-pages refuses
-    duplicates. Artifacts are now named uniquely per run AND attempt, so re-runs deploy
-    cleanly. (Fresh runs were never affected.)
- 3. HISTORY IDEMPOTENCE (src/report.py): story-level history.csv now replaces same-date
-    rows on re-run instead of duplicating them (indicator history already did this).
-    Today's duplicate 2026-07-03 rows in your history.csv will be self-healed by the
-    next run's rewrite of that date.
-APPLY: paste the new .github/workflows/daily.yml in the web editor, upload src/.
-Then trigger a FRESH "Run workflow" (unticked, free) rather than re-running the failed
-one - it will push, deploy, and persist the citation-check results + indicator history.
+UPDATE BUNDLE - preserves history (no data/ folder). RESOLUTION LEDGER (audit item #5 - the last one).
+THE MACHINE KEEPS THE RECORD; THE HUMAN PASSES JUDGMENT.
+ - src/ledger.py (NEW): whenever a story ENTERS High (>=7), an episode opens
+   automatically - the opening date is reconstructed from history.csv (first day of
+   the current unbroken High streak), with the driving indicators snapshotted. While
+   High it tracks peak and duration; when the story drops back below High the episode
+   CLOSES automatically and waits for YOUR grade. The machine never grades and never
+   deletes - it cannot forget a call.
+ - Grades (human-only, after close): materialized / contained / faded.
+     python src/ledger.py --list
+     python src/ledger.py --grade <episode_id> <grade> --note "why"
+   Or (web-UI workflow): edit the "grade" and "grade_note" fields of the episode in
+   data/resolution_ledger.json and commit.
+ - src/main.py: updates the ledger every run; log line shows open/awaiting counts.
+ - dashboard/index.html: new "Track record" panel (plain question: "When this tracker
+   said High - what actually happened next?") showing open episodes with day counts
+   and entry drivers, closed episodes with grade badges, and an honest caveat that the
+   record proves nothing until it accumulates - which is exactly why it starts now.
+ON YOUR FIRST RUN: expect ~3 episodes to open automatically (Japan carry trade, rare
+earths, AI power - all High since 2026-07-03 per your history), correctly backdated.
+Storage: data/resolution_ledger.json (committed by the workflow like other data).
+APPLY: upload src/ and dashboard/. No config or workflow change.

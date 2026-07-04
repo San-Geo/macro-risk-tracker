@@ -505,6 +505,48 @@ const BT_PALETTE=['#2563eb','#ea580c','#16a34a','#9333ea','#dc2626','#0891b2','#
 const BT_DASH=['','7 3','2 4','10 3 2 3','5 4','1 4'];
 let SCOUT=null;
 let IHIST=null;
+let LEDGER=null;
+function ledgerPanel(){
+  const led=LEDGER; const eps=(led&&led.episodes)||[];
+  const days=(a,b)=>Math.max(1,Math.round((new Date(b)-new Date(a))/864e5)+1);
+  const open=eps.filter(e=>e.status==='open');
+  const closed=eps.filter(e=>e.status==='closed');
+  const graded=closed.filter(e=>e.grade);
+  const gb=g=>({materialized:'#C0392B',contained:'#E8710A',faded:'#2E7D32'}[g]||'#8a8f98');
+  const gtip={materialized:'the risk this story warned about actually happened',
+    contained:'real stress occurred but was absorbed or managed',
+    faded:'the pressure receded without a materialized event'};
+  let body='';
+  if(!eps.length){
+    body=`<div class="asof" style="padding:6px 0">No story has entered High since the record began. When one does, an episode opens here automatically and is graded by a human after it closes.</div>`;
+  }else{
+    if(open.length){
+      body+=`<div class="asof" style="margin:6px 0 4px"><b>Open now</b> \u2014 stories currently at High; the clock is running:</div>`;
+      body+=open.map(e=>`<div style="border:1px solid var(--line);border-radius:10px;padding:10px 13px;margin-bottom:8px">
+        <b>${e.story}</b> <span class="pill" style="background:#E8710A">High since ${e.opened}</span>
+        <span class="asof">\u00B7 day ${days(e.opened,e.last_seen)} \u00B7 peak ${e.peak_level}/10${e.peak_date&&e.peak_date!==e.opened?' on '+e.peak_date:''}</span>
+        ${e.drivers_at_open&&e.drivers_at_open.length?`<div class="asof" style="margin-top:4px">Drivers at entry: ${e.drivers_at_open.join(' \u00B7 ')}</div>`:''}</div>`).join('');
+    }
+    if(closed.length){
+      body+=`<div class="asof" style="margin:10px 0 4px"><b>Closed episodes</b> \u2014 what the tracker called, and what a human judged afterwards:</div>`;
+      body+=closed.map(e=>{
+        const g=e.grade
+          ?`<span class="pill htip" style="background:${gb(e.grade)}" data-tip="${gtip[e.grade]||''}">${e.grade}</span>${e.grade_note?`<span class="asof"> \u2014 ${e.grade_note}</span>`:''}`
+          :`<span class="pill htip" style="background:#8a8f98" data-tip="Closed but not yet judged. Grade it with: python src/ledger.py --grade ${e.id} materialized|contained|faded">awaiting grade</span>`;
+        return `<div style="border:1px solid var(--line);border-radius:10px;padding:10px 13px;margin-bottom:8px">
+          <b>${e.story}</b> <span class="asof">High ${e.opened} \u2192 ${e.closed} (${days(e.opened,e.closed)} days, peak ${e.peak_level}/10)</span><div style="margin-top:4px">${g}</div></div>`;}).join('');
+    }
+  }
+  const right = eps.length
+    ? `${open.length} open \u00B7 ${graded.length}/${closed.length} closed graded`
+    : 'record begins';
+  return `<div class="panel" id="ledger"><div class="phead" onclick="this.parentNode.classList.toggle('open')">
+      <span><strong>Track record</strong> <span class="asof">every High call, and what happened next</span></span>
+      <span class="asof">${right}<span class="chev"></span></span></div>
+    <div class="pbody">
+      <div class="asof" style="margin:2px 0 8px">Episodes open and close <b>automatically</b> from the scored levels \u2014 the machine cannot edit or forget a call. Outcome grades are <b>human judgments</b>, added only after an episode closes. The honest caveat: this record only starts accumulating from ${led&&led.episodes&&led.episodes.length?'its first entry below':'today'}, so it proves nothing yet \u2014 that is the point of starting it now.</div>
+      ${body}</div></div>`;
+}
 function miniSpark(id){
   const s=IHIST&&IHIST[id]; if(!s||s.length<3) return '';
   const vals=s.map(p=>p.v), mn=Math.min(...vals), mx=Math.max(...vals);
@@ -724,7 +766,8 @@ const PLAIN_Q={
   review:"Which numbers did the AI just check \u2014 and which need a human glance?",
   consistency:"Does the board contradict itself anywhere?",
   backtest:"Does this gauge actually react when a real crisis hits?",
-  validation:"Can you trust this gauge? How it was stress-tested, and how high it can go."
+  validation:"Can you trust this gauge? How it was stress-tested, and how high it can go.",
+  ledger:"When this tracker said High \u2014 what actually happened next?"
 };
 function plainQ(key){ return MODE==='plain'&&PLAIN_Q[key]?`<div class="plainq">${PLAIN_Q[key]}</div>`:''; }
 
@@ -762,6 +805,7 @@ function render(d){
   html+=plainQ('consistency')+consistencyPanel(d);
   html+=plainQ('backtest')+backtestPanel();
   html+=plainQ('validation')+validationPanel();
+  html+=plainQ('ledger')+ledgerPanel();
   html+=`<div class="section-label">Stories (highest risk first)</div>`;
   const sorted=[...d.stories].sort((x,y)=>y.level-x.level);
   for(const s of sorted){
@@ -806,8 +850,9 @@ Promise.all([
   fetch('./backtest.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
   fetch('./validation.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
   fetch('./scout_queue.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
-  fetch('./indicator_history.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null)
-]).then(([d,bt,va,sc,ih])=>{ BACKTEST=bt; VALIDATION=va; SCOUT=sc; IHIST=ih; render(d); })
+  fetch('./indicator_history.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
+  fetch('./ledger.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null)
+]).then(([d,bt,va,sc,ih,lg])=>{ BACKTEST=bt; VALIDATION=va; SCOUT=sc; IHIST=ih; LEDGER=lg; render(d); })
   .catch(e=>{ document.getElementById('app').innerHTML=
     `<div class="err"><strong>Could not load data.</strong><br>${e.message}<br><br>
      Run <code>python src/main.py --offline --no-ai</code>, then open this page via a local server

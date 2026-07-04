@@ -228,6 +228,14 @@ def main():
     result["narrative"] = note
 
     report.append_history(result, args.date, hist)
+    try:
+        import ledger
+        led = ledger.update_ledger(result, args.date, hist)
+        n_open = sum(1 for e in led["episodes"] if e.get("status") == "open")
+        n_ungraded = sum(1 for e in led["episodes"] if e.get("status") == "closed" and not e.get("grade"))
+        print(f"  resolution ledger: {n_open} episode(s) open, {n_ungraded} awaiting grade")
+    except Exception as e:
+        print(f"  (resolution ledger skipped: {e})")
     ih = os.path.join(ROOT, "data", "indicator_history.csv")
     report.append_indicator_history(result, args.date, ih)
     report.write_indicator_history_json(ih, os.path.join(ROOT, "dashboard", "indicator_history.json"))
