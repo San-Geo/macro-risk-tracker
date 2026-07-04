@@ -604,24 +604,25 @@
     },
     "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
       "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
-      "summary": "QatarEnergy declared force majeure in March 2026 on LNG contracts and halted gas liquefaction as tankers could not exit the Gulf; over 30% of global urea exports transit Hormuz from Gulf producers. As of late June, the US Navy's corridor announcement has not yet restored normal fertilizer-input flows, and food policy analysts warn of durable price increases as natural-gas-derived urea remains tight.",
+      "summary": "Iran's June 2026 negotiators stated that future Hormuz access will include charges and a new Iranian/Omani management regime; the US has called this unacceptable. The CRS notes that beyond oil, Hormuz is also the transit corridor for helium, fertilizers, and other industrial inputs \u2014 roughly 27% of global maritime crude and a significant share of Gulf petrochemical fertilizer exports pass through the strait.",
       "as_of": "2026-07-03",
       "sources": [
-        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
-        "https://www.oecd.org/en/publications/2026/06/oecd-economic-outlook-volume-2026-issue-1_8be0dba6/full-report/general-assessment-of-the-macroeconomic-situation_fe9bdcd6.html"
+        "https://www.congress.gov/crs-product/R45281",
+        "https://commonslibrary.parliament.uk/research-briefings/cbp-10637/",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "existing_indicator",
       "target_story": "s18_food_fertilizer",
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "s18_food_fertilizer's 'Hormuz/Gulf disruption to fertilizer inputs' indicator should move to '2 = cut' given QatarEnergy force majeure, LNG tanker blockage, and the structural link between Hormuz-transiting natural gas and global urea supply. The food-price trend indicator should simultaneously move to '2 = spiking' given cascading input-cost pressure. This is distinct from s20's Hormuz indicator (which tracks crude/shipping broadly) \u2014 the fertilizer-input channel into food security is the specific risk s18 is designed to capture and it has materially worsened this week.",
+      "rationale": "The s18 tracker already has a 'Hormuz/Gulf disruption to fertilizer inputs' indicator, currently coded at '1-disrupted' given the Feb\u2013June 2026 Hormuz closure. The new development is that Iran's demand for a permanent toll/governance regime \u2014 if accepted \u2014 would institutionalise a new cost and risk layer on fertilizer flows from the Gulf even after hostilities end. The indicator should remain at '1-disrupted' but with an upward flag: the June 17 MOU does not resolve the structural governance question, and Iran's stated intent to impose tolls means the pre-conflict baseline of '0-clear' may never be restored. This is materially relevant to food-price inflation (FAO Food Price Index already elevated from energy/supply disruption) and EM fiscal stress (s4 developing-world debt).",
       "status": "pending",
       "first_seen": "2026-07-01",
       "last_seen": "2026-07-04",
       "id": "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f",
-      "sightings": 2
+      "sightings": 3
     },
     "strait-of-hormuz-remains-effectively-closed-bren-98679f": {
       "headline": "Strait of Hormuz Remains Effectively Closed \u2014 Brent ~$105/bbl, OECD Oil Inventories at 2003 Lows",
@@ -1399,10 +1400,173 @@
       "last_seen": "2026-07-04",
       "sightings": 1,
       "id": "china-japan-rare-earth-dual-use-controls-expand--f24a9c"
+    },
+    "strait-of-hormuz-60-day-mou-signed-june-17-iran--eef3e4": {
+      "headline": "Strait of Hormuz 60-day MOU signed June 17; Iran still contesting toll-free passage as of July 1\u20133",
+      "summary": "The US and Iran signed a 60-day memorandum of understanding on June 17, 2026 to end hostilities, with Hormuz reopening a core condition; however Iran is demanding sovereign toll authority over the strait and the US Navy announced a widened Oman-side route on June 27, signalling the corridor remains operationally contested. WTI has retreated from ~$89 in late May to the low-$70s by July 1 but the MOU is fragile and unimplemented.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://commonslibrary.parliament.uk/research-briefings/cbp-10637/",
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
+        "https://discoveryalert.com.au/us-iran-strait-hormuz-oil-prices-2026-ceasefire-market/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Hormuz_toll_sovereignty_risk",
+        "type": "band",
+        "rubric": "0 = toll-free transit confirmed and implemented; 1 = disputed / MOU signed but not implemented / Iran asserting toll rights; 2 = tolls enforced or strait re-closed",
+        "sources": [
+          "https://commonslibrary.parliament.uk/research-briefings/cbp-10637/",
+          "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+        ],
+        "suggested_weight": 0.35
+      },
+      "proposed_story": null,
+      "rationale": "The existing s20 indicator 'Hormuz/Red Sea status' uses a 0-open/1-contested/2-closed rubric, which currently reads '1-contested.' However the qualitatively new development is Iran's explicit demand for sovereign toll authority \u2014 a structural change to the strait's legal regime that would persist even after hostilities end and is not captured by any current indicator. The June 27 US Navy widened-route manoeuvre signals Washington is also not accepting Iranian control, keeping the corridor in an unstable equilibrium that materially affects oil (s20), food/fertilizer inputs (s18), and global inflation (s4/s2). A dedicated toll-sovereignty risk indicator is needed.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "strait-of-hormuz-60-day-mou-signed-june-17-iran--eef3e4"
+    },
+    "yen-hits-four-decade-low-10y-jgb-above-2-70-boj--ca8b3a": {
+      "headline": "Yen hits four-decade low, 10y JGB above 2.70%; BOJ July 30-31 meeting now live for rate hike",
+      "summary": "Japan's 10-year JGB yield climbed above 2.70% in the week of June 30\u2013July 3 \u2014 its highest since the post-YCC exit \u2014 as the yen slid to its weakest level in four decades on wide US-Japan rate differentials and persistent carry-trade pressure. BOJ Governor Ueda reiterated readiness to hike further, and the July 30-31 MPM is now a live event, with a newly appointed dovish board member (Ayano Sato) adding uncertainty to the vote.",
+      "as_of": "2026-07-02",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "USD/JPY and 30-year JGB yield",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The yen at a four-decade low and the 10y JGB pushing above 2.70% directly update the tracker's primary s2 indicators. Oxford Economics has revised its end-2026 10y JGB forecast to 2.80% from 2.50%, citing Takaichi's fiscal expansion. The July 30 BOJ meeting is a near-term catalyst for carry-trade unwind risk \u2014 the same mechanism that triggered the August 2024 global volatility episode. The Takaichi plan financing clarity indicator should move to '1 unclear' given expanding fiscal promises (VAT cuts on food, supplementary budgets) against BOJ QT. High materiality because a surprise BOJ hike or yen snap-back could transmit globally via leveraged carry positions.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "yen-hits-four-decade-low-10y-jgb-above-2-70-boj--ca8b3a"
+    },
+    "genius-act-implementing-regulations-missed-the-j-dc0151": {
+      "headline": "GENIUS Act implementing regulations missed the July 18, 2026 statutory deadline; effective date now defaults to January 2027",
+      "summary": "The GENIUS Act (enacted July 18, 2025) required primary regulators to finalize rules within 12 months; as of early July 2026, no agency \u2014 OCC, Fed, or Treasury/FinCEN \u2014 has issued final rules, meaning the Act's effective date automatically defaults to January 17, 2027. Tether's US reciprocity determination remains unissued as of May 2026, and several large foreign issuers face a compliance cliff.",
+      "as_of": "2026-07-04",
+      "sources": [
+        "https://www.spark.money/research/genius-act-stablecoin-regulation-explained",
+        "https://occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
+        "https://home.treasury.gov/news/press-releases/sb0435",
+        "https://www.brookings.edu/articles/next-steps-for-genius-payment-stablecoins/"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS implementation friction",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The s7 tracker's 'GENIUS implementation friction' indicator should move from '1 gaps' to '2 problems': the statutory deadline has been missed, no agency has finalized rules, Tether's reciprocity status is unresolved, and the effective date now slips six months to January 2027. This creates regulatory limbo for ~$200bn+ in stablecoin supply and delays the anticipated Treasury-bill demand boost from stablecoin reserve requirements \u2014 relevant to both s7 and s1 (basis trade/Treasury demand). The gap between the law's intent and its operational reality is materially wider than the tracker currently reflects.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "genius-act-implementing-regulations-missed-the-j-dc0151"
+    },
+    "china-s-nov-10-2026-rare-earth-extraterritorial--6281bb": {
+      "headline": "China's Nov 10, 2026 rare-earth extraterritorial enforcement cliff is now less than 130 days away, with no successor agreement in sight",
+      "summary": "The suspended October 2025 rare-earth export controls \u2014 covering extraterritorial FDPR-style reach over any product containing \u22650.1% Chinese-origin REEs \u2014 expire on November 10, 2026. No formal extension or successor deal has been announced, and US rare-earth imports of key elements (e.g., yttrium) remain well below pre-restriction levels despite the partial Nov-2025 easing, with export flows continuing to favour Europe over the US.",
+      "as_of": "2026-07-04",
+      "sources": [
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
+        "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later",
+        "https://www.certivo.com/blog-details/china-rare-earth-export-controls-2026-what-new-licensing-rules-mean-for-manufacturers"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s6_rare_earths",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Nov2026_extraterritorial_cliff_days_remaining",
+        "type": "value",
+        "rubric": "Days until November 10, 2026 enforcement date for suspended Oct-2025 extraterritorial controls; track alongside diplomatic signalling: >180d = low urgency; 90-180d = elevated; <90d without successor deal = critical",
+        "sources": [
+          "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+          "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+        ],
+        "suggested_weight": 0.3
+      },
+      "proposed_story": null,
+      "rationale": "The existing s6 tracker monitors the 'Nov-2025 pause status' (now extended to Nov-2026) but has no indicator for the approaching cliff on the suspended October 2025 extraterritorial measures \u2014 the most consequential layer, which would impose Chinese regulatory jurisdiction on global supply chains. With <130 days to the deadline and no successor framework, this is transitioning from a background risk to an acute event risk. The January 2026 Catalogue expansion (samarium, gadolinium, lutetium) already added new controls, and China's March 2026 State Council Order 834 created a unified supply-chain security mandate. US rare-earth imports of yttrium are still 95% below pre-restriction levels (17 vs 333 tons over comparable 8-month periods), making this operationally material for defense, EV, and semiconductor supply chains.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "china-s-nov-10-2026-rare-earth-extraterritorial--6281bb"
+    },
+    "us-cpi-at-4-2-yoy-may-2026-new-fed-chair-warsh-e-f75bf9": {
+      "headline": "US CPI at 4.2% YoY (May 2026); new Fed Chair Warsh eliminates forward guidance and holds rates at 3.50-3.75%",
+      "summary": "US headline CPI reached 4.2% year-on-year in May 2026 \u2014 the highest since April 2023 \u2014 driven by energy pass-through from the Hormuz disruption and sticky services inflation. New Fed Chair Kevin Warsh removed traditional forward guidance after the June meeting, shifting to pure data-dependence, leaving markets without rate-path anchors at a moment of elevated inflation and geopolitical uncertainty.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US stagflation / Fed credibility regime shift",
+        "why": "The combination of 4.2% CPI (a 3-year high), a Fed holding rates at 3.50-3.75% under a new Chair who has abandoned forward guidance, and an economy still absorbing Hormuz-shock energy costs creates a qualitatively new macro regime: policy uncertainty is elevated precisely when inflation is resurgent. This is not captured by any existing story \u2014 s2 covers Japan/BOJ, s4 covers EM debt, s11 covers consumer debt \u2014 but the US-specific stagflation / Fed credibility risk thread (higher-for-longer forcing EM capital flight, re-pricing risk assets, and stressing floating-rate private credit and CRE simultaneously) is a cross-cutting amplifier of existing stories that deserves its own tracker node.",
+        "proposed_level": 7,
+        "set": 1,
+        "indicators": [
+          {
+            "label": "US_CPI_YoY_%",
+            "type": "value",
+            "rubric": "Monthly US BLS headline CPI YoY; <3% = contained; 3-4% = elevated; >4% = resurgent / tracker alert",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Fed_forward_guidance_clarity",
+            "type": "band",
+            "rubric": "0 = explicit dot-plot / forward guidance in place; 1 = data-dependent / guidance removed; 2 = active policy reversal signal (hike threat or surprise cut)",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "US_real_policy_rate_%",
+            "type": "value",
+            "rubric": "EFFR midpoint minus 12m trailing CPI; positive = restrictive; negative = accommodative despite high inflation (stagflation warning)",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "No existing story in the tracker explicitly owns the US macro regime \u2014 the closest proxies are s1 (Treasury basis/SOFR), s3 (private credit), and s11 (consumer debt), but none tracks the primary driver: a new-Fed-Chair credibility shock coinciding with the highest inflation in 3 years. With CPI at 4.2% and the Fed funds rate at 3.50-3.75%, the real policy rate is modestly negative, meaning monetary policy remains de facto accommodative even as Chair Warsh signals data-dependence. This is a standalone systemic risk because it (a) raises the probability of a surprise hike that would detonate leveraged positions in s1/s8/s9, (b) entrenches dollar strength that stresses s4 EM debt, and (c) erodes the consumer disposable income underpinning s11.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "us-cpi-at-4-2-yoy-may-2026-new-fed-chair-warsh-e-f75bf9"
     }
   },
   "generated": "2026-07-04",
   "model": "claude-sonnet-4-6",
-  "new_count": 4,
-  "pending_count": 50
+  "new_count": 5,
+  "pending_count": 55
 }
