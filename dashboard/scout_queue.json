@@ -499,13 +499,13 @@
     },
     "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
       "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
-      "summary": "Following the US\u2013Iran ceasefire on April 8, tanker traffic through the Strait of Hormuz rose in early June via ship-to-ship transfers in the Gulf of Oman, but the IEA's June 17 Oil Market Report cautions that mines must still be cleared and supply chains normalised before full recovery \u2014 leaving the strait in a 'contested/partially open' state. ~20% of global oil supply and ~20% of global LNG were disrupted from late February; Qatar declared Force Majeure and LNG liquefaction damage is expected to cut ~120 bcm of supply through 2030.",
-      "as_of": "2026-06-17",
+      "summary": "Iran re-shut the Strait on June 20, citing Israeli Lebanon strikes as a ceasefire breach; on June 27, the US Navy's JMIC announced a widened navigational corridor near Oman, directly challenging Iran's claimed control. Oil prices remain elevated but have fallen ~30% from their ~$120/bbl wartime peak, with market analysts warning that sentiment-driven price declines are outrunning actual physical re-normalisation.",
+      "as_of": "2026-07-03",
       "sources": [
-        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
         "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
-        "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war",
-        "https://www.congress.gov/crs-product/R45281"
+        "https://discoveryalert.com.au/us-iran-strait-hormuz-oil-prices-2026-ceasefire-market/",
+        "https://www.aljazeera.com/economy/2026/6/17/oil-prices-continue-slide-amid-hopes-for-peace-opening-of-strait-of-hormuz",
+        "https://www.cnbc.com/2026/05/28/oil-prices-us-strikes-in-iran-revive-strait-of-hormuz-turmoil-fears.html"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -513,11 +513,12 @@
       "target_indicator": "Hormuz/Red Sea status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz/Red Sea status indicator should be updated from 2 (closed) toward 1 (contested) \u2014 the strait is no longer fully blocked but remains operationally impaired (mines, below-par traffic, mine-sweeping operations ongoing per IEA June 17 report). WTI/Brent remain elevated. The disruption is also the primary exogenous driver cascading into s18_food_fertilizer (urea/sulfur), s5_china_deflation (export surge partly driven by inventory build ahead of further disruption), s2_japan (energy import stress), and s11_consumer_debt (fuel costs on household budgets).",
+      "rationale": "The June 20 re-closure and June 27 US counter-maneuver are the most material updates of the past week to s20's primary indicator. Status should shift from 'contested' toward 'closed' given the re-closure declaration; WTI (~$81/bbl per post-ceasefire data) and the ongoing infrastructure damage and low inventory levels are directly captured by the story's existing indicators. The gap between ceasefire paper and physical throughput is a secondary risk that could escalate the Hormuz/Red Sea status to '2 = closed'.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
-      "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554"
+      "last_seen": "2026-07-04",
+      "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
+      "sightings": 2
     },
     "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
       "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
@@ -603,13 +604,11 @@
     },
     "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
       "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
-      "summary": "The Strait of Hormuz blockade since late February 2026 has choked off over 30% of global urea exports and roughly 45% of global sulfur supply \u2014 both essential fertilizer inputs \u2014 from Gulf producers. The UN World Food Programme and The Food Policy Institute warn of long-term food price increases comparable to the 2022 food crisis, with corn and wheat production costs surging. Even with the partial June reopening, mine-clearing delays mean full supply normalisation will take months.",
-      "as_of": "2026-06-17",
+      "summary": "QatarEnergy declared force majeure in March 2026 on LNG contracts and halted gas liquefaction as tankers could not exit the Gulf; over 30% of global urea exports transit Hormuz from Gulf producers. As of late June, the US Navy's corridor announcement has not yet restored normal fertilizer-input flows, and food policy analysts warn of durable price increases as natural-gas-derived urea remains tight.",
+      "as_of": "2026-07-03",
       "sources": [
-        "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war",
         "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
-        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+        "https://www.oecd.org/en/publications/2026/06/oecd-economic-outlook-volume-2026-issue-1_8be0dba6/full-report/general-assessment-of-the-macroeconomic-situation_fe9bdcd6.html"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -617,11 +616,12 @@
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s18_food_fertilizer indicator 'Hormuz/Gulf disruption to fertilizer inputs' should move from 1 (disrupted) toward 2 (cut) given that roughly 30\u201350% of global urea and 45% of sulfur exports transiting Hormuz were blocked for ~3 months. The partial June reopening moderates the reading but does not resolve it \u2014 mines remain, Qatar LNG liquefaction infrastructure is damaged, and WFP is already warning of a 2022-style food price crisis. Food-price-trend and China fertilizer export-curbs indicators within s18 also warrant concurrent review given that China's Hormuz-driven inventory build of its own inputs may further tighten global availability.",
+      "rationale": "s18_food_fertilizer's 'Hormuz/Gulf disruption to fertilizer inputs' indicator should move to '2 = cut' given QatarEnergy force majeure, LNG tanker blockage, and the structural link between Hormuz-transiting natural gas and global urea supply. The food-price trend indicator should simultaneously move to '2 = spiking' given cascading input-cost pressure. This is distinct from s20's Hormuz indicator (which tracks crude/shipping broadly) \u2014 the fertilizer-input channel into food security is the specific risk s18 is designed to capture and it has materially worsened this week.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
-      "id": "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f"
+      "last_seen": "2026-07-04",
+      "id": "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f",
+      "sightings": 2
     },
     "strait-of-hormuz-remains-effectively-closed-bren-98679f": {
       "headline": "Strait of Hormuz Remains Effectively Closed \u2014 Brent ~$105/bbl, OECD Oil Inventories at 2003 Lows",
@@ -1303,98 +1303,106 @@
       "sightings": 1,
       "id": "new-risk-iran-war-creates-a-sovereign-energy-cre-4cd594"
     },
-    "obbba-fiscal-impact-crystallising-us-national-de-c6983f": {
-      "headline": "OBBBA Fiscal Impact Crystallising: US National Debt Hits $37T+, CBO Revised Cost Estimate Climbs to $4.7T, Second 'Big Beautiful Bill' Being Drafted",
-      "summary": "The One Big Beautiful Bill Act (signed July 4, 2025) is now crystallising its fiscal impact \u2014 US national debt surpassed $37 trillion, the CBO's latest projection shows it adding $4.7 trillion to deficits through 2035 (up from initial $2.8T estimate), and lawmakers are now proposing a *second* reconciliation bill to lock in further agenda items, with no fiscal offset mechanism in sight.",
-      "as_of": "2026-07-04",
+    "china-widens-japan-dual-use-rare-earth-entity-bl-81982c": {
+      "headline": "China Widens Japan Dual-Use/Rare-Earth Entity Blacklist to 80 Named Firms Including Defense Research Institutes (June 29)",
+      "summary": "Beijing added four Japanese government defense institutes and 36 additional commercial entities to its export control and watch lists on June 29, bringing total named entities to 80 since the January blanket ban. Rare earth shipments to Japan are already down 78% from pre-ban levels, and economists estimate a sustained one-year cutoff would reduce Japan's real GDP by ~1.3% (~\u00a57 trillion).",
+      "as_of": "2026-06-29",
       "sources": [
-        "https://www.washingtonexaminer.com/policy/finance-and-economy/4453971/one-big-beautiful-bill-act-add-trillions-deficits-cbo/",
-        "https://www.foxbusiness.com/economy/us-debt-tops-37-trillion-big-beautiful-bill-allows-rise-trillions-higher",
-        "https://www.newsweek.com/new-big-beautiful-bill-proposed-as-deficit-soars-under-trump-11356361",
-        "https://www.bruegel.org/analysis/how-much-threat-us-debt-sustainability-trumps-one-big-beautiful-bill-act"
+        "https://www.cnbc.com/amp/2026/06/29/china-japan-export-controls-watch-list-defense-entities.html",
+        "https://www.techtimes.com/articles/319392/20260630/china-expands-japan-defense-blacklist-80-firms-cutting-rare-earth-access.htm",
+        "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Rare-earth export license flow",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The June 29 action is directly material to s6_rare_earths. The 'Rare-earth export license flow' indicator should be updated toward '2 = frozen' for Japan-destined flows (down 78%). The 'US domestic RE producer blacklist' indicator may also need a new dimension covering Japan-targeted entity bans. Additionally, the November 2025 pause status indicator (s6) should note that the broader US-China suspension expires November 2026, keeping expiry risk live. This is the clearest 7-day update to s6 and warrants a watch-level escalation.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "china-widens-japan-dual-use-rare-earth-entity-bl-81982c"
+    },
+    "yen-hits-40-year-low-near-160-usd-despite-73bn-i-d552d0": {
+      "headline": "Yen Hits 40-Year Low Near 160/USD Despite $73bn Intervention; BOJ Hike Fails to Close Rate Gap",
+      "summary": "Japan's yen remains pinned near \u00a5160/USD as of early July \u2014 four-decade lows \u2014 despite \u00a511.7 trillion (~$73bn) in FX intervention from April\u2013May and a BOJ rate hike to a three-decade high. A 300bp US-Japan rate differential keeps the carry trade structurally attractive, while the new dovish BOJ board member (Sato) signals further policy friction.",
+      "as_of": "2026-07-02",
+      "sources": [
+        "https://www.cnbc.com/2026/06/19/japan-yen-intervention-boj-rate-hike.html",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.cnbc.com/2026/05/07/japan-yen-intervention-boj-rate-gap-currency-pressure.html",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
       ],
       "materiality": "high",
       "classification": "story_gap",
-      "target_story": "s4_dev_debt",
+      "target_story": "s2_japan",
       "target_indicator": null,
       "proposed_indicator": {
-        "label": "US_fiscal_trajectory_shock",
+        "label": "MoF FX intervention cumulative (\u00a5 tn, rolling 12-mo)",
         "type": "band",
-        "rubric": "0 = CBO deficit path within prior baseline (<$2T/yr, debt/GDP stable); 1 = CBO projects material deterioration ($2\u20133T/yr deficit, debt/GDP rising 2\u20135pp/yr); 2 = CBO projects acute deterioration (>$3T/yr deficit, debt/GDP rising >5pp/yr, second fiscal expansion bill active)",
+        "rubric": "0 = <\u00a55tn (no sustained pressure) | 1 = \u00a55\u201315tn (elevated, carry trade persistent) | 2 = >\u00a515tn or reserves visibly depleting (intervention fatigue / credibility loss). Current reading: ~\u00a511.7tn \u2192 score 1, trending toward 2.",
         "sources": [
-          "https://www.washingtonexaminer.com/policy/finance-and-economy/4453971/one-big-beautiful-bill-act-add-trillions-deficits-cbo/",
-          "https://www.foxbusiness.com/economy/us-debt-tops-37-trillion-big-beautiful-bill-allows-rise-trillions-higher",
-          "https://bipartisanpolicy.org/explainer/what-does-the-one-big-beautiful-bill-cost/"
+          "https://www.cnbc.com/2026/06/19/japan-yen-intervention-boj-rate-hike.html",
+          "https://www.japantimes.co.jp/business/2026/05/02/markets/japan-yen-intervention-focus/"
         ],
-        "suggested_weight": 0.2
+        "suggested_weight": 0.15
       },
       "proposed_story": null,
-      "rationale": "The OBBBA is not a new event, but its fiscal consequences are now crystallising in real-time: the CBO's revised cost estimate rose to $4.7T (versus ~$2.8T initial), US debt crossed $37T, and a second reconciliation bill is being drafted \u2014 meaning the fiscal impulse is compounding rather than stabilising. None of the existing s4_dev_debt indicators (dollar index, US 10y real yield, new IMF programs) directly captures US sovereign fiscal trajectory risk, which is the upstream driver of global term premia and dollar reserve status. This is a story_gap in s4_dev_debt: the deterioration in US fiscal trajectory feeds directly into the USD reserve role (s12_gold_dedollar), global term premia (s1_basis_trade), and EM sovereign stress (s4_dev_debt). A dedicated US fiscal trajectory shock indicator is proposed, currently at reading '2'.",
+      "rationale": "s2_japan tracks USD/JPY and JGB yields but has no indicator for intervention exhaustion / reserve depletion risk. The \u00a573bn deployment with zero durable effect is a qualitatively new dimension: Japan's foreign-reserve buffer is being consumed faster than the structural carry trade can be closed by monetary policy. Without a cumulative intervention indicator, the tracker will miss the inflection point where MoF runs low on dry powder \u2014 precisely the moment carry-unwind tail risk becomes systemic.",
       "status": "pending",
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-04",
       "sightings": 1,
-      "id": "obbba-fiscal-impact-crystallising-us-national-de-c6983f"
+      "id": "yen-hits-40-year-low-near-160-usd-despite-73bn-i-d552d0"
     },
-    "iran-war-creates-systemic-stagflation-risk-fed-s-215a23": {
-      "headline": "Iran War Creates Systemic Stagflation Risk: Fed's Warsh Removes Forward Guidance, CPI at 4.2% YoY, US Policy Rate Held at 3.50\u20133.75%",
-      "summary": "New Fed Chair Kevin Warsh removed traditional forward guidance at the June 2026 FOMC meeting, switching to pure data-dependence, as CPI hit 4.2% YoY through May 2026 \u2014 the highest in over three years \u2014 driven substantially by Middle East energy supply disruptions. The NY Fed President warned supply disruptions will keep inflation near 3% for the rest of the year, threatening both the Fed's credibility and already-stretched consumer balance sheets.",
-      "as_of": "2026-07-02",
+    "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9": {
+      "headline": "China PPI Surges to +3.9% YoY in May (3rd Consecutive Monthly Rise, Fastest Since July 2022) Driven by Iran-War Energy Spike",
+      "summary": "China's factory-gate prices accelerated sharply in May 2026 to +3.9% YoY, flipping the multi-year deflation narrative, as the Iran war-driven commodity shock lifted mining (+15.8% YoY) and raw-material costs. Consumer goods prices remain in mild deflation (-0.8%), creating an internal squeeze on downstream margins.",
+      "as_of": "2026-06-10",
       "sources": [
-        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
-        "https://fortune.com/2026/05/04/iran-ceasefire-oil-brent-crude-stock-project-freedom-strait-of-hormuz/"
+        "https://tradingeconomics.com/china/producer-prices-change",
+        "https://www.stats.gov.cn/english/PressRelease/"
       ],
       "materiality": "medium",
-      "classification": "new_risk",
-      "target_story": null,
-      "target_indicator": null,
+      "classification": "existing_indicator",
+      "target_story": "s5_china_deflation",
+      "target_indicator": "China PPI YoY (%)",
       "proposed_indicator": null,
-      "proposed_story": {
-        "name": "Supply-shock stagflation / Fed credibility trap",
-        "why": "The 2026 Iran war energy shock has driven US CPI to 4.2% YoY while simultaneously crimping growth (OECD/World Bank both projecting 2.5% global growth). The incoming Fed chair's removal of forward guidance creates a new policy ambiguity risk: markets cannot price rate paths, and the Fed faces a classic stagflation dilemma where fighting inflation risks tipping the economy into recession while tolerating it risks de-anchoring expectations. This is distinct from existing stories \u2014 it is not about consumer debt (s11) or AI capex (s8) but about the central bank's reaction function itself becoming a source of volatility, compounding all other risk stories simultaneously.",
-        "proposed_level": 6,
-        "set": "Set 1",
-        "indicators": [
-          {
-            "label": "US_CPI_YoY_pct",
-            "type": "value",
-            "rubric": "Actual US CPI YoY%; above 3.5% = elevated concern; above 4% = acute stagflation risk",
-            "sources": [
-              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
-            ],
-            "suggested_weight": 0.3
-          },
-          {
-            "label": "Fed_guidance_clarity",
-            "type": "band",
-            "rubric": "0 = clear forward guidance in place; 1 = data-dependent with explicit reaction function; 2 = pure data-dependence / guidance removed / chair transition ambiguity active",
-            "sources": [
-              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
-            ],
-            "suggested_weight": 0.35
-          },
-          {
-            "label": "Real_fed_funds_rate_pct",
-            "type": "value",
-            "rubric": "Nominal fed funds midpoint minus core PCE YoY; negative = policy still accommodative despite inflation; positive and rising = tightening risk to growth",
-            "sources": [
-              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
-              "https://fortune.com/2026/05/04/iran-ceasefire-oil-brent-crude-stock-project-freedom-strait-of-hormuz/"
-            ],
-            "suggested_weight": 0.35
-          }
-        ]
-      },
-      "rationale": "US CPI at 4.2% YoY \u2014 the highest since April 2023 \u2014 combined with the new Fed chair's deliberate removal of forward guidance creates a novel, systemic risk not captured by any existing story. The existing tracker covers consumer debt (s11), Treasury basis trades (s1), and Japan fiscal stress (s2), but has no story for the Fed's own policy credibility and the stagflation dilemma. This matters because: (1) rate hike risk would simultaneously stress s9_cre maturity walls, s3_private_credit, s11_consumer_debt, and s8_ai_capex; (2) rate hold with high inflation risks de-anchoring expectations and steepening the yield curve, amplifying s1_basis_trade and s2_japan carry unwind risks; (3) the chair transition from Powell to Warsh introduces genuine uncertainty about the reaction function itself. Proposed level 6/10 \u2014 material but not yet at crisis threshold.",
+      "proposed_story": null,
+      "rationale": "s5_china_deflation's core indicator is China PPI YoY, and the swing from a multi-year deflation streak to +3.9% YoY is the most material recent update. The tracker's rubric flags 'large swing either way is worse' \u2014 this is now a cost-push shock transmitted outward rather than a deflation spillover, which changes the direction of the risk. The story's framing should be updated to reflect the inflation/margin-squeeze scenario rather than pure deflation. The indicator reading now sits at the high-risk end of the band.",
       "status": "pending",
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-04",
       "sightings": 1,
-      "id": "iran-war-creates-systemic-stagflation-risk-fed-s-215a23"
+      "id": "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9"
+    },
+    "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
+      "headline": "China\u2013Japan Rare-Earth / Dual-Use Controls Expand to Trigger GDP-Level Supply Chain Risk; November 2026 Broader Suspension Expiry Looms",
+      "summary": "Beyond the June 29 entity listings, the broader US-China October 2025 rare-earth suspension\u2014covering extraterritorial controls\u2014expires in November 2026 with no replacement framework agreed. BMI data show heavy rare earth exports (yttrium, dysprosium, terbium) running at 41\u201349% of pre-restriction volumes, with yttrium prices up ~15-fold, threatening aerospace and semiconductor production.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://oilprice.com/Metals/Commodities/Chinas-Rare-Earth-Grip-Holds-Despite-Trump-Xi-Talks.amp.html",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
+        "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Nov-2025 pause status",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The November 2026 expiry of the US-China suspension is now ~4 months away with no deal framework in sight (Trump-Xi May summit produced no commitment). The 'Nov-2025 pause status' indicator should move from '0 extended' toward '1 expiring' given the countdown. Concurrently, the 'Ex-China heavy rare-earth price premium' indicator is in severe stress territory (yttrium ~15x pre-restriction, per BMI). This is a distinct but complementary update to the June 29 Japan entity action flagged above.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "china-japan-rare-earth-dual-use-controls-expand--f24a9c"
     }
   },
   "generated": "2026-07-04",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 48
+  "new_count": 4,
+  "pending_count": 50
 }

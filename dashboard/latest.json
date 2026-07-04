@@ -1,6 +1,6 @@
 {
   "date": "2026-07-04",
-  "generated_at": "2026-07-04 10:52 UTC",
+  "generated_at": "2026-07-04 10:58 UTC",
   "aggregates": {
     "1": 5.4,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.2
   },
-  "narrative": "**HEADLINE**\nMacro risk holds at elevated 6.2 with no intraday moves, but three structural vulnerabilities\u2014Japan's carry trade, AI infrastructure bottlenecks, and critical minerals weaponization\u2014remain at High (level 7).\n\n**STORIES WITH LEVEL CHANGES**\nNo changes recorded today.\n\n**ELEVATED RISKS TO NOTE**\nFifteen risks remain in Elevated or High bands, spanning financial leverage (Treasury basis trades, private credit opacity), geopolitical supply chains (ASML lithography, critical minerals), and structural imbalances (Japan fiscal/JGB carry, China deflation spillover, developing-world debt, hidden consumer leverage, CRE maturity walls, and food/fertilizer fragility).\n\n**HIGHEST-RISK WATCH**\nJapan fiscal/JGB/carry trade (level 7): unwind dynamics could trigger cross-asset volatility across currencies and equities given embedded leverage in yen positions.",
+  "narrative": "**HEADLINE**\nMacro risk holds at elevated 6.2, with three High-band threats anchoring systemic vulnerabilities in finance, supply chains, and infrastructure.\n\n**STORIES WITH LEVEL CHANGES**\nNo risk levels changed today; all positions held steady.\n\n**ELEVATED OR HIGHER RISKS (Static Portfolio)**\n- **Japan fiscal/JGB/carry trade (7, High):** Persistent BoJ policy uncertainty and carry-unwind exposure threaten cross-border funding chains.\n- **Critical minerals as a weapon (7, High):** Geopolitical weaponization of rare-earth supply continues to fragment industrial inputs.\n- **AI power & grid bottleneck (7, High):** Accelerating compute demand strains electricity infrastructure without corresponding grid investment.\n- **Treasury basis trade (6, Elevated):** Hidden leverage in repo markets remains opaque; basis blowouts could trigger forced liquidations.\n- **Private credit's opaque expansion (6, Elevated):** Rapid growth in unregulated credit channels limits risk visibility and fire-sale exposure.\n- **Developing-world debt crisis (6, Elevated):** Refinancing pressures persist amid higher rates and tightening external conditions.\n\n**WATCH CLOSEST**\nJapan fiscal/JGB/carry trade: BoJ divergence from global rates remains the most acute tail-risk trigger for immediate cross-asset volatility.",
   "stories": [
     {
       "id": "s1_basis_trade",
