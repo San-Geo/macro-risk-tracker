@@ -1,22 +1,10 @@
-UPDATE BUNDLE - preserves history (no data/ folder). RESOLUTION LEDGER (audit item #5 - the last one).
-THE MACHINE KEEPS THE RECORD; THE HUMAN PASSES JUDGMENT.
- - src/ledger.py (NEW): whenever a story ENTERS High (>=7), an episode opens
-   automatically - the opening date is reconstructed from history.csv (first day of
-   the current unbroken High streak), with the driving indicators snapshotted. While
-   High it tracks peak and duration; when the story drops back below High the episode
-   CLOSES automatically and waits for YOUR grade. The machine never grades and never
-   deletes - it cannot forget a call.
- - Grades (human-only, after close): materialized / contained / faded.
-     python src/ledger.py --list
-     python src/ledger.py --grade <episode_id> <grade> --note "why"
-   Or (web-UI workflow): edit the "grade" and "grade_note" fields of the episode in
-   data/resolution_ledger.json and commit.
- - src/main.py: updates the ledger every run; log line shows open/awaiting counts.
- - dashboard/index.html: new "Track record" panel (plain question: "When this tracker
-   said High - what actually happened next?") showing open episodes with day counts
-   and entry drivers, closed episodes with grade badges, and an honest caveat that the
-   record proves nothing until it accumulates - which is exactly why it starts now.
-ON YOUR FIRST RUN: expect ~3 episodes to open automatically (Japan carry trade, rare
-earths, AI power - all High since 2026-07-03 per your history), correctly backdated.
-Storage: data/resolution_ledger.json (committed by the workflow like other data).
-APPLY: upload src/ and dashboard/. No config or workflow change.
+UPDATE BUNDLE - preserves history (no data/ folder). CITECHECK FIX (one file: src/citecheck.py).
+Bug found on your live board: the truce_status fact showed "verified, matched 3357974" -
+that number is the ARTICLE ID inside the cited URL, which trivially "verifies" against the
+page's own address. Fix: URLs are stripped from the fact text before numeric candidates
+are extracted, so verification can only match genuine figures from the fact.
+Effect on your board: truce_status will flip from a false "verified" to an honest verdict
+on the next run's re-check (agent day, or delete its "citecheck" field to force backfill).
+All other verified tags on your board matched real figures (2.73, 6.8, 4.5, 0.2, 83.7,
+4.2) and are unaffected.
+APPLY: upload src/ only. No config, dashboard, or workflow change.

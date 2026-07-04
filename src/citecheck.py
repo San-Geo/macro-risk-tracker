@@ -56,7 +56,9 @@ def _num_variants(tok):
 def _candidates(a):
     """Distinctive numeric tokens to look for: the applied value first (for value-type
     reads), then figures quoted in the FACT. Years and tiny integers are excluded -
-    they match everything and verify nothing."""
+    they match everything and verify nothing. URLs are stripped from the fact first:
+    digits inside a cited link (article IDs, dates-in-paths) would otherwise 'verify'
+    trivially against the page's own address."""
     cands = []
     v = a.get("value")
     if isinstance(v, (int, float)) and v not in (0, 1, 2):  # bands are unverifiable as numbers
@@ -64,7 +66,8 @@ def _candidates(a):
         cands.append(s)
         if isinstance(v, float) and v == int(v):
             cands.append(str(int(v)))
-    for tok in re.findall(r"\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+\.\d+|\d{4,}", a.get("fact", "") or ""):
+    fact = re.sub(r"https?://\S+", " ", a.get("fact", "") or "")  # drop URLs before mining numbers
+    for tok in re.findall(r"\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+\.\d+|\d{4,}", fact):
         plain = tok.replace(",", "")
         if _YEAR.fullmatch(plain):
             continue
