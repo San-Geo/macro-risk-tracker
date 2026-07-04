@@ -1,6 +1,6 @@
 {
   "date": "2026-07-04",
-  "generated_at": "2026-07-04 11:37 UTC",
+  "generated_at": "2026-07-04 14:03 UTC",
   "aggregates": {
     "1": 5.4,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.2
   },
-  "narrative": "**HEADLINE**\nMacro risk holds steady at 6.2 overall with three High-level risks dominating: Japan's carry-trade vulnerability, critical minerals weaponization, and AI power-grid constraints.\n\n**NO LEVEL CHANGES TODAY**\nThe changes array is empty; all elevated and high risks remain at their current levels.\n\n**KEY STORIES AT ELEVATED+ RISK**\n- **Japan fiscal/JGB/carry trade (Level 7, High)**: Persistent BoJ policy uncertainty and funding cost pressures sustain vulnerability to rapid deleveraging.\n- **Critical minerals as weapon (Level 7, High)**: Ongoing supply-chain concentration risk; geopolitical control of rare earths and battery materials remains a structural pressure point.\n- **AI power & grid bottleneck (Level 7, High)**: Semiconductor facility and data-center demand for electricity continues to outpace grid modernization timelines.\n- **Treasury basis trade hidden leverage (Level 6, Elevated)**: Structural leverage in repo-based arbitrage trades remains opaque to regulators.\n- **Private credit's opaque expansion (Level 6, Elevated)**: Unregulated lending growth sustains procyclical risk in downturns.\n\n**WATCH CLOSEST**: Japan fiscal/JGB/carry trade\u2014reversal could trigger cascade across global fixed income and FX markets.",
+  "narrative": "**HEADLINE**\nMacro risk remains elevated at 6.2 overall, with no intraday level changes but persistent concentration in leverage, supply-chain chokepoints, and geopolitical weaponization.\n\n**STORIES WITH LEVEL CHANGES**\nNone recorded today.\n\n**ELEVATED & HIGH-RISK STORIES OUTSTANDING**\n\u2022 **Japan fiscal/JGB/carry trade** (Level 7, High): Structural imbalance in Japanese debt and yen funding remain acute; unwind risk in leveraged positions.\n\u2022 **Critical minerals as a weapon** (Level 7, High): Supply concentration continues to pose asymmetric vulnerability across energy and defense sectors.\n\u2022 **AI power & grid bottleneck** (Level 7, High): Data-center demand outpacing infrastructure; cascading brownout or capex disappointment risk.\n\u2022 Six stories at Level 6 (Elevated): Treasury basis, private credit opacity, developing-world debt, China deflation spillover, AI circular financing, and lithography chokepoints all sustain material tail risks.\n\n**WATCH CLOSEST**\nJapan fiscal/JGB/carry trade unwinding\u2014widest spillover surface into equities and FX.",
   "stories": [
     {
       "id": "s1_basis_trade",

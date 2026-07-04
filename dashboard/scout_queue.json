@@ -2,12 +2,13 @@
   "items": {
     "us-iran-ceasefire-mou-signed-june-17-hormuz-re-c-7b6e5b": {
       "headline": "US-Iran ceasefire MOU signed June 17; Hormuz re-closed June 20 after Israeli Lebanon strikes; US Navy announced 'widened route' June 27 \u2014 strait status remains contested",
-      "summary": "On June 27, the US Navy announced a widened transit corridor through the Strait, challenging Iranian control; however Iran re-closed the Strait the day after Trump's June 19 Lebanon ceasefire announcement when Israel continued strikes \u2014 leaving the waterway in a contested, semi-functional state as of July 4. Brent retreated to low $70s/bbl by July 1 on deescalation hopes, but fragility remains extreme, with mines still present and insurance underwriters reluctant.",
-      "as_of": "2026-07-04",
+      "summary": "The June 17 US\u2013Iran 60-day ceasefire MOU has not restored normal Strait of Hormuz traffic; analysts warn flows may not normalize until 2027 even under the best outcome, with elevated war-risk insurance premiums, lingering sea mines, and Iran's structural leverage unchanged. Brent has fallen from a ~$188 wartime peak to ~$72, but the physical market gap and inventory rebuild cycle keep oil price risk two-sided.",
+      "as_of": "2026-07-03",
       "sources": [
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
-        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
-        "https://www.congress.gov/crs-product/R45281"
+        "https://www.cnbc.com/2026/06/29/strait-of-hormuz-shipping-iran-oil-war-us.html",
+        "https://hormuzstraitmonitor.com/crisis-timeline/",
+        "https://discoveryalert.com.au/us-iran-strait-hormuz-oil-prices-2026-ceasefire-market/",
+        "https://commonslibrary.parliament.uk/research-briefings/cbp-10636/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -15,12 +16,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Strait of Hormuz has been in a cyclically contested state since March 2026 \u2014 closed by Iran, partially re-opened under ceasefires, re-closed after ceasefire violations \u2014 with US Navy asserting a widened corridor as of June 27. This is the highest-materiality ongoing event for s20_sea_lanes. The Hormuz/Red Sea status indicator should currently read '1 contested' (not 2-closed, as partial traffic flows; not 0-open, as mines remain and Iran re-asserted closure on June 20). WTI was ~$88\u201389/bbl in late May during active hostilities; Brent receded toward low $70s by July 1. The IEA characterised this as 'the largest supply disruption in the history of the global oil market,' and the Hormuz/Red Sea status indicator directly captures this. Secondary effects cascade into s18_food_fertilizer (30%+ of global urea transits the Strait) and s4_dev_debt (energy-import EM sovereigns under acute stress).",
+      "rationale": "The MOU has not reopened Hormuz to normal commercial traffic. WTO data cited by the UK Parliament shows a 95% reduction in crude carriers and 99% in LNG since the conflict began. The UAE's state oil company does not expect full flows until 2027. The Hormuz/Red Sea status indicator should move from 1 (contested) toward 2, and the WTI sub-indicator should reflect the ~30% post-peak collapse from >$100 to ~$69, with residual re-escalation risk from Lebanon ceasefire breakdown or nuclear sticking points. All three s20 indicators (Hormuz status, WTI, cable incidents) are materially updated.",
       "status": "pending",
       "first_seen": "2026-06-29",
       "last_seen": "2026-07-04",
       "id": "us-iran-ceasefire-mou-signed-june-17-hormuz-re-c-7b6e5b",
-      "sightings": 4
+      "sightings": 5
     },
     "boj-raises-policy-rate-to-1-0-at-june-16-mpm-haw-9b4d3c": {
       "headline": "BOJ raises policy rate to 1.0% at June 16 MPM; hawkish board members call for hikes every 'few months' toward 2% neutral; 10-year JGB yield at ~2.61\u20132.65%",
@@ -582,12 +583,13 @@
     },
     "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca": {
       "headline": "Japan yen hits 4-decade lows; 10yr JGB at ~2.65%; BoJ July 31 hike decision imminent amid Middle East energy import stress",
-      "summary": "The yen slid to four-decade lows versus the dollar in early July 2026 as the Fed-BOJ rate differential widened, pushing 10-year JGB yields above 2.70% \u2014 Oxford Economics raised its end-2026 JGB yield forecast to 2.8%. PM Takaichi's ambitious fiscal expansion (VAT food cuts, defense spending) is keeping term premia elevated, while BOJ's Ueda reiterated readiness to hike if conditions align, creating a classic stagflation-like tension.",
-      "as_of": "2026-07-03",
+      "summary": "The USD/JPY rate touched its weakest level since 1986 in late June\u2013early July 2026, with the 10-year JGB yield rising to 2.75% (from 1.1% in early 2025) as BOJ tightening expectations and Takaichi fiscal expansion interact. Japanese investors \u2014 the largest foreign holders of US Treasuries at $1.19T \u2014 face diminishing hedged returns from US bonds, raising the risk of capital repatriation that could push US yields higher and disrupt carry-trade funding globally.",
+      "as_of": "2026-07-02",
       "sources": [
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/",
-        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
+        "https://www.lazardassetmanagement.com/at/de_de/research-insights/investment-insights/investment-research/mid-year-outlook-2026/japan",
+        "https://finimize.com/content/japans-10-year-jgb-yield-keeps-climbing-on-fiscal-nerves",
+        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -595,12 +597,12 @@
       "target_indicator": "USD/JPY (yen strengthening = lower = risk)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "USD/JPY is now at multi-decade highs (yen at four-decade lows), the 10-year JGB has risen sharply from 2.1% in March to above 2.7%, and Oxford Economics raised its end-2026 JGB yield forecast to 2.8% \u2014 all three existing s2_japan indicators are simultaneously deteriorating. The 'Takaichi plan financing clarity' indicator is also under pressure as VAT food-cut proposals and supplementary budgets expand the fiscal expansion's scope. This is a high-materiality update: yen at historic lows amplifies carry-trade unwind risk, and JGB yields at post-YCC highs stress bank balance sheets. BOJ's appointment of the more-dovish Sato to its board adds a conflicting signal on tightening pace.",
+      "rationale": "USD/JPY at ~161 is at a 40-year extreme in the risk direction (weakest yen since 1986), and the 30-year JGB yield is also materially elevated. Both are tracked indicators in s2_japan. Critically, the Lazard mid-year note confirms Japanese investors hold $1.19T in US Treasuries as of Q1 2026 \u2014 the largest foreign holder \u2014 and that rising domestic JGB yields materially change the hedged-return calculus for that cohort, creating an active repatriation feedback loop. The Takaichi fiscal clarity indicator (0/1/2) is shifting: Takaichi has 'tempered' expectations but the Diet session mid-July will test whether energy subsidy extensions further strain fiscal credibility. All three s2 indicators need updating.",
       "status": "pending",
       "first_seen": "2026-07-01",
       "last_seen": "2026-07-04",
       "id": "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca",
-      "sightings": 3
+      "sightings": 4
     },
     "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
       "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
@@ -986,11 +988,12 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "China's October 2025 rare-earth export controls (covering samarium, gadolinium, lutetium and extraterritorial reach over foreign-made products with \u22650.1% Chinese RE content) were suspended until November 10, 2026; that deadline is now only ~19 weeks away with no new deal in sight, and US rare-earth imports from China remain well below pre-restriction levels. A parallel January 2026 licensing catalogue expansion added new compounds, and China's early-2026 dual-use controls targeting Japan specifically have further constrained heavy rare-earth supply.",
+      "summary": "The one-year suspension of China's Oct-2025 (Wave 2) rare-earth export controls expires November 10, 2026 \u2014 now less than five months away \u2014 with no confirmed successor arrangement. Wave 1 (April 2025) controls on seven elements including dysprosium, terbium, and yttrium remain in force; US import volumes of yttrium remain 95% below pre-restriction levels through early 2026. Ex-China price premiums are expected to persist through 2026 and beyond.",
       "as_of": "2026-07-04",
       "sources": [
         "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
         "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later",
+        "https://www.spglobal.com/energy/en/news-research/latest-news/metals/012726-rare-earth-supply-bottlenecks-set-to-persist-in-2026",
         "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
       ],
       "materiality": "high",
@@ -999,12 +1002,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The November 2026 expiry of the suspension of China's second-wave RE controls is now the dominant near-term clock for s6_rare_earths. The pause status should be moved from '0 extended' toward '1 expiring' given the ~19-week countdown with no extension signal. Simultaneously: (a) export license flow remains '1 slowing' as US yttrium imports were 17t vs 333t pre-restriction (still far below baseline as of February 2026); (b) China's January 2026 catalogue expansion added samarium/gadolinium/lutetium; (c) dual-use Japan-specific controls tighten heavy RE supply further. The ex-China heavy RE price premium is widening with supply gaps expected to persist through 2026. This is a medium-to-high materiality development given the November cliff.",
+      "rationale": "The tracker records a Nov-2025 pause status indicator. The pause expires Nov 10, 2026 \u2014 now under five months away \u2014 with no extension or permanent deal announced and Wave-1 controls still fully operational. CSIS data shows US yttrium imports still only ~6% of pre-restriction volumes through February 2026. The pause-status indicator should move from 0 (extended) to 1 (expiring) to reflect the countdown, and the license-flow indicator should remain at 1 (slowing) given persistent US shortfalls even as European flows have partially recovered. China's January 2026 catalogue expansion (samarium, gadolinium, lutetium) is also material new information.",
       "status": "pending",
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-04",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 4
+      "sightings": 5
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -1563,10 +1566,96 @@
       "last_seen": "2026-07-04",
       "sightings": 1,
       "id": "us-cpi-at-4-2-yoy-may-2026-new-fed-chair-warsh-e-f75bf9"
+    },
+    "obbba-signed-july-4-2025-cbo-scores-2-8-3-4t-def-29ccb5": {
+      "headline": "OBBBA signed July 4 2025: CBO scores $2.8\u20133.4T deficit addition, $5T debt ceiling hike; US now downgraded by all three major rating agencies",
+      "summary": "The One Big Beautiful Bill Act \u2014 now law for one year \u2014 adds an estimated $2.8\u20133.4 trillion to the US national debt over the next decade (over $4T with interest), raised the debt ceiling by $5 trillion to $41.1T, and has contributed to the US being downgraded by S&P, Moody's, and Fitch. Yale Budget Lab projects 10-year Treasury yields 1.2 percentage points higher by 2054 under this trajectory, amplifying the term-premium feedback loop on global sovereign debt.",
+      "as_of": "2026-07-04",
+      "sources": [
+        "https://www.foxbusiness.com/economy/us-debt-tops-37-trillion-big-beautiful-bill-allows-rise-trillions-higher",
+        "https://bipartisanpolicy.org/explainer/what-does-the-one-big-beautiful-bill-cost/",
+        "https://budgetlab.yale.edu/research/long-term-impacts-one-big-beautiful-bill-act",
+        "https://www.bruegel.org/analysis/how-much-threat-us-debt-sustainability-trumps-one-big-beautiful-bill-act",
+        "https://money.usnews.com/money/personal-finance/family-finance/articles/trumps-one-big-beautiful-bill-just-raised-the-debt-ceiling-by-5-trillion-heres-why-that-matters-to-you"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US sovereign fiscal stress score (0 contained / 1 deteriorating / 2 acute)",
+        "type": "band",
+        "rubric": "0 = debt/GDP path stable and no major agency downgrade; 1 = CBO-scored deficit addition >$1T/decade or single major downgrade; 2 = all three agencies have downgraded and CBO scores >$2.5T deficit addition over decade with no credible offset plan. Current reading: 2.",
+        "sources": [
+          "https://bipartisanpolicy.org/explainer/what-does-the-one-big-beautiful-bill-cost/",
+          "https://budgetlab.yale.edu/research/long-term-impacts-one-big-beautiful-bill-act",
+          "https://money.usnews.com/money/personal-finance/family-finance/articles/trumps-one-big-beautiful-bill-just-raised-the-debt-ceiling-by-5-trillion-heres-why-that-matters-to-you"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "s4_dev_debt tracks emerging-market debt fragility and uses the broad dollar index and TIPS yields. The OBBBA's enacted fiscal deterioration is now a first-order input to global term premia, US 10y real yields, and dollar-reserve demand \u2014 all of which directly feed back into EM debt stress. However, no existing s4 indicator captures US sovereign fiscal credibility itself. The triple downgrade and $5T ceiling hike are new facts requiring a dedicated ordinal indicator. This is a story_gap rather than new_risk because the transmission channel (US real yields \u2192 dollar index \u2192 EM debt) is already in s4.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "obbba-signed-july-4-2025-cbo-scores-2-8-3-4t-def-29ccb5"
+    },
+    "us-june-nfp-collapses-to-57k-vs-115k-consensus-u-b531e0": {
+      "headline": "US June NFP collapses to 57K (vs 115K consensus); unemployment 4.2%; CPI still 4.2% YoY \u2014 stagflationary squeeze tightens on consumer balance sheets",
+      "summary": "June 2026 nonfarm payrolls of just 57,000 \u2014 less than half the prior month's 129,000 and well below expectations \u2014 confirm a rapid deterioration in the US labor market even as CPI inflation remains at 4.2% year-on-year, the highest since April 2023. The stagflationary dynamic increases pressure on subprime consumer segments, BNPL borrowers, and auto-loan delinquencies that the tracker monitors under s11.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://www.cnbc.com/amp/2026/07/02/us-treasury-yields-rise-as-investors-await-june-jobs-report.html",
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s11_consumer_debt",
+      "target_indicator": "US unemployment rate (%)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Unemployment ticking up to 4.2% (from ~3.9% at year-start) while CPI stays at 4.2% is the classic stagflationary pinch that pressures consumer debt quality. The s11 tracker monitors this via the unemployment rate sub-indicator and BNPL delinquency trend. 57K payrolls is also a leading indicator of worsening subprime auto and credit-card performance 1\u20132 quarters forward, making this a material update even if unemployment is only 4.2% today. The Fed's removal of forward guidance under new Chair Warsh and the 3.50\u20133.75% FFR also leaves the policy response path unclear, amplifying the consumer stress risk.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "us-june-nfp-collapses-to-57k-vs-115k-consensus-u-b531e0"
+    },
+    "war-risk-insurance-market-dislocation-elevated-h-5f0a50": {
+      "headline": "War-risk insurance market dislocation: elevated Hormuz premiums and mine risk mean physical oil-market normalization may lag ceasefire politics by 12\u201318 months",
+      "summary": "Even after the June 17 MOU, shipping companies report that war-risk insurance premiums for Hormuz transit remain prohibitively high, sea mines have not been fully cleared, and many operators are switching off AIS transponders. The UAE's ADNOC CEO stated full flows through Hormuz will not resume until 2027 even under a speedy deal, creating a structural insurance-market dislocation that crosses the s20 and s13 story boundaries but is not currently captured by any indicator.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://www.cnbc.com/2026/06/29/strait-of-hormuz-shipping-iran-oil-war-us.html",
+        "https://discoveryalert.com.au/strait-hormuz-oil-markets-us-iran-ceasefire-2026/",
+        "https://commonslibrary.parliament.uk/research-briefings/cbp-10636/"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s13_insurance",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Marine war-risk insurance dislocation (0 normal / 1 elevated premium / 2 market withdrawal)",
+        "type": "band",
+        "rubric": "0 = war-risk insurance freely available at near-normal pricing for major chokepoints; 1 = premiums materially elevated (>3x peacetime) or leading P&I clubs issuing voyage exclusions for named regions; 2 = market effectively withdrawing from named chokepoints, government backstop required, >50% of pre-conflict vessel traffic avoiding the zone. Current reading: 1\u20132 transition for Hormuz.",
+        "sources": [
+          "https://www.cnbc.com/2026/06/29/strait-of-hormuz-shipping-iran-oil-war-us.html",
+          "https://discoveryalert.com.au/strait-hormuz-oil-markets-us-iran-ceasefire-2026/"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "s13_insurance tracks insurer non-renewals and catastrophe-loss pressure, focused on property/casualty and mortgage insurance retreat. Marine war-risk insurance dislocation is a distinct but related failure mode: when P&I clubs and Lloyd's syndicates effectively price shipping out of a major chokepoint, physical oil supply cannot normalize even after a political ceasefire. This is a material gap because: (1) it persists independent of the political MOU; (2) it feeds directly into s20 Hormuz status, s18 food/fertilizer inputs, and global inflation via energy costs; and (3) government backstop decisions (like the UK/France defensive mission) are partly insurance-driven. The indicator should live in s13 but be cross-referenced in s20.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "war-risk-insurance-market-dislocation-elevated-h-5f0a50"
     }
   },
   "generated": "2026-07-04",
   "model": "claude-sonnet-4-6",
-  "new_count": 5,
-  "pending_count": 55
+  "new_count": 3,
+  "pending_count": 58
 }
