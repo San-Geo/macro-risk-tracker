@@ -32,6 +32,12 @@
   .tbtn:hover{ background:rgba(255,255,255,.22); }
   .wrap{ max-width:1040px; margin:0 auto; padding:20px; }
   .section-label{ font-size:11px; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); font-weight:700; margin:18px 2px 8px; }
+  /* Keep every long token (hashes, URLs, ids, driver strings) inside its box. */
+  .pbody, .narr, .story, .gist, .hgrid div, td, .asof, .sgist, .gisttxt { overflow-wrap:anywhere; }
+  .panel, .pbody { min-width:0; }
+  .phead{ flex-wrap:wrap; row-gap:2px; }
+  code{ background:rgba(127,127,127,.12); padding:1px 5px; border-radius:4px; font-size:12px;
+        white-space:pre-wrap; word-break:break-all; }
   .gist{ background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px 20px; box-shadow:var(--shadow); margin-bottom:12px; }
   .gistnum{ font-size:34px; font-weight:800; letter-spacing:-.02em; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
   .gistnum .den{ font-size:16px; font-weight:600; color:var(--muted); }
@@ -745,10 +751,20 @@ function gistHeader(d){
             top.some(s=>s.level>=7)?'A few areas are running high \u2014 worth a look.':
             'Nothing is at crisis level right now.';
   const LO=4.7,HI=9.0, pos=v=>Math.max(0,Math.min(100,(v-LO)/(HI-LO)*100));
-  const anchor=`<div class="anchor"><div class="atrack"></div>`+
+  // Color the strip with the SAME band colors used everywhere else on the page,
+  // with hard stops exactly where the band cutoffs fall in the visible range -
+  // so the marker's color always matches the track beneath it.
+  const stops=[];
+  for(const [a0,b0] of [[-1e9,2.5],[2.5,4.5],[4.5,6.5],[6.5,8.5],[8.5,1e9]]){
+    const a1=Math.max(a0,LO), b1=Math.min(b0,HI);
+    if(b1<=a1) continue;
+    const colr=bandColor(Math.round((a1+b1)/2));
+    stops.push(`${colr} ${pos(a1).toFixed(1)}%`,`${colr} ${pos(b1).toFixed(1)}%`);
+  }
+  const anchor=`<div class="anchor"><div class="atrack" style="background:linear-gradient(90deg, ${stops.join(', ')})"></div>`+
     (base?`<div class="atick" style="left:${pos(base)}%" title="usual level \u2248 ${base}"></div>`:'')+
     `<div class="amark" style="left:${pos(ov)}%;background:${col}"></div>
-     <span class="aend l">calm</span><span class="aend r">crisis</span></div>`;
+     <span class="aend l htip" data-tip="The tracker's validated floor: even an all-calm world scores \u2248 4.7 here, because several stories have structurally elevated starting points.">calm</span><span class="aend r htip" data-tip="The validated ceiling (\u2248 9.0): a 2008-style everything-at-once crisis replayed through this gauge.">crisis</span></div>`;
   const movers=d.stories.filter(s=>s.trend&&Math.abs(s.trend.change)>=1)
     .sort((x,y)=>Math.abs(y.trend.change)-Math.abs(x.trend.change)).slice(0,6)
     .map(s=>`<span class="mv"><b style="color:${s.trend.change>0?'#C0392B':'#2E7D32'}">${s.trend.change>0?'\u25B2':'\u25BC'}</b> ${plab(s)} \u2192 ${s.band}</span>`).join('');

@@ -1,10 +1,14 @@
-UPDATE BUNDLE - preserves history (no data/ folder). CITECHECK FIX (one file: src/citecheck.py).
-Bug found on your live board: the truce_status fact showed "verified, matched 3357974" -
-that number is the ARTICLE ID inside the cited URL, which trivially "verifies" against the
-page's own address. Fix: URLs are stripped from the fact text before numeric candidates
-are extracted, so verification can only match genuine figures from the fact.
-Effect on your board: truce_status will flip from a false "verified" to an honest verdict
-on the next run's re-check (agent day, or delete its "citecheck" field to force backfill).
-All other verified tags on your board matched real figures (2.73, 6.8, 4.5, 0.2, 83.7,
-4.2) and are unaffected.
-APPLY: upload src/ only. No config, dashboard, or workflow change.
+UPDATE BUNDLE - preserves history (no data/ folder). VISUAL FIXES (dashboard/index.html + src/citecheck.py).
+1) ANCHOR STRIP ALIGNED: the calm->crisis strip under the headline number is now built
+   from the SAME band colors as the rest of the page, with segment boundaries exactly at
+   the band cutoffs - so the notch's color always matches the track beneath it. Note the
+   strip no longer shows green: the gauge's validated floor (4.7) already rounds into the
+   amber band, so green was decoration for territory the tracker cannot visit. The
+   "calm"/"crisis" end labels now have tooltips explaining this.
+2) TEXT STAYS IN ITS BOX: defensive wrapping (overflow-wrap) on all panels, cards, table
+   cells and captions, plus a global <code> style that wraps long apply-command hashes.
+   Long URLs, ids, and driver strings can no longer run outside section borders.
+3) (from earlier this session) src/citecheck.py: URLs are stripped from fact text before
+   numeric candidates are extracted - fixes the self-fulfilling "verified" match against
+   an article ID inside the cited link.
+APPLY: upload dashboard/ and src/. No config or workflow change.
