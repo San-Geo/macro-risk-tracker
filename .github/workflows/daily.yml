@@ -84,14 +84,31 @@ jobs:
             echo "No file changes this run."
           else
             git commit -m "update $(date -u +%F)"
-            git push && echo "Pushed updated data to the repo." \
-              || echo "::error::git push FAILED - check Settings > Actions > Workflow permissions (needs Read and write)."
+            # The remote may have moved while this run executed (e.g. files uploaded
+            # via the web UI mid-run). Rebase our data commit on top and retry -
+            # on conflict our freshly generated files win (-X theirs during rebase).
+            ok=""
+            for i in 1 2 3; do
+              if git push; then ok=1; break; fi
+              echo "push rejected (remote moved) - rebasing onto latest main and retrying ($i/3)"
+              git pull --rebase -X theirs origin main || { git rebase --abort || true; git pull --rebase -X ours origin main || true; }
+            done
+            if [ -n "$ok" ]; then
+              echo "Pushed updated data to the repo."
+            else
+              echo "::error::git push failed after 3 rebase retries. If this is the FIRST failure ever, check Settings > Actions > Workflow permissions (needs Read and write); otherwise the branch is moving faster than the bot - just run the workflow again."
+            fi
           fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dashboard
+          # unique per run AND attempt: re-running a failed run would otherwise leave
+          # two artifacts named "github-pages" and deploy-pages refuses duplicates
+          name: pages-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Deploy to Pages
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: pages-${{ github.run_id }}-${{ github.run_attempt }}
