@@ -1,6 +1,6 @@
 {
   "date": "2026-07-04",
-  "generated_at": "2026-07-04 14:03 UTC",
+  "generated_at": "2026-07-04 14:25 UTC",
   "aggregates": {
     "1": 5.4,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.2
   },
-  "narrative": "**HEADLINE**\nMacro risk remains elevated at 6.2 overall, with no intraday level changes but persistent concentration in leverage, supply-chain chokepoints, and geopolitical weaponization.\n\n**STORIES WITH LEVEL CHANGES**\nNone recorded today.\n\n**ELEVATED & HIGH-RISK STORIES OUTSTANDING**\n\u2022 **Japan fiscal/JGB/carry trade** (Level 7, High): Structural imbalance in Japanese debt and yen funding remain acute; unwind risk in leveraged positions.\n\u2022 **Critical minerals as a weapon** (Level 7, High): Supply concentration continues to pose asymmetric vulnerability across energy and defense sectors.\n\u2022 **AI power & grid bottleneck** (Level 7, High): Data-center demand outpacing infrastructure; cascading brownout or capex disappointment risk.\n\u2022 Six stories at Level 6 (Elevated): Treasury basis, private credit opacity, developing-world debt, China deflation spillover, AI circular financing, and lithography chokepoints all sustain material tail risks.\n\n**WATCH CLOSEST**\nJapan fiscal/JGB/carry trade unwinding\u2014widest spillover surface into equities and FX.",
+  "narrative": "**HEADLINE**\nMacro risk holds at elevated overall level (6.2) with three High-band stressors\u2014Japan carry trade, critical minerals weaponization, and AI power infrastructure\u2014posing systemic contagion risks.\n\n**NO LEVEL CHANGES TODAY**\nThe changes array is empty; no stories shifted risk bands on 4 July 2026.\n\n**ELEVATED-OR-HIGHER SUMMARY**\nFifteen risks remain at Elevated (6) or High (7) levels. Three stand at High: Japan's fiscal/JGB/carry-trade nexus (7) threatens cross-border deleveraging; critical minerals leverage as geopolitical tool (7) risks supply shocks; AI power-grid bottleneck (7) could constrain infrastructure investment. Eight sit at Elevated (6)\u2014including Treasury basis trades, private credit opacity, developing-world debt, China deflation spillover, AI circular financing, hidden consumer debt, food fragility, and lithography chokepoints\u2014each creating secondary spillover risk. Five remain Elevated (5): CRE maturity wall, eurozone fragility, and water underpricing.\n\n**WATCH**\nJapan's carry-trade unwind remains the highest-risk story given its potential to trigger rapid capital flows and margin calls across global markets.",
   "stories": [
     {
       "id": "s1_basis_trade",

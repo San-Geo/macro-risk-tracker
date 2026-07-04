@@ -583,13 +583,12 @@
     },
     "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca": {
       "headline": "Japan yen hits 4-decade lows; 10yr JGB at ~2.65%; BoJ July 31 hike decision imminent amid Middle East energy import stress",
-      "summary": "The USD/JPY rate touched its weakest level since 1986 in late June\u2013early July 2026, with the 10-year JGB yield rising to 2.75% (from 1.1% in early 2025) as BOJ tightening expectations and Takaichi fiscal expansion interact. Japanese investors \u2014 the largest foreign holders of US Treasuries at $1.19T \u2014 face diminishing hedged returns from US bonds, raising the risk of capital repatriation that could push US yields higher and disrupt carry-trade funding globally.",
-      "as_of": "2026-07-02",
+      "summary": "The yen fell to its weakest level since the mid-1980s, with USD/JPY trading near 160-162 as rate differentials remain wide; BOJ board member Tamura called for hikes every few months toward a 2% neutral rate, while Finance Minister Katayama warned of 'appropriate' government response on July 3.",
+      "as_of": "2026-07-03",
       "sources": [
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.lazardassetmanagement.com/at/de_de/research-insights/investment-insights/investment-research/mid-year-outlook-2026/japan",
-        "https://finimize.com/content/japans-10-year-jgb-yield-keeps-climbing-on-fiscal-nerves",
-        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield",
+        "https://tradingeconomics.com/japan/interest-rate"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -597,12 +596,12 @@
       "target_indicator": "USD/JPY (yen strengthening = lower = risk)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "USD/JPY at ~161 is at a 40-year extreme in the risk direction (weakest yen since 1986), and the 30-year JGB yield is also materially elevated. Both are tracked indicators in s2_japan. Critically, the Lazard mid-year note confirms Japanese investors hold $1.19T in US Treasuries as of Q1 2026 \u2014 the largest foreign holder \u2014 and that rising domestic JGB yields materially change the hedged-return calculus for that cohort, creating an active repatriation feedback loop. The Takaichi fiscal clarity indicator (0/1/2) is shifting: Takaichi has 'tempered' expectations but the Diet session mid-July will test whether energy subsidy extensions further strain fiscal credibility. All three s2 indicators need updating.",
+      "rationale": "USD/JPY near 162 is the weakest yen in four decades, squarely hitting the s2_japan USD/JPY indicator. BOJ Deputy Governor Tamura's explicit call for hikes 'every few months' toward 2% and the Finance Minister's July 3 intervention warning materially raise the probability of a sudden yen reversal and carry-trade unwind. The 10-year JGB has climbed above 2.7%, also moving the 30-year JGB yield indicator. Risk is clearly worsening (higher USD/JPY number = risk per rubric).",
       "status": "pending",
       "first_seen": "2026-07-01",
       "last_seen": "2026-07-04",
       "id": "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca",
-      "sightings": 4
+      "sightings": 5
     },
     "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
       "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
@@ -988,13 +987,13 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "The one-year suspension of China's Oct-2025 (Wave 2) rare-earth export controls expires November 10, 2026 \u2014 now less than five months away \u2014 with no confirmed successor arrangement. Wave 1 (April 2025) controls on seven elements including dysprosium, terbium, and yttrium remain in force; US import volumes of yttrium remain 95% below pre-restriction levels through early 2026. Ex-China price premiums are expected to persist through 2026 and beyond.",
+      "summary": "The November 2025 suspension of China's second-wave rare-earth export controls (covering samarium, gadolinium, lutetium and extraterritorial provisions) expires November 10, 2026, while CSIS data show US heavy rare-earth imports (e.g., yttrium) remain well below 2024 levels despite partial easing; European licensing approval rates have fallen below 25%.",
       "as_of": "2026-07-04",
       "sources": [
-        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
         "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later",
-        "https://www.spglobal.com/energy/en/news-research/latest-news/metals/012726-rare-earth-supply-bottlenecks-set-to-persist-in-2026",
-        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
+        "https://informedclearly.com/en/geopolitics/54246/china-rare-earth-export-controls-2026"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1002,12 +1001,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The tracker records a Nov-2025 pause status indicator. The pause expires Nov 10, 2026 \u2014 now under five months away \u2014 with no extension or permanent deal announced and Wave-1 controls still fully operational. CSIS data shows US yttrium imports still only ~6% of pre-restriction volumes through February 2026. The pause-status indicator should move from 0 (extended) to 1 (expiring) to reflect the countdown, and the license-flow indicator should remain at 1 (slowing) given persistent US shortfalls even as European flows have partially recovered. China's January 2026 catalogue expansion (samarium, gadolinium, lutetium) is also material new information.",
+      "rationale": "The November 10, 2026 expiry of China's second-wave rare-earth control pause is now within the 4-month horizon and should be moved from status 0 (extended) toward 1 (expiring). US heavy rare-earth imports remain structurally below 2024 levels, EU licensing approval rates below 25%, and China's March 2026 State Council Order No. 834 (supply-chain security framework) creates a new escalation layer. The tracker's Nov-2025 pause status indicator needs updating from 'extended' to 'expiring' to reflect the approaching cliff.",
       "status": "pending",
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-04",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 5
+      "sightings": 6
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -1652,10 +1651,164 @@
       "last_seen": "2026-07-04",
       "sightings": 1,
       "id": "war-risk-insurance-market-dislocation-elevated-h-5f0a50"
+    },
+    "section-122-universal-tariff-expires-july-24-wit-b58c5e": {
+      "headline": "Section 122 universal tariff expires July 24 with no confirmed replacement; Section 301 investigations racing to conclude",
+      "summary": "The 15% Section 122 blanket import surcharge (imposed after the Supreme Court struck down IEEPA tariffs in February 2026, itself also judicially invalidated by the CIT in May) expires July 24, 2026; the administration is rushing Section 301 and Section 232 investigations to plug the gap before expiry, creating a high-uncertainty cliff for global trade and supply chains.",
+      "as_of": "2026-07-04",
+      "sources": [
+        "https://www.skadden.com/insights/publications/2026/05/us-trade-court-strikes-down-section-122-tariffs",
+        "https://globaltradealert.org/reports/S122-US-Tariff-Estimates",
+        "https://www.hklaw.com/en/insights/publications/2026/05/us-court-of-international-trade-invalidates-the-administrations",
+        "https://en.wikipedia.org/wiki/Tariffs_in_the_second_Trump_administration"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US tariff-regime legal cliff & WTO/supply-chain cascade",
+        "why": "The US has lost two consecutive statutory bases for broad tariffs (IEEPA struck down Feb 2026 by SCOTUS; Section 122 struck down May 2026 by CIT, currently stayed on appeal) and Section 122 expires July 24. The administration is racing to substitute Section 301/232 authority. A disorderly transition or gap would abruptly cut effective tariff rates (deflationary shock to import-competing sectors, dollar-negative) or trigger retaliatory escalation if Section 301 findings land hard. This legal/structural tariff instability is not captured by any existing story.",
+        "proposed_level": 7,
+        "set": 5,
+        "indicators": [
+          {
+            "label": "Section 122 / successor tariff coverage (% of US imports subject to \u226510% surcharge)",
+            "type": "value",
+            "rubric": "\u226580% = status quo; 50-79% = gap/partial lapse; <50% = significant cliff/lapse",
+            "sources": [
+              "https://globaltradealert.org/reports/S122-US-Tariff-Estimates",
+              "https://www.grantthornton.com/insights/alerts/tax/2026/insights/the-trump-administration-new-tariff-road-map"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "US tariff legal status (0 = stable authority / 1 = court challenge pending / 2 = struck down & gap)",
+            "type": "band",
+            "rubric": "0 = Supreme Court-affirmed authority in place; 1 = active appellate litigation with stay; 2 = injunction in effect with coverage gap",
+            "sources": [
+              "https://www.skadden.com/insights/publications/2026/05/us-trade-court-strikes-down-section-122-tariffs",
+              "https://www.pwc.com/ca/en/services/tax/publications/tax-insights/us-court-strike-down-section-122-tariffs-2026.html"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Section 301/232 replacement tariff enactment pace (0 = on track / 1 = delayed / 2 = gap materializing)",
+            "type": "band",
+            "rubric": "Track whether USTR Section 301 findings and new Section 232 proclamations are published before July 24 expiry",
+            "sources": [
+              "https://www.hklaw.com/en/insights/publications/2026/05/us-court-of-international-trade-invalidates-the-administrations",
+              "https://www.bhfs.com/insight/trump-tariffs-upcoming-deadlines/"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "No existing story covers the structural legal fragility of the US tariff regime. IEEPA was struck down by SCOTUS in February 2026, Section 122 was struck down by the CIT in May 2026 (though stayed), and Section 122 expires July 24 regardless. The administration is relying on Section 301/232 investigations concluding in time, which introduces a binary cliff event this week. A disorderly lapse would abruptly reduce average US tariff rates (deflationary / dollar-negative), while an aggressive Section 301 replacement could trigger WTO disputes and retaliation, both material for global macro.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "section-122-universal-tariff-expires-july-24-wit-b58c5e"
+    },
+    "genius-act-implementing-regulation-deadline-hits-1425b6": {
+      "headline": "GENIUS Act implementing-regulation deadline hits July 18, 2026; rulemaking still in proposed stages across OCC, FinCEN, and Fed",
+      "summary": "The GENIUS Act (signed July 18, 2025) requires final regulations from federal banking agencies by July 18, 2026; as of early July, the OCC, FinCEN/OFAC, and Federal Reserve rules remain in proposed/comment stages, creating a gap between the statutory deadline and actual implementation readiness.",
+      "as_of": "2026-07-04",
+      "sources": [
+        "https://www.gibsondunn.com/the-genius-act-a-new-era-of-stablecoin-regulation/",
+        "https://home.treasury.gov/news/press-releases/sb0435",
+        "https://www.federalregister.gov/documents/2026/03/02/2026-04089/implementing-the-genius-act",
+        "https://www.brookings.edu/articles/next-steps-for-genius-payment-stablecoins/"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
+      "proposed_indicator": {
+        "label": "GENIUS rulemaking completion rate (% of required final rules published by July 18, 2026 deadline)",
+        "type": "band",
+        "rubric": "0 = all major rules finalized on time (OCC, FinCEN, Fed Reserve); 1 = 1-2 agencies missing deadline or rules in re-proposal; 2 = majority of rules missing, effective date uncertain or delayed beyond Jan 2027",
+        "sources": [
+          "https://www.gibsondunn.com/the-genius-act-a-new-era-of-stablecoin-regulation/",
+          "https://www.federalregister.gov/documents/2026/03/02/2026-04089/implementing-the-genius-act",
+          "https://home.treasury.gov/news/press-releases/sb0435"
+        ],
+        "suggested_weight": 0.4
+      },
+      "proposed_story": null,
+      "rationale": "The existing GENIUS implementation friction indicator (0/1/2 band) is the right story home, but the current indicator does not capture the specific statutory deadline risk materializing this week. Missing the July 18 rulemaking deadline would push the Act's effective date toward the 18-month backstop (January 2027), delaying the stablecoin Treasury-demand channel and creating legal grey zones for OCC-chartered issuers (Circle, Paxos). This is a story_gap because the indicator exists but lacks a sub-indicator that tracks the rulemaking completion rate against the statutory clock.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "genius-act-implementing-regulation-deadline-hits-1425b6"
+    },
+    "new-fed-chair-warsh-drops-forward-guidance-holds-8ef59a": {
+      "headline": "New Fed Chair Warsh drops forward guidance, holds rates at 3.50-3.75%; US CPI 4.2% YoY in May 2026 \u2014 highest since April 2023",
+      "summary": "Fed Chair Kevin Warsh removed traditional forward guidance after the June FOMC meeting, shifting to pure data dependence at a 3.50-3.75% funds rate target, while May 2026 CPI printed 4.2% YoY \u2014 the highest in three years \u2014 driven partly by tariff pass-through and Middle East energy shocks, widening the policy uncertainty premium embedded in Treasury markets.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
+        "https://www.investing.com/analysis/july-market-outlook-tariffs-trade-and-the-next-inflation-test-200682939"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": "MOVE index (Treasury volatility)",
+      "proposed_indicator": {
+        "label": "Fed policy-framework uncertainty score (0 = clear forward guidance / 1 = data-dependent with elevated inflation / 2 = framework shift with inflation >4% and no guidance)",
+        "type": "band",
+        "rubric": "0 = Fed provides explicit rate-path guidance with inflation near target; 1 = data-dependent language, inflation 2-4%, markets can model distribution; 2 = explicit removal of forward guidance combined with CPI >4% and new chair regime change \u2014 maximum model uncertainty, basis-trade leverage risk elevated",
+        "sources": [
+          "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
+          "https://www.investing.com/analysis/july-market-outlook-tariffs-trade-and-the-next-inflation-test-200682939"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The Warsh Fed's explicit removal of forward guidance combined with CPI at a 3-year high (4.2%) is a structural change in the information environment for Treasury basis traders. Basis trades are highly sensitive to yield volatility regime changes; without forward guidance, the distribution of future rate outcomes widens, increasing the probability of sudden MOVE spikes that can force basis-trade unwinds. The MOVE index indicator captures the symptom but not this new causal driver. A story_gap indicator on Fed framework uncertainty is warranted under s1_basis_trade, as no existing indicator tracks the guidance-removal risk.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "new-fed-chair-warsh-drops-forward-guidance-holds-8ef59a"
+    },
+    "section-301-pharmaceutical-and-semiconductor-tar-c64e7c": {
+      "headline": "Section 301 pharmaceutical and semiconductor tariffs imminent: July 31 and Sept 29 effective dates set via April 2 executive order",
+      "summary": "A Trump executive order issued April 2, 2026 set pharmaceutical/medical device Section 232 tariffs to take effect July 31, 2026, with a second tranche on September 29, adding to existing 25% semiconductor tariffs; the administration intends these to replace the expiring Section 122 surcharge and extend tariff pressure on goods currently exempt from other authority.",
+      "as_of": "2026-07-04",
+      "sources": [
+        "https://www.grantthornton.com/insights/alerts/tax/2026/insights/the-trump-administration-new-tariff-road-map",
+        "https://www.bhfs.com/insight/trump-tariffs-upcoming-deadlines/",
+        "https://en.wikipedia.org/wiki/Tariffs_in_the_second_Trump_administration"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s5_china_deflation",
+      "target_indicator": "New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating)",
+      "proposed_indicator": {
+        "label": "US sector-specific Section 232/301 tariff cascade index (0 = stable / 1 = new sector added / 2 = multi-sector cascade with pharmaceutical + semiconductor + auto active simultaneously)",
+        "type": "band",
+        "rubric": "0 = no new sector-specific 232/301 tariffs in prior 90 days; 1 = one major sector newly tariffed (e.g., pharmaceuticals July 31); 2 = three or more major sectors newly tariffed within 90 days, covering >$500bn in annual import value",
+        "sources": [
+          "https://www.grantthornton.com/insights/alerts/tax/2026/insights/the-trump-administration-new-tariff-road-map",
+          "https://www.bhfs.com/insight/trump-tariffs-upcoming-deadlines/"
+        ],
+        "suggested_weight": 0.3
+      },
+      "proposed_story": null,
+      "rationale": "Pharmaceutical tariffs (July 31) will directly raise input costs for global supply chains and could push already-elevated US CPI higher, exacerbating China's deflationary export pressure as Chinese manufacturers absorb cost-push. The existing s5_china_deflation 'new tariff/anti-dumping actions' indicator is the right home but currently captures aggregate tone; a more granular sector-cascade sub-indicator would allow the tracker to distinguish between broad blanket tariffs and targeted sector escalations that affect PPI and deflationary dynamics differently.",
+      "status": "pending",
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "sightings": 1,
+      "id": "section-301-pharmaceutical-and-semiconductor-tar-c64e7c"
     }
   },
   "generated": "2026-07-04",
   "model": "claude-sonnet-4-6",
-  "new_count": 3,
-  "pending_count": 58
+  "new_count": 4,
+  "pending_count": 60
 }
