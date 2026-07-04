@@ -44,15 +44,25 @@ def write_json(result, narrative, date, path):
 
 
 def append_history(result, date, path):
+    """One row per story per date; re-running the same date replaces that date's
+    rows instead of duplicating them (manual re-runs are common)."""
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    new = not os.path.exists(path)
     ver = getattr(score, "METHODOLOGY_VERSION", "1.0")
-    with open(path, "a", newline="") as f:
+    header = ["date", "story_id", "name", "set", "level", "band", "raw_level", "method_version"]
+    rows = []
+    if os.path.exists(path):
+        with open(path, newline="") as f:
+            r = list(csv.reader(f))
+        if r and r[0] and r[0][0] != "date":  # legacy file without header
+            rows = [row for row in r if row and row[0] != date]
+        else:
+            rows = [row for row in r[1:] if row and row[0] != date]
+    for s in result["stories"]:
+        rows.append([date, s["id"], s["name"], s["set"], s["level"], s["band"], s["raw_level"], ver])
+    with open(path, "w", newline="") as f:
         w = csv.writer(f)
-        if new:
-            w.writerow(["date", "story_id", "name", "set", "level", "band", "raw_level", "method_version"])
-        for s in result["stories"]:
-            w.writerow([date, s["id"], s["name"], s["set"], s["level"], s["band"], s["raw_level"], ver])
+        w.writerow(header)
+        w.writerows(rows)
 
 
 def append_indicator_history(result, date, path):
