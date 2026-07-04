@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-03",
-  "generated_at": "2026-07-03 22:14 UTC",
+  "date": "2026-07-04",
+  "generated_at": "2026-07-04 10:52 UTC",
   "aggregates": {
     "1": 5.4,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.2
   },
-  "narrative": "# EOD Macro-Risk Brief | 2026-07-03\n\n**Overall macro risk stands at 6.2 (High), with no intraday level changes but persistent elevation across structural vulnerabilities.**\n\nNo stories moved today. Fifteen risks remain at Elevated or High bands:\n\n\u2022 **High-band risks** (3 stories): Japan fiscal/JGB/carry trade (7), Critical minerals weaponization (7), and AI power grid bottleneck (7) anchor the top tier.\n\n\u2022 **Elevated-band risks** (12 stories) span financial leverage (Treasury basis trades, private credit opacity, hidden consumer debt), macro imbalances (China deflation/cost-push spillover, developing-world debt, eurozone fragility), and supply-chain chokepoints (ASML lithography, sea lanes/undersea cables, food/fertilizer, water constraints, AI financing circularity).\n\n**Watch closest:** Japan's carry-trade unwind and structural fiscal stress (level 7)\u2014reversal dynamics could trigger rapid deleveraging across correlated markets.",
+  "narrative": "**HEADLINE**\nMacro risk holds at elevated 6.2 with no intraday moves, but three structural vulnerabilities\u2014Japan's carry trade, AI infrastructure bottlenecks, and critical minerals weaponization\u2014remain at High (level 7).\n\n**STORIES WITH LEVEL CHANGES**\nNo changes recorded today.\n\n**ELEVATED RISKS TO NOTE**\nFifteen risks remain in Elevated or High bands, spanning financial leverage (Treasury basis trades, private credit opacity), geopolitical supply chains (ASML lithography, critical minerals), and structural imbalances (Japan fiscal/JGB carry, China deflation spillover, developing-world debt, hidden consumer leverage, CRE maturity walls, and food/fertilizer fragility).\n\n**HIGHEST-RISK WATCH**\nJapan fiscal/JGB/carry trade (level 7): unwind dynamics could trigger cross-asset volatility across currencies and equities given embedded leverage in yen positions.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -72,7 +72,7 @@
         5,
         5,
         5,
-        5,
+        6,
         6,
         6,
         6,
@@ -162,7 +162,7 @@
         6,
         6,
         6,
-        6,
+        7,
         7,
         7,
         7
@@ -234,7 +234,7 @@
         5,
         5,
         5,
-        5,
+        6,
         6,
         6,
         6,
@@ -323,7 +323,7 @@
         5,
         5,
         5,
-        5,
+        6,
         6,
         6,
         6,
@@ -371,7 +371,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CNY=X",
-          "as_of": "2026-07-03",
+          "as_of": "2026-07-04",
           "provenance": "Market"
         },
         {
@@ -495,7 +495,7 @@
         6,
         6,
         6,
-        6,
+        7,
         7,
         7,
         7,
@@ -524,7 +524,7 @@
         {
           "id": "peg_deviation",
           "label": "Largest stablecoin max peg deviation (%)",
-          "value": 0.1,
+          "value": 0.08,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -533,13 +533,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-07-03",
+          "as_of": "2026-07-04",
           "provenance": "DefiLlama"
         },
         {
           "id": "stablecoin_supply",
           "label": "Total USD stablecoin supply ($bn)",
-          "value": 310.5,
+          "value": 310.6,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -548,7 +548,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-07-03",
+          "as_of": "2026-07-04",
           "provenance": "DefiLlama"
         },
         {
@@ -697,7 +697,7 @@
           "source_url": "https://www.multihousingnews.com/cmbs-delinquency-rates/",
           "as_of": "2026-02",
           "provenance": "Agent",
-          "age_days": 125,
+          "age_days": 126,
           "stale_for_cadence": true
         },
         {
@@ -722,10 +722,10 @@
         5,
         5,
         5,
+        6,
+        6,
+        6,
         5,
-        6,
-        6,
-        6,
         5,
         5,
         5,
@@ -765,7 +765,7 @@
           "source_url": "https://fred.stlouisfed.org/series/IRLTLT01FRM156N",
           "as_of": "2026-05-01",
           "provenance": "FRED",
-          "age_days": 63,
+          "age_days": 64,
           "stale_for_cadence": true
         },
         {
@@ -808,7 +808,7 @@
         4,
         4,
         4,
-        4,
+        5,
         5,
         5,
         5,
@@ -848,7 +848,7 @@
           "source_url": "https://wolfstreet.com/2026/05/19/auto-loan-balances-debt-to-income-ratio-and-delinquencies-of-subprime-prime-auto-loans-in-q1-2026-how-bad-is-it/",
           "as_of": "2026-02",
           "provenance": "Agent",
-          "age_days": 125,
+          "age_days": 126,
           "stale_for_cadence": true
         },
         {
@@ -888,12 +888,12 @@
         5,
         5,
         5,
-        5,
         6,
         6,
         6,
         5,
         5,
+        6,
         6,
         6,
         6,
@@ -946,7 +946,7 @@
           "source_url": "https://data.imf.org/en/news/imf%20data%20brief%20march%2027",
           "as_of": "2025Q4",
           "provenance": "Agent",
-          "age_days": 187,
+          "age_days": 188,
           "stale_for_cadence": true
         },
         {
@@ -971,7 +971,7 @@
         3,
         3,
         3,
-        3,
+        4,
         4,
         4,
         4,
@@ -1029,7 +1029,7 @@
           "source_url": "https://fred.stlouisfed.org/series/DRSFRMACBS",
           "as_of": "2026-01-01",
           "provenance": "FRED",
-          "age_days": 183,
+          "age_days": 184,
           "stale_for_cadence": true
         },
         {
@@ -1054,7 +1054,7 @@
         5,
         5,
         5,
-        5,
+        4,
         4,
         4,
         4,
@@ -1138,9 +1138,9 @@
         4,
         4,
         4,
+        5,
+        5,
         4,
-        5,
-        5,
         4,
         4,
         4,
@@ -1178,7 +1178,7 @@
           "source_url": "https://emp.lbl.gov/queues",
           "as_of": "2025-12-31",
           "provenance": "Agent",
-          "age_days": 187,
+          "age_days": 188,
           "stale_for_cadence": true
         },
         {
@@ -1223,7 +1223,7 @@
         6,
         6,
         6,
-        6,
+        7,
         7,
         7,
         7,
@@ -1380,7 +1380,7 @@
         4,
         4,
         4,
-        4,
+        5,
         5,
         5,
         5,
@@ -1462,11 +1462,11 @@
         6,
         6,
         6,
-        6,
         7,
         6,
         7,
         7,
+        6,
         6,
         6,
         6,
@@ -1545,7 +1545,7 @@
         5,
         5,
         5,
-        5,
+        6,
         6,
         6,
         6,
@@ -1620,7 +1620,7 @@
       "summary": "A few maritime chokepoints and undersea cables carry most global trade and data. The 2026 Hormuz/Red Sea disruptions showed how quickly closures spike energy and shipping costs; cable cuts are a parallel, under-watched vulnerability.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=45",
       "spark": [
-        7,
+        6,
         6,
         6,
         6,
@@ -1655,7 +1655,7 @@
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 15.81,
+          "value": 16.15,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -1664,7 +1664,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^VIX",
-          "as_of": "2026-07-03",
+          "as_of": "2026-07-02",
           "provenance": "Market"
         },
         {
@@ -3297,7 +3297,7 @@
     "live_total": 19,
     "fell_back": 0,
     "agent_last": "2026-07-03",
-    "agent_days_ago": 0,
+    "agent_days_ago": 1,
     "agent_flags": 34,
     "offline": false
   },
