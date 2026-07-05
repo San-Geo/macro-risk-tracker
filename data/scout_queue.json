@@ -500,13 +500,12 @@
     },
     "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
       "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
-      "summary": "Iran re-shut the Strait on June 20, citing Israeli Lebanon strikes as a ceasefire breach; on June 27, the US Navy's JMIC announced a widened navigational corridor near Oman, directly challenging Iran's claimed control. Oil prices remain elevated but have fallen ~30% from their ~$120/bbl wartime peak, with market analysts warning that sentiment-driven price declines are outrunning actual physical re-normalisation.",
-      "as_of": "2026-07-03",
+      "summary": "The US and Iran signed a 14-point memorandum of understanding on ~June 19, removing the naval blockade and reopening the Strait of Hormuz after more than 100 days of closure. However, core issues (nuclear concessions, sanctions relief) remain unresolved in a fragile 60-day negotiating window, and experts warn global inventories are at multi-year lows, meaning energy prices could stay elevated for months even as Brent retreated to ~$70\u201372/bbl by July 1.",
+      "as_of": "2026-07-01",
       "sources": [
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
-        "https://discoveryalert.com.au/us-iran-strait-hormuz-oil-prices-2026-ceasefire-market/",
-        "https://www.aljazeera.com/economy/2026/6/17/oil-prices-continue-slide-amid-hopes-for-peace-opening-of-strait-of-hormuz",
-        "https://www.cnbc.com/2026/05/28/oil-prices-us-strikes-in-iran-revive-strait-of-hormuz-turmoil-fears.html"
+        "https://www.atlanticcouncil.org/dispatches/experts-react-the-us-and-iran-just-announced-an-interim-peace-deal-heres-what-we-know-so-far/",
+        "https://www.aljazeera.com/economy/2026/6/16/us-fuel-prices-to-take-months-to-normalise-after-us-iran-deal-to-end-war",
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -514,12 +513,12 @@
       "target_indicator": "Hormuz/Red Sea status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The June 20 re-closure and June 27 US counter-maneuver are the most material updates of the past week to s20's primary indicator. Status should shift from 'contested' toward 'closed' given the re-closure declaration; WTI (~$81/bbl per post-ceasefire data) and the ongoing infrastructure damage and low inventory levels are directly captured by the story's existing indicators. The gap between ceasefire paper and physical throughput is a secondary risk that could escalate the Hormuz/Red Sea status to '2 = closed'.",
+      "rationale": "The Hormuz/Red Sea status indicator is the direct fit: the strait transitioned from 'closed/contested' to 'nominally reopening' but remains fragile under a 60-day MOU. The oil price component (WTI/Brent) should update to reflect the ~$70-low-$70s range and multi-year-low inventory overhang. The 60-day ceasefire expiry (mid-August) is the key near-term binary risk for s20 and for energy-sensitive stories s2, s18, and s5. The MOU's failure to resolve nuclear mechanics and the ongoing inventory rebuild mean the risk premium in oil has not fully collapsed.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-05",
       "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
-      "sightings": 2
+      "sightings": 3
     },
     "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
       "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
@@ -1915,10 +1914,164 @@
       "last_seen": "2026-07-05",
       "sightings": 1,
       "id": "boj-s-new-board-appointee-signals-dovish-lean-in-031468"
+    },
+    "jpy-hits-40-year-low-of-162-83-boj-hiked-to-1-bu-647e1d": {
+      "headline": "JPY hits 40-year low of ~162.83; BOJ hiked to 1% but yen slide continues as Takaichi fiscal plan pushes 10Y JGB yield toward 2.7\u20132.8%",
+      "summary": "The Bank of Japan raised its policy rate to 1% on June 16 (highest since 1995) amid yen weakness and imported inflation from the Iran conflict, but USD/JPY still touched 162.83 on July 1\u2014a four-decade low\u2014as markets judged BOJ tightening insufficient versus the Fed. Japan spent a record \u00a511.7 trillion (~$73.5bn) on FX intervention in April\u2013May with limited durable effect; Takaichi's \u00a5370 trillion long-term investment blueprint is driving fiscal concerns and keeping JGB yields elevated near historic highs.",
+      "as_of": "2026-07-02",
+      "sources": [
+        "https://www.cnbc.com/amp/2026/07/01/japan-yen-40-year-low-intervention-fed-boj-carry-trade.html",
+        "https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://money.usnews.com/investing/news/articles/2026-07-02/japan-government-panel-member-calls-for-moderate-boj-rate-hikes",
+        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "FX intervention firepower exhaustion (\u00a5tn spent YTD vs. reserves)",
+        "type": "band",
+        "rubric": "0 = <\u00a55tn spent, reserves comfortable; 1 = \u00a55\u201315tn spent (elevated), intervention fatigue risk; 2 = >\u00a515tn spent or reserves visibly strained. Current: ~\u00a511.7tn spent YTD through May \u2192 score 1, trending toward 2 if yen remains near 162+.",
+        "sources": [
+          "https://www.cnbc.com/amp/2026/07/01/japan-yen-40-year-low-intervention-fed-boj-carry-trade.html",
+          "https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "s2 already tracks USD/JPY and 30Y JGB yield, but has no indicator capturing FX intervention reserve burn\u2014a critical leading indicator for a disorderly yen move. Japan has spent a record \u00a511.7tn in two months and the yen is still at 40-year lows; reserve exhaustion would remove the last non-BOJ backstop and could trigger a rapid carry-trade unwind like August 2024 but at a more extreme starting point. The Takaichi fiscal plan (\u00a5370tn mobilization) also keeps the 'financing clarity' indicator at 1\u20132 given political pressure on BOJ to subordinate rate policy.",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "jpy-hits-40-year-low-of-162-83-boj-hiked-to-1-bu-647e1d"
+    },
+    "new-fed-chair-warsh-signals-data-dependent-new-c-0c5d2f": {
+      "headline": "New Fed Chair Warsh signals data-dependent 'new course' at Sintra: no forward guidance, inflation 'too high' at 4.2% CPI, rate-hike risk alive",
+      "summary": "At the ECB's Sintra forum (June 30\u2013July 1), new Fed Chair Kevin Warsh\u2014who replaced Jerome Powell on May 22\u2014confirmed CPI hit 4.2% YoY in May (3-year high driven by the Iran war oil shock), eliminated forward guidance, and left the door open to rate hikes, with nearly half of FOMC members projecting higher rates. Warsh noted inflation risks have 'come down' as energy prices ease post-MOU, but said price stability remains the overriding objective.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.cnbc.com/2026/07/01/kevin-warsh-ecb-forum-live-updates.html",
+        "https://www.pbs.org/newshour/economy/federal-reserve-chair-warsh-emphasizes-political-independence-signals-focus-on-inflation",
+        "https://www.bloomberg.com/news/articles/2026-07-01/warsh-says-fed-charting-new-course-repeats-no-forward-guidance"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Fed regime shift under Warsh: opacity risk & rate-hike tail",
+        "why": "The replacement of Powell with Warsh introduces a qualitatively new Fed communication regime: no forward guidance, alternative inflation metrics, task-force-driven policy redesign, and an explicit openness to rate hikes even as the administration pushes for cuts. With CPI at 4.2% (3-year high), a hawkish surprise at any upcoming FOMC meeting would simultaneously stress the basis trade (s1), blow out HY spreads (s3), hammer EM debtors (s4), accelerate yen carry unwind (s2), and detonate the AI capex financing cycle (s8). The opacity itself is a new systemic risk\u2014markets cannot price the Fed reaction function.",
+        "proposed_level": 7,
+        "set": 1,
+        "indicators": [
+          {
+            "label": "Fed forward-guidance opacity index (0 = standard dot plot + forward guidance / 1 = reduced guidance / 2 = no guidance + alternative metrics)",
+            "type": "band",
+            "rubric": "0 = traditional SEP/dot plot with explicit bias; 1 = reduced frequency or conditionality of guidance; 2 = guidance formally eliminated, reaction function opaque. Current: 2 (Warsh has explicitly removed forward guidance).",
+            "sources": [
+              "https://www.cnbc.com/2026/07/01/kevin-warsh-ecb-forum-live-updates.html",
+              "https://www.pbs.org/newshour/economy/federal-reserve-chair-warsh-emphasizes-political-independence-signals-focus-on-inflation"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "US CPI YoY (%)",
+            "type": "value",
+            "rubric": "Track monthly; above 3.5% = stress zone; above 4.0% = hike-risk zone. Current: 4.2% (May 2026).",
+            "sources": [
+              "https://www.pbs.org/newshour/economy/federal-reserve-chair-warsh-emphasizes-political-independence-signals-focus-on-inflation"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "FOMC rate-hike probability for next meeting (%, from OIS)",
+            "type": "value",
+            "rubric": "0\u201310% = no near-term hike risk; 10\u201330% = elevated; >30% = active tightening threat. Track via CME FedWatch.",
+            "sources": [
+              "https://www.cnbc.com/2026/07/01/kevin-warsh-ecb-forum-live-updates.html"
+            ],
+            "suggested_weight": 0.35
+          }
+        ]
+      },
+      "rationale": "No existing story captures the systemic risk from a Fed leadership regime shift combined with opaque policy communication during a high-inflation, war-driven energy shock. This is not merely a 'higher rates' update to s8 or s1\u2014it is a structural change to how the Fed signals, which affects the pricing of ALL risk assets and sovereign bonds simultaneously. The Warsh doctrine (no forward guidance, alternative data, task forces) means volatility-of-expectations is permanently higher regardless of where rates land.",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "new-fed-chair-warsh-signals-data-dependent-new-c-0c5d2f"
+    },
+    "bank-of-england-governor-bailey-flags-rising-lev-fa9fc2": {
+      "headline": "Bank of England Governor Bailey flags rising leverage in core government bonds, equity markets and private credit at Sintra as potential tail-risk-to-systemic-risk pipeline",
+      "summary": "At the ECB Sintra forum (July 1), BoE Governor Andrew Bailey publicly flagged growing leverage in core government bond markets, hedge fund equity leverage, ETF leverage, and private credit\u2014explicitly asking whether these tail risks could 'move into a broader consequence.' This comes as the BIS Annual Economic Report (late June) independently flagged NBFI leverage and rising public debt as two of three key global financial stability vulnerabilities.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.cnbc.com/2026/07/01/kevin-warsh-ecb-forum-live-updates.html",
+        "https://www.investing.com/analysis/bis-highlights-3-key-risks-to-global-financial-stability-200683182"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s1_basis_trade",
+      "target_indicator": "MOVE index (Treasury volatility)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Bailey's explicit public warning about leverage in core government bond markets maps directly onto s1 (Treasury basis trade / hidden leverage) and s3 (private credit). The fact that both the BoE Governor and the BIS\u2014within the same week\u2014are naming the same NBFI/leverage cluster as a systemic tail risk elevates the signal-to-noise ratio significantly. The MOVE index is the existing indicator best placed to reflect stress materializing in this channel. This also reinforces s3's 'large-fund redemption gates' indicator given Bailey's specific call-out of private credit as a candidate for tail-to-systemic contagion.",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "bank-of-england-governor-bailey-flags-rising-lev-fa9fc2"
+    },
+    "us-china-tariff-regime-restructured-post-supreme-6aede7": {
+      "headline": "US-China tariff regime restructured post-Supreme Court IEEPA ruling: effective rate ~30% under Section 301/232 framework; USTR Section 301 forced-labor investigation adds potential 12.5% layer",
+      "summary": "Following the US Supreme Court's strike-down of IEEPA-based tariffs (effective February 2026), US tariffs on China were restructured around a 15% global tariff plus remaining Section 301/232 duties, keeping the effective rate near 30%\u2014still the highest of any country. On June 2, USTR proposed an additional 12.5% tariff on China stemming from a new Section 301 forced-labor investigation, with the two investigations set to conclude this summer, threatening to push effective rates higher again.",
+      "as_of": "2026-06-30",
+      "sources": [
+        "https://www.china-briefing.com/news/us-china-tariff-rates-2025/",
+        "https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s5_china_deflation",
+      "target_indicator": "New tariff/anti-dumping actions",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The USTR's June 2 proposed 12.5% Section 301 forced-labor tariff on China, with a summer conclusion date, is a material new escalation event that fits directly under s5's 'New tariff/anti-dumping actions' indicator (moving it from 1-rising to 2-escalating). The IEEPA restructuring also changes the legal architecture of US-China trade policy in ways that affect the durability and predictability of the current ~30% effective tariff floor, creating ongoing uncertainty that compounds China's domestic deflation dynamic (CPI near zero, PPI negative, fourth year of deflation per CNBC March 2026).",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "us-china-tariff-regime-restructured-post-supreme-6aede7"
+    },
+    "japan-s-takaichi-government-pauses-boj-bond-tape-81e119": {
+      "headline": "Japan's Takaichi government pauses BOJ bond-taper programme under political pressure; 10Y JGB yield near 30-year high of ~2.7-2.8%, Oxford Economics raises end-2026 forecast to 2.8%",
+      "summary": "A government economic panel member confirmed on July 2 that Tokyo's pressure on the BOJ about bond-market instability led the BOJ to pause its JGB taper programme from next fiscal year. Meanwhile, the 10Y JGB yield has surged from ~2.1% in March to ~2.7% now (near October 1996 highs), with Oxford Economics raising its end-2026 forecast to 2.8%, driven by Takaichi's \u00a5370tn spending blueprint and concerns over fiscal financing\u2014representing a direct stress on the 's2_japan' 30-year JGB yield indicator.",
+      "as_of": "2026-07-02",
+      "sources": [
+        "https://money.usnews.com/investing/news/articles/2026-07-02/japan-government-panel-member-calls-for-moderate-boj-rate-hikes",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The July 2 Reuters-sourced report that the Takaichi government directly pressured the BOJ into pausing its QT programme\u2014confirmed by a government panel member\u2014is a material new development that pushes the 'Takaichi plan financing clarity' indicator from 1 (unclear) to 2 (disorderly), because political interference in BOJ balance-sheet policy to suppress the fiscal cost of spending plans is precisely the 'fiscal dominance' scenario this indicator is designed to detect. The 60bp surge in 10Y JGB yields since March (to near 30-year highs) and Oxford Economics' upward revision to 2.8% for end-2026 confirm that markets are pricing this deterioration. This also updates the '30-year JGB yield' indicator materially upward.",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "japan-s-takaichi-government-pauses-boj-bond-tape-81e119"
     }
   },
   "generated": "2026-07-05",
   "model": "claude-sonnet-4-6",
-  "new_count": 4,
-  "pending_count": 64
+  "new_count": 5,
+  "pending_count": 69
 }

@@ -1,6 +1,6 @@
 {
   "date": "2026-07-05",
-  "generated_at": "2026-07-05 10:21 UTC",
+  "generated_at": "2026-07-05 16:42 UTC",
   "aggregates": {
     "1": 5.4,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.2
   },
-  "narrative": "# EOD Macro-Risk Brief | 2026-07-05\n\n**Overall risk stable at 6.2; no intraday level changes, but three High-band risks remain acute.**\n\nNo stories moved today. Persistent elevated risks span financial leverage (Treasury basis trades, private credit opacity), geopolitical supply chains (critical minerals weaponization, ASML lithography chokepoint), and structural imbalances (Japan's fiscal-carry nexus, China deflation spillover, developing-world debt servicing, AI power demand vs. grid constraints).\n\n**Watch closest:** Japan fiscal / JGB / carry trade (Level 7, High)\u2014unwind tail risk remains the highest-consequence trigger for cross-asset volatility and margin calls across global leveraged positions.",
+  "narrative": "**HEADLINE**\nMacro risk holds at 6.2 overall, with three High-level stresses in Japan carry trades, critical minerals weaponization, and AI power demands creating overlapping tail-risk channels.\n\n**NO LEVEL CHANGES RECORDED**\nThe changes array is empty; no stories moved between risk bands today.\n\n**ELEVATED OR HIGHER RISKS (STANDING POSITIONS)**\n\u2022 **Japan fiscal/JGB/carry trade (High, 7):** Persistent yen-carry unwind risk; potential for rapid deleveraging across global equities and credit.\n\u2022 **Critical minerals as weapon (High, 7):** Supply concentration remains weaponizable; disruption would cascade through EV and defense supply chains.\n\u2022 **AI power & grid bottleneck (High, 7):** Structural electricity shortage for AI compute expansion; capex constraints and grid stress widening.\n\u2022 Eight Elevated (6) risks span Treasury basis leverage, private credit opacity, EM debt, China deflation, AI financing circularity, consumer debt, and supply chokepoints (lithography, food, sea lanes).\n\n**WATCH PRIORITY**\nJapan carry-trade unwind remains the highest-risk trigger for rapid cross-asset repricing given leverage embedded across global equities and credit markets.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -70,7 +70,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=6",
       "spark": [
         5,
-        5,
+        6,
         6,
         6,
         6,
@@ -160,7 +160,7 @@
         6,
         6,
         6,
-        6,
+        7,
         7,
         7,
         7,
@@ -232,7 +232,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=10",
       "spark": [
         5,
-        5,
+        6,
         6,
         6,
         6,
@@ -321,7 +321,7 @@
         5,
         5,
         5,
-        5,
+        6,
         6,
         6,
         6,
@@ -493,7 +493,7 @@
         6,
         6,
         6,
-        6,
+        7,
         7,
         7,
         7,
@@ -539,7 +539,7 @@
         {
           "id": "stablecoin_supply",
           "label": "Total USD stablecoin supply ($bn)",
-          "value": 309.8,
+          "value": 309.9,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -720,10 +720,10 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=20",
       "spark": [
         5,
+        6,
+        6,
+        6,
         5,
-        6,
-        6,
-        6,
         5,
         5,
         5,
@@ -806,7 +806,7 @@
         4,
         4,
         4,
-        4,
+        5,
         5,
         5,
         5,
@@ -886,12 +886,12 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=22",
       "spark": [
         5,
-        5,
         6,
         6,
         6,
         5,
         5,
+        6,
         6,
         6,
         6,
@@ -969,7 +969,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=33",
       "spark": [
         3,
-        3,
+        4,
         4,
         4,
         4,
@@ -1052,7 +1052,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=25",
       "spark": [
         5,
-        5,
+        4,
         4,
         4,
         4,
@@ -1136,9 +1136,9 @@
         4,
         4,
         4,
+        5,
+        5,
         4,
-        5,
-        5,
         4,
         4,
         4,
@@ -1221,7 +1221,7 @@
         6,
         6,
         6,
-        6,
+        7,
         7,
         7,
         7,
@@ -1378,7 +1378,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=54",
       "spark": [
         4,
-        4,
+        5,
         5,
         5,
         5,
@@ -1460,11 +1460,11 @@
       "spark": [
         6,
         6,
-        6,
         7,
         6,
         7,
         7,
+        6,
         6,
         6,
         6,
@@ -1543,7 +1543,7 @@
         5,
         5,
         5,
-        5,
+        6,
         6,
         6,
         6,
@@ -3476,6 +3476,323 @@
       "s21_clearinghouses": {
         "label": "The financial system's plumbing",
         "gist": "Clearinghouses sit at the center of every market; if one seized up under stress, it would jam trading everywhere at once."
+      }
+    }
+  },
+  "playbook": {
+    "disclaimer": "Educational cause-and-effect only - how stress like this has historically moved through the system. Nothing here is investment advice or a prediction.\n",
+    "stories": {
+      "s1_basis_trade": {
+        "mechanism": "A rates shock forces highly leveraged government-bond arbitrage positions to unwind at once: margin calls trigger forced Treasury selling, liquidity in the world's benchmark market evaporates, and everything priced off it reprices.\n",
+        "bleeds": [
+          "leveraged bond funds",
+          "dealer intermediation",
+          "anything needing short-term funding rollover"
+        ],
+        "benefits": [
+          "cash and short-term bills through the panic",
+          "long-term government bonds AFTER central-bank intervention",
+          "the dollar during the scramble"
+        ],
+        "watch": "The funding-spread and bond-volatility rows above; the historical pivot was the central bank announcing a backstop facility.",
+        "trap": "In past episodes the 'safe' asset itself fell first - forced sellers sell what they can - so the flight-to-safety instinct lost money until the intervention."
+      },
+      "s2_japan": {
+        "mechanism": "Surging Japanese yields pull decades of cheap yen funding home: the yen spikes on repatriation, and leveraged positions worldwide that were financed in yen get liquidated together - hitting high-momentum equities and emerging markets hardest.\n",
+        "bleeds": [
+          "high-beta and momentum equities",
+          "emerging-market carry targets",
+          "exporters via the stronger yen"
+        ],
+        "benefits": [
+          "the yen itself",
+          "Japanese banks and insurers as rates normalize",
+          "volatility"
+        ],
+        "watch": "The 30-year JGB row above (live official feed) and the yen; past unwinds announced themselves through the currency.",
+        "trap": "Historical carry unwinds were violent but brief - the 2024 episode round-tripped within days; the durable shift was in Japanese financials, not the panic."
+      },
+      "s3_private_credit": {
+        "mechanism": "One honest markdown forces everyone's marks: investor withdrawals hit gates, gated funds fire-sell into an illiquid market, and lending to mid-sized companies contracts just as they need to refinance.\n",
+        "bleeds": [
+          "private-credit vehicles trading below stated asset value",
+          "alternative asset managers' fee streams",
+          "mid-market borrowers"
+        ],
+        "benefits": [
+          "holders of dry powder buying discounted credit afterwards",
+          "public high-quality credit as the flight destination"
+        ],
+        "watch": "The default-rate and redemption-gate rows above; public high-yield spreads are the honest proxy for hidden marks.",
+        "trap": "Opacity means the repricing arrives as a sudden gap, not a trend - by the time it is public, the move has largely happened."
+      },
+      "s4_dev_debt": {
+        "mechanism": "A cluster of sovereign defaults - not one - overwhelms the restructuring machinery: redemptions from emerging-market debt funds force indiscriminate selling of strong and weak credits alike, and stress spreads through common creditors.\n",
+        "bleeds": [
+          "emerging-market bonds broadly",
+          "local currencies",
+          "banks with frontier exposure",
+          "food and fuel importers"
+        ],
+        "benefits": [
+          "the dollar",
+          "and historically the buyers of defaulted debt after restructuring - among the best-documented recoveries in fixed income"
+        ],
+        "watch": "The new-IMF-programs row above and the dollar's strength, which is usually the upstream cause.",
+        "trap": "Index diversification means one or two defaults barely register; the systemic wave this story warns of is exactly what official bailouts exist to prevent."
+      },
+      "s5_china_deflation": {
+        "mechanism": "Deepening factory-gate deflation is exported as cheaper goods, compressing margins for competing producers everywhere - unless Beijing's stimulus response whipsaws the pressure into a sudden commodity and China-equity rebound.\n",
+        "bleeds": [
+          "steel and chemicals producers",
+          "industrial competitors to Chinese exports",
+          "commodity producers if deflation wins"
+        ],
+        "benefits": [
+          "import-heavy retailers via input costs",
+          "long-term bonds in the deflation leg",
+          "Chinese equities and industrial metals in the stimulus leg"
+        ],
+        "watch": "The producer-price row above and any stimulus announcement - the two legs point opposite directions.",
+        "trap": "Policy whipsaw: historically every stimulus rumor violently reversed the deflation trade within days."
+      },
+      "s6_rare_earths": {
+        "mechanism": "Export restrictions tighten into denial: magnet and heavy-rare-earth supply to defense, vehicle, and robotics manufacturers halts, panic stockpiling begins, and processing capacity outside China re-rates from commodity business to strategic asset.\n",
+        "bleeds": [
+          "magnet-dependent manufacturing",
+          "vehicle and defense production schedules in the short run"
+        ],
+        "benefits": [
+          "non-Chinese miners and processors",
+          "recyclers",
+          "defense supply-chain funding"
+        ],
+        "watch": "The license-flow, blacklist, and ex-China premium rows above - the premium is the market's own severity gauge.",
+        "trap": "Historically these moves reversed as fast as they started on any truce headline, and diversified funds in the space often hold the Chinese producers too."
+      },
+      "s7_stablecoins": {
+        "mechanism": "A run on a major stablecoin forces its reserves - tens of billions in short-term government debt - to liquidate within days, briefly dislocating the bill market while the crypto ecosystem's dollar rails seize and leveraged positions cascade.\n",
+        "bleeds": [
+          "crypto-linked financial firms",
+          "the tokens themselves mechanically",
+          "the failing issuer's banking partners"
+        ],
+        "benefits": [
+          "historically the surviving issuer gained lasting market share after each depeg scare",
+          "volatility during the run"
+        ],
+        "watch": "The live peg-deviation and supply rows above (updated daily from the aggregator) - past runs announced themselves in the peg first.",
+        "trap": "Crypto markets have a long history of face-ripping rebounds inside downtrends; past episodes punished conviction in both directions."
+      },
+      "s8_ai_capex": {
+        "mechanism": "The debt-financed buildout meets a revenue shortfall: one credit event at a leveraged data-center operator reprices all AI-adjacent borrowing, capital-spending guidance gets cut, chip orders fall, and power-demand forecasts deflate - the whole complex moves together because it was funded together.\n",
+        "bleeds": [
+          "chipmakers and their suppliers",
+          "power producers priced on AI demand",
+          "data-center landlords",
+          "the leveraged operators' creditors"
+        ],
+        "benefits": [
+          "historically the value-versus-growth rotation",
+          "and - the dot-com lesson - the post-bust survivors compounded for a decade"
+        ],
+        "watch": "The capex-gap, revenue-gap, and refinancing rows above; credit stress historically led equity repricing.",
+        "trap": "Bubbles run longer than solvency: betting against this one early has been the era's classic ruin trade, which is why timing signals matter more than valuation."
+      },
+      "s9_cre": {
+        "mechanism": "Office refinancing failures cluster into bank failures: deposit flight spreads to lookalike regional lenders, credit to small business contracts, and commercial-property marks finally reflect reality.\n",
+        "bleeds": [
+          "regional banks",
+          "office landlords",
+          "holders of riskier commercial-mortgage securities",
+          "office-dependent city budgets"
+        ],
+        "benefits": [
+          "the largest banks via deposit inflows",
+          "distressed-property buyers with committed capital",
+          "and historically the whole sector rebounded within days of a backstop"
+        ],
+        "watch": "The bank-failure and office-delinquency rows above and the official problem-bank list.",
+        "trap": "The 2023 backstop bottomed the sector in 48 hours - the policy response, not the failure, was the historical turning point."
+      },
+      "s10_france": {
+        "mechanism": "Fiscal paralysis pushes French borrowing costs through crisis thresholds: banks holding the government's own bonds absorb the losses, the sovereign-bank doom loop reawakens, and stress spreads across euro-area borrowing costs.\n",
+        "bleeds": [
+          "French banks and equities",
+          "the euro",
+          "other high-debt euro members through contagion"
+        ],
+        "benefits": [
+          "historically the dollar",
+          "gold",
+          "and non-euro safe havens in every euro crisis",
+          "and core-versus-French bond spreads"
+        ],
+        "watch": "The OAT-Bund spread row above (live feed) - it is the market's single-number verdict on this story.",
+        "trap": "The central bank: euro-breakup positioning has been ruined repeatedly by ECB backstops built precisely for this scenario."
+      },
+      "s11_consumer_debt": {
+        "mechanism": "Subprime stress spreads upward: rising late payments become charge-offs, lenders tighten, discretionary spending cracks, and the weakness travels from consumer lenders to retailers to the broad economy.\n",
+        "bleeds": [
+          "consumer lenders",
+          "buy-now-pay-later firms",
+          "discretionary retail"
+        ],
+        "benefits": [
+          "trade-down retailers in every past consumer squeeze",
+          "consumer staples relative to discretionary"
+        ],
+        "watch": "The subprime-delinquency and BNPL rows above; the staples-versus-discretionary ratio is the market's own recession gauge.",
+        "trap": "Lenders provision ahead of losses - their shares historically bottomed while delinquencies were still rising."
+      },
+      "s12_gold_dedollar": {
+        "mechanism": "A reserve-weaponization event accelerates the slow shift: central banks swap dollar assets for gold at a faster pace, marginal foreign demand for government debt weakens, and the metal gains a structural, price-insensitive buyer.\n",
+        "bleeds": [
+          "the dollar's long-run share",
+          "long-term government bonds via lost foreign demand"
+        ],
+        "benefits": [
+          "gold above all - the current central-bank buying era is the live example - plus non-dollar safe havens"
+        ],
+        "watch": "The reserve-share row above (quarterly official data) and central-bank purchase reports.",
+        "trap": "This is measured in decades, not events - and gold miners have historically lagged the metal itself across full cycles."
+      },
+      "s13_insurance": {
+        "mechanism": "A mega-catastrophe season collides with insurers already exiting exposed regions: property becomes uninsurable, collateral values fall, and the stress transmits to mortgages, regional lenders, and state backstops.\n",
+        "bleeds": [
+          "catastrophe-exposed primary insurers",
+          "property values and lenders in exposed regions",
+          "state-level backstop programs"
+        ],
+        "benefits": [
+          "historically reinsurers AFTER the event as pricing hardened",
+          "insurance brokers on rising premiums",
+          "and catastrophe-linked debt yields for risk-bearers"
+        ],
+        "watch": "The insurer-exit and catastrophe-loss rows above plus the season's forecasts.",
+        "trap": "Positioning before the event absorbs the loss; the well-documented historical pattern favored the post-event hard market."
+      },
+      "s14_pensions": {
+        "mechanism": "A rate spike forces leveraged pension strategies into collateral calls: they dump whatever is liquid, the selling pushes yields higher still, and the spiral continues until a central bank steps in - the UK lived this in 2022.\n",
+        "bleeds": [
+          "long-term government bonds during the spiral itself",
+          "leveraged pension holdings",
+          "retirees' security in the slow version"
+        ],
+        "benefits": [
+          "whoever provided liquidity at the intervention - the 2022 central-bank entry marked the exact bottom - and retirement insurers structurally as rates rose"
+        ],
+        "watch": "The funded-ratio row above (live monthly feed) and long-bond volatility.",
+        "trap": "Identical to the basis trade: buying the falling 'safe' asset before the intervention caught knives for days."
+      },
+      "s15_ai_power": {
+        "mechanism": "Data-center demand outruns the grid so badly that curtailments, connection queues, and building moratoria stall the buildout - rising household bills turn it political, and the constraint moves from engineering to consent.\n",
+        "bleeds": [
+          "data-center development in constrained regions",
+          "utilities caught between regulators and demand",
+          "AI deployment timelines"
+        ],
+        "benefits": [
+          "historically power producers",
+          "grid-equipment makers",
+          "and nuclear/gas capacity - though see the trap"
+        ],
+        "watch": "The interconnection-wait and moratoria rows above and capacity-auction prices.",
+        "trap": "The famous version of this trade assumes the buildout CONTINUES; this story's actual blow-up - moratoria stopping it - points the opposite way for the same names."
+      },
+      "s16_copper": {
+        "mechanism": "A structural deficit meets a supply shock - a major mine closure removes years of planned supply - and the metal prices high enough to ration demand, raising costs for every grid, vehicle, and data-center project simultaneously.\n",
+        "bleeds": [
+          "wire-and-cable consumers",
+          "electrification project budgets",
+          "emerging-market grid buildouts"
+        ],
+        "benefits": [
+          "producing miners with volume to sell",
+          "scrap and recycling",
+          "historically the metal itself"
+        ],
+        "watch": "The mine-disruption and deficit rows above and exchange inventory levels.",
+        "trap": "The political risk that causes the shocks sits inside the producers themselves - the closed mine may be the one you were counting on."
+      },
+      "s17_water": {
+        "mechanism": "Severe drought hits a chip hub, a farm belt, and cooling-dependent power at once: an unpriced input becomes a binding constraint, cutting industrial output regionally and feeding into food prices.\n",
+        "bleeds": [
+          "semiconductor fabs in drought regions",
+          "agriculture in the affected basin",
+          "hydro- and cooling-dependent power",
+          "river logistics"
+        ],
+        "benefits": [
+          "water infrastructure and treatment builders",
+          "historically crop prices in drought years"
+        ],
+        "watch": "The reservoir and drought rows above (live official feed for the largest US reservoir).",
+        "trap": "There is no pure play - broad 'water' funds are mostly global industrials, while the shock is local; the honest effects are second-order."
+      },
+      "s18_food_fertilizer": {
+        "mechanism": "Fertilizer export restrictions cut application in poorer countries, next season's yields fall, grain prices spike, and food inflation becomes social and fiscal stress in import-dependent nations - looping back into the developing-world debt story.\n",
+        "bleeds": [
+          "food-importing emerging economies",
+          "food processors' margins",
+          "protein producers via feed costs"
+        ],
+        "benefits": [
+          "fertilizer producers in every past squeeze",
+          "crop prices",
+          "agribusiness broadly"
+        ],
+        "watch": "The FAO food-price row above (live feed) and the export-curb indicator.",
+        "trap": "Fertilizer stress historically reversed violently when curbs lifted, taking back most of the move."
+      },
+      "s19_lithography": {
+        "mechanism": "Conflict or blockade around Taiwan stops the fabs that make nearly all leading-edge chips: every electronics supply chain seizes within a quarter, and the shock is large enough that markets themselves may not function normally.\n",
+        "bleeds": [
+          "nearly everything",
+          "led by semiconductors",
+          "then autos",
+          "industrials",
+          "and anything with a chip in it"
+        ],
+        "benefits": [
+          "grimly - defense and shipbuilding",
+          "non-Taiwanese legacy chip capacity",
+          "gold",
+          "energy via disruption premium"
+        ],
+        "watch": "The tension and export-control rows above; false-alarm cycles have historically outnumbered real escalations many times over.",
+        "trap": "In the true scenario, settlement and market access are themselves at risk - analysis that assumes functioning markets may not apply."
+      },
+      "s20_sea_lanes": {
+        "mechanism": "A chokepoint closes - this board just watched Hormuz do it - and shipping rates, war-risk insurance, and energy prices spike together while longer reroutes quietly shrink effective global capacity; cable cuts do the same for data.\n",
+        "bleeds": [
+          "airlines via fuel",
+          "importers and their customers",
+          "canal-revenue economies",
+          "marine insurers"
+        ],
+        "benefits": [
+          "historically tanker and shipping rates (violently)",
+          "energy producers",
+          "defense"
+        ],
+        "watch": "The live strait-transit feed and cable-incident rows above.",
+        "trap": "This board's own history shows it: reopening headlines crushed the shipping move within days - persistence of the disruption was everything."
+      },
+      "s21_clearinghouses": {
+        "mechanism": "A major member defaults into a volatile market and the clearinghouse's loss waterfall activates: surviving members face assessments and de-risk simultaneously, margin requirements spiral procyclically, and the plumbing everyone assumed away becomes the crisis itself.\n",
+        "bleeds": [
+          "everything leveraged or margined",
+          "member banks",
+          "exchanges initially"
+        ],
+        "benefits": [
+          "almost nothing leveraged - which is the honest answer; cash",
+          "short bills",
+          "and physical assets have no counterparty"
+        ],
+        "watch": "The clearing-mandate rollout row above and any clearinghouse margin announcements.",
+        "trap": "The deepest on the board: in a true clearing failure, a winning derivative position may itself not pay out."
       }
     }
   }

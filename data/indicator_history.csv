@@ -145,7 +145,7 @@ date,indicator_id,story_id,value,band,provenance,as_of
 2026-07-05,re_blacklist,s6_rare_earths,1,1,Agent,2026-06-22
 2026-07-05,hree_premium,s6_rare_earths,4.5,2,Agent,2026-06
 2026-07-05,peg_deviation,s7_stablecoins,0.09,0,DefiLlama,2026-07-05
-2026-07-05,stablecoin_supply,s7_stablecoins,309.8,0,DefiLlama,2026-07-05
+2026-07-05,stablecoin_supply,s7_stablecoins,309.9,0,DefiLlama,2026-07-05
 2026-07-05,genius_impl,s7_stablecoins,1,1,Agent,2026-07-03
 2026-07-05,ig_oas,s8_ai_capex,0.75,0,FRED,2026-07-02
 2026-07-05,ai_revenue_gap,s8_ai_capex,1,1,Agent,2026-Q1 (reported 2026-04-29)
