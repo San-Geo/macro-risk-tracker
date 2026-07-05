@@ -22,7 +22,7 @@
         margin:0; color:var(--text); background:var(--bg); -webkit-font-smoothing:antialiased;
         transition:background .2s,color .2s; }
   a{ color:var(--accent); text-decoration:none; } a:hover{ text-decoration:underline; }
-  header{ position:sticky; top:0; z-index:20; background:linear-gradient(120deg,var(--header),var(--header2));
+  header{ background:linear-gradient(120deg,var(--header),var(--header2));
           color:var(--htext); padding:14px 0; box-shadow:var(--shadow); }
   .hwrap{ max-width:1040px; margin:0 auto; padding:0 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
   header h1{ margin:0; font-size:18px; font-weight:700; letter-spacing:-.2px; }
@@ -31,7 +31,41 @@
          border-radius:9px; width:38px; height:34px; cursor:pointer; display:flex; align-items:center; justify-content:center; }
   .tbtn:hover{ background:rgba(255,255,255,.22); }
   .wrap{ max-width:1040px; margin:0 auto; padding:20px; }
-  .section-label{ font-size:11px; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); font-weight:700; margin:18px 2px 8px; }
+  .section-label{ font-size:11px; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); font-weight:700; margin:26px 2px 10px; }
+  /* ---- navigation bar (sticky in both layouts) ---- */
+  .navbar{ position:sticky; top:0; z-index:60; display:flex; gap:7px; align-items:center; padding:9px 2px;
+    margin:0 0 16px; background:var(--bg); border-bottom:1px solid var(--line); overflow-x:auto; scrollbar-width:none; }
+  .navbar::-webkit-scrollbar{ display:none; }
+  .navbtn{ border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:8px 15px;
+    font:inherit; font-size:13px; font-weight:600; cursor:pointer; white-space:nowrap; }
+  .navbtn.active{ background:var(--header); color:#fff; border-color:var(--header); }
+  .ovchip{ color:#fff; font-weight:800; font-size:13px; border-radius:999px; padding:7px 12px; margin-right:3px; cursor:default; flex-shrink:0; }
+  /* tabs layout */
+  .pane{ display:none; } .pane.active{ display:block; animation:fadein .18s ease; }
+  @keyframes fadein{ from{opacity:.4} to{opacity:1} }
+  /* single-page layout */
+  .secwrap{ scroll-margin-top:66px; }
+  .secdiv{ font-size:17px; font-weight:800; margin:34px 0 14px; padding-top:22px; border-top:2px solid var(--line); }
+  .secwrap:first-of-type .secdiv{ border-top:0; padding-top:2px; margin-top:8px; }
+  /* story accordions */
+  .sac{ padding:0; }
+  .sachead{ display:flex; align-items:center; gap:11px; width:100%; background:none; border:0; color:var(--text);
+    font:inherit; font-weight:700; font-size:14.5px; padding:14px 16px; cursor:pointer; text-align:left; }
+  .sachl{ min-width:0; overflow-wrap:anywhere; }
+  .sachead .chev{ margin-left:auto; }
+  .sacbody{ display:none; padding:0 16px 16px; }
+  .sac.open .sacbody{ display:block; }
+  .lvlchip{ color:#fff; font-weight:800; font-size:12.5px; border-radius:8px; padding:3px 0; min-width:34px; text-align:center; flex-shrink:0; }
+  .mini{ display:flex; gap:12px; align-items:center; background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:13px 15px; margin-bottom:9px; cursor:pointer; box-shadow:var(--shadow); }
+  .mini:hover{ border-color:var(--accent); }
+  #app{ max-width:1020px; margin:0 auto; }
+  .navbtn .lbl-s{ display:none; }
+  @media (max-width:640px){
+    .navbtn{ padding:8px 11px; font-size:12.5px; }
+    .navbtn .lbl-l{ display:none; } .navbtn .lbl-s{ display:inline; }
+    .sachead{ padding:13px 12px; } .ovchip{ padding:6px 10px; font-size:12.5px; }
+  }
   /* Keep every long token (hashes, URLs, ids, driver strings) inside its box. */
   .pbody, .narr, .story, .gist, .hgrid div, td, .asof, .sgist, .gisttxt { overflow-wrap:anywhere; }
   .panel, .pbody { min-width:0; }
@@ -123,7 +157,20 @@
   .asof{ color:var(--muted); white-space:normal; overflow-wrap:anywhere; font-size:11.5px; }
   .spark{ display:block; }
 
-  .tscroll{ overflow-x:auto; margin-top:12px; }
+  .tscroll{ overflow-x:auto; margin-top:12px;
+    background:
+      linear-gradient(90deg, var(--card) 30%, rgba(255,255,255,0)),
+      linear-gradient(270deg, var(--card) 30%, rgba(255,255,255,0)) 100% 0,
+      radial-gradient(farthest-side at 0 50%, rgba(0,0,0,.22), rgba(0,0,0,0)),
+      radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.22), rgba(0,0,0,0)) 100% 0;
+    background-repeat:no-repeat; background-size:36px 100%, 36px 100%, 12px 100%, 12px 100%;
+    background-attachment:local, local, scroll, scroll; }
+  .swipehint{ display:none; font-size:11px; color:var(--muted); margin:10px 2px -6px; }
+  @media (max-width:640px){
+    .swipehint{ display:block; }
+    .sacbody table{ min-width:430px; }
+    .sacbody th:nth-child(5), .sacbody td:nth-child(5){ display:none; } /* Cadence column: age lives in As-of */
+  }
   table{ border-collapse:collapse; width:100%; font-size:12.5px; min-width:520px; }
   th,td{ text-align:left; padding:7px 9px; border-bottom:1px solid var(--line); }
   th{ color:var(--muted); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:.03em; }
@@ -308,6 +355,63 @@ function toggleMode(){ setMode(MODE==='plain'?'expert':'plain'); }
 function initMode(){ let m=null; try{m=localStorage.getItem('mrt-mode');}catch(e){} setMode(m==='expert'?'expert':'plain'); }
 initMode();
 
+// ---- Layout engine: 'tabs' (four views) or 'scroll' (one page + sticky jump-nav) ----
+const LAYOUT='tabs'; /*LAYOUT_MARKER*/
+const VIEWS=[["today","Today","Today"],["stories","All 21 stories","Stories"],["trust","Can you trust this?","Trust"],["inside","Under the hood","Inside"]];
+let ACTIVE_VIEW='today';
+function navBar(d){
+  const ov=d.aggregates.overall, col=bandColor(Math.round(ov));
+  const btn=([id,lb,sh])=>`<button class="navbtn" id="nav-${id}" onclick="${LAYOUT==='tabs'?`applyView('${id}')`:`scrollSec('${id}')`}"><span class="lbl-l">${lb}</span><span class="lbl-s">${sh||lb}</span></button>`;
+  return `<nav class="navbar" aria-label="Sections"><span class="ovchip htip" style="background:${col}" data-tip="Overall risk right now \u2014 always visible while you browse">${ov}</span>${VIEWS.map(btn).join('')}</nav>`;
+}
+function assembleLayout(d,GROUPS){
+  let out=navBar(d);
+  if(LAYOUT==='tabs'){
+    for(const [id,,content] of GROUPS) out+=`<section class="pane" id="pane-${id}">${content}</section>`;
+  }else{
+    for(const [id,label,content] of GROUPS) out+=`<section class="secwrap" id="sec-${id}"><h2 class="secdiv">${label}</h2>${content}</section>`;
+  }
+  return out;
+}
+function applyView(id,init){
+  if(id){ ACTIVE_VIEW=id; }
+  else{
+    let h=''; try{h=(location.hash||'').replace('#','');}catch(e){}
+    let saved=null; try{saved=localStorage.getItem('mrt-view');}catch(e){}
+    ACTIVE_VIEW=h||saved||'today';
+    if(!VIEWS.some(v=>v[0]===ACTIVE_VIEW)) ACTIVE_VIEW='today';
+  }
+  try{localStorage.setItem('mrt-view',ACTIVE_VIEW);}catch(e){}
+  try{history.replaceState(null,'','#'+ACTIVE_VIEW);}catch(e){}
+  document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('active',p.id==='pane-'+ACTIVE_VIEW));
+  document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.id==='nav-'+ACTIVE_VIEW));
+  if(!init){ try{window.scrollTo({top:0});}catch(e){} }
+}
+function scrollSec(id){
+  const el=document.getElementById('sec-'+id);
+  if(el&&el.scrollIntoView) el.scrollIntoView({behavior:'smooth'});
+  try{history.replaceState(null,'','#'+id);}catch(e){}
+}
+let __spy=false;
+function initSpy(){
+  if(__spy) return; __spy=true;
+  try{
+    window.addEventListener('scroll',function(){
+      let cur='today';
+      for(const [id] of VIEWS){ const el=document.getElementById('sec-'+id);
+        if(el&&el.getBoundingClientRect&&el.getBoundingClientRect().top<=90) cur=id; }
+      document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.id==='nav-'+cur));
+    },{passive:true});
+  }catch(e){}
+}
+function toggleStory(id){ const el=document.getElementById('story-'+id); if(el&&el.classList) el.classList.toggle('open'); }
+function gotoStory(id){
+  if(LAYOUT==='tabs') applyView('stories');
+  const el=document.getElementById('story-'+id); if(!el) return;
+  if(el.classList) el.classList.add('open');
+  if(el.scrollIntoView) setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'start'}), LAYOUT==='tabs'?30:80);
+}
+
 // ---- next-run countdown (mirrors .github/workflows/daily.yml crons, all UTC) ----
 const SCHEDULE = {
   agent: { dows:[1],          hour:12, min:0, label:"agent run" },   // Monday 12:00 UTC
@@ -421,7 +525,7 @@ function heatStrip(d){
   for(const s of d.stories){ (bySet[s.set]=bySet[s.set]||[]).push(s); }
   let groups='';
   for(const set of Object.keys(bySet).sort()){
-    const tiles=bySet[set].map(s=>`<a class="tile" href="#story-${s.id}" title="${slbl(s)} \u2014 ${s.level}/10 ${s.band}" style="background:${bandColor(s.level)}">${s.level}</a>`).join('');
+    const tiles=bySet[set].map(s=>`<a class="tile" href="#" onclick="gotoStory('${s.id}');return false;" title="${slbl(s)} \u2014 ${s.level}/10 ${s.band}" style="background:${bandColor(s.level)}">${s.level}</a>`).join('');
     groups+=`<div class="hgroup"><span class="hlabel" title="${full(set)}">${lbl(set)}</span><div class="tiles">${tiles}</div></div>`;
   }
   return `<div class="heat">${groups}<div class="legend">${legend()}</div></div>`;
@@ -842,28 +946,41 @@ function render(d){
   const ovTitle=bk?`Tail-weighted overall: breadth mean ${bk.breadth_mean}, worst-cluster (top ${bk.tail_k}) ${bk.tail_mean}, +${bk.correlated_premium} correlated premium (${bk.n_high_stories} stories at High+)`:'';
   let cards=aggCard('Overall',a.overall,true,ovTitle);
   for(const k of setKeys) cards+=aggCard(setName(k,false),a[k],false,setName(k,true));
-  let html = (MODE==='plain') ? gistHeader(d) : '';
-  html+=`<div class="agg">${cards}</div>`;
-  if(MODE!=='plain' && bk) html+=`<div class="asof" style="margin:-4px 0 8px">Overall is tail-weighted: it blends the breadth average (${bk.breadth_mean}) with the worst cluster (top ${bk.tail_k} stories = ${bk.tail_mean})${bk.correlated_premium>0?`, plus +${bk.correlated_premium} because ${bk.n_high_stories} stories are High at once`:''} — so a broad, correlated shock lifts it where a simple average wouldn't.</div>`;
-  html+=contextStrip(d);
-  html+=`<div class="section-label">Heat map \u2014 all stories</div>`+heatStrip(d);
-  html+=healthBar(d);
-  html+=`<div class="health" style="gap:10px"><span><b>Brief:</b></span>
+  // ---- build the four intent groups: Today / Stories / Trust / Under the hood ----
+  let T = (MODE==='plain') ? gistHeader(d) : '';
+  T+=`<div class="agg">${cards}</div>`;
+  if(MODE!=='plain' && bk) T+=`<div class="asof" style="margin:-4px 0 8px">Overall is tail-weighted: it blends the breadth average (${bk.breadth_mean}) with the worst cluster (top ${bk.tail_k} stories = ${bk.tail_mean})${bk.correlated_premium>0?`, plus +${bk.correlated_premium} because ${bk.n_high_stories} stories are High at once`:''} — so a broad, correlated shock lifts it where a simple average wouldn't.</div>`;
+  T+=contextStrip(d);
+  T+=`<div class="section-label">Heat map \u2014 all stories <span class="asof" style="text-transform:none;letter-spacing:0;font-weight:400">\u00B7 tap a tile to open its story</span></div>`+heatStrip(d);
+  const highsNow=[...d.stories].filter(s=>s.level>=7).sort((x,y)=>y.level-x.level);
+  if(highsNow.length){
+    T+=`<div class="section-label">High right now</div>`;
+    for(const s of highsNow) T+=`<div class="mini" onclick="gotoStory('${s.id}')" role="button" tabindex="0">
+      <span class="lvlchip" style="background:${bandColor(s.level)}">${s.level}</span>
+      <div style="flex:1;min-width:0"><b>${plabel(s)}</b>${pgist(s)?`<div class="asof" style="margin-top:2px">${pgist(s)}</div>`:''}</div>
+      <span class="chev"></span></div>`;
+  }
+  T+=healthBar(d);
+  T+=`<div class="health" style="gap:10px"><span><b>Brief:</b></span>
     <a href="briefs/Global_Macro_Intelligence_Brief_2026.pdf" target="_blank" rel="noopener"><b>Global Macro Intelligence Brief \u2014 2026 Edition</b> (5 sections, 21 stories) \u2197</a>
     <a href="briefs/living_brief.html" target="_blank" rel="noopener">Living brief (auto-updated) \u2197</a></div>`;
-  html+=`<div class="section-label">Summary</div>`;
-  html+=`<div class="narr"><strong>Daily brief</strong>\n${d.narrative||''}</div>`;
-  html+=plainQ('scout')+scoutPanel();
-  html+=plainQ('review')+reviewPanel(d);
-  html+=plainQ('consistency')+consistencyPanel(d);
-  html+=plainQ('backtest')+backtestPanel();
-  html+=plainQ('validation')+validationPanel();
-  html+=plainQ('ledger')+ledgerPanel();
-  html+=`<div class="section-label">Stories (highest risk first)</div>`;
+  T+=`<div class="section-label">Summary</div>`;
+  T+=`<div class="narr"><strong>Daily brief</strong>\n${d.narrative||''}</div>`;
+  const INS = plainQ('scout')+scoutPanel()+plainQ('review')+reviewPanel(d);
+  const TRUST = plainQ('consistency')+consistencyPanel(d)+plainQ('backtest')+backtestPanel()
+    +plainQ('validation')+validationPanel()+plainQ('ledger')+ledgerPanel();
+  let html=`<div class="section-label" style="margin-top:4px">All 21 stories <span class="asof" style="text-transform:none;letter-spacing:0;font-weight:400">\u00B7 highest risk first \u00B7 tap any story to expand</span></div>`;
   const sorted=[...d.stories].sort((x,y)=>y.level-x.level);
   for(const s of sorted){
     const col=bandColor(s.level);
-    html+=`<div class="story" id="story-${s.id}"><h3>${plabel(s)}<span class="setpill htip" data-tip="${setName(s.set,true)} \u2014 one of five mechanism-based sets.">${setName(s.set,false)}</span></h3>
+    const tArrow=(s.trend&&s.trend.change)?`<span style="color:${s.trend.change>0?'#C0392B':'#2E7D32'};font-weight:800;font-size:11px">${s.trend.change>0?'\u25B2':'\u25BC'}</span>`:'';
+    html+=`<div class="story sac" id="story-${s.id}">
+      <button class="sachead" onclick="toggleStory('${s.id}')">
+        <span class="lvlchip" style="background:${col}">${s.level}</span>
+        <span class="sachl">${plabel(s)}</span>${tArrow}
+        <span class="setpill htip" data-tip="${setName(s.set,true)} \u2014 one of five mechanism-based sets.">${setName(s.set,false)}</span>
+        <span class="chev"></span></button>
+      <div class="sacbody">
       ${pgist(s)?`<p class="sgist">${pgist(s)}</p>`:''}
       <div class="srow">${gauge(s.level)}
         <div class="sright">
@@ -877,6 +994,7 @@ function render(d){
       html+=`<details class="bg"><summary class="asof">Background${link?' \u00B7 '+link:''}</summary>
         <div style="font-size:12.5px;line-height:1.55;margin:6px 0 2px">${s.summary||''}</div></details>`;
     }
+    html+=`<div class="swipehint">table scrolls sideways for all columns \u2192</div>`;
     html+=`<div class="tscroll"><table><thead><tr><th>Indicator</th><th>Value</th>`+
       `<th class="tip" tabindex="0" data-tip="Each indicator is bucketed: 0 = benign, 1 = watch, 2 = stress.">Band</th>`+
       `<th class="tip" tabindex="0" data-tip="How much this indicator is currently pushing the story's level up or down vs its normal baseline (0 = at baseline).">&Delta;</th>`+
@@ -894,9 +1012,12 @@ function render(d){
         <td class="asof">${ind.as_of||'\u2014'}${ageWarn}</td>
         <td style="color:var(--muted)">${srcCell}${ind.stale?' <span class="prov">baseline</span>':''}</td></tr>`;
     }
-    html+=`</tbody></table></div>${escalationBox(d,s)}</div>`;
+    html+=`</tbody></table></div>${escalationBox(d,s)}</div></div>`;
   }
-  document.getElementById('app').innerHTML=html;
+  const GROUPS=[["today","Today",T],["stories","All 21 stories",html],
+                ["trust","Can you trust this?",TRUST],["inside","Under the hood",INS]];
+  document.getElementById('app').innerHTML=assembleLayout(d,GROUPS);
+  if(LAYOUT==='tabs') applyView(null,true); else initSpy();
 }
 
 // Educational transmission map: rendered ONLY while a story is at High (>=7), same
