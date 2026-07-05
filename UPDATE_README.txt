@@ -1,14 +1,8 @@
-UPDATE BUNDLE - preserves history (no data/ folder). VISUAL FIXES (dashboard/index.html + src/citecheck.py).
-1) ANCHOR STRIP ALIGNED: the calm->crisis strip under the headline number is now built
-   from the SAME band colors as the rest of the page, with segment boundaries exactly at
-   the band cutoffs - so the notch's color always matches the track beneath it. Note the
-   strip no longer shows green: the gauge's validated floor (4.7) already rounds into the
-   amber band, so green was decoration for territory the tracker cannot visit. The
-   "calm"/"crisis" end labels now have tooltips explaining this.
-2) TEXT STAYS IN ITS BOX: defensive wrapping (overflow-wrap) on all panels, cards, table
-   cells and captions, plus a global <code> style that wraps long apply-command hashes.
-   Long URLs, ids, and driver strings can no longer run outside section borders.
-3) (from earlier this session) src/citecheck.py: URLs are stripped from fact text before
-   numeric candidates are extracted - fixes the self-fulfilling "verified" match against
-   an article ID inside the cited link.
-APPLY: upload dashboard/ and src/. No config or workflow change.
+UPDATE BUNDLE - preserves history (no data/ folder). OVERFLOW ROOT-CAUSE FIX (dashboard/index.html, one line).
+The previous wrapping fix was incomplete: the .asof caption class - used for nearly every
+long caption on the page (review header lines, ledger driver lines, scout footers, long
+as-of strings) - carried white-space:nowrap, which forbids line breaks entirely and
+overrides overflow-wrap. That class now wraps normally. Short trend chips keep nowrap.
+This should catch the remaining text running past section borders; if any specific spot
+still overflows after this, name it and it gets fixed individually.
+APPLY: upload dashboard/ only. No src, config, or workflow change.
