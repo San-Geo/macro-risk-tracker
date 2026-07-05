@@ -1,6 +1,6 @@
 {
   "date": "2026-07-05",
-  "generated_at": "2026-07-05 20:15 UTC",
+  "generated_at": "2026-07-05 20:17 UTC",
   "aggregates": {
     "1": 5.4,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.2
   },
-  "narrative": "**HEADLINE:**\nMacro risk closed at 6.2/10 with no intraday moves; structural vulnerabilities in Japan carry trades, AI infrastructure, and critical minerals remain the dominant concerns.\n\n**NO LEVEL CHANGES RECORDED TODAY** \u2014 the changes array is empty; all elevated or high-risk stories held steady.\n\n**HIGHEST-RISK STORIES (Level 7):**\n- Japan fiscal/JGB/carry trade unwind remains the single largest tail risk for cross-asset volatility.\n- AI power demand and grid capacity constraints pose near-term infrastructure stress.\n- Critical minerals weaponization creates geopolitical leverage points for supply disruption.\n\n**WATCH LINE:**\nJapan's carry-trade structure is the critical pressure point; any BoJ policy signal or yen move could trigger rapid deleveraging across correlated markets.",
+  "narrative": "**HEADLINE**\nMacro risk holds at elevated levels (6.2) with no intraday moves; Japan carry trade and AI infrastructure constraints remain highest-severity exposures.\n\n**STORIES WITH LEVEL CHANGES**\nNo risk levels changed today; the tracker reflects stable positioning across 15 elevated or higher risks.\n\n**KEY ELEVATED RISKS (unchanged)**\n\u2022 **Japan fiscal/JGB/carry trade** (Level 7, High): Persistent yen volatility and unwind risk in leveraged positions; potential for sharp cross-asset liquidations.\n\u2022 **AI power & grid bottleneck** (Level 7, High): Data-center demand outpacing power infrastructure; capex delays or blackout risk in constrained regions.\n\u2022 **Critical minerals as weapon** (Level 7, High): Supply concentration in geopolitically sensitive regions; exposure to tech and energy transition.\n\u2022 Treasury basis trades (Level 6), private credit opacity (Level 6), and developing-world debt (Level 6) remain material secondary risks.\n\n**TO WATCH**\nJapan fiscal/JGB/carry trade (Level 7)\u2014any BoJ policy signal or volatility spike could trigger rapid deleveraging across global markets.",
   "stories": [
     {
       "id": "s1_basis_trade",
