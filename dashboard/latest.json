@@ -1,6 +1,6 @@
 {
   "date": "2026-07-05",
-  "generated_at": "2026-07-05 20:21 UTC",
+  "generated_at": "2026-07-05 21:37 UTC",
   "aggregates": {
     "1": 5.4,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.2
   },
-  "narrative": "# EOD MACRO-RISK BRIEF | 2026-07-05\n\n**Overall risk stable at 6.2; no level changes today but 15 stories remain elevated or higher.**\n\nNo stories moved today. Risk landscape unchanged across all tracked domains:\n- **Three High-level risks** persist: Japan fiscal/JGB/carry trade (7), Critical minerals weaponization (7), AI power grid bottleneck (7).\n- **12 Elevated risks** span financial leverage (Treasury basis, private credit), emerging-market stress (developing-world debt, China deflation), supply chain concentration (ASML lithography, sea lanes), and structural imbalances (CRE, hidden consumer debt, food fragility).\n\n**Watch closest:** Japan fiscal/JGB/carry trade (level 7)\u2014largest unwind tail risk in leveraged FX markets given persistent policy divergence.",
+  "narrative": "**HEADLINE**\nOverall macro risk remains elevated at 6.2, with three stories at High level\u2014Japan carry trade, critical minerals weaponization, and AI power grid constraints\u2014presenting the largest tail risks.\n\n**STORIES WITH LEVEL CHANGES**\nNo intraday level changes recorded.\n\n**ELEVATED OR HIGHER RISKS TO NOTE**\nTreasury basis trades (hidden leverage), private credit opacity, developing-world debt stress, China's deflationary spillover, AI circular financing, hidden consumer debt, food/fertilizer fragility, ASML lithography concentration, and sea lane/subsea cable exposure all remain at Elevated (level 6). France/eurozone fragility and CRE maturity walls sit at level 5 (Elevated). Water as an underpriced input flagged at level 5.\n\n**TOP WATCH**\nJapan fiscal/JGB/carry trade at level 7 (High) remains the most systemically consequential story given yen carry unwind potential and global funding shock risk.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -104,7 +104,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 161.329,
+          "value": 161.275,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -362,7 +362,7 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.7792,
+          "value": 6.7702,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,

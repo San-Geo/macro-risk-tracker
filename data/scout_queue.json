@@ -200,15 +200,12 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The Bank of Japan raised its policy rate to 1.0% in late June 2026 (Deputy Governor Himino confirmed), with board member Tamura calling for further 25bp hikes 'at intervals of a few months' toward a 2% neutral rate. The 10-year JGB yield has surged from ~2.1% in March to ~2.7-2.8% \u2014 near its highest since 1996 \u2014 driven by PM Takaichi's \u00a5370 trillion investment mobilization plan and a weak 10-year auction, while the yen has slid to a four-decade low.",
-      "as_of": "2026-07-03",
+      "summary": "Japan's MoF deployed a record \u00a511.73 trillion in FX intervention in April\u2013May 2026 after USD/JPY breached \u00a5160, but the pair returned above the intervention level within six weeks. The 30-year JGB yield rose to 4.04% on July 2, and the bond market faces sustained selling pressure from the government's \u00a5370 trillion long-term investment plan through fiscal 2040.",
+      "as_of": "2026-07-02",
       "sources": [
-        "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://tradingeconomics.com/japan/interest-rate",
-        "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html",
-        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/",
-        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield",
-        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+        "https://www.lazardassetmanagement.com/us/en_us/research-insights/market-insights/beyond-the-numbers/july-2026",
+        "https://tradingeconomics.com/japan/30-year-bond-yield",
+        "https://tradingeconomics.com/japan/government-bond-yield"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -216,12 +213,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Multiple s2_japan indicators are moving simultaneously and materially: 10-year JGB yield ~2.7-2.8% (highest since 1996, up ~60bp in weeks); yen at four-decade low (USD/JPY risk indicator elevated); and Takaichi fiscal clarity has worsened \u2014 the \u00a5370tn plan's financing is being absorbed badly by markets (weak auction, no offsetting revenue). The BOJ is now at 1.0% and signaling 2%, creating a stagflationary policy dilemma. This is the most acute update to any single existing story: all three s2 indicators are deteriorating concurrently. The 30-year JGB yield is the most appropriate single indicator to flag as it reflects both fiscal premium and carry-unwind risk.",
+      "rationale": "The 30-year JGB at 4.04% is a direct tracker update (up ~108bp YoY); the yen at 1986 lows is at systemic carry-unwind threshold. The Takaichi plan's \u00a5370T financing commitment is a material escalation of the 'Takaichi plan financing clarity' indicator \u2014 clarity should be marked 2 (disorderly) given bond market selling pressure and the failed record intervention. This is the most acute DM sovereign stress signal outside the Hormuz shock.",
       "status": "pending",
       "first_seen": "2026-06-30",
       "last_seen": "2026-07-05",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 2
+      "sightings": 3
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -507,13 +504,12 @@
     },
     "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
       "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
-      "summary": "The 2026 Iran war (begun February 28) effectively closed the Strait of Hormuz, cutting over 11 million b/d of Middle Eastern output and spiking Brent crude more than 60% above pre-conflict levels in late April before partial pullback to ~$105/bbl in June\u2013July per EIA. A US\u2013Iran interim agreement was announced in May but physical shipments remain severely constrained and OECD inventories have fallen to 2003 lows.",
-      "as_of": "2026-07-05",
+      "summary": "On June 17, the US and Iran signed a 60-day ceasefire MOU; Iran re-closed the strait on June 20 citing Israeli violations, then the US Navy announced a widened navigational route on June 27. WTO data shows ~95% reduction in crude tankers and ~99% in LNG through the strait, with UAE estimating full flows will not resume until 2027 even if a deal is reached quickly.",
+      "as_of": "2026-07-03",
       "sources": [
-        "https://www.eia.gov/pressroom/releases/press589.php",
-        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
-        "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war",
-        "https://www.imf.org/en/blogs/articles/2026/03/30/how-the-war-in-the-middle-east-is-affecting-energy-trade-and-finance"
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://commonslibrary.parliament.uk/research-briefings/cbp-10636/",
+        "https://hormuzstraitmonitor.com/crisis-timeline/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -521,12 +517,12 @@
       "target_indicator": "Hormuz/Red Sea status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Strait of Hormuz is an explicit indicator in s20_sea_lanes. The IEA characterises this as 'the greatest threat to global energy security in history' \u2014 the indicator should be set to 2 (closed/severely contested). WTI/Brent ~$105/bbl should be updated in the WTI indicator. Cascading effects also touch s18_food_fertilizer (fertilizer flows through Hormuz disrupted), s4_dev_debt (EM current-account stress), and s2_japan (energy import cost spike widening trade deficit and complicating BOJ normalization) but the primary classification is the direct Hormuz closure indicator.",
+      "rationale": "The Hormuz/Red Sea status indicator (0 open / 1 contested / 2 closed) should be set to 2 (functionally closed/severely contested) \u2014 commercial crude throughput is down ~95%, the ceasefire MOU is fragile, mines remain in the water, and the UAE estimates full reopening no earlier than 2027. WTI/Brent pricing and LNG supply chains for Europe and Asia are directly impacted at scale (~20% of global seaborne oil).",
       "status": "pending",
       "first_seen": "2026-07-01",
       "last_seen": "2026-07-05",
       "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
-      "sightings": 4
+      "sightings": 5
     },
     "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
       "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
@@ -1390,25 +1386,24 @@
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
       "headline": "China\u2013Japan Rare-Earth / Dual-Use Controls Expand to Trigger GDP-Level Supply Chain Risk; November 2026 Broader Suspension Expiry Looms",
-      "summary": "China suspended its sweeping October 2025 rare-earth export controls until November 10, 2026 as part of a US\u2013China diplomatic deal; simultaneously, extraterritorial enforcement provisions (requiring licenses for any product containing \u22650.1% Chinese-origin rare earths regardless of where made) are also set to take effect in November 2026. The CSIS and S&P Global confirm yttrium and heavy rare-earth volumes remain well below pre-restriction levels, with aerospace manufacturers reporting rationing.",
-      "as_of": "2026-07-05",
+      "summary": "With the Oct-2025 measures' extraterritorial enforcement suspended until November 10, 2026, the clock is running. US yttrium imports remain far below pre-restriction levels, and China's MIIT published a tighter domestic enforcement framework in April 2026 covering mining, smelting, and separation penalties \u2014 indicating Beijing is consolidating structural control regardless of diplomatic pauses.",
+      "as_of": "2026-04-29",
       "sources": [
-        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
         "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later",
         "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
-        "https://www.spglobal.com/energy/en/news-research/latest-news/metals/012726-rare-earth-supply-bottlenecks-set-to-persist-in-2026"
+        "https://discoveryalert.com.au/china-rare-earth-export-controls-supply-chain-2026/"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "existing_indicator",
       "target_story": "s6_rare_earths",
       "target_indicator": "Nov-2025 pause status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "s6_rare_earths tracks the Nov-2025 pause status (rubric: 0 extended / 1 expiring / 2 lapsed). With the pause expiring November 10, 2026 \u2014 now only ~4 months away \u2014 and no publicly confirmed extension, the indicator is moving from 0 toward 1 (expiring). Simultaneously the extraterritorial provisions (a separate but linked escalation vector not fully captured by existing indicators) are also on the November clock. The Rare-earth export license flow indicator remains at 1 (slowing) given aerospace rationing. The tracker should escalate both Nov-pause and license-flow scores.",
+      "rationale": "The Nov-2025 pause status indicator should be updated to 1 (expiring) \u2014 the November 10, 2026 extraterritorial enforcement deadline is now ~18 weeks away, US imports of controlled REEs remain structurally depressed, and Beijing's April 2026 domestic enforcement tightening signals the pause is being used as a compliance-preparation window rather than a genuine d\u00e9tente. Failure to negotiate a renewal before November would activate FDPR-style extraterritorial controls across global supply chains, a step-change for s6 severity.",
       "status": "pending",
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-05",
-      "sightings": 2,
+      "sightings": 3,
       "id": "china-japan-rare-earth-dual-use-controls-expand--f24a9c"
     },
     "strait-of-hormuz-60-day-mou-signed-june-17-iran--eef3e4": {
@@ -1467,12 +1462,12 @@
     },
     "genius-act-implementing-regulations-missed-the-j-dc0151": {
       "headline": "GENIUS Act implementing regulations missed the July 18, 2026 statutory deadline; effective date now defaults to January 2027",
-      "summary": "On or around July 4, 2026, the US Treasury's FinCEN and OFAC jointly issued a proposed rule implementing the GENIUS Act's Bank Secrecy Act, AML, and sanctions compliance obligations on permitted stablecoin issuers \u2014 the first major regulatory action since the Act was signed in July 2025. The rule opens an 18-month compliance runway and complicates onboarding for issuers without existing BSA infrastructure, introducing friction into the rollout phase.",
-      "as_of": "2026-07-04",
+      "summary": "On June 18, the Fed issued a joint stablecoin CIP proposed rule with Treasury/FinCEN/OFAC/FDIC/NCUA under the GENIUS Act; final rules are expected Q3 2026. New Fed Chair Warsh abstained from the vote and Governor Barr criticised the decentralised protocol exemption, while NCUA's comment period closes July 17 \u2014 creating a multi-agency divergence that threatens timeline coherence.",
+      "as_of": "2026-06-18",
       "sources": [
+        "https://cryptobriefing.com/fed-proposes-stablecoin-customer-screening-rules/",
         "https://home.treasury.gov/news/press-releases/sb0435",
-        "https://en.wikipedia.org/wiki/GENIUS_Act",
-        "https://www.stinson.com/newsroom-publications-payment-stablecoin-regulatory-framework-established-as-genius-act-signed-into-law"
+        "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-24.html"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -1480,11 +1475,11 @@
       "target_indicator": "GENIUS implementation friction",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "s7_stablecoins tracks GENIUS implementation friction (0 smooth / 1 gaps / 2 problems). The July 4 FinCEN/OFAC proposed-rule release is the first concrete regulatory action under the Act and opens a formal comment-and-compliance period. NY prosecutors and law-enforcement officials have already flagged gaps in fraud-restitution provisions, and economists (Rogoff, Harris) have drawn parallels to the free-banking era. The AML/sanctions proposed rule introduces compliance cost and timing uncertainty for smaller issuers, moving the implementation friction indicator from 0 to 1 (gaps identified). This is medium materiality as the rule is still proposed, not final.",
+      "rationale": "The GENIUS friction indicator should move from 0 (smooth) to 1 (gaps). Warsh's abstention, Barr's public dissent on the decentralized exemption, and the fact that five agencies are running non-synchronised comment timelines (OCC closed May 1, NCUA closes July 17, Fed final rule Q3 2026) introduce material sequencing risk. If the Fed chair does not endorse the final CIP rule, stablecoin issuers face regulatory ambiguity on the largest structural demand driver for short-dated Treasuries since the 2023 regional bank crisis.",
       "status": "pending",
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-05",
-      "sightings": 2,
+      "sightings": 3,
       "id": "genius-act-implementing-regulations-missed-the-j-dc0151"
     },
     "china-s-nov-10-2026-rare-earth-extraterritorial--6281bb": {
@@ -2211,10 +2206,70 @@
       "last_seen": "2026-07-05",
       "sightings": 1,
       "id": "boj-policy-rate-to-fiscal-plan-collision-takaich-4c0d36"
+    },
+    "fed-chair-warsh-removes-forward-guidance-at-ecb--d0feff": {
+      "headline": "Fed Chair Warsh removes forward guidance at ECB Sintra Forum (July 1); US CPI at 4.2% YoY \u2014 largest since April 2023 \u2014 creates 'higher for longer' risk with no rate-cut signals",
+      "summary": "At the ECB Forum in Sintra on July 1, new Fed Chair Kevin Warsh removed traditional forward guidance in favour of pure data dependence and stated 'prices are too high', while US CPI for May 2026 printed at 4.2% YoY. The Fed funds rate sits at 3.50\u20133.75% with no imminent cut signals, while markets had priced easing.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.cnbc.com/2026/07/01/kevin-warsh-ecb-forum-live-updates.html",
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Fed reaction-function opacity (0 transparent/1 uncertain/2 opaque)",
+        "type": "band",
+        "rubric": "0 = Fed chair provides clear forward guidance and rate path; 1 = forward guidance removed, pure data dependence, market repricing underway; 2 = active contradiction between Fed communications and market pricing, or abrupt pivot creating financial conditions shock",
+        "sources": [
+          "https://www.cnbc.com/2026/07/01/kevin-warsh-ecb-forum-live-updates.html",
+          "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The combination of a 4.2% CPI print (highest in 3 years), a new Fed chair who has eliminated forward guidance, and a Fed funds rate at 3.50\u20133.75% with no clear easing path directly worsens the US 10y real yield and broad dollar index indicators in s4_dev_debt, while also compressing the rate-cut buffer for s9_cre and s11_consumer_debt. No existing indicator in any story captures the Fed regime/communication shift itself \u2014 this proposed indicator would flag when the reaction function becomes a source of volatility rather than an anchor.",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "fed-chair-warsh-removes-forward-guidance-at-ecb--d0feff"
+    },
+    "bis-annual-report-and-boe-governor-bailey-at-sin-acf397": {
+      "headline": "BIS Annual Report and BOE Governor Bailey at Sintra flag acute leverage build-up in government bond basis trades, equity hedge funds, and private credit as tail-risk-to-systemic risk inflection point",
+      "summary": "The BIS June 2026 Annual Report identified rising NBFI leverage and non-bank vulnerabilities as a top structural risk. On July 1 at ECB Sintra, Bank of England Governor Bailey explicitly flagged 'increase in leverage in core government bond markets', rising hedge fund equity leverage, and ETF leverage, asking whether private credit 'can move from tail risk into a broader consequence.'",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.cnbc.com/2026/07/01/kevin-warsh-ecb-forum-live-updates.html",
+        "https://www.investing.com/analysis/bis-highlights-3-key-risks-to-global-financial-stability-200683182"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Regulatory/central-bank NBFI leverage alert level (0 none/1 flagged/2 action)",
+        "type": "band",
+        "rubric": "0 = No major central bank or BIS warning on NBFI leverage; 1 = BIS Annual Report or G10 central bank governor publicly flags NBFI leverage as tail risk; 2 = Formal macroprudential action, margin call cascade, or emergency liquidity facility triggered by NBFI leverage",
+        "sources": [
+          "https://www.cnbc.com/2026/07/01/kevin-warsh-ecb-forum-live-updates.html",
+          "https://www.investing.com/analysis/bis-highlights-3-key-risks-to-global-financial-stability-200683182"
+        ],
+        "suggested_weight": 0.12
+      },
+      "proposed_story": null,
+      "rationale": "s1_basis_trade and s3_private_credit each capture pieces of the NBFI leverage ecosystem, but neither has an indicator that tracks the meta-signal of regulatory/central bank alarm level. Bailey's Sintra comments on July 1 are the most senior real-time warning since the LDI crisis \u2014 explicitly linking Treasury basis leverage, equity hedge fund leverage, and private credit in a single systemic concern. The BIS Annual Report (end-June) corroborates. A cross-story indicator tracking this alarm level would serve as an early warning for contagion across s1, s3, and s21.",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "bis-annual-report-and-boe-governor-bailey-at-sin-acf397"
     }
   },
   "generated": "2026-07-05",
   "model": "claude-sonnet-4-6",
-  "new_count": 3,
-  "pending_count": 72
+  "new_count": 2,
+  "pending_count": 74
 }
