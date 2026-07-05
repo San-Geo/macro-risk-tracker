@@ -37,6 +37,8 @@ def write_json(result, narrative, date, path):
     payload["method_version"] = getattr(score, "METHODOLOGY_VERSION", "1.0")
     if result.get("plain"):
         payload["plain"] = result["plain"]
+    if result.get("playbook"):
+        payload["playbook"] = result["playbook"]
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(payload, f, indent=2)

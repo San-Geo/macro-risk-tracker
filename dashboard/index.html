@@ -55,6 +55,12 @@
   .plainq{ font-size:14px; font-weight:600; color:var(--text); margin:18px 2px 6px; display:flex; gap:7px; align-items:baseline; }
   .plainq::before{ content:"\\203A"; color:var(--accent); font-weight:800; }
   .sgist{ font-size:13.5px; line-height:1.5; color:var(--muted); margin:2px 0 10px; max-width:64ch; }
+  .esc{ margin-top:10px; border:1px solid var(--line); border-radius:10px; background:var(--track); }
+  .esc summary{ cursor:pointer; padding:9px 13px; font-size:13px; font-weight:600; list-style-position:inside; }
+  .escbody{ padding:2px 14px 12px; font-size:13px; line-height:1.55; }
+  .escbody p{ margin:4px 0 10px; }
+  .escrow{ margin:5px 0; }
+  .escrow .k{ font-size:10.5px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; margin-right:7px; }
 
   /* aggregate cards */
   .agg{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
@@ -200,6 +206,11 @@
       <p class="intro">This tracker turns live data and current events into a 1&ndash;10 risk level for each
       "story" (a macro risk theme). Nothing here is a forecast or financial advice &mdash; the levels are a
       transparent, rules-based judgement of how much attention each risk warrants right now.</p>
+
+      <h3>"What could this mean if it escalates?"</h3>
+      <div class="hgrid">
+        <div class="k">Escalation notes</div><div>Stories at <b>High (7+)</b> gain a collapsible cause-and-effect note: how this kind of stress has historically moved through the system, which sectors were pressured or benefited in past analogous episodes, and the trap that made the obvious reaction fail. Educational only &mdash; mechanism level, no tickers, no advice, no predictions. It disappears when the story cools below High.</div>
+      </div>
 
       <h3>Plain vs Expert (the button top-right)</h3>
       <div class="hgrid">
@@ -857,9 +868,27 @@ function render(d){
         <td class="asof">${ind.as_of||'\u2014'}${ageWarn}</td>
         <td style="color:var(--muted)">${srcCell}${ind.stale?' <span class="prov">baseline</span>':''}</td></tr>`;
     }
-    html+=`</tbody></table></div></div>`;
+    html+=`</tbody></table></div>${escalationBox(d,s)}</div>`;
   }
   document.getElementById('app').innerHTML=html;
+}
+
+// Educational transmission map: rendered ONLY while a story is at High (>=7), same
+// content in Plain and Expert modes, mechanism-level and ticker-free by config rule.
+function escalationBox(d,s){
+  const pb=d.playbook&&d.playbook.stories&&d.playbook.stories[s.id];
+  if(!pb||s.level<7) return '';
+  const li=a=>(a||[]).join(' \u00B7 ');
+  const disc=(d.playbook.disclaimer||'').trim();
+  return `<details class="esc"><summary>What could this mean if it escalates? <span class="asof">cause &amp; effect \u00B7 educational</span></summary>
+    <div class="escbody">
+      <p>${pb.mechanism||''}</p>
+      ${pb.bleeds?`<div class="escrow"><span class="k" style="color:#C0392B">Historically pressured</span> ${li(pb.bleeds)}</div>`:''}
+      ${pb.benefits?`<div class="escrow"><span class="k" style="color:#2E7D32">Historically benefited</span> ${li(pb.benefits)}</div>`:''}
+      ${pb.watch?`<div class="escrow"><span class="k">Watch</span> ${pb.watch}</div>`:''}
+      ${pb.trap?`<div class="escrow"><span class="k" style="color:#E8710A">The trap</span> ${pb.trap}</div>`:''}
+      ${disc?`<div class="asof" style="margin-top:8px">${disc}</div>`:''}
+    </div></details>`;
 }
 Promise.all([
   fetch('./latest.json?_='+Date.now()).then(r=>{ if(!r.ok) throw new Error('latest.json not found ('+r.status+')'); return r.json(); }),

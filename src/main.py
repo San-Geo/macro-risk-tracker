@@ -155,6 +155,16 @@ def main():
         except Exception as e:
             print(f"  (plain.yaml skipped: {e})")
 
+    # Educational transmission map (config/playbook.yaml): mechanism-level cause and
+    # effect, shown on the dashboard only while a story is at High. Ticker-free by rule.
+    pb_path = os.path.join(ROOT, "config", "playbook.yaml")
+    if os.path.exists(pb_path):
+        try:
+            with open(pb_path) as f:
+                result["playbook"] = yaml.safe_load(f) or {}
+        except Exception as e:
+            print(f"  (playbook.yaml skipped: {e})")
+
     # Attach the agent's latest assessments (this run or last cached) for the dashboard panel.
     alog = agent.load_log()
     if alog.get("assessments"):
