@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-04",
-  "generated_at": "2026-07-04 14:25 UTC",
+  "date": "2026-07-05",
+  "generated_at": "2026-07-05 10:17 UTC",
   "aggregates": {
     "1": 5.4,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.2
   },
-  "narrative": "**HEADLINE**\nMacro risk holds at elevated overall level (6.2) with three High-band stressors\u2014Japan carry trade, critical minerals weaponization, and AI power infrastructure\u2014posing systemic contagion risks.\n\n**NO LEVEL CHANGES TODAY**\nThe changes array is empty; no stories shifted risk bands on 4 July 2026.\n\n**ELEVATED-OR-HIGHER SUMMARY**\nFifteen risks remain at Elevated (6) or High (7) levels. Three stand at High: Japan's fiscal/JGB/carry-trade nexus (7) threatens cross-border deleveraging; critical minerals leverage as geopolitical tool (7) risks supply shocks; AI power-grid bottleneck (7) could constrain infrastructure investment. Eight sit at Elevated (6)\u2014including Treasury basis trades, private credit opacity, developing-world debt, China deflation spillover, AI circular financing, hidden consumer debt, food fragility, and lithography chokepoints\u2014each creating secondary spillover risk. Five remain Elevated (5): CRE maturity wall, eurozone fragility, and water underpricing.\n\n**WATCH**\nJapan's carry-trade unwind remains the highest-risk story given its potential to trigger rapid capital flows and margin calls across global markets.",
+  "narrative": "**HEADLINE**\nOverall macro risk stands at 6.2/10 with no intraday changes; three High-level risks (Japan carry trade, critical minerals weaponization, AI power grid bottleneck) remain the primary pressure points.\n\n**NO CHANGES REPORTED**\nThe changes array is empty; no risk levels shifted during the session.\n\n**ELEVATED OR HIGHER RISKS**\nFifteen risks remain at Elevated (5\u20136) or High (7) bands:\n- **High band (7):** Japan fiscal/JGB/carry trade; critical minerals as weapon; AI power & grid bottleneck\n- **Elevated band (6):** Treasury basis trades, private credit opacity, developing-world debt, China deflation/cost-push spillover, AI circular financing, hidden consumer debt, food/fertilizer fragility, lithography chokepoint, sea lanes/undersea cables\n- **Elevated band (5):** CRE maturity wall, France/eurozone fragility, water underpricing\n\n**WATCH**\nJapan fiscal/JGB/carry trade (7/10, High) carries the sharpest tail risk to cross-border capital flows and FX volatility.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -38,7 +38,7 @@
         {
           "id": "move",
           "label": "MOVE index (Treasury volatility)",
-          "value": 66.79,
+          "value": 65.4,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -47,7 +47,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-06-26",
+          "as_of": "2026-07-02",
           "provenance": "Market"
         },
         {
@@ -371,7 +371,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CNY=X",
-          "as_of": "2026-07-04",
+          "as_of": "2026-07-05",
           "provenance": "Market"
         },
         {
@@ -524,7 +524,7 @@
         {
           "id": "peg_deviation",
           "label": "Largest stablecoin max peg deviation (%)",
-          "value": 0.08,
+          "value": 0.09,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -533,7 +533,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-07-04",
+          "as_of": "2026-07-05",
           "provenance": "DefiLlama"
         },
         {
@@ -548,7 +548,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-07-04",
+          "as_of": "2026-07-05",
           "provenance": "DefiLlama"
         },
         {
@@ -697,7 +697,7 @@
           "source_url": "https://www.multihousingnews.com/cmbs-delinquency-rates/",
           "as_of": "2026-02",
           "provenance": "Agent",
-          "age_days": 126,
+          "age_days": 127,
           "stale_for_cadence": true
         },
         {
@@ -765,7 +765,7 @@
           "source_url": "https://fred.stlouisfed.org/series/IRLTLT01FRM156N",
           "as_of": "2026-05-01",
           "provenance": "FRED",
-          "age_days": 64,
+          "age_days": 65,
           "stale_for_cadence": true
         },
         {
@@ -848,7 +848,7 @@
           "source_url": "https://wolfstreet.com/2026/05/19/auto-loan-balances-debt-to-income-ratio-and-delinquencies-of-subprime-prime-auto-loans-in-q1-2026-how-bad-is-it/",
           "as_of": "2026-02",
           "provenance": "Agent",
-          "age_days": 126,
+          "age_days": 127,
           "stale_for_cadence": true
         },
         {
@@ -946,7 +946,7 @@
           "source_url": "https://data.imf.org/en/news/imf%20data%20brief%20march%2027",
           "as_of": "2025Q4",
           "provenance": "Agent",
-          "age_days": 188,
+          "age_days": 189,
           "stale_for_cadence": true
         },
         {
@@ -1029,7 +1029,7 @@
           "source_url": "https://fred.stlouisfed.org/series/DRSFRMACBS",
           "as_of": "2026-01-01",
           "provenance": "FRED",
-          "age_days": 184,
+          "age_days": 185,
           "stale_for_cadence": true
         },
         {
@@ -1178,7 +1178,7 @@
           "source_url": "https://emp.lbl.gov/queues",
           "as_of": "2025-12-31",
           "provenance": "Agent",
-          "age_days": 188,
+          "age_days": 189,
           "stale_for_cadence": true
         },
         {
@@ -1670,7 +1670,7 @@
         {
           "id": "move_ccp",
           "label": "Treasury volatility (MOVE)",
-          "value": 66.79,
+          "value": 65.4,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -1679,7 +1679,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-06-26",
+          "as_of": "2026-07-02",
           "provenance": "Market"
         },
         {
@@ -3297,7 +3297,7 @@
     "live_total": 19,
     "fell_back": 0,
     "agent_last": "2026-07-03",
-    "agent_days_ago": 1,
+    "agent_days_ago": 2,
     "agent_flags": 34,
     "offline": false
   },
