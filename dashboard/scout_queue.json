@@ -76,12 +76,12 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "Six federal agencies (OCC, FDIC, NCUA, Treasury, FinCEN, OFAC) face a statutory July 18, 2026 deadline to finalize GENIUS Act stablecoin implementing regulations; as of late June no agency had issued final rules, Tether's foreign-issuer reciprocity determination remained unpublished, and the Federal Reserve had not yet issued its proposed rule, creating an acute implementation-friction event in the next 15 days.",
-      "as_of": "2026-07-03",
+      "summary": "Six federal agencies (OCC, FDIC, NCUA, Treasury, FinCEN, OFAC) must finalize GENIUS Act stablecoin rules by July 18, 2026\u2014one year after enactment\u2014but as of early July no agency has published final rules, creating legal uncertainty for issuers. A critical wrinkle: Tether's foreign-issuer reciprocity determination has not been issued, potentially forcing USDT off US platforms, and the Federal Reserve has not yet published its proposed rule.",
+      "as_of": "2026-07-05",
       "sources": [
         "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors",
         "https://www.spark.money/research/genius-act-stablecoin-regulation-explained",
-        "https://www.brookings.edu/articles/next-steps-for-genius-payment-stablecoins/",
+        "https://occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
         "https://home.treasury.gov/news/press-releases/sb0435"
       ],
       "materiality": "medium",
@@ -90,12 +90,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "This indicator should be updated to 2 (problems): six agencies are simultaneously finalizing rules under a 15-day deadline with no final rules yet issued, Tether's foreign-issuer status is unresolved, and the Fed has not yet published its proposed rule. A missed deadline would create legal ambiguity for the entire ~$250bn USD stablecoin market and its Treasury-bill demand implications \u2014 a direct risk to the Treasury demand dimension of this story.",
+      "rationale": "This is a direct, time-stamped update to the GENIUS implementation friction indicator. Six agencies missing final rules on the statutory deadline, the Fed absent, and Tether's status unresolved all point to a reading of '1 gaps' moving toward '2 problems'. A regulatory gap beyond July 18 could create legal ambiguity about which stablecoins can be marketed in the US\u2014material for the $180B+ stablecoin market and its Treasury-bill demand footprint. The 'Total USD stablecoin supply ($bn)' indicator may also be affected if issuers pause expansion pending clarity.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-07-05",
       "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
-      "sightings": 2
+      "sightings": 3
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -218,13 +218,12 @@
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
-      "summary": "China's MOFCOM on June 22, 2026 added 10 US entities to its export control list, including MP Materials (Mountain Pass mine, CA) and USA Rare Earth (Texas mine-to-magnet project), prohibiting Chinese firms from supplying dual-use items to them with immediate effect. The action was framed as retaliation for the Pentagon adding ~80 Chinese firms to its military-companies list in early June.",
+      "summary": "China added 10 US companies\u2014including at least one rare-earth mining company\u2014to its export control entity list on June 22, 2026, in direct retaliation for the Pentagon's blacklisting of major Chinese tech firms including Alibaba and Baidu. The move signals that despite the May 2026 Trump-Xi summit, the 'national security lane' of economic coercion remains fully active in both capitals.",
       "as_of": "2026-06-22",
       "sources": [
-        "https://intellectia.ai/blog/china-rare-earth-export-controls-june-2026",
         "https://www.aljazeera.com/news/2026/6/22/china-adds-10-us-firms-including-rare-earth-miner-to-export-control-list",
-        "https://source.benchmarkminerals.com/article/china-targets-us-rare-earth-and-defence-linked-entities-with-dual-use-export-ban",
-        "https://discoveryalert.com.au/china-rare-earth-export-controls-processing-chokepoint-2026/"
+        "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later",
+        "https://discoveryalert.com.au/china-rare-earth-export-controls-critical-minerals-trade-2026/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -232,11 +231,12 @@
       "target_indicator": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "This is a direct, precise hit on the 'US domestic RE producer blacklist' indicator in s6_rare_earths. The measure moves the indicator from '0 none' to '1 entity-specific ban'. The ban targets the two largest US domestic producers\u2014MP Materials (Mountain Pass) and USA Rare Earth\u2014which are central to US government-backed supply-chain diversification. Benchmark Minerals confirms the ban is entity-specific rather than blanket, but analysts at Discovery Alert warn it establishes precedent for escalation to sector-wide. NdPr oxide prices have already surged sixfold between January\u2013June 2026 per other data, further validating the stress. The Nov-2025 pause remains nominally in place until Nov 2026 but this action effectively creates parallel, direct suppression of US domestic capacity.",
+      "rationale": "China adding a US rare-earth miner to its entity list is the mirror-image of the 'US domestic RE producer blacklist' indicator\u2014it is China banning a US rare-earth firm from receiving Chinese RE inputs or technology. This should update the indicator to '1 entity-specific ban' (Chinese-side action targeting a US RE company). It also confirms the Nov-2025 pause status is eroding in practice: the second-wave suspension runs until November 2026 but Chinese licensing approvals remain slow (yttrium exports to US still only 20 tons/month vs. 66+ tons pre-controls), and the entity-list action signals escalating weaponization despite diplomatic cover. Yttrium shortages are now causing aerospace production rationing.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "id": "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6"
+      "last_seen": "2026-07-05",
+      "id": "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6",
+      "sightings": 2
     },
     "hyperscaler-ai-capex-approaches-800bn-in-2026-67-03d0a0": {
       "headline": "Hyperscaler AI capex approaches $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027 \u2014 revenue gap concern widens",
@@ -1805,10 +1805,120 @@
       "last_seen": "2026-07-04",
       "sightings": 1,
       "id": "section-301-pharmaceutical-and-semiconductor-tar-c64e7c"
+    },
+    "us-iran-hormuz-mou-holding-but-fragile-strait-pa-997f14": {
+      "headline": "US-Iran Hormuz MOU Holding But Fragile: Strait Partially Reopening, Oil Price Collapsing",
+      "summary": "A mid-June 2026 US-Iran memorandum of understanding has brought Brent crude from above $100/bbl down toward ~$78/bbl as markets front-run Hormuz reopening, but analysts warn logistics normalization could take 3\u20136 months and renewed hostility remains a tail risk. Gulf producers had shut in an estimated 7.5\u20139.1 million b/d; global oil stocks fell ~246 million barrels in March\u2013April combined.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://www.aljazeera.com/economy/2026/6/17/oil-prices-continue-slide-amid-hopes-for-peace-opening-of-strait-of-hormuz",
+        "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by",
+        "https://www.tariffstool.com/guides/tariff-news-2026",
+        "https://www.oecd.org/en/publications/2026/06/oecd-economic-outlook-volume-2026-issue-1_8be0dba6/full-report/general-assessment-of-the-macroeconomic-situation_fe9bdcd6.html"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed) AND WTI crude oil (USD/bbl, CL=F)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Hormuz/Red Sea status indicator directly captures this: status is transitioning from '2 closed' toward '1 contested' as the MOU holds but is not yet permanent or fully operational. The simultaneous 30%+ crude oil collapse since peak is a massive signal in the WTI indicator. The speed and fragility of this move (3\u20136 months to normalize supply, ceasefire still provisional) warrants an urgent update to both indicators. This also propagates into s18_food_fertilizer (Gulf fertilizer disruption) and s4_dev_debt (EM oil-exporter relief vs. importers still stressed).",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "us-iran-hormuz-mou-holding-but-fragile-strait-pa-997f14"
+    },
+    "japan-10-year-jgb-yield-surges-to-2-7-2-8-30-yea-d8fccc": {
+      "headline": "Japan 10-Year JGB Yield Surges to ~2.7\u20132.8% (30-Year High), Yen Near 4-Decade Low; BOJ Hikes to 1%",
+      "summary": "Japan's 10-year JGB yield climbed above 2.7% in early July 2026\u2014approaching its highest level since October 1996\u2014driven by Takaichi's \u00a5370 trillion investment plan, a weak 10-year auction, and BOJ rate hikes to 1% in late June. The yen simultaneously slid to a four-decade low amid persistent carry trades and wide US-Japan rate differentials, with Oxford Economics raising its end-2026 JGB forecast to 2.8%.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/",
+        "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield (%) AND Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "All three existing s2_japan indicators are flashing simultaneously: (1) 10y/30y JGB yields are at multi-decade highs and rising; (2) USD/JPY is at a 4-decade extreme, signaling acute carry-trade and yen-weakness risk; (3) the Takaichi \u00a5370 trillion plan has no credible financing offset and is explicitly driving bond-market selling pressure, pushing 'Takaichi plan financing clarity' to '2 disorderly'. BOJ board member Tamura explicitly flagged accelerating rate hike cadence toward 2% neutral. This is the most acute development in the tracker this week and interacts with s1_basis_trade (JGB volatility spillover) and s14_pensions (leveraged JGB exposure).",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "japan-10-year-jgb-yield-surges-to-2-7-2-8-30-yea-d8fccc"
+    },
+    "section-301-tariff-cliff-july-24-expiry-of-secti-61ed67": {
+      "headline": "Section 301 Tariff Cliff: July 24 Expiry of Section 122 Global Surcharge as USTR Hearings Conclude",
+      "summary": "USTR held public hearings July 7, 2026 on proposed new Section 301 tariffs (10\u201312.5%) covering 60 economies to replace the 10% Section 122 global surcharge expiring July 24; if the new tariffs are not finalized in time there is a brief potential tariff gap that would revert imports to pre-IEEPA duty rates, creating acute uncertainty for global supply chains. China warned it could reinstate rare-earth export restrictions if Section 301 probes proceed against it.",
+      "as_of": "2026-07-07",
+      "sources": [
+        "https://www.whitecase.com/insight-alert/ustr-proposes-10-125-tariffs-section-301-investigations-regulation-imports-produced",
+        "https://blogs.tradlinx.com/two-new-section-301-investigations-60-countries-and-a-july-deadline-what-importers-need-to-know/",
+        "https://www.dorsey.com/newsresources/publications/client-alerts/2026/6/new-section-301-tariffs",
+        "https://asiatimes.com/2026/03/us-warned-of-china-rare-earth-curbs-if-section-301-tariffs-expand/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s5_china_deflation",
+      "proposed_indicator": {
+        "label": "US tariff-regime transition risk (0 orderly / 1 gap / 2 reversion)",
+        "type": "band",
+        "rubric": "0 = Section 301 tariffs finalized before July 24 Section 122 expiry with no coverage gap; 1 = brief gap or partial coverage lapse requiring executive patch; 2 = Section 122 lapses without replacement, broad tariff reversion to pre-IEEPA rates, or China retaliates with renewed rare-earth/trade restrictions in direct response to Section 301 action",
+        "sources": [
+          "https://www.whitecase.com/insight-alert/ustr-proposes-10-125-tariffs-section-301-investigations-regulation-imports-produced",
+          "https://blogs.tradlinx.com/two-new-section-301-investigations-60-countries-and-a-july-deadline-what-importers-need-to-know/",
+          "https://www.tariffstool.com/guides/tariff-news-2026"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The July 24 Section 122 expiry is an acute, dated event that none of the current s5_china_deflation indicators (China PPI, USD/CNY, tariff escalation) fully capture. The new Section 301 action covers 60 economies\u2014not just China\u2014and represents the broadest use of Section 301 in history, with direct linkage to s6_rare_earths (China warned RE retaliation), s5_china_deflation (new tariff/anti-dumping actions), and s4_dev_debt (EM export disruption). Adding a tariff-transition indicator to s5 (which already tracks tariff/anti-dumping actions) plugs this gap with a time-bounded, measurable rubric for the next 3 weeks.",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "section-301-tariff-cliff-july-24-expiry-of-secti-61ed67"
+    },
+    "boj-s-new-board-appointee-signals-dovish-lean-in-031468": {
+      "headline": "BOJ's New Board Appointee Signals Dovish Lean; Internal Split Sharpens as Yen Hits 4-Decade Low",
+      "summary": "Prime Minister Takaichi appointed Ayano Sato to the BOJ board who signaled inflation expectations remain 'relatively weak'\u2014a more accommodative stance at odds with hawkish board members like Tamura who called for hikes every few months toward 2% neutral. This internal BOJ split, combined with a yen at a four-decade low driven by carry trade persistence and US-Japan rate differentials, creates a disorderly policy trilemma: hike to defend yen (risking fiscal blowup on \u00a5370tr plan) or hold (allowing yen depreciation to deepen inflation).",
+      "as_of": "2026-07-02",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield",
+        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "proposed_indicator": {
+        "label": "BOJ policy coherence / political independence (0 unified-hawkish / 1 split / 2 politically-captured-dovish)",
+        "type": "band",
+        "rubric": "0 = BOJ board votes unified with market-consistent guidance and free from political appointments that contradict stated policy path; 1 = visible internal split (3+ dissenting votes or new appointee diverges materially from prevailing guidance); 2 = PM-appointed majority overrides market-implied tightening path, YCC-style suppression returns, or BOJ publicly subordinates rate policy to fiscal goals",
+        "sources": [
+          "https://tradingeconomics.com/japan/interest-rate",
+          "https://tradingeconomics.com/japan/government-bond-yield",
+          "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The s2_japan story currently tracks USD/JPY, 30y JGB yield, and Takaichi plan financing clarity\u2014but has no indicator for BOJ independence risk, which is the crucial transmission mechanism. Takaichi's appointment of a dovish board member (Sato) while simultaneously pushing a \u00a5370 trillion spending plan and urging BOJ to 'support growth' is textbook political pressure on central bank independence. If the BOJ is captured into suppressing yields to finance the Takaichi plan, the 30y JGB yield and USD/JPY indicators could move violently and non-linearly. A BOJ coherence indicator provides leading warning before those price indicators move.",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "boj-s-new-board-appointee-signals-dovish-lean-in-031468"
     }
   },
   "generated": "2026-07-05",
   "model": "claude-sonnet-4-6",
-  "new_count": 0,
-  "pending_count": 60
+  "new_count": 4,
+  "pending_count": 64
 }

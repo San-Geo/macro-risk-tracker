@@ -1,6 +1,6 @@
 {
   "date": "2026-07-05",
-  "generated_at": "2026-07-05 10:17 UTC",
+  "generated_at": "2026-07-05 10:21 UTC",
   "aggregates": {
     "1": 5.4,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.2
   },
-  "narrative": "**HEADLINE**\nOverall macro risk stands at 6.2/10 with no intraday changes; three High-level risks (Japan carry trade, critical minerals weaponization, AI power grid bottleneck) remain the primary pressure points.\n\n**NO CHANGES REPORTED**\nThe changes array is empty; no risk levels shifted during the session.\n\n**ELEVATED OR HIGHER RISKS**\nFifteen risks remain at Elevated (5\u20136) or High (7) bands:\n- **High band (7):** Japan fiscal/JGB/carry trade; critical minerals as weapon; AI power & grid bottleneck\n- **Elevated band (6):** Treasury basis trades, private credit opacity, developing-world debt, China deflation/cost-push spillover, AI circular financing, hidden consumer debt, food/fertilizer fragility, lithography chokepoint, sea lanes/undersea cables\n- **Elevated band (5):** CRE maturity wall, France/eurozone fragility, water underpricing\n\n**WATCH**\nJapan fiscal/JGB/carry trade (7/10, High) carries the sharpest tail risk to cross-border capital flows and FX volatility.",
+  "narrative": "# EOD Macro-Risk Brief | 2026-07-05\n\n**Overall risk stable at 6.2; no intraday level changes, but three High-band risks remain acute.**\n\nNo stories moved today. Persistent elevated risks span financial leverage (Treasury basis trades, private credit opacity), geopolitical supply chains (critical minerals weaponization, ASML lithography chokepoint), and structural imbalances (Japan's fiscal-carry nexus, China deflation spillover, developing-world debt servicing, AI power demand vs. grid constraints).\n\n**Watch closest:** Japan fiscal / JGB / carry trade (Level 7, High)\u2014unwind tail risk remains the highest-consequence trigger for cross-asset volatility and margin calls across global leveraged positions.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -539,7 +539,7 @@
         {
           "id": "stablecoin_supply",
           "label": "Total USD stablecoin supply ($bn)",
-          "value": 309.9,
+          "value": 309.8,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
