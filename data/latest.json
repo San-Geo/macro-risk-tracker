@@ -1,6 +1,6 @@
 {
   "date": "2026-07-05",
-  "generated_at": "2026-07-05 20:17 UTC",
+  "generated_at": "2026-07-05 20:21 UTC",
   "aggregates": {
     "1": 5.4,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.2
   },
-  "narrative": "**HEADLINE**\nMacro risk holds at elevated levels (6.2) with no intraday moves; Japan carry trade and AI infrastructure constraints remain highest-severity exposures.\n\n**STORIES WITH LEVEL CHANGES**\nNo risk levels changed today; the tracker reflects stable positioning across 15 elevated or higher risks.\n\n**KEY ELEVATED RISKS (unchanged)**\n\u2022 **Japan fiscal/JGB/carry trade** (Level 7, High): Persistent yen volatility and unwind risk in leveraged positions; potential for sharp cross-asset liquidations.\n\u2022 **AI power & grid bottleneck** (Level 7, High): Data-center demand outpacing power infrastructure; capex delays or blackout risk in constrained regions.\n\u2022 **Critical minerals as weapon** (Level 7, High): Supply concentration in geopolitically sensitive regions; exposure to tech and energy transition.\n\u2022 Treasury basis trades (Level 6), private credit opacity (Level 6), and developing-world debt (Level 6) remain material secondary risks.\n\n**TO WATCH**\nJapan fiscal/JGB/carry trade (Level 7)\u2014any BoJ policy signal or volatility spike could trigger rapid deleveraging across global markets.",
+  "narrative": "# EOD MACRO-RISK BRIEF | 2026-07-05\n\n**Overall risk stable at 6.2; no level changes today but 15 stories remain elevated or higher.**\n\nNo stories moved today. Risk landscape unchanged across all tracked domains:\n- **Three High-level risks** persist: Japan fiscal/JGB/carry trade (7), Critical minerals weaponization (7), AI power grid bottleneck (7).\n- **12 Elevated risks** span financial leverage (Treasury basis, private credit), emerging-market stress (developing-world debt, China deflation), supply chain concentration (ASML lithography, sea lanes), and structural imbalances (CRE, hidden consumer debt, food fragility).\n\n**Watch closest:** Japan fiscal/JGB/carry trade (level 7)\u2014largest unwind tail risk in leveraged FX markets given persistent policy divergence.",
   "stories": [
     {
       "id": "s1_basis_trade",

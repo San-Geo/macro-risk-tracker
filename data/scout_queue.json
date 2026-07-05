@@ -175,13 +175,15 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "June 26\u201329 2026: the US and Iran exchanged fresh strikes near the Strait of Hormuz after Iran attacked Bahrain and Kuwait following new US air strikes. A Trump administration official confirmed a 'stand down for now' Sunday evening, but Hormuz traffic remains under IRGC pressure; oil futures sit near $69\u201372/bbl after spiking to $114 in March.",
-      "as_of": "2026-06-29",
+      "summary": "A US-Iran MOU signed ~June 18-19 reopened the Strait of Hormuz provisionally for 60 days, with Switzerland follow-on talks ending June 22 agreeing only a 'roadmap.' Iran has already threatened re-closure over Lebanon fighting, and the final deal terms on nuclear enrichment, frozen assets, and Lebanon deconfliction remain unresolved, meaning the ~20% of world oil and LNG trade that transited the Strait before the war faces a hard expiry cliff around mid-August.",
+      "as_of": "2026-07-03",
       "sources": [
-        "https://www.cnn.com/2026/06/28/world/live-news/iran-war-strikes-trump",
-        "https://fortune.com/2026/06/28/stock-market-today-dow-futures-oil-prices-us-iran-ceasefire-talks-oil-prices-hormuz/",
+        "https://www.csis.org/analysis/united-states-and-iran-announce-deal-end-war-state-play",
+        "https://www.nbcnews.com/world/iran/strait-hormuz-reopen-us-lift-iran-sanctions-14-point-deal-seeking-end-rcna350513",
+        "https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz",
+        "https://www.aljazeera.com/news/2026/6/22/us-iran-agree-on-roadmap-towards-final-deal-in-switzerland-talks",
         "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
-        "https://www.britannica.com/event/2026-Iran-war"
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -189,22 +191,24 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz status indicator is the primary read-point for s20_sea_lanes. Current situation: ceasefire violently broken on June 26\u201329, Iran strikes Bahrain and Kuwait, US retaliates, Hormuz traffic partially re-disrupted after IRGC claims sovereignty over waterway management under the June 17 MOU. The indicator should be marked '1 contested' (not full closure, but tanker convoys require naval escort and Iran is demanding toll/control rights post-60-day window). WTI ~$69, Brent ~$72 \u2014 still materially elevated vs pre-war ~$55 \u2014 confirms partial resolution but persistent risk premium. This is the highest-materiality single development of the week.",
+      "rationale": "The Strait of Hormuz is now formally at status '1 contested' \u2014 nominally open under a fragile 60-day MOU but with active Lebanon escalation risk, a hard re-closure threat from Iran, and unresolved nuclear/asset terms. Brent retreated to low-$70s but the 60-day cliff (~mid-August 2026) is a discrete binary risk event. This directly updates the Hormuz/Red Sea status indicator and also propagates into WTI crude and the food/fertilizer story (s18), as ~30% of globally traded fertilizers normally transit the strait. The tracker should move this indicator from '2 closed' to '1 contested' while flagging the imminent cliff.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a"
+      "last_seen": "2026-07-05",
+      "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
+      "sightings": 2
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The Bank of Japan raised its policy rate from 0.75% to 1% in late June 2026 with Deputy Governor Tamura signalling 25bp hikes every few months toward a neutral rate of ~2%; the 10-year JGB yield climbed to 2.7-2.8% (highest since 1996) driven by fiscal expansion fears around PM Takaichi's \u00a5370 trillion public-private investment plan and a weak JGB auction. USD/JPY has weakened to multi-decade lows on wide rate differentials and persistent carry-trade dynamics, while a new dovish BOJ board appointment (Sato) introduces policy uncertainty.",
+      "summary": "The Bank of Japan raised its policy rate to 1.0% in late June 2026 (Deputy Governor Himino confirmed), with board member Tamura calling for further 25bp hikes 'at intervals of a few months' toward a 2% neutral rate. The 10-year JGB yield has surged from ~2.1% in March to ~2.7-2.8% \u2014 near its highest since 1996 \u2014 driven by PM Takaichi's \u00a5370 trillion investment mobilization plan and a weak 10-year auction, while the yen has slid to a four-decade low.",
       "as_of": "2026-07-03",
       "sources": [
         "https://tradingeconomics.com/japan/government-bond-yield",
         "https://tradingeconomics.com/japan/interest-rate",
-        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/",
         "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html",
-        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
+        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield",
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -212,7 +216,7 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Multiple indicators in s2 are simultaneously flashing: 30-year JGB elevated above 2.3-2.5% (tracker needs update), USD/JPY at multi-decade weak yen level (carry unwind risk), and Takaichi plan financing clarity is deteriorating (weak JGB auction + \u00a5370tn spending commitment = moving toward '2 disorderly'). The BOJ rate hike to 1% and hawkish Tamura comments in the past 7 days are the most material new developments for this story since the April hold. Carry-trade unwind risk is acute given yen at 4-decade lows.",
+      "rationale": "Multiple s2_japan indicators are moving simultaneously and materially: 10-year JGB yield ~2.7-2.8% (highest since 1996, up ~60bp in weeks); yen at four-decade low (USD/JPY risk indicator elevated); and Takaichi fiscal clarity has worsened \u2014 the \u00a5370tn plan's financing is being absorbed badly by markets (weak auction, no offsetting revenue). The BOJ is now at 1.0% and signaling 2%, creating a stagflationary policy dilemma. This is the most acute update to any single existing story: all three s2 indicators are deteriorating concurrently. The 30-year JGB yield is the most appropriate single indicator to flag as it reflects both fiscal premium and carry-unwind risk.",
       "status": "pending",
       "first_seen": "2026-06-30",
       "last_seen": "2026-07-05",
@@ -894,11 +898,12 @@
     },
     "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec": {
       "headline": "Iran war energy shock drives Hormuz fertilizer disruption; Gulf fertilizer exports (especially Qatar LNG-linked urea) severely curtailed since March 2026",
-      "summary": "The Strait of Hormuz closure severely disrupted exports of Gulf urea (>30% of global supply transits the Strait), pushing fertilizer costs sharply higher and threatening food affordability in import-dependent nations; the Food Policy Institute warned of long-term food price increases, and panic buying of staples had already spiked consumer prices 40\u2013120% in Gulf states by mid-March, with secondary effects spreading to South Asia and Africa.",
-      "as_of": "2026-07-04",
+      "summary": "The Strait of Hormuz crisis (Feb 28 \u2013 June 18, 2026) severed flows from the Persian Gulf, which normally supplies ~30-35% of global urea exports and ~20-30% of ammonia exports. Even with the provisional reopening, backlogs of ~20,000 mariners and 2,000 ships stranded in the Gulf and damaged energy infrastructure mean full fertilizer flow restoration will take months, sustaining elevated food-price risks heading into the northern hemisphere planting/harvest season.",
+      "as_of": "2026-07-03",
       "sources": [
-        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
-        "https://www.congress.gov/crs-product/R45281"
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz",
+        "https://www.pbs.org/newshour/world/iran-and-u-s-reach-an-initial-deal-to-extend-the-ceasefire-and-open-the-strait-of-hormuz-but-challenges-remain"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -906,12 +911,12 @@
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s18 indicator 'Hormuz/Gulf disruption to fertilizer inputs' should now read '2 cut' \u2014 Gulf urea exports representing 30%+ of global supply were physically blocked for extended periods. QatarEnergy declared force majeure on all LNG exports in early March; urea and fertilizer feedstock (natural gas) production was simultaneously disrupted. The Food Policy Institute warned of 'long-term increases in food prices due to disruption in fuel and fertiliser markets.' This is a qualitatively new level of severity for this indicator: prior tracking was calibrated for disruption (1), but the actual physical halt of 30% of global urea supply through the Strait constitutes a 'cut (2)' reading. Even with the June ceasefire easing Brent toward $70s, structural fertilizer-supply impacts will persist through the 2026 planting cycle.",
+      "rationale": "The Hormuz closure from Feb 28 to June 18 was the most severe fertilizer supply disruption since the 2022 Russia shock, affecting ~30% of globally traded urea and ~20-30% of ammonia. The provisional reopening moves the indicator from '2 cut' toward '1 disrupted' (not '0 clear') because: (a) the 60-day clause creates re-closure risk, (b) ~20,000 mariners and 2,000 ships were stranded and backlogs persist, (c) Gulf energy infrastructure was damaged. This directly elevates s18's 'Hormuz/Gulf disruption' indicator and keeps 'food-price trend' elevated. The northern hemisphere is mid-season, so delayed fertilizer flows have near-term crop yield implications.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-05",
       "id": "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec",
-      "sightings": 3
+      "sightings": 4
     },
     "japan-s-energy-import-crisis-deepens-as-hormuz-c-e531e3": {
       "headline": "Japan's energy import crisis deepens as Hormuz closure compounds BOJ policy bind \u2014 new macro feedback loop not captured in existing indicators",
@@ -2072,74 +2077,144 @@
       "sightings": 1,
       "id": "japan-s-takaichi-government-pauses-boj-bond-tape-81e119"
     },
-    "japan-30-year-jgb-yield-hits-4-04-10-year-approa-866751": {
-      "headline": "Japan 30-year JGB yield hits 4.04%, 10-year approaches 2.8% \u2014 multi-decade highs driven by fiscal spending plan and yen at four-decade low",
-      "summary": "On July 2\u20133, 2026, Japan's 30-year JGB yield reached 4.04% and the 10-year climbed toward 2.8% (highest since 1996) after a weak auction and PM Takaichi's \u00a5370 trillion fiscal strategy triggered sustained bond selling; the yen simultaneously slid to a four-decade low, trapping the BOJ between rate hikes and yen defence. Japanese investors have run net \u00a54 trillion in foreign-asset sales since January 2026, threatening a structural reduction in demand for US Treasuries.",
+    "us-fiscal-dominance-accelerating-obbba-debt-traj-b79d30": {
+      "headline": "US fiscal dominance accelerating: OBBBA debt trajectory, $1.05T annual interest bill, 4.2% CPI, and new Fed Chair Warsh abandons forward guidance",
+      "summary": "As of July 2026, annualized US interest payments on the national debt have exceeded $1.05 trillion \u2014 surpassing the defense budget \u2014 following the OBBBA (signed July 4, 2025) which CBO scores as adding $3.4T to debt over 10 years. New Fed Chair Kevin Warsh dropped forward guidance in June, and May 2026 CPI printed 4.2% YoY (highest since April 2023), creating a fiscal-vs-monetary collision dynamic that is bear-steepening the Treasury curve with the 10-year hovering near 4.4%.",
       "as_of": "2026-07-03",
       "sources": [
-        "https://tradingeconomics.com/japan/30-year-bond-yield",
+        "https://www.foxbusiness.com/economy/us-national-debt-tracker",
+        "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-30-the-one-big-beautiful-bill-act-a-new-fiscal-reality-as-the-2026-tax-season-hits-high-gear",
+        "https://budgetlab.yale.edu/research/long-term-impacts-one-big-beautiful-bill-act",
+        "https://www.bruegel.org/analysis/how-much-threat-us-debt-sustainability-trumps-one-big-beautiful-bill-act",
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US Fiscal Dominance & Treasury Term Premium Blowout",
+        "why": "The combination of OBBBA-driven structural deficit expansion (~$3.4-5T added debt over 10 years), interest costs eclipsing the defense budget at $1.05T/yr, a new Fed chair abandoning forward guidance amid 4.2% CPI, and a bear-steepening curve creates a qualitatively new risk: fiscal dominance, where the Treasury's borrowing needs constrain monetary policy and compress the Fed's degrees of freedom. This is distinct from s1_basis_trade (which focuses on hidden leverage in the repo/basis market) and s4_dev_debt (which focuses on EM). It is a US sovereign fiscal-financial feedback loop risk: sticky inflation + structural deficit + term premium rise = potential investor strike on long-duration Treasuries, which would cascade into every rate-sensitive sector. The Bruegel analysis explicitly models a path to debt crisis if future primary surpluses of >3% GDP are required.",
+        "proposed_level": 7,
+        "set": 3,
+        "indicators": [
+          {
+            "label": "US 10-year Treasury yield (%)",
+            "type": "value",
+            "rubric": "Tracks the term premium signal; above 4.5% = elevated, above 5% = acute fiscal stress signal",
+            "sources": [
+              "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/",
+              "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-30-the-one-big-beautiful-bill-act-a-new-fiscal-reality-as-the-2026-tax-season-hits-high-gear"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "US annual net interest outlay vs. defense budget ratio (x)",
+            "type": "value",
+            "rubric": "Interest/defense ratio >1.0x means debt service is crowding out core spending; tracks fiscal dominance severity",
+            "sources": [
+              "https://www.foxbusiness.com/economy/us-national-debt-tracker",
+              "https://markets.financialcontent.com/stocks/article/marketminute-2026-2-11-trumps-one-big-beautiful-bill-act-ignites-2026-economy-but-28-trillion-deficit-looms-large"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "Fed forward guidance status (0 intact / 1 data-only / 2 abandoned/contradicted)",
+            "type": "band",
+            "rubric": "Measures policy credibility and rate-path uncertainty; Warsh's June 2026 removal of forward guidance = 1; explicit contradiction of committee stance = 2",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.2
+          },
+          {
+            "label": "CBO 10-year deficit projection under current law ($T)",
+            "type": "value",
+            "rubric": "Baseline structural trajectory; $3-4T = elevated, >$5T including interest = acute",
+            "sources": [
+              "https://budgetlab.yale.edu/research/long-term-impacts-one-big-beautiful-bill-act",
+              "https://www.bruegel.org/analysis/how-much-threat-us-debt-sustainability-trumps-one-big-beautiful-bill-act"
+            ],
+            "suggested_weight": 0.25
+          }
+        ]
+      },
+      "rationale": "No existing story captures US sovereign fiscal dominance as a self-contained risk. s1_basis_trade covers repo/leverage; s4_dev_debt covers EM. The OBBBA + Warsh + 4.2% CPI + $1.05T interest bill is a distinct systemic node: if the Treasury curve bear-steepens past 5% on the 10-year while the Fed is constrained by inflation, it creates a doom loop for rate-sensitive sectors (CRE, regional banks, private credit, pensions, AI capex) simultaneously. The Bruegel model explicitly warns of debt unsustainability if required primary surpluses exceed 3% of GDP.",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "us-fiscal-dominance-accelerating-obbba-debt-traj-b79d30"
+    },
+    "eu-eliminates-de-minimis-customs-exemption-july--6834b0": {
+      "headline": "EU eliminates de minimis customs exemption July 1, 2026 \u2014 redirecting 'China Shock 2.0' trade flows and triggering new anti-dumping pressure",
+      "summary": "The EU's Council formally eliminated the de minimis customs exemption for low-value parcels effective July 1, 2026, directly targeting the surge of Chinese e-commerce exports that grew 41.8% YoY to the EU in 2025 as China redirected trade away from US markets. This closes a key circumvention channel and is expected to accelerate EU anti-dumping actions, raise Chinese export deflation pressure back domestically, and shift the geography of the 'China Shock 2.0' dynamic into Southeast Asia and Africa.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.uscc.gov/trade-bulletins/china-bulletin-february-4-2026",
+        "https://www.uscc.gov/trade-bulletins/china-bulletin-may-5-2026",
+        "https://www.cnbc.com/2026/03/05/china-gdp-two-sessions-.html"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s5_china_deflation",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "EU/third-market trade barrier closures against Chinese exports (0 open / 1 new barriers / 2 coordinated block)",
+        "type": "band",
+        "rubric": "Tracks the degree to which non-US markets are absorbing or deflecting China's export surplus; as third-market channels close, deflation pressure rebounds domestically and anti-dumping actions escalate globally. 0 = channels open; 1 = one major jurisdiction closes a channel (e.g., EU de minimis, July 2026); 2 = coordinated G7/multilateral action",
+        "sources": [
+          "https://www.uscc.gov/trade-bulletins/china-bulletin-february-4-2026",
+          "https://www.uscc.gov/trade-bulletins/china-bulletin-may-5-2026"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "s5_china_deflation already tracks PPI, USD/CNY, and tariff/anti-dumping actions \u2014 but none of the indicators captures the third-market channel dynamics that are now the primary valve for China's export overhang. As the EU closes its de minimis loophole (July 1, 2026, just enacted), Chinese exporters face tighter exit routes, which will either intensify domestic deflation or drive more aggressive dumping into other markets. This is a story_gap: the mechanism is within s5 but the indicator doesn't exist.",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "eu-eliminates-de-minimis-customs-exemption-july--6834b0"
+    },
+    "boj-policy-rate-to-fiscal-plan-collision-takaich-4c0d36": {
+      "headline": "BOJ policy-rate-to-fiscal-plan collision: Takaichi's \u00a5370tn mobilization plan pressures BOJ to stay accommodative while inflation demands hikes \u2014 carry unwind risk building",
+      "summary": "PM Takaichi's long-term economic strategy targeting \u00a5370 trillion in public-private investment through FY2040 has explicitly called for BOJ monetary policy to 'support growth objectives,' while simultaneously the BOJ hiked to 1.0% in late June and board member Tamura targets 2%. New BOJ board appointee Sato signaled more accommodative views, indicating a deepening internal split. With the yen at a four-decade low and JGB yields near 30-year highs, the carry trade unwind risk is acute heading into the July 30-31 BOJ meeting.",
+      "as_of": "2026-07-03",
+      "sources": [
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://economics.td.com/gbl-what-happens-in-japan-may-not-stay-in-japan",
-        "https://www.investing.com/analysis/japans-bond-market-is-no-longer-stable-200679428"
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield",
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
       ],
       "materiality": "high",
       "classification": "story_gap",
       "target_story": "s2_japan",
       "target_indicator": null,
       "proposed_indicator": {
-        "label": "Japanese investor net foreign-asset sales YTD (\u00a5tn)",
-        "type": "value",
-        "rubric": "Ministry of Finance cumulative net foreign securities sales since Jan 1. 0 = net buying or < \u00a51tn selling; 1 = \u00a51\u20135tn net selling (repatriation beginning); 2 = > \u00a55tn (structural demand withdrawal threatening US Treasury demand). Current: \u00a54tn (score 1, rising toward 2).",
-        "sources": [
-          "https://economics.td.com/gbl-what-happens-in-japan-may-not-stay-in-japan",
-          "https://www.investing.com/analysis/japans-bond-market-is-no-longer-stable-200679428"
-        ],
-        "suggested_weight": 0.2
-      },
-      "proposed_story": null,
-      "rationale": "s2_japan already tracks USD/JPY, 30-year JGB yield (now 4.04%), and Takaichi plan financing clarity. The missing dimension is quantified Japanese repatriation flow \u2014 the direct transmission mechanism to US Treasury yields. TD Economics estimates the withdrawal could add 20\u201350 bp to the US 10-year, making this a cross-story systemic risk. A new YTD net-foreign-asset-sales indicator fills a material gap in the existing story.",
-      "status": "pending",
-      "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05",
-      "sightings": 1,
-      "id": "japan-30-year-jgb-yield-hits-4-04-10-year-approa-866751"
-    },
-    "middle-east-war-triggers-energy-driven-stagflati-6eca64": {
-      "headline": "Middle East war triggers energy-driven stagflation risk across EMDEs: EM central banks pivoting hawkish, IMF warns of 2.5% global growth and rolling EM debt stress",
-      "summary": "The IMF's April 2026 GFSR and World Bank June 2026 Global Economic Prospects both flag that the Iran-war energy shock is forcing EM central banks to delay rate cuts or pivot hawkish, widening EM sovereign spreads, and pushing commodity-importing developing economies toward IMF programme territory. The World Bank projects global growth of 2.5% in 2026, with EMDEs facing weakest per-capita income growth since COVID; rising debt is driving up EMDE borrowing costs, particularly for the most indebted.",
-      "as_of": "2026-07-05",
-      "sources": [
-        "https://www.worldbank.org/en/publication/global-economic-prospects",
-        "https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026",
-        "https://www.jpmorgan.com/insights/global-research/outlook/mid-year-outlook",
-        "https://www.oecd.org/en/publications/2026/06/oecd-economic-outlook-volume-2026-issue-1_8be0dba6/full-report/general-assessment-of-the-macroeconomic-situation_fe9bdcd6.html"
-      ],
-      "materiality": "high",
-      "classification": "story_gap",
-      "target_story": "s4_dev_debt",
-      "target_indicator": null,
-      "proposed_indicator": {
-        "label": "EM central-bank hawkish pivot count (energy-shock driven)",
+        "label": "BOJ board policy cohesion / political interference risk (0 unified-independent / 1 split-board / 2 fiscal-dominance-capture)",
         "type": "band",
-        "rubric": "Count of major EM central banks that have reversed rate-cut cycles or hiked in response to energy-driven inflation since March 2026. 0 = 0\u20132 banks (contained); 1 = 3\u20135 banks (spreading, carry-trade and capital-flow risk rising); 2 = 6+ banks or a G20 EM (systemic repricing, coupled with rising IMF programme count). Current: multiple EM central banks tilting hawkish per JPMorgan mid-year outlook (score approaching 1).",
+        "rubric": "Tracks the degree to which BOJ policy independence is intact. 0 = unanimous or near-unanimous decisions with no political pressure; 1 = split vote (as in April 2026 6-3) and/or government publicly demanding accommodative policy; 2 = BOJ explicitly subordinates rate path to fiscal objectives or new politically-aligned board majority. Current state: 1 (split board, Takaichi plan calls for BOJ support, new accommodative appointee Sato)",
         "sources": [
-          "https://www.jpmorgan.com/insights/global-research/outlook/mid-year-outlook",
-          "https://www.imf.org/en/publications/gfsr/issues/2026/04/14/global-financial-stability-report-april-2026",
-          "https://www.worldbank.org/en/publication/global-economic-prospects"
+          "https://tradingeconomics.com/japan/interest-rate",
+          "https://tradingeconomics.com/japan/government-bond-yield",
+          "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html"
         ],
-        "suggested_weight": 0.15
+        "suggested_weight": 0.25
       },
       "proposed_story": null,
-      "rationale": "s4_dev_debt tracks US dollar index, US 10-year real yield, and IMF programme counts, but lacks a direct indicator of the monetary-policy contagion channel: energy-shock-driven EM rate reversals that tighten domestic financial conditions, suppress growth, and accelerate debt-servicing stress. The IMF GFSR warns carry-trade unwinds and capital outflows may amplify currency pressures in EM; the World Bank quantifies this as weakest per-capita EMDE growth since COVID. A hawkish-pivot count captures this transmission mechanism not otherwise tracked.",
+      "rationale": "s2_japan tracks the Takaichi plan financing clarity indicator but as a binary rubric. The more precise and actionable risk is the BOJ's institutional independence being eroded by fiscal pressure \u2014 analogous to the Bank of England pre-2022 mini-budget episode. A split board (6-3 in April), a new accommodative appointee, and government language demanding policy support are all present simultaneously. If the BOJ blinks at the July 30-31 meeting under political pressure, it could trigger a rapid yen overshooting and a global carry unwind. This is a story_gap: the mechanism is within s2 but the indicator doesn't exist.",
       "status": "pending",
       "first_seen": "2026-07-05",
       "last_seen": "2026-07-05",
       "sightings": 1,
-      "id": "middle-east-war-triggers-energy-driven-stagflati-6eca64"
+      "id": "boj-policy-rate-to-fiscal-plan-collision-takaich-4c0d36"
     }
   },
   "generated": "2026-07-05",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 71
+  "new_count": 3,
+  "pending_count": 72
 }
