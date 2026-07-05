@@ -1,15 +1,20 @@
-UPDATE BUNDLE - preserves history (no data/ folder). ESCALATION NOTES (educational playbook).
- - config/playbook.yaml (NEW): a mechanism-level transmission map for all 21 stories -
-   how this kind of stress historically moved through the system, which SECTORS were
-   pressured or benefited in past analogous episodes, what to watch (pointing back at the
-   board's own indicators), and the trap that made the obvious reaction fail.
-   STRICT CONTENT RULE (enforced by an automated scan at build time): no tickers, no
-   instruments, no directives, no predictions. Editing this file changes wording only.
- - Dashboard: stories at HIGH (7+) gain a collapsed "What could this mean if it
-   escalates?" box - same content in Plain and Expert modes (the toggle is a reading
-   register, not an access control). The box disappears when the story cools below High.
-   Includes the disclaimer line on every box. Help modal documents it.
- - src/main.py + src/report.py: playbook.yaml flows into latest.json (payload.playbook).
-ON YOUR LIVE BOARD: the three current High stories (Japan carry trade, critical
-minerals, AI power) will each show the box after your next free run.
+UPDATE BUNDLE - preserves history (no data/ folder). SCOPE STATEMENT + MAINSTREAM CONTEXT DIALS.
+Purpose: pre-empt the fairest criticism of a published dashboard ("this ignores mainstream
+macro") by owning the scope explicitly and displaying the famous dials for contrast.
+ 1. config/context.yaml (NEW): five famous gauges - VIX, 10y-2y curve, high-yield spread,
+    Chicago Fed NFCI, unemployment - all keyless FRED series. DISPLAY ONLY: fetched into a
+    separate payload field that never touches the scoring values (enforced by structure,
+    not promise). Edit this file to add/remove dials.
+ 2. Dashboard: a slim "Context - the mainstream dials" strip under the overall area in
+    BOTH modes, each pill with a plain tooltip, its as-of date, and a link to the FRED
+    series. The header states "displayed for contrast - never part of the score". When
+    the mainstream dials read calm while the structural gauge reads elevated, that
+    divergence is now visible evidence of the tracker's thesis rather than a critic's
+    gotcha. Strip hides gracefully when values are unavailable (e.g. offline).
+ 3. Scope statement: a new "What this is - and isn't" section at the TOP of the help
+    modal (deliberate lens / attention-not-probability / curated-not-frozen coverage),
+    plus a one-line version at the bottom of the Plain-mode gist header.
+ 4. src/main.py + src/report.py: context fetch (5 extra FRED calls per run, free) and
+    payload plumbing.
+No scoring change, no methodology version bump - the score is byte-identical.
 APPLY: upload config/, src/, and dashboard/. No workflow change.

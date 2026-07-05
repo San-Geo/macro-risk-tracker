@@ -55,6 +55,10 @@
   .plainq{ font-size:14px; font-weight:600; color:var(--text); margin:18px 2px 6px; display:flex; gap:7px; align-items:baseline; }
   .plainq::before{ content:"\\203A"; color:var(--accent); font-weight:800; }
   .sgist{ font-size:13.5px; line-height:1.5; color:var(--muted); margin:2px 0 10px; max-width:64ch; }
+  .ctx{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 14px; margin:0 0 12px; box-shadow:var(--shadow); }
+  .ctxhead{ font-size:11px; text-transform:uppercase; letter-spacing:.06em; font-weight:700; color:var(--muted); margin-bottom:7px; cursor:default; }
+  .ctxrow{ display:flex; gap:8px; flex-wrap:wrap; }
+  .ctxpill{ background:var(--track); border:1px solid var(--line); border-radius:999px; padding:4px 11px; font-size:12.5px; cursor:default; }
   .esc{ margin-top:10px; border:1px solid var(--line); border-radius:10px; background:var(--track); }
   .esc summary{ cursor:pointer; padding:9px 13px; font-size:13px; font-weight:600; list-style-position:inside; }
   .escbody{ padding:2px 14px 12px; font-size:13px; line-height:1.55; }
@@ -206,6 +210,13 @@
       <p class="intro">This tracker turns live data and current events into a 1&ndash;10 risk level for each
       "story" (a macro risk theme). Nothing here is a forecast or financial advice &mdash; the levels are a
       transparent, rules-based judgement of how much attention each risk warrants right now.</p>
+
+      <h3>What this is &mdash; and isn't</h3>
+      <div class="hgrid">
+        <div class="k">A deliberate lens</div><div>This tracker deliberately monitors <b>structural and interconnection risks that mainstream indicators under-cover</b> &mdash; funding plumbing, chokepoints, hidden leverage, physical constraints. It complements the famous dials (inflation, the Fed, unemployment, equity markets); it does not replace them. Many mainstream forces still enter as <i>inputs</i> through the mechanisms they act on (Fed policy via funding spreads, recession via delinquencies, inflation via food and energy).</div>
+        <div class="k">What the number means</div><div>The level measures <b>how much attention a risk warrants</b> under transparent, fixed rules &mdash; never crash probability, market timing, or a forecast. Coverage is curated, not frozen: the scout proposes gaps weekly in a public queue, every rubric is published config, and the track record is logged where it cannot be edited.</div>
+        <div class="k">The context dials</div><div>The strip of mainstream gauges (VIX, yield curve, credit spreads, financial conditions, unemployment) is shown <b>for contrast only</b> &mdash; those values never feed the score. When they read calm while this gauge reads elevated, the divergence is the information: markets price those dials continuously, while the risks tracked here are the kind history shows get ignored until they rupture.</div>
+      </div>
 
       <h3>"What could this mean if it escalates?"</h3>
       <div class="hgrid">
@@ -744,6 +755,19 @@ function backtestPanel(){
 }
 // Plain-mode "state of the world" header. Generated ENTIRELY from the scored board
 // (levels, trends, the overall) so it can never drift from the numbers.
+// Mainstream context dials: display-only contrast with the structural gauge.
+// Fed from payload.context, which main.py keeps entirely outside the scoring values.
+function contextStrip(d){
+  const c=d.context; if(!c||!c.items||!c.items.some(i=>i.value!=null)) return '';
+  const pills=c.items.filter(i=>i.value!=null).map(i=>{
+    const val=`${i.value}${i.unit==='pp'?' pp':(i.unit||'')}`;
+    const body=`<b>${i.label}</b> ${val}<span class="asof" style="margin-left:5px">${i.as_of||''}</span>`;
+    return `<span class="ctxpill htip" data-tip="${(i.note||'').replace(/"/g,'&quot;')}">${i.url?`<a href="${i.url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">${body}</a>`:body}</span>`;
+  }).join('');
+  return `<div class="ctx"><div class="ctxhead htip" data-tip="${(c.intro||'').replace(/"/g,'&quot;')}">Context \u2014 the mainstream dials <span class="asof">displayed for contrast \u00B7 never part of the score</span></div>
+    <div class="ctxrow">${pills}</div></div>`;
+}
+
 function gistHeader(d){
   const a=d.aggregates, ov=a.overall, bnd=bandName(Math.round(ov)), col=bandColor(Math.round(ov));
   const phrase={Low:'well below its normal range',Moderate:'below normal',Elevated:'a little above normal',
@@ -786,6 +810,7 @@ function gistHeader(d){
     ${anchor}
     <p class="gisttxt">Overall risk is <b>${phrase}</b> ${dir}. The main pressures right now are <b>${driverStr}</b>. ${sev}</p>
     ${movers?`<div class="gistmv"><span class="asof">What changed:</span> ${movers}</div>`:''}
+    <div class="asof" style="margin-top:9px">A deliberate lens: this gauge tracks 21 under-covered structural risks \u2014 a complement to the mainstream dials, not a replacement. It measures <b>attention warranted</b>, never crash probability or timing.</div>
   </div>`;
 }
 const PLAIN_Q={
@@ -820,6 +845,7 @@ function render(d){
   let html = (MODE==='plain') ? gistHeader(d) : '';
   html+=`<div class="agg">${cards}</div>`;
   if(MODE!=='plain' && bk) html+=`<div class="asof" style="margin:-4px 0 8px">Overall is tail-weighted: it blends the breadth average (${bk.breadth_mean}) with the worst cluster (top ${bk.tail_k} stories = ${bk.tail_mean})${bk.correlated_premium>0?`, plus +${bk.correlated_premium} because ${bk.n_high_stories} stories are High at once`:''} — so a broad, correlated shock lifts it where a simple average wouldn't.</div>`;
+  html+=contextStrip(d);
   html+=`<div class="section-label">Heat map \u2014 all stories</div>`+heatStrip(d);
   html+=healthBar(d);
   html+=`<div class="health" style="gap:10px"><span><b>Brief:</b></span>

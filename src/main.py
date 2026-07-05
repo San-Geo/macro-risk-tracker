@@ -165,6 +165,26 @@ def main():
         except Exception as e:
             print(f"  (playbook.yaml skipped: {e})")
 
+    # Mainstream context dials (config/context.yaml): fetched for DISPLAY ONLY.
+    # Deliberately kept outside the `values` dict - they can never touch the score.
+    ctx_path = os.path.join(ROOT, "config", "context.yaml")
+    if os.path.exists(ctx_path) and not args.offline:
+        try:
+            with open(ctx_path) as f:
+                ctx = yaml.safe_load(f) or {}
+            items = []
+            for dl in ctx.get("dials", []):
+                v, dt = fetch.fetch_value_dated(dl.get("source", ""))
+                items.append({"id": dl.get("id"), "label": dl.get("label"),
+                              "value": v, "as_of": dt, "unit": dl.get("unit", ""),
+                              "note": dl.get("note", ""),
+                              "url": enrich.source_url(dl.get("source", ""))})
+            got = sum(1 for i in items if i["value"] is not None)
+            result["context"] = {"intro": ctx.get("intro", ""), "items": items}
+            print(f"  context dials: {got}/{len(items)} fetched (display-only)")
+        except Exception as e:
+            print(f"  (context dials skipped: {e})")
+
     # Attach the agent's latest assessments (this run or last cached) for the dashboard panel.
     alog = agent.load_log()
     if alog.get("assessments"):
