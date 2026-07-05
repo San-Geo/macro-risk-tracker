@@ -1,6 +1,6 @@
 {
   "date": "2026-07-05",
-  "generated_at": "2026-07-05 20:12 UTC",
+  "generated_at": "2026-07-05 20:15 UTC",
   "aggregates": {
     "1": 5.4,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.2
   },
-  "narrative": "**HEADLINE**\nOverall macro risk stands at 6.2 (High), with no intraday changes but three stories at elevated 7-level intensity.\n\n**KEY STORIES AT ELEVATED OR HIGHER**\nNo level changes recorded today. Persistent elevated risks include:\n\n\u2022 **Japan fiscal/JGB/carry trade (Level 7)** \u2013 Structural imbalance in JGB yields and yen carry positioning creates tail risk for rapid deleveraging.\n\n\u2022 **Critical minerals as a weapon (Level 7)** \u2013 Geopolitical control of supply chains remains a structural fault line affecting industrial production.\n\n\u2022 **AI power & grid bottleneck (Level 7)** \u2013 Demand-supply mismatch in electricity infrastructure poses capex and reliability constraints.\n\n\u2022 **Treasury basis trade (Level 6)** \u2013 Hidden leverage in repo-like structures creates opacity in financial plumbing.\n\n\u2022 **Private credit expansion (Level 6)** \u2013 Continued opacity in valuation and liquidity terms elevates cliff risk.\n\n**TO WATCH**\nJapan's carry trade and fiscal deterioration (Level 7) presents the highest contagion risk given global positioning.",
+  "narrative": "**HEADLINE:**\nMacro risk closed at 6.2/10 with no intraday moves; structural vulnerabilities in Japan carry trades, AI infrastructure, and critical minerals remain the dominant concerns.\n\n**NO LEVEL CHANGES RECORDED TODAY** \u2014 the changes array is empty; all elevated or high-risk stories held steady.\n\n**HIGHEST-RISK STORIES (Level 7):**\n- Japan fiscal/JGB/carry trade unwind remains the single largest tail risk for cross-asset volatility.\n- AI power demand and grid capacity constraints pose near-term infrastructure stress.\n- Critical minerals weaponization creates geopolitical leverage points for supply disruption.\n\n**WATCH LINE:**\nJapan's carry-trade structure is the critical pressure point; any BoJ policy signal or yen move could trigger rapid deleveraging across correlated markets.",
   "stories": [
     {
       "id": "s1_basis_trade",
