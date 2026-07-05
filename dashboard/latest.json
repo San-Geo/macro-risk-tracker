@@ -1,6 +1,6 @@
 {
   "date": "2026-07-05",
-  "generated_at": "2026-07-05 19:03 UTC",
+  "generated_at": "2026-07-05 20:12 UTC",
   "aggregates": {
     "1": 5.4,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.2
   },
-  "narrative": "# EOD Macro-Risk Brief | 2026-07-05\n\n**Overall system risk at 6.2 (High): structural vulnerabilities span finance, supply chains, and geopolitics with no material changes today.**\n\nNo risk levels shifted today. Fifteen risks remain elevated or higher across three zones:\n\n\u2022 **Financial leverage**: Treasury basis trades, private credit opacity, and hidden consumer debt create counterparty and valuation exposure.\n\n\u2022 **Geopolitical/supply**: Critical minerals weaponization, ASML lithography concentration, and sea-lane/undersea-cable vulnerability threaten tech and energy security.\n\n\u2022 **Macro imbalances**: Japan's carry-trade and fiscal stress (Level 7), China's deflationary spillover, developing-world debt servicing, CRE maturity walls, and eurozone fragility amplify recession risk.\n\n**Watch: Japan fiscal/JGB/carry trade (Level 7)\u2014unwind dynamics could cascade across FX and credit markets.**",
+  "narrative": "**HEADLINE**\nOverall macro risk stands at 6.2 (High), with no intraday changes but three stories at elevated 7-level intensity.\n\n**KEY STORIES AT ELEVATED OR HIGHER**\nNo level changes recorded today. Persistent elevated risks include:\n\n\u2022 **Japan fiscal/JGB/carry trade (Level 7)** \u2013 Structural imbalance in JGB yields and yen carry positioning creates tail risk for rapid deleveraging.\n\n\u2022 **Critical minerals as a weapon (Level 7)** \u2013 Geopolitical control of supply chains remains a structural fault line affecting industrial production.\n\n\u2022 **AI power & grid bottleneck (Level 7)** \u2013 Demand-supply mismatch in electricity infrastructure poses capex and reliability constraints.\n\n\u2022 **Treasury basis trade (Level 6)** \u2013 Hidden leverage in repo-like structures creates opacity in financial plumbing.\n\n\u2022 **Private credit expansion (Level 6)** \u2013 Continued opacity in valuation and liquidity terms elevates cliff risk.\n\n**TO WATCH**\nJapan's carry trade and fiscal deterioration (Level 7) presents the highest contagion risk given global positioning.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -104,7 +104,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 161.337,
+          "value": 161.329,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -113,7 +113,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/JPY=X",
-          "as_of": "2026-07-03",
+          "as_of": "2026-07-05",
           "provenance": "Market"
         },
         {
@@ -524,7 +524,7 @@
         {
           "id": "peg_deviation",
           "label": "Largest stablecoin max peg deviation (%)",
-          "value": 0.09,
+          "value": 0.08,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,

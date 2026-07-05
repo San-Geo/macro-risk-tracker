@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-05T20:06:22.376268+00:00",
+  "generated": "2026-07-05T20:14:33.807184+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -126,29 +126,29 @@
     }
   },
   "sensitivity": {
-    "as_of_overall": 5.6,
+    "as_of_overall": 6.2,
     "max_story_swing": 2,
-    "max_overall_swing": 0.2,
+    "max_overall_swing": 0.5,
     "movers": [
       {
-        "id": "subprime_auto_dpd",
-        "label": "Subprime auto 60+ day delinquency (%)",
-        "story": "Hidden consumer debt",
-        "set": 2,
+        "id": "usdcny",
+        "label": "USD/CNY (yuan depreciation = higher = risk)",
+        "story": "China's price spillover (deflation or cost-push)",
+        "set": 4,
         "weight": 1.0,
         "story_swing": 2,
-        "set_swing": 0.5,
-        "overall_swing": 0.1
+        "set_swing": 0.6,
+        "overall_swing": 0.5
       },
       {
-        "id": "insurer_exits",
-        "label": "Insurer non-renewals / exits (0 stable / 1 rising / 2 accelerating)",
-        "story": "Insurance retreat",
+        "id": "ig_oas",
+        "label": "US investment-grade OAS (%) - big-issuer proxy",
+        "story": "AI build-out circular financing",
         "set": 2,
         "weight": 1.0,
         "story_swing": 2,
-        "set_swing": 0.5,
-        "overall_swing": 0.1
+        "set_swing": 0.6,
+        "overall_swing": 0.5
       },
       {
         "id": "cat_losses",
@@ -157,18 +157,8 @@
         "set": 2,
         "weight": 1.0,
         "story_swing": 2,
-        "set_swing": 0.5,
+        "set_swing": 0.6,
         "overall_swing": 0.1
-      },
-      {
-        "id": "usdjpy",
-        "label": "USD/JPY (yen strengthening = lower = risk)",
-        "story": "Japan fiscal / JGB / carry trade",
-        "set": 1,
-        "weight": 1.5,
-        "story_swing": 2,
-        "set_swing": 0.4,
-        "overall_swing": 0.2
       },
       {
         "id": "license_flow",
@@ -177,48 +167,58 @@
         "set": 4,
         "weight": 1.5,
         "story_swing": 2,
-        "set_swing": 0.4,
-        "overall_swing": 0.2
+        "set_swing": 0.5,
+        "overall_swing": 0.5
       },
       {
-        "id": "oil_price",
-        "label": "WTI crude oil (USD/bbl, CL=F)",
-        "story": "Sea lanes & undersea cables",
-        "set": 4,
-        "weight": 1.0,
+        "id": "regional_bank_stress",
+        "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
+        "story": "CRE maturity wall / regional banks",
+        "set": 2,
+        "weight": 1.5,
         "story_swing": 2,
-        "set_swing": 0.4,
-        "overall_swing": 0.2
-      },
-      {
-        "id": "new_imf_programs",
-        "label": "New IMF programs / missed coupons (0 calm / 1 rising / 2 cluster)",
-        "story": "Developing-world debt crisis",
-        "set": 3,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.4,
+        "set_swing": 0.5,
         "overall_swing": 0.1
       },
       {
-        "id": "dollar_reserve_share",
-        "label": "USD share of FX reserves (%, IMF COFER)",
-        "story": "Gold / de-dollarization",
+        "id": "oat_bund",
+        "label": "OAT-Bund 10y spread (%)",
+        "story": "France / eurozone fragility",
         "set": 3,
         "weight": 1.0,
         "story_swing": 2,
-        "set_swing": 0.4,
+        "set_swing": 0.5,
         "overall_swing": 0.1
       },
       {
-        "id": "taiwan_tension",
-        "label": "Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis)",
-        "story": "The lithography (ASML) chokepoint",
-        "set": 4,
+        "id": "govt_stability",
+        "label": "Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election)",
+        "story": "France / eurozone fragility",
+        "set": 3,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.5,
+        "overall_swing": 0.1
+      },
+      {
+        "id": "plan_financing",
+        "label": "Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)",
+        "story": "Japan fiscal / JGB / carry trade",
+        "set": 1,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.4,
+        "overall_swing": 0.5
+      },
+      {
+        "id": "direct_lending_default",
+        "label": "Direct-lending default rate (%)",
+        "story": "Private credit's opaque expansion",
+        "set": 1,
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.4,
-        "overall_swing": 0.1
+        "overall_swing": 0.5
       },
       {
         "id": "peg_deviation",
@@ -228,27 +228,27 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.4,
+        "overall_swing": 0.1
+      },
+      {
+        "id": "subprime_auto_dpd",
+        "label": "Subprime auto 60+ day delinquency (%)",
+        "story": "Hidden consumer debt",
+        "set": 2,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.4,
         "overall_swing": 0.0
       },
       {
-        "id": "ig_oas",
-        "label": "US investment-grade OAS (%) - big-issuer proxy",
-        "story": "AI build-out circular financing",
-        "set": 2,
+        "id": "china_ppi",
+        "label": "China PPI YoY (%) - large swing either way is worse",
+        "story": "China's price spillover (deflation or cost-push)",
+        "set": 4,
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.1
-      },
-      {
-        "id": "gpu_refi_stress",
-        "label": "GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)",
-        "story": "AI build-out circular financing",
-        "set": 2,
-        "weight": 1.0,
-        "story_swing": 1,
-        "set_swing": 0.3,
-        "overall_swing": 0.1
+        "overall_swing": 0.4
       }
     ],
     "note": "The overall is tail-weighted, not a flat mean, so a single indicator still can't swing it far - the headline is robust by construction. The leverage that matters is on each STORY: the indicators below are where a wrong fact does the most damage and most deserves cross-checking."

@@ -128,7 +128,7 @@ date,indicator_id,story_id,value,band,provenance,as_of
 2026-07-05,sofr_effr_spread,s1_basis_trade,0.03,0,FRED,2026-07-01
 2026-07-05,move,s1_basis_trade,65.4,0,Market,2026-07-02
 2026-07-05,clearing_status,s1_basis_trade,1,1,Agent,2026-07-03
-2026-07-05,usdjpy,s2_japan,161.337,0,Market,2026-07-03
+2026-07-05,usdjpy,s2_japan,161.329,0,Market,2026-07-05
 2026-07-05,jgb30,s2_japan,3.937,2,MOF,2026-07-02
 2026-07-05,plan_financing,s2_japan,1,1,Agent,2026-07-02
 2026-07-05,hy_oas,s3_private_credit,2.75,0,FRED,2026-07-02
@@ -144,7 +144,7 @@ date,indicator_id,story_id,value,band,provenance,as_of
 2026-07-05,truce_status,s6_rare_earths,1,1,Agent,2026-06-19
 2026-07-05,re_blacklist,s6_rare_earths,1,1,Agent,2026-06-22
 2026-07-05,hree_premium,s6_rare_earths,4.5,2,Agent,2026-06
-2026-07-05,peg_deviation,s7_stablecoins,0.09,0,DefiLlama,2026-07-05
+2026-07-05,peg_deviation,s7_stablecoins,0.08,0,DefiLlama,2026-07-05
 2026-07-05,stablecoin_supply,s7_stablecoins,310.0,0,DefiLlama,2026-07-05
 2026-07-05,genius_impl,s7_stablecoins,1,1,Agent,2026-07-03
 2026-07-05,ig_oas,s8_ai_capex,0.75,0,FRED,2026-07-02

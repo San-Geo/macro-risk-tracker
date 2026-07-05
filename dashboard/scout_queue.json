@@ -197,12 +197,14 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "BOJ Governor Ueda reaffirmed rate-hike commitment on June 25; board member Tamura called for hikes 'every few months' targeting a neutral rate near 2%. Japan 30yr JGB yield sits at 3.88% (up ~97bps YoY) and 10yr at ~2.61%, with USD/JPY around 159\u2013160 \u2014 yen weakening alongside rising domestic yields is an atypical and destabilizing combination.",
-      "as_of": "2026-06-29",
+      "summary": "The Bank of Japan raised its policy rate from 0.75% to 1% in late June 2026 with Deputy Governor Tamura signalling 25bp hikes every few months toward a neutral rate of ~2%; the 10-year JGB yield climbed to 2.7-2.8% (highest since 1996) driven by fiscal expansion fears around PM Takaichi's \u00a5370 trillion public-private investment plan and a weak JGB auction. USD/JPY has weakened to multi-decade lows on wide rate differentials and persistent carry-trade dynamics, while a new dovish BOJ board appointment (Sato) introduces policy uncertainty.",
+      "as_of": "2026-07-03",
       "sources": [
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://tradingeconomics.com/japan/30-year-bond-yield",
-        "https://www.stonex.com/en-us/insights/japan-yield-curve-pressure-threatens-global-carry-trades/"
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/",
+        "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -210,11 +212,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 30yr JGB yield at 3.88% \u2014 up nearly 100bps year-on-year \u2014 is a direct hit to the s2_japan story's 30yr JGB indicator. StoneX notes markets appear 'unwilling to allow both the yen and the long end of the JGB curve to remain simultaneously protected,' and BofA has revised its USD/JPY year-end forecast lower to 152. Combined yen weakness (USD/JPY ~159) and surging super-long yields signal mounting fiscal sustainability concern and growing carry-unwind tail risk. The July 31 BOJ meeting is a live catalyst. The 'Takaichi plan financing clarity' sub-indicator should remain at '1 unclear' given the simultaneous yen weakness and fiscal spending pressure.",
+      "rationale": "Multiple indicators in s2 are simultaneously flashing: 30-year JGB elevated above 2.3-2.5% (tracker needs update), USD/JPY at multi-decade weak yen level (carry unwind risk), and Takaichi plan financing clarity is deteriorating (weak JGB auction + \u00a5370tn spending commitment = moving toward '2 disorderly'). The BOJ rate hike to 1% and hawkish Tamura comments in the past 7 days are the most material new developments for this story since the April hold. Carry-trade unwind risk is acute given yen at 4-decade lows.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "id": "boj-officials-signal-rate-hikes-every-few-months-17d037"
+      "last_seen": "2026-07-05",
+      "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
+      "sightings": 2
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -500,12 +503,13 @@
     },
     "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
       "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
-      "summary": "The US and Iran signed a 14-point memorandum of understanding on ~June 19, removing the naval blockade and reopening the Strait of Hormuz after more than 100 days of closure. However, core issues (nuclear concessions, sanctions relief) remain unresolved in a fragile 60-day negotiating window, and experts warn global inventories are at multi-year lows, meaning energy prices could stay elevated for months even as Brent retreated to ~$70\u201372/bbl by July 1.",
-      "as_of": "2026-07-01",
+      "summary": "Following the Feb 28 US-Israel strikes on Iran and months of Hormuz closure that spiked Brent to ~$120/bbl, a June 17 ceasefire MoU reopened the strait, but Iran re-closed it June 20 citing Israeli actions; US-Iran strikes recurred June 27-29 and talks resumed in Doha. As of July 4, Brent is near $71-74/bbl \u2014 effectively back near pre-war levels \u2014 but the MoU has no enforcement mechanism and Iran retains deterrence control over the waterway.",
+      "as_of": "2026-07-04",
       "sources": [
-        "https://www.atlanticcouncil.org/dispatches/experts-react-the-us-and-iran-just-announced-an-interim-peace-deal-heres-what-we-know-so-far/",
-        "https://www.aljazeera.com/economy/2026/6/16/us-fuel-prices-to-take-months-to-normalise-after-us-iran-deal-to-end-war",
-        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://www.aljazeera.com/economy/2026/6/29/oil-prices-rise-as-us-iranian-strikes-threaten-strait-of-hormuz-reopening",
+        "https://www.cnbc.com/2026/06/26/oil-prices-middle-east-iran-strait-of-hormuz-opec-iraq-wti-brent-crude.html",
+        "https://capital.com/en-int/market-updates/oil-price-forecast-30-06-2026"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -513,12 +517,12 @@
       "target_indicator": "Hormuz/Red Sea status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz/Red Sea status indicator is the direct fit: the strait transitioned from 'closed/contested' to 'nominally reopening' but remains fragile under a 60-day MOU. The oil price component (WTI/Brent) should update to reflect the ~$70-low-$70s range and multi-year-low inventory overhang. The 60-day ceasefire expiry (mid-August) is the key near-term binary risk for s20 and for energy-sensitive stories s2, s18, and s5. The MOU's failure to resolve nuclear mechanics and the ongoing inventory rebuild mean the risk premium in oil has not fully collapsed.",
+      "rationale": "The Hormuz/Red Sea status indicator should be updated from 'contested (1)' toward a conditional '1' \u2014 partially reopened but episodically re-disrupted with no durable enforcement; WTI now ~$69-70 (near pre-crisis), suggesting the oil supply-risk premium has mostly unwound, but ceasefire fragility keeps the indicator at 1 rather than 0. The tit-for-tat strikes of June 27-29 are material new data within the 7-day window. Also feeds s18_food_fertilizer (Hormuz sub-indicator).",
       "status": "pending",
       "first_seen": "2026-07-01",
       "last_seen": "2026-07-05",
       "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
-      "sightings": 3
+      "sightings": 4
     },
     "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
       "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
@@ -1382,12 +1386,13 @@
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
       "headline": "China\u2013Japan Rare-Earth / Dual-Use Controls Expand to Trigger GDP-Level Supply Chain Risk; November 2026 Broader Suspension Expiry Looms",
-      "summary": "Beyond the June 29 entity listings, the broader US-China October 2025 rare-earth suspension\u2014covering extraterritorial controls\u2014expires in November 2026 with no replacement framework agreed. BMI data show heavy rare earth exports (yttrium, dysprosium, terbium) running at 41\u201349% of pre-restriction volumes, with yttrium prices up ~15-fold, threatening aerospace and semiconductor production.",
-      "as_of": "2026-07-03",
+      "summary": "The one-year suspension of China's sweeping Oct-2025 rare earth export controls (including extraterritorial FDPR-style provisions) lapses November 10, 2026, and US yttrium imports remain far below pre-restriction levels (17 tons over 8 months vs. 333 tons pre-restriction); EU licensing approval rates are below 25%. Beijing has also separately tightened dual-use controls targeting Japanese military end-users in early 2026, while a new MIIT domestic enforcement framework (April 2026) tightens production quota compliance with licence-revocation penalties.",
+      "as_of": "2026-07-01",
       "sources": [
-        "https://oilprice.com/Metals/Commodities/Chinas-Rare-Earth-Grip-Holds-Despite-Trump-Xi-Talks.amp.html",
+        "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later",
         "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
-        "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later"
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+        "https://www.spglobal.com/energy/en/news-research/latest-news/metals/012726-rare-earth-supply-bottlenecks-set-to-persist-in-2026"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1395,11 +1400,11 @@
       "target_indicator": "Nov-2025 pause status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The November 2026 expiry of the US-China suspension is now ~4 months away with no deal framework in sight (Trump-Xi May summit produced no commitment). The 'Nov-2025 pause status' indicator should move from '0 extended' toward '1 expiring' given the countdown. Concurrently, the 'Ex-China heavy rare-earth price premium' indicator is in severe stress territory (yttrium ~15x pre-restriction, per BMI). This is a distinct but complementary update to the June 29 Japan entity action flagged above.",
+      "rationale": "The Nov-2025 pause status indicator should now read '1 expiring' \u2014 the pause expires in ~18 weeks with no confirmed extension and underlying licensing flows still discriminatory against US buyers. The CSIS one-year review (May 2026) is the most authoritative recent source confirming US imports have never recovered to pre-restriction levels. Combined with the new Japan dual-use controls and the MIIT enforcement tightening, this story is escalating across multiple indicators simultaneously, warranting tracker elevation.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-04",
-      "sightings": 1,
+      "last_seen": "2026-07-05",
+      "sightings": 2,
       "id": "china-japan-rare-earth-dual-use-controls-expand--f24a9c"
     },
     "strait-of-hormuz-60-day-mou-signed-june-17-iran--eef3e4": {
@@ -1458,13 +1463,13 @@
     },
     "genius-act-implementing-regulations-missed-the-j-dc0151": {
       "headline": "GENIUS Act implementing regulations missed the July 18, 2026 statutory deadline; effective date now defaults to January 2027",
-      "summary": "The GENIUS Act (enacted July 18, 2025) required primary regulators to finalize rules within 12 months; as of early July 2026, no agency \u2014 OCC, Fed, or Treasury/FinCEN \u2014 has issued final rules, meaning the Act's effective date automatically defaults to January 17, 2027. Tether's US reciprocity determination remains unissued as of May 2026, and several large foreign issuers face a compliance cliff.",
+      "summary": "The GENIUS Act (signed July 18, 2025) has a hard effectiveness deadline of 18 months post-enactment (Jan 18, 2027) or 120 days after final rules \u2014 whichever is earlier. As of early July 2026, FinCEN/OFAC issued only a proposed AML rule (April 9, 2026) and the OCC issued a separate NPR; no final rules have been issued. This leaves a ~6-month window to finalise multi-agency rules before statutory default effectiveness, creating implementation friction for issuers seeking the 'permitted' designation and for Treasury-backed reserve demand projections.",
       "as_of": "2026-07-04",
       "sources": [
-        "https://www.spark.money/research/genius-act-stablecoin-regulation-explained",
-        "https://occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
         "https://home.treasury.gov/news/press-releases/sb0435",
-        "https://www.brookings.edu/articles/next-steps-for-genius-payment-stablecoins/"
+        "https://occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
+        "https://www.brookings.edu/articles/next-steps-for-genius-payment-stablecoins/",
+        "https://www.paulhastings.com/insights/crypto-policy-tracker/the-genius-act-a-comprehensive-guide-to-us-stablecoin-regulation"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -1472,11 +1477,11 @@
       "target_indicator": "GENIUS implementation friction",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s7 tracker's 'GENIUS implementation friction' indicator should move from '1 gaps' to '2 problems': the statutory deadline has been missed, no agency has finalized rules, Tether's reciprocity status is unresolved, and the effective date now slips six months to January 2027. This creates regulatory limbo for ~$200bn+ in stablecoin supply and delays the anticipated Treasury-bill demand boost from stablecoin reserve requirements \u2014 relevant to both s7 and s1 (basis trade/Treasury demand). The gap between the law's intent and its operational reality is materially wider than the tracker currently reflects.",
+      "rationale": "The GENIUS implementation friction indicator should be moved from '0 smooth' to '1 gaps': the law passed in July 2025 but as of July 2026 no agency has finalised implementing rules despite the Jan 2027 statutory deadline. Multiple parallel rulemakings (OCC, FinCEN/OFAC, Fed, state equivalency reviews) need to converge. This is a material gap because stablecoin issuers cannot obtain 'permitted' status \u2014 and thus Treasury-demand projections from stablecoin reserve growth cannot materialize \u2014 until rules are final. The Treasury demand implication (~multi-trillion industry) makes this medium-to-high materiality.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-04",
-      "sightings": 1,
+      "last_seen": "2026-07-05",
+      "sightings": 2,
       "id": "genius-act-implementing-regulations-missed-the-j-dc0151"
     },
     "china-s-nov-10-2026-rare-earth-extraterritorial--6281bb": {
@@ -2068,10 +2073,94 @@
       "last_seen": "2026-07-05",
       "sightings": 1,
       "id": "japan-s-takaichi-government-pauses-boj-bond-tape-81e119"
+    },
+    "opec-cohesion-fracturing-uae-already-departed-ir-55da15": {
+      "headline": "OPEC Cohesion Fracturing: UAE Already Departed, Iraq Threatening Exit Over Quota Dispute Amid Post-Hormuz Surge Strategy",
+      "summary": "The UAE formally left OPEC in May 2026 to pursue higher unilateral output; Iraq has publicly demanded a larger production quota and warned of exit if denied, according to CNBC reporting as of June 26, 2026. This OPEC fragmentation occurs as the cartel has approved four consecutive output quota hikes since the Hormuz closure to compensate for lost Persian Gulf supply, putting cartel cohesion under maximum strain at the same moment Iran's deterrence over Hormuz remains intact.",
+      "as_of": "2026-06-26",
+      "sources": [
+        "https://www.cnbc.com/2026/06/26/oil-prices-middle-east-iran-strait-of-hormuz-opec-iraq-wti-brent-crude.html",
+        "https://capital.com/en-int/market-updates/oil-price-forecast-30-06-2026"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "OPEC cohesion stress",
+        "type": "band",
+        "rubric": "0 = cohesive (all major producers aligned on quota); 1 = fracturing (1+ major producer departed or threatening exit, quota discipline breaking); 2 = collapsed (multiple exits, no effective quota coordination)",
+        "sources": [
+          "https://www.cnbc.com/2026/06/26/oil-prices-middle-east-iran-strait-of-hormuz-opec-iraq-wti-brent-crude.html",
+          "https://capital.com/en-int/market-updates/oil-price-forecast-30-06-2026"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "OPEC fragmentation is a material amplifier for s20_sea_lanes: if OPEC discipline collapses while Hormuz remains episodically disrupted, the oil price could swing violently in either direction depending on whether the cartel can coordinate a supply response. This is a structural development (UAE departure is permanent) not captured by the existing WTI/Brent price or Hormuz status indicators. Currently reads '1 fracturing' given UAE exit + Iraq threat.",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "opec-cohesion-fracturing-uae-already-departed-ir-55da15"
+    },
+    "new-fed-chair-warsh-drops-forward-guidance-as-us-cf3e44": {
+      "headline": "New Fed Chair Warsh Drops Forward Guidance as US CPI Hits 4.2% \u2014 Highest Since April 2023, Policy Credibility Gap Widens",
+      "summary": "Following his appointment, new Fed Chair Kevin Warsh eliminated traditional forward guidance at the June 2026 FOMC meeting, switching to pure data-dependence, while the Fed funds rate was held at 3.50-3.75%. US CPI rose 4.2% YoY in May 2026 \u2014 the highest print since April 2023 \u2014 driven by tariff pass-through and energy costs; the shift to opaque central bank communication at precisely the moment inflation is re-accelerating introduces a new institutional credibility risk not present under Powell-era guidance.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+      ],
+      "materiality": "medium",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Fed credibility / re-inflation shock",
+        "why": "A new Fed Chair abandoning forward guidance while CPI re-accelerates to 4.2% creates a dual credibility problem: markets cannot price the policy path, and the inflation-fighting commitment is ambiguous. This is distinct from ordinary rate-cycle risk \u2014 it is an institutional signal about central bank independence and communication that could destabilize rate expectations, Treasury term premiums, and EM carry trades simultaneously. Under Powell, the tracker relied on a known reaction function; under Warsh's pure data-dependence with above-target inflation, uncertainty about the next move (cut, hold, or hike) is genuinely elevated.",
+        "proposed_level": 5,
+        "set": 1,
+        "indicators": [
+          {
+            "label": "US CPI YoY (%)",
+            "type": "value",
+            "rubric": "Target: \u22642.5% benign; 2.5-3.5% elevated; >3.5% acute re-inflation concern",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Fed forward-guidance opacity",
+            "type": "band",
+            "rubric": "0 = explicit dot-plot + statement guidance; 1 = data-dependent with SEP; 2 = pure data-dependence / no forward guidance (current Warsh regime)",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "US 2y-10y Treasury term premium (bp)",
+            "type": "value",
+            "rubric": "Compression <20bp = pricing certainty; 20-60bp = normal uncertainty; >60bp = elevated inflation/policy uncertainty premium",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "No existing story directly captures the combination of institutional Fed-chair transition risk and re-accelerating US inflation at 4.2%. The closest existing story (s1_basis_trade) captures Treasury market structure risk but not policy credibility. This is a new, standalone risk: a Fed that has dropped its communication anchor while facing the highest CPI since April 2023 creates non-linear uncertainty across all USD-denominated asset classes. Assigned level 5/10 (medium) because the re-inflation is supply-driven (partly Hormuz/tariff) and the Warsh shift is recent, but could escalate rapidly if the July CPI print surprises to the upside.",
+      "status": "pending",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "sightings": 1,
+      "id": "new-fed-chair-warsh-drops-forward-guidance-as-us-cf3e44"
     }
   },
   "generated": "2026-07-05",
   "model": "claude-sonnet-4-6",
-  "new_count": 0,
-  "pending_count": 69
+  "new_count": 2,
+  "pending_count": 71
 }
