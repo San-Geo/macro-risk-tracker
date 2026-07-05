@@ -109,6 +109,21 @@ jobs:
           name: pages-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Deploy to Pages
+        id: deploy1
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: pages-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: Wait before deploy retry
+        if: steps.deploy1.outcome == 'failure'
+        run: |
+          echo "First deploy attempt failed - usually a transient Pages 'try again later' (rate limit)."
+          echo "Waiting 90s and retrying once. NOTE: data was already committed; only the site publish is retrying."
+          sleep 90
+
+      - name: Deploy to Pages (retry)
+        if: steps.deploy1.outcome == 'failure'
         uses: actions/deploy-pages@v4
         with:
           artifact_name: pages-${{ github.run_id }}-${{ github.run_attempt }}
