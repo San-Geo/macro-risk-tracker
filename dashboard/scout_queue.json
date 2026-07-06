@@ -76,13 +76,13 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "Six federal agencies (OCC, FDIC, NCUA, Treasury, FinCEN, OFAC) must finalize GENIUS Act stablecoin rules by July 18, 2026\u2014one year after enactment\u2014but as of early July no agency has published final rules, creating legal uncertainty for issuers. A critical wrinkle: Tether's foreign-issuer reciprocity determination has not been issued, potentially forcing USDT off US platforms, and the Federal Reserve has not yet published its proposed rule.",
-      "as_of": "2026-07-05",
+      "summary": "Six federal agencies (OCC, FDIC, NCUA, Treasury, FinCEN, OFAC) must publish final GENIUS Act stablecoin regulations by July 18, 2026 \u2014 exactly one year after enactment \u2014 but all comment periods only closed as of June 9, leaving agencies just ~5\u20136 weeks to reconcile six overlapping proposed frameworks simultaneously. The OCC proposed a $5M capital floor; FDIC confirmed no deposit insurance for token holders; prosecutors and Rogoff/Harris have flagged consumer-protection and systemic-risk gaps. The statutory deadline arriving in 12 days represents a binary implementation-friction event for s7.",
+      "as_of": "2026-07-06",
       "sources": [
         "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors",
-        "https://www.spark.money/research/genius-act-stablecoin-regulation-explained",
+        "https://home.treasury.gov/news/press-releases/sb0435",
         "https://occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
-        "https://home.treasury.gov/news/press-releases/sb0435"
+        "https://en.wikipedia.org/wiki/GENIUS_Act"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -90,12 +90,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "This is a direct, time-stamped update to the GENIUS implementation friction indicator. Six agencies missing final rules on the statutory deadline, the Fed absent, and Tether's status unresolved all point to a reading of '1 gaps' moving toward '2 problems'. A regulatory gap beyond July 18 could create legal ambiguity about which stablecoins can be marketed in the US\u2014material for the $180B+ stablecoin market and its Treasury-bill demand footprint. The 'Total USD stablecoin supply ($bn)' indicator may also be affected if issuers pause expansion pending clarity.",
+      "rationale": "The GENIUS Act's July 18, 2026 statutory deadline \u2014 now 12 days away \u2014 is a hard-clock event for the s7 implementation-friction indicator. With six agencies needing to simultaneously finalize non-conflicting rules from a standing start (all comment periods closed June 9), the risk of missed deadlines, inter-agency inconsistencies, or issuers facing a legal void is material. The indicator should move from 0 to 1 (gaps) given the compressed timeline and prosecutorial criticism of consumer-protection lacunae; a slip to 2 (problems) is plausible if agencies publish inconsistent final rules or the OCC/FDIC frameworks are unreconciled at go-live. This directly affects Treasury demand dynamics as stablecoin supply \u2014 now a meaningful T-bill buyer \u2014 depends on regulatory clarity.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
-      "sightings": 3
+      "sightings": 4
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -175,15 +175,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "A US-Iran MOU signed ~June 18-19 reopened the Strait of Hormuz provisionally for 60 days, with Switzerland follow-on talks ending June 22 agreeing only a 'roadmap.' Iran has already threatened re-closure over Lebanon fighting, and the final deal terms on nuclear enrichment, frozen assets, and Lebanon deconfliction remain unresolved, meaning the ~20% of world oil and LNG trade that transited the Strait before the war faces a hard expiry cliff around mid-August.",
-      "as_of": "2026-07-03",
+      "summary": "The US\u2013Iran Islamabad Memorandum of Understanding signed June 17 established a 60-day negotiating window, but Iran re-closed the strait within days after Israel continued Lebanon strikes. As of early July, WTO data shows a ~95% reduction in crude-oil tanker transits and ~99% reduction in LNG since the February 28 conflict began; the US naval blockade remains, oil remains above $100/bbl, and the UAE's national oil company says full Hormuz flows won't recover until 2027 even with a quick deal.",
+      "as_of": "2026-07-05",
       "sources": [
-        "https://www.csis.org/analysis/united-states-and-iran-announce-deal-end-war-state-play",
-        "https://www.nbcnews.com/world/iran/strait-hormuz-reopen-us-lift-iran-sanctions-14-point-deal-seeking-end-rcna350513",
-        "https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz",
-        "https://www.aljazeera.com/news/2026/6/22/us-iran-agree-on-roadmap-towards-final-deal-in-switzerland-talks",
         "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
-        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+        "https://commonslibrary.parliament.uk/research-briefings/cbp-10636/",
+        "https://hormuzstraitmonitor.com/crisis-timeline/",
+        "https://www.pbs.org/newshour/world/iran-and-u-s-reach-an-initial-deal-to-extend-the-ceasefire-and-open-the-strait-of-hormuz-but-challenges-remain"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -191,12 +189,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Strait of Hormuz is now formally at status '1 contested' \u2014 nominally open under a fragile 60-day MOU but with active Lebanon escalation risk, a hard re-closure threat from Iran, and unresolved nuclear/asset terms. Brent retreated to low-$70s but the 60-day cliff (~mid-August 2026) is a discrete binary risk event. This directly updates the Hormuz/Red Sea status indicator and also propagates into WTI crude and the food/fertilizer story (s18), as ~30% of globally traded fertilizers normally transit the strait. The tracker should move this indicator from '2 closed' to '1 contested' while flagging the imminent cliff.",
+      "rationale": "The Hormuz/Red Sea status indicator in s20 should be set to 2 (effectively closed for practical purposes \u2014 95% crude reduction, 99% LNG reduction per WTO data), with WTI well above tracker norms and the UAE ADNOC CEO explicitly forecasting no full recovery until 2027. The MOU was immediately violated, negotiations are stuck on nuclear terms and sovereignty, and the US blockade remains in force. This is the single highest-materiality live event in the tracker, feeding directly into s18 (fertilizer), s4 (EM debt via energy-price squeeze), and s2 (Japan energy import costs and yen weakness).",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 2
+      "sightings": 3
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
@@ -222,12 +220,13 @@
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
-      "summary": "China added 10 US companies\u2014including at least one rare-earth mining company\u2014to its export control entity list on June 22, 2026, in direct retaliation for the Pentagon's blacklisting of major Chinese tech firms including Alibaba and Baidu. The move signals that despite the May 2026 Trump-Xi summit, the 'national security lane' of economic coercion remains fully active in both capitals.",
+      "summary": "On June 22, 2026, China's MOFCOM added 10 US entities to its export control list with immediate effect, including MP Materials (operator of the only active US rare-earth mine at Mountain Pass, CA) and USA Rare Earth (developing mine-to-magnet capabilities in Texas). The move bars Chinese firms from supplying dual-use items to these entities and prohibits any global entity from transferring Chinese-origin dual-use goods to them \u2014 a sweeping extraterritorial restriction. The action was explicitly retaliatory for the Pentagon's blacklisting of Chinese tech firms including Alibaba and Baidu.",
       "as_of": "2026-06-22",
       "sources": [
         "https://www.aljazeera.com/news/2026/6/22/china-adds-10-us-firms-including-rare-earth-miner-to-export-control-list",
-        "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later",
-        "https://discoveryalert.com.au/china-rare-earth-export-controls-critical-minerals-trade-2026/"
+        "https://intellectia.ai/blog/china-rare-earth-export-controls-june-2026",
+        "https://www.washingtonpost.com/national-security/2026/06/22/china-takes-aim-us-rare-earth-companies-with-new-export-controls/",
+        "https://www.investing.com/news/economy-news/china-targets-us-rare-earth-and-other-firms-with-export-controls-4751711"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -235,12 +234,12 @@
       "target_indicator": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "China adding a US rare-earth miner to its entity list is the mirror-image of the 'US domestic RE producer blacklist' indicator\u2014it is China banning a US rare-earth firm from receiving Chinese RE inputs or technology. This should update the indicator to '1 entity-specific ban' (Chinese-side action targeting a US RE company). It also confirms the Nov-2025 pause status is eroding in practice: the second-wave suspension runs until November 2026 but Chinese licensing approvals remain slow (yttrium exports to US still only 20 tons/month vs. 66+ tons pre-controls), and the entity-list action signals escalating weaponization despite diplomatic cover. Yttrium shortages are now causing aerospace production rationing.",
+      "rationale": "This is a direct, exact hit on the 'US domestic RE producer blacklist' indicator in s6. MP Materials and USA Rare Earth are the two most strategically important non-Chinese rare-earth producers in the US; their blacklisting by MOFCOM on June 22 moves the indicator from 0 (none) to 1 (entity-specific ban). The action also cuts off these companies from Chinese-origin equipment and processing know-how needed to scale up \u2014 directly undermining the US alternative-supply strategy just as the November 2026 suspension-expiry clock is ticking. It is the most operationally damaging rare-earth development in the past 7 days.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "id": "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6",
-      "sightings": 2
+      "sightings": 3
     },
     "hyperscaler-ai-capex-approaches-800bn-in-2026-67-03d0a0": {
       "headline": "Hyperscaler AI capex approaches $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027 \u2014 revenue gap concern widens",
@@ -894,12 +893,12 @@
     },
     "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec": {
       "headline": "Iran war energy shock drives Hormuz fertilizer disruption; Gulf fertilizer exports (especially Qatar LNG-linked urea) severely curtailed since March 2026",
-      "summary": "The Strait of Hormuz crisis (Feb 28 \u2013 June 18, 2026) severed flows from the Persian Gulf, which normally supplies ~30-35% of global urea exports and ~20-30% of ammonia exports. Even with the provisional reopening, backlogs of ~20,000 mariners and 2,000 ships stranded in the Gulf and damaged energy infrastructure mean full fertilizer flow restoration will take months, sustaining elevated food-price risks heading into the northern hemisphere planting/harvest season.",
-      "as_of": "2026-07-03",
+      "summary": "The Hormuz crisis has produced a near-complete halt to LNG and crude transits (~99% and ~95% reductions, respectively), with Gulf refineries directly damaged by Iranian counter-strikes. The IEA's 32 member states have released 400 million barrels of strategic reserves, but stock coverage is critically low in Asian import-dependent nations (India, Philippines, Vietnam). Ammonia and urea production \u2014 heavily concentrated in Qatar, Saudi Arabia, and UAE \u2014 faces direct feedstock and export disruption, hitting the Hormuz/Gulf fertilizer-input indicator in s18 at its most sensitive point ahead of Northern Hemisphere autumn planting.",
+      "as_of": "2026-07-05",
       "sources": [
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
-        "https://www.npr.org/2026/06/18/nx-s1-5863517/trump-iran-deal-blockade-strait-hormuz",
-        "https://www.pbs.org/newshour/world/iran-and-u-s-reach-an-initial-deal-to-extend-the-ceasefire-and-open-the-strait-of-hormuz-but-challenges-remain"
+        "https://commonslibrary.parliament.uk/research-briefings/cbp-10636/",
+        "https://www.oecd.org/en/publications/2026/06/oecd-economic-outlook-volume-2026-issue-1_8be0dba6/full-report/general-assessment-of-the-macroeconomic-situation_fe9bdcd6.html",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -907,12 +906,12 @@
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz closure from Feb 28 to June 18 was the most severe fertilizer supply disruption since the 2022 Russia shock, affecting ~30% of globally traded urea and ~20-30% of ammonia. The provisional reopening moves the indicator from '2 cut' toward '1 disrupted' (not '0 clear') because: (a) the 60-day clause creates re-closure risk, (b) ~20,000 mariners and 2,000 ships were stranded and backlogs persist, (c) Gulf energy infrastructure was damaged. This directly elevates s18's 'Hormuz/Gulf disruption' indicator and keeps 'food-price trend' elevated. The northern hemisphere is mid-season, so delayed fertilizer flows have near-term crop yield implications.",
+      "rationale": "The Hormuz/Gulf indicator in s18 should be moved to 2 (cut). Qatar is the world's largest LNG exporter and a top-3 ammonia/urea producer; Saudi Arabia and UAE contribute significantly to Gulf-origin nitrogen fertilizers. The near-complete cessation of Hormuz shipping (WTO: 99% LNG reduction, 95% crude reduction) since early March has directly disrupted feedstock access and export logistics for Gulf fertilizer producers. With IEA emergency reserves now largely drawn down (400M bbl released) and Asian stock coverage critically low, a secondary food-security shock through fertilizer unavailability is now a live tail risk heading into autumn planting. This links back to s4 (EM food-import bill), s20 (sea lanes), and s12 (gold/de-dollarization pressure from commodity-exporting EMs).",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "id": "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec",
-      "sightings": 4
+      "sightings": 5
     },
     "japan-s-energy-import-crisis-deepens-as-hormuz-c-e531e3": {
       "headline": "Japan's energy import crisis deepens as Hormuz closure compounds BOJ policy bind \u2014 new macro feedback loop not captured in existing indicators",
@@ -2266,10 +2265,101 @@
       "last_seen": "2026-07-05",
       "sightings": 1,
       "id": "bis-annual-report-and-boe-governor-bailey-at-sin-acf397"
+    },
+    "japan-30-year-jgb-yield-hits-4-04-july-2-and-yen-b4485a": {
+      "headline": "Japan 30-year JGB yield hits 4.04% (July 2) and yen slides to 40-year low; record \u00a511.73tn MoF intervention failed to hold",
+      "summary": "Japan's 30-year JGB yield reached 4.04% on July 2, 2026, up ~108bps year-on-year, while the 10-year topped 2.75%\u20132.8% (a 29-year high). The yen has weakened to its lowest level since 1986, and Japan's MoF deployed a record \u00a511.73 trillion ($73.35bn) FX intervention in April\u2013May that failed to sustain a rally; Bank of America lowered its year-end USD/JPY forecast to 152 from 157 but the pair is threatening 160. The Takaichi government's \u00a5370 trillion investment strategy is stoking fiscal concern, with sustained bond selling pressure and a weak 10-year auction this week reinforcing the disorderly backdrop.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://tradingeconomics.com/japan/30-year-bond-yield",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.lazardassetmanagement.com/us/en_us/research-insights/market-insights/beyond-the-numbers/july-2026",
+        "https://asia.nikkei.com/business/markets/bonds/japan-long-term-bond-yields-hit-record-highs-amid-fiscal-concerns"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Takaichi fiscal plan JGB supply impulse (\u00a5tn additional issuance vs. prior medium-term fiscal plan)",
+        "type": "value",
+        "rubric": "Measure the incremental JGB gross issuance implied by the Takaichi \u00a5370tn investment plan vs. the prior Cabinet Office medium-term fiscal framework. Values: <\u00a510tn incremental = 0 (ok); \u00a510\u201330tn = 1 (unclear/pressured); >\u00a530tn or no credible offset = 2 (disorderly). Supplement with 30-year JGB yield level: <3.0% = 0; 3.0\u20133.5% = 1; >3.5% = 2. Current: 4.04% \u2192 score 2.",
+        "sources": [
+          "https://tradingeconomics.com/japan/30-year-bond-yield",
+          "https://www.lazardassetmanagement.com/us/en_us/research-insights/market-insights/beyond-the-numbers/july-2026",
+          "https://asia.nikkei.com/business/markets/bonds/japan-long-term-bond-yields-hit-record-highs-amid-fiscal-concerns"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2 indicator 'Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)' is already present but is qualitative. The 30-year JGB yield at 4.04% and record failed MoF FX intervention signal that the market has already rendered a verdict of '2 disorderly' on fiscal financing, yet the tracker lacks a quantitative anchor to that judgment. A \u00a5-denominated JGB supply impulse metric linked to the \u00a5370tn plan would make the indicator more actionable and harder to game with diplomatic language. The 30-year yield is the key transmission mechanism to global carry trade unwind risk.",
+      "status": "pending",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "sightings": 1,
+      "id": "japan-30-year-jgb-yield-hits-4-04-july-2-and-yen-b4485a"
+    },
+    "china-s-new-outbound-investment-regulations-effe-63f730": {
+      "headline": "China's new outbound investment regulations (effective July 1, 2026) impose sweeping controls on cross-border transfers of sensitive tech, data, and goods \u2014 a new structural chokepoint",
+      "summary": "On July 1, 2026, China's new outbound investment regulations took effect, requiring prior authorization for cross-border transfers of restricted goods, technology, services, and data by Chinese-owned or China-domiciled entities. This creates a new compliance and supply-chain severance mechanism that goes beyond export controls to cover investment flows and data transfers, institutionalizing Beijing's economic-coercion toolkit in ways that no existing tracker indicator fully captures.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.investmentmonitor.ai/news/china-us-firms-export-controls-blacklist/",
+        "https://finance.yahoo.com/economy/policy/articles/china-puts-ten-us-firms-123937862.html",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+      ],
+      "materiality": "medium",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "China outbound investment & data-transfer controls as economic coercion",
+        "why": "China's July 1, 2026 outbound investment regulations create a new category of cross-border restriction that is distinct from export controls (which govern outbound goods) or import tariffs. By requiring prior authorization for overseas investment and cross-border data/technology transfers by any entity within China's jurisdiction, Beijing has effectively weaponized capital outflows and IP transfers as a coercion tool. This threatens JV structures, technology licensing, cloud-data flows, and supply-chain financing for multinationals with significant China footprints. It also raises the risk of forced technology transfers in reverse (retain access = share IP). No existing story in the tracker captures this 'investment coercion' vector \u2014 s6 covers minerals, s19 covers lithography export controls, but neither covers the investment/data-transfer dimension affecting all sectors simultaneously.",
+        "proposed_level": 6,
+        "set": "Set 4",
+        "indicators": [
+          {
+            "label": "China outbound investment restriction scope (0 narrow/sectoral / 1 broad/multi-sector / 2 sweeping/all-sector with retroactive review)",
+            "type": "band",
+            "rubric": "Score 0 if restrictions cover only defense-adjacent sectors with clear carve-outs for civilian commerce; score 1 if restrictions cover technology, data, and critical materials across multiple civilian sectors requiring prior authorization; score 2 if restrictions are applied retroactively, include broad data-transfer obligations, and are actively enforced against third-country entities. Current: 1 (multi-sector, data + tech + goods, effective July 1 2026).",
+            "sources": [
+              "https://www.investmentmonitor.ai/news/china-us-firms-export-controls-blacklist/",
+              "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Multinational JV restructuring / China-exit announcements (count per quarter, rolling)",
+            "type": "value",
+            "rubric": "Track announced exits, forced restructurings, or JV wind-downs citing China regulatory risk per quarter. 0\u20135 = 0 (calm); 6\u201315 = 1 (rising); >15 or any Fortune 100 forced exit = 2 (acute). Proxy for actual economic transmission of investment coercion.",
+            "sources": [
+              "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
+              "https://finance.yahoo.com/economy/policy/articles/china-puts-ten-us-firms-123937862.html"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "Cross-border data-transfer enforcement actions by MOFCOM/CAC (0 none / 1 warning-stage / 2 active penalties)",
+            "type": "band",
+            "rubric": "Score 0 if no enforcement actions against non-Chinese entities for cross-border data transfer violations; score 1 if formal investigations or warning notices issued; score 2 if financial penalties or operational suspensions imposed on multinationals for data-transfer non-compliance. Current: 0 (rules just took effect July 1).",
+            "sources": [
+              "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+            ],
+            "suggested_weight": 0.2
+          }
+        ]
+      },
+      "rationale": "The July 1, 2026 outbound investment regulations represent a qualitatively new economic coercion tool \u2014 distinct from export controls \u2014 that affects the full universe of multinationals with China operations, not just critical-mineral or semiconductor supply chains. The existing tracker has no story that captures investment-coercion risk (as opposed to goods-export coercion). Given escalating US\u2013China tensions (Pentagon blacklists, MOFCOM counter-blacklists, rare-earth controls), this mechanism is likely to be progressively weaponized and deserves a dedicated story. Proposed level 6 reflects significant structural risk that is currently latent but could transmit rapidly via corporate earnings shocks, FDI retrenchment, and supply-chain disruption.",
+      "status": "pending",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "sightings": 1,
+      "id": "china-s-new-outbound-investment-regulations-effe-63f730"
     }
   },
-  "generated": "2026-07-05",
+  "generated": "2026-07-06",
   "model": "claude-sonnet-4-6",
   "new_count": 2,
-  "pending_count": 74
+  "pending_count": 76
 }

@@ -7,9 +7,9 @@
       "set": 1,
       "opened": "2026-07-03",
       "open_level": 7,
-      "peak_level": 7,
-      "peak_date": "2026-07-04",
-      "last_seen": "2026-07-05",
+      "peak_level": 8,
+      "peak_date": "2026-07-06",
+      "last_seen": "2026-07-06",
       "status": "open",
       "drivers_at_open": [
         "30-year JGB yield (%): 3.937 (band 2)",
@@ -28,7 +28,7 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-07-04",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "status": "open",
       "drivers_at_open": [
         "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen): 1 (band 1)",
@@ -49,12 +49,31 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-07-04",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "status": "open",
       "drivers_at_open": [
         "Grid interconnection wait (months): 60.0 (band 2)",
         "Data-center moratoria / backlash (0 none / 1 spreading / 2 widespread): 2 (band 2)",
         "AI power-demand pressure (0 easing / 1 tight / 2 acute): 2 (band 2)"
+      ],
+      "closed": null,
+      "grade": null,
+      "grade_note": null
+    },
+    {
+      "id": "s3_private_credit-2026-07-06",
+      "story_id": "s3_private_credit",
+      "story": "Private credit's opaque expansion",
+      "set": 1,
+      "opened": "2026-07-06",
+      "open_level": 8,
+      "peak_level": 8,
+      "peak_date": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "status": "open",
+      "drivers_at_open": [
+        "Direct-lending default rate (%): 6.0 (band 2)",
+        "Large-fund redemption gates (0 none / 1 isolated / 2 widespread): 2 (band 2)"
       ],
       "closed": null,
       "grade": null,
