@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-06",
-  "generated_at": "2026-07-06 15:04 UTC",
+  "date": "2026-07-07",
+  "generated_at": "2026-07-07 14:07 UTC",
   "aggregates": {
     "1": 6.0,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 6.8
   },
-  "narrative": "# EOD Macro Risk Brief | 2026-07-06\n\n**Overall risk elevated to 6.8; two high-risk stories shifted materially higher.**\n\n\u2022 **Japan fiscal/JGB/carry trade** (7\u21928, High): 30-year JGB yield rose to 3.94% and Takaichi plan financing clarity deteriorated to \"disorderly\"\u2014dual pressures threatening yen carry unwind and domestic debt sustainability.\n\n\u2022 **Private credit's opaque expansion** (6\u21928, High): Direct-lending default rate hit 6.0% and large-fund redemption gates now widespread\u2014signals stress in $2.5tr+ market with limited transparency and potential liquidity cascades.\n\n**Highest priority watch:** Private credit redemption gates; widespread gating in a market lacking central clearing or real-time pricing creates tail-risk contagion to broader credit.",
+  "narrative": "# EOD Macro-Risk Brief | 7 July 2026\n\n**Headline:** Overall macro risk elevated at 6.8 with no intraday level changes; structural vulnerabilities in Japan carry trade, private credit, and critical minerals remain the highest-risk vectors.\n\n**Key Stories (No Changes Today):**\nNo risk levels shifted during the session.\n\n**Elevated & High-Risk Exposures Currently Active:**\n- **Japan fiscal/JGB/carry trade (Level 8, High)** and **Private credit expansion (Level 8, High)** represent the twin systemic peaks; both involve hidden leverage and opacity in asset pricing.\n- **Critical minerals (Level 7, High)** and **AI power/grid bottleneck (Level 7, High)** pose structural supply constraints with geopolitical and infrastructure dimensions.\n- Six stories at Level 6 (Treasury basis, developing-world debt, China deflation spillover, AI financing, hidden consumer debt, food fragility, lithography, sea lanes) reflect distributed tail risks.\n\n**Watch Most Closely:** Japan fiscal/JGB/carry trade unwinding remains the single highest-risk trigger for rapid cross-asset repricing given leverage concentration and global carry exposure.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -23,7 +23,7 @@
         {
           "id": "sofr_effr_spread",
           "label": "SOFR minus EFFR (%)",
-          "value": 0.01,
+          "value": 0.0,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -32,7 +32,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/SOFR",
-          "as_of": "2026-07-02",
+          "as_of": "2026-07-06",
           "provenance": "FRED"
         },
         {
@@ -69,7 +69,7 @@
       "summary": "Hedge funds run a highly leveraged arbitrage between Treasury cash bonds and futures. It is a major source of liquidity, but a spike in funding costs or Treasury volatility can force rapid unwinds, as briefly happened in March 2020 and again in 2025.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=6",
       "spark": [
-        5,
+        6,
         6,
         6,
         6,
@@ -88,7 +88,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 0
       }
     },
@@ -104,7 +104,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 162.371,
+          "value": 162.003,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -113,13 +113,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/JPY=X",
-          "as_of": "2026-07-06",
+          "as_of": "2026-07-07",
           "provenance": "Market"
         },
         {
           "id": "jgb30",
           "label": "30-year JGB yield (%)",
-          "value": 3.94,
+          "value": 3.976,
           "band": 2,
           "baseline_band": 0,
           "weight": 1.0,
@@ -128,7 +128,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/index.htm",
-          "as_of": "2026-07-03",
+          "as_of": "2026-07-06",
           "provenance": "MOF"
         },
         {
@@ -159,17 +159,17 @@
         6,
         6,
         6,
-        6,
         7,
         7,
         7,
         7,
         7,
+        8,
         8
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 2
       }
     },
@@ -185,7 +185,7 @@
         {
           "id": "hy_oas",
           "label": "US high-yield OAS (%, \u2248310bps)",
-          "value": 2.75,
+          "value": 2.72,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -194,7 +194,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
-          "as_of": "2026-07-02",
+          "as_of": "2026-07-06",
           "provenance": "FRED"
         },
         {
@@ -231,7 +231,6 @@
       "summary": "Lending has migrated from banks to lightly regulated private-credit funds, where assets are marked infrequently and leverage is opaque. Defaults are rising from a low base; the risk is that losses surface suddenly rather than being visible in real time.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=10",
       "spark": [
-        5,
         6,
         6,
         6,
@@ -246,11 +245,12 @@
         6,
         6,
         6,
+        8,
         8
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 2
       }
     },
@@ -266,7 +266,7 @@
         {
           "id": "dxy",
           "label": "Broad US dollar index (FRED DTWEXBGS)",
-          "value": 120.8866,
+          "value": 120.6902,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -275,13 +275,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/DTWEXBGS",
-          "as_of": "2026-06-26",
+          "as_of": "2026-07-02",
           "provenance": "FRED"
         },
         {
           "id": "real10",
           "label": "US 10y real yield (TIPS, %)",
-          "value": 2.25,
+          "value": 2.26,
           "band": 1,
           "baseline_band": 0,
           "weight": 1.0,
@@ -290,7 +290,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/DFII10",
-          "as_of": "2026-07-01",
+          "as_of": "2026-07-02",
           "provenance": "FRED"
         },
         {
@@ -320,7 +320,7 @@
         5,
         5,
         5,
-        5,
+        6,
         6,
         6,
         6,
@@ -331,7 +331,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 1
       }
     },
@@ -362,7 +362,7 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.7842,
+          "value": 6.7805,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -371,7 +371,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CNY=X",
-          "as_of": "2026-07-06",
+          "as_of": "2026-07-07",
           "provenance": "Market"
         },
         {
@@ -412,7 +412,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 0
       }
     },
@@ -492,7 +492,7 @@
         6,
         6,
         6,
-        6,
+        7,
         7,
         7,
         7,
@@ -507,9 +507,9 @@
         7
       ],
       "trend": {
-        "prev": 6,
-        "since": "2026-06-29",
-        "change": 1
+        "prev": 7,
+        "since": "2026-06-30",
+        "change": 0
       }
     },
     {
@@ -524,7 +524,7 @@
         {
           "id": "peg_deviation",
           "label": "Largest stablecoin max peg deviation (%)",
-          "value": 0.11,
+          "value": 0.08,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -533,13 +533,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-07-06",
+          "as_of": "2026-07-07",
           "provenance": "DefiLlama"
         },
         {
           "id": "stablecoin_supply",
           "label": "Total USD stablecoin supply ($bn)",
-          "value": 310.0,
+          "value": 310.6,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -548,7 +548,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-07-06",
+          "as_of": "2026-07-07",
           "provenance": "DefiLlama"
         },
         {
@@ -589,7 +589,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 0
       }
     },
@@ -614,7 +614,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
-          "as_of": "2026-07-02",
+          "as_of": "2026-07-06",
           "provenance": "FRED"
         },
         {
@@ -670,7 +670,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 0
       }
     },
@@ -717,10 +717,10 @@
       "summary": "A wall of commercial real-estate loans - especially office - matures into higher rates and lower valuations, concentrated at regional banks. Rising delinquencies and 'extend and pretend' practices defer, rather than resolve, the losses.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=20",
       "spark": [
+        6,
+        6,
+        6,
         5,
-        6,
-        6,
-        6,
         5,
         5,
         5,
@@ -735,9 +735,9 @@
         5
       ],
       "trend": {
-        "prev": 6,
-        "since": "2026-06-29",
-        "change": -1
+        "prev": 5,
+        "since": "2026-06-30",
+        "change": 0
       }
     },
     {
@@ -763,7 +763,7 @@
           "source_url": "https://fred.stlouisfed.org/series/IRLTLT01FRM156N",
           "as_of": "2026-05-01",
           "provenance": "FRED",
-          "age_days": 66,
+          "age_days": 67,
           "stale_for_cadence": true
         },
         {
@@ -803,7 +803,7 @@
         4,
         4,
         4,
-        4,
+        5,
         5,
         5,
         5,
@@ -818,9 +818,9 @@
         5
       ],
       "trend": {
-        "prev": 4,
-        "since": "2026-06-29",
-        "change": 1
+        "prev": 5,
+        "since": "2026-06-30",
+        "change": 0
       }
     },
     {
@@ -846,7 +846,7 @@
           "source_url": "https://wolfstreet.com/2026/05/19/auto-loan-balances-debt-to-income-ratio-and-delinquencies-of-subprime-prime-auto-loans-in-q1-2026-how-bad-is-it/",
           "as_of": "2026-02",
           "provenance": "Agent",
-          "age_days": 128,
+          "age_days": 129,
           "stale_for_cadence": true
         },
         {
@@ -883,12 +883,12 @@
       "summary": "Beneath headline figures, subprime auto and buy-now-pay-later delinquencies are climbing, and the labor market is the swing factor. A rise in unemployment would convert stretched-but-current borrowers into defaults quickly.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=22",
       "spark": [
-        5,
         6,
         6,
         6,
         5,
         5,
+        6,
         6,
         6,
         6,
@@ -902,7 +902,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 0
       }
     },
@@ -918,7 +918,7 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4145.7002,
+          "value": 4173.2998,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -927,7 +927,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/GC=F",
-          "as_of": "2026-07-06",
+          "as_of": "2026-07-07",
           "provenance": "Market"
         },
         {
@@ -944,7 +944,7 @@
           "source_url": "https://data.imf.org/en/news/imf%20data%20brief%20march%2027",
           "as_of": "2025Q4",
           "provenance": "Agent",
-          "age_days": 190,
+          "age_days": 191,
           "stale_for_cadence": true
         },
         {
@@ -966,7 +966,7 @@
       "summary": "Central banks are accumulating gold and building non-dollar settlement arrangements at the margin. It is a slow erosion rather than a sudden shift, but reserve 'weaponization' events can accelerate diversification away from the dollar.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=33",
       "spark": [
-        3,
+        4,
         4,
         4,
         4,
@@ -985,7 +985,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 0
       }
     },
@@ -1027,7 +1027,7 @@
           "source_url": "https://fred.stlouisfed.org/series/DRSFRMACBS",
           "as_of": "2026-01-01",
           "provenance": "FRED",
-          "age_days": 186,
+          "age_days": 187,
           "stale_for_cadence": true
         },
         {
@@ -1049,7 +1049,7 @@
       "summary": "Insurers are retreating from climate-exposed markets through non-renewals and exits, shifting risk onto homeowners and state backstops. Severe catastrophe seasons strain the system and feed into housing and mortgage stress.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=25",
       "spark": [
-        5,
+        4,
         4,
         4,
         4,
@@ -1068,7 +1068,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 0
       }
     },
@@ -1133,9 +1133,9 @@
         4,
         4,
         4,
+        5,
+        5,
         4,
-        5,
-        5,
         4,
         4,
         4,
@@ -1149,7 +1149,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 0
       }
     },
@@ -1176,7 +1176,7 @@
           "source_url": "https://emp.lbl.gov/queues",
           "as_of": "2025-12-31",
           "provenance": "Agent",
-          "age_days": 190,
+          "age_days": 191,
           "stale_for_cadence": true
         },
         {
@@ -1218,7 +1218,7 @@
         6,
         6,
         6,
-        6,
+        7,
         7,
         7,
         7,
@@ -1231,9 +1231,9 @@
         7
       ],
       "trend": {
-        "prev": 6,
-        "since": "2026-06-29",
-        "change": 1
+        "prev": 7,
+        "since": "2026-06-30",
+        "change": 0
       }
     },
     {
@@ -1248,7 +1248,7 @@
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.1975,
+          "value": 6.2435,
           "band": 2,
           "baseline_band": 1,
           "weight": 0.5,
@@ -1257,7 +1257,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/HG=F",
-          "as_of": "2026-07-06",
+          "as_of": "2026-07-07",
           "provenance": "Market"
         },
         {
@@ -1313,7 +1313,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 0
       }
     },
@@ -1375,7 +1375,7 @@
       "summary": "Water is systematically underpriced yet essential to chip fabrication, agriculture, and power. Droughts in key hubs (Taiwan's fabs, major farming regions) and transboundary disputes can disrupt supply chains in ways markets rarely price in advance.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=54",
       "spark": [
-        4,
+        5,
         5,
         5,
         5,
@@ -1394,7 +1394,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 0
       }
     },
@@ -1457,11 +1457,11 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=56",
       "spark": [
         6,
-        6,
         7,
         6,
         7,
         7,
+        6,
         6,
         6,
         6,
@@ -1475,7 +1475,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 0
       }
     },
@@ -1540,7 +1540,7 @@
         5,
         5,
         5,
-        5,
+        6,
         6,
         6,
         6,
@@ -1555,9 +1555,9 @@
         6
       ],
       "trend": {
-        "prev": 5,
-        "since": "2026-06-29",
-        "change": 1
+        "prev": 6,
+        "since": "2026-06-30",
+        "change": 0
       }
     },
     {
@@ -1587,7 +1587,7 @@
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 69.01,
+          "value": 69.94,
           "band": 0,
           "baseline_band": 1,
           "weight": 1.0,
@@ -1596,7 +1596,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CL=F",
-          "as_of": "2026-07-06",
+          "as_of": "2026-07-07",
           "provenance": "Market"
         },
         {
@@ -1637,7 +1637,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 0
       }
     },
@@ -1653,7 +1653,7 @@
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 16.08,
+          "value": 15.96,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -1662,7 +1662,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^VIX",
-          "as_of": "2026-07-06",
+          "as_of": "2026-07-07",
           "provenance": "Market"
         },
         {
@@ -1718,7 +1718,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-06-29",
+        "since": "2026-06-30",
         "change": 0
       }
     }
@@ -3268,17 +3268,17 @@
     "live_total": 19,
     "fell_back": 0,
     "agent_last": "2026-07-06",
-    "agent_days_ago": 0,
+    "agent_days_ago": 1,
     "agent_flags": 35,
     "offline": false
   },
   "aggregates_trend": {
     "overall": {
-      "prev": 5.6,
-      "since": "2026-06-29",
-      "change": 1.2,
-      "crosses_methodology": true,
-      "ref_version": "1.x",
+      "prev": 7.0,
+      "since": "2026-06-30",
+      "change": -0.2,
+      "crosses_methodology": false,
+      "ref_version": "2.0",
       "version": "2.0"
     }
   },
@@ -3325,7 +3325,7 @@
             "label": "US high-yield OAS (%, \u2248310bps)",
             "story": "Private credit's opaque expansion",
             "band": 0,
-            "value": 2.75
+            "value": 2.72
           }
         ]
       }
@@ -3773,8 +3773,8 @@
       {
         "id": "vix",
         "label": "VIX",
-        "value": 15.81,
-        "as_of": "2026-07-03",
+        "value": 15.57,
+        "as_of": "2026-07-06",
         "unit": "",
         "note": "Expected US stock-market volatility - the most-watched fear gauge. Calm markets usually sit below ~20.",
         "url": "https://fred.stlouisfed.org/series/VIXCLS"
@@ -3783,7 +3783,7 @@
         "id": "curve",
         "label": "10y-2y curve",
         "value": 0.35,
-        "as_of": "2026-07-02",
+        "as_of": "2026-07-06",
         "unit": "pp",
         "note": "10-year minus 2-year Treasury yield. A negative (inverted) reading has historically preceded US recessions - with long and variable lags.",
         "url": "https://fred.stlouisfed.org/series/T10Y2Y"
@@ -3791,8 +3791,8 @@
       {
         "id": "hy_oas",
         "label": "High-yield spread",
-        "value": 2.75,
-        "as_of": "2026-07-02",
+        "value": 2.72,
+        "as_of": "2026-07-06",
         "unit": "pp",
         "note": "The extra yield markets demand to lend to risky companies - the market's own price of credit stress. Calm is roughly below ~4.",
         "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"

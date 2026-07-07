@@ -481,13 +481,10 @@
     },
     "china-blacklists-mp-materials-usa-rare-earth-ent-5daba7": {
       "headline": "China blacklists MP Materials & USA Rare Earth \u2014 entity-specific export control ban on key US domestic RE producers (June 22, 2026)",
-      "summary": "China's MOFCOM added MP Materials and USA Rare Earth (alongside 8 other US defence firms) to its export control list on June 22, barring global transfers of Chinese-origin dual-use goods to these entities \u2014 directly targeting the two US-government-backed companies meant to reduce American dependency on Chinese rare earths. The move signals Beijing's willingness to escalate from licensing hurdles toward categorical entity blacklisting, and raises the spectre of sector-wide restrictions ahead of the November 10, 2026 suspension expiry.",
-      "as_of": "2026-06-22",
+      "summary": "In June 2026 China added 10 US entities\u2014including key domestic rare-earth producers MP Materials and USA Rare Earth\u2014to its export control entity list, barring them from receiving Chinese-origin dual-use materials anywhere in the world. Effective July 1, 2026, MOFCOM Announcement No. 26 formalised a public whistleblower mechanism for reporting strategic mineral export control violations, signalling active and broadening enforcement beyond the bilateral diplomatic level.",
+      "as_of": "2026-07-01",
       "sources": [
-        "https://www.aljazeera.com/news/2026/6/22/china-adds-10-us-firms-including-rare-earth-miner-to-export-control-list",
-        "https://intellectia.ai/blog/china-rare-earth-export-controls-june-2026",
-        "https://discoveryalert.com.au/china-rare-earth-export-controls-processing-chokepoint-2026/",
-        "https://www.stocktitan.net/articles/china-rare-earth-export-controls-mp-usa-rare-earth-june-2026"
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -495,20 +492,20 @@
       "target_indicator": "US domestic RE producer blacklist",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The June 22 MOFCOM action directly triggers the 's6_rare_earths' indicator 'US domestic RE producer blacklist', shifting it from 0 (none) to 1 (entity-specific ban). MP Materials and USA Rare Earth are the two flagship US-government-backed domestic RE producers; their blacklisting imposes extraterritorial compliance obligations on any global firm transferring Chinese-origin dual-use materials to them, materially raising financing and equipment-sourcing risk. The Nov-10 suspension clock is also now live, making the 'Nov-2025 pause status' sub-indicator increasingly relevant.",
+      "rationale": "The s6_rare_earths story already carries 'US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)'. China's June 2026 action adds the two largest US rare-earth miners to an entity-list that also prohibits third-country transfer of Chinese-origin inputs to those entities\u2014this is a direct move from 0 to 1 (entity-specific ban). Combined with the live MOFCOM reporting mechanism as of July 1, enforcement posture is materially more coercive, warranting an immediate indicator update.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
-      "id": "china-blacklists-mp-materials-usa-rare-earth-ent-5daba7"
+      "last_seen": "2026-07-07",
+      "id": "china-blacklists-mp-materials-usa-rare-earth-ent-5daba7",
+      "sightings": 2
     },
     "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
       "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
-      "summary": "On June 17, the US and Iran signed a 60-day ceasefire MOU; Iran re-closed the strait on June 20 citing Israeli violations, then the US Navy announced a widened navigational route on June 27. WTO data shows ~95% reduction in crude tankers and ~99% in LNG through the strait, with UAE estimating full flows will not resume until 2027 even if a deal is reached quickly.",
-      "as_of": "2026-07-03",
+      "summary": "A US-Iran memorandum of understanding signed in mid-June 2026, which included Iran ending its near-total Strait of Hormuz closure in exchange for a US port-blockade lift, drove Brent crude from a war peak above $103 to the low-$70s by early July. Analysts warn the slide is sentiment-driven and that 3\u20136 months are needed to restore full flows, leaving near-term supply fragility and geopolitical relapse risk elevated.",
+      "as_of": "2026-07-01",
       "sources": [
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
-        "https://commonslibrary.parliament.uk/research-briefings/cbp-10636/",
-        "https://hormuzstraitmonitor.com/crisis-timeline/"
+        "https://www.aljazeera.com/economy/2026/6/17/oil-prices-continue-slide-amid-hopes-for-peace-opening-of-strait-of-hormuz",
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -516,12 +513,12 @@
       "target_indicator": "Hormuz/Red Sea status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz/Red Sea status indicator (0 open / 1 contested / 2 closed) should be set to 2 (functionally closed/severely contested) \u2014 commercial crude throughput is down ~95%, the ceasefire MOU is fragile, mines remain in the water, and the UAE estimates full reopening no earlier than 2027. WTI/Brent pricing and LNG supply chains for Europe and Asia are directly impacted at scale (~20% of global seaborne oil).",
+      "rationale": "The s20_sea_lanes story directly tracks Hormuz/Red Sea status (0 open / 1 contested / 2 closed) and WTI crude. The MoU and partial reopening moves the status from 2 (closed) toward 1 (contested/transitional), and the WTI/Brent level has dropped dramatically. The OECD outlook flagged that a 'time-limited disruption' scenario with Gulf recovery from Q3 2026 is the central case\u2014but structural risks of relapse remain, keeping the indicator at 1 rather than 0. This is a major regime shift for the indicator.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-07",
       "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
-      "sightings": 5
+      "sightings": 6
     },
     "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
       "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
@@ -1461,12 +1458,12 @@
     },
     "genius-act-implementing-regulations-missed-the-j-dc0151": {
       "headline": "GENIUS Act implementing regulations missed the July 18, 2026 statutory deadline; effective date now defaults to January 2027",
-      "summary": "On June 18, the Fed issued a joint stablecoin CIP proposed rule with Treasury/FinCEN/OFAC/FDIC/NCUA under the GENIUS Act; final rules are expected Q3 2026. New Fed Chair Warsh abstained from the vote and Governor Barr criticised the decentralised protocol exemption, while NCUA's comment period closes July 17 \u2014 creating a multi-agency divergence that threatens timeline coherence.",
-      "as_of": "2026-06-18",
+      "summary": "The OCC issued a Notice of Proposed Rulemaking for GENIUS Act implementation, joining the FDIC (April 2026 substantive proposal) and NCUA; the Act becomes effective January 18, 2027, or 120 days after final rules\u2014meaning final rules must be issued by September 2026 to hit the earlier trigger. Key open issues include interest/rewards permissibility, 24/7 redemption infrastructure gaps, and illicit-finance controls still in a separate rulemaking.",
+      "as_of": "2026-07-07",
       "sources": [
-        "https://cryptobriefing.com/fed-proposes-stablecoin-customer-screening-rules/",
-        "https://home.treasury.gov/news/press-releases/sb0435",
-        "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-24.html"
+        "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
+        "https://www.chapman.com/publication-genius-act-rulemaking-tracker",
+        "https://www.brookings.edu/articles/next-steps-for-genius-payment-stablecoins/"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -1474,11 +1471,11 @@
       "target_indicator": "GENIUS implementation friction",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The GENIUS friction indicator should move from 0 (smooth) to 1 (gaps). Warsh's abstention, Barr's public dissent on the decentralized exemption, and the fact that five agencies are running non-synchronised comment timelines (OCC closed May 1, NCUA closes July 17, Fed final rule Q3 2026) introduce material sequencing risk. If the Fed chair does not endorse the final CIP rule, stablecoin issuers face regulatory ambiguity on the largest structural demand driver for short-dated Treasuries since the 2023 regional bank crisis.",
+      "rationale": "The s7_stablecoins story already tracks 'GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)'. The OCC NPR and multi-agency rulemaking now confirm the process is active but the September 2026 deadline for final rules is tight given open issues (BSA/AML in a separate rulemaking, interest-payments unresolved, 24/7 redemption infrastructure absent). The tracker should set this indicator to 1 (gaps), not 0, because the illicit-finance rules are on a separate track and Brookings flags that 'the infrastructure is not in place to meet redemptions on a 24/7 basis.' Stablecoin supply growth (~$bn) and Treasury T-bill demand linkage remain material monitoring items.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-05",
-      "sightings": 3,
+      "last_seen": "2026-07-07",
+      "sightings": 4,
       "id": "genius-act-implementing-regulations-missed-the-j-dc0151"
     },
     "china-s-nov-10-2026-rare-earth-extraterritorial--6281bb": {
@@ -2356,10 +2353,126 @@
       "last_seen": "2026-07-06",
       "sightings": 1,
       "id": "china-s-new-outbound-investment-regulations-effe-63f730"
+    },
+    "japan-basic-policy-shock-jgb-10yr-approaches-2-8-599f43": {
+      "headline": "Japan 'Basic Policy Shock': JGB 10yr Approaches 2.8% as Government Blueprint Pressures BOJ Dovishness",
+      "summary": "Japan's June 30 government economic policy blueprint signalled that 'appropriate monetary policy conduct is extremely important,' widely read as an attempt to constrain further BOJ rate hikes; combined with a weak 10-year JGB auction and a \u00a5370 trillion public-private investment plan, the 10-year JGB yield climbed toward 2.8%\u2014its highest since October 1996. Markets now face a dual threat: a weakened yen near 40-year lows and rising JGB yields that undermine the carry-trade unwind thesis.",
+      "as_of": "2026-07-06",
+      "sources": [
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/",
+        "https://tradingeconomics.com/japan/government-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "BOJ_independence_risk",
+        "type": "band",
+        "rubric": "0 = BOJ operating freely with no political interference; 1 = government fiscal-policy documents or statements implicitly constrain BOJ path; 2 = explicit political pressure causing BOJ to pause hikes despite inflation above target or yen at crisis lows",
+        "sources": [
+          "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/",
+          "https://tradingeconomics.com/japan/government-bond-yield",
+          "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The 'Basic Policy shock' is a qualitatively new development that the existing s2_japan indicators (USD/JPY level, 30yr JGB yield, Takaichi plan financing clarity) do not fully capture: it specifically measures whether the BOJ retains independence to hike when inflation is above target and the yen is at 40-year lows. A score of 1 is now appropriate. The 10yr JGB at 2.8% and weak auction also push the existing 30yr yield indicator higher. This is a medium-term carry-unwind trigger and sovereign-financing risk.",
+      "status": "pending",
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "sightings": 1,
+      "id": "japan-basic-policy-shock-jgb-10yr-approaches-2-8-599f43"
+    },
+    "us-cpi-at-4-2-yoy-may-2026-new-fed-chair-warsh-a-544ee9": {
+      "headline": "US CPI at 4.2% YoY (May 2026); New Fed Chair Warsh Abandons Forward Guidance",
+      "summary": "US headline CPI rose 4.2% YoY through May 2026\u2014the largest 12-month increase since April 2023\u2014driven by energy and tariff pass-through. Following its June meeting, new Fed Chair Kevin Warsh removed traditional forward guidance in favour of pure data dependence, while keeping rates at 3.50\u20133.75%, raising risks that markets cannot price the policy path and that a stagflation dynamic could entrench.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
+        "https://www.oecd.org/en/publications/2026/06/oecd-economic-outlook-volume-2026-issue-1_8be0dba6/full-report/general-assessment-of-the-macroeconomic-situation_fe9bdcd6.html"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US stagflation & Fed credibility cliff",
+        "why": "CPI at 4.2% YoY with a new Fed Chair who has eliminated forward guidance creates a qualitatively different regime: markets cannot anchor rate expectations, real wages are being eroded, and tariff-plus-energy cost-push inflation is sticky even as growth slows. This is distinct from existing stories (s11_consumer_debt captures downstream consumer stress; s1_basis_trade captures Treasury volatility) because the primary risk is a regime shift in US monetary policy credibility itself\u2014if Warsh pivots to hikes to defend the dollar or price stability, the entire leveraged-finance stack (basis trade, private credit, CRE) re-prices simultaneously.",
+        "proposed_level": 7,
+        "set": 1,
+        "indicators": [
+          {
+            "label": "US_CPI_YoY_pct",
+            "type": "value",
+            "rubric": "Current 12-month US headline CPI (%). Risk rises nonlinearly above 3.5%; threshold of 4.5% = acute.",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Fed_forward_guidance_clarity",
+            "type": "band",
+            "rubric": "0 = explicit forward guidance in place; 1 = data-dependent with no path signal (current); 2 = contradictory signals or emergency pivot language",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "US_real_wage_growth_YoY_pct",
+            "type": "value",
+            "rubric": "Average hourly earnings minus CPI. Negative = stagflationary squeeze on consumer and political pressure for Fed ease despite inflation.",
+            "sources": [
+              "https://www.fxstreet.com/analysis/global-macro-transmission-monitor-week-ending-july-3-2026-202607060639"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "US_tariff_Section122_legal_status",
+            "type": "band",
+            "rubric": "0 = upheld / stable; 1 = legal challenge under appeal (current\u2014court ruled exceeded authority May 7); 2 = struck down, forcing policy vacuum",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.2
+          }
+        ]
+      },
+      "rationale": "No existing story covers the interaction of a 4.2% CPI print, a new Fed Chair who has removed forward guidance, and a tariff legal challenge\u2014these together constitute a distinct US monetary-credibility risk cluster. The nearest story (s1_basis_trade) focuses on structural plumbing; this story is about the macro regime anchor. A level-7 severity reflects that this is already partially manifest (CPI is live, guidance is gone) but a full stagflation entrenchment has not yet occurred.",
+      "status": "pending",
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "sightings": 1,
+      "id": "us-cpi-at-4-2-yoy-may-2026-new-fed-chair-warsh-a-544ee9"
+    },
+    "japan-stagflation-risk-materialises-boj-holds-at-5d0950": {
+      "headline": "Japan Stagflation Risk Materialises: BOJ Holds at 0.75%, Core Inflation Forecast Raised to 2.8%, Growth Cut to 0.5%",
+      "summary": "At its April 28 meeting (6-3 vote), the BOJ kept rates at 0.75% while sharply raising its core CPI forecast to 2.8% (from 1.9%) and cutting FY2026 growth to 0.5% (from 1.0%), citing Iran-war energy cost pass-through and deteriorating terms of trade. Oxford Economics described a 'very light stagflation-like situation' for Japan, with real disposable incomes persistently negative\u2014a dynamic that complicates the BOJ's ability to hike to defend the yen while the government's Basic Policy blueprint simultaneously pushes for accommodative monetary conditions.",
+      "as_of": "2026-04-28",
+      "sources": [
+        "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "Takaichi plan financing clarity",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The existing s2_japan indicator 'Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)' should be updated toward 2 (disorderly): the government's \u00a5370 trillion spending blueprint combined with explicit pressure on the BOJ to stay accommodative, a 6-3 split vote, and a core inflation forecast well above the 2% target creates financing-clarity disorder. The yen near 40-year lows amplifies the USD/JPY risk indicator. Taken together with item #1 above (the Basic Policy shock), s2_japan is the highest-priority story requiring indicator updates this week.",
+      "status": "pending",
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "sightings": 1,
+      "id": "japan-stagflation-risk-materialises-boj-holds-at-5d0950"
     }
   },
-  "generated": "2026-07-06",
+  "generated": "2026-07-07",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 76
+  "new_count": 3,
+  "pending_count": 79
 }
