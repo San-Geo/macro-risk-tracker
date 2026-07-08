@@ -127,7 +127,7 @@ stories:
         weight: 1.0
         note: "FRED quotes in percent; 3.6 = 360bps."
       - id: direct_lending_default
-        label: "Direct-lending default rate (%)"
+        label: "Direct-lending default rate (%, Fitch incl. distressed exchanges)"
         source: "manual"
         cadence: quarterly
         direction: higher_worse
@@ -136,7 +136,7 @@ stories:
         baseline_value: 3.0
         baseline_band: 0
         weight: 1.5
-        note: "Morgan Stanley flagged a possible move toward 8%."
+        note: "Anchored to Fitch's inclusive measure (counts distressed exchanges; Apr-2026 record 6.0%). Proskauer's count-based index runs ~2-3pts lower - dissent context only. Morgan Stanley flagged a possible move toward 8%."
       - id: redemption_gates
         label: "Large-fund redemption gates (0 none / 1 isolated / 2 widespread)"
         source: "manual"

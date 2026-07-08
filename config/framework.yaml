@@ -30,11 +30,17 @@ indicators:
     type: value
     min: 0
     max: 25
-    query: private credit direct lending default rate latest 2026 percent
-    rubric: Report the latest direct-lending / private-credit default rate as a percent (e.g. 3.0).
+    query: Fitch US private credit direct lending default rate including distressed exchanges latest percent
+    rubric: 'Report the latest US direct-lending/private-credit default rate as a percent, ANCHORED TO
+      FITCH''S INCLUSIVE MEASURE (the Fitch rate that counts distressed exchanges and liability-management
+      exercises; April 2026 record = 6.0). DO NOT switch measurement anchors between runs: if no new Fitch
+      print is available for the period, retain the prior Fitch reading rather than substituting a different
+      methodology. Report Proskauer''s count-based index (typically 2-3 points lower), With Intelligence,
+      and Moody''s estimates as DISSENT context only, never as the applied value. State the Fitch publication
+      month in as_of.'
     sources:
-    - https://www.imf.org/en/Publications/GFSR
-    - https://pitchbook.com
+    - https://www.fitchratings.com
+    - https://www.forbes.com
     - https://www.ft.com
   redemption_gates:
     type: band
