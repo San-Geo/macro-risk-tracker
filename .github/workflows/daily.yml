@@ -7,8 +7,9 @@ name: daily-risk-tracker
 # tick the "run_agent" box to also run the AI agent (uses API credits).
 on:
   schedule:
-    - cron: "0 12 * * 1-5"    # 12:00 UTC weekdays (pre-US-open) - market refresh
-    - cron: "0 12 * * 1"      # 12:00 UTC Monday (pre-open) - agent refresh (captures the weekend)
+    - cron: "37 11 * * 1-5"   # 11:37 UTC weekdays (pre-US-open) - market refresh. Off-peak minute
+                              # on purpose: GitHub delays top-of-hour crons by 60-90+ min under load.
+    - cron: "37 11 * * 1"     # 11:37 UTC Monday (pre-open) - agent refresh (captures the weekend)
   workflow_dispatch:
     inputs:
       run_agent:
@@ -43,7 +44,7 @@ jobs:
       - name: Decide whether to run the agent
         id: mode
         run: |
-          if [ "${{ github.event.inputs.run_agent }}" = "true" ] || [ "${{ github.event.schedule }}" = "0 12 * * 1" ]; then
+          if [ "${{ github.event.inputs.run_agent }}" = "true" ] || [ "${{ github.event.schedule }}" = "37 11 * * 1" ]; then
             echo "flag=--agent" >> "$GITHUB_OUTPUT"
             echo "Agent: ON for this run (you ticked run_agent, or it's the Monday schedule)"
           else
