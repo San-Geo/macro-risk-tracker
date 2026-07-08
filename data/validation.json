@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-07T14:09:26.956669+00:00",
+  "generated": "2026-07-08T11:50:09.794127+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -222,7 +222,7 @@
       },
       {
         "id": "direct_lending_default",
-        "label": "Direct-lending default rate (%)",
+        "label": "Direct-lending default rate (%, Fitch incl. distressed exchanges)",
         "story": "Private credit's opaque expansion",
         "set": 1,
         "weight": 1.5,

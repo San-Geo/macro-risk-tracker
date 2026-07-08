@@ -419,3 +419,24 @@ date,story_id,name,set,level,band,raw_level,method_version
 2026-07-07,s19_lithography,The lithography (ASML) chokepoint,4,6,Elevated,5.5,2.0
 2026-07-07,s20_sea_lanes,Sea lanes & undersea cables,4,6,Elevated,6.0,2.0
 2026-07-07,s21_clearinghouses,Clearinghouses (financial chokepoint),1,4,Moderate,4.25,2.0
+2026-07-08,s1_basis_trade,Treasury basis trade (hidden leverage),1,6,Elevated,5.5,2.0
+2026-07-08,s2_japan,Japan fiscal / JGB / carry trade,1,8,High,7.5,2.0
+2026-07-08,s3_private_credit,Private credit's opaque expansion,1,8,High,7.5,2.0
+2026-07-08,s4_dev_debt,Developing-world debt crisis,3,6,Elevated,5.5,2.0
+2026-07-08,s5_china_deflation,China's price spillover (deflation or cost-push),4,6,Elevated,6.5,2.0
+2026-07-08,s6_rare_earths,Critical minerals as a weapon,4,7,High,6.75,2.0
+2026-07-08,s7_stablecoins,Stablecoins & Treasury demand,1,4,Moderate,4.25,2.0
+2026-07-08,s8_ai_capex,AI build-out circular financing,2,6,Elevated,6.5,2.0
+2026-07-08,s9_cre,CRE maturity wall / regional banks,2,5,Elevated,5.25,2.0
+2026-07-08,s10_france,France / eurozone fragility,3,5,Elevated,5.0,2.0
+2026-07-08,s11_consumer_debt,Hidden consumer debt,2,6,Elevated,5.5,2.0
+2026-07-08,s12_gold_dedollar,Gold / de-dollarization,3,4,Moderate,3.5,2.0
+2026-07-08,s13_insurance,Insurance retreat,2,4,Moderate,4.5,2.0
+2026-07-08,s14_pensions,Pensions / demographics,3,4,Moderate,4.25,2.0
+2026-07-08,s15_ai_power,AI power & the grid bottleneck,5,7,High,7.0,2.0
+2026-07-08,s16_copper,Copper & the electrification deficit,5,4,Moderate,4.5,2.0
+2026-07-08,s17_water,Water - the underpriced input,5,5,Elevated,5.25,2.0
+2026-07-08,s18_food_fertilizer,Food & fertilizer fragility,5,6,Elevated,6.5,2.0
+2026-07-08,s19_lithography,The lithography (ASML) chokepoint,4,6,Elevated,5.5,2.0
+2026-07-08,s20_sea_lanes,Sea lanes & undersea cables,4,6,Elevated,6.0,2.0
+2026-07-08,s21_clearinghouses,Clearinghouses (financial chokepoint),1,4,Moderate,4.25,2.0

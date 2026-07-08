@@ -220,13 +220,10 @@
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
-      "summary": "On June 22, 2026, China's MOFCOM added 10 US entities to its export control list with immediate effect, including MP Materials (operator of the only active US rare-earth mine at Mountain Pass, CA) and USA Rare Earth (developing mine-to-magnet capabilities in Texas). The move bars Chinese firms from supplying dual-use items to these entities and prohibits any global entity from transferring Chinese-origin dual-use goods to them \u2014 a sweeping extraterritorial restriction. The action was explicitly retaliatory for the Pentagon's blacklisting of Chinese tech firms including Alibaba and Baidu.",
-      "as_of": "2026-06-22",
+      "summary": "In June 2026 China added 10 US entities to its export control list including the two largest US domestic rare-earth producers, MP Materials and USA Rare Earth, prohibiting any party globally from transferring Chinese-origin dual-use RE items to them. Separately, MOFCOM Announcement No. 26 (effective July 1) formalises a public reporting mechanism for export-control violations, signalling active enforcement escalation.",
+      "as_of": "2026-07-07",
       "sources": [
-        "https://www.aljazeera.com/news/2026/6/22/china-adds-10-us-firms-including-rare-earth-miner-to-export-control-list",
-        "https://intellectia.ai/blog/china-rare-earth-export-controls-june-2026",
-        "https://www.washingtonpost.com/national-security/2026/06/22/china-takes-aim-us-rare-earth-companies-with-new-export-controls/",
-        "https://www.investing.com/news/economy-news/china-targets-us-rare-earth-and-other-firms-with-export-controls-4751711"
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -234,12 +231,12 @@
       "target_indicator": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "This is a direct, exact hit on the 'US domestic RE producer blacklist' indicator in s6. MP Materials and USA Rare Earth are the two most strategically important non-Chinese rare-earth producers in the US; their blacklisting by MOFCOM on June 22 moves the indicator from 0 (none) to 1 (entity-specific ban). The action also cuts off these companies from Chinese-origin equipment and processing know-how needed to scale up \u2014 directly undermining the US alternative-supply strategy just as the November 2026 suspension-expiry clock is ticking. It is the most operationally damaging rare-earth development in the past 7 days.",
+      "rationale": "The blacklisting of MP Materials and USA Rare Earth \u2014 the two cornerstone US domestic RE producers that DoD has backed with $400M+ in contracts \u2014 directly triggers the 'US domestic RE producer blacklist' indicator, moving it from 0 to 1 (entity-specific ban). This is particularly material because it targets the exact companies the US is relying on to build supply-chain independence. Combined with the July 1 MOFCOM enforcement mechanism, the Nov-2025 pause (status indicator) is being effectively circumvented via entity-level actions ahead of the Nov-2026 expiry.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-07-08",
       "id": "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6",
-      "sightings": 3
+      "sightings": 4
     },
     "hyperscaler-ai-capex-approaches-800bn-in-2026-67-03d0a0": {
       "headline": "Hyperscaler AI capex approaches $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027 \u2014 revenue gap concern widens",
@@ -890,12 +887,11 @@
     },
     "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec": {
       "headline": "Iran war energy shock drives Hormuz fertilizer disruption; Gulf fertilizer exports (especially Qatar LNG-linked urea) severely curtailed since March 2026",
-      "summary": "The Hormuz crisis has produced a near-complete halt to LNG and crude transits (~99% and ~95% reductions, respectively), with Gulf refineries directly damaged by Iranian counter-strikes. The IEA's 32 member states have released 400 million barrels of strategic reserves, but stock coverage is critically low in Asian import-dependent nations (India, Philippines, Vietnam). Ammonia and urea production \u2014 heavily concentrated in Qatar, Saudi Arabia, and UAE \u2014 faces direct feedstock and export disruption, hitting the Hormuz/Gulf fertilizer-input indicator in s18 at its most sensitive point ahead of Northern Hemisphere autumn planting.",
-      "as_of": "2026-07-05",
+      "summary": "The Strait of Hormuz crisis \u2014 still contested as of July 8 \u2014 has disrupted roughly 30% of globally traded fertilizers that normally transit the strait, including Gulf urea and ammonia exports, while Qatar LNG liquefaction was shut for weeks. The attack re-escalation on July 7 prolongs this food-input shock just as Northern Hemisphere crop seasons enter critical phases.",
+      "as_of": "2026-07-08",
       "sources": [
-        "https://commonslibrary.parliament.uk/research-briefings/cbp-10636/",
-        "https://www.oecd.org/en/publications/2026/06/oecd-economic-outlook-volume-2026-issue-1_8be0dba6/full-report/general-assessment-of-the-macroeconomic-situation_fe9bdcd6.html",
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://www.congress.gov/crs-product/R45281"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -903,12 +899,12 @@
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz/Gulf indicator in s18 should be moved to 2 (cut). Qatar is the world's largest LNG exporter and a top-3 ammonia/urea producer; Saudi Arabia and UAE contribute significantly to Gulf-origin nitrogen fertilizers. The near-complete cessation of Hormuz shipping (WTO: 99% LNG reduction, 95% crude reduction) since early March has directly disrupted feedstock access and export logistics for Gulf fertilizer producers. With IEA emergency reserves now largely drawn down (400M bbl released) and Asian stock coverage critically low, a secondary food-security shock through fertilizer unavailability is now a live tail risk heading into autumn planting. This links back to s4 (EM food-import bill), s20 (sea lanes), and s12 (gold/de-dollarization pressure from commodity-exporting EMs).",
+      "rationale": "The Wikipedia/CRS data confirms the Strait carries ~30% of globally traded fertilizers and that Gulf LNG/ammonia/urea have been severely disrupted since late February. The July 7 re-escalation moves the indicator back toward 2 (cut) after it may have been edging toward 1 (disrupted) during the ceasefire period. This is a lagged but accelerating food-security and EM-debt risk (linking s18 to s4_dev_debt) that the tracker needs to reflect as materially worsened.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-07-08",
       "id": "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec",
-      "sightings": 5
+      "sightings": 6
     },
     "japan-s-energy-import-crisis-deepens-as-hormuz-c-e531e3": {
       "headline": "Japan's energy import crisis deepens as Hormuz closure compounds BOJ policy bind \u2014 new macro feedback loop not captured in existing indicators",
@@ -2469,10 +2465,106 @@
       "last_seen": "2026-07-07",
       "sightings": 1,
       "id": "japan-stagflation-risk-materialises-boj-holds-at-5d0950"
+    },
+    "japan-basic-policy-shock-jgb-yields-near-30-year-f7bf59": {
+      "headline": "Japan 'Basic Policy Shock': JGB yields near 30-year high, yen at 40-year low as government blueprint seen curbing BOJ hikes",
+      "summary": "Japan's June 30 economic policy blueprint was read by markets as an attempt to rein in BOJ rate hikes, sending 10-year JGB yields toward 2.8% (highest since 1996) and USD/JPY grinding near 162 \u2014 40-year yen lows \u2014 in what MUFG called the 'Basic Policy shock'. Super-long JGB yields face further upside pressure while uncertainty over \u00a5370 trillion spending plan financing lingers.",
+      "as_of": "2026-07-07",
+      "sources": [
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield (%) + USD/JPY + Takaichi plan financing clarity",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Directly updates three existing s2_japan indicators: 10y JGB yield surging toward multi-decade high signals fiscal/monetary credibility stress; USD/JPY near 40-year lows flags carry-unwind tail risk; government blueprint language (seen as reining in BOJ) moves 'Takaichi plan financing clarity' toward 2 (disorderly). The confluence of all three indicators simultaneously worsening is high materiality for global rate and carry markets.",
+      "status": "pending",
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sightings": 1,
+      "id": "japan-basic-policy-shock-jgb-yields-near-30-year-f7bf59"
+    },
+    "hormuz-re-escalation-july-7-three-tankers-struck-ed3e19": {
+      "headline": "Hormuz re-escalation July 7: Three tankers struck, US launches new strikes on Iran, oil jumps 6%, Iranian oil license revoked",
+      "summary": "On July 7 three merchant vessels were struck by projectiles in the Strait of Hormuz \u2014 the highest single-day attack count since late April. The US immediately revoked Iran's oil-sales license, launched fresh strikes on IRGC sites near the strait, and Trump declared the ceasefire 'over', pushing oil prices up more than 6%.",
+      "as_of": "2026-07-08",
+      "sources": [
+        "https://www.npr.org/2026/07/07/g-s1-132265/tanker-attack-strait-of-hormuz",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://www.britannica.com/event/2026-Iran-war"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed) + WTI crude oil (USD/bbl)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The July 7 attacks represent a direct, material deterioration of the Hormuz/Red Sea status indicator (moves from 1 contested back toward 2 closed) and a sharp upward jolt to WTI. The US license revocation and resumed CENTCOM strikes signal the June 17 Islamabad MOU is now functionally suspended, raising the probability of a sustained supply disruption \u2014 the IEA had already characterised the earlier closure as 'the largest supply disruption in history of the global oil market'. Directly actionable for s20_sea_lanes indicator values.",
+      "status": "pending",
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sightings": 1,
+      "id": "hormuz-re-escalation-july-7-three-tankers-struck-ed3e19"
+    },
+    "genius-act-july-18-rulemaking-deadline-imminent--a9e76d": {
+      "headline": "GENIUS Act July 18 rulemaking deadline imminent; stablecoin supply hits record $322B; MiCA ends USDT's EU access",
+      "summary": "Six US federal agencies face a July 18 statutory deadline to finalise GENIUS Act rules; final rules still outstanding as of July 8, creating a 10-day implementation friction window. Simultaneously, MiCA's hard enforcement deadline expired July 1 with USDT delisted from Coinbase, Kraken, Binance EU and others \u2014 forming a two-tier regulated vs. offshore stablecoin market. Total USD stablecoin supply hit a record $322B in June.",
+      "as_of": "2026-07-08",
+      "sources": [
+        "https://stablecoininsider.org/q2-2026-stablecoin-market-report/",
+        "https://cryptoslate.com/genius-made-stablecoins-legal-july-18-decides-which-stablecoins-stay-competitive/",
+        "https://www.cryptotimes.io/2026/07/01/from-genius-act-to-mica-indias-rbi-notes-global-regulatory-steps-on-stablecoins/"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems) + Total USD stablecoin supply ($bn)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The July 18 deadline for final GENIUS rules with agencies still in proposed-rule stage moves the implementation friction indicator to 1 (gaps). Record $322B supply is material for the supply indicator. The MiCA USDT delistings create a liquidity fragmentation risk \u2014 a large stablecoin losing regulated-venue access in the world's second-largest economy is a direct peg-stability and redemption-pressure stress scenario relevant to the 'largest stablecoin max peg deviation' indicator. Two-tier market formation is a medium-materiality story-gap for the tracker.",
+      "status": "pending",
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sightings": 1,
+      "id": "genius-act-july-18-rulemaking-deadline-imminent--a9e76d"
+    },
+    "sec-treasury-clearing-mandate-cross-margining-ri-272e81": {
+      "headline": "SEC Treasury-clearing mandate cross-margining risk: Dec 2026 cash-clearing deadline on track but collateral crunch for basis traders identified",
+      "summary": "Chicago Fed Letters 516 & 517 (2026) confirm the SEC's Dec 31 2026 cash-Treasury clearing and mid-2027 repo clearing deadlines are on track with CME's CMESC receiving SEC approval Dec 2025 and targeting Q2 2026 launch. However, Fed analysis finds the mandate will sharply increase initial margin requirements for leveraged basis-trade funds unless cross-margining programs are expanded \u2014 a structural liquidity squeeze risk not yet in the tracker.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.chicagofed.org/publications/chicago-fed-letter/2026/516",
+        "https://www.chicagofed.org/publications/chicago-fed-letter/2026/517"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "CCP cross-margining adoption for basis trades (0 expanded / 1 partial / 2 not adopted)",
+        "type": "band",
+        "rubric": "Score 0 if FICC, CME and ICE have all expanded cross-margining programs covering Treasury cash + futures + repo positions before Dec 2026 clearing go-live; score 1 if one or two CCPs have partial programs with significant basis-trader IM increase expected; score 2 if no material cross-margining expansion occurs, implying a collateral crunch that forces basis-trade deleveraging at clearing go-live.",
+        "sources": [
+          "https://www.chicagofed.org/publications/chicago-fed-letter/2026/517",
+          "https://www.chicagofed.org/publications/chicago-fed-letter/2026/516"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s1_basis_trade indicators (SOFR-EFFR, MOVE, SEC central clearing on-track flag) do not capture the specific collateral-squeeze mechanism identified by the Chicago Fed: without cross-margining expansion, the Dec 2026 clearing mandate forces basis-trade funds to post sharply higher IM at CCPs simultaneously \u2014 a structural forced-deleveraging event that could amplify Treasury market stress at the exact moment of go-live. This is a story gap because the mechanism is now well-documented in official Fed research and the 6-month countdown window makes it time-sensitive for a risk tracker.",
+      "status": "pending",
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "sightings": 1,
+      "id": "sec-treasury-clearing-mandate-cross-margining-ri-272e81"
     }
   },
-  "generated": "2026-07-07",
+  "generated": "2026-07-08",
   "model": "claude-sonnet-4-6",
-  "new_count": 3,
-  "pending_count": 79
+  "new_count": 4,
+  "pending_count": 83
 }
