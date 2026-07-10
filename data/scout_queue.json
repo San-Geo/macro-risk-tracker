@@ -76,13 +76,13 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "Six federal agencies (OCC, FDIC, NCUA, Treasury, FinCEN, OFAC) must publish final GENIUS Act stablecoin regulations by July 18, 2026 \u2014 exactly one year after enactment \u2014 but all comment periods only closed as of June 9, leaving agencies just ~5\u20136 weeks to reconcile six overlapping proposed frameworks simultaneously. The OCC proposed a $5M capital floor; FDIC confirmed no deposit insurance for token holders; prosecutors and Rogoff/Harris have flagged consumer-protection and systemic-risk gaps. The statutory deadline arriving in 12 days represents a binary implementation-friction event for s7.",
-      "as_of": "2026-07-06",
+      "summary": "The GENIUS Act (signed July 18, 2025) mandated all federal implementing regulations by July 18, 2026 \u2014 one week away. FinCEN and OFAC jointly proposed the AML/sanctions compliance rule in April 2026. Brookings notes stablecoin issuers' Treasury bill and reverse-repo demand is growing structurally, while four open regulatory issues (interest/yield prohibition, interoperability, bank vs. nonbank competition, and fraud-victim recovery) remain unresolved and could create friction at the go-live deadline.",
+      "as_of": "2026-07-10",
       "sources": [
-        "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors",
         "https://home.treasury.gov/news/press-releases/sb0435",
-        "https://occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
-        "https://en.wikipedia.org/wiki/GENIUS_Act"
+        "https://www.gibsondunn.com/the-genius-act-a-new-era-of-stablecoin-regulation/",
+        "https://www.brookings.edu/articles/next-steps-for-genius-payment-stablecoins/",
+        "https://www.paulhastings.com/insights/crypto-policy-tracker/the-genius-act-a-comprehensive-guide-to-us-stablecoin-regulation"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -90,12 +90,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The GENIUS Act's July 18, 2026 statutory deadline \u2014 now 12 days away \u2014 is a hard-clock event for the s7 implementation-friction indicator. With six agencies needing to simultaneously finalize non-conflicting rules from a standing start (all comment periods closed June 9), the risk of missed deadlines, inter-agency inconsistencies, or issuers facing a legal void is material. The indicator should move from 0 to 1 (gaps) given the compressed timeline and prosecutorial criticism of consumer-protection lacunae; a slip to 2 (problems) is plausible if agencies publish inconsistent final rules or the OCC/FDIC frameworks are unreconciled at go-live. This directly affects Treasury demand dynamics as stablecoin supply \u2014 now a meaningful T-bill buyer \u2014 depends on regulatory clarity.",
+      "rationale": "The July 18 regulatory deadline is the single most important near-term implementation milestone for the GENIUS Act. With four significant open issues unresolved per Brookings and the AML rule still only proposed (not final), the 'GENIUS implementation friction' indicator should be moved from 0 (smooth) to 1 (gaps), as final rules may not be promulgated on time, creating legal uncertainty for issuers and impacting the stablecoin supply trajectory and its Treasury demand implications.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-07-10",
       "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
-      "sightings": 4
+      "sightings": 5
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -1802,13 +1802,13 @@
     },
     "us-iran-hormuz-mou-holding-but-fragile-strait-pa-997f14": {
       "headline": "US-Iran Hormuz MOU Holding But Fragile: Strait Partially Reopening, Oil Price Collapsing",
-      "summary": "A mid-June 2026 US-Iran memorandum of understanding has brought Brent crude from above $100/bbl down toward ~$78/bbl as markets front-run Hormuz reopening, but analysts warn logistics normalization could take 3\u20136 months and renewed hostility remains a tail risk. Gulf producers had shut in an estimated 7.5\u20139.1 million b/d; global oil stocks fell ~246 million barrels in March\u2013April combined.",
-      "as_of": "2026-07-03",
+      "summary": "On July 7\u20138, three commercial ships were struck in the Strait of Hormuz; the US launched retaliatory strikes and President Trump declared the June 17 Islamabad Memorandum ceasefire finished, revoking Iran sanctions waivers. WTI crude rose from ~$69 to ~$75/bbl and Brent to ~$79 within 48 hours, with the Hormuz chokepoint (20% of global seaborne oil) reverting to 'contested' status after having partially reopened post-ceasefire.",
+      "as_of": "2026-07-09",
       "sources": [
-        "https://www.aljazeera.com/economy/2026/6/17/oil-prices-continue-slide-amid-hopes-for-peace-opening-of-strait-of-hormuz",
-        "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by",
-        "https://www.tariffstool.com/guides/tariff-news-2026",
-        "https://www.oecd.org/en/publications/2026/06/oecd-economic-outlook-volume-2026-issue-1_8be0dba6/full-report/general-assessment-of-the-macroeconomic-situation_fe9bdcd6.html"
+        "https://www.npr.org/2026/07/07/g-s1-132265/tanker-attack-strait-of-hormuz",
+        "https://thehill.com/policy/energy-environment/5960020-iran-ceasefire-gas-prices-strait-of-hormuz/",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://www.britannica.com/event/2026-Iran-war"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1816,22 +1816,22 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed) AND WTI crude oil (USD/bbl, CL=F)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz/Red Sea status indicator directly captures this: status is transitioning from '2 closed' toward '1 contested' as the MOU holds but is not yet permanent or fully operational. The simultaneous 30%+ crude oil collapse since peak is a massive signal in the WTI indicator. The speed and fragility of this move (3\u20136 months to normalize supply, ceasefire still provisional) warrants an urgent update to both indicators. This also propagates into s18_food_fertilizer (Gulf fertilizer disruption) and s4_dev_debt (EM oil-exporter relief vs. importers still stressed).",
+      "rationale": "The Hormuz status indicator should be moved from '1 contested' back toward '2 contested/near-closed' given Trump's ceasefire declaration ending and active US strikes. WTI crude updated to ~$75/bbl. This is the single most systemically important geopolitical event of the week, with direct cascading effects on inflation, central bank policy (s2_japan, s18_food_fertilizer), EM sovereign spreads (s4_dev_debt), and AI supply chains (s8_ai_capex, s19_lithography).",
       "status": "pending",
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05",
-      "sightings": 1,
+      "last_seen": "2026-07-10",
+      "sightings": 2,
       "id": "us-iran-hormuz-mou-holding-but-fragile-strait-pa-997f14"
     },
     "japan-10-year-jgb-yield-surges-to-2-7-2-8-30-yea-d8fccc": {
       "headline": "Japan 10-Year JGB Yield Surges to ~2.7\u20132.8% (30-Year High), Yen Near 4-Decade Low; BOJ Hikes to 1%",
-      "summary": "Japan's 10-year JGB yield climbed above 2.7% in early July 2026\u2014approaching its highest level since October 1996\u2014driven by Takaichi's \u00a5370 trillion investment plan, a weak 10-year auction, and BOJ rate hikes to 1% in late June. The yen simultaneously slid to a four-decade low amid persistent carry trades and wide US-Japan rate differentials, with Oxford Economics raising its end-2026 JGB forecast to 2.8%.",
-      "as_of": "2026-07-03",
+      "summary": "Japan's June 30 fiscal blueprint (mobilising \u00a5370 trillion through 2040) contained language calling for 'appropriate monetary policy' to support growth, sparking fears the government would rein in BOJ rate hikes. The 10-year JGB yield surged to 2.88% \u2014 a 30-year high \u2014 while USD/JPY ground near \u00a5162, close to 40-year yen lows, with long/super-long yields under sustained selling pressure.",
+      "as_of": "2026-07-09",
       "sources": [
-        "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://tradingeconomics.com/japan/interest-rate",
-        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/",
-        "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html"
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/",
+        "https://finance.yahoo.com/economy/policy/articles/japan-benchmark-bond-yield-hits-004445377.html",
+        "https://www.brecorder.com/news/amp/40429050",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1839,11 +1839,11 @@
       "target_indicator": "30-year JGB yield (%) AND Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "All three existing s2_japan indicators are flashing simultaneously: (1) 10y/30y JGB yields are at multi-decade highs and rising; (2) USD/JPY is at a 4-decade extreme, signaling acute carry-trade and yen-weakness risk; (3) the Takaichi \u00a5370 trillion plan has no credible financing offset and is explicitly driving bond-market selling pressure, pushing 'Takaichi plan financing clarity' to '2 disorderly'. BOJ board member Tamura explicitly flagged accelerating rate hike cadence toward 2% neutral. This is the most acute development in the tracker this week and interacts with s1_basis_trade (JGB volatility spillover) and s14_pensions (leveraged JGB exposure).",
+      "rationale": "The 10-year JGB yield at 2.88% (30-year high) directly updates the '30-year JGB yield' indicator. The government blueprint language pressuring the BOJ to slow hikes is exactly the 'Takaichi plan financing clarity' indicator \u2014 status has moved from 1 (unclear) toward 2 (disorderly) given market reaction. USD/JPY near \u00a5162 (40-year yen low) is simultaneously a carry-trade unwind risk signal and a BOJ-pressure amplifier, materially elevating the Japan fiscal/JGB/carry risk story.",
       "status": "pending",
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05",
-      "sightings": 1,
+      "last_seen": "2026-07-10",
+      "sightings": 2,
       "id": "japan-10-year-jgb-yield-surges-to-2-7-2-8-30-yea-d8fccc"
     },
     "section-301-tariff-cliff-july-24-expiry-of-secti-61ed67": {
@@ -2561,11 +2561,172 @@
       "last_seen": "2026-07-08",
       "sightings": 1,
       "id": "sec-treasury-clearing-mandate-cross-margining-ri-272e81"
+    },
+    "imf-july-8-weo-update-global-growth-downgraded-t-21bddc": {
+      "headline": "IMF July 8 WEO Update: Global growth downgraded to 2.5% in 2026 as Middle East energy shock drives inflation and EM debt stress",
+      "summary": "The IMF's July 8, 2026 World Economic Outlook update cited the Middle East conflict as driving sharp energy price increases, renewed inflation, and tighter monetary policy expectations globally, cutting its 2026 global growth forecast to 2.5% \u2014 the weakest EMDE per-capita growth since COVID. Rising debt is pushing up EMDE borrowing costs, and the IMF flags 'financial stress' and 'commodity market disruption' as key downside risks to an already fragile outlook.",
+      "as_of": "2026-07-08",
+      "sources": [
+        "https://www.imf.org/en/publications/weo",
+        "https://www.euronews.com/business/2026/07/08/the-key-global-economic-risks-to-watch-in-the-second-half-of-2026",
+        "https://www.worldbank.org/en/publication/global-economic-prospects"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "IMF/World Bank growth forecast for EMDEs (% YoY)",
+        "type": "value",
+        "rubric": "Track the IMF WEO and World Bank GEP headline EMDE growth forecast as a leading indicator of sovereign stress; a cut below 3.5% signals rising fiscal pressure and missed-coupon risk for heavily indebted EMDEs. Current: 2.5% (July 2026 WEO). Pair with 'New IMF programs / missed coupons' ordinal.",
+        "sources": [
+          "https://www.imf.org/en/publications/weo",
+          "https://www.worldbank.org/en/publication/global-economic-prospects"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The s4_dev_debt story tracks the developing-world debt crisis but has no indicator for the multilateral growth-forecast signal. The IMF July 8 cut to 2.5% global growth (with EMDEs the weakest since COVID) is directly causally linked to deteriorating EM sovereign debt service capacity; it is distinct from the existing TIPS real yield and dollar index indicators and fills a genuine gap in forward-looking stress detection.",
+      "status": "pending",
+      "first_seen": "2026-07-10",
+      "last_seen": "2026-07-10",
+      "sightings": 1,
+      "id": "imf-july-8-weo-update-global-growth-downgraded-t-21bddc"
+    },
+    "scotus-voids-ieepa-tariffs-new-15-global-baselin-88e700": {
+      "headline": "SCOTUS voids IEEPA tariffs; new 15% global baseline + 12.5% Section 301 tariff proposed; USTR comment window closes today (July 10)",
+      "summary": "After the Supreme Court struck down IEEPA tariff authority (Feb 20, 2026), the administration replaced it with a 15% global Section 122 tariff (expiring July 24) and simultaneously proposed a 12.5% Section 301 forced-labor tariff on 60 countries; the Section 301 comment period closes today. A separate 25% Section 301 tariff has been proposed on Brazil, and USTR is finalising up to $30bn in China tariff relief from the May 2026 Trump-Xi summit framework.",
+      "as_of": "2026-07-10",
+      "sources": [
+        "https://www.tradecomplianceresourcehub.com/2026/06/03/trump-2-0-tariff-tracker/",
+        "https://dimerco.com/us-tariff-update-2026/",
+        "https://www.skadden.com/insights/publications/2026/06/a-rare-opportunity",
+        "https://www.china-briefing.com/news/us-china-relations-in-the-trump-2-0-implications/"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US tariff architecture in flux: IEEPA void, Section 301/122 transition, and trade-deal conditionality",
+        "why": "The SCOTUS IEEPA decision in February 2026 destroyed the legal foundation of Trump's tariff regime, forcing a rushed replacement via Section 122 (expiring July 24) and Section 301 investigations. The resulting legal uncertainty \u2014 with overlapping and potentially invalid tariff stacks, active litigation, appeals, and a simultaneous China d\u00e9tente offering selective relief \u2014 creates a 'tariff fog' that disrupts corporate supply-chain planning, affects inflation (US CPI already 4.2%), and introduces binary event risk (court injunctions, WTO challenges, deal collapse) distinct from the China-specific deflation/PPI story in s5_china_deflation.",
+        "proposed_level": 7,
+        "set": "Set 4",
+        "indicators": [
+          {
+            "label": "Effective US average tariff rate on all imports (%)",
+            "type": "value",
+            "rubric": "Track the Tax Foundation / USITC blended effective tariff rate; an increase above 10% signals meaningful cost-push inflation and supply-chain repricing. Currently ~3\u20134% blended, up sharply from <2% pre-2025.",
+            "sources": [
+              "https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "Tariff legal/judicial stability (0 stable / 1 one regime invalidated / 2 cascading invalidations)",
+            "type": "band",
+            "rubric": "0 = existing tariff regime is legally intact; 1 = one major tariff mechanism struck down or enjoined (current: IEEPA voided, Section 122 challenged); 2 = multiple regimes simultaneously enjoined creating enforcement vacuum.",
+            "sources": [
+              "https://www.tradecomplianceresourcehub.com/2026/06/03/trump-2-0-tariff-tracker/"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "US-China trade truce durability (0 holding / 1 conditional / 2 collapsing)",
+            "type": "band",
+            "rubric": "0 = Busan framework fully operative with tariff reductions proceeding; 1 = deal intact but conditioned on Iran/military-linked secondary tariff threats or unresolved Section 301 escalation; 2 = framework collapsed with retaliatory tariff snapback.",
+            "sources": [
+              "https://www.skadden.com/insights/publications/2026/06/a-rare-opportunity",
+              "https://www.china-briefing.com/news/us-china-relations-in-the-trump-2-0-implications/"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Section 122 \u2192 Section 301 transition cliff (days to expiry / replacement clarity)",
+            "type": "value",
+            "rubric": "Section 122 expires July 24; Section 301 replacement requires final rule. Track days to expiry against rule finalisation status. A gap (expiry without replacement) = effective tariff holiday creating trade-flow distortions and fiscal shortfall.",
+            "sources": [
+              "https://dimerco.com/us-tariff-update-2026/"
+            ],
+            "suggested_weight": 0.15
+          }
+        ]
+      },
+      "rationale": "No existing story captures the structural legal fragility of the US tariff regime itself. s5_china_deflation tracks Chinese PPI and yuan dynamics; s4_dev_debt tracks EM sovereign stress; but neither captures the US-specific tariff architecture risk: IEEPA voided, Section 122 expiring in 14 days, Section 301 replacement with uncertain legal standing, active court appeals, and a China d\u00e9tente with binary collapse risk. This is a distinct, high-materiality macro risk with direct inflation, fiscal, and financial-market channels \u2014 and the comment period closing today marks a key decision node.",
+      "status": "pending",
+      "first_seen": "2026-07-10",
+      "last_seen": "2026-07-10",
+      "sightings": 1,
+      "id": "scotus-voids-ieepa-tariffs-new-15-global-baselin-88e700"
+    },
+    "new-fed-chair-warsh-drops-forward-guidance-holds-6a416d": {
+      "headline": "New Fed Chair Warsh drops forward guidance, holds at 3.5\u20133.75%; US CPI at 4.2% YoY \u2014 highest since April 2023 \u2014 amid oil shock",
+      "summary": "Following Kevin Warsh's first FOMC meeting as Fed Chair (June 2026), the Fed removed traditional forward guidance and adopted pure data dependence, holding the federal funds rate at 3.50\u20133.75%. May 2026 US CPI printed 4.2% YoY \u2014 a multi-year high driven by the Hormuz energy shock \u2014 leaving the Fed effectively trapped between a slowing economy and re-accelerating inflation, with no forward signal to anchor markets.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
+        "https://www.euronews.com/business/2026/07/08/the-key-global-economic-risks-to-watch-in-the-second-half-of-2026"
+      ],
+      "materiality": "medium",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Fed policy credibility trap: stagflation echo, leadership change, and no-guidance regime",
+        "why": "The combination of (a) a new Fed Chair removing forward guidance, (b) CPI re-accelerating to 4.2% on an energy shock, and (c) the Fed on hold with rates at 3.5\u20133.75% creates a unique policy-credibility risk not captured in any existing story. Without forward guidance, bond markets lose their anchor, term premium can spike unpredictably, and the basis trade (s1) and CRE maturity wall (s9) are both sensitive to a disorderly repricing of the front end. This is structurally different from normal rate-path uncertainty because it involves a deliberate communications rupture by new leadership during an active inflation shock.",
+        "proposed_level": 6,
+        "set": "Set 1",
+        "indicators": [
+          {
+            "label": "US CPI YoY (%)",
+            "type": "value",
+            "rubric": "Track monthly CPI YoY; above 4% indicates the Fed is behind the curve relative to its 2% target. Currently 4.2% (May 2026). An increase above 5% would signal acute credibility risk.",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Fed forward guidance regime (0 standard / 1 modified / 2 removed)",
+            "type": "band",
+            "rubric": "0 = traditional dot-plot + press-conference forward guidance; 1 = guidance modified or de-emphasised; 2 = guidance formally removed in favour of pure data dependence (current: 2, post-Warsh June 2026 meeting).",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "US 5y5y inflation breakeven (%)",
+            "type": "value",
+            "rubric": "Forward inflation expectations; a move above 2.75% signals market loss of confidence in the Fed's long-run inflation anchor, which would force a hawkish response even against a slowing economy.",
+            "sources": [
+              "https://fred.stlouisfed.org/"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "Fed credibility stress (0 anchored / 1 drifting / 2 unanchored)",
+            "type": "band",
+            "rubric": "Composite of: inflation vs. target gap, breakeven de-anchoring, and market-implied rate-path volatility. 0 = CPI <3% and breakevens stable; 1 = CPI 3\u20135% with breakevens drifting; 2 = CPI >5% or breakevens above 3%.",
+            "sources": [
+              "https://www.euronews.com/business/2026/07/08/the-key-global-economic-risks-to-watch-in-the-second-half-of-2026"
+            ],
+            "suggested_weight": 0.2
+          }
+        ]
+      },
+      "rationale": "No existing story in the tracker covers US Federal Reserve institutional credibility risk. The removal of forward guidance by a new Fed Chair during an active energy-driven inflation shock is a distinct systemic risk: it increases volatility across all fixed-income-sensitive stories (s1_basis_trade, s2_japan carry unwind, s9_cre maturity wall, s14_pensions LDI risk) and removes the policy anchor that other risk stories implicitly rely on. The June 2026 regime change is recent, material, and has no current tracker home.",
+      "status": "pending",
+      "first_seen": "2026-07-10",
+      "last_seen": "2026-07-10",
+      "sightings": 1,
+      "id": "new-fed-chair-warsh-drops-forward-guidance-holds-6a416d"
     }
   },
-  "generated": "2026-07-09",
+  "generated": "2026-07-10",
   "model": "claude-sonnet-4-6",
-  "new_count": 4,
-  "pending_count": 83,
-  "last_error": "The read operation timed out"
+  "new_count": 3,
+  "pending_count": 86
 }
