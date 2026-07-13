@@ -198,12 +198,13 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's MoF deployed a record \u00a511.73 trillion in FX intervention in April\u2013May 2026 after USD/JPY breached \u00a5160, but the pair returned above the intervention level within six weeks. The 30-year JGB yield rose to 4.04% on July 2, and the bond market faces sustained selling pressure from the government's \u00a5370 trillion long-term investment plan through fiscal 2040.",
-      "as_of": "2026-07-02",
+      "summary": "Japan's benchmark 10y JGB yield reached 2.88% on July 9 \u2014 the highest since September 1996 \u2014 driven by oil-price inflation from the Iran war, fiscal expansion fears under the Takaichi plan (\u00a5370 trillion roadmap), and a brief political 'Basic Policy shock' when the government appeared set to discourage future BoJ rate hikes; the 30-year yield touched 4.005%. Finance Minister Katayama's July 10 remarks urging GPIF to rotate into domestic assets partially steadied markets.",
+      "as_of": "2026-07-10",
       "sources": [
-        "https://www.lazardassetmanagement.com/us/en_us/research-insights/market-insights/beyond-the-numbers/july-2026",
-        "https://tradingeconomics.com/japan/30-year-bond-yield",
-        "https://tradingeconomics.com/japan/government-bond-yield"
+        "https://finance.yahoo.com/economy/policy/articles/japan-benchmark-bond-yield-hits-004445377.html",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
+        "https://www.brecorder.com/news/amp/40428884",
+        "https://tradingeconomics.com/japan/30-year-bond-yield"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -211,12 +212,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 30-year JGB at 4.04% is a direct tracker update (up ~108bp YoY); the yen at 1986 lows is at systemic carry-unwind threshold. The Takaichi plan's \u00a5370T financing commitment is a material escalation of the 'Takaichi plan financing clarity' indicator \u2014 clarity should be marked 2 (disorderly) given bond market selling pressure and the failed record intervention. This is the most acute DM sovereign stress signal outside the Hormuz shock.",
+      "rationale": "The 30y JGB yield (tracker indicator) briefly hit 4.005% \u2014 its highest in decades \u2014 with the 10y touching a 30-year high of 2.88%. Both primary indicators for s2 are flashing: the Takaichi plan financing clarity indicator should move toward 2 (disorderly) given the 'Basic Policy shock' episode where government language nearly signalled interference with BoJ rate decisions, before being walked back July 10. The GPIF-rotation comment adds a new carry-trade unwind dimension. The tracker should update both the 30y JGB value and Takaichi financing clarity (1\u21922 then partially back to 1).",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-13",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 3
+      "sightings": 4
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -478,9 +479,10 @@
     },
     "china-blacklists-mp-materials-usa-rare-earth-ent-5daba7": {
       "headline": "China blacklists MP Materials & USA Rare Earth \u2014 entity-specific export control ban on key US domestic RE producers (June 22, 2026)",
-      "summary": "In June 2026 China added 10 US entities\u2014including key domestic rare-earth producers MP Materials and USA Rare Earth\u2014to its export control entity list, barring them from receiving Chinese-origin dual-use materials anywhere in the world. Effective July 1, 2026, MOFCOM Announcement No. 26 formalised a public whistleblower mechanism for reporting strategic mineral export control violations, signalling active and broadening enforcement beyond the bilateral diplomatic level.",
+      "summary": "On June 22, China added 10 US entities to its export control list \u2014 including MP Materials (Mountain Pass, CA) and USA Rare Earth \u2014 barring Chinese companies from supplying dual-use items to them and prohibiting any global party from transferring Chinese-origin materials to these firms. Separately, effective July 1, China activated a formal public reporting mechanism (Announcement 26/2026) for violations of strategic-mineral export controls, including via third-country routing \u2014 a major escalation in enforcement architecture.",
       "as_of": "2026-07-01",
       "sources": [
+        "https://www.aljazeera.com/news/2026/6/22/china-adds-10-us-firms-including-rare-earth-miner-to-export-control-list",
         "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals"
       ],
       "materiality": "high",
@@ -489,20 +491,22 @@
       "target_indicator": "US domestic RE producer blacklist",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s6_rare_earths story already carries 'US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)'. China's June 2026 action adds the two largest US rare-earth miners to an entity-list that also prohibits third-country transfer of Chinese-origin inputs to those entities\u2014this is a direct move from 0 to 1 (entity-specific ban). Combined with the live MOFCOM reporting mechanism as of July 1, enforcement posture is materially more coercive, warranting an immediate indicator update.",
+      "rationale": "The tracker's 'US domestic RE producer blacklist' indicator (rubric: 0 none / 1 entity-specific ban / 2 sector-wide ban) should move from 1 to at least 1+ approaching 2: China has now specifically targeted MP Materials and USA Rare Earth \u2014 the two largest US-based rare-earth operators \u2014 and the July 1 whistleblower enforcement mechanism extends reach to third-country routing, making circumvention far harder. This is qualitatively new in the last 7 days (the June 22 blacklisting and the July 1 enforcement regime are both within the window). The Nov-2025 pause status indicator remains at 0 (extended until Nov 2026) but the blacklist indicator has escalated materially.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-07",
+      "last_seen": "2026-07-13",
       "id": "china-blacklists-mp-materials-usa-rare-earth-ent-5daba7",
-      "sightings": 2
+      "sightings": 3
     },
     "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
       "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
-      "summary": "A US-Iran memorandum of understanding signed in mid-June 2026, which included Iran ending its near-total Strait of Hormuz closure in exchange for a US port-blockade lift, drove Brent crude from a war peak above $103 to the low-$70s by early July. Analysts warn the slide is sentiment-driven and that 3\u20136 months are needed to restore full flows, leaving near-term supply fragility and geopolitical relapse risk elevated.",
-      "as_of": "2026-07-01",
+      "summary": "The US launched a fourth wave of strikes on Iran (July 12-13) after Iran attacked a Cyprus-flagged container ship transiting the Strait; Iran declared passage 'not possible,' crude tanker traffic effectively halted (zero large-vessel AIS transits on July 7-8), and Brent surged 4% to ~$79 on July 13 \u2014 shattering the fragile ceasefire MOU signed last month. Global oil output remains 9.4 million bpd below pre-war levels despite a partial June recovery.",
+      "as_of": "2026-07-13",
       "sources": [
-        "https://www.aljazeera.com/economy/2026/6/17/oil-prices-continue-slide-amid-hopes-for-peace-opening-of-strait-of-hormuz",
-        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+        "https://www.thenationalnews.com/business/energy/2026/07/13/oil-jumps-amid-fears-of-prolonged-disruption-in-strait-of-hormuz/",
+        "https://www.cnbc.com/2026/07/13/us-iran-war-hormuz-oil-trump.html",
+        "https://www.aljazeera.com/economy/2026/7/10/strait-of-hormuz-shipping-grinds-to-halt-as-us-iran-resume-fighting",
+        "https://jpt.spe.org/us-iran-conflict-flares-back-up-disrupts-strait-of-hormuz-once-again"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -510,12 +514,12 @@
       "target_indicator": "Hormuz/Red Sea status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s20_sea_lanes story directly tracks Hormuz/Red Sea status (0 open / 1 contested / 2 closed) and WTI crude. The MoU and partial reopening moves the status from 2 (closed) toward 1 (contested/transitional), and the WTI/Brent level has dropped dramatically. The OECD outlook flagged that a 'time-limited disruption' scenario with Gulf recovery from Q3 2026 is the central case\u2014but structural risks of relapse remain, keeping the indicator at 1 rather than 0. This is a major regime shift for the indicator.",
+      "rationale": "The Hormuz/Red Sea status indicator is the primary watch-point for s20. Status has deteriorated from 'contested' (1) to effectively 'closed' (2) for the fourth time in seven days: Iran declared the strait shut, zero large-vessel AIS transits recorded July 7-8, and a fresh US strike wave July 12-13 shattered the ceasefire MOU. WTI rose to ~$74-76 and Brent to $78-79. This is a direct, real-time read on the indicator; the tracker should move Hormuz status to 2 (closed/contested) and flag acute oil-price risk premium.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-07",
+      "last_seen": "2026-07-13",
       "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
-      "sightings": 6
+      "sightings": 7
     },
     "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
       "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
@@ -601,11 +605,12 @@
     },
     "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
       "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
-      "summary": "The IMF and WEF note that roughly one-third of global fertilizer shipments pass through the Strait of Hormuz; the near-closure since late February has disrupted crop-nutrient supply just as Northern Hemisphere planting season began, pushing food prices higher and threatening harvests. The OECD's June 2026 Outlook flags food security as a priority policy action.",
-      "as_of": "2026-07-05",
+      "summary": "The 2026 Iran war effectively shut the Strait of Hormuz from late February, disrupting roughly 20% of world oil supply and triggering a urea/fertilizer shortage (Qatar halted LNG liquefaction; Iran agreed only in late March to allow humanitarian/fertilizer shipments). The IMF's July 2026 WEO Update flags a cluster of food-security and social-unrest risks in sub-Saharan Africa and South Asia directly linked to the energy-fertilizer nexus, while fertilizer input costs remain elevated ahead of Q3 planting seasons in the Southern Hemisphere.",
+      "as_of": "2026-07-10",
       "sources": [
-        "https://www.imf.org/en/blogs/articles/2026/03/30/how-the-war-in-the-middle-east-is-affecting-energy-trade-and-finance",
-        "https://www.oecd.org/en/publications/2026/06/oecd-economic-outlook-volume-2026-issue-1_8be0dba6/full-report/general-assessment-of-the-macroeconomic-situation_fe9bdcd6.html"
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
+        "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -613,12 +618,12 @@
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "s18_food_fertilizer has a dedicated indicator for Hormuz/Gulf fertilizer disruption, currently at 0 (clear). The IMF confirms ~one-third of global fertilizer shipments transit Hormuz and these are now disrupted as planting season begins. This indicator should be set to 2 (cut). Food-price trend indicator should also be moved to at least 1 (elevated), consistent with the IMF's and OECD's warnings about mounting food-price pressure from fertilizer supply losses.",
+      "rationale": "The 'Hormuz/Gulf disruption to fertilizer inputs' indicator (0 clear / 1 disrupted / 2 cut) should move to 2 (cut) \u2014 or remain at 2 and be flagged as re-escalating given the fresh July 7-13 fighting. Qatar's LNG liquefaction shutdown (fertilizer feedstock) and widespread urea shortages have already been confirmed. The IMF July WEO explicitly flags food-insecurity clustering in vulnerable economies as a near-term risk triggered by the Middle East conflict. The tracker should also note that the food-price trend indicator is approaching 2 (spiking) given the compounding supply shock.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-13",
       "id": "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f",
-      "sightings": 4
+      "sightings": 5
     },
     "strait-of-hormuz-remains-effectively-closed-bren-98679f": {
       "headline": "Strait of Hormuz Remains Effectively Closed \u2014 Brent ~$105/bbl, OECD Oil Inventories at 2003 Lows",
@@ -1454,12 +1459,12 @@
     },
     "genius-act-implementing-regulations-missed-the-j-dc0151": {
       "headline": "GENIUS Act implementing regulations missed the July 18, 2026 statutory deadline; effective date now defaults to January 2027",
-      "summary": "The OCC issued a Notice of Proposed Rulemaking for GENIUS Act implementation, joining the FDIC (April 2026 substantive proposal) and NCUA; the Act becomes effective January 18, 2027, or 120 days after final rules\u2014meaning final rules must be issued by September 2026 to hit the earlier trigger. Key open issues include interest/rewards permissibility, 24/7 redemption infrastructure gaps, and illicit-finance controls still in a separate rulemaking.",
-      "as_of": "2026-07-07",
+      "summary": "The GENIUS Act (signed July 18, 2025) required all primary federal stablecoin regulators to issue final rules within one year (by July 18, 2026). As of July 13, the Federal Reserve Board \u2014 regulator for PPSI subsidiaries of state member banks \u2014 has not issued even a proposed rule, creating a structural gap that prevents the framework from being 'complete and coherent' and could delay the law's effective date or leave a regulatory limbo for a large class of bank-affiliated stablecoin issuers.",
+      "as_of": "2026-07-13",
       "sources": [
-        "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
-        "https://www.chapman.com/publication-genius-act-rulemaking-tracker",
-        "https://www.brookings.edu/articles/next-steps-for-genius-payment-stablecoins/"
+        "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors",
+        "https://www.briefs.co/news/genius-act-imposes-one-year-rulemaking-clock-until-mid-2026/",
+        "https://www.cryptotimes.io/2026/05/18/genius-act-10-months-stablecoin-rulemaking-federal-state-divide/"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -1467,11 +1472,11 @@
       "target_indicator": "GENIUS implementation friction",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s7_stablecoins story already tracks 'GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)'. The OCC NPR and multi-agency rulemaking now confirm the process is active but the September 2026 deadline for final rules is tight given open issues (BSA/AML in a separate rulemaking, interest-payments unresolved, 24/7 redemption infrastructure absent). The tracker should set this indicator to 1 (gaps), not 0, because the illicit-finance rules are on a separate track and Brookings flags that 'the infrastructure is not in place to meet redemptions on a 24/7 basis.' Stablecoin supply growth (~$bn) and Treasury T-bill demand linkage remain material monitoring items.",
+      "rationale": "The GENIUS implementation friction indicator (0 smooth / 1 gaps / 2 problems) should move from 0 to 1 (gaps). The Federal Reserve Board \u2014 the regulator of the largest class of bank-affiliated stablecoin subsidiaries \u2014 has not published even a proposed rule ahead of the statutory July 18 deadline. Six other agencies have published NPRMs, but the Fed's absence creates a structural gap that could force state-member-bank PPSIs into regulatory limbo or delay the law's effective date beyond January 18, 2027. This is material to the Treasury-demand angle because the 1:1 reserve rule requires stablecoin growth to translate into T-bill demand, which depends on the framework becoming operative.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-07",
-      "sightings": 4,
+      "last_seen": "2026-07-13",
+      "sightings": 5,
       "id": "genius-act-implementing-regulations-missed-the-j-dc0151"
     },
     "china-s-nov-10-2026-rare-earth-extraterritorial--6281bb": {
@@ -2723,10 +2728,68 @@
       "last_seen": "2026-07-10",
       "sightings": 1,
       "id": "new-fed-chair-warsh-drops-forward-guidance-holds-6a416d"
+    },
+    "new-risk-dm-central-bank-independence-under-simu-0e2e79": {
+      "headline": "New Risk: DM Central Bank Independence Under Simultaneous Political Pressure \u2014 Japan 'Basic Policy Shock' + US Fed Chair Warsh Removes Forward Guidance",
+      "summary": "Within the same week (July 7-13), two G7 central banks face explicit political interference: Japan's government briefly drafted language that would have discouraged BoJ rate hikes (the 'Basic Policy shock'), while in the US, new Fed Chair Kevin Warsh eliminated all forward guidance after the June FOMC meeting, operating under an administration that publicly demanded rate-cut 'commitments' from Fed chair candidates. Simultaneous erosion of credible monetary anchor across the two largest bond markets amplifies macro volatility risk in a high-debt, high-inflation environment.",
+      "as_of": "2026-07-13",
+      "sources": [
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
+        "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "DM Central Bank Independence Erosion",
+        "why": "Simultaneous political pressure on the BoJ (Japan 'Basic Policy shock' \u2014 government drafting language to discourage rate hikes) and the US Fed (Trump administration demanding rate-cut commitments; new Chair Warsh scrapping forward guidance) represents a structural risk not captured by any existing story. If credible monetary anchors in both the US and Japan are perceived as politically compromised, long-end sovereign yields in both markets could reprice sharply higher (compounding s2 and s1), inflation expectations could de-anchor, and carry-trade unwinds could accelerate \u2014 a cross-cutting amplifier for multiple existing tracker stories.",
+        "proposed_level": 6,
+        "set": 1,
+        "indicators": [
+          {
+            "label": "BoJ political interference index",
+            "type": "band",
+            "rubric": "0 = BoJ fully autonomous, no government language on rate path; 1 = government language nudges BoJ guidance or seeks GPIF rotation without formal mandate change; 2 = formal mandate change, government veto over rates, or snap election driven by monetary policy",
+            "sources": [
+              "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
+              "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "US Fed independence stress",
+            "type": "band",
+            "rubric": "0 = Fed chair credibly independent, forward guidance intact; 1 = forward guidance removed or chair under documented White House pressure; 2 = formal attempt to remove chair, Congressional override of Fed mandate, or rate decision reversed under political pressure",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "G7 central bank policy divergence (policy rate range, bps)",
+            "type": "value",
+            "rubric": "Range of G7 policy rates in bps; widening beyond 400bps signals disorderly divergence that strains FX and carry structures",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
+              "https://www.jpmorgan.com/insights/global-research/outlook/market-outlook"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "No existing story captures the simultaneous political-interference dimension across both the US Fed and BoJ in the same reporting week. This is distinct from s2 (which covers Japan fiscal/JGB/carry mechanics) and s1 (Treasury basis trade) \u2014 it is about the credibility anchor itself. If both the world's two largest sovereign bond market central banks are perceived as politically captured in a high-debt/high-inflation environment, the tail risk is a simultaneous repricing of term premia in USTs and JGBs, which would cascade through s1, s2, s4, and s14. The IMF WEO explicitly warns that 'eroded policy buffers can amplify' downside risks. Proposed level 6 reflects that political language has been partly walked back but the structural risk is now observable and documented.",
+      "status": "pending",
+      "first_seen": "2026-07-13",
+      "last_seen": "2026-07-13",
+      "sightings": 1,
+      "id": "new-risk-dm-central-bank-independence-under-simu-0e2e79"
     }
   },
-  "generated": "2026-07-10",
+  "generated": "2026-07-13",
   "model": "claude-sonnet-4-6",
-  "new_count": 3,
-  "pending_count": 86
+  "new_count": 1,
+  "pending_count": 87
 }
