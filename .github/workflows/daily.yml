@@ -1,15 +1,17 @@
 name: daily-risk-tracker
 
-# Two cadences:
+# Two cadences from ONE cron:
 #   * every weekday  -> refresh live market data + narrative (free; reuses last agent ratings)
-#   * every Monday   -> ALSO run the AI rating agent (researches each judgment indicator)
+#   * every Monday   -> the SAME run ALSO runs the AI rating agent (day-of-week is checked
+#     inside the run). SINGLE cron on purpose: the old two-cron design (weekdays + Mondays
+#     at the same minute) fired twice on Mondays and the concurrency guard cancelled one at
+#     random - making the Monday agent pass a coin flip.
 # Manual runs from the Actions tab are FREE by default (data refresh + redeploy only);
 # tick the "run_agent" box to also run the AI agent (uses API credits).
 on:
   schedule:
-    - cron: "37 11 * * 1-5"   # 11:37 UTC weekdays (pre-US-open) - market refresh. Off-peak minute
-                              # on purpose: GitHub delays top-of-hour crons by 60-90+ min under load.
-    - cron: "37 11 * * 1"     # 11:37 UTC Monday (pre-open) - agent refresh (captures the weekend)
+    - cron: "37 11 * * 1-5"   # 11:37 UTC weekdays (pre-US-open). Off-peak minute on
+                              # purpose: GitHub delays top-of-hour crons by 60-90+ min under load.
   workflow_dispatch:
     inputs:
       run_agent:
@@ -44,9 +46,10 @@ jobs:
       - name: Decide whether to run the agent
         id: mode
         run: |
-          if [ "${{ github.event.inputs.run_agent }}" = "true" ] || [ "${{ github.event.schedule }}" = "37 11 * * 1" ]; then
+          DOW=$(date -u +%u)   # 1 = Monday
+          if [ "${{ github.event.inputs.run_agent }}" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && [ "$DOW" = "1" ]; }; then
             echo "flag=--agent" >> "$GITHUB_OUTPUT"
-            echo "Agent: ON for this run (you ticked run_agent, or it's the Monday schedule)"
+            echo "Agent: ON for this run (you ticked run_agent, or it's a Monday scheduled run)"
           else
             echo "flag=" >> "$GITHUB_OUTPUT"
             echo "Agent: OFF - market refresh + redeploy only, no API cost"
