@@ -2,7 +2,7 @@
 
 *Auto-generated 2026-07-13 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 6.8/10** — Set 1 6.0, Set 2 5.2, Set 3 4.8, Set 4 6.2, Set 5 5.5.
+**Overall risk 7.6/10** — Set 1 6.0, Set 2 5.2, Set 3 4.5, Set 4 6.5, Set 5 5.8.
 
 
 ## Set 1 — Funding & Leverage
@@ -79,7 +79,7 @@ France combines a wide deficit, a fragmented parliament, and recurring budget st
 
 *Indicators watched:* OAT-Bund 10y spread (%), Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election), Rating action (0 stable / 1 negative outlook / 2 downgrade)
 
-### Gold / de-dollarization — 4/10 (Moderate)
+### Gold / de-dollarization — 3/10 (Moderate)
 
 Central banks are accumulating gold and building non-dollar settlement arrangements at the margin. It is a slow erosion rather than a sudden shift, but reserve 'weaponization' events can accelerate diversification away from the dollar.
 
@@ -94,7 +94,7 @@ Aging demographics and underfunded public pensions create slow fiscal pressure, 
 
 ## Set 4 — Geoeconomics & Trade Weapons
 
-### China's price spillover (deflation or cost-push) — 6/10 (Elevated)
+### China's price spillover (deflation or cost-push) — 7/10 (High)
 
 China's factory-gate prices spill into global goods markets in BOTH directions: years of PPI deflation exported disinflation and squeezed competitors, while a sharp 2026 reversal to positive PPI (energy/commodity cost-push) now exports input-cost pressure. Either large swing is destabilising; the indicator is scored on the size of the move, not its sign.
 
@@ -139,7 +139,7 @@ Water is systematically underpriced yet essential to chip fabrication, agricultu
 
 *Indicators watched:* Drought in a chip/farm hub (0 none / 1 emerging / 2 acute), Key reservoir / basin stress (0 normal / 1 low / 2 critical), Transboundary water dispute escalation (0 calm / 1 tense / 2 crisis)
 
-### Food & fertilizer fragility — 6/10 (Elevated)
+### Food & fertilizer fragility — 7/10 (High)
 
 Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag.
 

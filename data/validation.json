@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-13T13:41:55.889248+00:00",
+  "generated": "2026-07-13T20:15:03.280625+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -126,16 +126,16 @@
     }
   },
   "sensitivity": {
-    "as_of_overall": 6.8,
+    "as_of_overall": 7.6,
     "max_story_swing": 2,
     "max_overall_swing": 0.5,
     "movers": [
       {
-        "id": "usdcny",
-        "label": "USD/CNY (yuan depreciation = higher = risk)",
-        "story": "China's price spillover (deflation or cost-push)",
+        "id": "license_flow",
+        "label": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
+        "story": "Critical minerals as a weapon",
         "set": 4,
-        "weight": 1.0,
+        "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.6,
         "overall_swing": 0.5
@@ -151,43 +151,13 @@
         "overall_swing": 0.5
       },
       {
-        "id": "cat_losses",
-        "label": "Catastrophe-loss pressure (0 normal / 1 elevated / 2 severe season)",
-        "story": "Insurance retreat",
-        "set": 2,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.1
-      },
-      {
-        "id": "license_flow",
-        "label": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
-        "story": "Critical minerals as a weapon",
-        "set": 4,
-        "weight": 1.5,
-        "story_swing": 2,
-        "set_swing": 0.5,
-        "overall_swing": 0.5
-      },
-      {
-        "id": "regional_bank_stress",
-        "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
-        "story": "CRE maturity wall / regional banks",
-        "set": 2,
-        "weight": 1.5,
-        "story_swing": 2,
-        "set_swing": 0.5,
-        "overall_swing": 0.0
-      },
-      {
         "id": "oat_bund",
         "label": "OAT-Bund 10y spread (%)",
         "story": "France / eurozone fragility",
         "set": 3,
         "weight": 1.0,
         "story_swing": 2,
-        "set_swing": 0.5,
+        "set_swing": 0.6,
         "overall_swing": 0.0
       },
       {
@@ -196,6 +166,36 @@
         "story": "France / eurozone fragility",
         "set": 3,
         "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.6,
+        "overall_swing": 0.0
+      },
+      {
+        "id": "weaponization_event",
+        "label": "Reserve-weaponization / settlement shift (0 none / 1 talk / 2 action)",
+        "story": "Gold / de-dollarization",
+        "set": 3,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.6,
+        "overall_swing": 0.0
+      },
+      {
+        "id": "cat_losses",
+        "label": "Catastrophe-loss pressure (0 normal / 1 elevated / 2 severe season)",
+        "story": "Insurance retreat",
+        "set": 2,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.6,
+        "overall_swing": 0.0
+      },
+      {
+        "id": "regional_bank_stress",
+        "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
+        "story": "CRE maturity wall / regional banks",
+        "set": 2,
+        "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.5,
         "overall_swing": 0.0
@@ -241,11 +241,11 @@
         "overall_swing": 0.5
       },
       {
-        "id": "peg_deviation",
-        "label": "Largest stablecoin max peg deviation (%)",
-        "story": "Stablecoins & Treasury demand",
-        "set": 1,
-        "weight": 1.5,
+        "id": "subprime_auto_dpd",
+        "label": "Subprime auto 60+ day delinquency (%)",
+        "story": "Hidden consumer debt",
+        "set": 2,
+        "weight": 1.0,
         "story_swing": 2,
         "set_swing": 0.4,
         "overall_swing": 0.1

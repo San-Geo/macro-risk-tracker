@@ -78,6 +78,45 @@
       "closed": null,
       "grade": null,
       "grade_note": null
+    },
+    {
+      "id": "s5_china_deflation-2026-07-13",
+      "story_id": "s5_china_deflation",
+      "story": "China's price spillover (deflation or cost-push)",
+      "set": 4,
+      "opened": "2026-07-13",
+      "open_level": 7,
+      "peak_level": 7,
+      "peak_date": "2026-07-13",
+      "last_seen": "2026-07-13",
+      "status": "open",
+      "drivers_at_open": [
+        "China PPI YoY (%) - large swing either way is worse: 4.1 (band 2)",
+        "New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating): 2 (band 2)"
+      ],
+      "closed": null,
+      "grade": null,
+      "grade_note": null
+    },
+    {
+      "id": "s18_food_fertilizer-2026-07-13",
+      "story_id": "s18_food_fertilizer",
+      "story": "Food & fertilizer fragility",
+      "set": 5,
+      "opened": "2026-07-13",
+      "open_level": 7,
+      "peak_level": 7,
+      "peak_date": "2026-07-13",
+      "last_seen": "2026-07-13",
+      "status": "open",
+      "drivers_at_open": [
+        "Food-price trend (0 falling / 1 elevated / 2 spiking): 1 (band 1)",
+        "China fertilizer export curbs (0 lifted / 1 in place / 2 tightened): 2 (band 2)",
+        "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut): 2 (band 2)"
+      ],
+      "closed": null,
+      "grade": null,
+      "grade_note": null
     }
   ],
   "note": "Record begins with the ledger feature; earlier history was not graded."
