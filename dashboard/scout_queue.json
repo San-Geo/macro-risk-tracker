@@ -76,12 +76,12 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "Six federal agencies (OCC, FDIC, NCUA, Treasury, FinCEN, OFAC) must publish final GENIUS Act stablecoin rules by July 18, 2026 \u2014 exactly one year after enactment \u2014 with all comment periods having closed by June 9. The GENIUS Act contains no fallback or interim framework if agencies miss the deadline, leaving issuers (including the ~$230bn stablecoin market) in legal limbo.",
-      "as_of": "2026-07-13",
+      "summary": "The GENIUS Act (signed July 18, 2025) required regulators to finalize key stablecoin rules within one year; as of July 14, 2026, the OCC and Treasury have published only proposed rules\u2014not finals\u2014meaning state-equivalence determinations are absent and new federal applicants, foreign issuers, and state-qualified issuers face uncertainty or exclusion from the US market upon the deadline.",
+      "as_of": "2026-07-14",
       "sources": [
-        "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors",
         "https://www.briefs.co/news/genius-act-imposes-one-year-rulemaking-clock-until-mid-2026/",
-        "https://www.gibsondunn.com/the-genius-act-a-new-era-of-stablecoin-regulation/"
+        "https://eco.com/support/en/articles/15282223-what-is-the-genius-act-us-stablecoin-law-explained-for-2026",
+        "https://home.treasury.gov/news/press-releases/sb0435"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -89,12 +89,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The GENIUS Act rulemaking deadline is July 18, 2026 \u2014 five days from today. Six agencies must simultaneously finalize frameworks they proposed between March\u2013April 2026. If any agency misses the deadline, the Act provides no interim regime, meaning new applicants and foreign issuers face exclusion from the US market and legal uncertainty for the ~$230bn stablecoin supply. Historical precedent (Dodd-Frank: ~40% of deadlines missed) suggests slippage risk is non-trivial. The 'GENIUS implementation friction' indicator should be updated toward 1 (gaps emerging) given the multi-agency coordination complexity and the statutory cliff-edge. This directly affects the Treasury-demand angle of s7 as stablecoin growth underpins T-bill absorption.",
+      "rationale": "This indicator should move from 1\u21922 (gaps\u2192problems): the statutory one-year rulemaking deadline expires July 18, 2026 with no final rules. State equivalence determinations are incomplete, OCC/Treasury rules remain in proposed form, and issuers cannot confirm 'permitted' status. The 18-month backstop (January 2027) provides a soft landing, but the regulatory gap creates legal uncertainty for issuers and could slow the stablecoin supply expansion that underpins Treasury T-bill demand (the key systemic link in s7). USDT is ~$189bn and USDC ~$77bn (Q1 2026); a compliance chilling effect on issuance or redemptions would move the stablecoin Treasury-demand channel materially.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-14",
       "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
-      "sightings": 6
+      "sightings": 7
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -174,13 +174,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "After a June 17 MOU briefly restored traffic, renewed US-Iran strikes this week (July 7\u201313) have driven strait crossings from 18\u201322/day to ~6/day, with no large-vessel AIS-on transits since July 7. Brent surged >4% on July 13 to $78.82/bbl, reinforcing inflation pressure globally.",
-      "as_of": "2026-07-13",
+      "summary": "On 8 July 2026 President Trump declared the June MOU ceasefire 'over' after Iran attacked commercial ships in the Strait of Hormuz and the US launched 90 retaliatory airstrikes overnight July 8\u20139, threatening to close Hormuz to all traffic. Brent briefly topped $80/b (+8.7% intraday), tanker transits fell sharply from 94/day in late June back toward ~48/day, and backwardation widened abruptly\u2014directly re-opening the energy supply-shock channel that had been partially closed by the June MOU.",
+      "as_of": "2026-07-09",
       "sources": [
-        "https://www.aljazeera.com/economy/2026/7/13/oil-prices-jump-as-us-and-iran-trade-attacks-over-strait-of-hormuz",
-        "https://www.aljazeera.com/economy/2026/7/10/strait-of-hormuz-shipping-grinds-to-halt-as-us-iran-resume-fighting",
-        "https://www.cnn.com/2026/07/11/world/live-news/iran-war-trump",
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+        "https://jpt.spe.org/us-iran-conflict-flares-back-up-disrupts-strait-of-hormuz-once-again",
+        "https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/070826-factbox-oil-futures-pass-80b-as-us-iran-ceasefire-appears-to-collapse",
+        "https://abcnews.com/Politics/us-iran-ceasefire-mou-broke-timeline/story?id=134622392",
+        "https://thehill.com/policy/energy-environment/5960020-iran-ceasefire-gas-prices-strait-of-hormuz/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -188,12 +188,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Strait of Hormuz \u2014 which carried ~27% of world seaborne oil and 20% of LNG before the conflict \u2014 has effectively re-closed for large commercial vessels following renewed US-Iran combat exchanges this week. The existing s20 indicator 'Hormuz/Red Sea status' should move to 2 (closed/effectively contested at closure level). WTI/Brent readings should also be updated upward. This is the single highest-materiality development of the week: it directly feeds s18 (fertilizer inputs via Hormuz), s5 (China energy import costs / yuan pressure), s2 (Japan's energy import burden and JGB/yen dynamics), and s4 (EMDE energy import bills / debt stress).",
+      "rationale": "Hormuz status indicator should move from 1\u21922 (contested\u2192effectively closed/re-contested): Iran hit three tankers, the US responded with escalating strikes on 90 targets, Trump declared the MOU 'over', Iran threatened full closure, and daily transits halved. WTI spiked from ~$69 to ~$76/b in two days. This is the single highest-materiality development of the week and directly reads into the WTI crude indicator (now ~$75\u201378/b). Cascading effects on s18_food_fertilizer (Hormuz disruption to fertilizer inputs \u2192 move 0\u21922), s2_japan (energy import cost surge worsening JGB/yen dynamics), and s4_dev_debt (oil-importing EMDEs squeezed) are all material.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-14",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 4
+      "sightings": 5
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
@@ -220,11 +220,11 @@
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
-      "summary": "In June 2026, China added 10 US entities \u2014 including MP Materials and USA Rare Earth, the two primary US domestic rare-earth producers \u2014 to its export control list, blocking any third-party transfer of Chinese-origin dual-use items to them. Separately, MOFCOM Announcement No. 26 (effective July 1) created a formal whistleblower/reporting mechanism for export-control violations, signaling active enforcement.",
-      "as_of": "2026-07-13",
+      "summary": "In June 2026 China added 10 US entities to its export-control list including the two largest US rare-earth miners (MP Materials and USA Rare Earth), effectively barring global third parties from transferring Chinese-origin RE inputs to them; simultaneously, MOFCOM Announcement No. 26 of 2026 created an active public-reporting mechanism for export-control violations, effective July 1, targeting circumvention routes.",
+      "as_of": "2026-07-01",
       "sources": [
         "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
-        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+        "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -232,12 +232,12 @@
       "target_indicator": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "This is a direct and highly material update to s6_rare_earths. The 'US domestic RE producer blacklist' indicator should move from 0 to 1 (entity-specific ban) \u2014 China has now targeted the two largest US rare-earth miners by name, not just end-users. The MOFCOM enforcement mechanism effective July 1 also materially worsens the 'Rare-earth export license flow' indicator and the 'Nov-2025 pause status', as it signals China intends to actively enforce the broader licensing architecture even during the nominal pause of the October 2025 measures. Combined with the detention of Japanese nationals in May for alleged rare-earth smuggling, this represents a qualitative escalation in enforcement posture.",
+      "rationale": "This indicator should move from 0\u21921 (entity-specific ban): China has directly targeted the two principal US domestic RE producers by name on its export-control entity list. The extraterritorial scope\u2014prohibiting any party globally from transferring Chinese-origin RE materials to these firms\u2014is a major escalation of enforcement, not merely licensing friction. Combined with the July 1 whistleblower enforcement mechanism (MOFCOM Announcement No. 26), which actively incentivises reporting of circumvention, this represents a tightening of the RE control architecture. The November 2026 suspension expiry on the broader October 2025 measures adds a compounding risk within ~4 months.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-14",
       "id": "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6",
-      "sightings": 5
+      "sightings": 6
     },
     "hyperscaler-ai-capex-approaches-800bn-in-2026-67-03d0a0": {
       "headline": "Hyperscaler AI capex approaches $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027 \u2014 revenue gap concern widens",
@@ -2049,12 +2049,13 @@
     },
     "japan-s-takaichi-government-pauses-boj-bond-tape-81e119": {
       "headline": "Japan's Takaichi government pauses BOJ bond-taper programme under political pressure; 10Y JGB yield near 30-year high of ~2.7-2.8%, Oxford Economics raises end-2026 forecast to 2.8%",
-      "summary": "A government economic panel member confirmed on July 2 that Tokyo's pressure on the BOJ about bond-market instability led the BOJ to pause its JGB taper programme from next fiscal year. Meanwhile, the 10Y JGB yield has surged from ~2.1% in March to ~2.7% now (near October 1996 highs), with Oxford Economics raising its end-2026 forecast to 2.8%, driven by Takaichi's \u00a5370tn spending blueprint and concerns over fiscal financing\u2014representing a direct stress on the 's2_japan' 30-year JGB yield indicator.",
-      "as_of": "2026-07-02",
+      "summary": "Japan's 10-year JGB yield hit 2.901% on July 10\u2014the highest since September 1996\u2014driven by the government's June 30 'Basic Policy' blueprint calling on the BOJ to align monetary policy with growth, and by surging oil prices from renewed US-Iran conflict. On July 14 the Finance Minister signalled domestic pension funds should increase JGB holdings, pulling yields back ~20bp to ~2.70%, but the underlying fiscal expansion (\u00a5370 trillion in planned public-private investment) and BOJ credibility concerns persist.",
+      "as_of": "2026-07-14",
       "sources": [
-        "https://money.usnews.com/investing/news/articles/2026-07-02/japan-government-panel-member-calls-for-moderate-boj-rate-hikes",
+        "https://finance.yahoo.com/economy/policy/articles/japan-benchmark-bond-yield-hits-004445377.html",
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -2062,11 +2063,11 @@
       "target_indicator": "Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The July 2 Reuters-sourced report that the Takaichi government directly pressured the BOJ into pausing its QT programme\u2014confirmed by a government panel member\u2014is a material new development that pushes the 'Takaichi plan financing clarity' indicator from 1 (unclear) to 2 (disorderly), because political interference in BOJ balance-sheet policy to suppress the fiscal cost of spending plans is precisely the 'fiscal dominance' scenario this indicator is designed to detect. The 60bp surge in 10Y JGB yields since March (to near 30-year highs) and Oxford Economics' upward revision to 2.8% for end-2026 confirm that markets are pricing this deterioration. This also updates the '30-year JGB yield' indicator materially upward.",
+      "rationale": "The 'Basic Policy shock' materially worsens s2_japan on two indicators simultaneously: (1) 30-year JGB yield (the tracker's indicator) has surged alongside 10-year\u201430y yields are well above 3% and still near multi-decade highs despite the July 14 pullback; (2) Takaichi plan financing clarity should move 1\u21922 (disorderly): the government's blueprint language pressuring the BOJ to stay accommodative is being read as fiscal dominance risk, the BoJ hiked only 25bp to 1.0% in June but markets price another hike, and carry-trade unwind risk (USD/JPY near 40-year yen lows in June per Franklin Templeton) remains acute. The pension-fund nudge is an ad-hoc demand backstop, not a structural fix.",
       "status": "pending",
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05",
-      "sightings": 1,
+      "last_seen": "2026-07-14",
+      "sightings": 2,
       "id": "japan-s-takaichi-government-pauses-boj-bond-tape-81e119"
     },
     "us-fiscal-dominance-accelerating-obbba-debt-traj-b79d30": {
@@ -2816,10 +2817,94 @@
       "last_seen": "2026-07-13",
       "sightings": 1,
       "id": "japan-government-floats-gpif-repatriation-of-for-523eeb"
+    },
+    "japanese-investors-sold-29-6-billion-of-us-treas-944ad2": {
+      "headline": "Japanese investors sold $29.6 billion of US Treasuries in Q1 2026 alone as domestic yields rise",
+      "summary": "As JGB yields hit multi-decade highs, Japanese investors repatriated capital at an accelerating pace, selling $29.6 billion of US debt in Q1 2026\u2014removing a historically reliable buyer from a market already facing large US fiscal deficits and elevated Treasury supply under the 'One Big Beautiful Bill' fiscal expansion.",
+      "as_of": "2026-07-14",
+      "sources": [
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japanese net US Treasury sales (rolling 12-month, $bn)",
+        "type": "value",
+        "rubric": "Positive = net buying (supportive); negative = net selling (stress). Alert threshold: > -$50bn/quarter. Current Q1 2026: -$29.6bn.",
+        "sources": [
+          "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+          "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/mfh.txt"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "Japan is the largest foreign holder of US Treasuries (~$1.1 trillion). Accelerating repatriation as domestic JGB yields become attractive directly tightens US financial conditions and is not captured by any existing s2_japan indicator (which focuses on USD/JPY, 30y JGB yield, and Takaichi fiscal clarity). This is the transmission channel between Japan's fiscal/BOJ story and the US basis trade / Treasury market vulnerability (s1_basis_trade). The $29.6bn Q1 figure, annualised, would be the largest Japanese net sale of US Treasuries on record. A new indicator in s2_japan is warranted.",
+      "status": "pending",
+      "first_seen": "2026-07-14",
+      "last_seen": "2026-07-14",
+      "sightings": 1,
+      "id": "japanese-investors-sold-29-6-billion-of-us-treas-944ad2"
+    },
+    "us-cpi-at-4-2-yoy-may-2026-with-new-fed-chair-wa-e1625d": {
+      "headline": "US CPI at 4.2% YoY (May 2026) with new Fed Chair Warsh dropping forward guidance; Fed funds floor at 3.50% as oil shock re-accelerates inflation",
+      "summary": "US CPI printed 4.2% YoY in May 2026\u2014the highest 12-month reading since April 2023\u2014driven by Middle East energy disruption. New Fed Chair Kevin Warsh eliminated traditional forward guidance in favour of pure data-dependence after the June meeting, raising uncertainty about the policy path precisely as a renewed US-Iran flare-up (July 8) sends oil back above $75\u201378/b, threatening a second inflation impulse.",
+      "as_of": "2026-07-09",
+      "sources": [
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
+        "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf"
+      ],
+      "materiality": "medium",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Fed credibility / inflation resurgence trap",
+        "why": "The US is entering a second inflationary impulse (energy shock re-ignition post-ceasefire collapse) with a new Fed chair who has removed forward guidance and a policy rate still at 3.50\u20133.75%\u2014well below the May CPI of 4.2%. This is a distinct cross-cutting systemic risk not cleanly housed in any existing story: it tightens financial conditions for s3_private_credit (default rate risk), pressures s11_consumer_debt (real-income squeeze with subprime already stressed), amplifies s4_dev_debt (dollar strength + higher-for-longer), and undermines the goldilocks assumption embedded in current IG/HY spreads (s8_ai_capex, s3_private_credit). The removal of forward guidance introduces non-linear policy-shock risk.",
+        "proposed_level": 6,
+        "set": 1,
+        "indicators": [
+          {
+            "label": "US CPI YoY (%)",
+            "type": "value",
+            "rubric": "Trend matters: sustained >3.5% with energy re-acceleration = elevated; >4.5% = crisis signal. Current: 4.2% (May 2026).",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Fed forward guidance clarity (0 clear / 1 data-dependent / 2 incoherent)",
+            "type": "band",
+            "rubric": "0 = explicit rate path provided; 1 = data-dependent, no forward guidance (current post-Warsh); 2 = contradictory signals or surprise policy reversal.",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "US 2y\u201310y Treasury spread (bps)",
+            "type": "value",
+            "rubric": "Re-inversion (< 0 bps) signals recession-rate-hike collision. Steepening with inflation = stagflation regime. Current: modestly positive.",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.35
+          }
+        ]
+      },
+      "rationale": "No existing story cleanly captures the combination of (a) an entrenched US inflation resurgence above 4%, (b) a leadership change at the Fed that has dismantled forward guidance, and (c) a renewed energy price shock from Hormuz re-closure that threatens a second inflation impulse. This is distinct from s1_basis_trade (financial plumbing), s11_consumer_debt (household-level), and s4_dev_debt (EM-focused). The Warsh forward-guidance removal is a structural shift in US monetary policy communication that creates non-linear tightening risk and deserves its own story node. Materiality is medium-high given the potential to reprice rate expectations globally.",
+      "status": "pending",
+      "first_seen": "2026-07-14",
+      "last_seen": "2026-07-14",
+      "sightings": 1,
+      "id": "us-cpi-at-4-2-yoy-may-2026-with-new-fed-chair-wa-e1625d"
     }
   },
-  "generated": "2026-07-13",
+  "generated": "2026-07-14",
   "model": "claude-sonnet-4-6",
-  "new_count": 1,
-  "pending_count": 88
+  "new_count": 2,
+  "pending_count": 90
 }
