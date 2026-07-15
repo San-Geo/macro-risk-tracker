@@ -76,12 +76,13 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "The GENIUS Act (signed July 18, 2025) required regulators to finalize key stablecoin rules within one year; as of July 14, 2026, the OCC and Treasury have published only proposed rules\u2014not finals\u2014meaning state-equivalence determinations are absent and new federal applicants, foreign issuers, and state-qualified issuers face uncertainty or exclusion from the US market upon the deadline.",
+      "summary": "Six federal agencies (OCC, FDIC, NCUA, Treasury, FinCEN, OFAC) must simultaneously publish final GENIUS Act stablecoin rules by July 18, 2026\u2014just three days away\u2014after all comment periods closed by June 9. The $240bn+ stablecoin market faces immediate uncertainty over foreign-issuer access (Tether, ~67% market share, has filed no formal 12 CFR Part 15 application), and if rules are not finalized in time, state-equivalence and foreign-registration pathways remain legally ambiguous for issuers and custodians.",
       "as_of": "2026-07-14",
       "sources": [
-        "https://www.briefs.co/news/genius-act-imposes-one-year-rulemaking-clock-until-mid-2026/",
-        "https://eco.com/support/en/articles/15282223-what-is-the-genius-act-us-stablecoin-law-explained-for-2026",
-        "https://home.treasury.gov/news/press-releases/sb0435"
+        "https://cryptoslate.com/genius-act-deadline-puts-stablecoin-issuers-on-the-clock/",
+        "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors",
+        "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
+        "https://en.spaziocrypto.com/stablecoins/genius-act-stablecoin-deadlines-june-july-2026/"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -89,12 +90,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "This indicator should move from 1\u21922 (gaps\u2192problems): the statutory one-year rulemaking deadline expires July 18, 2026 with no final rules. State equivalence determinations are incomplete, OCC/Treasury rules remain in proposed form, and issuers cannot confirm 'permitted' status. The 18-month backstop (January 2027) provides a soft landing, but the regulatory gap creates legal uncertainty for issuers and could slow the stablecoin supply expansion that underpins Treasury T-bill demand (the key systemic link in s7). USDT is ~$189bn and USDC ~$77bn (Q1 2026); a compliance chilling effect on issuance or redemptions would move the stablecoin Treasury-demand channel materially.",
+      "rationale": "The GENIUS Act's July 18 deadline is 3 days away and six agencies must simultaneously finalize interoperable rules\u2014a coordination risk that, if rules slip or are internally inconsistent, directly maps to the s7 'GENIUS implementation friction' indicator moving from 0 to 1 or 2. Tether's non-compliance with the new framework is an acute tail risk: USDT holds ~67% of the $240bn market, and regulatory pressure post-July 18 could trigger asset shifts into short-dated Treasuries (Treasury demand angle) or peg instability events. This is a medium-materiality live timing event warranting tracker attention.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-07-15",
       "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
-      "sightings": 7
+      "sightings": 8
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -174,13 +175,14 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "On 8 July 2026 President Trump declared the June MOU ceasefire 'over' after Iran attacked commercial ships in the Strait of Hormuz and the US launched 90 retaliatory airstrikes overnight July 8\u20139, threatening to close Hormuz to all traffic. Brent briefly topped $80/b (+8.7% intraday), tanker transits fell sharply from 94/day in late June back toward ~48/day, and backwardation widened abruptly\u2014directly re-opening the energy supply-shock channel that had been partially closed by the June MOU.",
-      "as_of": "2026-07-09",
+      "summary": "President Trump declared the April ceasefire 'over' on or around July 8 after Iran attacked commercial ships; CENTCOM launched 80+ strikes including Kharg Island (Iran's primary crude export hub), and Iran's IRGC formally declared the Strait of Hormuz closed, sending Brent back above $78\u201380. Oman\u2014struck by Iran on July 12\u2014and Qatar's mediation tracks are simultaneously strained, and the 60-day nuclear window in the June 17 Islamabad MOU expires August 17 with no substantive talks.",
+      "as_of": "2026-07-14",
       "sources": [
         "https://jpt.spe.org/us-iran-conflict-flares-back-up-disrupts-strait-of-hormuz-once-again",
-        "https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/070826-factbox-oil-futures-pass-80b-as-us-iran-ceasefire-appears-to-collapse",
-        "https://abcnews.com/Politics/us-iran-ceasefire-mou-broke-timeline/story?id=134622392",
-        "https://thehill.com/policy/energy-environment/5960020-iran-ceasefire-gas-prices-strait-of-hormuz/"
+        "https://www.cnn.com/2026/07/11/world/live-news/iran-war-trump",
+        "https://thehill.com/policy/energy-environment/5960020-iran-ceasefire-gas-prices-strait-of-hormuz/",
+        "https://hormuzstraitmonitor.com/crisis-timeline/",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -188,12 +190,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Hormuz status indicator should move from 1\u21922 (contested\u2192effectively closed/re-contested): Iran hit three tankers, the US responded with escalating strikes on 90 targets, Trump declared the MOU 'over', Iran threatened full closure, and daily transits halved. WTI spiked from ~$69 to ~$76/b in two days. This is the single highest-materiality development of the week and directly reads into the WTI crude indicator (now ~$75\u201378/b). Cascading effects on s18_food_fertilizer (Hormuz disruption to fertilizer inputs \u2192 move 0\u21922), s2_japan (energy import cost surge worsening JGB/yen dynamics), and s4_dev_debt (oil-importing EMDEs squeezed) are all material.",
+      "rationale": "Status must move to '2 closed': Iran's IRGC formally declared closure 'until further notice', CENTCOM confirms traffic 'essentially stopped', Kharg Island was struck for the first time, and all mediation channels are simultaneously degraded. WTI is back near $73\u201376 and Brent near $78\u201380, well off peak but re-accelerating. This is a direct, high-severity hit to the primary s20 indicator and also cascades into s18 (fertilizer), s5 (China PPI energy input), and s2 (Japan import costs).",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-07-15",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 5
+      "sightings": 6
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
@@ -892,24 +894,24 @@
     },
     "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec": {
       "headline": "Iran war energy shock drives Hormuz fertilizer disruption; Gulf fertilizer exports (especially Qatar LNG-linked urea) severely curtailed since March 2026",
-      "summary": "The Strait of Hormuz crisis \u2014 still contested as of July 8 \u2014 has disrupted roughly 30% of globally traded fertilizers that normally transit the strait, including Gulf urea and ammonia exports, while Qatar LNG liquefaction was shut for weeks. The attack re-escalation on July 7 prolongs this food-input shock just as Northern Hemisphere crop seasons enter critical phases.",
-      "as_of": "2026-07-08",
+      "summary": "Wikipedia's documented record of the 2026 Hormuz crisis confirms fertilizer supply (alongside aluminium and helium) as an explicit collateral casualty of the strait's closure since February 28, with the largest energy-market disruption since the 1970s now re-intensifying following the July 8 ceasefire collapse. The IMF's July 2026 WEO Update flags that energy price spikes are already elevating global headline inflation from 4.1% (2025) to a projected 4.7% (2026), with food insecurity pressures concentrated in sub-Saharan Africa and other vulnerable low-income economies.",
+      "as_of": "2026-07-14",
       "sources": [
         "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
-        "https://www.congress.gov/crs-product/R45281"
+        "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "existing_indicator",
       "target_story": "s18_food_fertilizer",
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Wikipedia/CRS data confirms the Strait carries ~30% of globally traded fertilizers and that Gulf LNG/ammonia/urea have been severely disrupted since late February. The July 7 re-escalation moves the indicator back toward 2 (cut) after it may have been edging toward 1 (disrupted) during the ceasefire period. This is a lagged but accelerating food-security and EM-debt risk (linking s18 to s4_dev_debt) that the tracker needs to reflect as materially worsened.",
+      "rationale": "The s18 indicator for Hormuz/Gulf disruption to fertilizer inputs should be updated to '2 cut': Wikipedia's crisis record explicitly lists fertilizer as one of the commodity markets suffering supply disruption and price increases, the ceasefire has now re-collapsed, and the IMF's July WEO Update documents accelerating food-price pressure with particular downside risk to sub-Saharan Africa. The existing s18 food-price-trend indicator should also move from 'elevated' toward 'spiking' watch given the simultaneous energy and fertilizer input shock. Kept as medium (not high) because spot food prices have not yet spiked globally, but the pipeline pressure is building.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-08",
+      "last_seen": "2026-07-15",
       "id": "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec",
-      "sightings": 6
+      "sightings": 7
     },
     "japan-s-energy-import-crisis-deepens-as-hormuz-c-e531e3": {
       "headline": "Japan's energy import crisis deepens as Hormuz closure compounds BOJ policy bind \u2014 new macro feedback loop not captured in existing indicators",
@@ -2901,10 +2903,85 @@
       "last_seen": "2026-07-14",
       "sightings": 1,
       "id": "us-cpi-at-4-2-yoy-may-2026-with-new-fed-chair-wa-e1625d"
+    },
+    "jgb-10-year-yield-hits-30-year-high-at-2-90-30-y-5389e5": {
+      "headline": "JGB 10-year yield hits 30-year high at 2.90%; 30-year at ~3.96%; Japan GPIF rebalancing floated then walked back, stoking disorderly signal",
+      "summary": "Japan's benchmark 10-year JGB yield touched 2.901% on July 9\u2014its highest since 1996\u2014while the 30-year remained near 3.96%, on mounting fiscal-expansion anxiety after the June 30 'Basic Policy shock' draft policy blueprint. Finance Minister Katayama's hint at GPIF rebalancing briefly calmed markets but was quickly walked back, compounding the credibility gap around Takaichi-plan financing.",
+      "as_of": "2026-07-14",
+      "sources": [
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://finance.yahoo.com/economy/policy/articles/japan-benchmark-bond-yield-hits-004445377.html",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/",
+        "https://wolfstreet.com/2026/07/01/yen-craters-to-4-decade-low-jgb-yields-at-3-decade-highs-monetary-policy-mess-comes-home-to-roost/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield (%) AND Takaichi plan financing clarity",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The 10y JGB hit a 30-year high and the 30y is pinned near 4%; both the yield level and the botched GPIF trial-balloon directly update the two key s2 indicators (30y JGB yield and Takaichi financing clarity, which should move to '2 disorderly'). The Basic Policy shock also revealed the government's attempt to implicitly constrain BOJ rate hikes, a qualitative deterioration in financing clarity. Over 70 bps of 10y yield rise year-to-date and a botched GPIF communication warrant a high-materiality flag.",
+      "status": "pending",
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-07-15",
+      "sightings": 1,
+      "id": "jgb-10-year-yield-hits-30-year-high-at-2-90-30-y-5389e5"
+    },
+    "japan-capital-repatriation-29-6bn-us-treasuries--e4e91a": {
+      "headline": "Japan capital repatriation: $29.6bn US Treasuries sold in Q1 2026 alone; TD Economics estimates 20\u201350 bps upward pressure on US 10y yield",
+      "summary": "As domestic JGB yields reached multi-decade highs, Japanese investors\u2014including banks, insurers, and government-related funds\u2014sold a net $29.6 billion in US Treasuries in Q1 2026, with Ministry of Finance data showing \u00a54 trillion in net foreign-security sales since January. TD Economics estimates this repatriation dynamic could add 20\u201350 basis points to US 10-year yields in the medium term, representing a structural withdrawal from the world's largest sovereign bond market at a time of near-$2 trillion annual US fiscal deficits.",
+      "as_of": "2026-07-14",
+      "sources": [
+        "https://economics.td.com/gbl-what-happens-in-japan-may-not-stay-in-japan",
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://www.forbes.com/sites/investor-hub/article/how-japan-bond-market-affects-your-portfolio/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japan net UST holdings change (rolling-quarter, $bn)",
+        "type": "value",
+        "rubric": "Measures rolling-quarter net Japanese purchases (+) or sales (\u2013) of US Treasuries per US TIC / Japan MOF data. Values more negative than \u2013$20bn/quarter signal structural repatriation; flag at \u2013$30bn, alarm at \u2013$50bn. Complements the JGB yield indicator by capturing the cross-market transmission channel to US term premia.",
+        "sources": [
+          "https://economics.td.com/gbl-what-happens-in-japan-may-not-stay-in-japan",
+          "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2 indicators track JPY/USD, JGB yields, and Takaichi financing clarity, but none captures the feedback loop into US Treasury demand\u2014the most systemically dangerous transmission path. Japan is the largest single foreign holder of US Treasuries (~$1.2 trillion), and a Q1 2026 sale of $29.6bn is already the fastest pace in years. An orderly continuation adds 20\u201350 bps to US 10y yields (TD Economics); a disorderly unwind could spike MOVE, stress basis trades (s1), and tighten financial conditions broadly. A dedicated indicator for Japan's net UST position is the missing link in the current tracker.",
+      "status": "pending",
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-07-15",
+      "sightings": 1,
+      "id": "japan-capital-repatriation-29-6bn-us-treasuries--e4e91a"
+    },
+    "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0": {
+      "headline": "China June PPI +4.1% YoY (4-year high) driven by Iran energy shock\u2014but MoM turned negative and consumer goods PPI still -0.9%, revealing a dangerous bifurcation",
+      "summary": "China's June PPI hit +4.1% year-on-year, the strongest since July 2022, primarily from Iran-war energy and commodity pass-through (mining PPI +16.5% YoY, raw materials +8.6%), while consumer goods PPI fell -0.9% YoY and the monthly reading turned negative (-0.3%) for the first time since July 2025. This cost-push / domestic-deflation split is the most adverse configuration for China's margins and export pricing power, simultaneously pressuring corporate profits and preventing consumer reflation.",
+      "as_of": "2026-07-09",
+      "sources": [
+        "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html",
+        "https://gianlucabenigno.substack.com/p/china-june-26-cpi-inflation-report"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s5_china_deflation",
+      "target_indicator": "China PPI YoY (%) - large swing either way is worse",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "A +4.1% PPI YoY is a large positive swing that the s5 indicator explicitly flags as adverse 'either way'. The specific mechanism\u2014energy cost-push that is not passing through to consumers, compressing margins\u2014is the China deflation spillover story's most dangerous configuration: exporters face margin squeeze and may intensify price dumping abroad (anti-dumping actions risk) while domestic demand remains anaemic (CPI 1.0%, below consensus). The MoM reversal also signals the energy impulse may be peaking, meaning PPI could whipsaw back negative if Hormuz normalises, creating a second adverse swing. Medium materiality because the driver (Hormuz) is now re-escalating.",
+      "status": "pending",
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-07-15",
+      "sightings": 1,
+      "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
     }
   },
-  "generated": "2026-07-14",
+  "generated": "2026-07-15",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 90
+  "new_count": 3,
+  "pending_count": 93
 }
