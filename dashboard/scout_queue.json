@@ -502,13 +502,13 @@
     },
     "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
       "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
-      "summary": "The US launched a fourth wave of strikes on Iran (July 12-13) after Iran attacked a Cyprus-flagged container ship transiting the Strait; Iran declared passage 'not possible,' crude tanker traffic effectively halted (zero large-vessel AIS transits on July 7-8), and Brent surged 4% to ~$79 on July 13 \u2014 shattering the fragile ceasefire MOU signed last month. Global oil output remains 9.4 million bpd below pre-war levels despite a partial June recovery.",
-      "as_of": "2026-07-13",
+      "summary": "The June 2026 US-Iran ceasefire framework collapsed in early July after both sides resumed tit-for-tat strikes on commercial and military targets in and around the Strait of Hormuz. CENTCOM confirmed reimposition of the naval blockade on July 14, with tanker traffic 'essentially stopped' and Brent crude spiking above $80/bbl before settling near $78/bbl.",
+      "as_of": "2026-07-15",
       "sources": [
-        "https://www.thenationalnews.com/business/energy/2026/07/13/oil-jumps-amid-fears-of-prolonged-disruption-in-strait-of-hormuz/",
-        "https://www.cnbc.com/2026/07/13/us-iran-war-hormuz-oil-trump.html",
-        "https://www.aljazeera.com/economy/2026/7/10/strait-of-hormuz-shipping-grinds-to-halt-as-us-iran-resume-fighting",
-        "https://jpt.spe.org/us-iran-conflict-flares-back-up-disrupts-strait-of-hormuz-once-again"
+        "https://www.cfr.org/articles/strait-hormuz-us-iran-maritime-flash-point",
+        "https://jpt.spe.org/us-iran-conflict-flares-back-up-disrupts-strait-of-hormuz-once-again",
+        "https://news.un.org/en/story/2026/07/1167898",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -516,12 +516,12 @@
       "target_indicator": "Hormuz/Red Sea status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz/Red Sea status indicator is the primary watch-point for s20. Status has deteriorated from 'contested' (1) to effectively 'closed' (2) for the fourth time in seven days: Iran declared the strait shut, zero large-vessel AIS transits recorded July 7-8, and a fresh US strike wave July 12-13 shattered the ceasefire MOU. WTI rose to ~$74-76 and Brent to $78-79. This is a direct, real-time read on the indicator; the tracker should move Hormuz status to 2 (closed/contested) and flag acute oil-price risk premium.",
+      "rationale": "The renewed blockade directly re-escalates the Hormuz/Red Sea status indicator from 'contested' toward 'closed,' driving WTI/Brent higher and threatening fertilizer and LNG flows simultaneously (cross-impact on s18_food_fertilizer). The ceasefire collapse is the single highest-materiality event of the week: CENTCOM's July 14 blockade reimposition is a discrete, confirmed status change that the tracker must register. WTI is now ~$73/bbl and trending higher, and tanker traffic has 'essentially stopped' per Rystad Energy\u2014both direct indicator reads.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-16",
       "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
-      "sightings": 7
+      "sightings": 8
     },
     "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
       "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
@@ -1385,24 +1385,24 @@
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
       "headline": "China\u2013Japan Rare-Earth / Dual-Use Controls Expand to Trigger GDP-Level Supply Chain Risk; November 2026 Broader Suspension Expiry Looms",
-      "summary": "With the Oct-2025 measures' extraterritorial enforcement suspended until November 10, 2026, the clock is running. US yttrium imports remain far below pre-restriction levels, and China's MIIT published a tighter domestic enforcement framework in April 2026 covering mining, smelting, and separation penalties \u2014 indicating Beijing is consolidating structural control regardless of diplomatic pauses.",
-      "as_of": "2026-04-29",
+      "summary": "China's June exports hit $412bn (+27% YoY, fastest since Oct 2021), with semiconductors and rare earths among the top-growing categories. As Section 301 tariffs approach, Chinese commentators and the Asia Times warn Beijing could reimpose rare-earth export restrictions if the US proceeds\u2014directly threatening the Kuala Lumpur/Nov-2025 commitment to suspend coercive rare-earth controls.",
+      "as_of": "2026-07-15",
       "sources": [
-        "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later",
-        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
-        "https://discoveryalert.com.au/china-rare-earth-export-controls-supply-chain-2026/"
+        "https://www.cnbc.com/2026/07/14/china-june-trade-data-exports-imports.html",
+        "https://asiatimes.com/2026/03/us-warned-of-china-rare-earth-curbs-if-section-301-tariffs-expand/",
+        "https://www.whitehouse.gov/presidential-actions/2025/11/modifying-reciprocal-tariff-rates-consistent-with-the-economic-and-trade-arrangement-between-the-united-states-and-the-peoples-republic-of-china/"
       ],
-      "materiality": "medium",
+      "materiality": "high",
       "classification": "existing_indicator",
       "target_story": "s6_rare_earths",
       "target_indicator": "Nov-2025 pause status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Nov-2025 pause status indicator should be updated to 1 (expiring) \u2014 the November 10, 2026 extraterritorial enforcement deadline is now ~18 weeks away, US imports of controlled REEs remain structurally depressed, and Beijing's April 2026 domestic enforcement tightening signals the pause is being used as a compliance-preparation window rather than a genuine d\u00e9tente. Failure to negotiate a renewal before November would activate FDPR-style extraterritorial controls across global supply chains, a step-change for s6 severity.",
+      "rationale": "The Nov-2025 Kuala Lumpur Arrangement committed China to suspend coercive rare-earth export controls; that pause is now explicitly flagged by Chinese policy commentators as a potential retaliation lever if Section 301 tariffs proceed. The Nov-2025 pause status indicator should escalate from 0 (extended) toward 1 (expiring/threatened) given the credible and public nature of these warnings, the imminent Section 301 decision (July 20 deadline), and the fact that rare earths are simultaneously surging as an export category\u2014meaning China still has economic incentive to keep volumes flowing, but the political calculus is changing rapidly with the tariff cliff.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-05",
-      "sightings": 3,
+      "last_seen": "2026-07-16",
+      "sightings": 4,
       "id": "china-japan-rare-earth-dual-use-controls-expand--f24a9c"
     },
     "strait-of-hormuz-60-day-mou-signed-june-17-iran--eef3e4": {
@@ -1461,12 +1461,13 @@
     },
     "genius-act-implementing-regulations-missed-the-j-dc0151": {
       "headline": "GENIUS Act implementing regulations missed the July 18, 2026 statutory deadline; effective date now defaults to January 2027",
-      "summary": "The GENIUS Act (signed July 18, 2025) required all primary federal stablecoin regulators to issue final rules within one year (by July 18, 2026). As of July 13, the Federal Reserve Board \u2014 regulator for PPSI subsidiaries of state member banks \u2014 has not issued even a proposed rule, creating a structural gap that prevents the framework from being 'complete and coherent' and could delay the law's effective date or leave a regulatory limbo for a large class of bank-affiliated stablecoin issuers.",
-      "as_of": "2026-07-13",
+      "summary": "Six federal agencies (OCC, FDIC, NCUA, Treasury, FinCEN, OFAC) face a statutory deadline of July 18, 2026, to finalize GENIUS Act implementing rules. All comment periods closed by June 9, leaving agencies only five weeks to reconcile six proposed frameworks. Failure to finalize on time would push the Act's effective date to the 18-month backstop of January 18, 2027, creating a regulatory gap that offshore competitors and non-compliant issuers could exploit.",
+      "as_of": "2026-07-16",
       "sources": [
         "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors",
-        "https://www.briefs.co/news/genius-act-imposes-one-year-rulemaking-clock-until-mid-2026/",
-        "https://www.cryptotimes.io/2026/05/18/genius-act-10-months-stablecoin-rulemaking-federal-state-divide/"
+        "https://www.gibsondunn.com/the-genius-act-a-new-era-of-stablecoin-regulation/",
+        "https://eco.com/support/en/articles/15282223-what-is-the-genius-act-us-stablecoin-law-explained-for-2026",
+        "https://www.brookings.edu/articles/next-steps-for-genius-payment-stablecoins/"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -1474,11 +1475,11 @@
       "target_indicator": "GENIUS implementation friction",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The GENIUS implementation friction indicator (0 smooth / 1 gaps / 2 problems) should move from 0 to 1 (gaps). The Federal Reserve Board \u2014 the regulator of the largest class of bank-affiliated stablecoin subsidiaries \u2014 has not published even a proposed rule ahead of the statutory July 18 deadline. Six other agencies have published NPRMs, but the Fed's absence creates a structural gap that could force state-member-bank PPSIs into regulatory limbo or delay the law's effective date beyond January 18, 2027. This is material to the Treasury-demand angle because the 1:1 reserve rule requires stablecoin growth to translate into T-bill demand, which depends on the framework becoming operative.",
+      "rationale": "The July 18 rulemaking deadline is the single most concrete near-term observable for the 'GENIUS implementation friction' indicator. If all six agencies publish final rules on or before July 18, the indicator reads 0 (smooth); if any agency misses or publishes rules with material inter-agency conflicts (e.g., FDIC no-deposit-insurance stance vs. OCC charter pathway), it escalates to 1 (gaps). The tracker should register this as a live, datable checkpoint: the outcome will be known within 48 hours of today's scout date and is directly measurable.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-13",
-      "sightings": 5,
+      "last_seen": "2026-07-16",
+      "sightings": 6,
       "id": "genius-act-implementing-regulations-missed-the-j-dc0151"
     },
     "china-s-nov-10-2026-rare-earth-extraterritorial--6281bb": {
@@ -2978,10 +2979,130 @@
       "last_seen": "2026-07-15",
       "sightings": 1,
       "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
+    },
+    "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328": {
+      "headline": "Japan 10-year JGB Yield Touches 2.901% (30-Year High) on Takaichi Fiscal Shock; BOJ Independence Language Revised",
+      "summary": "The 10-year JGB yield spiked to 2.901% on July 10\u2014its highest since 1996\u2014driven by the government's June 30 'Basic Policy shock' blueprint (\u00a5370 trillion investment roadmap) that markets read as an attempt to cap BOJ rate hikes. Finance Minister Katayama's GPIF reallocation signal triggered a partial retreat to ~2.78%, but yields are still 70+ bps higher year-to-date and Japanese investors sold $29.6bn of U.S. Treasuries in Q1 2026 alone.",
+      "as_of": "2026-07-15",
+      "sources": [
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/",
+        "https://www.lazardassetmanagement.com/us/en_us/research-insights/market-insights/beyond-the-numbers/july-2026"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japanese investor net US Treasury sales (rolling 12-month, $bn)",
+        "type": "value",
+        "rubric": "0 = net buying or < $20bn selling; 1 = $20\u201360bn selling (repatriation signal); 2 = > $60bn selling (disorderly repatriation, systemic Treasury supply shock)",
+        "sources": [
+          "US Treasury TIC data (monthly, ~6-week lag): https://home.treasury.gov/data/treasury-international-capital-tic-system",
+          "BOJ flow-of-funds: https://www.boj.or.jp/en/statistics/sj/index.htm"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan story tracks USD/JPY, the 30-year JGB yield, and Takaichi financing clarity. But the week's most novel sub-signal is quantified Japanese repatriation of US Treasuries ($29.6bn in Q1 alone). This is a direct feedback loop to s1_basis_trade and s21_clearinghouses: if Japanese life insurers and GPIF continue rotating from UST to JGBs, it adds idiosyncratic supply pressure to the long end of the US curve on top of existing fiscal deficits. No current indicator captures this bilateral flow. The 'Takaichi plan financing clarity' ordinal is the closest proxy but is too broad; a dedicated flow metric is needed.",
+      "status": "pending",
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "sightings": 1,
+      "id": "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328"
+    },
+    "section-122-tariffs-expire-july-24-ustr-section--ff697e": {
+      "headline": "Section 122 Tariffs Expire July 24; USTR Section 301 Replacement (No Rate Cap, No Expiry) Due July 20",
+      "summary": "The 10% broad-based Section 122 surcharge expires by statute on July 24, 2026, and cannot be extended unilaterally. USTR's replacement\u2014Section 301 tariffs of 10\u201312.5% covering 46+ countries with no expiry date or rate cap\u2014faces a completion deadline of July 20. China's Q2 GDP simultaneously missed Beijing's target (4.3% vs 4.5%\u20135% goal) for the first time since Covid, with property investment down 18% YoY.",
+      "as_of": "2026-07-15",
+      "sources": [
+        "https://www.techtimes.com/articles/320531/20260715/china-exports-surge-record-ai-chips-gdp-miss-tariff-cliff-signal-deeper-trouble.htm",
+        "https://www.cnbc.com/2026/07/14/china-june-trade-data-exports-imports.html",
+        "https://budgetmodel.wharton.upenn.edu/p/2026-07-13-effective-tariff-rates-and-revenues-updated-july-13-2026/",
+        "https://www.cnn.com/2026/07/14/business/china-q2-gdp-export-economy-intl-hnk"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s5_china_deflation",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US tariff-regime transition risk (ordinal)",
+        "type": "band",
+        "rubric": "0 = stable regime (Section 301 finalized, rates known); 1 = transition uncertainty (Section 122 lapsing, Section 301 pending or contested in court); 2 = disorderly cliff (Section 122 expired, no Section 301 replacement, IEEPA injunction in force\u2014effective tariff rate collapses or spikes unpredictably)",
+        "sources": [
+          "USTR Section 301 docket: https://ustr.gov/trade-topics/presidential-tariff-actions",
+          "Penn Wharton Budget Model tariff tracker: https://budgetmodel.wharton.upenn.edu"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The existing s5_china_deflation story tracks PPI, USD/CNY, and anti-dumping actions, but does not capture the imminent US tariff-regime cliff. The July 24 expiry of Section 122 with simultaneous Section 301 finalization is a discrete, time-stamped binary event with direct impact on China's export-dependent growth model (now exposed by the Q2 GDP miss) and on global supply-chain pricing. A milder tariff outcome would amplify China's deflationary export push; a harsher Section 301 outcome would reignite the PPI/anti-dumping cascade. The indicator is needed to flag transition-state risk that none of the three existing s5 indicators currently captures.",
+      "status": "pending",
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "sightings": 1,
+      "id": "section-122-tariffs-expire-july-24-ustr-section--ff697e"
+    },
+    "us-cpi-at-4-2-yoy-may-2026-new-fed-chair-warsh-d-fc1b68": {
+      "headline": "US CPI at 4.2% YoY (May 2026); New Fed Chair Warsh Drops Forward Guidance Amid Sticky Inflation and Middle East Shock",
+      "summary": "New Fed Chair Kevin Warsh removed traditional forward guidance after the June FOMC meeting, shifting to pure data dependence as US CPI hit 4.2% YoY in May 2026\u2014the highest since April 2023\u2014partly driven by Middle East energy costs. The Fed funds rate remains at 3.50\u20133.75%, and the policy pivot risk (toward hikes rather than cuts) is a new tail risk not previously priced for 2026.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
+        "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf"
+      ],
+      "materiality": "medium",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Fed Policy Re-anchoring Risk (Warsh Era)",
+        "why": "The appointment of Kevin Warsh as Fed Chair and his immediate removal of forward guidance represents a structural break in how markets price US monetary policy. With CPI at 4.2% YoY (a multi-year high), the Middle East energy shock keeping inflation sticky, and the new chair signaling pure data dependence, the tail risk of a return to rate hikes\u2014rather than the cuts markets had priced\u2014creates a cross-cutting shock vector that amplifies s1_basis_trade (leveraged Treasury positions get squeezed if rates rise unexpectedly), s3_private_credit (floating-rate direct lending defaults spike), s8_ai_capex (rate-sensitive capex financing), and s11_consumer_debt (delinquency acceleration). No existing story captures the Fed's institutional pivot itself as a standalone risk.",
+        "proposed_level": 6,
+        "set": 1,
+        "indicators": [
+          {
+            "label": "US CPI YoY (%)",
+            "type": "value",
+            "rubric": "Reading above 3.5% is elevated; above 4.5% is acute; above 5% triggers rate-hike pricing",
+            "sources": [
+              "BLS CPI release (monthly): https://www.bls.gov/cpi/",
+              "FRED CPIAUCSL: https://fred.stlouisfed.org/series/CPIAUCSL"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Fed forward-guidance clarity (ordinal)",
+            "type": "band",
+            "rubric": "0 = explicit forward guidance in place; 1 = data-dependent, no rate-path signal (current Warsh posture); 2 = active rate-hike bias or emergency meeting risk",
+            "sources": [
+              "FOMC statement and press conference transcripts: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Fed funds futures implied rate 12-months forward (%)",
+            "type": "value",
+            "rubric": "Rapid upward repricing (>50bps in <4 weeks) signals market pricing a hike cycle; downward repricing signals cuts still priced",
+            "sources": [
+              "CME FedWatch tool: https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "No existing story in the tracker covers the Fed's institutional framework shift. The Warsh forward-guidance removal is not routine noise: it is a structural change in the monetary policy communication regime that arrived alongside the highest US CPI print since 2023. Combined with a Middle East energy shock keeping inflation sticky, this creates a plausible path to rate hikes in a tracker that currently models all monetary risk as 'cuts delayed.' The cross-story amplification effects (basis trade, private credit, AI capex, consumer debt) are all first-order, making this a new_risk warranting its own story rather than being absorbed into an existing indicator.",
+      "status": "pending",
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "sightings": 1,
+      "id": "us-cpi-at-4-2-yoy-may-2026-new-fed-chair-warsh-d-fc1b68"
     }
   },
-  "generated": "2026-07-15",
+  "generated": "2026-07-16",
   "model": "claude-sonnet-4-6",
   "new_count": 3,
-  "pending_count": 93
+  "pending_count": 96
 }

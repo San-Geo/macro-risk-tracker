@@ -1,6 +1,6 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-07-15 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-07-16 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
 **Overall risk 7.5/10** — Set 1 5.8, Set 2 5.2, Set 3 4.5, Set 4 6.5, Set 5 5.8.
 
