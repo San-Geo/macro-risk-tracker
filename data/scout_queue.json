@@ -3099,10 +3099,168 @@
       "last_seen": "2026-07-16",
       "sightings": 1,
       "id": "us-cpi-at-4-2-yoy-may-2026-new-fed-chair-warsh-d-fc1b68"
+    },
+    "us-iran-strait-of-hormuz-ceasefire-collapses-us--3b81b5": {
+      "headline": "US\u2013Iran Strait of Hormuz ceasefire collapses; US re-launches strikes and naval blockade, transit drops to near-zero",
+      "summary": "An interim US\u2013Iran peace agreement signed in June broke down by ~July 11, 2026, with the US launching multiple rounds of air and naval strikes and Iran retaliating against US bases across the Gulf; MarineTraffic data show only ~13 vessels transited the Strait in a 24-hour window vs. ~110 pre-war, and Brent crude jumped 4% to ~$79/bbl on July 13. The IMF noted that the strategic crude-inventory buffer used in March\u2013May has now been significantly drawn down, meaning a renewed supply shock has less cushion.",
+      "as_of": "2026-07-15",
+      "sources": [
+        "https://www.cnbc.com/2026/07/13/us-iran-war-hormuz-oil-trump.html",
+        "https://www.cnn.com/2026/07/15/world/live-news/iran-war-trump",
+        "https://www.aljazeera.com/economy/2026/7/13/oil-prices-jump-as-us-and-iran-trade-attacks-over-strait-of-hormuz",
+        "https://www.foxnews.com/live-news/iran-war-trump-israel-hormuz-oil-july-15-2026",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status \u2014 update from '1 contested' to '2 closed/re-contested'; WTI crude (CL=F) spiking; also hits s18_food_fertilizer (Hormuz/Gulf disruption indicator) and s2_japan (energy-import shock channel)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Strait of Hormuz is the single most material physical chokepoint in the tracker. The ceasefire collapse and renewed US naval blockade directly move s20's 'Hormuz/Red Sea status' indicator from 1\u21922 (effectively re-closed for commercial traffic), push WTI/Brent higher (oil indicator), and ripple into s18 (fertilizer inputs via Gulf) and s2_japan (Japan is a major energy importer, 10yr JGB yield already at 30yr highs partly on energy-import cost). The IMF's July 2026 WEO explicitly flags 'renewed Middle East conflict' as the dominant downside risk, and the strategic petroleum reserve buffer has been substantially depleted.",
+      "status": "pending",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "sightings": 1,
+      "id": "us-iran-strait-of-hormuz-ceasefire-collapses-us--3b81b5"
+    },
+    "japan-10yr-jgb-hits-30-year-high-of-2-90-takaich-c72ede": {
+      "headline": "Japan 10yr JGB hits 30-year high of 2.90%; Takaichi \u00a5370T spending roadmap unveiled; Japanese investors sold $29.6B of US Treasuries in Q1 2026",
+      "summary": "The benchmark 10-year JGB yield touched 2.901% on July 9 \u2014 its highest since 1996 \u2014 driven by fiscal-expansion fears under PM Takaichi's draft investment roadmap calling for \u00a5370 trillion in public/private spending through FY2040 across 17 sectors. A CNBC/Federated Hermes note confirms Japanese investors sold $29.6 billion of US debt in Q1 2026 alone as rising domestic yields make repatriation attractive, removing a historically reliable buyer from US Treasury markets already under fiscal pressure.",
+      "as_of": "2026-07-14",
+      "sources": [
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japanese investor net sales of US Treasuries (rolling 12-month, $bn)",
+        "type": "value",
+        "rubric": "Measures repatriation pressure on US Treasury demand. 0\u2013$50bn = manageable; $50\u2013$150bn = elevated (amber); >$150bn = systemic stress (red). Q1 2026 pace of $29.6bn/quarter implies ~$120bn annualized run-rate, borderline amber.",
+        "sources": [
+          "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+          "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Pages/ticsec.aspx"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan story tracks USD/JPY, 30yr JGB yield, and Takaichi financing clarity. The 10yr JGB spike is partially captured (tracker watches 30yr yield) but the critical new gap is the *transmission channel to US Treasury markets*: at a $29.6bn/quarter pace, Japanese repatriation is becoming a material source of incremental US Treasury supply pressure, compounding the s1_basis_trade and s21_clearinghouses risks. This cross-story linkage needs an explicit indicator. The Takaichi \u00a5370T roadmap also sharpens the 'Takaichi plan financing clarity' indicator toward '2 disorderly' given markets reacted sharply before government clarifications.",
+      "status": "pending",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "sightings": 1,
+      "id": "japan-10yr-jgb-hits-30-year-high-of-2-90-takaich-c72ede"
+    },
+    "iea-warns-china-s-rare-earth-controls-endanger-6-551151": {
+      "headline": "IEA warns China's rare-earth controls endanger $6.5 trillion of Western downstream production; MOFCOM formalizes public-reporting enforcement mechanism effective July 1",
+      "summary": "On July 16, 2026 the IEA's Global Critical Minerals Outlook warned that full implementation of China's rare-earth export restrictions (delayed until November 2026) could put $6.5 trillion of automotive, high-tech, defence, and energy-sector production outside China at risk. Separately, MOFCOM Announcement No. 26 (effective July 1, 2026) formalized a whistleblower mechanism for violations, and Japanese nationals were detained in Dalian in May for alleged rare-earth smuggling \u2014 the first known such case involving foreign nationals.",
+      "as_of": "2026-07-16",
+      "sources": [
+        "https://95kqds.com/2026/07/16/chinas-rare-earth-curbs-endanger-6-5-trillion-of-western-industry-iea-says/",
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+        "https://chinaglobalsouth.com/2026/07/16/china-rare-earth-curbs-endanger-western-industry-iea/",
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Nov-2025 pause status \u2014 with full implementation now less than 4 months away (November 2026) and active enforcement ratcheting up (MOFCOM No.26 + detentions), move from '0 extended' toward '1 expiring'; US domestic RE producer blacklist \u2014 MP Materials and USA Rare Earth were added to China's export control list in June 2026, update to '1 entity-specific ban'; Ex-China heavy rare-earth price premium \u2014 upward pressure confirmed by IEA and CSIS data",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Multiple s6_rare_earths indicators move simultaneously this week: (1) the November 2026 expiry of the pause is now <4 months away and the IEA's $6.5T headline quantifies the systemic exposure; (2) MOFCOM No. 26's whistleblower mechanism signals enforcement intent, not just regulatory architecture; (3) detention of Japanese nationals represents a qualitative escalation to extraterritorial coercion; (4) MP Materials and USA Rare Earth entity-listing in June directly triggers the 'US domestic RE producer blacklist' indicator. Collectively these developments move the story from amber to near-red.",
+      "status": "pending",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "sightings": 1,
+      "id": "iea-warns-china-s-rare-earth-controls-endanger-6-551151"
+    },
+    "genius-act-rulemaking-deadline-hits-july-18-2026-dde8e3": {
+      "headline": "GENIUS Act rulemaking deadline hits July 18, 2026 with final implementing rules not yet issued \u2014 foreign and state issuers face legal limbo",
+      "summary": "The GENIUS Act (signed July 18, 2025) required regulators to finalize stablecoin access rules within one year; as of July 17, 2026, OCC, Treasury/FinCEN, and FDIC proposals remain in proposed \u2014 not final \u2014 form, leaving foreign issuers' equivalency status and state-qualified issuers' compliance posture unresolved. The Act's effective date triggers either 120 days after final rules or January 18, 2027, meaning a rulemaking slip pushes market clarity further out and creates access uncertainty for ~$266bn in stablecoin supply (USDT ~$189bn, USDC ~$77bn).",
+      "as_of": "2026-07-17",
+      "sources": [
+        "https://cryptoslate.com/genius-act-deadline-puts-stablecoin-issuers-on-the-clock/",
+        "https://eco.com/support/en/articles/15282223-what-is-the-genius-act-us-stablecoin-law-explained-for-2026",
+        "https://www.chapman.com/publication-genius-act-rulemaking-tracker",
+        "https://www.brookings.edu/articles/next-steps-for-genius-payment-stablecoins/"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS implementation friction \u2014 update from '0 smooth' to '1 gaps': the July 18 rulemaking deadline is being missed for final rules on foreign issuer equivalency and state-issuer compliance, creating a legal-access gap for a market with >$266bn in outstanding supply",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The tracker's GENIUS implementation friction indicator was designed precisely for this scenario. The one-year rulemaking deadline is tomorrow (July 18) and final rules have not landed, meaning the friction score moves from 0\u21921. While not an immediate systemic shock, the limbo creates uncertainty for foreign stablecoin issuers (Tether is offshore) and for the Treasury-demand side of s7: if stablecoin supply growth stalls or issuers restructure reserves away from T-bills pending clarity, it removes an incremental source of T-bill demand at a moment when US fiscal supply is high.",
+      "status": "pending",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "sightings": 1,
+      "id": "genius-act-rulemaking-deadline-hits-july-18-2026-dde8e3"
+    },
+    "imf-july-2026-weo-global-disinflation-has-stalle-029eec": {
+      "headline": "IMF July 2026 WEO: Global disinflation has 'stalled'; financial-market repricing risk elevated; US CPI at 4.2% YoY (May 2026)",
+      "summary": "The IMF's July 8, 2026 World Economic Outlook Update stated that 'global disinflation has stalled' with global headline inflation projected to rise from 4.1% in 2025 to 4.7% in 2026, and flagged 'downside risks from renewed conflict and financial market repricing.' Separately, US CPI printed 4.2% YoY through May 2026 \u2014 the largest 12-month increase since April 2023 \u2014 with the Fed (under Chair Kevin Warsh) holding rates at 3.50\u20133.75% while removing forward guidance, and JP Morgan projecting 10yr yields at 4.7% by year-end.",
+      "as_of": "2026-07-08",
+      "sources": [
+        "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+        "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf",
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
+        "https://www.jpmorgan.com/insights/markets-and-economy/economy/economic-trends"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US CPI YoY (%, monthly) as a proxy for Fed-hold duration / EM re-pricing pressure",
+        "type": "value",
+        "rubric": "Tracks whether sticky US inflation keeps the Fed on hold and tightens EM financial conditions. <3% = benign; 3\u20134% = elevated (amber); >4% = acute EM stress risk (red). Current reading: 4.2% (May 2026) = red. Cross-links to s4_dev_debt (EM capital outflow risk), s2_japan (BOJ divergence), s11_consumer_debt.",
+        "sources": [
+          "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
+          "https://www.bls.gov/cpi/",
+          "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The tracker's s4_dev_debt watches the broad US dollar index and 10yr real yield as EM stress proxies, but lacks a direct US-inflation indicator that captures the Fed-hold-for-longer channel. The IMF's explicit 'disinflation stalled' language and the 4.2% May CPI print under a new Fed chair who has removed forward guidance represent a qualitative regime shift: if the Fed is forced to pivot hawkish (or merely hold longer), EM FX, EM credit spreads, and frontier-debt coupons all come under renewed pressure \u2014 exactly the s4 transmission mechanism. This is a story_gap because no current indicator in s4 directly tracks US CPI.",
+      "status": "pending",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "sightings": 1,
+      "id": "imf-july-2026-weo-global-disinflation-has-stalle-029eec"
+    },
+    "japan-s-government-floats-gpif-reallocation-towa-558f6a": {
+      "headline": "Japan's government floats GPIF reallocation toward domestic JGBs; BOJ raised rates to 1% in June; yen stuck near \u00a5160/$ despite \u00a511.7T in intervention",
+      "summary": "On July 10, Finance Minister Katayama proposed encouraging GPIF and other pension funds to invest more in Japanese assets, triggering a brief rally in JGBs before Reuters reported no immediate GPIF allocation change; separately the BOJ hiked rates 25bp to 1% (highest since 1995) on June 16 \u2014 split 7-1 \u2014 and is tapering JGB purchases from \u00a52.7T/quarter to \u00a52T/month by April 2027. The yen has languished near \u00a5160/$ despite \u00a511.7T in intervention in May, and with the BOJ meeting on July 30\u201331, a surprise hike or guidance shift risks a sharp carry-trade unwind.",
+      "as_of": "2026-07-14",
+      "sources": [
+        "https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
+        "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260616b.pdf"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "Multiple s2 indicators move: USD/JPY near \u00a5160 (high risk level); 30yr JGB yield elevated (20yr hit 3.901% on July 10); Takaichi plan financing clarity deteriorating toward '1 unclear / 2 disorderly' given \u00a5370T roadmap market shock. July 30\u201331 BOJ meeting is the next acute risk event for carry-trade unwind (links to s1_basis_trade leverage).",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The BOJ rate hike to 1%, ongoing JGB tapering, yen weakness despite massive intervention, and the GPIF reallocation trial balloon all cluster into the s2_japan story this week. The July 30\u201331 BOJ meeting is a live event within the next 14 days that could trigger a carry-trade unwind at scale \u2014 the same channel that produced the August 2024 volatility episode. With USD/JPY near \u00a5160, 10yr JGB at 30-year highs, and Japanese pension funds beginning to repatriate US assets, the risk level across s2 indicators is the highest since tracking began.",
+      "status": "pending",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "sightings": 1,
+      "id": "japan-s-government-floats-gpif-reallocation-towa-558f6a"
     }
   },
-  "generated": "2026-07-16",
+  "generated": "2026-07-17",
   "model": "claude-sonnet-4-6",
-  "new_count": 3,
-  "pending_count": 96
+  "new_count": 6,
+  "pending_count": 102
 }
