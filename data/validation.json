@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-17T12:48:14.267181+00:00",
+  "generated": "2026-07-20T13:36:28.736654+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -126,20 +126,10 @@
     }
   },
   "sensitivity": {
-    "as_of_overall": 7.5,
+    "as_of_overall": 7.1,
     "max_story_swing": 2,
     "max_overall_swing": 0.5,
     "movers": [
-      {
-        "id": "license_flow",
-        "label": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
-        "story": "Critical minerals as a weapon",
-        "set": 4,
-        "weight": 1.5,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.5
-      },
       {
         "id": "ig_oas",
         "label": "US investment-grade OAS (%) - big-issuer proxy",
@@ -149,36 +139,6 @@
         "story_swing": 2,
         "set_swing": 0.6,
         "overall_swing": 0.5
-      },
-      {
-        "id": "oat_bund",
-        "label": "OAT-Bund 10y spread (%)",
-        "story": "France / eurozone fragility",
-        "set": 3,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.0
-      },
-      {
-        "id": "govt_stability",
-        "label": "Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election)",
-        "story": "France / eurozone fragility",
-        "set": 3,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.0
-      },
-      {
-        "id": "weaponization_event",
-        "label": "Reserve-weaponization / settlement shift (0 none / 1 talk / 2 action)",
-        "story": "Gold / de-dollarization",
-        "set": 3,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.0
       },
       {
         "id": "cat_losses",
@@ -191,6 +151,36 @@
         "overall_swing": 0.0
       },
       {
+        "id": "license_flow",
+        "label": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
+        "story": "Critical minerals as a weapon",
+        "set": 4,
+        "weight": 1.5,
+        "story_swing": 2,
+        "set_swing": 0.5,
+        "overall_swing": 0.5
+      },
+      {
+        "id": "oil_price",
+        "label": "WTI crude oil (USD/bbl, CL=F)",
+        "story": "Sea lanes & undersea cables",
+        "set": 4,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.5,
+        "overall_swing": 0.5
+      },
+      {
+        "id": "real10",
+        "label": "US 10y real yield (TIPS, %)",
+        "story": "Developing-world debt crisis",
+        "set": 3,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.5,
+        "overall_swing": 0.1
+      },
+      {
         "id": "regional_bank_stress",
         "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
         "story": "CRE maturity wall / regional banks",
@@ -198,14 +188,44 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.5,
-        "overall_swing": 0.0
+        "overall_swing": 0.1
       },
       {
-        "id": "jgb30",
-        "label": "30-year JGB yield (%)",
+        "id": "oat_bund",
+        "label": "OAT-Bund 10y spread (%)",
+        "story": "France / eurozone fragility",
+        "set": 3,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.5,
+        "overall_swing": 0.1
+      },
+      {
+        "id": "govt_stability",
+        "label": "Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election)",
+        "story": "France / eurozone fragility",
+        "set": 3,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.5,
+        "overall_swing": 0.1
+      },
+      {
+        "id": "weaponization_event",
+        "label": "Reserve-weaponization / settlement shift (0 none / 1 talk / 2 action)",
+        "story": "Gold / de-dollarization",
+        "set": 3,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.5,
+        "overall_swing": 0.1
+      },
+      {
+        "id": "usdjpy",
+        "label": "USD/JPY (yen strengthening = lower = risk)",
         "story": "Japan fiscal / JGB / carry trade",
         "set": 1,
-        "weight": 1.0,
+        "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.4,
         "overall_swing": 0.5
@@ -229,26 +249,6 @@
         "story_swing": 2,
         "set_swing": 0.4,
         "overall_swing": 0.5
-      },
-      {
-        "id": "subprime_auto_dpd",
-        "label": "Subprime auto 60+ day delinquency (%)",
-        "story": "Hidden consumer debt",
-        "set": 2,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.4,
-        "overall_swing": 0.1
-      },
-      {
-        "id": "peg_deviation",
-        "label": "Largest stablecoin max peg deviation (%)",
-        "story": "Stablecoins & Treasury demand",
-        "set": 1,
-        "weight": 1.5,
-        "story_swing": 2,
-        "set_swing": 0.4,
-        "overall_swing": 0.0
       }
     ],
     "note": "The overall is tail-weighted, not a flat mean, so a single indicator still can't swing it far - the headline is robust by construction. The leverage that matters is on each STORY: the indicators below are where a wrong fact does the most damage and most deserves cross-checking."

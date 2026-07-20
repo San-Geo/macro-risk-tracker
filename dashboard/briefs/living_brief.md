@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-07-17 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-07-20 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 7.5/10** — Set 1 5.8, Set 2 5.2, Set 3 4.5, Set 4 6.5, Set 5 5.8.
+**Overall risk 7.1/10** — Set 1 5.6, Set 2 5.2, Set 3 4.2, Set 4 6.8, Set 5 5.5.
 
 
 ## Set 1 — Funding & Leverage
@@ -13,7 +13,7 @@ Hedge funds run a highly leveraged arbitrage between Treasury cash bonds and fut
 
 *Indicators watched:* SOFR minus EFFR (%), MOVE index (Treasury volatility), SEC central clearing on track (0 ok / 1 slipping / 2 delayed)
 
-### Japan fiscal / JGB / carry trade — 7/10 (High)
+### Japan fiscal / JGB / carry trade — 6/10 (Elevated)
 
 Decades of near-zero rates made Japan the funding leg of a vast global carry trade. As the BoJ normalizes and JGB yields rise, fiscal financing gets harder and carry unwinds can transmit stress worldwide - the August 2024 mini-crash was a preview.
 
@@ -67,7 +67,7 @@ Insurers are retreating from climate-exposed markets through non-renewals and ex
 
 ## Set 3 — Sovereigns & the Monetary Order
 
-### Developing-world debt crisis — 6/10 (Elevated)
+### Developing-world debt crisis — 5/10 (Elevated)
 
 A strong dollar, high real rates, and heavy foreign-currency debt loads leave many developing economies vulnerable to a sudden stop. A cluster of sovereign defaults or new IMF programs would signal the slow-burn crisis turning acute.
 
@@ -112,7 +112,7 @@ ASML is the sole maker of EUV lithography machines, with Zeiss the sole optics s
 
 *Indicators watched:* Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis), Export-control escalation (0 stable / 1 tightening / 2 retaliation), Single-point concentration (0 easing / 1 high / 2 extreme)
 
-### Sea lanes & undersea cables — 6/10 (Elevated)
+### Sea lanes & undersea cables — 7/10 (High)
 
 A few maritime chokepoints and undersea cables carry most global trade and data. The 2026 Hormuz/Red Sea disruptions showed how quickly closures spike energy and shipping costs; cable cuts are a parallel, under-watched vulnerability.
 
@@ -139,7 +139,7 @@ Water is systematically underpriced yet essential to chip fabrication, agricultu
 
 *Indicators watched:* Drought in a chip/farm hub (0 none / 1 emerging / 2 acute), Key reservoir / basin stress (0 normal / 1 low / 2 critical), Transboundary water dispute escalation (0 calm / 1 tense / 2 crisis)
 
-### Food & fertilizer fragility — 7/10 (High)
+### Food & fertilizer fragility — 6/10 (Elevated)
 
 Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag.
 

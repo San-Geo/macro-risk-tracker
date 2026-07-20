@@ -76,13 +76,12 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "Six federal agencies (OCC, FDIC, NCUA, Treasury, FinCEN, OFAC) must simultaneously publish final GENIUS Act stablecoin rules by July 18, 2026\u2014just three days away\u2014after all comment periods closed by June 9. The $240bn+ stablecoin market faces immediate uncertainty over foreign-issuer access (Tether, ~67% market share, has filed no formal 12 CFR Part 15 application), and if rules are not finalized in time, state-equivalence and foreign-registration pathways remain legally ambiguous for issuers and custodians.",
-      "as_of": "2026-07-14",
+      "summary": "The GENIUS Act was signed July 18, 2025, and regulators were required to promulgate most rules by July 18, 2026\u2014but as of July 19, 2026, CoinDesk confirmed that final rules are not yet complete and agencies are still working through proposed rulemakings. The law's effective date can trigger as early as 120 days after final rules are issued or falls back to January 18, 2027, creating a gap that leaves the stablecoin market operating without a finalized compliance framework.",
+      "as_of": "2026-07-19",
       "sources": [
-        "https://cryptoslate.com/genius-act-deadline-puts-stablecoin-issuers-on-the-clock/",
-        "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors",
-        "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
-        "https://en.spaziocrypto.com/stablecoins/genius-act-stablecoin-deadlines-june-july-2026/"
+        "https://www.coindesk.com/policy/2026/07/19/the-genius-act-turns-1-state-of-crypto",
+        "https://eco.com/support/en/articles/15282223-what-is-the-genius-act-us-stablecoin-law-explained-for-2026",
+        "https://home.treasury.gov/news/press-releases/sb0435"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -90,12 +89,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The GENIUS Act's July 18 deadline is 3 days away and six agencies must simultaneously finalize interoperable rules\u2014a coordination risk that, if rules slip or are internally inconsistent, directly maps to the s7 'GENIUS implementation friction' indicator moving from 0 to 1 or 2. Tether's non-compliance with the new framework is an acute tail risk: USDT holds ~67% of the $240bn market, and regulatory pressure post-July 18 could trigger asset shifts into short-dated Treasuries (Treasury demand angle) or peg instability events. This is a medium-materiality live timing event warranting tracker attention.",
+      "rationale": "The statutory one-year rulemaking deadline for the GENIUS Act passed on July 18, 2026, with final rules not yet issued\u2014confirming implementation friction that should move this indicator from 0 to 1 (gaps). The stablecoin sector has grown materially (potentially multi-trillion dollar in coming years per Treasury) and ambiguity over reserve rules, AML compliance, and state vs. federal chartering creates systemic risk to Treasury bill demand forecasts embedded in s7_stablecoins.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-15",
+      "last_seen": "2026-07-20",
       "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
-      "sightings": 8
+      "sightings": 9
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -175,13 +174,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "President Trump declared the April ceasefire 'over' on or around July 8 after Iran attacked commercial ships; CENTCOM launched 80+ strikes including Kharg Island (Iran's primary crude export hub), and Iran's IRGC formally declared the Strait of Hormuz closed, sending Brent back above $78\u201380. Oman\u2014struck by Iran on July 12\u2014and Qatar's mediation tracks are simultaneously strained, and the 60-day nuclear window in the June 17 Islamabad MOU expires August 17 with no substantive talks.",
-      "as_of": "2026-07-14",
+      "summary": "Following a brief ceasefire, the US and Iran exchanged strikes again July 11\u201315, with Iran attacking commercial vessels and re-declaring the Strait of Hormuz closed; the US reinstated a naval blockade of Iranian ports and conducted its fifth consecutive day of strikes by July 15. Roughly 27% of global seaborne crude and 20% of global LNG transits the Strait, and commercial traffic remains severely disrupted.",
+      "as_of": "2026-07-15",
       "sources": [
-        "https://jpt.spe.org/us-iran-conflict-flares-back-up-disrupts-strait-of-hormuz-once-again",
         "https://www.cnn.com/2026/07/11/world/live-news/iran-war-trump",
-        "https://thehill.com/policy/energy-environment/5960020-iran-ceasefire-gas-prices-strait-of-hormuz/",
-        "https://hormuzstraitmonitor.com/crisis-timeline/",
+        "https://www.cnn.com/2026/07/15/world/live-news/iran-war-trump",
+        "https://www.foxnews.com/live-news/iran-war-trump-israel-hormuz-oil-july-15-2026",
+        "https://www.congress.gov/crs-product/R45281",
         "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
       ],
       "materiality": "high",
@@ -190,12 +189,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Status must move to '2 closed': Iran's IRGC formally declared closure 'until further notice', CENTCOM confirms traffic 'essentially stopped', Kharg Island was struck for the first time, and all mediation channels are simultaneously degraded. WTI is back near $73\u201376 and Brent near $78\u201380, well off peak but re-accelerating. This is a direct, high-severity hit to the primary s20 indicator and also cascades into s18 (fertilizer), s5 (China PPI energy input), and s2 (Japan import costs).",
+      "rationale": "The Strait of Hormuz is the single most-watched chokepoint in s20_sea_lanes. The ceasefire collapse and renewed IRGC attacks on commercial vessels, combined with the US naval blockade reinstatement, push the status from 1 (contested) toward 2 (effectively closed for normal commercial traffic). This also directly feeds s18_food_fertilizer (30\u201335% of global urea exports transit Hormuz) and s16_copper (energy input costs) and drove the JGB yield spike cited in s2_japan.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-15",
+      "last_seen": "2026-07-20",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 6
+      "sightings": 7
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
@@ -894,24 +893,25 @@
     },
     "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec": {
       "headline": "Iran war energy shock drives Hormuz fertilizer disruption; Gulf fertilizer exports (especially Qatar LNG-linked urea) severely curtailed since March 2026",
-      "summary": "Wikipedia's documented record of the 2026 Hormuz crisis confirms fertilizer supply (alongside aluminium and helium) as an explicit collateral casualty of the strait's closure since February 28, with the largest energy-market disruption since the 1970s now re-intensifying following the July 8 ceasefire collapse. The IMF's July 2026 WEO Update flags that energy price spikes are already elevating global headline inflation from 4.1% (2025) to a projected 4.7% (2026), with food insecurity pressures concentrated in sub-Saharan Africa and other vulnerable low-income economies.",
-      "as_of": "2026-07-14",
+      "summary": "The ongoing Strait of Hormuz closure, active since early March 2026 with a brief interruption, has cut off the Persian Gulf's share of global fertilizer trade\u2014roughly 30\u201335% of urea and 20\u201330% of ammonia exports globally\u2014and China has responded by curbing sulphuric acid exports, creating compounding ripple effects across mineral and fertilizer supply chains per the IEA's July 2026 Critical Minerals Outlook.",
+      "as_of": "2026-07-17",
       "sources": [
         "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
-        "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf"
+        "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/",
+        "https://www.congress.gov/crs-product/R45281"
       ],
-      "materiality": "medium",
+      "materiality": "high",
       "classification": "existing_indicator",
       "target_story": "s18_food_fertilizer",
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s18 indicator for Hormuz/Gulf disruption to fertilizer inputs should be updated to '2 cut': Wikipedia's crisis record explicitly lists fertilizer as one of the commodity markets suffering supply disruption and price increases, the ceasefire has now re-collapsed, and the IMF's July WEO Update documents accelerating food-price pressure with particular downside risk to sub-Saharan Africa. The existing s18 food-price-trend indicator should also move from 'elevated' toward 'spiking' watch given the simultaneous energy and fertilizer input shock. Kept as medium (not high) because spot food prices have not yet spiked globally, but the pipeline pressure is building.",
+      "rationale": "The Hormuz/Gulf fertilizer indicator for s18_food_fertilizer should be at 2 (cut): the Strait has been functionally closed to commercial traffic since early March 2026, the Gulf accounts for 30\u201335% of global urea exports, and the IEA and Wikipedia confirm China compounded the shock by curbing sulphuric acid exports. This is a direct, high-materiality update that also cross-links to s20_sea_lanes and s4_dev_debt (food-importing EM countries facing input cost shocks).",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-15",
+      "last_seen": "2026-07-20",
       "id": "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec",
-      "sightings": 7
+      "sightings": 8
     },
     "japan-s-energy-import-crisis-deepens-as-hormuz-c-e531e3": {
       "headline": "Japan's energy import crisis deepens as Hormuz closure compounds BOJ policy bind \u2014 new macro feedback loop not captured in existing indicators",
@@ -989,13 +989,13 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "The November 2025 suspension of China's second-wave rare-earth export controls (covering samarium, gadolinium, lutetium and extraterritorial provisions) expires November 10, 2026, while CSIS data show US heavy rare-earth imports (e.g., yttrium) remain well below 2024 levels despite partial easing; European licensing approval rates have fallen below 25%.",
-      "as_of": "2026-07-04",
+      "summary": "The IEA's July 17 Critical Minerals Outlook report quantified that full implementation of China's October 2025 export controls\u2014suspended until November 2026\u2014would jeopardize $6.5 trillion in downstream production globally, with the US and Europe accounting for nearly half the exposure. Separately, China detained two Japanese nationals in Dalian in May for alleged rare-earth smuggling and formalized a public-reporting enforcement mechanism effective July 1, 2026, signaling sharply active enforcement even during the suspension period.",
+      "as_of": "2026-07-17",
       "sources": [
-        "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later",
-        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
-        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
-        "https://informedclearly.com/en/geopolitics/54246/china-rare-earth-export-controls-2026"
+        "https://chinaglobalsouth.com/2026/07/16/china-rare-earth-curbs-threaten-western-industry-iea/",
+        "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/",
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+        "https://www.semafor.com/article/07/16/2026/china-rare-earth-export-curbs-risk-65-trillion-in-downstream-production"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1003,12 +1003,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The November 10, 2026 expiry of China's second-wave rare-earth control pause is now within the 4-month horizon and should be moved from status 0 (extended) toward 1 (expiring). US heavy rare-earth imports remain structurally below 2024 levels, EU licensing approval rates below 25%, and China's March 2026 State Council Order No. 834 (supply-chain security framework) creates a new escalation layer. The tracker's Nov-2025 pause status indicator needs updating from 'extended' to 'expiring' to reflect the approaching cliff.",
+      "rationale": "The Nov-2025 pause status should be updated to 1 (expiring): the suspension runs only until November 10, 2026\u2014less than 4 months away\u2014and the IEA's $6.5tn downstream risk figure and active enforcement escalation (foreign-national detentions, July 1 whistleblower mechanism) make the countdown highly material. The US domestic RE producer blacklist indicator also warrants updating: China added MP Materials and USA Rare Earth to its export control entity list in June 2026, moving that indicator from 1 to 2 (sector-wide ban implications).",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-20",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 6
+      "sightings": 7
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -3257,10 +3257,99 @@
       "last_seen": "2026-07-17",
       "sightings": 1,
       "id": "japan-s-government-floats-gpif-reallocation-towa-558f6a"
+    },
+    "jgb-10-year-yield-hits-2-90-a-30-year-high-japan-6f4de2": {
+      "headline": "JGB 10-Year Yield Hits 2.90%, a 30-Year High; Japanese Investors Sold $29.6bn of US Treasuries in Q1 2026",
+      "summary": "Japan's 10-year JGB yield touched 2.901% on July 10\u2014its highest since 1996\u2014as Takaichi administration fiscal expansion plans (\u00a5370 trillion through 2040) and BOJ policy normalization (rate at 1.0% after June hike) collide with a weakening yen near 160 USD/JPY. Japanese investors sold $29.6bn of US debt in Q1 2026 alone, removing a key backstop buyer from US Treasury markets.",
+      "as_of": "2026-07-14",
+      "sources": [
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
+        "https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japanese investor net US Treasury purchases (rolling quarter, $bn)",
+        "type": "value",
+        "rubric": "Positive = net buying (supportive); 0 to -15 = mild repatriation (watch); -15 to -30 = significant repatriation (elevated); below -30 = acute stress on US duration markets. Q1 2026 reading: -$29.6bn.",
+        "sources": [
+          "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+          "https://ticdata.treasury.gov/"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan story captures USD/JPY and 30-year JGB yield, but has no indicator tracking Japanese capital repatriation from US Treasuries, which is the direct transmission channel from Japan's domestic yield surge to US rate markets. At -$29.6bn in Q1 alone, this is already a high-materiality gap: it amplifies s1_basis_trade leverage stress and s8_ai_capex financing costs simultaneously.",
+      "status": "pending",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "sightings": 1,
+      "id": "jgb-10-year-yield-hits-2-90-a-30-year-high-japan-6f4de2"
+    },
+    "us-supreme-court-struck-down-ieepa-tariffs-feb-2-ae856d": {
+      "headline": "US Supreme Court Struck Down IEEPA Tariffs (Feb 2026); Administration Pivots to Section 301/232, Imposes 25% on Brazil Effective July 22",
+      "summary": "The Supreme Court's February 2026 ruling (Learning Resources v. Trump) struck down IEEPA-based tariffs, forcing the administration to reconstruct its tariff wall via Section 301 and 232; Section 122 authority also faces court challenge and expires July 24. The US announced 25% tariffs on thousands of Brazilian imports (sugar, apparel, steel, paper) effective July 22\u2014the first Section 301 action post-IEEPA\u2014while new tariff rates were imposed on 14 additional countries including Japan and South Korea ahead of an August 1 deadline.",
+      "as_of": "2026-07-16",
+      "sources": [
+        "https://www.aljazeera.com/economy/2026/7/16/us-to-impose-new-25-percent-tariffs-on-some-brazilian-imports",
+        "https://www.atlanticcouncil.org/programs/geoeconomics-center/trump-tariff-tracker/",
+        "https://ourtake.bakerbotts.com/post/102n7tq/trump-tariff-tracker-july-2-2026"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US Tariff Legal Architecture Fragility & Trade Escalation Cascade",
+        "why": "The Supreme Court's invalidation of IEEPA tariffs and the ongoing legal challenge to Section 122 have forced the US to reconstruct its entire tariff framework under more legally constrained Section 301/232 authorities. This creates a volatile, rolling re-escalation risk: every country facing new Section 301 investigations can retaliate, bilateral trade deals remain in legal limbo, and $135bn+ in previously collected tariff revenue may be subject to refund litigation. The pivot to Brazil (first Section 301 action) and new rates on 14 countries signals this is systemic\u2014not episodic\u2014reshaping of global trade flows with direct pass-through to inflation, supply chains, and EM sovereign stress.",
+        "proposed_level": 7,
+        "set": "Set 3",
+        "indicators": [
+          {
+            "label": "US average effective tariff rate (%, estimated)",
+            "type": "value",
+            "rubric": "Below 10% = low risk; 10\u201315% = elevated; 15\u201320% = high (current JPMorgan estimate: mid-to-high teens); above 20% = acute macro drag and inflation pass-through",
+            "sources": [
+              "https://www.atlanticcouncil.org/programs/geoeconomics-center/trump-tariff-tracker/",
+              "https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Legal durability of tariff authority (0 stable / 1 challenged / 2 voided)",
+            "type": "band",
+            "rubric": "0 = tariff authority upheld by courts; 1 = active appellate challenge or one authority struck; 2 = primary authority voided (as occurred with IEEPA Feb 2026) forcing abrupt policy reconstruction",
+            "sources": [
+              "https://www.atlanticcouncil.org/programs/geoeconomics-center/trump-tariff-tracker/"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Number of active Section 301 / 232 retaliatory investigations by trading partners",
+            "type": "value",
+            "rubric": "0\u20135 = contained; 5\u201315 = escalating; 15+ = cascade risk to global trade volumes",
+            "sources": [
+              "https://www.aljazeera.com/economy/2026/7/16/us-to-impose-new-25-percent-tariffs-on-some-brazilian-imports"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "No existing tracker story captures the systemic legal fragility of the US tariff architecture. This is distinct from s5_china_deflation (bilateral China tariffs) and s4_dev_debt (EM stress): it is a cross-cutting meta-risk where the mechanism used to set tariffs worldwide has been repeatedly invalidated by courts, forcing rolling ad hoc reconstructions that create unpredictable escalation nodes (Brazil, Japan, Germany pharma investigations) with global trade-flow and inflation consequences.",
+      "status": "pending",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "sightings": 1,
+      "id": "us-supreme-court-struck-down-ieepa-tariffs-feb-2-ae856d"
     }
   },
-  "generated": "2026-07-17",
+  "generated": "2026-07-20",
   "model": "claude-sonnet-4-6",
-  "new_count": 6,
-  "pending_count": 102
+  "new_count": 2,
+  "pending_count": 104
 }
