@@ -3346,10 +3346,167 @@
       "last_seen": "2026-07-20",
       "sightings": 1,
       "id": "us-supreme-court-struck-down-ieepa-tariffs-feb-2-ae856d"
+    },
+    "us-reimpos-s-hormuz-blockade-brent-surges-past-8-202d63": {
+      "headline": "US Reimpos\u00e9s Hormuz Blockade; Brent Surges Past $84 on Renewed US\u2013Iran Strikes (Jul 14\u201315, 2026)",
+      "summary": "After a fragile ceasefire briefly allowed oil prices to retreat toward pre-war levels, the US reimposed its naval blockade of Iranian ports on July 14, carrying out new strikes on Iranian missile, drone, and naval assets; Brent crude jumped ~9.5% in a single session to above $83\u2013$85/bbl, with analysts warning of $100+ if hostilities persist. The IMF's July 2026 WEO baseline assumes Hormuz begins reopening by mid-July, making this re-escalation a direct downside shock to that baseline.",
+      "as_of": "2026-07-15",
+      "sources": [
+        "https://finance.yahoo.com/markets/article/oil-prices-rise-as-us-prepares-to-reinstate-hormuz-strait-blockade-charge-20-on-all-cargo-shipped-140723529.html",
+        "https://www.cnbc.com/2026/07/15/oil-prices-today-brent-wti-hormuz-blockade.html",
+        "https://www.imf.org/en/news/articles/2026/07/08/tr070826-weo-press-briefing-transcript-july-8-2026"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed) \u2192 move to 2 (closed/blockaded); WTI crude (CL=F) \u2192 ~$79\u2013$80/bbl as of Jul 15",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The US military reimposition of the Hormuz blockade (Jul 14) and fresh airstrikes directly escalate s20's primary indicator from 'contested' to 'closed/blockaded.' The ~9.5% single-session Brent spike and analyst calls for $100+ materially move both the Hormuz status ordinal AND the WTI price indicator. This also feeds into s18_food_fertilizer (sulphur, fertilizer logistics disrupted per IEA) and s4_dev_debt (energy-importer EMDE stress), but the direct indicator match is s20.",
+      "status": "pending",
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "sightings": 1,
+      "id": "us-reimpos-s-hormuz-blockade-brent-surges-past-8-202d63"
+    },
+    "japan-10-year-jgb-yield-hits-30-year-high-at-2-9-11e1ff": {
+      "headline": "Japan 10-Year JGB Yield Hits 30-Year High at ~2.90%; 'Basic Policy Shock' Rattles Market; BoJ Independence Under Political Pressure (Jul 9\u201316, 2026)",
+      "summary": "The benchmark 10-year JGB yield surged to 2.901%\u2014its highest since 1996\u2014on a combination of fiscal expansion fears under PM Takaichi's \u00a5370 trillion investment roadmap and a brief 'Basic Policy shock' in which markets feared the government would discourage BoJ rate hikes. Finance Minister Katayama's subsequent remarks and a report that Japan may encourage GPIF to shift toward domestic assets caused a partial pullback to ~2.73\u20132.78%, but the BoJ's political independence remains in question per Reuters (Jul 16).",
+      "as_of": "2026-07-16",
+      "sources": [
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "proposed_indicator": {
+        "label": "BoJ political-independence risk (0 intact / 1 pressure / 2 override)",
+        "type": "band",
+        "rubric": "0 = government affirms BoJ autonomy, no policy interference signals; 1 = credible reports of government pressure on rate-hike timing or bond-buying directives, or 'Basic Policy shock'-type episodes; 2 = formal instruction or legislation overriding BoJ rate decisions or mandating bond purchases above market-clearing levels.",
+        "sources": [
+          "https://www.investing.com/rates-bonds/japan-10-year-bond-yield",
+          "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2 indicators (USD/JPY, 30yr JGB yield, Takaichi financing clarity) partially capture this, but none tracks whether political actors are actively leaning on the BoJ's rate-setting autonomy\u2014a distinct transmission channel. The 'Basic Policy shock' episode (market pricing in government interference with BoJ hikes) and the Reuters Jul 16 report of anticipated political pressure on bond-buying are new material developments in this week's window that fall in the story's gap. Current read: 1 (pressure).",
+      "status": "pending",
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "sightings": 1,
+      "id": "japan-10-year-jgb-yield-hits-30-year-high-at-2-9-11e1ff"
+    },
+    "iea-warns-china-s-rare-earth-curbs-endanger-6-5--ccc23d": {
+      "headline": "IEA Warns China's Rare-Earth Curbs Endanger $6.5 Trillion of Downstream Production; MOFCOM Activates Public Violation-Reporting Mechanism (Jul 16 & Jul 1, 2026)",
+      "summary": "The IEA's latest Critical Minerals Outlook (published Jul 16) quantified that full implementation of China's rare-earth export restrictions could jeopardise $6.5 trillion in downstream production outside China, with the US and Europe accounting for nearly half the impact. Separately, MOFCOM Announcement No. 26 (effective Jul 1) formalised a public whistleblower mechanism for strategic mineral export-control violations, and Chinese enforcement detained two Japanese nationals in Dalian in May for alleged rare-earth smuggling\u2014the first known foreign-national detentions under this framework.",
+      "as_of": "2026-07-16",
+      "sources": [
+        "https://chinaglobalsouth.com/2026/07/16/china-rare-earth-curbs-threaten-western-industry-iea/",
+        "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/",
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+        "https://www.semafor.com/article/07/16/2026/china-rare-earth-export-curbs-risk-65-trillion-in-downstream-production"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s6_rare_earths",
+      "proposed_indicator": {
+        "label": "China rare-earth enforcement intensity (0 administrative / 1 active prosecution / 2 foreign-national detentions + sector-wide reporting mandate)",
+        "type": "band",
+        "rubric": "0 = licensing system operational, violations handled via administrative penalty; 1 = domestic Chinese exporter prosecutions and/or enforcement notices targeting specific entities; 2 = foreign-national detentions on smuggling/export-control charges AND/OR a formalised public-reporting mechanism (whistleblower system) for violations effective across all jurisdictions.",
+        "sources": [
+          "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+          "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The existing s6 indicators track license flow, pause status, US domestic producer blacklists, and ex-China price premium. None captures the enforcement posture\u2014how aggressively China is prosecuting violations. The MOFCOM Jul 1 whistleblower activation and the first-ever foreign-national detention in a rare-earth enforcement action are qualitatively new escalations this week (current read: 2). The IEA $6.5T headline also materially upgrades the Nov-2025 pause expiry risk (now Nov 10, 2026, ~16 weeks away).",
+      "status": "pending",
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "sightings": 1,
+      "id": "iea-warns-china-s-rare-earth-curbs-endanger-6-5--ccc23d"
+    },
+    "genius-act-misses-its-statutory-one-year-rulemak-1a826b": {
+      "headline": "GENIUS Act Misses Its Statutory One-Year Rulemaking Deadline (Jul 18, 2026); Final Rules Still Unwritten",
+      "summary": "US federal regulators failed to finalise stablecoin implementing rules by the GENIUS Act's mandated July 18, 2026 deadline, with multiple AML, capital, and operational rule-packages still in comment or draft form. This locks the effective date to January 18, 2027 (the 18-month backstop), leaving stablecoin issuers planning around draft rules that could still change and creating a six-month implementation vacuum.",
+      "as_of": "2026-07-18",
+      "sources": [
+        "https://coinpaprika.com/news/genius-act-turns-one-stablecoin-rulebook/",
+        "https://www.coindesk.com/policy/2026/07/19/the-genius-act-turns-1-state-of-crypto",
+        "https://eco.com/support/en/articles/15282223-what-is-the-genius-act-us-stablecoin-law-explained-for-2026"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems) \u2192 move from 1 to 2 (statutory deadline missed; no final rules as of Jul 18, 2026; issuers face draft-rule uncertainty through Jan 2027)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The tracker already monitors GENIUS implementation friction with a 0/1/2 rubric. The failure of all six agencies to finalise rules by the statutory one-year deadline\u2014confirmed by CoinDesk (Jul 19) and CoinPaprika (Jul 18)\u2014is a clean, verifiable trigger for moving the indicator from 1 (gaps) to 2 (problems). The effective-date backstop shift to Jan 2027 prolongs legal uncertainty for issuers and Treasury-demand dynamics.",
+      "status": "pending",
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "sightings": 1,
+      "id": "genius-act-misses-its-statutory-one-year-rulemak-1a826b"
+    },
+    "japan-gpif-signalled-to-shift-toward-domestic-as-d1833c": {
+      "headline": "Japan GPIF Signalled to Shift Toward Domestic Assets; USD/JPY Carry Unwind Accelerates (Jul 9\u201310, 2026)",
+      "summary": "Reports that Japan's government is encouraging the GPIF\u2014the world's largest pension fund at ~$1.5 trillion in AUM\u2014to boost domestic investment sparked an acceleration of yen-buying and a JPY carry-trade unwind, with Japanese assets rallying sharply. Finance Minister Katayama's subsequent clarification that GPIF would 'adjust holdings if necessary' and include JGBs in a tax-free investment program partially contained but did not reverse the move.",
+      "as_of": "2026-07-10",
+      "sources": [
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield",
+        "https://tradingeconomics.com/japan/government-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "USD/JPY (yen strengthening = lower = risk) \u2014 yen buying accelerated sharply on GPIF headlines; also 30-year JGB yield (%) \u2014 20-year JGB hit 3.901% intraweek, 30-year trading near multi-decade highs; Takaichi plan financing clarity \u2192 1 (unclear), given \u00a5370tn roadmap and GPIF pivot signals",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The GPIF domestic-reallocation signal is a distinct carry-unwind catalyst captured by the existing USD/JPY and 30yr JGB yield indicators in s2_japan. It is highly material because GPIF holds an estimated $350\u2013400bn in foreign bonds; even a modest reallocation would trigger significant cross-asset flows. The 20-year JGB reaching 3.901% and the 10-year touching 2.901% in the same week reinforce all three existing indicators simultaneously.",
+      "status": "pending",
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "sightings": 1,
+      "id": "japan-gpif-signalled-to-shift-toward-domestic-as-d1833c"
+    },
+    "middle-east-energy-shock-stalls-global-disinflat-a40d52": {
+      "headline": "Middle East Energy Shock Stalls Global Disinflation; IMF Revises 2026 Headline Inflation Up to 4.7% (Jul 8, 2026)",
+      "summary": "The IMF's July 2026 World Economic Outlook Update revised global headline inflation up to 4.7% for 2026 (from 4.1% in 2025), explicitly citing the Middle East war-driven energy shock as the primary driver; the disinflation trend in place since 2024 has 'stalled.' The IMF baseline assumes Hormuz reopening begins mid-July\u2014a baseline that has already been violated by the Jul 14 US blockade reimposition, implying the inflation forecast carries further upside risk.",
+      "as_of": "2026-07-08",
+      "sources": [
+        "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+        "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf",
+        "https://www.imf.org/en/news/articles/2026/07/08/tr070826-weo-press-briefing-transcript-july-8-2026"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "proposed_indicator": {
+        "label": "War-energy inflation pass-through to EMDE sovereign stress (0 contained / 1 rising / 2 acute)",
+        "type": "band",
+        "rubric": "0 = global headline inflation \u22644.0% and EMDE spreads stable; 1 = IMF or World Bank formally revises EMDE growth down AND global inflation above 4.0% with energy as primary driver, or capital outflows from \u22653 EMDEs; 2 = global headline inflation \u22655.5% OR \u22655 EMDEs face acute refinancing stress, currency crises, or missed coupons directly attributable to energy-cost pass-through.",
+        "sources": [
+          "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+          "https://www.worldbank.org/en/publication/global-economic-prospects"
+        ],
+        "suggested_weight": 0.18
+      },
+      "proposed_story": null,
+      "rationale": "s4_dev_debt already tracks the dollar index, real yields, and new IMF programs/missed coupons. None captures the specific energy-shock inflation channel\u2014the IMF WEO Jul 2026 explicitly flags this as the dominant new risk to EMDEs, with global inflation revised to 4.7% and disinflation described as 'stalled.' The World Bank separately projects EMDE growth at its weakest since the pandemic. An indicator that links Hormuz-driven energy inflation directly to EMDE sovereign stress (via tighter financial conditions and oil-import bills) fills this gap. Current read: 1 (rising).",
+      "status": "pending",
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "sightings": 1,
+      "id": "middle-east-energy-shock-stalls-global-disinflat-a40d52"
     }
   },
-  "generated": "2026-07-20",
+  "generated": "2026-07-21",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 104
+  "new_count": 6,
+  "pending_count": 110
 }
