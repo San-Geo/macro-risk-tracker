@@ -3126,13 +3126,14 @@
     },
     "japan-10yr-jgb-hits-30-year-high-of-2-90-takaich-c72ede": {
       "headline": "Japan 10yr JGB hits 30-year high of 2.90%; Takaichi \u00a5370T spending roadmap unveiled; Japanese investors sold $29.6B of US Treasuries in Q1 2026",
-      "summary": "The benchmark 10-year JGB yield touched 2.901% on July 9 \u2014 its highest since 1996 \u2014 driven by fiscal-expansion fears under PM Takaichi's draft investment roadmap calling for \u00a5370 trillion in public/private spending through FY2040 across 17 sectors. A CNBC/Federated Hermes note confirms Japanese investors sold $29.6 billion of US debt in Q1 2026 alone as rising domestic yields make repatriation attractive, removing a historically reliable buyer from US Treasury markets already under fiscal pressure.",
-      "as_of": "2026-07-14",
+      "summary": "Japan's 10-year JGB yield surged to 2.901% on July 9 (highest since 1996), with the 20-year touching 3.901%, driven by PM Takaichi's mid-July unveiling of a \u00a5370 trillion public-private investment roadmap and a 'Basic Policy shock' concern that the government might lean on the BOJ to pause hikes. Japan's Finance Minister separately signaled pressure on the $1.8 trillion GPIF to repatriate foreign assets, with Goldman Sachs estimating even in-band shifts could redirect ~$80bn from foreign bonds to JGBs.",
+      "as_of": "2026-07-17",
       "sources": [
         "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
-        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.briefs.co/news/global-investors-flock-to-japan-as-bond-yields-hit-three-dec/",
         "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
-        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
+        "https://www.investing.com/news/economy-news/analysisjapan-pension-pivot-seen-as-a-slow-burn-not-a-bond-market-fire-sale-4787576",
+        "https://www.bloomberg.com/news/articles/2026-07-17/japan-s-takaichi-says-gpif-investing-in-japan-assets-is-key"
       ],
       "materiality": "high",
       "classification": "story_gap",
@@ -3149,11 +3150,11 @@
         "suggested_weight": 0.2
       },
       "proposed_story": null,
-      "rationale": "The existing s2_japan story tracks USD/JPY, 30yr JGB yield, and Takaichi financing clarity. The 10yr JGB spike is partially captured (tracker watches 30yr yield) but the critical new gap is the *transmission channel to US Treasury markets*: at a $29.6bn/quarter pace, Japanese repatriation is becoming a material source of incremental US Treasury supply pressure, compounding the s1_basis_trade and s21_clearinghouses risks. This cross-story linkage needs an explicit indicator. The Takaichi \u00a5370T roadmap also sharpens the 'Takaichi plan financing clarity' indicator toward '2 disorderly' given markets reacted sharply before government clarifications.",
+      "rationale": "The existing s2_japan indicators (USD/JPY, 30y JGB yield, Takaichi plan financing clarity) do not directly capture Japanese capital repatriation away from US Treasuries, which is the transmission mechanism that makes Japanese fiscal stress a global macro event. Japanese investors sold $29.6bn of US debt in Q1 2026 alone; a potential GPIF in-band shift could add another ~$80bn. This is a distinct second-order risk to US Treasury market liquidity that sits between s2_japan and s1_basis_trade but is captured by neither. The 30y JGB yield indicator in s2 should also be updated: 30y has already breached 4% and the 'danger zone' threshold per market analysts is 4.5% (forced life-insurer selling).",
       "status": "pending",
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-17",
-      "sightings": 1,
+      "last_seen": "2026-07-22",
+      "sightings": 2,
       "id": "japan-10yr-jgb-hits-30-year-high-of-2-90-takaich-c72ede"
     },
     "iea-warns-china-s-rare-earth-controls-endanger-6-551151": {
@@ -3503,10 +3504,161 @@
       "last_seen": "2026-07-21",
       "sightings": 1,
       "id": "middle-east-energy-shock-stalls-global-disinflat-a40d52"
+    },
+    "strait-of-hormuz-actively-contested-iran-strikes-4eb4bb": {
+      "headline": "Strait of Hormuz Actively Contested: Iran Strikes UAE Tankers, US Conducts Multi-Night Bombing Runs",
+      "summary": "As part of the ongoing 2026 Iran War (begun February 28), Iran struck two UAE supertankers in the Strait of Hormuz on July 13 while the US completed a third consecutive night of strikes on Iranian coastal defense, missile, and maritime capabilities. Brent crude surged ~9.6% in a single session to $83.30/bbl, its largest daily gain in over six years.",
+      "as_of": "2026-07-14",
+      "sources": [
+        "https://www.cnn.com/2026/07/13/world/live-news/iran-war-trump",
+        "https://www.cnbc.com/2026/07/14/us-iran-hormuz-strikes-oil-toll.html",
+        "https://www.globalbankingandfinance.com/oil-jumps-3-us-iran-launch-strikes-mideast/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status \u2192 upgrade to 2 (contested/partially closed); WTI crude \u2192 ~$78/bbl (rising); Undersea cable incidents \u2192 0 (no confirmed cable cut, but tanker strikes active)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Iranian tanker strikes and US bombardment of Iranian maritime-defense infrastructure represent a direct kinetic threat to the Strait of Hormuz chokepoint (~20% of global oil and LNG). The single-day Brent +9.6% move and reimposition of an Iranian port blockade are precisely the triggers s20 was designed to track. The WTI indicator in s20 needs an immediate update (~$78/bbl on Jul 13 settle). This is the single highest-materiality event of the week and bleeds into s18 (fertilizer inputs via Gulf), s5 (China energy costs), and s4 (EM energy-import stress).",
+      "status": "pending",
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "sightings": 1,
+      "id": "strait-of-hormuz-actively-contested-iran-strikes-4eb4bb"
+    },
+    "imf-july-weo-flags-stalled-global-disinflation-r-8eca8e": {
+      "headline": "IMF July WEO Flags Stalled Global Disinflation; Raises 2026 Headline Inflation to 4.7%, Cites 'War Shock' Weighing on Energy Importers",
+      "summary": "The IMF's July 8, 2026 World Economic Outlook Update revised global headline inflation up to 4.7% for 2026 and noted the disinflation trend in place since early 2024 has stalled, driven largely by the 2026 Iran war energy shock. The World Bank separately flagged that EM/DEs face their weakest per-capita income growth since COVID.",
+      "as_of": "2026-07-08",
+      "sources": [
+        "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+        "https://www.imf.org/en/news/articles/2026/07/08/tr070826-weo-press-briefing-transcript-july-8-2026",
+        "https://www.worldbank.org/en/publication/global-economic-prospects"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s4_dev_debt",
+      "target_indicator": "New IMF programs / missed coupons \u2192 rising to 1 (rising); US 10y real yield (TIPS) \u2192 watch for repricing as disinflation stalls; Broad US dollar index \u2192 monitor for EM pressure as energy-import bills rise",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Stalled global disinflation with upward-revised inflation (4.7%) directly pressures EM/developing-world debt sustainability: higher-for-longer DM rates reduce rollover capacity, and rising energy import bills compress fiscal space. The IMF WEO explicitly notes 'war shock weighing on energy importers and vulnerable economies.' This worsens the s4 indicator set \u2014 the IMF program / missed coupon ordinal should shift toward 1 (rising stress), and the real yield environment deserves a flag. The World Bank's weakest EMDE per-capita growth since COVID adds corroborating weight.",
+      "status": "pending",
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "sightings": 1,
+      "id": "imf-july-weo-flags-stalled-global-disinflation-r-8eca8e"
+    },
+    "genius-act-turns-one-final-rules-miss-july-18-st-924be5": {
+      "headline": "GENIUS Act Turns One: Final Rules Miss July 18 Statutory Deadline as Six Agencies Still Finalizing",
+      "summary": "The GENIUS Act's July 18, 2026 one-year rulemaking deadline has passed with six federal agencies (OCC, FDIC, NCUA, Treasury, FinCEN, OFAC) still in the process of finalizing implementing rules rather than having issued them \u2014 representing a slip against the statutory timetable. CoinDesk confirmed on July 19 that regulators are 'still working their way through the process,' leaving the $240bn+ stablecoin market in regulatory limbo ahead of the 120-day compliance clock.",
+      "as_of": "2026-07-19",
+      "sources": [
+        "https://www.coindesk.com/policy/2026/07/19/the-genius-act-turns-1-state-of-crypto",
+        "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
+        "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS implementation friction \u2192 upgrade from 0 (smooth) to 1 (gaps): the July 18 statutory rulemaking deadline has been missed, agencies have only issued NPRMs not final rules, creating compliance uncertainty for a $240bn market",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The s7_stablecoins story tracks GENIUS implementation friction explicitly. A confirmed slip past the July 18 statutory rulemaking deadline \u2014 with OCC issuing only a proposed (not final) rule and CoinDesk confirming agencies are still drafting \u2014 is exactly the '1 = gaps' condition. Total stablecoin supply ($240bn+, up from tracker's ~baseline) and the mandatory Treasury-reserve backing means this also has second-order implications for UST demand (relevant to s7's Treasury demand angle). The friction score should move from 0 to 1.",
+      "status": "pending",
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "sightings": 1,
+      "id": "genius-act-turns-one-final-rules-miss-july-18-st-924be5"
+    },
+    "takaichi-370-trillion-blueprint-unveils-massive--04067e": {
+      "headline": "Takaichi '\u00a5370 Trillion Blueprint' Unveils Massive Fiscal Expansion Across 17 Sectors; BOJ Independence Signal Muddled by 'Basic Policy Shock'",
+      "summary": "PM Takaichi's mid-July 2026 economic blueprint \u2014 committing over \u00a5370 trillion in public and private investment through fiscal 2040 \u2014 triggered a 'Basic Policy shock' in JGB markets when investors briefly feared the government would discourage future BOJ rate hikes. A Cabinet clarification on July 10 that BOJ autonomy 'must be respected' partially calmed markets, but the financing clarity of the plan remains deeply opaque.",
+      "as_of": "2026-07-15",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
+        "https://cryptobriefing.com/japan-bond-market-takaichi-crypto-impact/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "Takaichi plan financing clarity \u2192 upgrade to 2 (disorderly): \u00a5370tn blueprint with unclear financing, BOJ-independence ambiguity ('Basic Policy shock'), and 30y JGB already above 4% signal active market disorder around fiscal sustainability",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "This is a direct hit on the s2_japan 'Takaichi plan financing clarity' indicator. The \u00a5370 trillion blueprint with no clear funding path, combined with a market-panicking signal that the government might suppress BOJ rate hikes (even if later clarified), pushes the ordinal indicator to 2 (disorderly). The 10y JGB at 2.90% (30-year high) and 30y JGB above 4% \u2014 with life-insurer forced-seller threshold at 4.5% \u2014 confirms material disorder. This is distinct from the GPIF repatriation entry above, which focuses on cross-border capital flow implications.",
+      "status": "pending",
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "sightings": 1,
+      "id": "takaichi-370-trillion-blueprint-unveils-massive--04067e"
+    },
+    "us-cpi-hits-4-2-yoy-may-2026-fed-under-new-chair-a1e802": {
+      "headline": "US CPI Hits 4.2% YoY (May 2026), Fed Under New Chair Warsh Removes Forward Guidance; Stagflation Risk from Energy Shock Intensifies",
+      "summary": "US CPI rose 4.2% year-over-year through May 2026 \u2014 the highest since April 2023 \u2014 while new Fed Chair Kevin Warsh eliminated traditional forward guidance in favor of pure data-dependence after the June meeting, leaving the funds rate at 3.50\u20133.75%. The combination of a war-driven energy shock, stalled disinflation, and opaque Fed signaling is increasing the probability of a stagflationary environment that tightens financial conditions globally.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026",
+        "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+        "https://www.loomissayles.com/insights/july-2026-investment-outlook/"
+      ],
+      "materiality": "medium",
+      "classification": "new_risk",
+      "target_story": null,
+      "proposed_story": {
+        "name": "US Stagflation Trap: Energy-Shock Inflation + Growth Deceleration + Fed Paralysis",
+        "why": "US CPI at 4.2% YoY while the Fed sits at 3.50\u20133.75% with a new chair who has deliberately removed forward guidance creates a policy vacuum precisely when an exogenous energy shock (Iran war, Hormuz) is re-accelerating inflation. This is not captured by any existing story: s20 tracks oil/sea lanes physically, s8 tracks AI capex stress, s3/s9/s11 track credit and consumer stress \u2014 but none tracks the systemic feedback loop of a stagflationary US macro regime (high inflation + decelerating growth + Fed trapped between cutting [inflation] and hiking [growth]) that would simultaneously pressure EM debt (s4), private credit (s3), consumer debt (s11), and CRE (s9) while preventing the Fed from acting as a global lender of last resort.",
+        "proposed_level": 6,
+        "set": "Set 2",
+        "indicators": [
+          {
+            "label": "US CPI YoY (%)",
+            "type": "value",
+            "rubric": "Current: 4.2% (May 2026). Threshold: <3% = easing; 3\u20134% = elevated; >4% = stagflation risk zone; >5% = acute. Higher is worse given simultaneous growth deceleration.",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Fed forward-guidance opacity (0 = clear / 1 = ambiguous / 2 = none)",
+            "type": "band",
+            "rubric": "0 = standard forward guidance in place; 1 = guidance qualified or conditional; 2 = guidance explicitly removed (pure data-dependence declared). Current: 2 (Warsh removed guidance June 2026).",
+            "sources": [
+              "https://www.gomarkets.com/en/articles/us-market-drivers-july-2026"
+            ],
+            "suggested_weight": 0.2
+          },
+          {
+            "label": "US real GDP growth QoQ annualized (%)",
+            "type": "value",
+            "rubric": "Tracks growth leg of stagflation trap; <1% = deceleration concern; <0% = stagflation confirmed. Sources: BEA advance/revised GDP releases.",
+            "sources": [
+              "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "5y5y inflation breakeven (%)",
+            "type": "value",
+            "rubric": "Measures whether inflation expectations are becoming un-anchored; >2.75% = elevated; >3.25% = de-anchoring risk. Sources: FRED T5YIFR.",
+            "sources": [
+              "https://www.loomissayles.com/insights/july-2026-investment-outlook/"
+            ],
+            "suggested_weight": 0.2
+          }
+        ]
+      },
+      "rationale": "A US CPI at 4.2% with the Fed having just removed forward guidance and an exogenous energy-price shock still intensifying (Hormuz) constitutes a qualitatively new macro regime risk not tracked in the existing story set. The tracker has stories for specific asset-class stresses but lacks a 'meta-story' for the US macro policy trap that would amplify nearly every other story simultaneously. Proposed at level 6 because: (a) it is already partly in motion (CPI above 4%, guidance removed), (b) the energy shock adds a supply-side inflation driver the Fed cannot address with rate policy without crushing growth, and (c) under stagflation, the Fed's ability to pivot as a global backstop is severely constrained.",
+      "status": "pending",
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "sightings": 1,
+      "id": "us-cpi-hits-4-2-yoy-may-2026-fed-under-new-chair-a1e802"
     }
   },
-  "generated": "2026-07-21",
+  "generated": "2026-07-22",
   "model": "claude-sonnet-4-6",
-  "new_count": 6,
-  "pending_count": 110
+  "new_count": 5,
+  "pending_count": 115
 }

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-21T13:04:48.155710+00:00",
+  "generated": "2026-07-22T13:09:35.538433+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -126,7 +126,7 @@
     }
   },
   "sensitivity": {
-    "as_of_overall": 7.1,
+    "as_of_overall": 7.5,
     "max_story_swing": 2,
     "max_overall_swing": 0.5,
     "movers": [
@@ -221,11 +221,11 @@
         "overall_swing": 0.1
       },
       {
-        "id": "usdjpy",
-        "label": "USD/JPY (yen strengthening = lower = risk)",
+        "id": "plan_financing",
+        "label": "Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)",
         "story": "Japan fiscal / JGB / carry trade",
         "set": 1,
-        "weight": 1.5,
+        "weight": 1.0,
         "story_swing": 2,
         "set_swing": 0.4,
         "overall_swing": 0.5

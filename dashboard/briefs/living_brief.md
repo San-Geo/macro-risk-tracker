@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-07-21 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-07-22 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 7.1/10** — Set 1 5.6, Set 2 5.2, Set 3 4.2, Set 4 6.8, Set 5 5.5.
+**Overall risk 7.5/10** — Set 1 5.8, Set 2 5.2, Set 3 4.2, Set 4 6.8, Set 5 5.5.
 
 
 ## Set 1 — Funding & Leverage
@@ -13,7 +13,7 @@ Hedge funds run a highly leveraged arbitrage between Treasury cash bonds and fut
 
 *Indicators watched:* SOFR minus EFFR (%), MOVE index (Treasury volatility), SEC central clearing on track (0 ok / 1 slipping / 2 delayed)
 
-### Japan fiscal / JGB / carry trade — 6/10 (Elevated)
+### Japan fiscal / JGB / carry trade — 7/10 (High)
 
 Decades of near-zero rates made Japan the funding leg of a vast global carry trade. As the BoJ normalizes and JGB yields rise, fiscal financing gets harder and carry unwinds can transmit stress worldwide - the August 2024 mini-crash was a preview.
 
