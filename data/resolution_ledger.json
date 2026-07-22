@@ -15,9 +15,9 @@
         "30-year JGB yield (%): 3.937 (band 2)",
         "Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly): 1 (band 1)"
       ],
-      "closed": "2026-07-20",
-      "grade": null,
-      "grade_note": null,
+      "closed": "2026-07-21",
+      "grade": "faded",
+      "grade_note": "Yields eased from the 1996 high without intervention; the Jul 7 30y auction cleared 4.55x bid-to-cover with zero tail. No carry unwind - USD/JPY went 161 to 163, yen weaker not stronger. No BOJ emergency operation."
       "close_level": 6
     },
     {
