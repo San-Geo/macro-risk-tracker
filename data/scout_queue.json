@@ -76,12 +76,12 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "The GENIUS Act was signed July 18, 2025, and regulators were required to promulgate most rules by July 18, 2026\u2014but as of July 19, 2026, CoinDesk confirmed that final rules are not yet complete and agencies are still working through proposed rulemakings. The law's effective date can trigger as early as 120 days after final rules are issued or falls back to January 18, 2027, creating a gap that leaves the stablecoin market operating without a finalized compliance framework.",
-      "as_of": "2026-07-19",
+      "summary": "Federal agencies failed to finalize any of the ten proposed rules implementing the GENIUS Act by its one-year statutory deadline of July 18, 2026, leaving stablecoin issuers in regulatory limbo. The GENIUS Act does not take legal effect until January 2027 or 120 days after final rules are issued, whichever is earlier, meaning the gap between enacted law and operative regulation has widened materially.",
+      "as_of": "2026-07-20",
       "sources": [
-        "https://www.coindesk.com/policy/2026/07/19/the-genius-act-turns-1-state-of-crypto",
-        "https://eco.com/support/en/articles/15282223-what-is-the-genius-act-us-stablecoin-law-explained-for-2026",
-        "https://home.treasury.gov/news/press-releases/sb0435"
+        "https://www.cointribune.com/en/genius-act-a-year-later-final-stablecoin-rules-still-pending",
+        "https://www.chapman.com/publication-genius-act-rulemaking-tracker",
+        "https://www.morganlewis.com/pubs/2026/04/genius-act-implementation-key-proposals-and-what-comes-next"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -89,12 +89,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The statutory one-year rulemaking deadline for the GENIUS Act passed on July 18, 2026, with final rules not yet issued\u2014confirming implementation friction that should move this indicator from 0 to 1 (gaps). The stablecoin sector has grown materially (potentially multi-trillion dollar in coming years per Treasury) and ambiguity over reserve rules, AML compliance, and state vs. federal chartering creates systemic risk to Treasury bill demand forecasts embedded in s7_stablecoins.",
+      "rationale": "The missed July 18 deadline is a concrete, datable deterioration in the 'GENIUS implementation friction' indicator, moving it from '1 gaps' to '2 problems'. Ten NPRMs but zero final rules means issuers cannot rely on a live regulatory framework; this creates uncertainty around reserve-asset composition and Treasury-demand projections that s7_stablecoins is designed to track. Because stablecoin reserve demand for short-dated Treasuries is now a non-trivial source of marginal T-bill demand, ongoing regulatory vacuum is materially relevant.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-20",
+      "last_seen": "2026-07-23",
       "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
-      "sightings": 9
+      "sightings": 10
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -174,14 +174,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "Following a brief ceasefire, the US and Iran exchanged strikes again July 11\u201315, with Iran attacking commercial vessels and re-declaring the Strait of Hormuz closed; the US reinstated a naval blockade of Iranian ports and conducted its fifth consecutive day of strikes by July 15. Roughly 27% of global seaborne crude and 20% of global LNG transits the Strait, and commercial traffic remains severely disrupted.",
-      "as_of": "2026-07-15",
+      "summary": "The June 17 US-Iran memorandum of understanding collapsed in mid-July 2026. The US conducted strikes on 95 locations across 12 Iranian cities over 10 days; Iran attacked tankers in Hormuz killing seafarers; the US reimposed its naval blockade. Brent briefly broke $90/bbl. Mediators proposed a fresh 10-day ceasefire as of July 21 but large divisions remain.",
+      "as_of": "2026-07-22",
       "sources": [
-        "https://www.cnn.com/2026/07/11/world/live-news/iran-war-trump",
-        "https://www.cnn.com/2026/07/15/world/live-news/iran-war-trump",
-        "https://www.foxnews.com/live-news/iran-war-trump-israel-hormuz-oil-july-15-2026",
-        "https://www.congress.gov/crs-product/R45281",
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+        "https://www.cnbc.com/2026/07/21/us-iran-war-trump-hormuz-houthis.html",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://www.washingtontimes.com/news/2026/jul/21/new-fighting-blockade-middle-east-threaten-success-moves-stabilize/",
+        "https://www.euronews.com/business/2026/07/08/the-key-global-economic-risks-to-watch-in-the-second-half-of-2026"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -189,12 +188,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Strait of Hormuz is the single most-watched chokepoint in s20_sea_lanes. The ceasefire collapse and renewed IRGC attacks on commercial vessels, combined with the US naval blockade reinstatement, push the status from 1 (contested) toward 2 (effectively closed for normal commercial traffic). This also directly feeds s18_food_fertilizer (30\u201335% of global urea exports transit Hormuz) and s16_copper (energy input costs) and drove the JGB yield spike cited in s2_japan.",
+      "rationale": "The re-escalation after the June ceasefire collapse moves the Hormuz/Red Sea status indicator from '1 contested' back toward '2 closed': tanker traffic through Hormuz has fallen sharply, the US naval blockade is reimposed, and at least one tanker was attacked this week. This simultaneously pressures the WTI crude indicator and is the proximate cause of the Houthi blockade (item 1 above). Both s18_food_fertilizer (Hormuz/Gulf disruption indicator) and s20_sea_lanes are directly impacted.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-20",
+      "last_seen": "2026-07-23",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 7
+      "sightings": 8
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
@@ -989,13 +988,13 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "The IEA's July 17 Critical Minerals Outlook report quantified that full implementation of China's October 2025 export controls\u2014suspended until November 2026\u2014would jeopardize $6.5 trillion in downstream production globally, with the US and Europe accounting for nearly half the exposure. Separately, China detained two Japanese nationals in Dalian in May for alleged rare-earth smuggling and formalized a public-reporting enforcement mechanism effective July 1, 2026, signaling sharply active enforcement even during the suspension period.",
-      "as_of": "2026-07-17",
+      "summary": "A mid-July 2026 IEA report put $6.5 trillion of global downstream production at risk from China's rare-earth export controls, with the US and Europe accounting for nearly half the exposure. The November 2026 suspension of China's October 2025 extraterritorial controls is expiring in ~16 weeks, and China has simultaneously been escalating enforcement via a new public-reporting mechanism (effective July 1 2026) and the detention of Japanese nationals over rare-earth smuggling.",
+      "as_of": "2026-07-16",
       "sources": [
-        "https://chinaglobalsouth.com/2026/07/16/china-rare-earth-curbs-threaten-western-industry-iea/",
+        "https://www.semafor.com/article/07/16/2026/china-rare-earth-export-curbs-risk-65-trillion-in-downstream-production",
         "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/",
         "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
-        "https://www.semafor.com/article/07/16/2026/china-rare-earth-export-curbs-risk-65-trillion-in-downstream-production"
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1003,12 +1002,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Nov-2025 pause status should be updated to 1 (expiring): the suspension runs only until November 10, 2026\u2014less than 4 months away\u2014and the IEA's $6.5tn downstream risk figure and active enforcement escalation (foreign-national detentions, July 1 whistleblower mechanism) make the countdown highly material. The US domestic RE producer blacklist indicator also warrants updating: China added MP Materials and USA Rare Earth to its export control entity list in June 2026, moving that indicator from 1 to 2 (sector-wide ban implications).",
+      "rationale": "Directly updates the s6_rare_earths 'Nov-2025 pause status' indicator: the suspension is now ~16 weeks from expiry (Nov 10 2026) with no extension announced, moving toward '1 expiring'. The IEA's $6.5 trillion downstream-risk quantification is a major new data point for the tracker. The concurrent active enforcement posture (MOFCOM Announcement No. 26 public-reporting mechanism, Japanese national detentions) means the indicator for 'Rare-earth export license flow' should also be reviewed \u2014 but the pause-expiry clock is the most time-sensitive signal.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-20",
+      "last_seen": "2026-07-23",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 7
+      "sightings": 8
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -2052,13 +2051,13 @@
     },
     "japan-s-takaichi-government-pauses-boj-bond-tape-81e119": {
       "headline": "Japan's Takaichi government pauses BOJ bond-taper programme under political pressure; 10Y JGB yield near 30-year high of ~2.7-2.8%, Oxford Economics raises end-2026 forecast to 2.8%",
-      "summary": "Japan's 10-year JGB yield hit 2.901% on July 10\u2014the highest since September 1996\u2014driven by the government's June 30 'Basic Policy' blueprint calling on the BOJ to align monetary policy with growth, and by surging oil prices from renewed US-Iran conflict. On July 14 the Finance Minister signalled domestic pension funds should increase JGB holdings, pulling yields back ~20bp to ~2.70%, but the underlying fiscal expansion (\u00a5370 trillion in planned public-private investment) and BOJ credibility concerns persist.",
-      "as_of": "2026-07-14",
+      "summary": "The yen fell to a four-decade low against the USD through late June/early July 2026, while the 10-year JGB yield reached 2.90% (highest since 1996) and the 30-year yield hovered near 4%. Japan's June 30 government economic blueprint was read by markets as an attempt to restrain BoJ rate hikes, stoking fears the BoJ will fall behind the curve and leaving JPY 370 trillion in proposed public/private investment without clear financing.",
+      "as_of": "2026-07-23",
       "sources": [
-        "https://finance.yahoo.com/economy/policy/articles/japan-benchmark-bond-yield-hits-004445377.html",
-        "https://tradingeconomics.com/japan/government-bond-yield",
         "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
-        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/"
+        "https://wolfstreet.com/2026/07/01/yen-craters-to-4-decade-low-jgb-yields-at-3-decade-highs-monetary-policy-mess-comes-home-to-roost/",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/",
+        "https://tradingeconomics.com/japan/government-bond-yield"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -2066,11 +2065,11 @@
       "target_indicator": "Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 'Basic Policy shock' materially worsens s2_japan on two indicators simultaneously: (1) 30-year JGB yield (the tracker's indicator) has surged alongside 10-year\u201430y yields are well above 3% and still near multi-decade highs despite the July 14 pullback; (2) Takaichi plan financing clarity should move 1\u21922 (disorderly): the government's blueprint language pressuring the BOJ to stay accommodative is being read as fiscal dominance risk, the BoJ hiked only 25bp to 1.0% in June but markets price another hike, and carry-trade unwind risk (USD/JPY near 40-year yen lows in June per Franklin Templeton) remains acute. The pension-fund nudge is an ad-hoc demand backstop, not a structural fix.",
+      "rationale": "All three existing s2_japan indicators are flashing simultaneously: USD/JPY at a 40-year high (yen weakness = risk), 30-year JGB at ~4% and 10-year at ~2.90%, and the June 30 'Basic Policy' document is being read as a direct attempt to restrain BoJ hikes while JPY 370 trillion in spending remains unfunded \u2014 squarely mapping to 'Takaichi plan financing clarity = 2 (disorderly)'. The MUFG note explicitly flags super-long JGB upside and limited scope for improvement while fiscal uncertainty lingers.",
       "status": "pending",
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-14",
-      "sightings": 2,
+      "last_seen": "2026-07-23",
+      "sightings": 3,
       "id": "japan-s-takaichi-government-pauses-boj-bond-tape-81e119"
     },
     "us-fiscal-dominance-accelerating-obbba-debt-traj-b79d30": {
@@ -3655,10 +3654,72 @@
       "last_seen": "2026-07-22",
       "sightings": 1,
       "id": "us-cpi-hits-4-2-yoy-may-2026-fed-under-new-chair-a1e802"
+    },
+    "houthi-maritime-blockade-of-saudi-arabia-opens-t-6ec96d": {
+      "headline": "Houthi maritime blockade of Saudi Arabia opens 'two-chokepoint problem' for global oil",
+      "summary": "On 20 July 2026 Iran-backed Houthis declared a naval blockade of Saudi Arabia, threatening ~4 mb/d of Saudi Red Sea crude exports via Yanbu just as the Strait of Hormuz remains contested after the US-Iran interim deal collapsed. Standard Chartered analysts warned of simultaneous disruptions to both main regional oil arteries, with tankers already diverting or turning back.",
+      "as_of": "2026-07-22",
+      "sources": [
+        "https://www.cnbc.com/2026/07/21/us-iran-war-trump-hormuz-houthis.html",
+        "https://www.semafor.com/article/07/22/2026/houthi-blockade-adds-pressure-to-oil-markets",
+        "https://www.atlanticcouncil.org/dispatches/the-houthis-just-announced-a-blockade-on-saudi-arabia-what-does-it-mean-for-the-global-economy/",
+        "https://foreignpolicy.com/2026/07/21/iran-war-oil-markets-crude-prices-hormuz-strait-reserves-houthi-blockade-united-states-saudi-arabia/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Saudi Red Sea export route status (0 open / 1 Houthi-threatened / 2 effectively blocked)",
+        "type": "band",
+        "rubric": "0 = Yanbu/Bab el-Mandeb fully open; 1 = active Houthi threat, partial diversion; 2 = tanker traffic halted, route effectively closed",
+        "sources": [
+          "https://www.semafor.com/article/07/22/2026/houthi-blockade-adds-pressure-to-oil-markets",
+          "https://www.atlanticcouncil.org/dispatches/the-houthis-just-announced-a-blockade-on-saudi-arabia-what-does-it-mean-for-the-global-economy/"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "s20_sea_lanes already tracks Hormuz/Red Sea status and WTI crude, but the existing rubric treats the Red Sea/Bab el-Mandeb and Hormuz as a single indicator. The Houthi blockade of Saudi Arabia's Red Sea exports is a structurally distinct second chokepoint now operating simultaneously with Hormuz disruption; it needs its own indicator to capture the compound supply-route risk. Materiality is high because Saudi Arabia was routing ~4 mb/d through Yanbu precisely to bypass Hormuz, so closure of both routes removes all bypass options.",
+      "status": "pending",
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-23",
+      "sightings": 1,
+      "id": "houthi-maritime-blockade-of-saudi-arabia-opens-t-6ec96d"
+    },
+    "middle-east-war-shock-stalls-global-disinflation-82a4af": {
+      "headline": "Middle East war shock stalls global disinflation; IMF revises 2026 headline inflation up to 4.7%, growth unchanged",
+      "summary": "The IMF July 2026 WEO Update left cumulative 2026\u201327 global growth projections unchanged at 3.0%/3.4% but revised headline inflation up to 4.7% for 2026, explicitly noting that the disinflation trend in place since early 2024 has stalled. The war shock is weighing on energy-importing and vulnerable developing economies while AI-driven demand lifts technology-integrated nations.",
+      "as_of": "2026-07-08",
+      "sources": [
+        "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+        "https://www.imf.org/en/news/articles/2026/07/08/tr070826-weo-press-briefing-transcript-july-8-2026"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "IMF global headline inflation forecast YoY (%, current-year WEO Update)",
+        "type": "value",
+        "rubric": "Tracks the IMF's rolling current-year global CPI forecast as a single cross-cutting signal for monetary tightening risk, EM debt stress, and second-round FX/energy pass-through. Rising forecast = higher stress on energy-importing developing-world debtors.",
+        "sources": [
+          "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+          "https://www.imf.org/en/news/articles/2026/07/08/tr070826-weo-press-briefing-transcript-july-8-2026"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "Stalled disinflation at 4.7% global headline inflation is a cross-story systemic risk: it raises the probability of additional EM rate hikes or currency defense that feeds s4_dev_debt stress, tightens financial conditions for s3_private_credit, and reduces the cushion for s10_france/eurozone fragility. The existing s4_dev_debt indicators (dollar index, 10y real yield, IMF programs) capture debt stress outcomes but not the inflation-expectations input that is driving the current repricing. Adding an IMF inflation forecast indicator plugs this gap and is directly sourced to official multilateral data published this week.",
+      "status": "pending",
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-23",
+      "sightings": 1,
+      "id": "middle-east-war-shock-stalls-global-disinflation-82a4af"
     }
   },
-  "generated": "2026-07-22",
+  "generated": "2026-07-23",
   "model": "claude-sonnet-4-6",
-  "new_count": 5,
-  "pending_count": 115
+  "new_count": 2,
+  "pending_count": 117
 }
