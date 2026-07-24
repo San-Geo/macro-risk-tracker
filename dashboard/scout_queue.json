@@ -76,12 +76,13 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "Federal agencies failed to finalize any of the ten proposed rules implementing the GENIUS Act by its one-year statutory deadline of July 18, 2026, leaving stablecoin issuers in regulatory limbo. The GENIUS Act does not take legal effect until January 2027 or 120 days after final rules are issued, whichever is earlier, meaning the gap between enacted law and operative regulation has widened materially.",
-      "as_of": "2026-07-20",
+      "summary": "The OCC issued a notice of proposed rulemaking to implement the GENIUS Act in July 2026, while the Federal Reserve published its own AML/CFT proposed rule on July 9, 2026. USD-pegged stablecoin supply stands at ~$230bn (Tether ~$142bn, USDC ~$60bn), with Tether holding ~$113bn in US Treasury exposure \u2014 but Tether's custodial-structure disclosure does not yet meet GENIUS Act standards, creating a compliance cliff ahead of the January 2027 effective date.",
+      "as_of": "2026-07-22",
       "sources": [
-        "https://www.cointribune.com/en/genius-act-a-year-later-final-stablecoin-rules-still-pending",
+        "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
         "https://www.chapman.com/publication-genius-act-rulemaking-tracker",
-        "https://www.morganlewis.com/pubs/2026/04/genius-act-implementation-key-proposals-and-what-comes-next"
+        "https://deluair.com/consultancy/insights/stablecoin-regulation-2026",
+        "https://bankingjournal.aba.com/2026/07/the-genius-act-in-2026/"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -89,12 +90,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The missed July 18 deadline is a concrete, datable deterioration in the 'GENIUS implementation friction' indicator, moving it from '1 gaps' to '2 problems'. Ten NPRMs but zero final rules means issuers cannot rely on a live regulatory framework; this creates uncertainty around reserve-asset composition and Treasury-demand projections that s7_stablecoins is designed to track. Because stablecoin reserve demand for short-dated Treasuries is now a non-trivial source of marginal T-bill demand, ongoing regulatory vacuum is materially relevant.",
+      "rationale": "The simultaneous rush of proposed rules from OCC, Fed, FinCEN/OFAC, FDIC, and NCUA \u2014 all within a compressed window driven by the January 2027 effective date \u2014 signals that GENIUS implementation friction has moved from '0 smooth' to '1 gaps'. Tether's unresolved custodial-disclosure gap is the most material single item: if Tether (~$113bn in Treasuries) cannot comply or faces a run during a compliance transition, the Treasury-bill bid from stablecoins could reverse sharply. The Total USD stablecoin supply ($230bn) indicator also needs updating.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-07-24",
       "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
-      "sightings": 10
+      "sightings": 11
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -174,13 +175,12 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "The June 17 US-Iran memorandum of understanding collapsed in mid-July 2026. The US conducted strikes on 95 locations across 12 Iranian cities over 10 days; Iran attacked tankers in Hormuz killing seafarers; the US reimposed its naval blockade. Brent briefly broke $90/bbl. Mediators proposed a fresh 10-day ceasefire as of July 21 but large divisions remain.",
-      "as_of": "2026-07-22",
+      "summary": "The US launched a ninth wave of airstrikes against Iran around July 20, reigniting oil-price spikes (Brent rebounded above $76). Analysts warn Hormuz passage could remain below 50% of pre-war levels for months, with Iran contesting international-waterway status and periodically attacking commercial vessels.",
+      "as_of": "2026-07-20",
       "sources": [
-        "https://www.cnbc.com/2026/07/21/us-iran-war-trump-hormuz-houthis.html",
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
-        "https://www.washingtontimes.com/news/2026/jul/21/new-fighting-blockade-middle-east-threaten-success-moves-stabilize/",
-        "https://www.euronews.com/business/2026/07/08/the-key-global-economic-risks-to-watch-in-the-second-half-of-2026"
+        "https://www.aljazeera.com/news/2026/7/8/oil-prices-surge-as-us-strikes-iran-reversing-fall-to-pre-war-levels",
+        "https://www.youtube.com/watch?v=YkocwwyF5LI",
+        "https://www.congress.gov/crs-product/R45281"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -188,22 +188,22 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The re-escalation after the June ceasefire collapse moves the Hormuz/Red Sea status indicator from '1 contested' back toward '2 closed': tanker traffic through Hormuz has fallen sharply, the US naval blockade is reimposed, and at least one tanker was attacked this week. This simultaneously pressures the WTI crude indicator and is the proximate cause of the Houthi blockade (item 1 above). Both s18_food_fertilizer (Hormuz/Gulf disruption indicator) and s20_sea_lanes are directly impacted.",
+      "rationale": "The US-Iran conflict has been ongoing since Feb-Mar 2026, but the ninth wave of strikes this week is a discrete re-escalation event that pushes the Hormuz status indicator back toward '2 closed' (or firmly mid-'2'). Passage remains severely restricted; Brent's renewed spike directly affects WTI (also tracked). This is the single most material geopolitical development of the week and must be flagged as a live re-escalation, not background noise.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-07-24",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 8
+      "sightings": 9
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The 10-year JGB rose to 2.900% intra-week (July 7\u201310) \u2014 its highest since 1996 \u2014 driven by fiscal expansion fears, oil-price-driven inflation, and a 'Basic Policy shock' in which Tokyo appeared to signal it might discourage BOJ rate hikes; Finance Minister Katayama then intervened to encourage GPIF to shift to domestic assets, partially reversing yields.",
-      "as_of": "2026-07-13",
+      "summary": "The 10-year JGB yield struck 2.901% on July 10 (2-year at a 31-year high of 1.49% on July 23), and swap markets now price an ~80% chance of a BOJ 25bp hike to 1.25% in October. Japanese investors sold $29.6bn of US Treasuries in Q1 2026 alone, and a government-floated GPIF repatriation signal sparked a sharp yen surge, accelerating carry unwind.",
+      "as_of": "2026-07-23",
       "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
         "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
-        "https://finance.yahoo.com/economy/policy/articles/japan-benchmark-bond-yield-hits-004445377.html",
-        "https://www.brecorder.com/news/amp/40428884",
-        "https://tradingeconomics.com/japan/30-year-bond-yield"
+        "https://investing.com (Reuters Jul 16 2026)"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -211,19 +211,21 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 30-year JGB briefly touched 4.005% (July 7 auction, before demand relief) and the 10-year hit 2.88\u20132.90%, both multi-decade highs. The 'Basic Policy shock' \u2014 Tokyo signalling it might pressure the BOJ away from hikes \u2014 is a direct deterioration of the 'Takaichi plan financing clarity' indicator (should move toward 2 = disorderly). The partial relief from Katayama's GPIF-redirect hint is itself policy improvisation rather than structural clarity. The existing s2 story and its three indicators are all squarely triggered: USD/JPY, 30yr JGB yield, and Takaichi financing clarity.",
+      "rationale": "JGB yields at multi-decade highs, BOJ rate-hike probability re-priced sharply upward, and GPIF repatriation talk is directly stressing the yen carry trade and US Treasury demand \u2014 all squarely within s2_japan. The 30-year yield (tracked) was also at 3.901% on Jul 10; the GPIF headline directly drove USD/JPY unwind. Both core indicators (USD/JPY and 30y JGB yield) are moving materially. The Takaichi-plan financing clarity indicator also warrants a nudge toward '1 unclear' given the Basic Policy shock scare and government back-tracking.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-24",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 5
+      "sightings": 6
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
-      "summary": "In June 2026 China added 10 US entities to its export-control list including the two largest US rare-earth miners (MP Materials and USA Rare Earth), effectively barring global third parties from transferring Chinese-origin RE inputs to them; simultaneously, MOFCOM Announcement No. 26 of 2026 created an active public-reporting mechanism for export-control violations, effective July 1, targeting circumvention routes.",
-      "as_of": "2026-07-01",
+      "summary": "Chinese customs data for June 2026 show zero shipments of key heavy rare-earth elements (dysprosium, terbium, yttrium, gallium) to Japan, while China simultaneously expanded magnet exports globally. In June 2026 China added 10 US entities \u2014 including MP Materials and USA Rare Earth \u2014 to its export-control list, and in May 2026 two Japanese nationals were detained in Dalian for alleged rare-earth smuggling.",
+      "as_of": "2026-07-06",
       "sources": [
+        "https://discoveryalert.com.au/china-rare-earth-exports-japan-export-controls-2026/",
         "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+        "https://www.spokesman.com/stories/2026/jul/06/corporate-japans-rare-earth-warnings-get-louder-as/",
         "https://www.csis.org/analysis/rare-earth-export-restrictions-one-year-later"
       ],
       "materiality": "high",
@@ -232,12 +234,12 @@
       "target_indicator": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "This indicator should move from 0\u21921 (entity-specific ban): China has directly targeted the two principal US domestic RE producers by name on its export-control entity list. The extraterritorial scope\u2014prohibiting any party globally from transferring Chinese-origin RE materials to these firms\u2014is a major escalation of enforcement, not merely licensing friction. Combined with the July 1 whistleblower enforcement mechanism (MOFCOM Announcement No. 26), which actively incentivises reporting of circumvention, this represents a tightening of the RE control architecture. The November 2026 suspension expiry on the broader October 2025 measures adds a compounding risk within ~4 months.",
+      "rationale": "The blacklisting of MP Materials and USA Rare Earth in June 2026 moves the 'US domestic RE producer blacklist' indicator from 0 to 1 (entity-specific ban). The confirmed zero-export data for key heavy rare earths to Japan and simultaneous downstream magnet-export expansion confirm China's deliberate squeeze strategy is intensifying. Rare-earth export license flow for Japan is now effectively '2 frozen' for the targeted elements. Both indicators require immediate update.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-07-24",
       "id": "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6",
-      "sightings": 6
+      "sightings": 7
     },
     "hyperscaler-ai-capex-approaches-800bn-in-2026-67-03d0a0": {
       "headline": "Hyperscaler AI capex approaches $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027 \u2014 revenue gap concern widens",
@@ -2960,10 +2962,10 @@
     },
     "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0": {
       "headline": "China June PPI +4.1% YoY (4-year high) driven by Iran energy shock\u2014but MoM turned negative and consumer goods PPI still -0.9%, revealing a dangerous bifurcation",
-      "summary": "China's June PPI hit +4.1% year-on-year, the strongest since July 2022, primarily from Iran-war energy and commodity pass-through (mining PPI +16.5% YoY, raw materials +8.6%), while consumer goods PPI fell -0.9% YoY and the monthly reading turned negative (-0.3%) for the first time since July 2025. This cost-push / domestic-deflation split is the most adverse configuration for China's margins and export pricing power, simultaneously pressuring corporate profits and preventing consumer reflation.",
-      "as_of": "2026-07-09",
+      "summary": "China's official manufacturing PMI dropped to a 3-month low of 49.3 in July 2026 as new orders fell into contraction, with export orders weakening ahead of new US reciprocal tariffs effective August 1. Standard Chartered forecasts China CPI returning to -0.4% YoY in July after a brief positive blip in June, with PPI deflation only modestly easing.",
+      "as_of": "2026-07-23",
       "sources": [
-        "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html",
+        "https://www.fxstreet.com/news/china-soft-start-to-h2-standard-chartered-202508011018",
         "https://gianlucabenigno.substack.com/p/china-june-26-cpi-inflation-report"
       ],
       "materiality": "medium",
@@ -2972,11 +2974,11 @@
       "target_indicator": "China PPI YoY (%) - large swing either way is worse",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "A +4.1% PPI YoY is a large positive swing that the s5 indicator explicitly flags as adverse 'either way'. The specific mechanism\u2014energy cost-push that is not passing through to consumers, compressing margins\u2014is the China deflation spillover story's most dangerous configuration: exporters face margin squeeze and may intensify price dumping abroad (anti-dumping actions risk) while domestic demand remains anaemic (CPI 1.0%, below consensus). The MoM reversal also signals the energy impulse may be peaking, meaning PPI could whipsaw back negative if Hormuz normalises, creating a second adverse swing. Medium materiality because the driver (Hormuz) is now re-escalating.",
+      "rationale": "China CPI returning to negative territory (-0.4% forecast for July) and PMI dipping back into contraction territory, combined with impending US tariff escalation effective Aug 1, materially worsens the China deflation spillover story. This also reinforces the New tariff/anti-dumping actions indicator toward '2 escalating', since US global reciprocal tariffs effective Aug 1 are a new discrete escalation step. Both the PPI/CPI and tariff indicators need refreshing.",
       "status": "pending",
       "first_seen": "2026-07-15",
-      "last_seen": "2026-07-15",
-      "sightings": 1,
+      "last_seen": "2026-07-24",
+      "sightings": 2,
       "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
     },
     "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328": {
@@ -3716,10 +3718,40 @@
       "last_seen": "2026-07-23",
       "sightings": 1,
       "id": "middle-east-war-shock-stalls-global-disinflation-82a4af"
+    },
+    "bank-of-england-july-2026-fsr-ai-equity-concentr-f9ce89": {
+      "headline": "Bank of England July 2026 FSR: AI-equity concentration and leverage flagged as systemic financial-stability risk; BOE formalises AI macrofinancial monitoring framework",
+      "summary": "The BOE's July 2026 Financial Stability Report formally identifies the concentration of AI-company equities as a new systemic vulnerability, warning that a revaluation of AI earnings could trigger sovereign-debt repricing in jurisdictions with AI-linked growth outlooks. The FSR also highlights that AI-focused companies crossed an inflection point in 2025 where required investment exceeded internal cash flows, accelerating dependence on external financing.",
+      "as_of": "2026-07-03",
+      "sources": [
+        "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/july-2026",
+        "https://www.einnews.com/pr_news/925028404/financial-stability-report-july-2026"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s8_ai_capex",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Major-CB systemic-AI-risk flag (0 monitoring / 1 formal concern / 2 macro-prudential action)",
+        "type": "band",
+        "rubric": "0 = central banks monitoring informally; 1 = one or more major central bank (Fed, BOE, ECB, BOJ) formally flags AI-equity concentration or AI-debt as a systemic financial-stability concern in an official FSR or equivalent; 2 = macro-prudential action taken (e.g. buffer, sector capital add-on, intervention)",
+        "sources": [
+          "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/july-2026",
+          "https://www.einnews.com/pr_news/925028404/financial-stability-report-july-2026"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "s8_ai_capex tracks the AI capex-vs-revenue gap and GPU-backed debt stress, but has no indicator capturing the systemic prudential risk signal when a major central bank formally names AI-equity concentration as a stability threat. The BOE's July 2026 FSR is the first G7 central-bank financial-stability report to embed AI valuation concentration risk into mainstream macroprudential monitoring, including the sovereign-spillover channel. This gap in the indicator set should be closed before other major CBs follow.",
+      "status": "pending",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "sightings": 1,
+      "id": "bank-of-england-july-2026-fsr-ai-equity-concentr-f9ce89"
     }
   },
-  "generated": "2026-07-23",
+  "generated": "2026-07-24",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 117
+  "new_count": 1,
+  "pending_count": 118
 }
