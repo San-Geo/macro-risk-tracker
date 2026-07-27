@@ -990,13 +990,12 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "A mid-July 2026 IEA report put $6.5 trillion of global downstream production at risk from China's rare-earth export controls, with the US and Europe accounting for nearly half the exposure. The November 2026 suspension of China's October 2025 extraterritorial controls is expiring in ~16 weeks, and China has simultaneously been escalating enforcement via a new public-reporting mechanism (effective July 1 2026) and the detention of Japanese nationals over rare-earth smuggling.",
+      "summary": "The IEA published a report (mid-July 2026) quantifying that China's planned expanded rare-earth export restrictions \u2014 currently suspended until November 10, 2026 \u2014 put $6.5 trillion in global downstream production at risk, with the US and Europe accounting for nearly half of exposure; meanwhile China formalized a public-reporting enforcement mechanism for violations effective July 1, 2026, and detained Japanese nationals in May for alleged rare-earth smuggling. The November 2026 suspension expiry is now a concrete hard-deadline risk.",
       "as_of": "2026-07-16",
       "sources": [
         "https://www.semafor.com/article/07/16/2026/china-rare-earth-export-curbs-risk-65-trillion-in-downstream-production",
         "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/",
-        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
-        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/"
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1004,12 +1003,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Directly updates the s6_rare_earths 'Nov-2025 pause status' indicator: the suspension is now ~16 weeks from expiry (Nov 10 2026) with no extension announced, moving toward '1 expiring'. The IEA's $6.5 trillion downstream-risk quantification is a major new data point for the tracker. The concurrent active enforcement posture (MOFCOM Announcement No. 26 public-reporting mechanism, Japanese national detentions) means the indicator for 'Rare-earth export license flow' should also be reviewed \u2014 but the pause-expiry clock is the most time-sensitive signal.",
+      "rationale": "The IEA's $6.5 trillion quantification gives the suspension-expiry risk a concrete economic magnitude for the first time. The Nov-2026 deadline means the 'expiring' flag (score=1) is now active and approaching 'lapsed' territory (score=2) in four months. China's July 1 enforcement mechanism and the Japanese nationals' detention signal active \u2014 not just threatened \u2014 enforcement, upgrading the license-flow indicator toward 'slowing' (score=1). This is directly and precisely captured by s6_rare_earths' existing indicators and materially updates their readings.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-07-27",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 8
+      "sightings": 9
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -3748,10 +3747,168 @@
       "last_seen": "2026-07-24",
       "sightings": 1,
       "id": "bank-of-england-july-2026-fsr-ai-equity-concentr-f9ce89"
+    },
+    "us-iran-war-re-escalation-brent-spikes-to-100-68-78c41b": {
+      "headline": "US-Iran War Re-escalation: Brent Spikes to $100.68, Hormuz/Red Sea Dual Disruption, +40% Oil Surge in July",
+      "summary": "After a partial ceasefire briefly eased Strait of Hormuz pressure, renewed US strikes on Iran and fresh Houthi attacks on Saudi tankers in the Red Sea pushed Brent to $100.68/bbl on July 23, a 40% monthly surge; oil fell back to ~$96.8 by July 26 on Pakistan/China-mediated de-escalation hopes but both critical chokepoints remain contested. The disruption has simultaneously squeezed the Hormuz corridor (effectively blockaded since Feb 28) and opened a second front via Bab el-Mandeb, with Middle East crude export volumes down ~82% Jan\u2013June.",
+      "as_of": "2026-07-26",
+      "sources": [
+        "https://www.forbes.com/sites/gauravsharma/2026/07/23/oil-prices-top-100-on-cargo-squeeze-from-the-middle-east/",
+        "https://tradingeconomics.com/commodity/brent-crude-oil",
+        "https://www.bolnews.com/business/brent-crude-surges-above-100-a-barrel-amid-middle-east-tensions/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status AND WTI crude oil (USD/bbl)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Strait of Hormuz status has moved from 'contested' to near-closure-then-partial-reopening in a single week; Brent at $100+ and a second chokepoint (Bab el-Mandeb/Red Sea) now simultaneously disrupted triggers both the Hormuz/Red Sea status indicator (escalate to 2 = closed/contested) and the WTI crude indicator. This is the single highest-materiality event of the week, directly feeding s20 on all three indicators. The 10-yr Treasury yield spike to 4.71% (July 23) and the inflationary feedback loop also cross-contaminate s1_basis_trade (MOVE/SOFR) and s2_japan (JGB/yen) and s18_food_fertilizer (Hormuz fertilizer input flows).",
+      "status": "pending",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "sightings": 1,
+      "id": "us-iran-war-re-escalation-brent-spikes-to-100-68-78c41b"
+    },
+    "japan-10-yr-jgb-hits-2-90-multi-decade-high-japa-1b7c00": {
+      "headline": "Japan 10-yr JGB Hits 2.90% Multi-Decade High; Japanese Investors Sold $29.6bn of US Treasuries in Q1 2026",
+      "summary": "Japan's 10-year JGB yield touched 2.901% on July 17 (now ~2.77%) \u2014 over 70bps higher year-to-date \u2014 as BOJ officials signaled openness to faster tightening, with swap markets pricing ~80% probability of a 25bp hike to 1.25% in October; Japan's 2-year yield hit a 31-year high of 1.49%. Japanese institutional investors sold a net $29.6 billion of US Treasuries in Q1 2026 alone, removing a historically reliable buyer from an already supply-heavy market.",
+      "as_of": "2026-07-24",
+      "sources": [
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://tradingeconomics.com/japan/government-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japanese institutional UST selling (net quarterly, $bn)",
+        "type": "value",
+        "rubric": "0 = net buyer or neutral (>-$5bn); 1 = moderate selling (-$5bn to -$20bn); 2 = heavy selling (>-$20bn, e.g. Q1-2026 at -$29.6bn). Measures carry-unwind / repatriation pressure on US Treasury market.",
+        "sources": [
+          "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+          "https://tradingeconomics.com/japan/government-bond-yield"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan story tracks USD/JPY, 30yr JGB yield, and Takaichi financing clarity, but has no indicator capturing the cross-market spillover of Japanese repatriation into US Treasuries. With $29.6bn of UST sold in a single quarter at a time of record US issuance and elevated MOVE, this is a critical missing link between the Japan carry-unwind risk and the US basis-trade / Treasury demand story. The 10-yr JGB at near 3% is also a new structural level that the existing 30yr indicator alone understates.",
+      "status": "pending",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "sightings": 1,
+      "id": "japan-10-yr-jgb-hits-2-90-multi-decade-high-japa-1b7c00"
+    },
+    "boe-july-2026-fsr-us-credit-card-delinquency-hit-9b198b": {
+      "headline": "BOE July 2026 FSR: US Credit Card Delinquency Hits ~13% in Q1 2026; AI Equity Concentration Flagged as Systemic Risk",
+      "summary": "The Bank of England's July 2026 Financial Stability Report flagged that the share of US credit card accounts in arrears rose to approximately 13% in Q1 2026, the highest recorded level, even as write-off rates leveled near long-run averages; separately the FPC formally adopted a monitoring framework for AI-related macrofinancial risks, noting AI company valuations have grown faster than broader equity indices in Q2 2026 with high market concentration amplifying revaluation risk.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.bankofengland.co.uk/financial-stability-report/2026/july-2026"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s8_ai_capex",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "AI equity market concentration / revaluation risk (0 normal / 1 elevated / 2 systemic flagged by major regulator)",
+        "type": "band",
+        "rubric": "0 = AI valuations broadly in line with market; concentration not flagged by major central bank/regulator. 1 = AI valuations outpacing benchmarks materially, concentration noted in financial stability reports. 2 = Major regulator adopts formal AI-equity concentration monitoring framework and flags systemic risk. Current reading: 2 (BOE FSR July 2026). Sources: BOE FSR, Fed FSOC report.",
+        "sources": [
+          "https://www.bankofengland.co.uk/financial-stability-report/2026/july-2026"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The s8_ai_capex story currently tracks OAS spreads, the capex-vs-revenue gap, and GPU-backed debt stress \u2014 all credit/leverage angles. The BOE FSR adds a new equity-concentration / valuation-revaluation channel: a narrow set of AI stocks now drives global index weights, creating a potential disorderly unwind risk that could feed back into AI capex financing conditions. The BOE formally adopting an AI macrofinancial monitoring framework is a regulatory milestone that upgrades this from 'watch' to 'active' risk. (The consumer credit data at 13% also updates s11_consumer_debt's BNPL/subprime indicators.)",
+      "status": "pending",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "sightings": 1,
+      "id": "boe-july-2026-fsr-us-credit-card-delinquency-hit-9b198b"
+    },
+    "us-iran-war-inflation-feedback-10-yr-treasury-yi-92390d": {
+      "headline": "US-Iran War Inflation Feedback: 10-yr Treasury Yield Hits 4.71% (6-Month High); Fed Rate-Hike Odds Re-Price",
+      "summary": "On July 23, the 10-year US Treasury yield surged to 4.71%, its highest since January 2025, driven by Brent at $100 and renewed inflation fears from the US-Iran conflict; the yield fell back to ~4.64% by July 28 after a partial hostilities pause, but remains materially above pre-war levels (<4%). Markets have swung from pricing two 2026 rate cuts to near-zero cut probability, with some analysts flagging a potential rate hike.",
+      "as_of": "2026-07-27",
+      "sources": [
+        "https://edition.cnn.com/2026/07/23/economy/bond-market-inflation-iran",
+        "https://tradingeconomics.com/united-states/government-bond-yield",
+        "https://www.cnbc.com/amp/2026/07/08/oil-prices-brent-wti-iran-us-hormuz.html"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s4_dev_debt",
+      "target_indicator": "US 10y real yield (TIPS, %)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "A 10-yr nominal yield at 4.71% with inflation expectations rising implies real yields are staying structurally elevated, directly tightening the screw on developing-world debt (s4_dev_debt): higher US real yields = stronger dollar pressure + capital outflow risk from EMs. This also cross-contaminates s1_basis_trade (higher nominal yields increase basis-trade funding stress and Treasury volatility via MOVE), and s2_japan (higher US yields drag JGBs up, accelerating repatriation). The Fed re-pricing from cuts to potential hike is a discrete regime change in the rate backdrop that the tracker must reflect immediately.",
+      "status": "pending",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "sightings": 1,
+      "id": "us-iran-war-inflation-feedback-10-yr-treasury-yi-92390d"
+    },
+    "obbba-signed-into-law-cbo-projects-us-deficit-av-e4c787": {
+      "headline": "OBBBA Signed into Law: CBO Projects US Deficit Averages 6.1% of GDP for a Decade; Debt-to-GDP on Path to 183% by 2054",
+      "summary": "The Congressional Budget Office's early-2026 update, factoring in the One Big Beautiful Bill Act (signed July 4, 2025) and current tariffs, projects the US fiscal deficit will average 6.1% of GDP over the next decade, reaching 6.7% by FY2036; Yale Budget Lab estimates debt-to-GDP could reach 183% by 2054 under the bill versus 142% without it. The OBBBA also raised the debt ceiling by $5 trillion, the largest single increase in history, removing near-term default risk but institutionalizing structural deficit expansion.",
+      "as_of": "2026-02-11",
+      "sources": [
+        "https://www.aljazeera.com/economy/2026/2/11/cbo-us-federal-deficits-and-debt-to-worsen-over-next-decade",
+        "https://budgetlab.yale.edu/research/long-term-impacts-one-big-beautiful-bill-act",
+        "https://www.americanprogress.org/article/president-trumps-big-beautiful-bill-raises-the-fiscal-gap-to-2-4-percent/"
+      ],
+      "materiality": "medium",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US Sovereign Fiscal Credibility & Treasury Supply Overhang",
+        "why": "The combination of the OBBBA's $3.4 trillion 10-year deficit addition, CBO's 6.1% average deficit-GDP projection, a $5 trillion debt ceiling raise, and the US-Iran war driving defense/energy spending creates a structurally higher Treasury supply that no existing story captures as a standalone risk. This is distinct from s1_basis_trade (microstructure), s4_dev_debt (EM-focused), and s14_pensions (domestic pension). The risk is that bond vigilantes re-engage \u2014 as partially evidenced by the 10-yr yield hitting 4.71% \u2014 causing a non-linear term premium repricing that would cascade across all duration-sensitive stories (s2_japan repatriation, s8_ai_capex issuance costs, s9_CRE cap rates, s10_france fragility). Japan selling USTs at -$29.6bn/quarter is an early leading indicator of this dynamic.",
+        "proposed_level": 7,
+        "set": 1,
+        "indicators": [
+          {
+            "label": "US federal deficit (% of GDP, CBO current-year estimate)",
+            "type": "value",
+            "rubric": "Green <4%; Amber 4\u20136%; Red >6%. Current CBO FY2026 estimate: 5.8% (amber/red border).",
+            "sources": [
+              "https://www.aljazeera.com/economy/2026/2/11/cbo-us-federal-deficits-and-debt-to-worsen-over-next-decade"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "US 10-yr term premium (ACM model, bps)",
+            "type": "value",
+            "rubric": "0\u201350bps = normal; 50\u2013100bps = elevated vigilante pressure; >100bps = acute repricing risk. Rising term premium signals market demanding compensation for fiscal/supply risk beyond rate expectations.",
+            "sources": [
+              "https://edition.cnn.com/2026/07/23/economy/bond-market-inflation-iran"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Foreign official UST holding trend (quarterly net flow, $bn, Fed TIC data)",
+            "type": "value",
+            "rubric": "Net buying >+$50bn = supportive; -$50bn to +$50bn = neutral; <-$50bn = structural demand erosion (Japan alone did -$29.6bn in Q1-2026).",
+            "sources": [
+              "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html"
+            ],
+            "suggested_weight": 0.35
+          }
+        ]
+      },
+      "rationale": "No existing story in the tracker is scoped to capture the US sovereign fiscal trajectory as a primary risk driver. The OBBBA institutionalized a deficit path that multiple nonpartisan bodies (CBO, Yale Budget Lab, CRFB, American Progress) have flagged as structurally unsustainable, now running at 6.1% of GDP in peacetime-equivalent conditions. Combined with war-driven defense spending, a $5 trillion debt ceiling hike, and foreign official selling (Japan), this creates a US Treasury supply/demand imbalance that is the connective tissue behind multiple tracker stories (s1, s2, s4, s9, s10). Establishing it as an explicit story gives the tracker a proper sovereign-fiscal anchor.",
+      "status": "pending",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "sightings": 1,
+      "id": "obbba-signed-into-law-cbo-projects-us-deficit-av-e4c787"
     }
   },
-  "generated": "2026-07-24",
+  "generated": "2026-07-27",
   "model": "claude-sonnet-4-6",
-  "new_count": 1,
-  "pending_count": 118
+  "new_count": 5,
+  "pending_count": 123
 }
