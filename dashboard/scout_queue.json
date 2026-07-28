@@ -76,13 +76,12 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "The OCC issued a notice of proposed rulemaking to implement the GENIUS Act in July 2026, while the Federal Reserve published its own AML/CFT proposed rule on July 9, 2026. USD-pegged stablecoin supply stands at ~$230bn (Tether ~$142bn, USDC ~$60bn), with Tether holding ~$113bn in US Treasury exposure \u2014 but Tether's custodial-structure disclosure does not yet meet GENIUS Act standards, creating a compliance cliff ahead of the January 2027 effective date.",
-      "as_of": "2026-07-22",
+      "summary": "The statutory deadline for federal regulators (OCC, FDIC, Fed, NCUA, Treasury) to finalize GENIUS Act implementing rules was July 18, 2026, but as of late July all major rulemakings remain at the proposed-rule stage \u2014 including the Fed's AML rule published only on July 9. The Act cannot take effect until 120 days after final rules are issued, pushing the earliest operative date toward late 2026 or the January 18, 2027 backstop.",
+      "as_of": "2026-07-19",
       "sources": [
-        "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
+        "https://www.coindesk.com/policy/2026/07/19/the-genius-act-turns-1-state-of-crypto",
         "https://www.chapman.com/publication-genius-act-rulemaking-tracker",
-        "https://deluair.com/consultancy/insights/stablecoin-regulation-2026",
-        "https://bankingjournal.aba.com/2026/07/the-genius-act-in-2026/"
+        "https://www.gibsondunn.com/the-genius-act-a-new-era-of-stablecoin-regulation/"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -90,12 +89,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The simultaneous rush of proposed rules from OCC, Fed, FinCEN/OFAC, FDIC, and NCUA \u2014 all within a compressed window driven by the January 2027 effective date \u2014 signals that GENIUS implementation friction has moved from '0 smooth' to '1 gaps'. Tether's unresolved custodial-disclosure gap is the most material single item: if Tether (~$113bn in Treasuries) cannot comply or faces a run during a compliance transition, the Treasury-bill bid from stablecoins could reverse sharply. The Total USD stablecoin supply ($230bn) indicator also needs updating.",
+      "rationale": "The statutory rulemaking deadline has technically lapsed with all agencies still at proposal stage, which should move the GENIUS implementation friction indicator from 1 (gaps) to 2 (problems). This delays the regulatory clarity that was expected to accelerate institutional stablecoin adoption and Treasury-bill demand growth (a key cross-story linkage to s12_gold_dedollar and sovereign debt demand). The 1-year anniversary CoinDesk assessment and Chapman tracker confirm no final rules have been issued.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-24",
+      "last_seen": "2026-07-28",
       "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
-      "sightings": 11
+      "sightings": 12
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -175,12 +174,11 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "The US launched a ninth wave of airstrikes against Iran around July 20, reigniting oil-price spikes (Brent rebounded above $76). Analysts warn Hormuz passage could remain below 50% of pre-war levels for months, with Iran contesting international-waterway status and periodically attacking commercial vessels.",
-      "as_of": "2026-07-20",
+      "summary": "Iran struck tankers in the Strait of Hormuz and Houthi militants declared a maritime embargo on Saudi Arabia; US resumed strikes on Iran after the prior ceasefire collapsed, with oil prices surging >9% on the naval blockade announcement. A 10-day ceasefire proposal from regional mediators remains unresolved as of July 21.",
+      "as_of": "2026-07-21",
       "sources": [
-        "https://www.aljazeera.com/news/2026/7/8/oil-prices-surge-as-us-strikes-iran-reversing-fall-to-pre-war-levels",
-        "https://www.youtube.com/watch?v=YkocwwyF5LI",
-        "https://www.congress.gov/crs-product/R45281"
+        "https://www.cnbc.com/2026/07/21/us-iran-war-trump-hormuz-houthis.html",
+        "https://www.cnn.com/2026/07/13/world/live-news/iran-war-trump"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -188,22 +186,22 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The US-Iran conflict has been ongoing since Feb-Mar 2026, but the ninth wave of strikes this week is a discrete re-escalation event that pushes the Hormuz status indicator back toward '2 closed' (or firmly mid-'2'). Passage remains severely restricted; Brent's renewed spike directly affects WTI (also tracked). This is the single most material geopolitical development of the week and must be flagged as a live re-escalation, not background noise.",
+      "rationale": "Iran tanker strikes in the Strait of Hormuz, US naval blockade of Iranian ports, and Houthi embargo threat directly update the Hormuz/Red Sea status indicator (move toward 2=closed/blockaded) and WTI crude price. The event also cross-feeds s18_food_fertilizer (Hormuz/Gulf disruption indicator) and s20 undersea cable risk. Highest materiality sea-lane event in the tracker window.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-24",
+      "last_seen": "2026-07-28",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 9
+      "sightings": 10
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The 10-year JGB yield struck 2.901% on July 10 (2-year at a 31-year high of 1.49% on July 23), and swap markets now price an ~80% chance of a BOJ 25bp hike to 1.25% in October. Japanese investors sold $29.6bn of US Treasuries in Q1 2026 alone, and a government-floated GPIF repatriation signal sparked a sharp yen surge, accelerating carry unwind.",
-      "as_of": "2026-07-23",
+      "summary": "Japan's 10-year JGB yield reached 2.90% (highest since 1996) and the 20-year hit 3.90% after Takaichi's economic blueprint was read as pressuring the BOJ to hold rates low; USD/JPY returned above 163 by July 21 after the MOF's record \u00a511.7trn intervention failed to hold. BOJ held rates at 1% on July 31 meeting with markets pricing hikes to 1.5% by Q2 2027.",
+      "as_of": "2026-07-27",
       "sources": [
         "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.techtimes.com/articles/321731/20260727/bank-japan-holds-rates-1-upgrades-gdp-forecast-yen-nears-40-year-low.htm",
         "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
-        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
-        "https://investing.com (Reuters Jul 16 2026)"
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -211,12 +209,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "JGB yields at multi-decade highs, BOJ rate-hike probability re-priced sharply upward, and GPIF repatriation talk is directly stressing the yen carry trade and US Treasury demand \u2014 all squarely within s2_japan. The 30-year yield (tracked) was also at 3.901% on Jul 10; the GPIF headline directly drove USD/JPY unwind. Both core indicators (USD/JPY and 30y JGB yield) are moving materially. The Takaichi-plan financing clarity indicator also warrants a nudge toward '1 unclear' given the Basic Policy shock scare and government back-tracking.",
+      "rationale": "Multiple indicators within s2_japan are simultaneously deteriorating: USD/JPY above 163 (yen weak = high risk), 30-year JGB yield at multi-decade highs, and Takaichi plan financing clarity slipping toward '2=disorderly' as the government's blueprint was perceived as constraining BOJ independence. Japanese investors sold $29.6bn of US Treasuries in Q1 2026, creating cross-story linkage to s1_basis_trade and s14_pensions. This is the single most systemically loaded story this week.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-24",
+      "last_seen": "2026-07-28",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 6
+      "sightings": 7
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -2961,23 +2959,23 @@
     },
     "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0": {
       "headline": "China June PPI +4.1% YoY (4-year high) driven by Iran energy shock\u2014but MoM turned negative and consumer goods PPI still -0.9%, revealing a dangerous bifurcation",
-      "summary": "China's official manufacturing PMI dropped to a 3-month low of 49.3 in July 2026 as new orders fell into contraction, with export orders weakening ahead of new US reciprocal tariffs effective August 1. Standard Chartered forecasts China CPI returning to -0.4% YoY in July after a brief positive blip in June, with PPI deflation only modestly easing.",
-      "as_of": "2026-07-23",
+      "summary": "China's producer price index rose 4.1% YoY in June 2026, the strongest reading since July 2022, as Middle East conflict-driven energy and commodity costs drove factory-gate inflation; the GDP deflator also turned positive (+1.6%) in Q2 for the first time after three years of contraction, though driven by external costs rather than genuine domestic recovery.",
+      "as_of": "2026-07-09",
       "sources": [
-        "https://www.fxstreet.com/news/china-soft-start-to-h2-standard-chartered-202508011018",
-        "https://gianlucabenigno.substack.com/p/china-june-26-cpi-inflation-report"
+        "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html",
+        "https://www.bloomberg.com/news/articles/2026-07-15/china-s-gdp-price-gauge-turns-positive-after-years-of-deflation"
       ],
-      "materiality": "medium",
+      "materiality": "high",
       "classification": "existing_indicator",
       "target_story": "s5_china_deflation",
       "target_indicator": "China PPI YoY (%) - large swing either way is worse",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "China CPI returning to negative territory (-0.4% forecast for July) and PMI dipping back into contraction territory, combined with impending US tariff escalation effective Aug 1, materially worsens the China deflation spillover story. This also reinforces the New tariff/anti-dumping actions indicator toward '2 escalating', since US global reciprocal tariffs effective Aug 1 are a new discrete escalation step. Both the PPI/CPI and tariff indicators need refreshing.",
+      "rationale": "The tracker flags 'large swing either way is worse' for China PPI \u2014 a +4.1% reading after years of deflation is precisely the worst-case scenario: cost-push inflation squeezing margins of Chinese manufacturers, potentially spreading disinflationary pressure globally via export price pass-through in both directions. The GDP deflator turning positive on energy costs (not demand) suggests the 'deflation spillover' story has morphed into a cost-push inflation export risk. This materially changes the sign of the risk.",
       "status": "pending",
       "first_seen": "2026-07-15",
-      "last_seen": "2026-07-24",
-      "sightings": 2,
+      "last_seen": "2026-07-28",
+      "sightings": 3,
       "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
     },
     "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328": {
@@ -3905,10 +3903,96 @@
       "last_seen": "2026-07-27",
       "sightings": 1,
       "id": "obbba-signed-into-law-cbo-projects-us-deficit-av-e4c787"
+    },
+    "trump-imposes-50-tariffs-on-most-canadian-goods--93564e": {
+      "headline": "Trump imposes 50% tariffs on most Canadian goods via Section 338 (USMCA-exempt goods included); USMCA expired July 1 without renewal",
+      "summary": "President Trump signed three Section 338 proclamations on July 20 imposing 50% tariffs on most Canadian goods effective ~August 19, explicitly revoking USMCA-compliant exemptions after the trade pact expired July 1; Canada and US agreed to intensify tri-lateral negotiations but Ontario already ordered removal of US alcohol from shelves. J.P. Morgan warns of recession risk for Canada and serious US growth damage.",
+      "as_of": "2026-07-21",
+      "sources": [
+        "https://www.npr.org/2026/07/21/nx-s1-5901905/trump-imposes-tariffs-canadian-goods",
+        "https://www.washingtonpost.com/business/2026/07/21/canada-us-tariffs-trade-negotiations/c3ac5032-853f-11f1-9cec-0fb26676f07e_story.html",
+        "https://www.jpmorgan.com/insights/global-research/current-events/us-tariffs",
+        "https://ourtake.bakerbotts.com/post/102ndeb/trump-tariff-tracker-july-21-2026"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "USMCA collapse / North American trade fragmentation",
+        "why": "The expiry of USMCA on July 1 and immediate imposition of 50% tariffs on Canada under Section 338 (a rarely-used 1930 authority, post-IEEPA Supreme Court defeat) represents a structural rupture in the world's largest bilateral trade relationship (~$340bn Canadian exports to US). It threatens Canadian recession, US inflation re-acceleration, auto and energy supply-chain dislocation, and sets a precedent for Section 338 usage against other partners. This is distinct from the existing tariff backdrop: it is a legal-framework shift (new authority), affects a deeply integrated neighbor, and has a hard August 19 deadline. No existing story captures North American supply-chain or USMCA-specific risk.",
+        "proposed_level": 7,
+        "set": "Set 3",
+        "indicators": [
+          {
+            "label": "USD/CAD (CAD depreciation = higher = risk)",
+            "type": "value",
+            "rubric": "Spot USD/CAD; values >1.42 signal elevated stress, >1.48 signal acute stress",
+            "sources": [
+              "https://www.washingtonpost.com/business/2026/07/22/canada-tariffs-50-percent-us-trump-usmca-trade-agreement-negotiations/"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "USMCA/North American trade deal status (0 intact / 1 expired-negotiating / 2 tariffs-in-force)",
+            "type": "band",
+            "rubric": "0=USMCA renewed; 1=expired but active negotiations, no 50% tariffs in force; 2=50% tariffs in force on Canada or Mexico",
+            "sources": [
+              "https://ourtake.bakerbotts.com/post/102ndeb/trump-tariff-tracker-july-21-2026"
+            ],
+            "suggested_weight": 0.4
+          },
+          {
+            "label": "Canada GDP growth forecast (%, annualized, Bank of Canada or consensus)",
+            "type": "value",
+            "rubric": "Negative reading signals realized recession; <1% signals high stress",
+            "sources": [
+              "https://www.jpmorgan.com/insights/global-research/current-events/us-tariffs"
+            ],
+            "suggested_weight": 0.25
+          }
+        ]
+      },
+      "rationale": "50% tariffs on Canada via Section 338 \u2014 after the Supreme Court blocked IEEPA tariffs \u2014 is both a new legal escalation pathway and a bilateral shock to ~$700bn/year two-way trade. The Canadian economy faces recession risk, US auto and food supply chains face disruption, and the move may embolden similar actions against Mexico. No existing story (s4_dev_debt, s11_consumer_debt, etc.) captures North American supply-chain fragmentation or CAD stress. Warrants a new story at proposed level 7.",
+      "status": "pending",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "sightings": 1,
+      "id": "trump-imposes-50-tariffs-on-most-canadian-goods--93564e"
+    },
+    "us-ustr-sets-permanent-10-12-5-tariffs-on-60-tra-ac0249": {
+      "headline": "US USTR sets permanent 10\u201312.5% tariffs on 60 trading partners as 90-day pause expires; baseline global tariff regime now institutionalized",
+      "summary": "On July 24, USTR announced permanent replacement tariffs of 10\u201312.5% on 60 economies \u2014 including Canada, Mexico, India and the UK \u2014 replacing the expiring temporary pause-era 10% duties; separately the EU-US trade framework entered into force July 1 with EU eliminating tariffs on US industrial goods, but a Section 301 investigation against Germany on pharma pricing was opened June 18.",
+      "as_of": "2026-07-24",
+      "sources": [
+        "https://www.nbcnews.com/business/economy/trump-tariffs-60-countries-forced-labor-rcna588972",
+        "https://commission.europa.eu/topics/trade/eu-us-trade-deal_en",
+        "https://ourtake.bakerbotts.com/post/102n7tq/trump-tariff-tracker-july-2-2026"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "proposed_indicator": {
+        "label": "Global baseline tariff regime severity (0 pre-2025 norms / 1 elevated 10-15% universal / 2 fragmented bilateral escalation >25%)",
+        "type": "band",
+        "rubric": "0=WTO-era MFN rates broadly in force; 1=US universal baseline 10-15% institutionalized but bilateral deals containing escalation; 2=multiple major bilateral pairs above 25% with active retaliation cycles",
+        "sources": [
+          "https://www.nbcnews.com/business/economy/trump-tariffs-60-countries-forced-labor-rcna588972",
+          "https://commission.europa.eu/topics/trade/eu-us-trade-deal_en"
+        ],
+        "suggested_weight": 0.3
+      },
+      "rationale": "The permanent institutionalization of 10\u201312.5% universal US tariffs on 60 partners (replacing the temporary pause) is a structural shift in global trade costs that feeds s4_dev_debt through higher import costs for commodity-dependent emerging markets, reduced export earnings, and dollar-strength pressure. However, no s4_dev_debt indicator currently captures the trade-cost channel for EM sovereign stress. A 'global baseline tariff regime severity' indicator would allow the tracker to monitor whether the new permanent baseline escalates further or stabilizes, separately from the Canada-specific USMCA story above.",
+      "status": "pending",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "sightings": 1,
+      "id": "us-ustr-sets-permanent-10-12-5-tariffs-on-60-tra-ac0249"
     }
   },
-  "generated": "2026-07-27",
+  "generated": "2026-07-28",
   "model": "claude-sonnet-4-6",
-  "new_count": 5,
-  "pending_count": 123
+  "new_count": 2,
+  "pending_count": 125
 }
