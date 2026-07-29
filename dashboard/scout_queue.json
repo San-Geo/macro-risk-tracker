@@ -76,12 +76,12 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "The statutory deadline for federal regulators (OCC, FDIC, Fed, NCUA, Treasury) to finalize GENIUS Act implementing rules was July 18, 2026, but as of late July all major rulemakings remain at the proposed-rule stage \u2014 including the Fed's AML rule published only on July 9. The Act cannot take effect until 120 days after final rules are issued, pushing the earliest operative date toward late 2026 or the January 18, 2027 backstop.",
-      "as_of": "2026-07-19",
+      "summary": "The GENIUS Act required federal banking regulators to promulgate final implementing rules by July 18, 2026; the OCC issued only a Notice of Proposed Rulemaking (not final rules), creating a gap between the statutory deadline and actual enforcement-ready regulation as the $230 bn stablecoin market awaits compliance clarity. The Act officially takes effect on the earlier of January 18, 2027, or 120 days after final rules are issued.",
+      "as_of": "2026-07-29",
       "sources": [
-        "https://www.coindesk.com/policy/2026/07/19/the-genius-act-turns-1-state-of-crypto",
-        "https://www.chapman.com/publication-genius-act-rulemaking-tracker",
-        "https://www.gibsondunn.com/the-genius-act-a-new-era-of-stablecoin-regulation/"
+        "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-3.html",
+        "https://www.gibsondunn.com/the-genius-act-a-new-era-of-stablecoin-regulation/",
+        "https://deluair.com/consultancy/insights/stablecoin-regulation-2026"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -89,12 +89,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The statutory rulemaking deadline has technically lapsed with all agencies still at proposal stage, which should move the GENIUS implementation friction indicator from 1 (gaps) to 2 (problems). This delays the regulatory clarity that was expected to accelerate institutional stablecoin adoption and Treasury-bill demand growth (a key cross-story linkage to s12_gold_dedollar and sovereign debt demand). The 1-year anniversary CoinDesk assessment and Chapman tracker confirm no final rules have been issued.",
+      "rationale": "The one-year rulemaking deadline has passed with only a proposed (not final) rule from the OCC, moving the 'GENIUS implementation friction' indicator from 0 to at least 1 (gaps). With $230 bn in stablecoin supply (USDT ~$142 bn, USDC ~$60 bn) and issuers holding substantial US T-bill reserves, regulatory limbo delays the formalisation of their role as marginal Treasury buyers \u2014 material for both s7_stablecoins and s1_basis_trade (Treasury demand side).",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-28",
+      "last_seen": "2026-07-29",
       "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
-      "sightings": 12
+      "sightings": 13
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -174,11 +174,12 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "Iran struck tankers in the Strait of Hormuz and Houthi militants declared a maritime embargo on Saudi Arabia; US resumed strikes on Iran after the prior ceasefire collapsed, with oil prices surging >9% on the naval blockade announcement. A 10-day ceasefire proposal from regional mediators remains unresolved as of July 21.",
-      "as_of": "2026-07-21",
+      "summary": "Active US\u2013Iran military exchanges targeting Iranian command centres, missile sites, and a commercial tanker bound for Kharg Island have severely disrupted Hormuz shipping; Lloyd's List Intelligence reported no large vessel (>10,000 dwt) transited the Southern Highway with AIS on since early July, and Kpler recorded 56 confirmed incidents with 17 seafarer fatalities by mid-July. This follows the IEA's earlier declaration of the 'largest supply disruption in history'.",
+      "as_of": "2026-07-16",
       "sources": [
-        "https://www.cnbc.com/2026/07/21/us-iran-war-trump-hormuz-houthis.html",
-        "https://www.cnn.com/2026/07/13/world/live-news/iran-war-trump"
+        "https://www.npr.org/2026/07/15/nx-s1-5894582/us-iran-updates",
+        "https://www.aljazeera.com/economy/2026/7/10/strait-of-hormuz-shipping-grinds-to-halt-as-us-iran-resume-fighting",
+        "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/07/geopolitical-risk-brief-july-2026"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -186,12 +187,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Iran tanker strikes in the Strait of Hormuz, US naval blockade of Iranian ports, and Houthi embargo threat directly update the Hormuz/Red Sea status indicator (move toward 2=closed/blockaded) and WTI crude price. The event also cross-feeds s18_food_fertilizer (Hormuz/Gulf disruption indicator) and s20 undersea cable risk. Highest materiality sea-lane event in the tracker window.",
+      "rationale": "The Hormuz/Red Sea status indicator should move from 1 (contested) toward 2 (effectively closed for large commercial vessels), making this the highest-severity trigger in s20_sea_lanes. The WTI crude indicator (CL=F) also needs refreshing: resumed fighting has pushed Brent above $76/bbl with further upside pressure as inventories dwindle. Cross-story spillovers are material: s18_food_fertilizer (sulphuric acid / fertilizer inputs), s5_china_deflation (energy cost-push offsetting PPI deflation), and s4_dev_debt (energy import bills for EM).",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-28",
+      "last_seen": "2026-07-29",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 10
+      "sightings": 11
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
@@ -583,12 +584,12 @@
     },
     "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca": {
       "headline": "Japan yen hits 4-decade lows; 10yr JGB at ~2.65%; BoJ July 31 hike decision imminent amid Middle East energy import stress",
-      "summary": "The yen fell to its weakest level since the mid-1980s, with USD/JPY trading near 160-162 as rate differentials remain wide; BOJ board member Tamura called for hikes every few months toward a 2% neutral rate, while Finance Minister Katayama warned of 'appropriate' government response on July 3.",
-      "as_of": "2026-07-03",
+      "summary": "The Bank of Japan held its policy rate at 1% on July 31 and upgraded its GDP forecast, while USD/JPY hit multi-decade lows above 163; JPMorgan noted that the prior ~162 intervention threshold has been breached without triggering action, effectively raising the bar and emboldening yen sellers. Japan's Ministry of Finance spent \u00a511.7 trillion (~$71.7 bn) on FX intervention Apr\u2013May with only temporary effect.",
+      "as_of": "2026-07-29",
       "sources": [
-        "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield",
-        "https://tradingeconomics.com/japan/interest-rate"
+        "https://www.techtimes.com/articles/321731/20260727/bank-japan-holds-rates-1-upgrades-gdp-forecast-yen-nears-40-year-low.htm",
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -596,12 +597,12 @@
       "target_indicator": "USD/JPY (yen strengthening = lower = risk)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "USD/JPY near 162 is the weakest yen in four decades, squarely hitting the s2_japan USD/JPY indicator. BOJ Deputy Governor Tamura's explicit call for hikes 'every few months' toward 2% and the Finance Minister's July 3 intervention warning materially raise the probability of a sudden yen reversal and carry-trade unwind. The 10-year JGB has climbed above 2.7%, also moving the 30-year JGB yield indicator. Risk is clearly worsening (higher USD/JPY number = risk per rubric).",
+      "rationale": "USD/JPY at 163+ is a direct, live reading of the s2_japan indicator 'USD/JPY'. Yen weakness at 40-year lows means carry-trade unwind risk is now skewed the other way \u2014 yen shorts are crowded \u2014 and capital repatriation by Japanese institutions (already $29.6 bn in USTs sold Q1 2026) is accelerating. The 'Takaichi plan financing clarity' sub-indicator also warrants an upgrade from 'unclear' to 'disorderly' given the June 30 Basic Policy shock (government blueprint language interpreted as pressuring BOJ to slow hikes) and the MoF's exhausted intervention credibility.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-29",
       "id": "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca",
-      "sightings": 5
+      "sightings": 6
     },
     "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
       "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
@@ -3989,10 +3990,127 @@
       "last_seen": "2026-07-28",
       "sightings": 1,
       "id": "us-ustr-sets-permanent-10-12-5-tariffs-on-60-tra-ac0249"
+    },
+    "china-bans-rare-earth-dual-use-exports-to-14-eu--eae640": {
+      "headline": "China Bans Rare-Earth Dual-Use Exports to 14 EU Companies; New Public-Reporting Enforcement Mechanism Live July 1",
+      "summary": "On or around July 7, 2026 China's MOFCOM banned shipments of dual-use materials to 14 EU companies, impairing their ability to source rare-earth magnets and semiconductors; separately, MOFCOM Announcement No. 26 (effective July 1) formalises a public whistleblower mechanism for strategic-mineral export-control violations, and two Japanese nationals were detained in Dalian in May for alleged rare-earth smuggling. The IEA estimates China's rare-earth export curbs threaten $6.5 trillion of downstream global production.",
+      "as_of": "2026-07-29",
+      "sources": [
+        "https://legalinsurrection.com/2026/07/china-hits-u-s-europe-with-new-rare-earths-export-controls/",
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+        "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The new EU entity-specific ban and active criminal enforcement (detentions, whistleblower regime) push the 'export license flow' indicator closer to 2 (frozen for named entities) and the 'US domestic RE producer blacklist' indicator should be re-evaluated for the EU parallel. The Nov-2025 pause (suspended controls through Nov 2026) is being circumvented by entity-level bans, meaning the rubric '0 extended' for the pause status may be misleading \u2014 the practical effect is partial re-escalation.",
+      "status": "pending",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "sightings": 1,
+      "id": "china-bans-rare-earth-dual-use-exports-to-14-eu--eae640"
+    },
+    "bank-of-england-fpc-ai-equity-concentration-high-7a2344": {
+      "headline": "Bank of England FPC: AI Equity Concentration Highest Systemic Risk in UK Financial Stability Report \u2014 July 2026",
+      "summary": "The BoE Financial Policy Committee's July 2026 Financial Stability Report flagged AI company valuations growing faster than broader equity indices in Q2 2026, with concentration risk in global equity markets at levels that amplify the impact of any revaluation; the FPC also warned a negative AI reassessment could trigger sovereign debt repricing in jurisdictions where growth trajectories are tied to AI. This is the first central-bank financial-stability document to make AI concentration the headline systemic risk.",
+      "as_of": "2026-07-29",
+      "sources": [
+        "https://www.einnews.com/pr_news/925028404/financial-stability-report-july-2026"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s8_ai_capex",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Central-bank / FSB AI systemic-risk flag (0 none / 1 flagged / 2 formal warning)",
+        "type": "band",
+        "rubric": "0 = no major central bank or FSB report identifies AI concentration as a top-tier systemic risk; 1 = one or more G10 central bank financial-stability reports flag AI equity/debt concentration as a material vulnerability; 2 = FSB or BIS issues formal coordinated warning or stress scenario on AI-linked financial instability",
+        "sources": [
+          "https://www.einnews.com/pr_news/925028404/financial-stability-report-july-2026",
+          "https://www.blackrock.com/institutions/en-us/insights/2026-macro-outlook"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "s8_ai_capex already tracks capex-vs-revenue gap and GPU-backed debt stress, but has no indicator capturing the macro-prudential / systemic angle: whether regulators have formally identified AI as a financial-stability risk. The BoE FSR is the first G10 central bank stability document to make AI concentration the lead systemic concern, signaling that the regulatory feedback loop (potential macro-prudential responses, leverage limits on AI-linked assets) is now opening. This is a leading indicator for all three s8 metrics.",
+      "status": "pending",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "sightings": 1,
+      "id": "bank-of-england-fpc-ai-equity-concentration-high-7a2344"
+    },
+    "us-iran-war-drives-one-big-beautiful-bill-fiscal-b57e3b": {
+      "headline": "US\u2013Iran War Drives 'One Big Beautiful Bill' Fiscal Arithmetic Off-Track: Defence Spending Surge Meets $2 Trillion Deficit",
+      "summary": "The active US\u2013Iran military campaign has added unbudgeted defence costs on top of an existing ~$2 trillion annual US fiscal deficit (2026), with the 'One Big Beautiful Bill Act' tax cuts simultaneously reducing revenue; BlackRock and Loomis Sayles both note financial markets have been pricing a 'Goldilocks' scenario that is increasingly inconsistent with the combined war-spending and fiscal-expansion trajectory. Japanese capital repatriation ($29.6 bn of USTs sold Q1 alone) and stablecoin rulemaking delays remove two marginal Treasury buyers simultaneously.",
+      "as_of": "2026-07-29",
+      "sources": [
+        "https://www.blackrock.com/institutions/en-us/insights/2026-macro-outlook",
+        "https://deluair.com/consultancy/insights/stablecoin-regulation-2026",
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://www.loomissayles.com/insights/july-2026-investment-outlook/"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US Fiscal Overshoot & Treasury Demand Cliff",
+        "why": "The simultaneous occurrence of (a) a ~$2 trillion structural deficit + OBBBA tax-cut revenue loss, (b) active war spending from the US\u2013Iran conflict, (c) Japanese institutional repatriation of USTs, and (d) stablecoin GENIUS Act implementation delays (removing a fast-growing marginal buyer) creates a convergent shock to the supply/demand balance for US Treasuries that is not fully captured by any existing story. s1_basis_trade addresses hidden leverage in the Treasury market but not the fiscal-issuance / demand-cliff dimension; s2_japan partially captures Japanese selling; s7_stablecoins captures stablecoin demand. None captures the aggregate demand-for-Treasuries risk as an independent story.",
+        "proposed_level": 7,
+        "set": "Set 1",
+        "indicators": [
+          {
+            "label": "US 10-year Treasury yield (%, nominal)",
+            "type": "value",
+            "rubric": "Tracks the cost of new issuance and the market's aggregate assessment of fiscal sustainability; sustained move above 5.0% signals demand stress",
+            "sources": [
+              "https://deluair.com/consultancy/insights/stablecoin-regulation-2026"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Foreign official UST holdings 4-week flow ($bn, TIC data)",
+            "type": "value",
+            "rubric": "Negative (outflow) = foreign central banks / SWFs reducing exposure; threshold alert at cumulative 4-week outflow > $50 bn",
+            "sources": [
+              "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "US fiscal deficit run-rate vs CBO baseline (0 on-track / 1 10-20% overshoot / 2 >20% overshoot)",
+            "type": "band",
+            "rubric": "0 = deficit within 10% of CBO projection; 1 = 10\u201320% above CBO due to war/stimulus; 2 = >20% above CBO, Treasury forced to accelerate bill/note issuance beyond absorption capacity",
+            "sources": [
+              "https://www.blackrock.com/institutions/en-us/insights/2026-macro-outlook"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "Primary dealer fail-to-deliver rate at Treasury auctions (0 normal / 1 elevated / 2 acute)",
+            "type": "band",
+            "rubric": "0 = bid-to-cover ratios normal and tail \u22642 bps; 1 = two or more consecutive auctions with tail >3 bps or bid-to-cover below 2.3x; 2 = failed auction or emergency Fed support",
+            "sources": [
+              "https://deluair.com/consultancy/insights/stablecoin-regulation-2026"
+            ],
+            "suggested_weight": 0.15
+          }
+        ]
+      },
+      "rationale": "No existing tracker story holistically captures the convergence of war-driven fiscal overshoot, diminishing foreign official demand (Japan repatriation), and the delayed materialisation of stablecoin-driven T-bill buying \u2014 all hitting simultaneously. The risk is a non-linear repricing of long-end USTs that would cascade through every story in the tracker (basis trade leverage triggers, JGB\u2013UST spread compression reversals, EM capital flows, AI capex financing costs, CRE refinancing). Proposed level 7 reflects systemic breadth but acknowledges that current 10-year yields have not yet blown out definitively.",
+      "status": "pending",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "sightings": 1,
+      "id": "us-iran-war-drives-one-big-beautiful-bill-fiscal-b57e3b"
     }
   },
-  "generated": "2026-07-28",
+  "generated": "2026-07-29",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 125
+  "new_count": 3,
+  "pending_count": 128
 }
