@@ -76,11 +76,12 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "The GENIUS Act's July 18 2026 deadline for final implementation rules passed with multiple agencies (FDIC, Fed) still in proposed-rule stage; if final rules are not issued, the Act contains no fallback mechanism, leaving offshore issuers like Tether in a legal gray zone and triggering a hard 2028 US-exchange-access cutoff countdown for non-compliant stablecoins. Market concentration is accelerating toward USDT/USDC as smaller issuers face existential compliance costs.",
-      "as_of": "2026-07-18",
+      "summary": "Six federal agencies failed to finalize GENIUS Act stablecoin rules by the July 18, 2026 statutory deadline; public comment periods extend to August 2026, leaving a $310 billion stablecoin market (USDT ~$184 bn, USDC ~$73 bn) without binding implementation guidance until at minimum Jan 18, 2027. Banks eyeing reserve-management and issuance are deferring decisions, and legal experts flag grandfathering and enforcement uncertainty.",
+      "as_of": "2026-07-19",
       "sources": [
+        "https://cryptodaily.co.uk/2026/07/genius-act-missed-deadline-stablecoin-uncertainty",
         "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors",
-        "https://bingx.com/en/news/post/genius-made-stablecoins-legal-july-decides-which-stablecoins-stay-competitive",
+        "https://blockeden.xyz/blog/2026/02/08/genius-act-stablecoin-deadline-july-2026-occ-rulemaking/",
         "https://www.chapman.com/publication-genius-act-rulemaking-tracker"
       ],
       "materiality": "medium",
@@ -89,12 +90,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The GENIUS Act rulemaking deadline has passed with multiple agencies still in proposed-rule stage and no fallback mechanism legislated; this moves the 'GENIUS implementation friction' indicator from 1 (gaps) toward 2 (problems). The concentration effect\u2014smaller issuers being squeezed out\u2014also has systemic relevance for the 'Total USD stablecoin supply' indicator. Tether's offshore status and the 2028 hard cutoff add medium-term tail risk to s7's Treasury-demand thesis.",
+      "rationale": "Implementation friction should be marked 2 (problems): the statutory deadline was missed, final rules are absent, comment periods remain open through August, and the law now activates on the Jan 18, 2027 backstop without finalized agency guidance. The $310 bn supply figure (up from ~$230 bn noted in tracker baseline) also warrants updating the Total USD stablecoin supply indicator. Treasury demand implications (GENIUS-mandated T-bill reserves) remain uncertain.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-07-31",
       "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
-      "sightings": 14
+      "sightings": 15
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -174,12 +175,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "The June 14 US-Iran memorandum of understanding collapsed in July after Iran struck commercial vessels, resuming hostilities; as of July 27\u201328 a fragile pause held but Hormuz ship traffic remained at fewer than 10 vessels/day versus ~100 prewar, keeping Brent above $85/bbl even after an 11% relief sell-off on the pause. Saudi tankers also face Houthi threats in Bab al-Mandeb, adding a second chokepoint risk.",
-      "as_of": "2026-07-28",
+      "summary": "After a brief ceasefire MoU, US-Iran fighting resumed, sending Hormuz shipping to a near-standstill (no large vessels tracked via the 'Southern Highway' since July 7). On July 29 the US sanctioned two Iranian firms charging 'safe passage' fees through the strait; Brent rebounded ~20% from its post-agreement low, with S&P Global noting hostilities remain 'sub-war level but sustained'.",
+      "as_of": "2026-07-29",
       "sources": [
-        "https://www.cnn.com/2026/07/27/world/live-news/iran-war-trump",
-        "https://www.cnbc.com/2026/07/27/us-iran-war-trump-hormuz.html",
-        "https://www.britannica.com/event/2026-Iran-war"
+        "https://www.bloomberg.com/news/articles/2026-07-29/us-sanctions-iran-extortion-network-targeting-hormuz-shipping",
+        "https://www.aljazeera.com/economy/2026/7/10/strait-of-hormuz-shipping-grinds-to-halt-as-us-iran-resume-fighting",
+        "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/07/geopolitical-risk-brief-july-2026",
+        "https://www.euronews.com/business/2026/07/08/the-key-global-economic-risks-to-watch-in-the-second-half-of-2026"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -187,12 +189,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz indicator is currently the primary lever for s20_sea_lanes. Ship traffic at <10% of normal throughput with an active war\u2014not merely tension\u2014moves the status from '1 contested' toward '2 closed' and simultaneously updates WTI crude (now ~$82\u2013$86/bbl range). The undersea-cable indicator in s20 is also implicitly elevated given the active military activity in the Persian Gulf / Red Sea corridor. Both the IMF WEO July update and World Bank Global Economic Prospects cite this conflict as the dominant 2026 growth shock.",
+      "rationale": "Hormuz status indicator should move to 2 (effectively closed/contested): traceable large-vessel crossings halted, US conducting offensive strikes, Iranian 'extortion' toll system in operation, and Brent pricing in renewed supply-shock premium. Feeds directly into s18_food_fertilizer (Gulf fertilizer-input disruption = 2) and s4_dev_debt (oil-importing EMDEs squeezed). The Oxford Economics framing\u2014'key domino for H2 2026'\u2014underscores systemic reach.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-07-31",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 12
+      "sightings": 13
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
@@ -4157,10 +4159,152 @@
       "last_seen": "2026-07-30",
       "sightings": 1,
       "id": "bank-of-england-fsr-ai-equity-concentration-valu-1b0c02"
+    },
+    "boj-holds-at-1-today-jul-31-with-hawkish-tilt-ye-113d99": {
+      "headline": "BOJ holds at 1% today (Jul 31) with hawkish tilt; yen near 40-year low, 10-yr JGB hit 30-yr high of 2.90%",
+      "summary": "The Bank of Japan kept its policy rate at 1% in an 8-1 vote on July 31, with one dissenter calling for an immediate hike to 1.25%; Governor Ueda's press conference was read as moderately hawkish, signalling October/December tightening. The yen traded near 164/USD\u2014a four-decade low\u2014forcing suspected MoF intervention overnight, while the 10-yr JGB spiked to 2.90% (30-year high) earlier this month amid fiscal-expansion concerns and ~$29.6 bn of US Treasury selling by Japanese investors in Q1 2026.",
+      "as_of": "2026-07-31",
+      "sources": [
+        "https://www.cnbc.com/2026/07/31/boj-rates-yen-intervention-inflation-japan.html",
+        "https://ca.investing.com/news/economy-news/investors-react-to-bojs-decision-to-hold-rates-4766742",
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://www.bloomberg.com/news/live-blog/2026-07-31/bank-of-japan-monetary-policy-decision"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "USD/JPY (yen strengthening = lower = risk) + 30-year JGB yield (%)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Three s2_japan indicators are simultaneously flashing: USD/JPY at ~163-164 (historic weakness), 10-yr JGB at 2.90% (30-yr high, with 20-yr at 3.90%), and fiscal-plan clarity = 2 (disorderly\u2014Takaichi blueprint language on BOJ alignment spooked markets). Japanese capital repatriation ($29.6 bn UST sold in Q1) also feeds directly into s1_basis_trade and s21_clearinghouses Treasury volatility. This is the highest-materiality single item in the tracker this week.",
+      "status": "pending",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "sightings": 1,
+      "id": "boj-holds-at-1-today-jul-31-with-hawkish-tilt-ye-113d99"
+    },
+    "iea-warns-china-rare-earth-curbs-put-6-5-tn-in-d-bb6aba": {
+      "headline": "IEA warns China rare-earth curbs put $6.5 tn in downstream production at risk; Nov-2026 suspension expiry looms",
+      "summary": "A July 16 IEA report quantified that full enforcement of China's expanded rare-earth export controls could imperil $6.5 trillion in downstream production outside China. China widened entity-level controls to 10 US firms (June) and 14 EU firms (July 2026); the November 2025 one-year suspension of broader gallium/germanium/antimony controls expires in ~4 months, and H1 2026 export volumes are already 6.4% below H1 2025.",
+      "as_of": "2026-07-16",
+      "sources": [
+        "https://www.semafor.com/article/07/16/2026/china-rare-earth-export-curbs-risk-65-trillion-in-downstream-production",
+        "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/",
+        "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/",
+        "https://www.globaltimes.cn/page/202607/1365894.shtml"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed) + US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Nov-pause status should move toward 1 (expiring): the suspension runs to November 2026 and the IEA is pre-warning markets on full-enforcement risk. Entity blacklist indicator should move to 1 (entity-specific): 10 US and 14 EU firms now named. The $6.5 tn IEA figure is a new, material data point that raises the urgency of tracking the countdown to November. Also affects s8_ai_capex (GPU supply chains) and s19_lithography (chip inputs).",
+      "status": "pending",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "sightings": 1,
+      "id": "iea-warns-china-rare-earth-curbs-put-6-5-tn-in-d-bb6aba"
+    },
+    "japan-fiscal-dominance-risk-takaichi-basic-polic-2ad469": {
+      "headline": "Japan fiscal-dominance risk: Takaichi 'Basic Policy' blueprint pressured BOJ independence; JGB fiscal premium widening",
+      "summary": "Japan's economic blueprint ('Basic Policy') included language calling on the BOJ to align monetary policy with growth objectives, triggering a 'Basic Policy shock' spike in JGB yields; a cabinet minister subsequently reaffirmed BOJ autonomy, but the episode revealed political pressure on rate-setting independence. Japanese investors sold $29.6 bn of US Treasuries in Q1 2026, and the 20-yr JGB touched 3.90%\u2014a direct transmission channel to global long-end rates.",
+      "as_of": "2026-07-14",
+      "sources": [
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
+        "https://finance.yahoo.com/economy/policy/articles/japan-benchmark-bond-yield-hits-004445377.html",
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "BOJ_independence_pressure",
+        "type": "band",
+        "rubric": "0 = no government pressure on BOJ rate-setting; 1 = verbal pressure / policy-document language aligning BOJ with fiscal goals; 2 = sustained interference or de-facto fiscal dominance (BOJ forced to buy bonds to cap yields)",
+        "sources": [
+          "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
+          "https://finance.yahoo.com/economy/policy/articles/japan-benchmark-bond-yield-hits-004445377.html"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan indicators (USD/JPY, 30-yr JGB yield, Takaichi-plan financing clarity) do not capture the distinct risk of fiscal-dominance pressure on BOJ independence\u2014separate from the spending plan itself. The 'Basic Policy shock' episode shows this is an actionable, discrete trigger: if language forcing BOJ accommodation returns, it changes the rate-path probability distribution and the JGB carry-trade unwind timeline. Suggested weight 0.20 reflects it as a leading/qualitative indicator versus the market-price indicators already tracked.",
+      "status": "pending",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "sightings": 1,
+      "id": "japan-fiscal-dominance-risk-takaichi-basic-polic-2ad469"
+    },
+    "global-disinflation-stalled-imf-revises-2026-hea-a7ff23": {
+      "headline": "Global disinflation stalled; IMF revises 2026 headline inflation to 4.7% as Middle East war drives energy-price resurgence",
+      "summary": "The IMF's July 8 WEO Update raised its 2026 global headline inflation forecast to 4.7%, stating that 'the disinflation trend in place since early 2024 has stalled' due to Middle East war-driven energy prices. The World Bank projects global growth slowing to 2.5%, with EMDEs facing their weakest per-capita income growth since the pandemic; the energy-import shock is hitting oil-importing developing economies hardest.",
+      "as_of": "2026-07-08",
+      "sources": [
+        "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+        "https://www.imf.org/en/news/articles/2026/07/08/tr070826-weo-press-briefing-transcript-july-8-2026",
+        "https://www.worldbank.org/en/publication/global-economic-prospects"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "War-driven stagflation overhang",
+        "why": "The US-Iran war and Hormuz disruption have re-ignited a global energy-price shock that has stalled disinflation and forced central banks outside the US into unexpected tightening. This creates a distinct macro risk channel\u2014higher-for-longer rates in Europe, EM, and Japan simultaneously\u2014that none of the existing stories fully captures. It is the binding macro constraint that amplifies s4_dev_debt, s2_japan, s10_france, and s18_food_fertilizer but operates at the global monetary-policy coordination level.",
+        "proposed_level": 7,
+        "set": "Set 3",
+        "indicators": [
+          {
+            "label": "IMF_global_headline_inflation_forecast_pct",
+            "type": "value",
+            "rubric": "IMF WEO Update 2026 global headline CPI forecast (%). Baseline ~3.5%; elevated \u22654.0%; critical \u22654.5%",
+            "sources": [
+              "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "DM_ex_US_policy_rate_hike_surprise",
+            "type": "band",
+            "rubric": "0 = ECB/BoE/RBA easing or on-hold as expected; 1 = unexpected hold or hawkish pivot in \u22651 major DM CB; 2 = coordinated DM tightening cycle resumed due to energy shock",
+            "sources": [
+              "https://www.euronews.com/business/2026/07/08/the-key-global-economic-risks-to-watch-in-the-second-half-of-2026"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "Brent_crude_USD_bbl",
+            "type": "value",
+            "rubric": "Brent spot price. Below $75 = easing; $75-$95 = elevated; above $95 = critical/stagflationary",
+            "sources": [
+              "https://www.aljazeera.com/economy/2026/7/10/strait-of-hormuz-shipping-grinds-to-halt-as-us-iran-resume-fighting"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "US_Iran_ceasefire_durability",
+            "type": "band",
+            "rubric": "0 = durable ceasefire / Hormuz fully open; 1 = fragile MoU / contested passage; 2 = active hostilities / strait blockaded",
+            "sources": [
+              "https://www.bloomberg.com/news/articles/2026-07-29/us-sanctions-iran-extortion-network-targeting-hormuz-shipping"
+            ],
+            "suggested_weight": 0.2
+          }
+        ]
+      },
+      "rationale": "No existing story in the tracker treats the war-stalled-disinflation channel as a primary risk. The IMF's upward revision to 4.7% global inflation and simultaneous growth downgrade is the canonical stagflation signal. Unlike s20_sea_lanes (physical chokepoint) or s4_dev_debt (EM balance-sheet), this story is about the monetary-policy response function of DM central banks being hijacked by an exogenous energy shock\u2014forcing a tightening bias into an already fragile global credit cycle, with second-order effects on every leveraged balance sheet in the tracker.",
+      "status": "pending",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "sightings": 1,
+      "id": "global-disinflation-stalled-imf-revises-2026-hea-a7ff23"
     }
   },
-  "generated": "2026-07-30",
+  "generated": "2026-07-31",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 130
+  "new_count": 4,
+  "pending_count": 134
 }
