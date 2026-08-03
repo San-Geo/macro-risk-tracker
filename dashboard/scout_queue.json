@@ -2961,23 +2961,22 @@
     },
     "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0": {
       "headline": "China June PPI +4.1% YoY (4-year high) driven by Iran energy shock\u2014but MoM turned negative and consumer goods PPI still -0.9%, revealing a dangerous bifurcation",
-      "summary": "China's producer price index rose 4.1% YoY in June 2026, the strongest reading since July 2022, as Middle East conflict-driven energy and commodity costs drove factory-gate inflation; the GDP deflator also turned positive (+1.6%) in Q2 for the first time after three years of contraction, though driven by external costs rather than genuine domestic recovery.",
+      "summary": "China's June producer price index jumped 4.1% year-on-year \u2014 the strongest since July 2022 \u2014 driven by elevated energy input costs from the Middle East conflict, while consumer prices slowed to +1.0% YoY, revealing a dangerous margin-squeeze dynamic where factories absorb costs rather than pass them to consumers. Economists warn this suppresses hiring and investment while potentially exporting disinflation downstream.",
       "as_of": "2026-07-09",
       "sources": [
-        "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html",
-        "https://www.bloomberg.com/news/articles/2026-07-15/china-s-gdp-price-gauge-turns-positive-after-years-of-deflation"
+        "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "existing_indicator",
       "target_story": "s5_china_deflation",
       "target_indicator": "China PPI YoY (%) - large swing either way is worse",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The tracker flags 'large swing either way is worse' for China PPI \u2014 a +4.1% reading after years of deflation is precisely the worst-case scenario: cost-push inflation squeezing margins of Chinese manufacturers, potentially spreading disinflationary pressure globally via export price pass-through in both directions. The GDP deflator turning positive on energy costs (not demand) suggests the 'deflation spillover' story has morphed into a cost-push inflation export risk. This materially changes the sign of the risk.",
+      "rationale": "China's PPI has swung from deeply negative (deflation export risk) to sharply positive (+4.1%), which per the tracker's own rubric \u2014 'large swing either way is worse' \u2014 is a material deterioration. The margin-squeeze dynamic (PPI up, CPI down) is a novel cost-push variant of the original China price-spillover story and should trigger a reassessment of the indicator's current reading.",
       "status": "pending",
       "first_seen": "2026-07-15",
-      "last_seen": "2026-07-28",
-      "sightings": 3,
+      "last_seen": "2026-08-03",
+      "sightings": 4,
       "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
     },
     "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328": {
@@ -4301,10 +4300,180 @@
       "last_seen": "2026-07-31",
       "sightings": 1,
       "id": "global-disinflation-stalled-imf-revises-2026-hea-a7ff23"
+    },
+    "fomc-july-29-three-hawks-dissent-for-rate-hike-m-864920": {
+      "headline": "FOMC July 29: Three hawks dissent for rate hike \u2014 most divided since 2016",
+      "summary": "The Fed voted 9-3 to hold rates at 3.5\u20133.75% on July 29, with Hammack, Kashkari, and Logan all dissenting in favor of a 25bp hike, citing inflation elevated above 2% for over five years and successive supply shocks. Markets now price a materially higher probability of a September hike, with the CME hike odds rising from ~11% to ~36% between July 15 and July 29.",
+      "as_of": "2026-07-29",
+      "sources": [
+        "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+        "https://www.cnbc.com/2026/07/29/fed-meeting-today-live-updates.html",
+        "https://www.axios.com/2026/07/31/fed-rates-dissenters-policy",
+        "https://www.schwab.com/learn/story/fomc-meeting",
+        "https://www.minneapolisfed.org/article/2026/statement-on-my-fomc-dissent"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US Re-tightening Shock / Sticky-Inflation Trap",
+        "why": "After five-plus years of above-target inflation, a hawkish minority is now openly pushing for rate hikes while the majority holds. A September hike \u2014 or a market pre-pricing of one \u2014 would tighten financial conditions sharply, stress leveraged positions in Treasuries (s1), unwind carry trades (s2), reprice private credit (s3), and amplify EM capital outflows (s4). No existing story captures the FOMC fracture itself as the risk node.",
+        "proposed_level": 7,
+        "set": 1,
+        "indicators": [
+          {
+            "label": "FOMC dissent count (current meeting)",
+            "type": "band",
+            "rubric": "0 = unanimous or 1 dissent; 1 = 2 dissents; 2 = 3+ dissents (present level = 2)",
+            "sources": [
+              "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "CME FedWatch September hike probability (%)",
+            "type": "value",
+            "rubric": "Track daily; >40% = elevated; >60% = acute re-pricing risk",
+            "sources": [
+              "https://www.schwab.com/learn/story/fomc-meeting"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "US 2-year Treasury yield (%)",
+            "type": "value",
+            "rubric": "Proxy for near-term rate expectations; sustained move above 4.5% signals re-tightening being priced",
+            "sources": [
+              "https://www.axios.com/2026/07/31/fed-rates-dissenters-policy"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "FOMC inflation language shift (0 patient / 1 data-dependent tightening bias / 2 explicit hike signal)",
+            "type": "band",
+            "rubric": "Monitor post-meeting statements and minutes for easing-bias removal and hawkish re-framing",
+            "sources": [
+              "https://www.cnbc.com/2026/07/29/fed-meeting-today-live-updates.html"
+            ],
+            "suggested_weight": 0.15
+          }
+        ]
+      },
+      "rationale": "A 9-3 FOMC split \u2014 the most hawkish division since September 2016 \u2014 is a new systemic node: it re-opens the rate-hike path, tightens financial conditions across all existing risk stories (Treasury basis, Japan carry, private credit, EM debt), and signals that the Fed's reaction function is genuinely uncertain. This is not captured in any existing story or indicator.",
+      "status": "pending",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "sightings": 1,
+      "id": "fomc-july-29-three-hawks-dissent-for-rate-hike-m-864920"
+    },
+    "japan-yen-hits-40-year-low-10y-jgb-at-30-year-hi-de7c7b": {
+      "headline": "Japan: Yen hits 40-year low, 10y JGB at 30-year high ~2.9%; BOJ holds but FX intervention suspected",
+      "summary": "Japanese financial assets came under severe pressure in late July 2026, with USD/JPY reaching a 40-year low and the 10-year JGB yield touching 2.901% \u2014 its highest since 1996 \u2014 before Tokyo's suspected FX intervention triggered a sharp yen rally. The BOJ held rates at 1% on July 31 but acknowledged upside inflation risks from the Middle East conflict.",
+      "as_of": "2026-07-31",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "USD/JPY (yen strengthening = lower = risk); 30-year JGB yield (%)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "USD/JPY at a 40-year low and 10y JGB at a 30-year high are direct, material updates to s2_japan's two core indicators. The BOJ hold with suspected FX intervention adds to Takaichi plan financing uncertainty (third indicator). The combination of a weaker yen, surging yields, and a BOJ trapped between inflation and fiscal fragility is exactly the scenario this story tracks.",
+      "status": "pending",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "sightings": 1,
+      "id": "japan-yen-hits-40-year-low-10y-jgb-at-30-year-hi-de7c7b"
+    },
+    "japanese-investors-sold-29-6bn-of-us-treasuries--8fe198": {
+      "headline": "Japanese investors sold $29.6bn of US Treasuries in Q1 2026 amid domestic yield surge \u2014 structural buyer withdrawal",
+      "summary": "As domestic JGB yields hit multi-decade highs, Japanese investors repatriated capital and sold $29.6 billion of US debt in Q1 2026 alone, removing one of the largest and most reliable foreign buyers from the US Treasury market at a time of large US fiscal deficits. This structural shift in demand directly pressures Treasury market function and the basis trade.",
+      "as_of": "2026-07-14",
+      "sources": [
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japanese net purchases of US Treasuries (rolling 4-quarter, $bn, TIC data)",
+        "type": "value",
+        "rubric": "Positive = net buyer (supportive); 0 to -$30bn = declining support (caution); below -$30bn per quarter = structural withdrawal (stress). Current trajectory: approx. -$29.6bn in Q1 2026 alone.",
+        "sources": [
+          "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html"
+        ],
+        "suggested_weight": 0.3
+      },
+      "proposed_story": null,
+      "rationale": "The existing s1_basis_trade story tracks SOFR-EFFR spreads, MOVE index, and SEC clearing progress, but has no indicator for the structural foreign-demand side of the Treasury market. Japan is the largest foreign holder of US Treasuries; net selling at this scale reduces the marginal bid that normally absorbs new issuance, amplifies the price impact of basis-trade unwinds, and interacts adversely with rising US fiscal deficits. This gap is material and operationalizable via monthly TIC data.",
+      "status": "pending",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "sightings": 1,
+      "id": "japanese-investors-sold-29-6bn-of-us-treasuries--8fe198"
+    },
+    "strait-of-hormuz-traffic-stall-brent-rebounds-20-cd87f1": {
+      "headline": "Strait of Hormuz traffic stall: Brent rebounds ~20% from early-July low as US-Iran deal frays",
+      "summary": "After a brief post-agreement lull, traffic through the Strait of Hormuz has stalled and Brent crude has rebounded close to 20% from its early-July post-US-Iran deal low, with the 30-day full restoration deadline passing without compliance. The IMF revised global headline inflation up to 4.7% for 2026, partly on energy costs, while the World Bank cut global growth to 2.5%.",
+      "as_of": "2026-07-15",
+      "sources": [
+        "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/07/geopolitical-risk-brief-july-2026",
+        "https://www.euronews.com/business/2026/07/08/the-key-global-economic-risks-to-watch-in-the-second-half-of-2026",
+        "https://www.imf.org/en/news/articles/2026/07/08/tr070826-weo-press-briefing-transcript-july-8-2026",
+        "https://www.worldbank.org/en/publication/global-economic-prospects"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed); WTI crude oil (USD/bbl)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Hormuz traffic stall and ~20% Brent rebound from deal lows is a direct, material update to s20_sea_lanes's primary indicators. The IMF's upward revision to 2026 global inflation to 4.7% \u2014 partly attributed to energy \u2014 and the World Bank's 2.5% global growth forecast confirm second-order macro transmission. The status should be moved from 0 (open) toward 1 (contested) given the stall in restoration.",
+      "status": "pending",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "sightings": 1,
+      "id": "strait-of-hormuz-traffic-stall-brent-rebounds-20-cd87f1"
+    },
+    "imf-weo-july-2026-global-disinflation-stalled-ai-04284e": {
+      "headline": "IMF WEO July 2026: Global disinflation 'stalled'; AI capex 'sowing seeds of macrofinancial instability'; headline inflation revised to 4.7%",
+      "summary": "The IMF's July 2026 World Economic Outlook Update explicitly warned that global disinflation has stalled, revised 2026 global headline inflation up to 4.7%, and flagged that 'AI hype and exuberant financial markets could sow the seeds of macrofinancial instability' \u2014 a direct risk flag for s8_ai_capex's circular financing concern. Growth was held at 3.0% for 2026 but risks remain tilted to the downside.",
+      "as_of": "2026-07-08",
+      "sources": [
+        "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+        "https://www.imf.org/en/news/articles/2026/07/08/tr070826-weo-press-briefing-transcript-july-8-2026"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s8_ai_capex",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "IMF / BIS systemic AI-capex warning flag (0 none / 1 watch / 2 explicit risk scenario)",
+        "type": "band",
+        "rubric": "0 = no multilateral mention; 1 = IMF/BIS flags concern in flagship publication (current level = 1, per July 2026 WEO); 2 = IMF/BIS publishes dedicated stress scenario or FSB includes in systemic risk list",
+        "sources": [
+          "https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026",
+          "https://www.imf.org/en/news/articles/2026/07/08/tr070826-weo-press-briefing-transcript-july-8-2026"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The IMF's explicit WEO language about AI-driven 'macrofinancial instability' seeds represents a meaningful escalation in multilateral risk recognition for s8_ai_capex. The existing indicators for s8 (US IG OAS, capex-revenue gap, GPU-backed debt stress) are market/corporate measures; there is no indicator tracking whether global financial supervisors and multilaterals have formally elevated this to a systemic concern, which is a leading signal that regulatory or market stress action may follow.",
+      "status": "pending",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "sightings": 1,
+      "id": "imf-weo-july-2026-global-disinflation-stalled-ai-04284e"
     }
   },
-  "generated": "2026-07-31",
+  "generated": "2026-08-03",
   "model": "claude-sonnet-4-6",
-  "new_count": 4,
-  "pending_count": 134
+  "new_count": 5,
+  "pending_count": 139
 }
