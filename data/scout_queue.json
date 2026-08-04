@@ -76,13 +76,12 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "Six federal agencies failed to finalize GENIUS Act stablecoin rules by the July 18, 2026 statutory deadline; public comment periods extend to August 2026, leaving a $310 billion stablecoin market (USDT ~$184 bn, USDC ~$73 bn) without binding implementation guidance until at minimum Jan 18, 2027. Banks eyeing reserve-management and issuance are deferring decisions, and legal experts flag grandfathering and enforcement uncertainty.",
-      "as_of": "2026-07-19",
+      "summary": "Most GENIUS Act implementing regulations were required by July 18, 2026, but as of early August multiple key rulemakings\u2014including the Federal Reserve's AML/CFT rule (proposed only July 9)\u2014remain in proposed rather than final form, pushing the operative effective date toward January 2027. With the stablecoin supply growing and critical rules unfinalized, issuers face compliance ambiguity and the Treasury-demand boost from mandated reserve purchases is delayed.",
+      "as_of": "2026-08-04",
       "sources": [
-        "https://cryptodaily.co.uk/2026/07/genius-act-missed-deadline-stablecoin-uncertainty",
-        "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors",
-        "https://blockeden.xyz/blog/2026/02/08/genius-act-stablecoin-deadline-july-2026-occ-rulemaking/",
-        "https://www.chapman.com/publication-genius-act-rulemaking-tracker"
+        "https://www.chapman.com/publication-genius-act-rulemaking-tracker",
+        "https://www.sullcrom.com/insights/memo/2026/March/OCC-Proposes-Regulations-Implement-GENIUS-Act",
+        "https://www.spark.money/research/genius-act-stablecoin-regulation-explained"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -90,12 +89,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Implementation friction should be marked 2 (problems): the statutory deadline was missed, final rules are absent, comment periods remain open through August, and the law now activates on the Jan 18, 2027 backstop without finalized agency guidance. The $310 bn supply figure (up from ~$230 bn noted in tracker baseline) also warrants updating the Total USD stablecoin supply indicator. Treasury demand implications (GENIUS-mandated T-bill reserves) remain uncertain.",
+      "rationale": "The Federal Reserve only published its AML proposed rule on July 9, 2026\u2014nine days before the statutory deadline for final rules\u2014and the GENIUS Act cannot take effect until 120 days after finalization or January 18, 2027, whichever is earlier. Multiple agencies are still at proposed-rule stage. This is squarely a '1 gaps' or borderline '2 problems' reading on the implementation-friction indicator: mandated reserve-backed Treasury buying by stablecoin issuers is delayed, and legal certainty for the ecosystem is absent.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-08-04",
       "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
-      "sightings": 15
+      "sightings": 16
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -175,13 +174,12 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "After a brief ceasefire MoU, US-Iran fighting resumed, sending Hormuz shipping to a near-standstill (no large vessels tracked via the 'Southern Highway' since July 7). On July 29 the US sanctioned two Iranian firms charging 'safe passage' fees through the strait; Brent rebounded ~20% from its post-agreement low, with S&P Global noting hostilities remain 'sub-war level but sustained'.",
-      "as_of": "2026-07-29",
+      "summary": "After a June 17 US-Iran MOU briefly reopened the Strait, the ceasefire collapsed in late July as the US resumed strikes and Iran halted tanker traffic again; WTI has re-spiked toward $75\u201379/bbl with markets pricing in a renewed 'risk premium.' Infrastructure damage to Gulf refineries and continuing war-risk insurance withdrawals mean even a partial reopening leaves supply structurally impaired.",
+      "as_of": "2026-08-04",
       "sources": [
-        "https://www.bloomberg.com/news/articles/2026-07-29/us-sanctions-iran-extortion-network-targeting-hormuz-shipping",
-        "https://www.aljazeera.com/economy/2026/7/10/strait-of-hormuz-shipping-grinds-to-halt-as-us-iran-resume-fighting",
-        "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/07/geopolitical-risk-brief-july-2026",
-        "https://www.euronews.com/business/2026/07/08/the-key-global-economic-risks-to-watch-in-the-second-half-of-2026"
+        "https://thehill.com/policy/energy-environment/5960020-iran-ceasefire-gas-prices-strait-of-hormuz/",
+        "https://www.eia.gov/todayinenergy/detail.php?id=67865",
+        "https://tradingeconomics.com/commodity/crude-oil/news/540343"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -189,22 +187,21 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Hormuz status indicator should move to 2 (effectively closed/contested): traceable large-vessel crossings halted, US conducting offensive strikes, Iranian 'extortion' toll system in operation, and Brent pricing in renewed supply-shock premium. Feeds directly into s18_food_fertilizer (Gulf fertilizer-input disruption = 2) and s4_dev_debt (oil-importing EMDEs squeezed). The Oxford Economics framing\u2014'key domino for H2 2026'\u2014underscores systemic reach.",
+      "rationale": "The Hormuz closure was the dominant macro shock of Q1\u2013Q2 2026, briefly settling toward '1 contested' after the June MOU, but the July ceasefire collapse pushes the indicator back toward '2 closed.' WTI re-spiking to ~$79/bbl and continued insurance withdrawal are directly captured by s20's existing WTI and Hormuz-status indicators. The RBA FSR (March 2026) and EIA STEO both flag this as the proximate driver of elevated global financial stability risk.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-08-04",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 13
+      "sightings": 14
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 10-year JGB yield touched 2.901% intra-week (highest since 1996), driven by PM Takaichi's new massive spending package and a brief 'Basic Policy shock' suggesting political pressure on BoJ independence; the 2-year JGB auction on 2026-07-30 cleared at 1.483%, up sharply from 1.407%. The BoJ meeting this week is expected to hold rates but keep hiking door open, while the 30-year yield had earlier hit 3.89\u20133.90%.",
-      "as_of": "2026-07-30",
+      "summary": "Japan's 30-year JGB yield held at 3.99% on 3 August 2026, up ~87 bps year-on-year, while the 10-year breached 2.9% (highest since 1996) in July; carry-trade funding costs are rising materially as the BOJ continues normalisation and PM Takaichi's fiscal expansion goes unfinanced. Japanese institutional repatriation flows threaten to reduce demand for US Treasuries at a moment of elevated federal supply.",
+      "as_of": "2026-08-03",
       "sources": [
+        "https://tradingeconomics.com/japan/30-year-bond-yield",
         "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
-        "https://www.fx.co/en/forex-news/3075339",
-        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-13-july-2026/",
-        "https://tradingeconomics.com/japan/government-bond-yield"
+        "https://bagholderbrief.com/yen-carry-trade-unwind/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -212,12 +209,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Multiple indicators in s2_japan are simultaneously moving: 10-year yield at 30-year highs signals carry-trade unwind risk; Takaichi spending package worsens the 'Takaichi plan financing clarity' indicator (now 1 or 2); the 'Basic Policy shock' episode threatened BoJ independence before being walked back, elevating the disorderly risk band. This is the most material update to the Japan story in weeks and warrants indicator value revisions across all three s2 sub-indicators.",
+      "rationale": "The 30-year JGB yield is an explicit tracker indicator for s2_japan and just printed 3.99% (2026-08-03), a multi-decade high. The 10-year at 2.9% is also the highest since 1996. Combined with ongoing Takaichi spending uncertainty (financing clarity indicator deteriorating) and carry-trade unwind risk, all three s2 indicators are flashing amber-to-red simultaneously, warranting an immediate tracker update.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-08-04",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 8
+      "sightings": 9
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -2961,22 +2958,23 @@
     },
     "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0": {
       "headline": "China June PPI +4.1% YoY (4-year high) driven by Iran energy shock\u2014but MoM turned negative and consumer goods PPI still -0.9%, revealing a dangerous bifurcation",
-      "summary": "China's June producer price index jumped 4.1% year-on-year \u2014 the strongest since July 2022 \u2014 driven by elevated energy input costs from the Middle East conflict, while consumer prices slowed to +1.0% YoY, revealing a dangerous margin-squeeze dynamic where factories absorb costs rather than pass them to consumers. Economists warn this suppresses hiring and investment while potentially exporting disinflation downstream.",
+      "summary": "China's June 2026 PPI came in at -3.6% year-on-year, worse than the May reading of -3.3% and below consensus of -3.2%, marking the steepest slide since July 2023 and the 33rd straight month of producer deflation; CPI was barely positive at +0.1% YoY. Persistent US reciprocal tariffs are compressing export volumes while surplus goods flood third-country markets, amplifying global disinflationary spillover.",
       "as_of": "2026-07-09",
       "sources": [
-        "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html"
+        "https://www.fxstreet.com/amp/analysis/chinas-ppi-slides-australian-dollar-steady-202507091232",
+        "https://markets.financialcontent.com/stocks/article/marketminute-2026-2-11-the-great-deflation-export-how-chinas-factory-woes-are-colliding-with-the-new-tariff-era"
       ],
-      "materiality": "medium",
+      "materiality": "high",
       "classification": "existing_indicator",
       "target_story": "s5_china_deflation",
       "target_indicator": "China PPI YoY (%) - large swing either way is worse",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "China's PPI has swung from deeply negative (deflation export risk) to sharply positive (+4.1%), which per the tracker's own rubric \u2014 'large swing either way is worse' \u2014 is a material deterioration. The margin-squeeze dynamic (PPI up, CPI down) is a novel cost-push variant of the original China price-spillover story and should trigger a reassessment of the indicator's current reading.",
+      "rationale": "A -3.6% PPI print is the worst in three years and represents a major negative swing on the tracker's own rubric ('large swing either way is worse'). It confirms accelerating deflationary export pressure into global goods markets just as US tariffs redirect Chinese surplus production to non-US destinations, elevating anti-dumping action risk (the third s5 indicator). The concurrent near-zero CPI (+0.1%) signals domestic demand has not recovered, keeping the pressure structural rather than cyclical.",
       "status": "pending",
       "first_seen": "2026-07-15",
-      "last_seen": "2026-08-03",
-      "sightings": 4,
+      "last_seen": "2026-08-04",
+      "sightings": 5,
       "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
     },
     "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328": {
@@ -4470,10 +4468,68 @@
       "last_seen": "2026-08-03",
       "sightings": 1,
       "id": "imf-weo-july-2026-global-disinflation-stalled-ai-04284e"
+    },
+    "us-iran-war-triggers-structural-nickel-supply-ch-9671e5": {
+      "headline": "US-Iran War Triggers Structural Nickel Supply-Chain Rupture via Sulfur/Hormuz Dependency",
+      "summary": "S&P Global research (March 2026) found that while copper's direct exposure to the Hormuz closure is limited, the nickel market faces structural stress: high-pressure acid leach (HPAL) battery-grade nickel operations are critically dependent on sulfuric acid derived from sulfur shipments transiting the Strait, putting EV battery supply chains at risk of a processing-input squeeze that is not captured by any existing tracker story.",
+      "as_of": "2026-03-17",
+      "sources": [
+        "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/03/middle-east-war-copper-nickel-supply-risk"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Battery-critical mineral processing input disruption (nickel/sulfur via Hormuz)",
+        "type": "band",
+        "rubric": "0 = sulfur/acid supply flowing normally to HPAL operations; 1 = Hormuz disruption causing elevated acid costs or spot shortages for battery-grade nickel producers; 2 = sustained HPAL curtailments or plant shutdowns due to input unavailability",
+        "sources": [
+          "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/03/middle-east-war-copper-nickel-supply-risk"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The s20_sea_lanes story focuses on crude oil, WTI, and broad maritime disruption, but does not capture second-order supply-chain effects on critical battery inputs. HPAL nickel processing\u2014essential for EV and grid-storage batteries\u2014depends on sulfur shipments that transit Hormuz, creating a distinct vector that bridges s20 (sea lanes) and s16 (copper/electrification) without being captured by either. Adding this indicator to s20 would alert the tracker to EV supply-chain contagion from the ongoing Hormuz crisis.",
+      "status": "pending",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "sightings": 1,
+      "id": "us-iran-war-triggers-structural-nickel-supply-ch-9671e5"
+    },
+    "us-iran-conflict-triggers-new-energy-cost-shock--c57cb2": {
+      "headline": "US-Iran Conflict Triggers New Energy-Cost Shock on AI Data-Center Capex and Power Markets",
+      "summary": "The Hormuz crisis drove energy price spikes through Q1\u2013Q2 2026, materially raising the operating cost base for AI data centers that are heavy electricity consumers; elevated oil and LNG prices feed into power-generation costs globally, adding a new upward pressure on hyperscaler economics at a moment when the AI capex-versus-revenue gap is already wide and GPU-backed debt financing is under stress.",
+      "as_of": "2026-08-04",
+      "sources": [
+        "https://www.eia.gov/todayinenergy/detail.php?id=67865",
+        "https://www.rba.gov.au/publications/fsr/2026/mar/the-global-macro-financial-environment.html"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s8_ai_capex",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Energy-cost drag on AI data-center economics (oil/LNG shock pass-through)",
+        "type": "band",
+        "rubric": "0 = energy costs stable or falling, no material impact on hyperscaler operating margins; 1 = elevated energy costs (linked to Hormuz or other supply shock) raising PUE-adjusted opex by >10% YoY for major data-center operators; 2 = energy costs structurally impair AI capex economics or trigger capex guidance cuts citing power costs",
+        "sources": [
+          "https://www.eia.gov/todayinenergy/detail.php?id=67865",
+          "https://www.rba.gov.au/publications/fsr/2026/mar/the-global-macro-financial-environment.html"
+        ],
+        "suggested_weight": 0.12
+      },
+      "proposed_story": null,
+      "rationale": "s8_ai_capex tracks the circular financing risk of AI buildout (IG OAS, capex-vs-revenue gap, GPU-backed debt), but has no indicator for the energy-cost channel. The Hormuz shock created a sustained global energy-price elevation through H1 2026 that directly increases the operating expenditure of power-intensive AI infrastructure. This is a cross-story contagion (s20\u2192s8 and s15) that is material but currently invisible to the tracker. The RBA's March 2026 FSR explicitly flags AI investment and energy market disruptions as co-occurring stressors.",
+      "status": "pending",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "sightings": 1,
+      "id": "us-iran-conflict-triggers-new-energy-cost-shock--c57cb2"
     }
   },
-  "generated": "2026-08-03",
+  "generated": "2026-08-04",
   "model": "claude-sonnet-4-6",
-  "new_count": 5,
-  "pending_count": 139
+  "new_count": 2,
+  "pending_count": 141
 }
