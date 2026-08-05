@@ -174,12 +174,14 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "After a June 17 US-Iran MOU briefly reopened the Strait, the ceasefire collapsed in late July as the US resumed strikes and Iran halted tanker traffic again; WTI has re-spiked toward $75\u201379/bbl with markets pricing in a renewed 'risk premium.' Infrastructure damage to Gulf refineries and continuing war-risk insurance withdrawals mean even a partial reopening leaves supply structurally impaired.",
-      "as_of": "2026-08-04",
+      "summary": "As of 2026-08-05, the US, Iran, and Oman are closing in on a 60-day interim arrangement to reopen the Strait of Hormuz\u2014closed since late February following US-Israeli strikes on Iran\u2014with Washington aiming for a Wednesday announcement. WTI has pulled back sharply from its $100+ peak to ~$73-76/bbl on deal optimism, but the strait remains physically obstructed by mines requiring clearance, and the deal is still unsigned.",
+      "as_of": "2026-08-05",
       "sources": [
-        "https://thehill.com/policy/energy-environment/5960020-iran-ceasefire-gas-prices-strait-of-hormuz/",
-        "https://www.eia.gov/todayinenergy/detail.php?id=67865",
-        "https://tradingeconomics.com/commodity/crude-oil/news/540343"
+        "https://www.fxstreet.com/news/us-nears-hormuz-deal-aiming-for-wednesday-announcement-axios-202608050242",
+        "https://en.bloomingbit.io/feed/news/117550",
+        "https://www.thenationalnews.com/business/energy/2026/08/03/oil-prices-slump-on-potential-us-iran-deal-to-open-strait-of-hormuz/",
+        "https://tradingeconomics.com/commodity/crude-oil",
+        "https://www.britannica.com/event/2026-Iran-war"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -187,43 +189,43 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz closure was the dominant macro shock of Q1\u2013Q2 2026, briefly settling toward '1 contested' after the June MOU, but the July ceasefire collapse pushes the indicator back toward '2 closed.' WTI re-spiking to ~$79/bbl and continued insurance withdrawal are directly captured by s20's existing WTI and Hormuz-status indicators. The RBA FSR (March 2026) and EIA STEO both flag this as the proximate driver of elevated global financial stability risk.",
+      "rationale": "The Hormuz status indicator is the direct tracker for this event. The strait has been effectively closed (score=2) since late February; deal optimism is pushing it toward contested (score=1) but it is not yet physically open. WTI (~$73-76 vs. $100+ peak) and undersea cable risk are co-moving. This is the single highest-materiality geopolitical event active in the tracker right now\u2014a partial reopening would cascade into s18_food_fertilizer (LNG/fertilizer input costs), s13_insurance (war-risk premiums), and s4_dev_debt (EM energy import bills). Status should be updated to '1 contested / transitioning' pending physical mine clearance and deal signature.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-08-05",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 14
+      "sightings": 15
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 30-year JGB yield held at 3.99% on 3 August 2026, up ~87 bps year-on-year, while the 10-year breached 2.9% (highest since 1996) in July; carry-trade funding costs are rising materially as the BOJ continues normalisation and PM Takaichi's fiscal expansion goes unfinanced. Japanese institutional repatriation flows threaten to reduce demand for US Treasuries at a moment of elevated federal supply.",
-      "as_of": "2026-08-03",
+      "summary": "The BOJ published on August 4 a dedicated research review on the market impact of its ongoing quantitative tightening (JGB purchase reductions), while 30-year JGB yields have been trading at multi-decade highs around 3.4%. The BOJ's quarterly taper (reducing purchases by \u00a5200bn/quarter) is a live fiscal stress mechanism for a sovereign with a ~230% debt-to-GDP ratio.",
+      "as_of": "2026-08-04",
       "sources": [
-        "https://tradingeconomics.com/japan/30-year-bond-yield",
+        "https://www.boj.or.jp/en/",
         "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
-        "https://bagholderbrief.com/yen-carry-trade-unwind/"
+        "https://tradingeconomics.com/japan/government-bond-yield"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "existing_indicator",
       "target_story": "s2_japan",
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 30-year JGB yield is an explicit tracker indicator for s2_japan and just printed 3.99% (2026-08-03), a multi-decade high. The 10-year at 2.9% is also the highest since 1996. Combined with ongoing Takaichi spending uncertainty (financing clarity indicator deteriorating) and carry-trade unwind risk, all three s2 indicators are flashing amber-to-red simultaneously, warranting an immediate tracker update.",
+      "rationale": "The 30-year JGB yield indicator is the direct target. The August 4 BOJ research publication on QT market impact is a signal the BOJ itself is scrutinizing whether its taper is disorderly\u2014material for the 'Takaichi plan financing clarity' indicator as well. The 20-year JGB yield reached 3.9% in mid-July 2026, and the 30-year has been at record highs. The tracker's 30yr JGB yield indicator needs a current value refresh to ~3.4-3.9% range and the financing clarity indicator should move toward 1 (unclear) given active BOJ research on its own taper impact.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-08-05",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 9
+      "sightings": 10
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
-      "summary": "Between June 22 and July 24 2026, China's MOFCOM added 10 US companies (including MP Materials and USA Rare Earth) and 14 EU firms to dual-use export ban lists, blocking shipments of rare earths, gallium, germanium and related materials. The IEA warned full enforcement could put $6.5 trillion of downstream production at risk; Chinese enforcement has also detained foreign nationals and a Chinese optics chairman for alleged circumvention.",
-      "as_of": "2026-07-24",
+      "summary": "In late June 2026, China's MOFCOM effectively imposed a full dual-use export ban on 10 specific US companies (including rare earth producers MP Materials and USA Rare Earth), tightening rules that previously required only licenses. The broader second-wave controls covering five additional rare earth elements\u2014holmium, erbium, thulium, europium, ytterbium\u2014remain on track to take effect November 10, 2026 under the Oct-2025 one-year suspension.",
+      "as_of": "2026-06-30",
       "sources": [
-        "https://legalinsurrection.com/2026/07/china-hits-u-s-europe-with-new-rare-earths-export-controls/",
-        "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/",
-        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals"
+        "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2026/6/china-tightens-rare-earth-export-curbs-on-10-us-companies-103014947",
+        "https://foreignpolicy.com/2026/06/22/china-us-rare-earth-export-control-trade/",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -231,12 +233,12 @@
       "target_indicator": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The blacklisting of MP Materials and USA Rare Earth\u2014two of the most strategically significant US rare-earth producers\u2014directly moves the 'US domestic RE producer blacklist' indicator from 1 to approaching 2. Simultaneously, the Nov-2025 pause (Decrees 61/62) expires November 10 2026, meaning full extraterritorial enforcement is ~3 months away. The EU extension of the ban to 14 European firms also escalates the 'export license flow' indicator. All three s6 indicators are worsening simultaneously.",
+      "rationale": "The entity-specific ban on 10 US companies moves this indicator from 0 to 1. The fact that China targeted the two most prominent US domestic rare-earth producers (MP Materials, USA Rare Earth) is directly captured by the 'US domestic RE producer blacklist' indicator and should be scored as '1 entity-specific ban'. The approaching Nov-2026 broader suspension expiry is also a material forward-looking risk for the Nov-2025 pause status indicator (currently '0 extended', set to flip to '1 expiring' as the date approaches). Both indicators within s6_rare_earths need updating.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-08-05",
       "id": "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6",
-      "sightings": 8
+      "sightings": 9
     },
     "hyperscaler-ai-capex-approaches-800bn-in-2026-67-03d0a0": {
       "headline": "Hyperscaler AI capex approaches $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027 \u2014 revenue gap concern widens",
@@ -4108,12 +4110,12 @@
     },
     "new-12-5-section-301-tariff-on-china-effective-j-229773": {
       "headline": "New 12.5% Section 301 Tariff on China Effective July 24; Second Overcapacity Probe Covering 60 Countries Still Live",
-      "summary": "USTR imposed a new 12.5% Section 301 forced-labor tariff on China effective July 24, replacing the post-Supreme-Court 10% stopgap; China chose restraint ahead of Xi's planned US visit but is pushing back on overcapacity allegations. A second Section 301 probe covering excess capacity across 60 countries remains ongoing and could generate another tariff wave.",
-      "as_of": "2026-07-24",
+      "summary": "China's PPI has been negative for over 40 consecutive months (approx. -1% to -2% YoY as of mid-2026), the economy is in its fourth year of deflation, and China's 2025 trade surplus hit a record ~$1.2 trillion. Brazil, Indonesia, India, and the EU have all raised protective barriers against Chinese goods in 2025-26 as the deflation-export dynamic intensifies under 145% US tariffs forcing export diversion.",
+      "as_of": "2026-08-01",
       "sources": [
-        "https://www.china-briefing.com/news/us-china-tariff-rates-2025/",
-        "https://www.bloomberg.com/news/articles/2026-07-24/china-set-to-look-past-trump-s-new-tariffs-before-xi-visit-to-us",
-        "https://www.washingtonpost.com/business/2026/07/28/china-economy-overcapacity-trade-tariffs/86efb1a2-8a7b-11f1-8912-d71e69d679d7_story.html"
+        "https://english.ckgsb.edu.cn/knowledge/article/china-economic-consolidation-and-strategic-shifts-in-2026/",
+        "https://statisticsoftheworld.com/blog/china-economy-2026-deflation-property-crisis",
+        "https://markets.financialcontent.com/stocks/article/marketminute-2026-2-11-the-great-deflation-export-how-chinas-factory-woes-are-colliding-with-the-new-tariff-era"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -4121,11 +4123,11 @@
       "target_indicator": "New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "While the net tariff increase (+2.5pp to ~23.4% effective rate on China) is modest relative to the IEEPA-era peaks, the structural shift\u2014IEEPA struck down by SCOTUS, replaced with durable Section 301\u2014locks in tariff permanence and the pending 60-country overcapacity probe threatens a broader tariff wave. China's deflation/export price story is directly affected: PPI remains deeply negative, surplus goods are being redirected. The 'New tariff/anti-dumping actions' indicator should move to 1\u21922 given the second probe.",
+      "rationale": "The tracker's s5_china_deflation story already captures PPI YoY, USD/CNY, and new tariff/anti-dumping actions. The materiality here is that the 'anti-dumping/tariff actions' indicator should now be scored '2 escalating' given the multi-country, coordinated nature of responses (EU, Brazil, Indonesia, India, US all active simultaneously) and the record $1.2tn surplus accelerating in the context of the Iran war energy shock compressing EM import capacity. The China PPI indicator should also be refreshed to reflect the ongoing ~-1 to -2% YoY print. This is a confirmation and escalation of the existing story rather than a new development.",
       "status": "pending",
       "first_seen": "2026-07-30",
-      "last_seen": "2026-07-30",
-      "sightings": 1,
+      "last_seen": "2026-08-05",
+      "sightings": 2,
       "id": "new-12-5-section-301-tariff-on-china-effective-j-229773"
     },
     "bank-of-england-fsr-ai-equity-concentration-valu-1b0c02": {
@@ -4526,10 +4528,73 @@
       "last_seen": "2026-08-04",
       "sightings": 1,
       "id": "us-iran-conflict-triggers-new-energy-cost-shock--c57cb2"
+    },
+    "boj-holds-at-1-0-10-year-jgb-at-2-78-japanese-in-1d54a6": {
+      "headline": "BOJ Holds at 1.0%, 10-Year JGB at ~2.78%; Japanese Investors Sold $29.6bn US Treasuries in Q1 2026",
+      "summary": "The Bank of Japan held its policy rate at 1.0% on August 1 (passing 8-1 with one dissenter calling for 1.25%), while the 10-year JGB yield hovers near 2.78%\u2014over 70bps higher YTD\u2014and Tokyo suspected of FX intervention to support the yen. A new BOJ review published August 4 examines market impact of its ongoing JGB purchase reductions, a critical watch item as Japanese investors shed $29.6bn of US Treasuries in Q1 2026 alone.",
+      "as_of": "2026-08-05",
+      "sources": [
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://www.boj.or.jp/en/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japanese net sales of foreign bonds (US Treasuries, $bn rolling 4-quarter)",
+        "type": "value",
+        "rubric": "Measures repatriation flow as domestic JGB yields rise. Sources: Japan MOF quarterly TIC-equivalent data. Threshold: <$20bn/yr = 0 ok; $20-60bn/yr = 1 elevated; >$60bn/yr = 2 disorderly (removes a structural buyer from UST market, amplifying basis-trade and fiscal risks).",
+        "sources": [
+          "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+          "https://www.boj.or.jp/en/"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan story tracks USD/JPY, 30yr JGB yield, and Takaichi financing clarity, but has no indicator capturing the capital-flow feedback loop: as domestic JGB yields become attractive at 2.78%+, Japanese life insurers and pension funds repatriate foreign bond holdings, withdrawing a historically reliable marginal buyer from the US Treasury market. At $29.6bn in Q1 alone, this is on pace for ~$120bn/yr\u2014a quantity large enough to materially tighten UST supply/demand and interact with s1_basis_trade. This gap is material and distinct from existing indicators.",
+      "status": "pending",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "sightings": 1,
+      "id": "boj-holds-at-1-0-10-year-jgb-at-2-78-japanese-in-1d54a6"
+    },
+    "global-oil-demand-fell-5-mb-d-yoy-in-q2-2026-on--f90d73": {
+      "headline": "Global Oil Demand Fell ~5 mb/d YoY in Q2 2026 on Hormuz Shock; IEA Coordinated 400mn-Barrel SPR Release",
+      "summary": "Per IEA data cited by multiple sources this week, global oil demand in Q2 2026 fell by nearly 5 mb/d year-on-year as the Hormuz closure rippled through supply chains, forcing the IEA's 32 members to coordinate a release of over 400 million barrels from strategic petroleum reserves\u2014one of the largest ever. China drew heavily on its estimated 1.5bn-barrel stockpile rather than competing for spot barrels.",
+      "as_of": "2026-08-01",
+      "sources": [
+        "https://www.wnd.com/2026/08/disruptions-multiple-fronts-put-oil-markets-brink/",
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+        "https://www.allianz-trade.com/en_SG/insights/global-economic-insights/2026-middle-east-conflict.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "IEA strategic reserve buffer remaining (% of full 90-day import cover)",
+        "type": "band",
+        "rubric": "Tracks IEA collective strategic petroleum reserve (SPR) adequacy after drawdowns. 0 = >80% cover (adequate); 1 = 60-80% cover (depleted, limited headroom for further shock); 2 = <60% cover (critically low, next supply shock would hit prices immediately). Sources: IEA Monthly Oil Market Report, US DOE SPR inventory levels, IEA member state submissions. After ~400mn-barrel coordinated release in 2026, this buffer deserves explicit tracking.",
+        "sources": [
+          "https://www.wnd.com/2026/08/disruptions-multiple-fronts-put-oil-markets-brink/",
+          "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "s20_sea_lanes currently tracks Hormuz status, WTI price, and cable incidents, but has no indicator for the 'insurance stock' of the global emergency response system. After the largest coordinated SPR release in history (400mn+ barrels), the ability to buffer a future supply shock is materially degraded. If the Hormuz interim deal collapses or a new shock hits before reserves are rebuilt, the price response would be far more severe than during the initial February shock. This gap is directly relevant to s18_food_fertilizer and s4_dev_debt as well.",
+      "status": "pending",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "sightings": 1,
+      "id": "global-oil-demand-fell-5-mb-d-yoy-in-q2-2026-on--f90d73"
     }
   },
-  "generated": "2026-08-04",
+  "generated": "2026-08-05",
   "model": "claude-sonnet-4-6",
   "new_count": 2,
-  "pending_count": 141
+  "pending_count": 143
 }
