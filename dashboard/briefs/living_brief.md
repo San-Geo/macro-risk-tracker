@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-08-07 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-08-10 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 7.2/10** — Set 1 6.0, Set 2 5.0, Set 3 4.5, Set 4 6.5, Set 5 5.5.
+**Overall risk 6.7/10** — Set 1 5.8, Set 2 5.2, Set 3 4.5, Set 4 6.2, Set 5 5.5.
 
 
 ## Set 1 — Funding & Leverage
@@ -13,7 +13,7 @@ Hedge funds run a highly leveraged arbitrage between Treasury cash bonds and fut
 
 *Indicators watched:* SOFR minus EFFR (%), MOVE index (Treasury volatility), SEC central clearing on track (0 ok / 1 slipping / 2 delayed)
 
-### Japan fiscal / JGB / carry trade — 8/10 (High)
+### Japan fiscal / JGB / carry trade — 7/10 (High)
 
 Decades of near-zero rates made Japan the funding leg of a vast global carry trade. As the BoJ normalizes and JGB yields rise, fiscal financing gets harder and carry unwinds can transmit stress worldwide - the August 2024 mini-crash was a preview.
 
@@ -46,7 +46,7 @@ AI infrastructure spending vastly exceeds current AI revenue, increasingly finan
 
 *Indicators watched:* US investment-grade OAS (%) - big-issuer proxy, AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast), GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)
 
-### CRE maturity wall / regional banks — 5/10 (Elevated)
+### CRE maturity wall / regional banks — 6/10 (Elevated)
 
 A wall of commercial real-estate loans - especially office - matures into higher rates and lower valuations, concentrated at regional banks. Rising delinquencies and 'extend and pretend' practices defer, rather than resolve, the losses.
 
@@ -94,7 +94,7 @@ Aging demographics and underfunded public pensions create slow fiscal pressure, 
 
 ## Set 4 — Geoeconomics & Trade Weapons
 
-### China's price spillover (deflation or cost-push) — 7/10 (High)
+### China's price spillover (deflation or cost-push) — 6/10 (Elevated)
 
 China's factory-gate prices spill into global goods markets in BOTH directions: years of PPI deflation exported disinflation and squeezed competitors, while a sharp 2026 reversal to positive PPI (energy/commodity cost-push) now exports input-cost pressure. Either large swing is destabilising; the indicator is scored on the size of the move, not its sign.
 
