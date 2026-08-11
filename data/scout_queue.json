@@ -174,13 +174,12 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "The June 17 US-Iran Memorandum of Understanding to reopen the Strait of Hormuz broke down in early July after renewed attacks on commercial vessels, leaving the strait effectively closed to routine commercial shipping as of 30 July. UN trade data show combined export volumes for 12 key Hormuz-dependent product categories fell 54% year-on-year through April, with LNG contracting 95%, and fertilizer, chemicals, and aluminium all materially affected.",
-      "as_of": "2026-08-07",
+      "summary": "Five months into the US-Israel-Iran conflict, commercial ship transits through the Strait of Hormuz have collapsed from ~130/day to 8\u201315/day as of August 4\u20136, 2026. Iran's Foreign Minister stated on August 10 that the strait will not reopen until Washington eases sanctions and pays war reparations, blocking ~20% of global oil supply.",
+      "as_of": "2026-08-10",
       "sources": [
-        "https://carraglobe.com/strait-of-hormuz-closure-2026/",
-        "https://news.un.org/en/story/2026/08/1168074",
-        "https://www.eia.gov/todayinenergy/detail.php?id=67865",
-        "https://www.brookings.edu/articles/from-chokepoint-to-crisis-the-strait-of-hormuz-and-global-oil-markets/"
+        "https://www.aljazeera.com/economy/2026/8/10/oil-prices-climb-as-iranian-demands-cloud-outlook-for-strait-of-hormuz",
+        "https://www.brookings.edu/articles/from-chokepoint-to-crisis-the-strait-of-hormuz-and-global-oil-markets/",
+        "https://www.congress.gov/crs-product/R45281"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -188,12 +187,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The strait is now in state '2 closed' after the MOU breakdown. This is directly captured by s20_sea_lanes Hormuz/Red Sea status indicator and also cascades into s18_food_fertilizer (fertilizer inputs via Hormuz, indicator: Hormuz/Gulf disruption = 2 cut) and s2_japan (Japan sourced 91% of crude from Hormuz-dependent economies, compounding BOJ/yen stress). The re-closure after a false diplomatic resolution is a material escalation vs. prior tracker state.",
+      "rationale": "Hormuz is the primary indicator for s20_sea_lanes. Ship traffic has near-collapsed (8\u201315 transits/day vs 130 pre-war), Iran is demanding sovereign conditions for reopening, and the disruption is now 5+ months old \u2014 the indicator should read 2 (closed). This is the highest-materiality event in the scan and directly also pressures s18_food_fertilizer (fertilizer inputs through Gulf) and s20's WTI crude sub-indicator.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-11",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 18
+      "sightings": 19
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
@@ -990,12 +989,12 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "The IEA published a report (mid-July 2026) quantifying that China's planned expanded rare-earth export restrictions \u2014 currently suspended until November 10, 2026 \u2014 put $6.5 trillion in global downstream production at risk, with the US and Europe accounting for nearly half of exposure; meanwhile China formalized a public-reporting enforcement mechanism for violations effective July 1, 2026, and detained Japanese nationals in May for alleged rare-earth smuggling. The November 2026 suspension expiry is now a concrete hard-deadline risk.",
-      "as_of": "2026-07-16",
+      "summary": "S&P Global and China Briefing confirm that the one-year suspension of China's Oct-2025 rare-earth export controls (covering holmium, erbium, thulium, europium, ytterbium and associated technologies) is set to expire November 10, 2026. The earlier April 2025 controls and the broader dual-use licensing architecture remain fully intact throughout.",
+      "as_of": "2026-06-30",
       "sources": [
-        "https://www.semafor.com/article/07/16/2026/china-rare-earth-export-curbs-risk-65-trillion-in-downstream-production",
-        "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/",
-        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals"
+        "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2026/6/china-tightens-rare-earth-export-curbs-on-10-us-companies-103014947",
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1003,12 +1002,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The IEA's $6.5 trillion quantification gives the suspension-expiry risk a concrete economic magnitude for the first time. The Nov-2026 deadline means the 'expiring' flag (score=1) is now active and approaching 'lapsed' territory (score=2) in four months. China's July 1 enforcement mechanism and the Japanese nationals' detention signal active \u2014 not just threatened \u2014 enforcement, upgrading the license-flow indicator toward 'slowing' (score=1). This is directly and precisely captured by s6_rare_earths' existing indicators and materially updates their readings.",
+      "rationale": "The Nov-2025 pause status indicator for s6_rare_earths is the exact vehicle to capture this development. The pause expires in ~90 days (November 10, 2026), with active enforcement escalation already underway (foreign national detentions, MOFCOM reporting mechanism). The indicator should be moved from 0 (extended) to 1 (expiring) immediately given the confirmed expiry date and absence of any diplomatic extension signal. This is among the highest-materiality near-term hard deadlines in the tracker.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-08-11",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 9
+      "sightings": 10
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -2960,23 +2959,23 @@
     },
     "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0": {
       "headline": "China June PPI +4.1% YoY (4-year high) driven by Iran energy shock\u2014but MoM turned negative and consumer goods PPI still -0.9%, revealing a dangerous bifurcation",
-      "summary": "China's producer price index fell 3.6% year-on-year in June 2026, worse than the May reading of -3.3% and below consensus, marking 33 straight months of PPI deflation driven by overcapacity in EVs, solar, and batteries. China's exports to the US are down ~9.7% this year from US tariffs, but exports to the rest of the world are up 6%, continuing the 'deflation export' dynamic.",
-      "as_of": "2026-07-09",
+      "summary": "Two credible sources filed divergent July 2026 PPI readings on August 9\u201310: Bloomberg reported PPI at +3.5% YoY (slowing from +4.1%, citing Iran-war oil-shock fading), while Investing.com reported \u20133.5% YoY (deflation moderating from \u20134.1%). Both agree domestic demand remains muted and CPI decelerated, underscoring persistent structural deflation risk regardless of the oil-price overlay.",
+      "as_of": "2026-08-10",
       "sources": [
-        "https://www.fxstreet.com/amp/analysis/chinas-ppi-slides-australian-dollar-steady-202507091232",
-        "https://markets.financialcontent.com/stocks/article/marketminute-2026-2-11-the-great-deflation-export-how-chinas-factory-woes-are-colliding-with-the-new-tariff-era"
+        "https://www.bloomberg.com/news/articles/2026-08-09/china-s-inflation-cools-as-oil-shock-of-iran-war-starts-to-ease",
+        "https://www.investing.com/news/economic-indicators/china-cpi-eases-ppi-deflation-moderates-in-july-4847797"
       ],
-      "materiality": "medium",
+      "materiality": "high",
       "classification": "existing_indicator",
       "target_story": "s5_china_deflation",
       "target_indicator": "China PPI YoY (%) - large swing either way is worse",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "China PPI YoY has moved to -3.6% in June 2026, the worst reading since July 2023 per FXStreet (July 9, 2026). This is a direct update to the primary indicator for s5_china_deflation. The 33-month unbroken deflation streak (FXStreet) and the tariff-driven redirection of surplus goods to non-US markets (MarketMinute, Feb 2026) confirms the 'price spillover' risk remains escalating rather than fading, particularly for EM trading partners. The New tariff/anti-dumping actions sub-indicator should remain at 1\u20132 (rising/escalating) given ongoing US reciprocal tariffs and EU anti-dumping probes on Chinese EVs.",
+      "rationale": "Fresh July 2026 official NBS data released August 9\u201310 directly updates the primary China PPI YoY indicator for s5_china_deflation. The data conflict between the two sources (both citing NBS) itself is a red flag warranting tracker attention: one reading suggests imported-oil inflation masking structural deflation; the other confirms deflation is merely moderating. Either way, the PPI indicator needs updating and the story remains active \u2014 the tracker rubric flags 'large swing either way is worse.'",
       "status": "pending",
       "first_seen": "2026-07-15",
-      "last_seen": "2026-08-07",
-      "sightings": 7,
+      "last_seen": "2026-08-11",
+      "sightings": 8,
       "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
     },
     "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328": {
@@ -4871,10 +4870,130 @@
       "last_seen": "2026-08-10",
       "sightings": 1,
       "id": "hormuz-closure-triggers-systemic-fertilizer-lng--aec9c3"
+    },
+    "japan-30-year-jgb-yield-hits-3-96-august-10-as-j-c24190": {
+      "headline": "Japan 30-year JGB yield hits 3.96% (August 10) as Japan directly intervenes in yen; carry-trade migration to EUR/CHF funding limits contagion but does not eliminate it",
+      "summary": "Japan's 30-year JGB yield rose to 3.96% on August 10, up 88bp year-on-year, while the 10-year reached 2.81%. Japan conducted direct FX intervention to support the yen; the Bloomberg EM Carry Index fell only ~1% (vs 4% in August 2024), as investors have shifted funding to euros and Swiss francs, partially defusing near-term systemic risk.",
+      "as_of": "2026-08-10",
+      "sources": [
+        "https://tradingeconomics.com/japan/30-year-bond-yield",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.japantimes.co.jp/business/2026/08/06/markets/emerging-market-yen-carry-trade/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japan FX intervention frequency (rolling 30-day count of MoF/BOJ confirmed interventions)",
+        "type": "band",
+        "rubric": "0 = no intervention in 30 days; 1 = 1\u20132 interventions (verbal or limited); 2 = 3+ interventions or multi-billion direct action",
+        "sources": [
+          "https://www.japantimes.co.jp/business/2026/08/06/markets/emerging-market-yen-carry-trade/",
+          "https://tradingeconomics.com/japan/30-year-bond-yield"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan story tracks USD/JPY and the 30-year JGB yield \u2014 both are flashing amber (3.96% 30yr, yen under pressure despite intervention). However, no existing indicator captures the *frequency and scale of MoF/BOJ direct FX interventions*, which is the novel August 2026 development. Intervention frequency is a leading stress gauge: repeated actions signal the BOJ is losing the battle to contain yen weakness passively. The muted carry-index response (only \u20131%) is noteworthy but the shift of funding to EUR/CHF is a structural change worth tracking separately.",
+      "status": "pending",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "sightings": 1,
+      "id": "japan-30-year-jgb-yield-hits-3-96-august-10-as-j-c24190"
+    },
+    "china-activates-enforcement-teeth-on-rare-earth--8ad4ee": {
+      "headline": "China activates enforcement teeth on rare-earth controls: foreign nationals detained in Dalian, Chinese exec arrested for germanium smuggling",
+      "summary": "Morgan Lewis (July 2026) confirmed that two Japanese nationals were detained in Dalian in May 2026 for alleged rare-earth smuggling, the first known foreign-national detention under China's export-control framework. Separately, a Chinese optics company chairman was arrested in June 2026 for falsely declaring germanium-containing lenses to circumvent export licenses. MOFCOM Announcement No. 26 of 2026 formalised a public reporting mechanism for violations, signalling systematic enforcement escalation ahead of the November 10, 2026 expiry of the Oct-2025 rare-earth control pause.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+        "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2026/6/china-tightens-rare-earth-export-curbs-on-10-us-companies-103014947",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s6_rare_earths",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "China RE enforcement actions (detentions, prosecutions, MOFCOM violation disclosures, rolling 90-day count)",
+        "type": "band",
+        "rubric": "0 = none; 1 = 1\u20132 isolated cases (company-level fines or warnings); 2 = foreign-national detentions, criminal prosecutions, or sector-wide compliance sweeps",
+        "sources": [
+          "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+          "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The s6_rare_earths story tracks export-license flow and the Nov-2025 pause status, but has no indicator for *enforcement intensity*. The arrest of foreign nationals and Chinese executives for circumventing controls is qualitatively new: it signals Beijing is hardening the administrative architecture regardless of the diplomatic pause, and creates compliance chilling effects on downstream manufacturers. With the pause expiring November 10, 2026, enforcement escalation now serves as a leading indicator of what the post-pause regime will look like. This is a story_gap because the materiality is high but no existing indicator captures it.",
+      "status": "pending",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "sightings": 1,
+      "id": "china-activates-enforcement-teeth-on-rare-earth--8ad4ee"
+    },
+    "hormuz-driven-energy-shock-triggers-largest-oil--b2eee4": {
+      "headline": "Hormuz-driven energy shock triggers largest oil supply disruption in history: OPEC output down 30%+, IEA releases 400 million barrels of strategic reserves",
+      "summary": "The Brookings Institution and IEA confirm that OPEC production has fallen more than 30% since the February 28, 2026 outbreak of the US-Israel-Iran conflict, with Hormuz ship traffic at near-standstill. The IEA declared this the largest supply disruption in the history of the global oil market and coordinated a 400-million-barrel strategic-reserve release \u2014 now effectively exhausted as collateral.",
+      "as_of": "2026-08-10",
+      "sources": [
+        "https://www.brookings.edu/articles/from-chokepoint-to-crisis-the-strait-of-hormuz-and-global-oil-markets/",
+        "https://spglobal.com/energy/en/news-research/latest-news/crude-oil/031226-factbox-iran-vows-to-keep-hormuz-closed-as-oil-hits-multiyear-highs",
+        "https://tradingeconomics.com/commodity/heating-oil/news/532982"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Strategic petroleum reserve (SPR) depletion & oil-shock macro pass-through",
+        "why": "The Iran war has triggered the largest oil supply disruption in recorded history, with a coordinated 400-million-barrel SPR release now largely deployed. Once strategic buffers are exhausted, the next supply shock \u2014 or prolonged Hormuz closure \u2014 hits market prices directly with no policy cushion. This creates a distinct second-order risk not captured by s20_sea_lanes (which tracks the shipping-lane status) or s18_food_fertilizer (fertilizer inputs): the depletion of the global SPR buffer itself is a macro-financial stress vector driving inflation, sovereign energy import bills, EM currency pressure, and potentially forcing central banks to choose between fighting inflation and supporting growth.",
+        "proposed_level": 8,
+        "set": 5,
+        "indicators": [
+          {
+            "label": "IEA / US SPR days-of-import cover (days)",
+            "type": "value",
+            "rubric": "Current cover vs. 90-day IEA target; >90 = green, 60\u201390 = amber, <60 = red",
+            "sources": [
+              "https://www.brookings.edu/articles/from-chokepoint-to-crisis-the-strait-of-hormuz-and-global-oil-markets/",
+              "https://tradingeconomics.com/commodity/heating-oil/news/532982"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Brent crude spot (USD/bbl)",
+            "type": "value",
+            "rubric": "Price level: <$80 = easing, $80\u2013100 = elevated, >$100 = acute",
+            "sources": [
+              "https://www.allianz-trade.com/en_SG/insights/global-economic-insights/2026-middle-east-conflict.html"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "G7/IEA coordinated SPR release status (0 available / 1 partially deployed / 2 exhausted)",
+            "type": "band",
+            "rubric": "0 = reserves intact and available for deployment; 1 = partial release underway; 2 = cumulative releases exceed IEA-estimated usable buffer (~1.4bn bbl across IEA members)",
+            "sources": [
+              "https://tradingeconomics.com/commodity/heating-oil/news/532982",
+              "https://spglobal.com/energy/en/news-research/latest-news/crude-oil/031226-factbox-iran-vows-to-keep-hormuz-closed-as-oil-hits-multiyear-highs"
+            ],
+            "suggested_weight": 0.35
+          }
+        ]
+      },
+      "rationale": "The existing tracker captures s20_sea_lanes (Hormuz status, WTI price, cable incidents) and s18_food_fertilizer (Hormuz disruption to fertilizer inputs). Neither story covers the *depletion of the SPR buffer as a systemic macro risk*. With 400 million barrels already released \u2014 the largest coordinated draw in IEA history \u2014 the world is materially closer to a state where a second disruption or prolonged closure produces unmitigated price spikes. This is a distinct, traceable risk with its own indicators (days-of-cover, Brent, SPR status) and warrants a new story at proposed level 8 given the potential for global stagflation, EM balance-of-payment crises, and central bank policy dilemmas.",
+      "status": "pending",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "sightings": 1,
+      "id": "hormuz-driven-energy-shock-triggers-largest-oil--b2eee4"
     }
   },
-  "generated": "2026-08-10",
+  "generated": "2026-08-11",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 150
+  "new_count": 3,
+  "pending_count": 153
 }
