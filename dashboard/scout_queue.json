@@ -501,13 +501,14 @@
     },
     "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
       "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
-      "summary": "The June 2026 US-Iran ceasefire framework collapsed in early July after both sides resumed tit-for-tat strikes on commercial and military targets in and around the Strait of Hormuz. CENTCOM confirmed reimposition of the naval blockade on July 14, with tanker traffic 'essentially stopped' and Brent crude spiking above $80/bbl before settling near $78/bbl.",
-      "as_of": "2026-07-15",
+      "summary": "Iran and Oman agreed on geographical coordinates for a consolidated two-way shipping corridor on August 5, described as 'a potential step toward reopening,' but Iranian officials explicitly stated the strait will not return to pre-war transit rules and that US must meet additional conditions; a joint statement remains in final drafting. By mid-July, attack volumes on commercial shipping were the highest since April 2026, and cross-strait traffic remains severely disrupted, with ~25% of global crude and 19% of LNG normally transiting.",
+      "as_of": "2026-08-07",
       "sources": [
-        "https://www.cfr.org/articles/strait-hormuz-us-iran-maritime-flash-point",
-        "https://jpt.spe.org/us-iran-conflict-flares-back-up-disrupts-strait-of-hormuz-once-again",
-        "https://news.un.org/en/story/2026/07/1167898",
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+        "https://www.bloomberg.com/news/articles/2026-08-05/iran-says-agreement-on-hormuz-shipping-route-reached-with-oman",
+        "https://www.cnn.com/2026/08/05/middleeast/hormuz-iran-oman-agreement-analysis-intl",
+        "https://www.congress.gov/crs-product/R45281",
+        "https://www.globalsecurity.org/wmd/library/news/iran/2026/08/iran-260803-irna05.htm",
+        "https://tradingeconomics.com/japan/government-bond-yield"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -515,12 +516,12 @@
       "target_indicator": "Hormuz/Red Sea status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The renewed blockade directly re-escalates the Hormuz/Red Sea status indicator from 'contested' toward 'closed,' driving WTI/Brent higher and threatening fertilizer and LNG flows simultaneously (cross-impact on s18_food_fertilizer). The ceasefire collapse is the single highest-materiality event of the week: CENTCOM's July 14 blockade reimposition is a discrete, confirmed status change that the tracker must register. WTI is now ~$73/bbl and trending higher, and tanker traffic has 'essentially stopped' per Rystad Energy\u2014both direct indicator reads.",
+      "rationale": "The Iran-Oman partial corridor deal is the week's single most material geopolitical event for commodity markets. It moves Hormuz status from 2-closed toward 1-contested (not yet 0-open), since Iran retains control demands and US preconditions remain unmet. The JGB data also shows the oil-price rebound from renewed Hormuz tensions on August 10 re-elevated Japanese yields, illustrating the cross-story contagion path (s20 \u2192 s2, s18, s16). The tracker's Hormuz/Red Sea status should be updated from 2 to 1-contested and WTI should be refreshed.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-08-12",
       "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
-      "sightings": 8
+      "sightings": 9
     },
     "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
       "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
@@ -1363,10 +1364,12 @@
     },
     "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9": {
       "headline": "China PPI Surges to +3.9% YoY in May (3rd Consecutive Monthly Rise, Fastest Since July 2022) Driven by Iran-War Energy Spike",
-      "summary": "China's National Bureau of Statistics reported July PPI at -3.5% year-on-year (published 9 August 2026), narrowing from -4.1% in June but still missing the consensus estimate of -3.8%, while CPI also rose less than expected, underscoring muted domestic demand and ongoing deflation export risk to global goods markets.",
-      "as_of": "2026-08-09",
+      "summary": "Multiple sources confirm China has now experienced roughly ten consecutive quarters of deflationary pressure \u2014 the longest since its market-economy transition \u2014 with CPI averaging 0% in 2025 and forecast at only 0.8% for 2026, well below Beijing's 2% target. Producer prices have been negative for over three years, existing home prices are down 22.5% from 2021 peaks, and youth unemployment hit 16.9%, underscoring the disconnect between headline GDP and domestic demand.",
+      "as_of": "2026-08-05",
       "sources": [
-        "https://www.investing.com/news/economic-indicators/china-cpi-eases-ppi-deflation-moderates-in-july-4847797"
+        "https://thetribune.asia/china-deflation-2026/",
+        "https://statisticsoftheworld.com/blog/china-economy-2026-deflation-property-crisis",
+        "https://www.eurasiagroup.net/live-post/risk-7-chinas-deflation-trap"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -1374,11 +1377,11 @@
       "target_indicator": "China PPI YoY (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "A July PPI print of -3.5% YoY is a fresh data point for the s5_china_deflation tracker's primary indicator. The miss versus consensus (market expected -3.8%, got -3.5% but still deeply negative) signals that deflation is moderating only slowly despite stimulus, and the persistent gap vs. targets keeps price-spillover risk elevated. The Hormuz-driven global energy inflation creates an unusual macro crosswind: Chinese factory-gate prices falling while Western import prices rise from energy, complicating monetary policy globally.",
+      "rationale": "The 10-consecutive-quarter deflation milestone is a qualitative escalation that the tracker's China PPI YoY indicator captures numerically but whose persistence and structural depth (property wealth destruction, zombie-firm credit rollover, youth unemployment) warrants a flag-level update. PPI has been negative for 36+ months \u2014 well into the 'large swing' risk threshold on the downside. This also feeds into new anti-dumping tariff escalation risks (s5's third indicator) as trading partners respond to Chinese export-price pressure.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-08-10",
-      "sightings": 2,
+      "last_seen": "2026-08-12",
+      "sightings": 3,
       "id": "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9"
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
@@ -2029,11 +2032,12 @@
     },
     "us-china-tariff-regime-restructured-post-supreme-6aede7": {
       "headline": "US-China tariff regime restructured post-Supreme Court IEEPA ruling: effective rate ~30% under Section 301/232 framework; USTR Section 301 forced-labor investigation adds potential 12.5% layer",
-      "summary": "Following the US Supreme Court's strike-down of IEEPA-based tariffs (effective February 2026), US tariffs on China were restructured around a 15% global tariff plus remaining Section 301/232 duties, keeping the effective rate near 30%\u2014still the highest of any country. On June 2, USTR proposed an additional 12.5% tariff on China stemming from a new Section 301 forced-labor investigation, with the two investigations set to conclude this summer, threatening to push effective rates higher again.",
-      "as_of": "2026-06-30",
+      "summary": "China's unrelenting export-price deflation \u2014 driven by overcapacity in EVs, steel, chemicals, and solar \u2014 has led to a documented escalation in anti-dumping and countervailing-duty actions by the EU, US, India, and Brazil in 2026, with Eurasia Group noting that 'Beijing will keep trying to export its way out, flooding global markets with cheap goods.' The structural mechanism is now ten quarters old and self-reinforcing: price cuts \u2192 margin collapse \u2192 further price cuts, with global trading partners increasingly moving from 'talk' to 'action' on trade-defense measures.",
+      "as_of": "2026-08-05",
       "sources": [
-        "https://www.china-briefing.com/news/us-china-tariff-rates-2025/",
-        "https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/"
+        "https://www.eurasiagroup.net/live-post/risk-7-chinas-deflation-trap",
+        "https://thetribune.asia/china-deflation-2026/",
+        "https://statisticsoftheworld.com/blog/china-economy-2026-deflation-property-crisis"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -2041,11 +2045,11 @@
       "target_indicator": "New tariff/anti-dumping actions",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The USTR's June 2 proposed 12.5% Section 301 forced-labor tariff on China, with a summer conclusion date, is a material new escalation event that fits directly under s5's 'New tariff/anti-dumping actions' indicator (moving it from 1-rising to 2-escalating). The IEEPA restructuring also changes the legal architecture of US-China trade policy in ways that affect the durability and predictability of the current ~30% effective tariff floor, creating ongoing uncertainty that compounds China's domestic deflation dynamic (CPI near zero, PPI negative, fourth year of deflation per CNBC March 2026).",
+      "rationale": "The anti-dumping/tariff indicator for s5 should move from 1-rising toward 2-escalating given the structural and now decade-long deflation cycle forcing Chinese exporters to continuously slash prices. This is distinct from the PPI update (Item 4) because it captures the foreign policy response \u2014 trade-defense actions \u2014 rather than the domestic Chinese price signal. Combined, Items 4 and 6 suggest s5 risk is systemically elevated across all three of its indicators simultaneously, warranting a tracker-level severity upgrade.",
       "status": "pending",
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05",
-      "sightings": 1,
+      "last_seen": "2026-08-12",
+      "sightings": 2,
       "id": "us-china-tariff-regime-restructured-post-supreme-6aede7"
     },
     "japan-s-takaichi-government-pauses-boj-bond-tape-81e119": {
@@ -2454,23 +2458,26 @@
     },
     "japan-stagflation-risk-materialises-boj-holds-at-5d0950": {
       "headline": "Japan Stagflation Risk Materialises: BOJ Holds at 0.75%, Core Inflation Forecast Raised to 2.8%, Growth Cut to 0.5%",
-      "summary": "At its April 28 meeting (6-3 vote), the BOJ kept rates at 0.75% while sharply raising its core CPI forecast to 2.8% (from 1.9%) and cutting FY2026 growth to 0.5% (from 1.0%), citing Iran-war energy cost pass-through and deteriorating terms of trade. Oxford Economics described a 'very light stagflation-like situation' for Japan, with real disposable incomes persistently negative\u2014a dynamic that complicates the BOJ's ability to hike to defend the yen while the government's Basic Policy blueprint simultaneously pushes for accommodative monetary conditions.",
-      "as_of": "2026-04-28",
+      "summary": "Japan's ruling LDP unanimously cleared a two-year cut in the food consumption tax from 8% to 1% on August 5, with cabinet endorsement following the same day, despite the IMF warning it would 'erode fiscal space' and no credible financing mechanism identified. Separately, on July 31 the US and Japan conducted a rare joint yen-buying intervention after USD/JPY hit 40-year lows, with the 10-year JGB yield at ~2.81% as of August 11 and BoJ September rate-hike expectations rising sharply.",
+      "as_of": "2026-08-05",
       "sources": [
-        "https://www.cnbc.com/2026/04/28/bank-of-japan-keeps-policy-rate-steady-cpi-iran-war-gdp.html",
-        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/"
+        "https://money.usnews.com/investing/news/articles/2026-08-04/japans-ruling-party-backs-takaichis-costly-food-tax-cut-plan-despite-fiscal-concerns",
+        "https://www.cnbc.com/2026/08/04/japan-takaichi-food-tax-cut-jgb-boj.html",
+        "https://newsonjapan.com/article/150259.php",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-10-august-2026/"
       ],
-      "materiality": "medium",
+      "materiality": "high",
       "classification": "existing_indicator",
       "target_story": "s2_japan",
       "target_indicator": "Takaichi plan financing clarity",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The existing s2_japan indicator 'Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)' should be updated toward 2 (disorderly): the government's \u00a5370 trillion spending blueprint combined with explicit pressure on the BOJ to stay accommodative, a 6-3 split vote, and a core inflation forecast well above the 2% target creates financing-clarity disorder. The yen near 40-year lows amplifies the USD/JPY risk indicator. Taken together with item #1 above (the Basic Policy shock), s2_japan is the highest-priority story requiring indicator updates this week.",
+      "rationale": "The LDP's formal approval of the food-tax cut with no identified funding source and cross-party opposition within the LDP itself directly worsens 'Takaichi plan financing clarity' from 1-unclear toward 2-disorderly. The simultaneous US-Japan coordinated FX intervention and BOJ September hike expectations create a reinforcing loop: fiscal loosening vs. monetary tightening, with Japanese investors already having sold $29.6bn of US Treasuries in Q1 2026. This is a direct hit on all three s2 indicators simultaneously and warrants an upgrade in the tracker's risk level.",
       "status": "pending",
       "first_seen": "2026-07-07",
-      "last_seen": "2026-07-07",
-      "sightings": 1,
+      "last_seen": "2026-08-12",
+      "sightings": 2,
       "id": "japan-stagflation-risk-materialises-boj-holds-at-5d0950"
     },
     "japan-basic-policy-shock-jgb-yields-near-30-year-f7bf59": {
@@ -4990,10 +4997,100 @@
       "last_seen": "2026-08-11",
       "sightings": 1,
       "id": "hormuz-driven-energy-shock-triggers-largest-oil--b2eee4"
+    },
+    "japan-us-coordinated-fx-intervention-july-31-str-7cd83d": {
+      "headline": "Japan\u2013US coordinated FX intervention July 31: structural yen weakness unresolved as BOJ faces fiscal-monetary trilemma",
+      "summary": "The US Treasury and Japan's Finance Ministry conducted a joint yen-buying, euro-selling intervention on July 31 \u2014 the first US-assisted yen intervention in decades \u2014 after USD/JPY fell to 40-year lows; Treasury Secretary Bessent publicly confirmed it on August 3. Analysts at MUFG and Investing.com note the intervention has not resolved the underlying drivers (rate gap, fiscal risk, import inflation), and markets still assign a high probability of a BoJ rate hike in September, which would further raise Japan's debt-servicing cost against a backdrop of the Takaichi tax cut.",
+      "as_of": "2026-08-03",
+      "sources": [
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-10-august-2026/",
+        "https://newsonjapan.com/article/150259.php",
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield",
+        "https://tradingeconomics.com/japan/government-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US-Japan coordinated FX intervention flag (0 none / 1 unilateral BoJ / 2 joint US-Japan)",
+        "type": "band",
+        "rubric": "0 = no intervention; 1 = BoJ acting alone (standard); 2 = joint US Treasury + BoJ intervention signaling systemic yen stress. Current reading: 2. Reset to 1 when joint action ceases; to 0 after 90 days of market stability.",
+        "sources": [
+          "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-10-august-2026/",
+          "https://newsonjapan.com/article/150259.php"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "s2_japan tracks USD/JPY as a value indicator but has no binary flag for the qualitative escalation of a coordinated US-Japan intervention \u2014 a rare event last seen in 1998 and 2011. Joint intervention signals that yen weakness has crossed a threshold of systemic concern for both sovereigns, creating a distinct macro signal beyond the spot rate itself. Without this flag, the tracker cannot distinguish between routine yen drift and a structural crisis requiring cross-border policy coordination.",
+      "status": "pending",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12",
+      "sightings": 1,
+      "id": "japan-us-coordinated-fx-intervention-july-31-str-7cd83d"
+    },
+    "obbba-enacted-us-debt-to-gdp-projected-to-hit-12-9d22ed": {
+      "headline": "OBBBA enacted: US debt-to-GDP projected to hit 120\u2013129% by mid-2030s; FY2026 deficit at $1.4tn through June; next debt ceiling breach ~2027",
+      "summary": "The One Big Beautiful Bill Act raised the statutory debt ceiling to $41.1 trillion (+$5tn) and is projected by CBO to add $3.4tn to primary deficits over ten years, with CRFB estimating debt at 120% of GDP by FY2035 under conservative assumptions and 134% if tariff revenue falls short and temporary provisions are made permanent. The federal deficit for FY2026 reached $1.4tn through June, and BPC projects the new ceiling will be breached again in late winter\u2013mid-summer 2027.",
+      "as_of": "2026-08-01",
+      "sources": [
+        "https://am.jpmorgan.com/sg/en/asset-management/institutional/insights/market-insights/market-updates/on-the-minds-of-investors/unpacking-the-obbbas-impact-on-the-us-economy-fiscal-health-and-more/",
+        "https://www.crfb.org/blogs/top-13-fiscal-charts-2025",
+        "https://bipartisanpolicy.org/report/deficit-tracker/",
+        "https://www.cbo.gov/publication/62105"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US sovereign fiscal trajectory / Treasury supply shock",
+        "why": "The OBBBA structurally raises US borrowing needs by $3.4\u20135.5tn over the decade, with the next debt-ceiling breach expected in 2027. This creates a persistent Treasury supply overhang that interacts with at least four existing tracker stories (s1_basis_trade via MOVE and SOFR; s7_stablecoins via stablecoin Treasury demand; s12_gold_dedollar via USD reserve share; s4_dev_debt via global risk-free rate). It is distinct from all existing stories: s1 covers hidden leverage, not sovereign issuance dynamics; s4 covers developing-world debt, not the US itself; s12 covers de-dollarization drivers, not the primary supply-side cause. A dedicated story is warranted given the multi-year, structural, market-moving nature of the development.",
+        "proposed_level": 7,
+        "set": 3,
+        "indicators": [
+          {
+            "label": "US federal deficit (% of GDP, trailing 12 months)",
+            "type": "value",
+            "rubric": "Current ~6.0% of GDP. Threshold: >5% elevated / >7% severe. Sources: BPC Deficit Tracker (monthly), CBO.",
+            "sources": [
+              "https://bipartisanpolicy.org/report/deficit-tracker/",
+              "https://www.cbo.gov/publication/62105"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "US 10-year Treasury term premium (ACM model, bps)",
+            "type": "value",
+            "rubric": "Tracks investor demand compensation for fiscal risk. Rising term premium (>80bps) signals market is pricing sovereign supply risk. Source: NY Fed ACM daily.",
+            "sources": [
+              "https://am.jpmorgan.com/sg/en/asset-management/institutional/insights/market-insights/market-updates/on-the-minds-of-investors/unpacking-the-obbbas-impact-on-the-us-economy-fiscal-health-and-more/"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Treasury auction tail / primary dealer absorption rate (0 normal / 1 elevated / 2 systemic)",
+            "type": "band",
+            "rubric": "0 = primary dealers absorb <15% of auction; 1 = 15\u201325% (March 2026 episode: 24% of 2-yr); 2 = >25% or failed auction. Source: TreasuryDirect, BPC auction tracker.",
+            "sources": [
+              "https://bipartisanpolicy.org/report/deficit-tracker/"
+            ],
+            "suggested_weight": 0.35
+          }
+        ]
+      },
+      "rationale": "No existing tracker story captures the US sovereign as the risk entity. The OBBBA's enactment in 2025 and its now-visible fiscal math (debt at $39.6tn currently, ceiling breach 2027, deficit $1.4tn through June 2026) represents a new structural supply-of-safe-assets shock with direct read-through to Treasury volatility (MOVE), carry-trade funding costs, and the de-dollarization narrative. The BPC already documented weak Treasury auctions in March 2026 (primary dealers absorbing 24% of 2-yr note), which is a near-activation of the basis-trade amplifier. A standalone story is needed to track this upstream risk.",
+      "status": "pending",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12",
+      "sightings": 1,
+      "id": "obbba-enacted-us-debt-to-gdp-projected-to-hit-12-9d22ed"
     }
   },
-  "generated": "2026-08-11",
+  "generated": "2026-08-12",
   "model": "claude-sonnet-4-6",
-  "new_count": 3,
-  "pending_count": 153
+  "new_count": 2,
+  "pending_count": 155
 }
