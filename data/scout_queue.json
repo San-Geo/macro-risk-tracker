@@ -174,12 +174,12 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "Five months into the US-Israel-Iran conflict, commercial ship transits through the Strait of Hormuz have collapsed from ~130/day to 8\u201315/day as of August 4\u20136, 2026. Iran's Foreign Minister stated on August 10 that the strait will not reopen until Washington eases sanctions and pays war reparations, blocking ~20% of global oil supply.",
-      "as_of": "2026-08-10",
+      "summary": "The EIA's August 11 Short-Term Energy Outlook (released 2 days ago) confirms oil shipments through the Strait of Hormuz remain severely constrained through August, with only a gradual reopening assumed from September onward and ~0.6 mb/d of disruptions expected to persist through end-2027. Iran's top security official publicly stated the Strait will stay closed unless the US accepts Iran's conditions, re-spiking Brent to ~$105/bbl on July 23 after it had briefly fallen to $69 on a June US-Iran MOU.",
+      "as_of": "2026-08-11",
       "sources": [
-        "https://www.aljazeera.com/economy/2026/8/10/oil-prices-climb-as-iranian-demands-cloud-outlook-for-strait-of-hormuz",
-        "https://www.brookings.edu/articles/from-chokepoint-to-crisis-the-strait-of-hormuz-and-global-oil-markets/",
-        "https://www.congress.gov/crs-product/R45281"
+        "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+        "https://www.eia.gov/todayinenergy/detail.php?id=67865",
+        "https://www.zawya.com/en/capital-markets/china-and-asia-pacific/japan-bond-yields-rise-on-faster-boj-rate-hike-bets-inflation-concerns-428902"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -187,12 +187,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Hormuz is the primary indicator for s20_sea_lanes. Ship traffic has near-collapsed (8\u201315 transits/day vs 130 pre-war), Iran is demanding sovereign conditions for reopening, and the disruption is now 5+ months old \u2014 the indicator should read 2 (closed). This is the highest-materiality event in the scan and directly also pressures s18_food_fertilizer (fertilizer inputs through Gulf) and s20's WTI crude sub-indicator.",
+      "rationale": "The EIA's August 11 STEO is the freshest official confirmation that Hormuz transits remain severely constrained \u2014 the single most material sea-lane chokepoint for energy flows. The indicator should move to 2 (effectively closed to normal commercial transit) and WTI/Brent should be updated to ~$100-105/bbl range. This also has direct knock-on read-through to s2_japan (import inflation), s18_food_fertilizer (fertilizer feedstock), and s4_dev_debt (energy-import EM stress).",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-08-13",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 19
+      "sightings": 20
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
@@ -219,13 +219,13 @@
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
-      "summary": "Within a five-week window (June 22 \u2013 July 24, 2026), Beijing placed 10 US and 14 EU firms under new dual-use rare-earth and critical-mineral export restrictions, despite the nominal Nov-2025 one-year suspension of the broader October 2025 controls (set to expire 10 November 2026). The IEA has warned full enforcement could put USD 6.5 trillion of downstream production at risk.",
-      "as_of": "2026-07-24",
+      "summary": "China added 10 US entities \u2014 including Pentagon-backed MP Materials and USA Rare Earth \u2014 to its dual-use export control list on June 22, 2026, then expanded bans to 14 EU firms in July. Separately, a second wave of controls on holmium, erbium, thulium, europium, and ytterbium (originally due Nov 7, 2025) has been postponed to November 10, 2026.",
+      "as_of": "2026-07-15",
       "sources": [
+        "https://source.benchmarkminerals.com/article/china-targets-us-rare-earth-and-defence-linked-entities-with-dual-use-export-ban",
+        "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2026/6/china-tightens-rare-earth-export-curbs-on-10-us-companies-103014947",
         "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/",
-        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
-        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
-        "https://www.iea.org/commentaries/with-new-export-controls-on-critical-minerals-supply-concentration-risks-become-reality"
+        "https://foreignpolicy.com/2026/06/22/china-us-rare-earth-export-control-trade/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -233,12 +233,12 @@
       "target_indicator": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The blacklisting of 10 US firms on June 22 moves the 'US domestic RE producer blacklist' indicator from 0 to 1 (entity-specific ban). The parallel EU blacklisting of 14 firms on July 24 is not captured by any existing indicator and warrants a story_gap (see next item). The November 10, 2026 expiry of the broader pause is approaching, adding time-pressure to the tracker.",
+      "rationale": "The June 22 blacklisting of MP Materials and USA Rare Earth \u2014 the two leading US domestic RE producers \u2014 is a direct hit to the 'US domestic RE producer blacklist' indicator, which should move from 0 to 1 (entity-specific ban). The EU expansion in July and the delayed Wave-2 controls (now Nov 10, 2026) also update the 'Nov-2025 pause status' indicator: the pause is now formally extended (level 0 = extended), but the countdown to Nov 10 creates a concrete near-term escalation risk. Both indicators in s6_rare_earths require updating simultaneously.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-13",
       "id": "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6",
-      "sightings": 10
+      "sightings": 11
     },
     "hyperscaler-ai-capex-approaches-800bn-in-2026-67-03d0a0": {
       "headline": "Hyperscaler AI capex approaches $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027 \u2014 revenue gap concern widens",
@@ -1364,12 +1364,11 @@
     },
     "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9": {
       "headline": "China PPI Surges to +3.9% YoY in May (3rd Consecutive Monthly Rise, Fastest Since July 2022) Driven by Iran-War Energy Spike",
-      "summary": "Multiple sources confirm China has now experienced roughly ten consecutive quarters of deflationary pressure \u2014 the longest since its market-economy transition \u2014 with CPI averaging 0% in 2025 and forecast at only 0.8% for 2026, well below Beijing's 2% target. Producer prices have been negative for over three years, existing home prices are down 22.5% from 2021 peaks, and youth unemployment hit 16.9%, underscoring the disconnect between headline GDP and domestic demand.",
-      "as_of": "2026-08-05",
+      "summary": "China's July PPI printed -3.5% YoY (narrowing from -4.1% in June but missing the -3.8% consensus), marking 34 consecutive months of factory-gate deflation, with CPI also below expectations, underscoring persistent domestic demand weakness. Standard Chartered forecasts Chinese CPI may turn negative in August (-0.3% YoY) with food deflation potentially exceeding -4.5%.",
+      "as_of": "2026-08-09",
       "sources": [
-        "https://thetribune.asia/china-deflation-2026/",
-        "https://statisticsoftheworld.com/blog/china-economy-2026-deflation-property-crisis",
-        "https://www.eurasiagroup.net/live-post/risk-7-chinas-deflation-trap"
+        "https://www.investing.com/news/economic-indicators/china-cpi-eases-ppi-deflation-moderates-in-july-4847797",
+        "https://www.fxstreet.com/news/china-exports-likely-slowed-in-august-standard-chartered-202509021000"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -1377,11 +1376,11 @@
       "target_indicator": "China PPI YoY (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 10-consecutive-quarter deflation milestone is a qualitative escalation that the tracker's China PPI YoY indicator captures numerically but whose persistence and structural depth (property wealth destruction, zombie-firm credit rollover, youth unemployment) warrants a flag-level update. PPI has been negative for 36+ months \u2014 well into the 'large swing' risk threshold on the downside. This also feeds into new anti-dumping tariff escalation risks (s5's third indicator) as trading partners respond to Chinese export-price pressure.",
+      "rationale": "July PPI at -3.5% is a direct update to the primary s5_china_deflation indicator. Though deflation is narrowing slightly (positive), it remains deeply negative and the CPI miss + 34-month streak signal the deflationary spillover risk is still live. The tracker should update the PPI reading from whatever prior value it holds; the large-swing rubric means this level (\u20133.5%) is still in 'worse' territory. Manufacturing PMI stuck below 50 for five straight months adds confirmation.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-08-12",
-      "sightings": 3,
+      "last_seen": "2026-08-13",
+      "sightings": 4,
       "id": "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9"
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
@@ -5087,10 +5086,125 @@
       "last_seen": "2026-08-12",
       "sightings": 1,
       "id": "obbba-enacted-us-debt-to-gdp-projected-to-hit-12-9d22ed"
+    },
+    "boj-september-rate-hike-now-priced-at-78-30-year-ace00b": {
+      "headline": "BOJ September Rate Hike Now Priced at 78%; 30-Year JGB Yield Approaches 4% as Japan-US Jointly Intervene in FX",
+      "summary": "As of August 12, markets price a 78% probability of a BOJ rate hike at the September meeting (up sharply from 66% on Monday), driven by hawkish July meeting minutes and persistent yen weakness amplifying oil-driven inflation. The 30-year JGB yield is at 3.990% and the 10-year at 2.84%, with Japan-US joint FX intervention recently deployed to support the yen.",
+      "as_of": "2026-08-12",
+      "sources": [
+        "https://www.zawya.com/en/capital-markets/china-and-asia-pacific/japan-bond-yields-rise-on-faster-boj-rate-hike-bets-inflation-concerns-428902",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "BOJ September hike probability (%, market-implied)",
+        "type": "band",
+        "rubric": "0\u201330% = low pressure (0); 31\u201365% = rising pressure (1); >65% = imminent hike risk (2). Currently ~78% \u2192 level 2. Source: Tokyo Tanshi OIS pricing, Bloomberg.",
+        "sources": [
+          "https://www.zawya.com/en/capital-markets/china-and-asia-pacific/japan-bond-yields-rise-on-faster-boj-rate-hike-bets-inflation-concerns-428902"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan story tracks the 30-year JGB yield and USD/JPY but has no indicator capturing the imminent policy catalyst \u2014 the probability of the September BOJ hike. At 78% and climbing, this is the key trigger for carry-trade unwind acceleration and a material gap in the tracker. Joint Japan-US FX intervention is also a new development not captured by existing indicators. The 30-year JGB yield at 3.990% should also be updated (existing indicator).",
+      "status": "pending",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "sightings": 1,
+      "id": "boj-september-rate-hike-now-priced-at-78-30-year-ace00b"
+    },
+    "qatar-lng-infrastructure-damage-delays-global-ln-36e8f6": {
+      "headline": "Qatar LNG Infrastructure Damage Delays Global LNG Supply Wave by Years; Europe Faces Costly US LNG Dependency",
+      "summary": "The IEA estimates damage to Qatari LNG liquefaction infrastructure from the Middle East conflict will remove ~140 billion cubic metres of LNG supply between 2026\u20132030, with the anticipated global LNG supply wave materially delayed. If Qatari disruptions persist, the US could supply two-thirds of Europe's LNG imports in 2026 at significantly higher cost.",
+      "as_of": "2026-08-01",
+      "sources": [
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+        "https://ieefa.org/impact-middle-east-crisis-global-energy-markets"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "LNG supply shock \u2014 Qatar infrastructure damage & European energy dependency",
+        "why": "The Middle East conflict has structurally damaged Qatari LNG liquefaction capacity, removing an estimated 140 bcm of supply through 2030 and forcing Europe into a higher-cost, politically fragile dependency on US LNG. This is distinct from the Hormuz/Red Sea sea-lane story (s20) \u2014 it is about permanent or multi-year infrastructure destruction affecting the medium-term global gas market, European industrial competitiveness, and EM energy-import solvency. It also interacts with s18_food_fertilizer (nitrogen fertilizer uses gas feedstock) and s10_france (European energy cost pass-through to already-fragile fiscal positions).",
+        "proposed_level": 7,
+        "set": 4,
+        "indicators": [
+          {
+            "label": "Qatar LNG export capacity utilization (% of pre-conflict baseline)",
+            "type": "band",
+            "rubric": ">85% = recovering (0); 60\u201385% = impaired (1); <60% = severely disrupted (2). Current estimate: ~50\u201360% \u2192 level 2. Source: IEA Gas Market Report, S&P Global Platts.",
+            "sources": [
+              "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "European spot TTF gas price (EUR/MWh)",
+            "type": "value",
+            "rubric": "Track absolute level; >80 EUR/MWh = elevated stress; >120 EUR/MWh = acute. Source: ICE TTF front-month.",
+            "sources": [
+              "https://ieefa.org/impact-middle-east-crisis-global-energy-markets"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "IEA cumulative LNG supply loss estimate 2026-2030 (bcm)",
+            "type": "value",
+            "rubric": "Track IEA quarterly Gas Market Report revisions. Current: ~140 bcm loss. Upward revision = worsening.",
+            "sources": [
+              "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "No existing story covers medium-term structural LNG supply destruction \u2014 s20_sea_lanes tracks transit disruptions (open/contested/closed) but not permanent capacity impairment. The 140 bcm IEA estimate and Europe's forced pivot to expensive US LNG represent a multi-year macro risk to European growth, inflation, and industrial competitiveness that warrants its own story node.",
+      "status": "pending",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "sightings": 1,
+      "id": "qatar-lng-infrastructure-damage-delays-global-ln-36e8f6"
+    },
+    "china-rare-earth-entity-bans-extended-to-14-eu-f-a53087": {
+      "headline": "China Rare Earth Entity Bans Extended to 14 EU Firms in July 2026 \u2014 Escalating Beyond US Bilateral to Multilateral Weaponization",
+      "summary": "China expanded its dual-use rare earth export bans from 10 US companies (June 22) to 14 EU-linked defense and critical-mineral firms in July 2026, signaling a strategic broadening of mineral weaponization beyond the US-China bilateral axis to a wider Western-China technology rivalry.",
+      "as_of": "2026-07-31",
+      "sources": [
+        "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/",
+        "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2026/6/china-tightens-rare-earth-export-curbs-on-10-us-companies-103014947"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s6_rare_earths",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Non-US allied entities on China dual-use RE export blacklist (count)",
+        "type": "band",
+        "rubric": "0 entities = bilateral only (0); 1\u201320 entities = selective multilateral escalation (1); >20 entities or sector-wide allied ban = systemic (2). Current: ~14 EU firms \u2192 level 1. Source: China MOFCOM entity list updates, Benchmark Mineral Intelligence.",
+        "sources": [
+          "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/",
+          "https://source.benchmarkminerals.com/article/china-targets-us-rare-earth-and-defence-linked-entities-with-dual-use-export-ban"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The existing s6_rare_earths indicators focus on US-centric metrics (US domestic producer blacklist, export license flow, ex-China price premium). The July expansion to EU firms is a qualitatively new dimension \u2014 China is now using RE export controls as multilateral economic coercion against a wider G7 coalition \u2014 not captured by any current indicator. Adding an 'allied entity count' indicator closes this gap and gives the tracker early warning of escalation from entity-specific to sector-wide Western bans.",
+      "status": "pending",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "sightings": 1,
+      "id": "china-rare-earth-entity-bans-extended-to-14-eu-f-a53087"
     }
   },
-  "generated": "2026-08-12",
+  "generated": "2026-08-13",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 155
+  "new_count": 3,
+  "pending_count": 158
 }
