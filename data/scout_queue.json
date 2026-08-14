@@ -196,13 +196,12 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The BOJ held its policy rate at 1% (reached in June 2026, the highest since 1995) at its late-July meeting, but minutes show board members expect consumer inflation to accelerate sharply in H2 as companies push broad price increases, with a September hike now widely anticipated. The 30-year JGB yield stood at 3.99% on 3 August, up ~87bps year-on-year, while the yen weakened to ~160/USD, driven by Japan's acute dependence on Middle East energy imports.",
-      "as_of": "2026-08-07",
+      "summary": "Japan's 10-year JGB yield stood at 2.87% on August 14 (up ~19 bps in the past month alone and +131 bps YoY), driven by the BOJ cutting monthly JGB purchases from \u00a55.7 trillion to \u00a52.9 trillion and raising its FY2026 core CPI outlook to 2.8%. The 30-year segment remains under severe pressure, with super-long yields at record highs straining the fiscal-financing outlook.",
+      "as_of": "2026-08-14",
       "sources": [
-        "https://tradingeconomics.com/japan/30-year-bond-yield",
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html",
-        "https://www.abnamro.com/research/en/our-research/japan-the-land-of-the-rising-yields"
+        "https://www.investing.com/analysis/japans-bond-market-is-no-longer-stable-200679428",
+        "https://nz.amova-am.com/intermediary/insights/detail/2602-japans-bond-volatility-and-the-yen-carry-trade"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -210,12 +209,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 30-year JGB at 3.99% is a multi-decade high and directly reads into s2_japan's '30-year JGB yield' indicator. The yen at ~160/USD (weakening = higher = risk) also updates that indicator. The compounding driver \u2014 Hormuz energy shock forcing imported inflation and a BOJ tightening cycle \u2014 means all three s2 indicators are deteriorating simultaneously, warranting a tracker escalation. The reduced bid-to-cover on 30-year JGB auctions is an additional stress signal not yet in the indicator set.",
+      "rationale": "The 10-year JGB yield at 2.87% (+131 bps YoY) \u2014 with the 30-year at record highs \u2014 is a direct and materially adverse update to the s2_japan '30-year JGB yield' indicator. The BOJ's continued QT pace (purchases halved since Aug-2024) and an upward inflation forecast revision to 2.8% make this a self-reinforcing dynamic. The combination with a failing yen intervention (Item 2 above) creates a dangerous two-sided squeeze: higher JGB yields push up domestic borrowing costs while a weak yen amplifies import inflation.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-14",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 12
+      "sightings": 13
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -501,14 +500,14 @@
     },
     "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
       "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
-      "summary": "Iran and Oman agreed on geographical coordinates for a consolidated two-way shipping corridor on August 5, described as 'a potential step toward reopening,' but Iranian officials explicitly stated the strait will not return to pre-war transit rules and that US must meet additional conditions; a joint statement remains in final drafting. By mid-July, attack volumes on commercial shipping were the highest since April 2026, and cross-strait traffic remains severely disrupted, with ~25% of global crude and 19% of LNG normally transiting.",
-      "as_of": "2026-08-07",
+      "summary": "As of August 13-14, only 8-15 vessels/day transit the Strait versus ~130 pre-war; the IEA's August Oil Market Report now projects a Q3-2026 global supply deficit of 1.8 mb/d \u2014 more than double its prior estimate \u2014 with 8.3 mb/d of Gulf supply still offline and the US SPR falling below 300 million barrels for the first time since 1983. Iran is conditioning reopening on sanctions relief and war reparations, with no imminent resolution.",
+      "as_of": "2026-08-13",
       "sources": [
-        "https://www.bloomberg.com/news/articles/2026-08-05/iran-says-agreement-on-hormuz-shipping-route-reached-with-oman",
-        "https://www.cnn.com/2026/08/05/middleeast/hormuz-iran-oman-agreement-analysis-intl",
-        "https://www.congress.gov/crs-product/R45281",
-        "https://www.globalsecurity.org/wmd/library/news/iran/2026/08/iran-260803-irna05.htm",
-        "https://tradingeconomics.com/japan/government-bond-yield"
+        "https://edition.cnn.com/2026/08/13/world/live-news/iran-war-trump",
+        "https://www.supplychainbrain.com/articles/44642-iea-warns-global-oil-stockpiles-are-rapidly-depleting",
+        "https://www.iea.org/reports/oil-market-report-august-2026",
+        "https://www.aljazeera.com/economy/2026/8/10/oil-prices-climb-as-iranian-demands-cloud-outlook-for-strait-of-hormuz",
+        "https://www.congress.gov/crs-product/R45281"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -516,12 +515,12 @@
       "target_indicator": "Hormuz/Red Sea status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Iran-Oman partial corridor deal is the week's single most material geopolitical event for commodity markets. It moves Hormuz status from 2-closed toward 1-contested (not yet 0-open), since Iran retains control demands and US preconditions remain unmet. The JGB data also shows the oil-price rebound from renewed Hormuz tensions on August 10 re-elevated Japanese yields, illustrating the cross-story contagion path (s20 \u2192 s2, s18, s16). The tracker's Hormuz/Red Sea status should be updated from 2 to 1-contested and WTI should be refreshed.",
+      "rationale": "The Hormuz indicator is already defined with a 0/1/2 rubric; current status is clearly '2 closed' \u2014 the most adverse reading. The IEA upgrade to a 1.8 mb/d Q3 deficit (double the prior estimate) and SPR falling to a 43-year low materially worsens the tracker's existing WTI and Hormuz indicators simultaneously and warrants an immediate flag to the highest-risk reading. This is the dominant macro shock of the current period.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-14",
       "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
-      "sightings": 9
+      "sightings": 10
     },
     "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
       "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
@@ -607,12 +606,12 @@
     },
     "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
       "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
-      "summary": "The 2026 Iran war effectively shut the Strait of Hormuz from late February, disrupting roughly 20% of world oil supply and triggering a urea/fertilizer shortage (Qatar halted LNG liquefaction; Iran agreed only in late March to allow humanitarian/fertilizer shipments). The IMF's July 2026 WEO Update flags a cluster of food-security and social-unrest risks in sub-Saharan Africa and South Asia directly linked to the energy-fertilizer nexus, while fertilizer input costs remain elevated ahead of Q3 planting seasons in the Southern Hemisphere.",
-      "as_of": "2026-07-10",
+      "summary": "IEA Executive Director Fatih Birol, speaking at the G7 Finance Ministers' meeting in Paris, warned that the surge in diesel and fertilizer prices \u2014 coinciding with both the planting season and summer travel demand \u2014 could significantly push up food prices, with commercial oil stockpiles drawing down at accelerating rates. The US SPR has fallen below 300 mb for the first time since 1983, critically limiting the remaining buffer.",
+      "as_of": "2026-08-12",
       "sources": [
-        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
-        "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf",
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+        "https://www.indexbox.io/blog/iea-warns-global-oil-stockpiles-are-rapidly-depleting",
+        "https://www.supplychainbrain.com/articles/44642-iea-warns-global-oil-stockpiles-are-rapidly-depleting",
+        "https://www.iea.org/reports/oil-market-report-august-2026"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -620,12 +619,12 @@
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 'Hormuz/Gulf disruption to fertilizer inputs' indicator (0 clear / 1 disrupted / 2 cut) should move to 2 (cut) \u2014 or remain at 2 and be flagged as re-escalating given the fresh July 7-13 fighting. Qatar's LNG liquefaction shutdown (fertilizer feedstock) and widespread urea shortages have already been confirmed. The IMF July WEO explicitly flags food-insecurity clustering in vulnerable economies as a near-term risk triggered by the Middle East conflict. The tracker should also note that the food-price trend indicator is approaching 2 (spiking) given the compounding supply shock.",
+      "rationale": "The s18_food_fertilizer story has a 'Hormuz/Gulf disruption to fertilizer inputs' indicator (0 clear / 1 disrupted / 2 cut). The IEA chief's explicit warning about fertilizer and diesel spiking during planting season, combined with accelerating SPR depletion, upgrades this indicator to '2 cut' \u2014 the worst reading \u2014 and also implies the 'Food-price trend' indicator should move toward '2 spiking'. The fertilizer-food nexus is being directly activated by the Hormuz closure, making this a compounding cross-story risk.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-08-14",
       "id": "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f",
-      "sightings": 5
+      "sightings": 6
     },
     "strait-of-hormuz-remains-effectively-closed-bren-98679f": {
       "headline": "Strait of Hormuz Remains Effectively Closed \u2014 Brent ~$105/bbl, OECD Oil Inventories at 2003 Lows",
@@ -1364,9 +1363,10 @@
     },
     "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9": {
       "headline": "China PPI Surges to +3.9% YoY in May (3rd Consecutive Monthly Rise, Fastest Since July 2022) Driven by Iran-War Energy Spike",
-      "summary": "China's July PPI printed -3.5% YoY (narrowing from -4.1% in June but missing the -3.8% consensus), marking 34 consecutive months of factory-gate deflation, with CPI also below expectations, underscoring persistent domestic demand weakness. Standard Chartered forecasts Chinese CPI may turn negative in August (-0.3% YoY) with food deflation potentially exceeding -4.5%.",
-      "as_of": "2026-08-09",
+      "summary": "China's NBS reported July PPI at +3.5% YoY (vs. +4.1% in June and consensus +3.8%), marking the first deceleration since PPI turned positive in March 2026 on the Iran oil-price shock. Consumer prices also decelerated, and Standard Chartered projects CPI could turn negative (-0.3% YoY) in August as the oil-shock base effect unwinds \u2014 reviving the pre-war structural deflation narrative.",
+      "as_of": "2026-08-10",
       "sources": [
+        "https://www.bloomberg.com/news/articles/2026-08-09/china-s-inflation-cools-as-oil-shock-of-iran-war-starts-to-ease",
         "https://www.investing.com/news/economic-indicators/china-cpi-eases-ppi-deflation-moderates-in-july-4847797",
         "https://www.fxstreet.com/news/china-exports-likely-slowed-in-august-standard-chartered-202509021000"
       ],
@@ -1376,11 +1376,11 @@
       "target_indicator": "China PPI YoY (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "July PPI at -3.5% is a direct update to the primary s5_china_deflation indicator. Though deflation is narrowing slightly (positive), it remains deeply negative and the CPI miss + 34-month streak signal the deflationary spillover risk is still live. The tracker should update the PPI reading from whatever prior value it holds; the large-swing rubric means this level (\u20133.5%) is still in 'worse' territory. Manufacturing PMI stuck below 50 for five straight months adds confirmation.",
+      "rationale": "This is a direct reading update to the China PPI YoY indicator. The sudden deceleration from +4.1% to +3.5% \u2014 and the projection of a return to negative CPI \u2014 signals that the oil-shock that briefly masked China's structural deflation is now fading, re-exposing the underlying disinflationary pressure. The tracker rubric notes 'large swing either way is worse'; a swing back toward deflation after a brief positive interlude qualifies as a material adverse update.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-08-13",
-      "sightings": 4,
+      "last_seen": "2026-08-14",
+      "sightings": 5,
       "id": "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9"
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
@@ -5201,10 +5201,75 @@
       "last_seen": "2026-08-13",
       "sightings": 1,
       "id": "china-rare-earth-entity-bans-extended-to-14-eu-f-a53087"
+    },
+    "historic-us-japan-joint-yen-intervention-fails-t-83a1fa": {
+      "headline": "Historic US\u2013Japan Joint Yen Intervention Fails to Hold \u2014 USD/JPY Rebounds to 159\u2013160, Carry Shorts Rebuild",
+      "summary": "The first bilateral US\u2013Japan FX intervention since 1998 (confirmed August 3) drove USD/JPY from a 40-year high of ~164 to 156, but the yen has already retraced half its gains to ~159\u2013160 by August 11\u201314, with Bloomberg reporting carry traders actively rebuilding yen short positions as of today. The BOJ policy rate remains at 0.75% and the interest-rate differential continues to incentivize carry, leaving the risk of a disorderly second-leg unwind elevated ahead of the September 18 BOJ meeting.",
+      "as_of": "2026-08-14",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-08-14/carry-traders-are-exploiting-intervention-to-rebuild-yen-shorts",
+        "https://www.npr.org/2026/08/03/g-s1-136866/us-dollar-japanese-yen-market-interventions",
+        "https://fortune.com/2026/08/12/us-japan-yen-intervention-unraveling-weak-yen-causes/",
+        "https://www.cnbc.com/2026/08/07/japan-us-yen-intervention-global-currency-markets.html",
+        "https://www.japantimes.co.jp/business/2026/08/06/markets/emerging-market-yen-carry-trade/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Joint FX intervention exhaustion / carry-rebuild signal",
+        "type": "band",
+        "rubric": "0 = intervention holding (USD/JPY stable \u2264158 post-action); 1 = partial retracement (158\u2013161, carry rebuilding but orderly); 2 = full retracement / disorderly (>161, interventions exhausted, second-leg unwind risk acute)",
+        "sources": [
+          "https://www.bloomberg.com/news/articles/2026-08-14/carry-traders-are-exploiting-intervention-to-rebuild-yen-shorts",
+          "https://www.cnbc.com/2026/08/07/japan-us-yen-intervention-global-currency-markets.html"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "s2_japan already tracks USD/JPY as a value indicator, but does not capture the qualitative state of bilateral intervention credibility \u2014 the key new variable. The failure of the first US\u2013Japan joint action since 1998 to sustain yen strength, with carry traders explicitly rebuilding shorts as of today, represents a structurally new regime signal that goes beyond the spot rate itself. A band indicator on intervention exhaustion is needed to track whether the policy backstop is credible or has been arbitraged away.",
+      "status": "pending",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "sightings": 1,
+      "id": "historic-us-japan-joint-yen-intervention-fails-t-83a1fa"
+    },
+    "strategic-petroleum-reserve-depletion-creates-ne-03db8d": {
+      "headline": "Strategic Petroleum Reserve Depletion Creates New 'Energy-Security Buffer' Risk with No Existing Tracker Indicator",
+      "summary": "The US SPR has fallen below 300 million barrels for the first time since January 1983 following the historic 400-million-barrel IEA coordinated release (March 2026), leaving only ~172 days of theoretical cover at normal drawdown rates \u2014 and the IEA's August OMR now projects a Q3 deficit of 1.8 mb/d with Hormuz still effectively closed. No existing tracker indicator captures the remaining SPR/strategic buffer capacity as a standalone risk variable.",
+      "as_of": "2026-08-12",
+      "sources": [
+        "https://www.supplychainbrain.com/articles/44642-iea-warns-global-oil-stockpiles-are-rapidly-depleting",
+        "https://discoveryalert.com.au/iea-oil-reserve-release-2026-largest-energy-intervention/",
+        "https://www.iea.org/reports/oil-market-report-august-2026"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Strategic petroleum reserve adequacy (days of crisis cover remaining)",
+        "type": "band",
+        "rubric": "0 = adequate (US SPR >400 mb, IEA members >90 days net import cover); 1 = depleting (US SPR 300\u2013400 mb or IEA aggregate cover 60\u201390 days); 2 = critically low (US SPR <300 mb or IEA aggregate cover <60 days \u2014 current reading as of Aug 2026)",
+        "sources": [
+          "https://www.supplychainbrain.com/articles/44642-iea-warns-global-oil-stockpiles-are-rapidly-depleting",
+          "https://discoveryalert.com.au/strategic-oil-reserves-global-energy-2026/",
+          "https://www.iea.org/reports/oil-market-report-august-2026"
+        ],
+        "suggested_weight": 0.3
+      },
+      "proposed_story": null,
+      "rationale": "s20_sea_lanes tracks Hormuz open/closed and WTI price, but has no indicator for how much emergency buffer remains to absorb a prolonged closure. With the SPR now below 300 mb for the first time in 43 years and the IEA 400 mb coordinated release providing only ~10 days of full replacement, the residual strategic buffer has become an independent second-order risk variable. If Hormuz remains closed beyond Q3, there is no historical precedent for the level of SPR depletion that would result, making this a material gap in the existing framework.",
+      "status": "pending",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "sightings": 1,
+      "id": "strategic-petroleum-reserve-depletion-creates-ne-03db8d"
     }
   },
-  "generated": "2026-08-13",
+  "generated": "2026-08-14",
   "model": "claude-sonnet-4-6",
-  "new_count": 3,
-  "pending_count": 158
+  "new_count": 2,
+  "pending_count": 160
 }
