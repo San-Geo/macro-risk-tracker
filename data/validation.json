@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-14T12:28:26.964043+00:00",
+  "generated": "2026-08-17T12:04:00.306781+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -141,16 +141,6 @@
         "overall_swing": 0.5
       },
       {
-        "id": "ig_oas",
-        "label": "US investment-grade OAS (%) - big-issuer proxy",
-        "story": "AI build-out circular financing",
-        "set": 2,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.5
-      },
-      {
         "id": "oat_bund",
         "label": "OAT-Bund 10y spread (%)",
         "story": "France / eurozone fragility",
@@ -181,29 +171,29 @@
         "overall_swing": 0.0
       },
       {
-        "id": "cat_losses",
-        "label": "Catastrophe-loss pressure (0 normal / 1 elevated / 2 severe season)",
-        "story": "Insurance retreat",
+        "id": "ig_oas",
+        "label": "US investment-grade OAS (%) - big-issuer proxy",
+        "story": "AI build-out circular financing",
         "set": 2,
         "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.0
-      },
-      {
-        "id": "license_flow",
-        "label": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
-        "story": "Critical minerals as a weapon",
-        "set": 4,
-        "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.5,
         "overall_swing": 0.5
       },
       {
-        "id": "subprime_auto_dpd",
-        "label": "Subprime auto 60+ day delinquency (%)",
-        "story": "Hidden consumer debt",
+        "id": "oil_price",
+        "label": "WTI crude oil (USD/bbl, CL=F)",
+        "story": "Sea lanes & undersea cables",
+        "set": 4,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.5,
+        "overall_swing": 0.5
+      },
+      {
+        "id": "cat_losses",
+        "label": "Catastrophe-loss pressure (0 normal / 1 elevated / 2 severe season)",
+        "story": "Insurance retreat",
         "set": 2,
         "weight": 1.0,
         "story_swing": 2,
@@ -245,6 +235,16 @@
         "label": "Largest stablecoin max peg deviation (%)",
         "story": "Stablecoins & Treasury demand",
         "set": 1,
+        "weight": 1.5,
+        "story_swing": 2,
+        "set_swing": 0.4,
+        "overall_swing": 0.0
+      },
+      {
+        "id": "regional_bank_stress",
+        "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
+        "story": "CRE maturity wall / regional banks",
+        "set": 2,
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.4,

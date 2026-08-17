@@ -76,12 +76,12 @@
     },
     "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1": {
       "headline": "GENIUS Act AML/sanctions rulemaking advanced by Treasury/FinCEN (April 9) ahead of July 18 regulatory deadline; stablecoin supply and T-bill demand implications crystallizing",
-      "summary": "The GENIUS Act required federal regulators (OCC, Fed, FDIC) to finalize implementation guidelines by July 2026, one year after enactment, but the deadline has passed with possible extensions noted into 2027. With USDT at ~$189 billion and USDC at ~$77 billion in Q1 2026 \u2014 both far above the $10 billion threshold triggering mandatory federal supervision \u2014 the implementation gap creates legal and operational uncertainty for the largest stablecoin issuers and their Treasury-bill reserve holdings.",
-      "as_of": "2026-07-18",
+      "summary": "Multiple US regulators (OCC, FDIC, FinCEN/OFAC, NCUA) have only issued proposed rules as of mid-2026; final rules must be promulgated within one year of the statute's effective date, meaning the GENIUS Act licensing regime could be delayed until January 2027 or later, leaving a regulatory vacuum for the $200bn+ stablecoin market.",
+      "as_of": "2026-08-17",
       "sources": [
-        "https://eco.com/support/en/articles/15282223-what-is-the-genius-act-us-stablecoin-law-explained-for-2026",
-        "https://www.mexc.com/news/223473",
-        "https://www.congress.gov/bill/119th-congress/senate-bill/1582"
+        "https://www.chapman.com/publication-genius-act-rulemaking-tracker",
+        "https://www.morganlewis.com/pubs/2026/04/genius-act-implementation-key-proposals-and-what-comes-next",
+        "https://home.treasury.gov/news/press-releases/sb0435"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -89,12 +89,12 @@
       "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The GENIUS Act rulemaking deadline of July 2026 (one year post-enactment per MEXC/eco.com) appears to have been missed or extended, moving the GENIUS implementation friction indicator from 0 to at least 1 (gaps). With USDT (~$189B) and USDC (~$77B) both legally required to transition to OCC federal supervision once rules are finalized, ongoing rulemaking delay creates operational ambiguity for issuers who are significant holders of short-duration US Treasuries \u2014 directly relevant to the Treasury-demand function this story tracks. This is medium materiality because the stablecoins remain operationally functional; the risk is regulatory cliff-edge rather than immediate peg stress.",
+      "rationale": "The tracker already monitors GENIUS friction. The current state \u2014 proposed rules across five agencies, no final rules, effective date potentially January 2027 \u2014 maps cleanly to a score of '1' (gaps). The risk is that issuers operate in a prolonged grey zone, creating both compliance uncertainty and the possibility of a scrambled 120-day implementation sprint if rules finalize late, potentially forcing large stablecoin reserves into sudden Treasury purchases or sales that move yields.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-17",
       "id": "genius-act-aml-sanctions-rulemaking-advanced-by--e1c5b1",
-      "sightings": 17
+      "sightings": 18
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
@@ -174,12 +174,11 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "The EIA's August 11 Short-Term Energy Outlook (released 2 days ago) confirms oil shipments through the Strait of Hormuz remain severely constrained through August, with only a gradual reopening assumed from September onward and ~0.6 mb/d of disruptions expected to persist through end-2027. Iran's top security official publicly stated the Strait will stay closed unless the US accepts Iran's conditions, re-spiking Brent to ~$105/bbl on July 23 after it had briefly fallen to $69 on a June US-Iran MOU.",
-      "as_of": "2026-08-11",
+      "summary": "The IEA's August 12, 2026 Oil Market Report flagged that renewed hostilities in July and August have re-intensified disruptions to oil and gas flows through the Strait of Hormuz, which handles ~20% of global oil trade and ~20% of global LNG; the IEA Executive Director called the combined impacts the greatest threat to global energy security in history.",
+      "as_of": "2026-08-12",
       "sources": [
-        "https://www.eia.gov/outlooks/steo/report/global_oil.php",
-        "https://www.eia.gov/todayinenergy/detail.php?id=67865",
-        "https://www.zawya.com/en/capital-markets/china-and-asia-pacific/japan-bond-yields-rise-on-faster-boj-rate-hike-bets-inflation-concerns-428902"
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+        "https://www.eia.gov/todayinenergy/detail.php?id=67865"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -187,21 +186,21 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The EIA's August 11 STEO is the freshest official confirmation that Hormuz transits remain severely constrained \u2014 the single most material sea-lane chokepoint for energy flows. The indicator should move to 2 (effectively closed to normal commercial transit) and WTI/Brent should be updated to ~$100-105/bbl range. This also has direct knock-on read-through to s2_japan (import inflation), s18_food_fertilizer (fertilizer feedstock), and s4_dev_debt (energy-import EM stress).",
+      "rationale": "The IEA's August 12 report explicitly flags renewed July\u2013August hostilities as a live, escalating event \u2014 not a historical artifact. This keeps the Hormuz status indicator at '2' (effectively contested/partially closed) and simultaneously pressures s18_food_fertilizer (Hormuz disruption to fertilizer inputs \u2192 move to 2 'cut'), s2_japan (oil import cost amplifying yen weakness and BOJ inflation pressure), and s4_dev_debt (commodity-price shock on import-dependent EMs). WTI context from Q2 peak of $118/bbl is still reverberating through market structure.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-08-17",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 20
+      "sightings": 21
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 10-year JGB yield stood at 2.87% on August 14 (up ~19 bps in the past month alone and +131 bps YoY), driven by the BOJ cutting monthly JGB purchases from \u00a55.7 trillion to \u00a52.9 trillion and raising its FY2026 core CPI outlook to 2.8%. The 30-year segment remains under severe pressure, with super-long yields at record highs straining the fiscal-financing outlook.",
-      "as_of": "2026-08-14",
+      "summary": "Japan's 10-year JGB yield touched 2.93% on August 17, 2026 \u2014 the highest since September 1996 \u2014 as markets price a September BOJ rate hike after persistent producer-price inflation (PPI +7.2% YoY in July). Simultaneously, Japan's Q2 GDP grew only 1.1% annualised vs 2.0% expected, creating a stagflationary backdrop that keeps the carry-trade unwind risk elevated.",
+      "as_of": "2026-08-17",
       "sources": [
-        "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.investing.com/analysis/japans-bond-market-is-no-longer-stable-200679428",
-        "https://nz.amova-am.com/intermediary/insights/detail/2602-japans-bond-volatility-and-the-yen-carry-trade"
+        "https://www.euronews.com/business/2026/08/17/japans-10-year-bond-yield-hits-a-30-year-high-as-growth-data-disappoints",
+        "https://asia.nikkei.com/business/markets/10-year-jgb-yields-slip-past-2.9-on-faster-boj-tightening-expectations",
+        "https://tradingeconomics.com/japan/government-bond-yield"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -209,12 +208,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 10-year JGB yield at 2.87% (+131 bps YoY) \u2014 with the 30-year at record highs \u2014 is a direct and materially adverse update to the s2_japan '30-year JGB yield' indicator. The BOJ's continued QT pace (purchases halved since Aug-2024) and an upward inflation forecast revision to 2.8% make this a self-reinforcing dynamic. The combination with a failing yen intervention (Item 2 above) creates a dangerous two-sided squeeze: higher JGB yields push up domestic borrowing costs while a weak yen amplifies import inflation.",
+      "rationale": "The 10-year JGB at a 30-year high directly updates the tracker's JGB yield indicator. The GDP miss adds a stagflationary dimension that amplifies carry-unwind risk: analysts explicitly note conditions for a repeat of August 2024's 12% Nikkei single-session crash have not disappeared. The Takaichi fiscal plan financing clarity indicator should also be flagged as 'unclear' (1) given persistent fiscal spending pressure colliding with surging yields.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-17",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 13
+      "sightings": 14
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -1363,12 +1362,11 @@
     },
     "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9": {
       "headline": "China PPI Surges to +3.9% YoY in May (3rd Consecutive Monthly Rise, Fastest Since July 2022) Driven by Iran-War Energy Spike",
-      "summary": "China's NBS reported July PPI at +3.5% YoY (vs. +4.1% in June and consensus +3.8%), marking the first deceleration since PPI turned positive in March 2026 on the Iran oil-price shock. Consumer prices also decelerated, and Standard Chartered projects CPI could turn negative (-0.3% YoY) in August as the oil-shock base effect unwinds \u2014 reviving the pre-war structural deflation narrative.",
-      "as_of": "2026-08-10",
+      "summary": "China's producer price index fell 3.5% year-on-year in July 2026, narrowing only slightly from June's -4.1% decline and missing forecasts of -3.8%; the data underscore persistent domestic demand weakness and sustain China's massive deflationary export impulse into global goods markets. PPI has now been negative for well over 34 months.",
+      "as_of": "2026-08-09",
       "sources": [
-        "https://www.bloomberg.com/news/articles/2026-08-09/china-s-inflation-cools-as-oil-shock-of-iran-war-starts-to-ease",
         "https://www.investing.com/news/economic-indicators/china-cpi-eases-ppi-deflation-moderates-in-july-4847797",
-        "https://www.fxstreet.com/news/china-exports-likely-slowed-in-august-standard-chartered-202509021000"
+        "https://tradingeconomics.com/china/producer-prices-change/news/476556"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -1376,11 +1374,11 @@
       "target_indicator": "China PPI YoY (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "This is a direct reading update to the China PPI YoY indicator. The sudden deceleration from +4.1% to +3.5% \u2014 and the projection of a return to negative CPI \u2014 signals that the oil-shock that briefly masked China's structural deflation is now fading, re-exposing the underlying disinflationary pressure. The tracker rubric notes 'large swing either way is worse'; a swing back toward deflation after a brief positive interlude qualifies as a material adverse update.",
+      "rationale": "July PPI print of -3.5% is a direct tracker update. While the rate of decline is narrowing versus June's -4.1%, it remains severely negative (well outside the \u00b11% 'calm' band) and the duration (34+ months) amplifies the deflationary spillover risk to global goods prices. The slight miss vs. expectations also suggests the improvement is fragile. Indicator reading: -3.5%, risk level remains elevated.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-08-14",
-      "sightings": 5,
+      "last_seen": "2026-08-17",
+      "sightings": 6,
       "id": "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9"
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
@@ -5266,10 +5264,70 @@
       "last_seen": "2026-08-14",
       "sightings": 1,
       "id": "strategic-petroleum-reserve-depletion-creates-ne-03db8d"
+    },
+    "japanese-investors-sold-29-6-bn-of-us-treasuries-5bcd85": {
+      "headline": "Japanese investors sold $29.6 bn of US Treasuries in Q1 2026 alone as domestic yields attract repatriation",
+      "summary": "Rising JGB yields are pulling Japanese capital home: investors offloaded $29.6 billion of US debt in Q1 2026, removing a historically reliable marginal buyer from a market already navigating large US fiscal deficits. This structural outflow compounds basis-trade leverage risk by thinning the non-dealer Treasury demand base.",
+      "as_of": "2026-07-15",
+      "sources": [
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japanese net UST selling (rolling 4-quarter, $bn)",
+        "type": "value",
+        "rubric": "0 = net buying or neutral; negative values = net selling. Threshold: > $50bn annualised selling = elevated (1); > $100bn = stress (2). Directional shift matters as much as level.",
+        "sources": [
+          "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+          "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/mfh.txt"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The basis trade's hidden leverage story is primarily about dealer capacity and repo market stress, but a key amplifier is the marginal Treasury buyer. Japanese repatriation at this scale ($29.6bn in a single quarter) represents a structural demand withdrawal that no existing indicator in s1 captures. It also interacts with s12_gold_dedollar (de-dollarization) and s4_dev_debt (stronger USD pressure) making it a cross-story gap worth tracking explicitly.",
+      "status": "pending",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "sightings": 1,
+      "id": "japanese-investors-sold-29-6-bn-of-us-treasuries-5bcd85"
+    },
+    "japan-stagflation-trap-gdp-miss-30-year-jgb-high-04ca8a": {
+      "headline": "Japan stagflation trap: GDP miss + 30-year JGB high signals new systemic stress scenario not fully captured by existing indicators",
+      "summary": "The simultaneous arrival of a 30-year JGB yield high (10-year at 2.93%) and a sharp Q2 GDP miss (1.1% annualised vs 2% forecast) creates a novel 'stagflation trap' for the BOJ: tightening to defend the yen/inflation anchor risks crashing growth; not tightening risks further carry-unwind. Neither the existing 30-year JGB yield indicator nor USD/JPY alone captures this policy-trap dimension, which is the key contagion transmission mechanism to global risk assets.",
+      "as_of": "2026-08-17",
+      "sources": [
+        "https://www.euronews.com/business/2026/08/17/japans-10-year-bond-yield-hits-a-30-year-high-as-growth-data-disappoints",
+        "https://asia.nikkei.com/business/markets/10-year-jgb-yields-slip-past-2.9-on-faster-boj-tightening-expectations",
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "BOJ policy-trap score (0 = aligned / 1 = tension / 2 = dilemma)",
+        "type": "band",
+        "rubric": "0 = inflation and growth both allow BOJ to act consistently (either both hawkish or both dovish). 1 = mild tension between inflation mandate and growth outlook. 2 = acute dilemma: JGB yields at multi-decade highs AND GDP growth missing by >50bps annualised simultaneously, forcing BOJ into a no-good-option policy corner with direct carry-unwind contagion risk to global assets.",
+        "sources": [
+          "https://www.euronews.com/business/2026/08/17/japans-10-year-bond-yield-hits-a-30-year-high-as-growth-data-disappoints",
+          "https://asia.nikkei.com/business/markets/10-year-jgb-yields-slip-past-2.9-on-faster-boj-tightening-expectations"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The August 2024 precedent (BOJ hike + weak US jobs data = Nikkei -12% in one session, S&P -3%) shows the contagion path is real and fast. The current setup \u2014 10-year JGB at 2.93% (30-year high), GDP at half the forecast, BOJ September hike still priced \u2014 is arguably more dangerous because fiscal pressures under PM Takaichi are larger, the yen carry trade is still extended, and US SPR buffers are depleted. A binary 'yield level' metric misses the policy-trap dynamic; a composite score would give earlier warning.",
+      "status": "pending",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "sightings": 1,
+      "id": "japan-stagflation-trap-gdp-miss-30-year-jgb-high-04ca8a"
     }
   },
-  "generated": "2026-08-14",
+  "generated": "2026-08-17",
   "model": "claude-sonnet-4-6",
   "new_count": 2,
-  "pending_count": 160
+  "pending_count": 162
 }

@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-08-14 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-08-17 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 6.7/10** — Set 1 5.8, Set 2 5.2, Set 3 4.5, Set 4 6.2, Set 5 5.5.
+**Overall risk 6.7/10** — Set 1 5.8, Set 2 5.0, Set 3 4.5, Set 4 6.2, Set 5 5.8.
 
 
 ## Set 1 — Funding & Leverage
@@ -46,7 +46,7 @@ AI infrastructure spending vastly exceeds current AI revenue, increasingly finan
 
 *Indicators watched:* US investment-grade OAS (%) - big-issuer proxy, AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast), GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)
 
-### CRE maturity wall / regional banks — 6/10 (Elevated)
+### CRE maturity wall / regional banks — 5/10 (Elevated)
 
 A wall of commercial real-estate loans - especially office - matures into higher rates and lower valuations, concentrated at regional banks. Rising delinquencies and 'extend and pretend' practices defer, rather than resolve, the losses.
 
@@ -100,7 +100,7 @@ China's factory-gate prices spill into global goods markets in BOTH directions: 
 
 *Indicators watched:* China PPI YoY (%) - large swing either way is worse, USD/CNY (yuan depreciation = higher = risk), New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating)
 
-### Critical minerals as a weapon — 7/10 (High)
+### Critical minerals as a weapon — 6/10 (Elevated)
 
 China dominates the mining and especially the processing of rare earths and critical minerals, and has shown willingness to use export licensing as leverage. Supply chains for magnets and defense inputs have little near-term substitute.
 
@@ -112,7 +112,7 @@ ASML is the sole maker of EUV lithography machines, with Zeiss the sole optics s
 
 *Indicators watched:* Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis), Export-control escalation (0 stable / 1 tightening / 2 retaliation), Single-point concentration (0 easing / 1 high / 2 extreme)
 
-### Sea lanes & undersea cables — 6/10 (Elevated)
+### Sea lanes & undersea cables — 7/10 (High)
 
 A few maritime chokepoints and undersea cables carry most global trade and data. The 2026 Hormuz/Red Sea disruptions showed how quickly closures spike energy and shipping costs; cable cuts are a parallel, under-watched vulnerability.
 
@@ -127,7 +127,7 @@ Data-center electricity demand is colliding with multi-year grid interconnection
 
 *Indicators watched:* Grid interconnection wait (months), Data-center moratoria / backlash (0 none / 1 spreading / 2 widespread), AI power-demand pressure (0 easing / 1 tight / 2 acute)
 
-### Copper & the electrification deficit — 4/10 (Moderate)
+### Copper & the electrification deficit — 5/10 (Elevated)
 
 Electrification and AI infrastructure point to structural copper deficits as demand outruns new mine supply, which takes a decade to build. Price is the live signal; mine disruptions and inventory draws would confirm tightening.
 
