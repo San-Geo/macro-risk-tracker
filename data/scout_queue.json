@@ -5324,10 +5324,202 @@
       "last_seen": "2026-08-17",
       "sightings": 1,
       "id": "japan-stagflation-trap-gdp-miss-30-year-jgb-high-04ca8a"
+    },
+    "strait-of-hormuz-remains-effectively-contested-f-9b78d2": {
+      "headline": "Strait of Hormuz remains effectively contested: fresh tanker attacks (Aug 14) push Brent to ~$89\u201390/bbl, EIA sees no full recovery before 2027",
+      "summary": "Two UAE ADNOC tankers were attacked near the Strait of Hormuz on Aug 14, 2026, denting hopes of reopening; Brent rose >2% to ~$89\u201390/bbl (~24% above pre-conflict levels). The US EIA projected Middle East oil production will not return to near pre-conflict levels until early 2027 and expects Brent to average $87/bbl for 2026.",
+      "as_of": "2026-08-14",
+      "sources": [
+        "https://www.ttnews.com/articles/oil-prices-up-tanker-attacks",
+        "https://www.aljazeera.com/economy/2026/8/12/oil-prices-rise-as-attacks-dent-hopes-for-strait-of-hormuz-reopening",
+        "https://www.congress.gov/crs-product/R45281",
+        "https://www.fxcm.com/au/insights/global-macro-and-markets-briefing-17-august-2026/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed) \u2192 update to 2 (effectively closed/contested); WTI crude (CL=F) \u2192 ~$82\u201383/bbl; Undersea cable incidents \u2192 0",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Fresh tanker attacks on Aug 14 within the 7-day window directly update s20_sea_lanes' Hormuz status indicator. A prolonged near-closure of the world's largest oil chokepoint is materially affecting WTI/Brent, global inflation, and central bank policy paths simultaneously, and the EIA's 2027 recovery timeline signals this is not short-term noise.",
+      "status": "pending",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "sightings": 1,
+      "id": "strait-of-hormuz-remains-effectively-contested-f-9b78d2"
+    },
+    "japan-jgb-yields-at-30-year-highs-2-95-on-10y-ta-aad6bb": {
+      "headline": "Japan JGB yields at 30-year highs (~2.95% on 10y, targeting 3%); Takaichi food-tax cut cabinet-approved Aug 5 with BOJ ETF-tap trial balloon signalling fiscal-monetary boundary risk",
+      "summary": "Japan's 10-year JGB yield reached 2.95% on Aug 18 (highest since 1996), driven by BOJ rate-hike speculation for September and Takaichi's Aug 5 cabinet approval of a food sales-tax cut from 8% to 1% that creates a ~JPY 4.4 trillion/year funding gap. A senior LDP executive floated tapping BOJ ETF holdings to fund the gap, raising acute concerns about fiscal-monetary boundary erosion; Oxford Economics now targets 10y JGB at 3% by end-2026.",
+      "as_of": "2026-08-18",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.currentaffair.today/en_US/blog/govt-schemes-11/japan-food-tax-cut-1-percent-2026-1049",
+        "https://www.oxfordeconomics.com/resource/japans-consumption-tax-cut-would-widen-the-fiscal-deficit-and-push-jgb-yields-higher/",
+        "https://www.cnbc.com/2026/08/04/japan-takaichi-food-tax-cut-jgb-boj.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "proposed_indicator": {
+        "label": "BOJ balance-sheet fiscal-use risk (0 none / 1 political pressure / 2 actual deployment)",
+        "type": "band",
+        "rubric": "0 = BOJ independence intact, no fiscal use of balance sheet discussed; 1 = ruling-party officials publicly float using BOJ ETF/JGB holdings to fund fiscal gap; 2 = BOJ formally directed or agrees to deploy balance-sheet assets for fiscal purposes",
+        "sources": [
+          "https://www.currentaffair.today/en_US/blog/govt-schemes-11/japan-food-tax-cut-1-percent-2026-1049",
+          "https://www.cnbc.com/2026/08/04/japan-takaichi-food-tax-cut-jgb-boj.html"
+        ],
+        "suggested_weight": 0.25
+      },
+      "rationale": "The existing s2_japan story tracks JGB yields and Takaichi financing clarity, but the 'Takaichi plan financing clarity' indicator does not specifically capture the new and distinct risk that the BOJ's own balance sheet (ETF holdings accumulated during QE) could be politically commandeered to finance fiscal deficits. This would be a qualitative regime change for Japanese monetary credibility\u2014different in kind from unclear debt issuance\u2014warranting its own indicator. Current status: 1 (political pressure openly voiced by LDP insider).",
+      "status": "pending",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "sightings": 1,
+      "id": "japan-jgb-yields-at-30-year-highs-2-95-on-10y-ta-aad6bb"
+    },
+    "japan-s-massive-ust-selling-continues-29-6bn-in--d842eb": {
+      "headline": "Japan's massive UST selling continues: $29.6bn in Q1 2026 alone as rising domestic JGB yields incentivise repatriation, threatening a key marginal buyer of US Treasuries",
+      "summary": "With domestic JGB yields now at multi-decade highs, Japanese investors sold $29.6 billion of US Treasuries in Q1 2026 alone. As the BOJ contemplates further rate hikes and JGB yields approach 3%, the structural repatriation flow threatens one of the largest marginal buyers of US debt at a time when US fiscal deficits are near record levels.",
+      "as_of": "2026-08-18",
+      "sources": [
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://tradingeconomics.com/japan/government-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "proposed_indicator": {
+        "label": "Japanese institutional UST net selling (rolling 4-quarter, $bn, TIC data)",
+        "type": "value",
+        "rubric": "Track US Treasury International Capital (TIC) data for Japan net purchases/sales of long-term US Treasuries. Threshold: >$50bn annualised net selling = elevated; >$100bn = high risk (adds to basis-trade unwind pressure and term-premium spike risk). Source: US Treasury TIC monthly release.",
+        "sources": [
+          "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+          "https://home.treasury.gov/data/treasury-international-capital-tic-system"
+        ],
+        "suggested_weight": 0.2
+      },
+      "rationale": "The s1_basis_trade story monitors Treasury market stress (MOVE, SOFR-EFFR, SEC clearing), but lacks an indicator tracking the structural demand side\u2014specifically Japan's repatriation selling, which is now quantified and large (~$29.6bn in a single quarter). This is distinct from basis-trade leverage and directly affects UST term premia and auction dynamics. It could amplify any basis-trade unwind or clearing-market stress episode.",
+      "status": "pending",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "sightings": 1,
+      "id": "japan-s-massive-ust-selling-continues-29-6bn-in--d842eb"
+    },
+    "china-july-ppi-3-5-yoy-vs-4-1-prior-oil-shock-di-2acd76": {
+      "headline": "China July PPI +3.5% YoY (vs +4.1% prior): oil-shock disinflationary fade revives deflation re-entry risk as domestic demand stays weak",
+      "summary": "China's July 2026 PPI rose only 3.5% YoY versus 4.1% in June, the first deceleration since PPI turned positive in March 2026 on oil-shock pass-through; the Bloomberg report notes this is 'the first slowdown since China's PPI turned positive.' With domestic demand weak and the Hormuz oil shock fading, the risk of China reverting to PPI deflation\u2014and exporting it globally via cheap manufactured goods\u2014has materially re-escalated.",
+      "as_of": "2026-08-10",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-08-09/china-s-inflation-cools-as-oil-shock-of-iran-war-starts-to-ease"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s5_china_deflation",
+      "target_indicator": "China PPI YoY (%) \u2192 update to +3.5% (July 2026, decelerating sharply from +4.1%); monitor direction: a continued deceleration toward 0% or below re-activates the deflationary spillover risk that was temporarily suppressed by the oil shock",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The PPI figure is the primary quantitative indicator for s5_china_deflation. The July print is the most recent data point (within 7 days) and shows a meaningful directional reversal that warrants a tracker update. The Hormuz ceasefire negotiations\u2014if concluded\u2014would further remove the oil-shock prop, accelerating the PPI deceleration trajectory.",
+      "status": "pending",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "sightings": 1,
+      "id": "china-july-ppi-3-5-yoy-vs-4-1-prior-oil-shock-di-2acd76"
+    },
+    "us-israel-iran-war-june-ceasefire-deal-framework-7a14a1": {
+      "headline": "US-Israel-Iran war: June ceasefire/deal framework fragile; tanker attacks persist 5+ months after conflict began; LNG disruption (Qatar Ras Laffan halt) and fertilizer supply chain shock still reverberating",
+      "summary": "The US-Iran conflict that began Feb 28, 2026 produced a June MOU with a 60-day negotiating window for a final deal (including Hormuz reopening and $300bn Iran reconstruction fund), but new tanker attacks on Aug 14 demonstrate the ceasefire is not holding. Qatar's Ras Laffan LNG plant (world's largest) was temporarily halted earlier in the conflict; the CSIS notes that the Hormuz closure sharply increased sulfur/sulfuric acid prices, raising costs across critical mineral and fertilizer supply chains.",
+      "as_of": "2026-08-14",
+      "sources": [
+        "https://www.congress.gov/crs-product/IF13247",
+        "https://www.csis.org/analysis/g7-critical-minerals-ambitions-and-irans-natural-resources",
+        "https://finance.yahoo.com/news/24-hour-energy-shock-world-160000254.html",
+        "https://www.britannica.com/event/Iran-nuclear-deal-negotiations"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_story": {
+        "name": "US-Israel-Iran War: Multi-vector macro shock (energy, LNG, fertilizer, nuclear proliferation, ceasefire fragility)",
+        "why": "The February 2026 US-Israel strikes on Iran triggered a five-month-long Hormuz disruption affecting ~20% of global seaborne oil and LNG, a temporary Qatar LNG halt, spiking fertilizer input costs (sulfur/sulfuric acid), and persistent nuclear proliferation uncertainty. A June MOU opened a 60-day deal window but renewed tanker attacks on Aug 14 signal the ceasefire is not self-enforcing. This conflict is now the primary exogenous macro shock for 2026 and warrants its own story node, as its tentacles reach s20_sea_lanes, s18_food_fertilizer, s5_china_deflation, s16_copper (mineral supply chains), and global inflation/central bank paths simultaneously.",
+        "proposed_level": 9,
+        "set": "Set 4",
+        "indicators": [
+          {
+            "label": "US-Iran ceasefire/deal durability (0 holding / 1 fragile / 2 collapsed)",
+            "type": "band",
+            "rubric": "0 = 60-day negotiating framework on track, no major violations; 1 = sporadic attacks or negotiation setbacks, framework at risk; 2 = formal breakdown, renewed large-scale hostilities, or Iranian nuclear escalation",
+            "sources": [
+              "https://www.congress.gov/crs-product/IF13247",
+              "https://www.ttnews.com/articles/oil-prices-up-tanker-attacks"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Brent crude (USD/bbl, ICE BRN=F) \u2013 war-premium proxy",
+            "type": "value",
+            "rubric": "Current: ~$88\u201390. Threshold bands: <$80 = war premium fading; $80\u201395 = elevated/contested; >$95 = acute shortage/escalation premium",
+            "sources": [
+              "https://www.aljazeera.com/economy/2026/8/12/oil-prices-rise-as-attacks-dent-hopes-for-strait-of-hormuz-reopening",
+              "https://www.fxcm.com/au/insights/global-macro-and-markets-briefing-17-august-2026/"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Iran nuclear breakout risk (0 no change / 1 enrichment uptick / 2 weaponisation signal)",
+            "type": "band",
+            "rubric": "0 = IAEA monitoring intact, enrichment frozen per MOU; 1 = enrichment activity increase detected or IAEA access limited; 2 = 90%+ enrichment confirmed or nuclear device assembly indicators",
+            "sources": [
+              "https://www.armscontrol.org/act/2026-04/features/analysis-us-negotiators-were-ill-prepared-serious-nuclear-talks-iran",
+              "https://www.congress.gov/crs-product/IF13247"
+            ],
+            "suggested_weight": 0.2
+          },
+          {
+            "label": "Middle East LNG/fertilizer supply disruption (0 normal / 1 partial / 2 acute)",
+            "type": "band",
+            "rubric": "0 = Qatar Ras Laffan and Gulf LNG/sulfur flows fully restored; 1 = partial disruption, elevated spot prices; 2 = major LNG plant offline or Hormuz-linked fertilizer input shortage causing food-price spikes",
+            "sources": [
+              "https://www.csis.org/analysis/g7-critical-minerals-ambitions-and-irans-natural-resources",
+              "https://finance.yahoo.com/news/24-hour-energy-shock-world-160000254.html"
+            ],
+            "suggested_weight": 0.15
+          }
+        ]
+      },
+      "rationale": "No existing story in the tracker captures the US-Israel-Iran conflict as a unified risk node. While s20_sea_lanes tracks Hormuz/WTI and s18_food_fertilizer tracks fertilizer inputs, the conflict simultaneously drives nuclear proliferation risk, LNG disruption, oil-price-mediated global inflation, ceasefire fragility, and critical mineral supply chain cost shocks through a single geopolitical driver. A dedicated story with a proposed_level of 9/10 (highest active macro shock in the system) is warranted to track these interlinked dimensions holistically and avoid indicator fragmentation across five separate existing stories.",
+      "status": "pending",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "sightings": 1,
+      "id": "us-israel-iran-war-june-ceasefire-deal-framework-7a14a1"
+    },
+    "boj-september-rate-hike-expectations-intensify-1-3e5075": {
+      "headline": "BOJ September rate-hike expectations intensify: 10y JGB at 2.95% (Aug 18), Japanese PPI +7.2% YoY in July; domestic capital repatriation and yen dynamics create carry-unwind risk",
+      "summary": "Japan's 10-year JGB yield hit 2.95% on August 18, 2026 (the highest since 1996), with markets pricing a near-certain BOJ rate hike for September after multiple policymakers called for a stronger inflation response; July PPI rose 7.2% YoY partly due to Middle East oil costs. The confluence of imminent BOJ hikes, Takaichi fiscal expansion, and USD/JPY dynamics has materially elevated carry-trade unwind risk that was last acute in August 2024.",
+      "as_of": "2026-08-18",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
+        "https://www.oxfordeconomics.com/resource/japans-consumption-tax-cut-would-widen-the-fiscal-deficit-and-push-jgb-yields-higher/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield (%) \u2192 estimated ~3.6\u20133.7% range based on curve; USD/JPY \u2192 monitor for yen strengthening on BOJ hike; Takaichi plan financing clarity \u2192 update to 2 (disorderly, given BOJ ETF-tap trial balloon and unclear debt-offset mechanism per HSBC/Oxford Economics)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Multiple current s2_japan indicators are simultaneously flashing. The 10y JGB at 2.95% (approaching Oxford Economics' 3% year-end target), the BOJ September hike probability rising sharply, and the Takaichi food-tax-cut financing opacity (now with BOJ ETF suggestion) collectively move the 'Takaichi plan financing clarity' indicator from 1 (unclear) to 2 (disorderly). The 30y JGB yield is likely in the 3.6\u20133.7% range (extrapolating from the curve structure seen in data). This is a high-materiality update to existing story indicators.",
+      "status": "pending",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "sightings": 1,
+      "id": "boj-september-rate-hike-expectations-intensify-1-3e5075"
     }
   },
-  "generated": "2026-08-17",
+  "generated": "2026-08-18",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 162
+  "new_count": 6,
+  "pending_count": 168
 }
