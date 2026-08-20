@@ -174,12 +174,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "Since the US-Israel military campaign against Iran began in late February 2026, Iranian interdiction has cut Hormuz transits to just 8 vessels per day versus a pre-war average of 120. The EIA on August 11 raised its 2026 average Brent forecast to $87/bbl, up from $82/bbl a month prior, with the disruption now expected to persist through at least end-August.",
-      "as_of": "2026-08-15",
+      "summary": "The US\u2013Iran war (begun February 28, 2026) has left the Strait of Hormuz effectively closed to routine commercial tanker traffic as of July 30, with at least two UAE tankers attacked on August 13. WTI traded around $81/bbl on August 13 \u2014 down from an April peak near $109 \u2014 because coordinated IEA SPR releases (400 million barrels, largest on record) and demand destruction have offset the physical supply shock, but the constraint remains structural, not resolved.",
+      "as_of": "2026-08-13",
       "sources": [
-        "https://www.cnn.com/2026/08/11/world/live-news/iran-war-trump",
-        "https://www.cnn.com/2026/08/15/world/live-news/iran-war-trump",
-        "https://congress.gov/crs-product/R45281"
+        "https://www.cnn.com/2026/08/13/world/live-news/iran-war-trump",
+        "https://carraglobe.com/strait-of-hormuz-closure-2026/",
+        "https://tradingeconomics.com/commodity/brent-crude-oil/news/531407",
+        "https://tradingeconomics.com/commodity/heating-oil/news/532982"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -187,12 +188,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Hormuz transit volumes are at ~7% of normal (8 vs 120 ships/day), placing this squarely at '2 = closed' on the rubric. The EIA's upward revision and CNN/CRS documentation of persistent Iranian attacks on UAE and Saudi shipping on August 15 make this a high-materiality update to both the Hormuz/Red Sea status and WTI crude indicators within s20. A UAE state-oil vessel was attacked on August 15 in the strait itself, widening the combatant perimeter. This also feeds fertilizer input risk (s18) via Hormuz LNG/ammonia flows.",
+      "rationale": "The Hormuz status indicator should be at '2 closed' \u2014 the strait is confirmed effectively shut to routine commercial shipping as of July 30, with ongoing tanker attacks as recently as August 13. WTI (~$81) and Brent (~$87) are below April peaks but remain elevated and sensitive to any escalation. This is a continuous high-materiality reading, not background noise; the IEA's record 400mb SPR release masks the underlying physical disruption. The s20 WTI indicator should also be refreshed to ~$81/bbl.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 22
+      "sightings": 23
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
@@ -219,12 +220,13 @@
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
-      "summary": "China's November 2025 pause on its expanded rare-earth export controls (the 'second wave') is set to lapse in November 2026, with extraterritorial enforcement of the October 2025 framework also scheduled to activate then. Separately, China has reportedly widened entity-level export restrictions to approximately 10 US firms in June and 14 EU firms in July 2026, and NdPr alloy benchmark prices rose ~21% in a single month through July 1.",
-      "as_of": "2026-08-18",
+      "summary": "On June 22, Beijing added MP Materials and USA Rare Earth (which received $550 million and $1.6 billion in US federal investment respectively) plus approximately eight other US entities to its export-control entity list, ending the minerals truce that had been in place since the October 2025 Busan summit. The broader November 2025 pause on wider rare-earth export controls formally expires November 10, 2026, creating a hard countdown to a potential full reimposition.",
+      "as_of": "2026-06-22",
       "sources": [
+        "https://www.fdd.org/analysis/2026/06/24/china-targets-the-u-s-rare-earth-comeback/",
+        "https://legalinsurrection.com/2026/07/china-hits-u-s-europe-with-new-rare-earths-export-controls/?amp=&amp=",
         "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
-        "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/",
-        "https://www.certivo.com/blog-details/china-rare-earth-export-controls-2026-what-new-licensing-rules-mean-for-manufacturers"
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -232,12 +234,12 @@
       "target_indicator": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Three s6 indicators are simultaneously in play: (1) the Nov-2025 pause status is now 'expiring' (rubric = 1, ticking toward 2 as the November cliff approaches); (2) the entity blacklist has expanded to ~24 combined US/EU firms since June \u2014 solidly '1 entity-specific ban' and trending toward '2'; (3) the NdPr price premium surged ~21% MoM, signalling tightening ex-China supply. This is the highest-frequency update on the rare-earths story and warrants an amber/elevated flag given the November expiry is now <90 days away.",
+      "rationale": "The blacklisting of MP Materials and USA Rare Earth \u2014 the crown jewels of US rare-earth independence policy, recipients of $2.15 billion in federal funds combined \u2014 moves the 'US domestic RE producer blacklist' indicator firmly to '1 entity-specific ban'. This is not routine; it is a surgical escalation designed to decapitate the US diversification effort. The November 10, 2026 truce-expiry countdown also now looms within 90 days, elevating the Nov-2025 pause status indicator to '1 expiring'. Both indicators need updating.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "id": "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6",
-      "sightings": 12
+      "sightings": 13
     },
     "hyperscaler-ai-capex-approaches-800bn-in-2026-67-03d0a0": {
       "headline": "Hyperscaler AI capex approaches $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027 \u2014 revenue gap concern widens",
@@ -2051,13 +2053,14 @@
     },
     "japan-s-takaichi-government-pauses-boj-bond-tape-81e119": {
       "headline": "Japan's Takaichi government pauses BOJ bond-taper programme under political pressure; 10Y JGB yield near 30-year high of ~2.7-2.8%, Oxford Economics raises end-2026 forecast to 2.8%",
-      "summary": "The yen fell to a four-decade low against the USD through late June/early July 2026, while the 10-year JGB yield reached 2.90% (highest since 1996) and the 30-year yield hovered near 4%. Japan's June 30 government economic blueprint was read by markets as an attempt to restrain BoJ rate hikes, stoking fears the BoJ will fall behind the curve and leaving JPY 370 trillion in proposed public/private investment without clear financing.",
-      "as_of": "2026-07-23",
+      "summary": "On August 5, Japan's Cabinet approved the Takaichi government's plan to cut food consumption tax from 8% to 1% for two years (April 2027\u20132029), creating a \u00a55 trillion/year revenue hole with no identified offset; as of August 18 the 10-year JGB yield hit 2.93%, the highest since 1996, while Oxford Economics now projects the yield reaching 3% by end-2026. Markets are additionally nervous ahead of end-August FY27 ministry budget submissions and a potential cabinet reshuffle that could remove the one fiscal-hawk (Finance Minister Katayama) from the Takaichi team.",
+      "as_of": "2026-08-18",
       "sources": [
-        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
-        "https://wolfstreet.com/2026/07/01/yen-craters-to-4-decade-low-jgb-yields-at-3-decade-highs-monetary-policy-mess-comes-home-to-roost/",
-        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/",
-        "https://tradingeconomics.com/japan/government-bond-yield"
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://eastasiaforum.org/2026/08/12/takaichis-food-tax-cut-eats-into-fiscal-stability/",
+        "https://www.oxfordeconomics.com/resource/japans-consumption-tax-cut-would-widen-the-fiscal-deficit-and-push-jgb-yields-higher/",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/",
+        "https://wtaq.com/2026/08/04/japans-ruling-party-backs-takaichis-costly-food-tax-cut-plan-despite-fiscal-concerns/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -2065,11 +2068,11 @@
       "target_indicator": "Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "All three existing s2_japan indicators are flashing simultaneously: USD/JPY at a 40-year high (yen weakness = risk), 30-year JGB at ~4% and 10-year at ~2.90%, and the June 30 'Basic Policy' document is being read as a direct attempt to restrain BoJ hikes while JPY 370 trillion in spending remains unfunded \u2014 squarely mapping to 'Takaichi plan financing clarity = 2 (disorderly)'. The MUFG note explicitly flags super-long JGB upside and limited scope for improvement while fiscal uncertainty lingers.",
+      "rationale": "Cabinet approved the food tax cut on Aug 5 with no identified revenue replacement \u2014 explicitly flagged by the East Asia Forum and Oxford Economics as fiscally unconstrained. The 10-year JGB yield reached 2.93% (a 30-year high) on Aug 18, converging on the 3% level Oxford Economics considers the stress threshold. The financing clarity indicator should move to '2 disorderly' given (a) Cabinet approval without a funding plan, (b) yields at multi-decade highs, (c) an imminent \u00a518.3tn supplementary-budget bond issuance, and (d) risk of losing the lone fiscal-hawk in the cabinet reshuffle. This is the most pressing live development for s2_japan.",
       "status": "pending",
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-23",
-      "sightings": 3,
+      "last_seen": "2026-08-20",
+      "sightings": 4,
       "id": "japan-s-takaichi-government-pauses-boj-bond-tape-81e119"
     },
     "us-fiscal-dominance-accelerating-obbba-debt-traj-b79d30": {
@@ -2963,23 +2966,23 @@
     },
     "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0": {
       "headline": "China June PPI +4.1% YoY (4-year high) driven by Iran energy shock\u2014but MoM turned negative and consumer goods PPI still -0.9%, revealing a dangerous bifurcation",
-      "summary": "Two credible sources filed divergent July 2026 PPI readings on August 9\u201310: Bloomberg reported PPI at +3.5% YoY (slowing from +4.1%, citing Iran-war oil-shock fading), while Investing.com reported \u20133.5% YoY (deflation moderating from \u20134.1%). Both agree domestic demand remains muted and CPI decelerated, underscoring persistent structural deflation risk regardless of the oil-price overlay.",
-      "as_of": "2026-08-10",
+      "summary": "China's July PPI fell 3.5% year-on-year (narrowing from June's \u20133.6% / \u20134.1% depending on source), remaining deeply negative after 33+ consecutive months of factory-gate deflation; China's manufacturing PMI stayed below 50 for a fifth straight month in August, with new export orders at 47.2. The persistence of deflation alongside tariff headwinds amplifies the risk of deflationary goods export to global trading partners.",
+      "as_of": "2026-08-09",
       "sources": [
-        "https://www.bloomberg.com/news/articles/2026-08-09/china-s-inflation-cools-as-oil-shock-of-iran-war-starts-to-ease",
-        "https://www.investing.com/news/economic-indicators/china-cpi-eases-ppi-deflation-moderates-in-july-4847797"
+        "https://www.investing.com/news/economic-indicators/china-cpi-eases-ppi-deflation-moderates-in-july-4847797",
+        "https://www.fxstreet.com/amp/news/china-exports-likely-slowed-in-august-standard-chartered-202509021000"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "existing_indicator",
       "target_story": "s5_china_deflation",
       "target_indicator": "China PPI YoY (%) - large swing either way is worse",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Fresh July 2026 official NBS data released August 9\u201310 directly updates the primary China PPI YoY indicator for s5_china_deflation. The data conflict between the two sources (both citing NBS) itself is a red flag warranting tracker attention: one reading suggests imported-oil inflation masking structural deflation; the other confirms deflation is merely moderating. Either way, the PPI indicator needs updating and the story remains active \u2014 the tracker rubric flags 'large swing either way is worse.'",
+      "rationale": "July PPI of \u20133.5% YoY is a material deflationary reading \u2014 deep in the danger zone for the PPI indicator \u2014 and signals continued price-export pressure on global goods markets. While the direction marginally improved from June (\u20134.1%), five consecutive months of sub-50 manufacturing PMI and sub-49 export-order PMI confirms China's domestic demand remains structurally weak. The indicator should be logged at \u20133.5% and flagged as persistently elevated-risk.",
       "status": "pending",
       "first_seen": "2026-07-15",
-      "last_seen": "2026-08-11",
-      "sightings": 8,
+      "last_seen": "2026-08-20",
+      "sightings": 9,
       "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
     },
     "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328": {
@@ -5570,10 +5573,111 @@
       "last_seen": "2026-08-19",
       "sightings": 1,
       "id": "iran-us-war-directly-threatens-hormuz-fertilizer-410f04"
+    },
+    "boj-june-meeting-minutes-confirm-inflation-overs-f5d4f2": {
+      "headline": "BOJ June meeting minutes confirm inflation-overshoot risk; September hike to 1.25% increasingly priced; yen still weak despite hawkish tilt",
+      "summary": "Minutes from the BOJ's June meeting (released August 10) showed most members saw crude-oil cost pass-through broadening into CPI, with two members calling for faster rate hikes toward neutral; MUFG Research projects a September hike to 1.25% and 1.75% by June 2027. Despite hawkish signals, yen weakness persists because of the Takaichi fiscal expansion and Middle East energy costs, creating a dual pressure: a BOJ that must tighten into a slowing economy while fiscal policy loosens.",
+      "as_of": "2026-08-10",
+      "sources": [
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://asia.nikkei.com/business/markets/growing-expectations-for-faster-boj-rate-hikes-push-up-bond-yields",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "BOJ policy-fiscal divergence stress (0 aligned / 1 mild divergence / 2 acute divergence)",
+        "type": "band",
+        "rubric": "0 = BOJ and fiscal policy broadly coherent (e.g., tightening with consolidating budget); 1 = BOJ hiking but fiscal loosening moderately (primary deficit <3% GDP, JGB yields rising but orderly); 2 = BOJ forced to hike aggressively while fiscal policy adds \u22653% GDP deficit and/or JGB yields approach 3%+ with no financing clarity, threatening carry-unwind and fiscal dominance fears.",
+        "sources": [
+          "https://tradingeconomics.com/japan/interest-rate",
+          "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/",
+          "https://www.oxfordeconomics.com/resource/japans-consumption-tax-cut-would-widen-the-fiscal-deficit-and-push-jgb-yields-higher/"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The s2_japan story already tracks USD/JPY, 30-year JGB yield, and financing clarity \u2014 but none of these captures the specific systemic tension between a BOJ now accelerating hikes toward neutral and a government simultaneously enacting the largest consumption-tax cut since 1989 with no identified revenue offset. This divergence is the mechanism that could force a disorderly JGB repricing or accelerate yen carry-trade unwind. A dedicated divergence indicator would provide early warning of fiscal-dominance risk that is distinct from (but related to) the financing-clarity ordinal.",
+      "status": "pending",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "sightings": 1,
+      "id": "boj-june-meeting-minutes-confirm-inflation-overs-f5d4f2"
+    },
+    "us-iran-war-six-month-old-kinetic-conflict-is-th-6d4832": {
+      "headline": "US\u2013Iran war: six-month-old kinetic conflict is the root driver of Middle East energy shock, supply chain disruption, and global inflation re-acceleration",
+      "summary": "The US\u2013Israel strike on Iran (February 28, 2026) and the subsequent Strait of Hormuz closure represent a persistent geopolitical shock not captured by any single existing story; the conflict has driven the IEA's largest-ever SPR release, LNG force majeure by QatarEnergy, and an energy-price-driven inflation impulse that is simultaneously complicating BOJ policy, compressing EM fiscal space, and raising tail risk for global financial stability \u2014 a parent-risk umbrella spanning multiple existing stories.",
+      "as_of": "2026-08-13",
+      "sources": [
+        "https://www.cnn.com/2026/08/13/world/live-news/iran-war-trump",
+        "https://carraglobe.com/strait-of-hormuz-closure-2026/",
+        "https://spglobal.com/energy/en/news-research/latest-news/crude-oil/031226-factbox-iran-vows-to-keep-hormuz-closed-as-oil-hits-multiyear-highs",
+        "https://tradingeconomics.com/commodity/heating-oil/news/532982",
+        "https://www.congress.gov/crs-product/R45281"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US\u2013Iran War: Kinetic Conflict & Energy / Supply-Chain Systemic Shock",
+        "why": "A six-month active war involving the US, Israel, and Iran has closed the Strait of Hormuz (20 mmb/d normal throughput) to routine shipping, triggered the IEA's largest-ever coordinated SPR release (400 mb), forced QatarEnergy LNG force majeure, produced energy-driven inflation that is complicating central bank policy globally, and risks multi-carrier naval escalation. This is a parent risk that amplifies at least six existing stories (s2, s4, s5, s18, s20, s10) but is not itself tracked as a standalone story with dedicated leading indicators. It warrants its own story entry to monitor conflict trajectory, ceasefire/diplomatic progress, and the secondary financial contagion channels.",
+        "proposed_level": 9,
+        "set": "Set 4",
+        "indicators": [
+          {
+            "label": "Hormuz operational status (% of pre-war throughput, tanker-tracking data)",
+            "type": "value",
+            "rubric": "Percentage of pre-war (~20 mmb/d) tanker-throughput passing Hormuz per week per VesselsValue/Kpler data. >80% = open; 40\u201380% = heavily contested; <40% = effectively closed.",
+            "sources": [
+              "https://carraglobe.com/strait-of-hormuz-closure-2026/",
+              "https://spglobal.com/energy/en/news-research/latest-news/crude-oil/031226-factbox-iran-vows-to-keep-hormuz-closed-as-oil-hits-multiyear-highs"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Ceasefire / diplomatic track progress (0 active fighting / 1 talks underway / 2 ceasefire in place)",
+            "type": "band",
+            "rubric": "0 = active kinetic operations, no formal talks; 1 = back-channel or third-party negotiations underway with partial de-escalation; 2 = formal ceasefire or humanitarian pause in effect.",
+            "sources": [
+              "https://www.cnn.com/2026/08/13/world/live-news/iran-war-trump"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Global SPR buffer remaining (days of OECD demand equivalent)",
+            "type": "value",
+            "rubric": "IEA-reported OECD strategic stock coverage in days. >90 days = comfortable; 60\u201390 = watch; <60 = acute supply vulnerability.",
+            "sources": [
+              "https://tradingeconomics.com/commodity/heating-oil/news/532982",
+              "https://www.congress.gov/crs-product/R45281"
+            ],
+            "suggested_weight": 0.2
+          },
+          {
+            "label": "Financial contagion spread (0 contained / 1 EM stress / 2 DM credit stress)",
+            "type": "band",
+            "rubric": "0 = energy shock absorbed, EM spreads <400bps, DM IG OAS normal; 1 = energy-driven EM sovereign stress and/or stagflation pricing in DM rates; 2 = DM credit spreads widening materially, central banks forced to choose between inflation and growth.",
+            "sources": [
+              "https://www.worldbank.org/en/publication/global-economic-prospects"
+            ],
+            "suggested_weight": 0.15
+          }
+        ]
+      },
+      "rationale": "While s20_sea_lanes captures the Hormuz/oil price and undersea cable dimension, the US\u2013Iran war is a qualitatively different risk: an active kinetic conflict between the world's sole superpower and a major oil-chokepoint state, now six months old with no ceasefire in sight. Its cross-cutting effects \u2014 energy inflation reignition, SPR depletion, LNG market disruption, EM fiscal pressure, and BOJ/ECB policy complication \u2014 are each partially captured in existing stories but the originating cause and its trajectory have no dedicated home. A standalone story with conflict-progression indicators enables the tracker to assess the primary risk driver, not just its downstream symptoms.",
+      "status": "pending",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "sightings": 1,
+      "id": "us-iran-war-six-month-old-kinetic-conflict-is-th-6d4832"
     }
   },
-  "generated": "2026-08-19",
+  "generated": "2026-08-20",
   "model": "claude-sonnet-4-6",
   "new_count": 2,
-  "pending_count": 170
+  "pending_count": 172
 }
