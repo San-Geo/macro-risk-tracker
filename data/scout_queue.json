@@ -197,13 +197,11 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 10-year JGB yield surged to 2.93% on August 18 \u2014 its highest since 1996 \u2014 while the 30-year rose to 4.12%, as markets priced an ~80% probability of a BOJ rate hike to 1.25% in September. Compounding fiscal risk, an imminent Takaichi cabinet reshuffle may remove Finance Minister Katayama (the primary fiscal-discipline anchor), while FY27 budget requests are due to spike and a food-consumption-tax cut (unfunded) heads toward autumn parliamentary debate.",
-      "as_of": "2026-08-18",
+      "summary": "Japan's long-end bond yields surged week of Aug 17, with the 30-year at 4.07% (near May record) and 10-year at 2.93%, driven by fiscal concerns and BOJ rate-hike bets. A looming cabinet reshuffle could oust Finance Minister Katayama \u2014 the key fiscal-discipline anchor \u2014 potentially triggering further yen weakness and JGB bear-steepening.",
+      "as_of": "2026-08-17",
       "sources": [
-        "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://tradingeconomics.com/japan/30-year-bond-yield",
-        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/",
-        "https://caliber.az/en/post/media-japanese-pm-takaichi-to-reshuffle-cabinet-as-approval-ratings-slide"
+        "https://www.bloomberg.com/news/articles/2026-08-17/japan-s-bond-yields-climb-on-boj-hike-bets-fiscal-concerns",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -211,12 +209,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 30-year JGB at 4.12% and 10-year at 2.93% (highest since 1996) are direct hits on two existing s2 indicators. The 'Takaichi plan financing clarity' sub-indicator should move from 1 (unclear) toward 2 (disorderly): the potential removal of Finance Minister Katayama \u2014 the lone fiscal hawk in the cabinet \u2014 combined with rising aggregate FY27 budget requests, an unfinanced food-tax cut, and a still-weak yen, represents a material deterioration in the story. The BOJ is simultaneously tightening into fiscal expansion, a combustible mix for carry-trade unwinds.",
+      "rationale": "The 30-year JGB at 4.07% is the primary tracker indicator for s2_japan. The additional political risk \u2014 potential removal of the fiscal-hawk Finance Minister \u2014 directly feeds 'Takaichi plan financing clarity' (currently 1=unclear, now pressure toward 2=disorderly). BOJ expected to hike to 1.25% in September. Both quantitative and qualitative indicators are moving adversely simultaneously, qualifying as HIGH materiality.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-21",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 15
+      "sightings": 16
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -895,12 +893,12 @@
     },
     "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec": {
       "headline": "Iran war energy shock drives Hormuz fertilizer disruption; Gulf fertilizer exports (especially Qatar LNG-linked urea) severely curtailed since March 2026",
-      "summary": "With Hormuz effectively closed and the Houthi blockade of Bab al-Mandeb now in force, roughly 25% of global seaborne oil supply is simultaneously threatened; Gulf-origin urea, ammonia, and LNG\u2014critical fertilizer feedstocks\u2014face acute shipment disruption, a direct stress on s18_food_fertilizer's Hormuz/Gulf input indicator.",
-      "as_of": "2026-08-05",
+      "summary": "Since the Feb 28 US-Israel strike on Iran, Hormuz throughput has collapsed \u2014 LNG exports fell 95% and combined merchandise exports from Gulf states dropped 21% in April. FAO's Director-General has formally warned that fertilizer scarcity will reduce yields and tighten food supplies into 2027, with WFP estimating up to 45 million additional people at risk of hunger.",
+      "as_of": "2026-08-07",
       "sources": [
-        "https://www.aljazeera.com/news/2026/7/20/yemens-houthis-declare-naval-blockade-of-saudi-arabia-what-to-know",
-        "https://edition.cnn.com/2026/08/05/world/live-news/iran-war-trump",
-        "https://energynewsbeat.co/crude-oil/the-iran-war-spread-to-the-red-sea-and-what-is-the-impact/"
+        "https://news.un.org/en/story/2026/08/1168074",
+        "https://www.fao.org/newsroom/detail/strait-of-hormuz-crisis--fertilizer-scarcity-will-affect-next-harvests-and-food-supplies--fao-warns/en",
+        "https://www.securitycouncilreport.org/monthly-forecast/2026-08/conflict-and-food-insecurity-3.php"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -908,12 +906,12 @@
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s18_food_fertilizer story's Hormuz/Gulf fertilizer input indicator should now be updated to '2 cut': Hormuz has been effectively closed since late February 2026 (>90% traffic drop), Gulf ammonia/urea export terminals in Kuwait, Qatar, and the UAE are operating under severe constraint, and the Bab al-Mandeb blockade (July 2026) now closes the Red Sea bypass route used by Saudi and Qatari petrochemical tankers. The additive closure of both routes materially upgrades the indicator reading from '1 disrupted' to '2 cut' and directly threatens global fertilizer supply chains heading into the Northern Hemisphere autumn planting window.",
+      "rationale": "The Hormuz disruption indicator for s18 should now read 2 (cut): LNG exports -95%, fertilizer supplies materially severed for a prolonged period per FAO/UN/ITC. The food-price trend indicator also warrants upgrade toward 2 (spiking): Fitch raised 2026 ammonia/urea price expectations by ~25%, and fertilizer prices are 15\u201320% above prior year. This simultaneously pressures s20_sea_lanes (Hormuz/Red Sea status = 2, closed/contested). This is the single most acute cross-story shock in the tracker.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-08-21",
       "id": "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec",
-      "sightings": 9
+      "sightings": 10
     },
     "japan-s-energy-import-crisis-deepens-as-hormuz-c-e531e3": {
       "headline": "Japan's energy import crisis deepens as Hormuz closure compounds BOJ policy bind \u2014 new macro feedback loop not captured in existing indicators",
@@ -991,11 +989,12 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "S&P Global and China Briefing confirm that the one-year suspension of China's Oct-2025 rare-earth export controls (covering holmium, erbium, thulium, europium, ytterbium and associated technologies) is set to expire November 10, 2026. The earlier April 2025 controls and the broader dual-use licensing architecture remain fully intact throughout.",
-      "as_of": "2026-06-30",
+      "summary": "China's November 2025 suspension of its October 2025 rare-earth export controls expires on November 10, 2026. With the deadline under 90 days away, niche rare-earth prices jumped (Aug 13) on market fears of reinstatement; China's 2026 Import-Export Licensing Catalogue has already added new controls on samarium, gadolinium, and lutetium, with extraterritorial enforcement delayed only to November 2026.",
+      "as_of": "2026-08-16",
       "sources": [
-        "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2026/6/china-tightens-rare-earth-export-curbs-on-10-us-companies-103014947",
         "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+        "https://investornews.com/critical-minerals-rare-earths/critical-minerals-report-08-16-2026-the-critical-minerals-bull-market-is-here-as-china-puts-its-arsenal-back-in-play/",
+        "https://www.certivo.com/blog-details/china-rare-earth-export-controls-2026-what-new-licensing-rules-mean-for-manufacturers",
         "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
       ],
       "materiality": "high",
@@ -1004,12 +1003,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Nov-2025 pause status indicator for s6_rare_earths is the exact vehicle to capture this development. The pause expires in ~90 days (November 10, 2026), with active enforcement escalation already underway (foreign national detentions, MOFCOM reporting mechanism). The indicator should be moved from 0 (extended) to 1 (expiring) immediately given the confirmed expiry date and absence of any diplomatic extension signal. This is among the highest-materiality near-term hard deadlines in the tracker.",
+      "rationale": "The Nov-2025 pause status indicator should now read 1 (expiring): the one-year suspension ends Nov 10, 2026, and market participants are already pricing reinstatement risk (niche RE price spike Aug 13). China has simultaneously added new licensing requirements via the 2026 Catalogue (samarium, gadolinium, lutetium) with extraterritorial enforcement set for November \u2014 a convergence of cliff-edge timing. The 'Rare-earth export license flow' indicator may also shift from 1 (slowing) toward 2 (frozen) if reinstatement occurs. High materiality given the broad downstream exposure across defense, EVs, wind turbines, and AI data-center magnets.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-08-21",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 10
+      "sightings": 11
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -1365,22 +1364,24 @@
     },
     "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9": {
       "headline": "China PPI Surges to +3.9% YoY in May (3rd Consecutive Monthly Rise, Fastest Since July 2022) Driven by Iran-War Energy Spike",
-      "summary": "China's National Bureau of Statistics reported July 2026 PPI at -3.5% YoY (vs -4.1% in June), beating expectations of -3.8% but marking the 34th straight month of factory-gate deflation. CPI rose less than forecast, underscoring persistent domestic demand weakness as US reciprocal tariffs continue to suppress export volumes.",
-      "as_of": "2026-08-09",
+      "summary": "China's CPI fell 0.3% YoY in July 2026 and manufacturing PMI stayed at 49.4 for a fifth consecutive sub-50 month, with new export orders at a weak 47.2. Simultaneously, niche rare-earth prices surged mid-August on fears China may reinstate suspended export controls ahead of the November 10, 2026 expiry of the one-year pause.",
+      "as_of": "2026-08-14",
       "sources": [
-        "https://www.investing.com/news/economic-indicators/china-cpi-eases-ppi-deflation-moderates-in-july-4847797"
+        "https://thetribune.asia/china-deflation-2026/",
+        "https://investornews.com/critical-minerals-rare-earths/critical-minerals-report-08-16-2026-the-critical-minerals-bull-market-is-here-as-china-puts-its-arsenal-back-in-play/",
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/"
       ],
-      "materiality": "medium",
+      "materiality": "high",
       "classification": "existing_indicator",
       "target_story": "s5_china_deflation",
       "target_indicator": "China PPI YoY (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The July PPI print of -3.5% is a direct update to the primary s5 indicator. While the rate of decline is narrowing (less negative than June), 34 consecutive months of deflation with below-forecast CPI confirms the story remains active and material. The combination of still-deep PPI deflation, ongoing US tariff pressure on export volumes, and a manufacturing PMI stuck below 50 for five straight months keeps deflationary spillover risk elevated for global goods prices. No change in classification is warranted but the indicator values need updating.",
+      "rationale": "China PPI for July 2026 is running deeply negative (tracker should log the current reading). CPI going negative again in July confirms deflation is not abating. PMI sub-50 for 5 months signals that overcapacity/export-led growth is worsening domestic price spillover. Simultaneously, market pricing of niche rare-earth price spikes (Aug 13) is captured under s6_rare_earths 'Ex-China heavy rare-earth price premium' indicator. Both stories are in adverse motion heading into the Nov 10 cliff for the suspended export controls, making this a dual-story update of high materiality.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-08-19",
-      "sightings": 7,
+      "last_seen": "2026-08-21",
+      "sightings": 8,
       "id": "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9"
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
@@ -5674,10 +5675,71 @@
       "last_seen": "2026-08-20",
       "sightings": 1,
       "id": "us-iran-war-six-month-old-kinetic-conflict-is-th-6d4832"
+    },
+    "drc-bans-copper-and-cobalt-concentrate-exports-e-9364c7": {
+      "headline": "DRC bans copper and cobalt concentrate exports (effective Aug 6), LME copper spikes to highest since Jan 2026; Kamoa-Kakula waiver exposure flagged",
+      "summary": "The Democratic Republic of Congo issued a government order (signed Jun 29, published Aug 6) banning copper and cobalt concentrate exports outright, the fourth such ban since 2013. LME copper jumped 1.8% to $14,369/t; Kamoa-Kakula \u2014 one of the world's largest copper projects \u2014 faces waiver uncertainty, while cobalt's existing 96,600-tonne annual quota is now supplemented by a concentrate ban.",
+      "as_of": "2026-08-06",
+      "sources": [
+        "https://www.miningweekly.com/article/congo-bans-exports-of-copper-cobalt-concentrates-official-order-says-2026-08-06",
+        "https://cryptobriefing.com/congo-bans-copper-cobalt-concentrate-exports/",
+        "https://www.stonex.com/en/insights/drc-bans-copper-and-cobalt-exports-what-do-we-need-to-know/"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s16_copper",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "DRC resource-nationalism disruption severity (0 none / 1 quota/partial / 2 full ban)",
+        "type": "band",
+        "rubric": "0 = no DRC export restrictions in effect; 1 = cobalt quota system or concentrate waivers in place; 2 = outright ban on copper and/or cobalt concentrate exports with no broad waiver regime, as of Aug 6 2026 = 2",
+        "sources": [
+          "https://www.miningweekly.com/article/congo-bans-exports-of-copper-cobalt-concentrates-official-order-says-2026-08-06",
+          "https://www.stonex.com/en/insights/drc-bans-copper-and-cobalt-exports-what-do-we-need-to-know/"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "s16_copper tracks copper price and mine disruptions, but has no indicator for DRC resource-nationalism risk specifically. The DRC produces >70% of global cobalt and is Africa's largest copper producer \u2014 a full concentrate ban is structurally different from episodic mine outages and requires a dedicated policy/legal indicator. The existing 'Major mine disruptions (0 none / 1 some / 2 cluster)' does not capture a sovereign export-ban regime. Medium materiality because near-term physical disruption is limited (DRC mostly ships cathode, not concentrate), but the precedent and Kamoa-Kakula waiver risk are non-trivial tail events.",
+      "status": "pending",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "sightings": 1,
+      "id": "drc-bans-copper-and-cobalt-concentrate-exports-e-9364c7"
+    },
+    "world-bank-unctad-flag-middle-east-conflict-driv-8ab8af": {
+      "headline": "World Bank / UNCTAD flag Middle East conflict driving global growth slowdown to 2.5%; EMDEs face weakest per-capita income growth since pandemic",
+      "summary": "The World Bank's July 2026 Global Economic Prospects cut global growth to 2.5% for 2026, explicitly citing the Middle East conflict as driving sharp energy-price increases and renewed inflation. UNCTAD projects 2.7% growth, below pre-pandemic average, with tight fiscal space in EMDEs compounding debt-sustainability risks and IMF program pressure.",
+      "as_of": "2026-07-10",
+      "sources": [
+        "https://www.worldbank.org/en/publication/global-economic-prospects",
+        "https://unctad.org/publication/world-economic-situation-and-prospects-2026"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Global growth shock severity / EMDE fiscal-stress index (0 contained / 1 moderate slowdown / 2 systemic EMDE stress)",
+        "type": "band",
+        "rubric": "0 = global growth \u22653.0% with EMDE buffers intact; 1 = global growth 2.5\u20133.0% with rising IMF program demand and tight fiscal space in EMDEs; 2 = global growth <2.5% with cluster of EMDE sovereign distress events, missed coupons, or capital flight. Current reading = 1 (World Bank 2.5%, UNCTAD 2.7%, tight EMDE fiscal space).",
+        "sources": [
+          "https://www.worldbank.org/en/publication/global-economic-prospects",
+          "https://unctad.org/publication/world-economic-situation-and-prospects-2026"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "s4_dev_debt tracks developing-world debt risk using the dollar index, US real yields, and IMF program counts, but has no indicator for the underlying global growth backdrop that determines EMDE debt-service capacity. The World Bank's explicit attribution of the 2.5% growth forecast to the Middle East conflict \u2014 the same conflict driving the Hormuz fertilizer/energy shock \u2014 creates a compounding feedback loop not captured by existing indicators. A growth-shock severity indicator bridges the macro context to EMDE sovereign-stress signals and is directly actionable for the tracker.",
+      "status": "pending",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "sightings": 1,
+      "id": "world-bank-unctad-flag-middle-east-conflict-driv-8ab8af"
     }
   },
-  "generated": "2026-08-20",
+  "generated": "2026-08-21",
   "model": "claude-sonnet-4-6",
   "new_count": 2,
-  "pending_count": 172
+  "pending_count": 174
 }
