@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-21T11:59:19.710304+00:00",
+  "generated": "2026-08-24T12:06:21.851162+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -126,16 +126,16 @@
     }
   },
   "sensitivity": {
-    "as_of_overall": 6.7,
+    "as_of_overall": 7.1,
     "max_story_swing": 2,
     "max_overall_swing": 0.5,
     "movers": [
       {
-        "id": "usdcny",
-        "label": "USD/CNY (yuan depreciation = higher = risk)",
-        "story": "China's price spillover (deflation or cost-push)",
+        "id": "license_flow",
+        "label": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
+        "story": "Critical minerals as a weapon",
         "set": 4,
-        "weight": 1.0,
+        "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.6,
         "overall_swing": 0.5
@@ -161,20 +161,20 @@
         "overall_swing": 0.0
       },
       {
-        "id": "ig_oas",
-        "label": "US investment-grade OAS (%) - big-issuer proxy",
-        "story": "AI build-out circular financing",
-        "set": 2,
+        "id": "usdcny",
+        "label": "USD/CNY (yuan depreciation = higher = risk)",
+        "story": "China's price spillover (deflation or cost-push)",
+        "set": 4,
         "weight": 1.0,
         "story_swing": 2,
         "set_swing": 0.5,
         "overall_swing": 0.5
       },
       {
-        "id": "oil_price",
-        "label": "WTI crude oil (USD/bbl, CL=F)",
-        "story": "Sea lanes & undersea cables",
-        "set": 4,
+        "id": "ig_oas",
+        "label": "US investment-grade OAS (%) - big-issuer proxy",
+        "story": "AI build-out circular financing",
+        "set": 2,
         "weight": 1.0,
         "story_swing": 2,
         "set_swing": 0.5,

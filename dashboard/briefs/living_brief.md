@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-08-21 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-08-24 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 6.7/10** — Set 1 5.8, Set 2 5.0, Set 3 4.5, Set 4 6.2, Set 5 5.8.
+**Overall risk 7.1/10** — Set 1 5.8, Set 2 5.0, Set 3 4.5, Set 4 6.5, Set 5 5.8.
 
 
 ## Set 1 — Funding & Leverage
@@ -100,7 +100,7 @@ China's factory-gate prices spill into global goods markets in BOTH directions: 
 
 *Indicators watched:* China PPI YoY (%) - large swing either way is worse, USD/CNY (yuan depreciation = higher = risk), New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating)
 
-### Critical minerals as a weapon — 6/10 (Elevated)
+### Critical minerals as a weapon — 7/10 (High)
 
 China dominates the mining and especially the processing of rare earths and critical minerals, and has shown willingness to use export licensing as leverage. Supply chains for magnets and defense inputs have little near-term substitute.
 

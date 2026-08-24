@@ -5736,10 +5736,161 @@
       "last_seen": "2026-08-21",
       "sightings": 1,
       "id": "world-bank-unctad-flag-middle-east-conflict-driv-8ab8af"
+    },
+    "japan-10-year-jgb-yield-surges-to-2-95-near-30-y-aa5c46": {
+      "headline": "Japan 10-year JGB yield surges to 2.95%, near 30-year high; BOJ September hike fully priced; Takaichi fiscal-discipline risk rises on cabinet reshuffle fears",
+      "summary": "JGB yields spiked to as high as 2.95% this week amid mounting fiscal concerns over the Takaichi administration's unfunded consumption-tax cut and a weak 10-year auction, while BOJ hawkishness is intensifying with markets now pricing a September rate hike. Cabinet uncertainty around Finance Minister Katayama's tenure is adding a 'malicious yield-rise' tail risk.",
+      "as_of": "2026-08-20",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://wtvbam.com/2026/08/18/japan-bond-yields-near-3-as-inflation-fiscal-worries-mount/",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/",
+        "https://kfgo.com/2026/08/17/japans-10-year-government-bond-yield-rises-to-three-decade-peak/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield (%) \u2014 proxy: 10-year JGB hit 2.95%, above prior tracker levels; Takaichi plan financing clarity now scores 2 (disorderly); yen weakness entrenching despite BOJ hawkishness",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "10-year JGB near 3% is a multi-decade threshold; weak auction demand, unfunded fiscal expansion, and a potential pro-fiscal-expansion cabinet reshuffle all directly stress the three indicators in s2_japan. The 'malicious yield rise' scenario \u2014 where selling begets more selling \u2014 is now explicitly flagged by Japanese analysts. Takaichi plan financing clarity should be upgraded to 2 (disorderly). High materiality because JGB dislocation would trigger global carry-trade unwinding.",
+      "status": "pending",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "sightings": 1,
+      "id": "japan-10-year-jgb-yield-surges-to-2-95-near-30-y-aa5c46"
+    },
+    "china-nov-2025-rare-earth-export-control-pause-e-1f2406": {
+      "headline": "China Nov-2025 rare-earth export-control pause expires November 10, 2026 \u2014 enforcement of extraterritorial provisions and entity-specific bans on 10 US + 14 EU firms already active",
+      "summary": "The November 2025 Xi-Trump suspension of China's expanded rare-earth controls runs out on November 10, 2026, now less than 12 weeks away, with China already enforcing entity-specific bans on 10 US firms (June) and 14 EU firms (July) and formalising a public-reporting mechanism for violations (MOFCOM Announcement 26/2026). The IEA has warned that full enforcement could put $6.5 trillion of downstream production at risk.",
+      "as_of": "2026-08-18",
+      "sources": [
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+        "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/",
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed) \u2192 should now be scored 1 (expiring, <12 weeks); US domestic RE producer blacklist \u2192 1 (entity-specific bans on 10 US firms); Ex-China heavy rare-earth price premium widening (NdPr alloy +21.4% in single month through July 1)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The November 10 sunset of the bilateral pause is a hard, calendared risk event now inside a 90-day horizon. Active entity-level bans on US and EU firms during the pause period signal that China is not treating the suspension as a diplomatic clean slate. All three s6_rare_earths ordinal indicators need upgrading; the pause-status indicator is the most urgent given the approaching expiry date.",
+      "status": "pending",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "sightings": 1,
+      "id": "china-nov-2025-rare-earth-export-control-pause-e-1f2406"
+    },
+    "china-july-ppi-still-deeply-negative-at-3-5-yoy--512fe8": {
+      "headline": "China July PPI still deeply negative at -3.5% YoY; CPI slows to +0.5% \u2014 deflation export pressure persists despite Q2 PPI bounce",
+      "summary": "China's July 2026 PPI came in at -3.5% YoY (narrowing from -4.1% in June but missing the -3.8% consensus), while CPI decelerated to +0.5% from +1.0%, reinforcing the 'hot outside, cold inside' structural deflation dynamic at the factory gate. Persistent producer-price weakness keeps China's deflation export channel open, pressuring global goods inflation.",
+      "as_of": "2026-08-10",
+      "sources": [
+        "https://www.investing.com/news/economic-indicators/china-cpi-eases-ppi-deflation-moderates-in-july-4847797",
+        "https://datatrack.trendforce.com/blog/content/60585/chinas-q2-2026-ppi-yoy-growth-rises-to-41-ending-deflation-and-hitting-a-nearly-four-year-high"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s5_china_deflation",
+      "target_indicator": "China PPI YoY (%) \u2192 update to -3.5% for July 2026; CPI +0.5% signals domestic demand still weak, deflation-export pressure sustained",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The tracker's China PPI indicator needs a live update: a -3.5% YoY print is firmly in the 'large swing worse' zone (deeply negative) that the rubric flags as risk-elevating. The miss vs. consensus and CPI deceleration confirm the deflationary pressure has not been resolved by earlier apparent improvements. This feeds directly into global goods-price disinflationary spillover risk.",
+      "status": "pending",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "sightings": 1,
+      "id": "china-july-ppi-still-deeply-negative-at-3-5-yoy--512fe8"
+    },
+    "genius-act-implementing-rules-still-in-nprm-stag-dbb3aa": {
+      "headline": "GENIUS Act implementing rules still in NPRM stage as of August 18, with Treasury's own NPRM comment period open until October 19 \u2014 final rules will not be ready before late 2026",
+      "summary": "Treasury published a new GENIUS Act NPRM on August 18, 2026 (Fed Register Doc 2026-16796), with a comment window closing October 19, meaning binding final rules across all agencies cannot be coordinated before Q4 2026 at the earliest \u2014 well past the mid-July implementation deadline Congress intended. Total stablecoin supply stands at ~$310bn (USDT ~$184bn, USDC ~$73bn), with significant Treasury-bill demand implications hanging on this delay.",
+      "as_of": "2026-08-18",
+      "sources": [
+        "https://www.federalregister.gov/documents/2026/08/18/2026-16796/genius-act-regulations-on-payment-stablecoin-issuance-offer-and-sale",
+        "https://cryptodaily.co.uk/2026/07/genius-act-missed-deadline-stablecoin-uncertainty",
+        "https://www.chapman.com/publication-genius-act-rulemaking-tracker"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS implementation friction (0 smooth / 1 gaps / 2 problems) \u2192 should be upgraded to 2 (problems); Total USD stablecoin supply update to ~$310bn",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Treasury's August 18 NPRM with an October 19 comment deadline makes final GENIUS rules before year-end nearly impossible, constituting a material implementation gap beyond mere friction. At $310bn of stablecoin supply \u2014 each dollar requiring short-dated Treasury backing \u2014 the regulatory limbo creates uncertainty about the composition and predictability of a now-significant marginal buyer of T-bills. The GENIUS friction indicator should move to 2.",
+      "status": "pending",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "sightings": 1,
+      "id": "genius-act-implementing-rules-still-in-nprm-stag-dbb3aa"
+    },
+    "copper-hits-record-14-455-tonne-on-lme-in-august-fdaf1d": {
+      "headline": "Copper hits record $14,455/tonne on LME in August 2026, driven by AI data-centre demand and power-grid investment converging with supply constraints",
+      "summary": "LME copper set an all-time high of $14,455/tonne (~$6.56/lb) in August 2026, with AI data-centre build-out and grid electrification demand running ahead of mine supply growth; analysts now forecast the market in structural deficit. The rally is cross-linking the s16_copper and s15_ai_power stories into a single bottleneck.",
+      "as_of": "2026-08-15",
+      "sources": [
+        "https://www.indexbox.io/blog/copper-prices-surge-to-record-highs-amid-ai-demand-and-supply-constraints/",
+        "https://www.cmgm.net/copper-price-trend-2026-china-manufacturing-cost-impact/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s16_copper",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "AI/grid demand premium in copper price ($ vs. pre-AI-demand baseline)",
+        "type": "value",
+        "rubric": "Measures the component of the copper spot price attributable to AI data-centre + grid-electrification demand above the pre-2023 structural baseline (~$8,500/t LME). Tracks how deeply AI capex circular-financing (s8_ai_capex) and grid bottleneck (s15_ai_power) are bleeding into commodity price stress. Score 0 (\u2264$10,500/t), 1 ($10,500\u2013$13,000/t), 2 (>$13,000/t \u2014 current: >$14,000/t \u2192 score 2).",
+        "sources": [
+          "https://www.indexbox.io/blog/copper-prices-surge-to-record-highs-amid-ai-demand-and-supply-constraints/",
+          "https://www.goldmansachs.com/insights/articles/copper-prices-forecast-to-decline-from-record-highs-in-2026"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "Copper price ($6.56/lb) is already tracked as an indicator in s16_copper, but the existing rubric does not capture the AI/grid-demand-specific premium that is now the primary price driver and that creates a cross-story feedback loop: AI capex (s8) drives data-centre copper demand \u2192 copper scarcity raises grid build-out cost \u2192 worsens AI power grid bottleneck (s15) \u2192 forces more AI capex at higher cost. A 'story gap' exists because no current indicator isolates or attributes this demand channel to assess whether it is durable or a bubble.",
+      "status": "pending",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "sightings": 1,
+      "id": "copper-hits-record-14-455-tonne-on-lme-in-august-fdaf1d"
+    },
+    "sec-treasury-clearing-mandate-deadline-is-year-e-4bb65a": {
+      "headline": "SEC Treasury-clearing mandate deadline is year-end 2026 for cash bonds, with new CCPs (CME Securities Clearing) expected live Q2 2026 \u2014 basis-trade leverage at record $2.4tn",
+      "summary": "With the SEC's year-end 2026 deadline for mandatory Treasury cash clearing now inside five months, hedge fund Treasury holdings are reported at $2.4 trillion (up from $600bn a decade ago), and the Chicago Fed has published a two-part analysis warning that mandatory initial-margin requirements at CCPs could force basis-trade deleveraging at scale. The CMESC CCP received SEC approval in December 2025 and is now live, but clearing migration pace is unclear.",
+      "as_of": "2026-08-16",
+      "sources": [
+        "https://www.chicagofed.org/publications/chicago-fed-letter/2026/516",
+        "https://www.chicagofed.org/publications/chicago-fed-letter/2026/517",
+        "https://www.investmentwatchblog.com/we-are-deep-into-the-leverage-phase-now-and-the-treasury-market-under-your-entire-portfolio-is-the-fuse/",
+        "https://www.federalreserve.gov/econres/notes/feds-notes/decomposing-hedge-funds-u-s-treasury-exposures-20260622.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Treasury central-clearing migration pace (% of eligible cash-Treasury volume cleared at authorized CCPs)",
+        "type": "band",
+        "rubric": "Tracks how quickly the market is migrating to mandatory central clearing ahead of the year-end 2026 SEC deadline for cash Treasuries. A slow migration pace raises forced-deleveraging risk as the deadline approaches and initial-margin calls compress basis-trade economics. Score 0 (>40% migrated, orderly), 1 (20\u201340%, lagging), 2 (<20%, at risk of cliff-edge deleveraging event). Data source: DTCC/FICC reported cleared Treasury volumes vs. SIFMA outstanding.",
+        "sources": [
+          "https://www.chicagofed.org/publications/chicago-fed-letter/2026/516",
+          "https://www.chicagofed.org/publications/chicago-fed-letter/2026/517"
+        ],
+        "suggested_weight": 0.3
+      },
+      "proposed_story": null,
+      "rationale": "The existing s1_basis_trade story tracks SEC clearing via a simple 0/1/2 ordinal ('on track / slipping / delayed'), but that binary does not capture the pace of market migration to the new CCPs, which is the crucial mechanism. With $2.4tn of hedge-fund Treasury exposure and five months to the cash-bond deadline, a migration-pace indicator allows continuous monitoring of whether a cliff-edge forced-deleveraging event is building. This is a story_gap because the existing indicator conflates regulatory schedule with market behaviour.",
+      "status": "pending",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "sightings": 1,
+      "id": "sec-treasury-clearing-mandate-deadline-is-year-e-4bb65a"
     }
   },
-  "generated": "2026-08-21",
+  "generated": "2026-08-24",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 174
+  "new_count": 6,
+  "pending_count": 180
 }
