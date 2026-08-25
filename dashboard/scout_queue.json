@@ -174,13 +174,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "The US\u2013Iran war (begun February 28, 2026) has left the Strait of Hormuz effectively closed to routine commercial tanker traffic as of July 30, with at least two UAE tankers attacked on August 13. WTI traded around $81/bbl on August 13 \u2014 down from an April peak near $109 \u2014 because coordinated IEA SPR releases (400 million barrels, largest on record) and demand destruction have offset the physical supply shock, but the constraint remains structural, not resolved.",
-      "as_of": "2026-08-13",
+      "summary": "As of mid-August 2026, only ~8 vessels/day were transiting Hormuz versus a pre-conflict average of 120; ADNOC confirmed two of its tankers were attacked on August 14\u201315, Iran claimed responsibility, and the Houthis simultaneously threatened Red Sea/Bab el-Mandeb shipping, closing Saudi Arabia's alternative export route. The EIA raised its 2026 Brent forecast to $87/bbl average, and WTI rose ~6.7% in one week to ~$82.",
+      "as_of": "2026-08-19",
       "sources": [
-        "https://www.cnn.com/2026/08/13/world/live-news/iran-war-trump",
-        "https://carraglobe.com/strait-of-hormuz-closure-2026/",
-        "https://tradingeconomics.com/commodity/brent-crude-oil/news/531407",
-        "https://tradingeconomics.com/commodity/heating-oil/news/532982"
+        "https://www.cnn.com/2026/08/15/world/live-news/iran-war-trump",
+        "https://www.cnn.com/2026/08/11/world/live-news/iran-war-trump",
+        "https://www.cnbc.com/2026/07/24/oil-tanker-red-sea-hormuz-black-sea-iran-ukraine.html",
+        "https://www.fxcm.com/au/insights/global-macro-and-markets-briefing-17-august-2026/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -188,20 +188,22 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz status indicator should be at '2 closed' \u2014 the strait is confirmed effectively shut to routine commercial shipping as of July 30, with ongoing tanker attacks as recently as August 13. WTI (~$81) and Brent (~$87) are below April peaks but remain elevated and sensitive to any escalation. This is a continuous high-materiality reading, not background noise; the IEA's record 400mb SPR release masks the underlying physical disruption. The s20 WTI indicator should also be refreshed to ~$81/bbl.",
+      "rationale": "The simultaneous effective closure of Hormuz to normal commercial traffic (~93% traffic collapse) and active Houthi attacks on the Red Sea/Bab el-Mandeb Strait represent a '2 = approaching closed' reading for s20_sea_lanes. This is materially worse than 'contested' and should be triaged as the tracker's highest-stress scenario for this indicator. WTI at ~$82 and Brent EIA forecast at $87 also update the WTI crude indicator. Dual chokepoint threat is unprecedented in the tracker's history.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-20",
+      "last_seen": "2026-08-25",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 23
+      "sightings": 24
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's long-end bond yields surged week of Aug 17, with the 30-year at 4.07% (near May record) and 10-year at 2.93%, driven by fiscal concerns and BOJ rate-hike bets. A looming cabinet reshuffle could oust Finance Minister Katayama \u2014 the key fiscal-discipline anchor \u2014 potentially triggering further yen weakness and JGB bear-steepening.",
-      "as_of": "2026-08-17",
+      "summary": "Japan's 10-year JGB yield reached 2.95% (a 30-year high) on August 21 before easing to 2.83%; Reuters sources confirmed the BoJ is poised to hike at its September 17\u201318 meeting with probability priced at ~82%, and may accelerate to more than twice-yearly thereafter. Japanese capital repatriation \u2014 including $29.6bn in US Treasury sales in Q1 2026 alone \u2014 is amplifying global long-end yield pressures at the same time the US Treasury is conducting emergency buybacks.",
+      "as_of": "2026-08-24",
       "sources": [
-        "https://www.bloomberg.com/news/articles/2026-08-17/japan-s-bond-yields-climb-on-boj-hike-bets-fiscal-concerns",
-        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/"
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.fxstreet.com/news/boj-set-to-hike-rates-as-soon-as-september-202608140605",
+        "https://www.bloomberg.com/news/articles/2026-08-13/japan-s-government-is-said-to-support-faster-boj-rate-hike",
+        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -209,12 +211,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 30-year JGB at 4.07% is the primary tracker indicator for s2_japan. The additional political risk \u2014 potential removal of the fiscal-hawk Finance Minister \u2014 directly feeds 'Takaichi plan financing clarity' (currently 1=unclear, now pressure toward 2=disorderly). BOJ expected to hike to 1.25% in September. Both quantitative and qualitative indicators are moving adversely simultaneously, qualifying as HIGH materiality.",
+      "rationale": "10-year JGB at 2.95% (30-year high) and 82% probability of September BoJ hike directly update two core s2_japan indicators: JGB yield (tracker should record 10-year at ~2.83\u20132.95%, 30-year likely north of 3.6%) and Takaichi plan financing clarity (Finance Ministry revising assumed debt-service rate upward to 3.8% for FY2027 flags material fiscal stress). Japanese repatriation of US Treasuries at $29.6bn/quarter is an important carry-trade unwind signal. USD/JPY at ~159 is elevated but yen slightly firmer; overall story status is deteriorating.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-08-25",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 16
+      "sightings": 17
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -5887,10 +5889,155 @@
       "last_seen": "2026-08-24",
       "sightings": 1,
       "id": "sec-treasury-clearing-mandate-deadline-is-year-e-4bb65a"
+    },
+    "us-treasury-doubles-long-bond-buybacks-after-30--3684a5": {
+      "headline": "US Treasury doubles long-bond buybacks after 30-year yield hits 5.34% (19-year high); TGA drawdown rumored as next tool",
+      "summary": "On August 19, Treasury Secretary Bessent doubled long-dated buyback operations to \u2265$4bn/session after the 30-year yield spiked to ~5.34%, its highest since 2007; by August 24, reports emerged that Treasury may tap the $935bn Treasury General Account for additional market-support buybacks. The 30-year yield only partially retreated to ~5.19\u20135.21%, and the move triggered sharp gold (+3\u20134%) and precious-metals gains while providing only temporary relief.",
+      "as_of": "2026-08-24",
+      "sources": [
+        "https://www.bullionvault.com/gold-news/gold-price-news/gold-treasury-buybacks-081920261",
+        "https://basispoint.net/economy-insights/treasury-bond-buyback-dollar-weakness-gold-rally-bessent-2026",
+        "https://www.mining.com/gold-price-rises-silver-slips-on-treasury-cash-pile-buyback-signal/",
+        "https://rareearthexchanges.com/news/treasury-yields-rare-earth-supply-chain/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US_30y_Treasury_yield_pct",
+        "type": "value",
+        "rubric": "30-year UST yield (daily close, %): <4.5 = low stress; 4.5\u20135.0 = elevated; >5.0 = high stress; >5.3 = crisis proximity. Treasury buyback emergency activations: 0 = none, 1 = routine, 2 = emergency/TGA-draw mode.",
+        "sources": [
+          "https://www.bullionvault.com/gold-news/gold-price-news/gold-treasury-buybacks-081920261",
+          "https://basispoint.net/economy-insights/treasury-bond-buyback-dollar-weakness-gold-rally-bessent-2026"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The 30-year yield hitting a 19-year high is a direct stress signal for the Treasury basis trade (hidden leverage in the long end). The doubling of buybacks and rumored TGA draw are emergency-level fiscal-market interventions not currently captured by any indicator in s1_basis_trade; SOFR-EFFR spread and MOVE do not capture the long-end fiscal/liquidity pressure that this development represents. High materiality: it affects term premia globally, triggers JGB spillover (s2), AI capex costs (s8), and is the primary driver of gold's safe-haven surge this week.",
+      "status": "pending",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "sightings": 1,
+      "id": "us-treasury-doubles-long-bond-buybacks-after-30--3684a5"
+    },
+    "us-treasury-emergency-long-bond-buybacks-send-go-a233e7": {
+      "headline": "US Treasury emergency long-bond buybacks send gold to ~$4,719/oz; dollar index at 3-month lows \u2014 de-dollarization safe-haven dynamic intensifying",
+      "summary": "Gold surged to approximately $4,719/oz by August 24\u201325, up ~11% month-to-date and ~34% year-over-year, driven by the combined shock of US long-yield stress, emergency Treasury intervention signaling fiscal limit concerns, a weaker dollar (3-month low), and ongoing geopolitical risk from the Middle East conflict. Markets are increasingly debating whether Treasury's buyback program signals a stealth form of yield-curve control, amplifying reserve-weaponization / de-dollarization concern.",
+      "as_of": "2026-08-24",
+      "sources": [
+        "https://www.mining.com/gold-price-rises-silver-slips-on-treasury-cash-pile-buyback-signal/",
+        "https://www.canadianminingreport.com/blog/gold-jumps-3-as-treasury-steps-in-to-calm-bond-rout-can-bulls-push-prices-higher",
+        "https://www.mining.com/gold-silver-miners-surge-as-treasury-doubles-buybacks/",
+        "https://basispoint.net/economy-insights/treasury-bond-buyback-dollar-weakness-gold-rally-bessent-2026"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s12_gold_dedollar",
+      "target_indicator": "Gold price (USD/oz)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Gold at ~$4,719 is a live, real-time update for s12_gold_dedollar's primary indicator. More importantly, the narrative driving the surge \u2014 emergency Treasury intervention, stealth yield-curve control debate, dollar weakness \u2014 directly upgrades the 'Reserve-weaponization / settlement shift' indicator toward '2 = action' territory, as market participants are treating the TGA-draw/buyback program as evidence of fiscal dominance over monetary policy, a key de-dollarization accelerant.",
+      "status": "pending",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "sightings": 1,
+      "id": "us-treasury-emergency-long-bond-buybacks-send-go-a233e7"
+    },
+    "big-tech-bond-issuance-tops-194bn-in-2026-as-ai--01d4e8": {
+      "headline": "Big Tech bond issuance tops $194bn in 2026 as AI capex financing collides with 30-year yield at 19-year highs; refinancing stress emerging",
+      "summary": "Amazon, Alphabet, Meta, and Oracle have collectively issued ~$194bn in bonds in 2026 to fund AI infrastructure, adding significant crowding pressure to a US IG market already stressed by long-dated yields at 5.34% (30-year) \u2014 levels that directly raise the hurdle rate for GPU-backed and data-center debt. The Treasury's emergency buyback intervention was itself partly attributed by analysts to the 'AI-related corporate financing needs' overwhelming the long end.",
+      "as_of": "2026-08-22",
+      "sources": [
+        "https://rareearthexchanges.com/news/treasury-yields-rare-earth-supply-chain/",
+        "https://www.fxstreet.com/news/japanese-yen-jgb-spillover-supports-firmer-jpy-against-us-dollar-ocbc-202608190625",
+        "https://basispoint.net/economy-insights/treasury-bond-buyback-dollar-weakness-gold-rally-bessent-2026"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s8_ai_capex",
+      "target_indicator": "GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The $194bn of Big Tech bond issuance in 2026, colliding with 30-year yields at 5.34%, directly upgrades the s8_ai_capex 'GPU-backed debt refinancing stress' indicator from 0 toward 1 (signs of stress). OCBC strategists explicitly cited 'AI-related corporate financing needs' as a structural driver of the US long-end yield blowout, linking s8 and s1 in a feedback loop. The US IG OAS indicator in s8 should also be refreshed. This moves from background noise to material given the Treasury's emergency intervention.",
+      "status": "pending",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "sightings": 1,
+      "id": "big-tech-bond-issuance-tops-194bn-in-2026-as-ai--01d4e8"
+    },
+    "us-30-year-yield-at-5-34-19-year-high-prompts-tr-e44fb9": {
+      "headline": "US 30-year yield at 5.34% (19-year high) prompts Treasury to explore quasi-YCC via TGA drawdown; new_risk of fiscal-dominance / yield-curve-control regime shift",
+      "summary": "The US Treasury's sequential escalation \u2014 first doubling buybacks to $4bn/session (Aug 19), then reportedly planning to use the $935bn Treasury General Account to suppress long yields (Aug 24) \u2014 signals that the US may be drifting toward a quasi-yield-curve-control regime, where fiscal authorities rather than the Fed manage bond-market stability. This is structurally distinct from QE and creates a new category of risk not captured in the existing tracker.",
+      "as_of": "2026-08-24",
+      "sources": [
+        "https://www.mining.com/gold-price-rises-silver-slips-on-treasury-cash-pile-buyback-signal/",
+        "https://basispoint.net/economy-insights/treasury-bond-buyback-dollar-weakness-gold-rally-bessent-2026",
+        "https://www.mining.com/gold-silver-miners-surge-as-treasury-doubles-buybacks/",
+        "https://rareearthexchanges.com/news/treasury-yields-rare-earth-supply-chain/"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US Fiscal Dominance / Quasi-Yield-Curve-Control Risk",
+        "why": "The US Treasury is deploying fiscal tools (buybacks, TGA drawdown) to suppress long-end yields rather than relying solely on Fed policy, effectively substituting Treasury balance-sheet operations for monetary policy. This 'fiscal dominance' regime \u2014 where debt-service constraints force yield suppression \u2014 creates risks not captured by existing stories: (1) erosion of Fed independence / credibility; (2) real-yield compression harming pension/insurance ALM; (3) dollar debasement and acceleration of de-dollarization; (4) feedback loop with AI capex and Japan carry unwind. The 30-year yield at a 19-year high (5.34%) followed by emergency Treasury intervention is the first clear observed instance of this regime shift in the 2020s.",
+        "proposed_level": 7,
+        "set": "Set 1",
+        "indicators": [
+          {
+            "label": "US_30y_yield_pct",
+            "type": "value",
+            "rubric": "30-year UST yield (%): <4.5 low; 4.5\u20135.0 elevated; >5.0 stress; >5.3 crisis-proximity. Current: ~5.19\u20135.34%.",
+            "sources": [
+              "https://basispoint.net/economy-insights/treasury-bond-buyback-dollar-weakness-gold-rally-bessent-2026",
+              "https://www.bullionvault.com/gold-news/gold-price-news/gold-treasury-buybacks-081920261"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Treasury_buyback_escalation",
+            "type": "band",
+            "rubric": "0 = routine liquidity buybacks (<$2bn/session); 1 = doubled/emergency buybacks ($2\u20136bn, event-driven); 2 = TGA drawdown or YCC-style open-ended commitment. Current: 1\u20132 transitional.",
+            "sources": [
+              "https://www.mining.com/gold-silver-miners-surge-as-treasury-doubles-buybacks/",
+              "https://www.mining.com/gold-price-rises-silver-slips-on-treasury-cash-pile-buyback-signal/"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Fed_Treasury_independence_signal",
+            "type": "band",
+            "rubric": "0 = Fed controls rate path clearly; 1 = coordinated signaling / Treasury-Fed tension; 2 = overt fiscal dominance (Treasury overrides or substitutes Fed yield-setting). Current: 1.",
+            "sources": [
+              "https://basispoint.net/economy-insights/treasury-bond-buyback-dollar-weakness-gold-rally-bessent-2026"
+            ],
+            "suggested_weight": 0.2
+          },
+          {
+            "label": "US_term_premium_bp",
+            "type": "value",
+            "rubric": "ACM or NY Fed term premium (basis points): <50bp normal; 50\u2013100bp elevated; >100bp structural shift. Monitor for regime break.",
+            "sources": [
+              "https://rareearthexchanges.com/news/treasury-yields-rare-earth-supply-chain/"
+            ],
+            "suggested_weight": 0.15
+          }
+        ]
+      },
+      "rationale": "This is genuinely new: the US Treasury is not just managing issuance but actively suppressing long-end yields using fiscal balance-sheet tools (TGA), mimicking Japan's YCC playbook. Existing stories s1_basis_trade (focuses on repo/clearing) and s12_gold_dedollar (focuses on reserve diversification) each capture partial signals but neither captures the fiscal-dominance regime shift itself. At proposed_level 7, this story could rapidly escalate to 9+ if TGA drawdown becomes explicit yield targeting or if the Fed publicly dissents. It also creates second-order amplification for s2_japan (US-Japan yield convergence risk), s8_ai_capex (higher hurdle rates despite suppressed yields), and s14_pensions (real-yield compression on liability matching).",
+      "status": "pending",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "sightings": 1,
+      "id": "us-30-year-yield-at-5-34-19-year-high-prompts-tr-e44fb9"
     }
   },
-  "generated": "2026-08-24",
+  "generated": "2026-08-25",
   "model": "claude-sonnet-4-6",
-  "new_count": 6,
-  "pending_count": 180
+  "new_count": 4,
+  "pending_count": 184
 }
