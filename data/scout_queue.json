@@ -197,13 +197,12 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 10-year JGB yield reached 2.95% (a 30-year high) on August 21 before easing to 2.83%; Reuters sources confirmed the BoJ is poised to hike at its September 17\u201318 meeting with probability priced at ~82%, and may accelerate to more than twice-yearly thereafter. Japanese capital repatriation \u2014 including $29.6bn in US Treasury sales in Q1 2026 alone \u2014 is amplifying global long-end yield pressures at the same time the US Treasury is conducting emergency buybacks.",
-      "as_of": "2026-08-24",
+      "summary": "The 10-year JGB yield rose to 2.89% on Aug 25 \u2014 up 127bps year-on-year \u2014 as the BoJ reduced monthly JGB purchases to \u00a52.9trn in Q1 2026. Japanese investors have net-sold \u00a54trn of foreign securities YTD per MoF data, but the US-Japan joint intervention-induced yen rally triggered a \u00a55trn foreign asset re-purchase in just two weeks, re-loading carry-trade risk.",
+      "as_of": "2026-08-25",
       "sources": [
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.fxstreet.com/news/boj-set-to-hike-rates-as-soon-as-september-202608140605",
-        "https://www.bloomberg.com/news/articles/2026-08-13/japan-s-government-is-said-to-support-faster-boj-rate-hike",
-        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html"
+        "https://economics.td.com/gbl-what-happens-in-japan-may-not-stay-in-japan",
+        "https://www.cnbc.com/2026/08/20/us-japan-yen-intervention-bank-of-japan-carry-trade.html"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -211,12 +210,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "10-year JGB at 2.95% (30-year high) and 82% probability of September BoJ hike directly update two core s2_japan indicators: JGB yield (tracker should record 10-year at ~2.83\u20132.95%, 30-year likely north of 3.6%) and Takaichi plan financing clarity (Finance Ministry revising assumed debt-service rate upward to 3.8% for FY2027 flags material fiscal stress). Japanese repatriation of US Treasuries at $29.6bn/quarter is an important carry-trade unwind signal. USD/JPY at ~159 is elevated but yen slightly firmer; overall story status is deteriorating.",
+      "rationale": "The 10-year JGB at 2.89% (and 30-year above 3.5%) is a direct, material update to the s2 JGB yield indicator. The BoJ's halving of monthly purchases (from \u00a55.7trn to \u00a52.9trn) is the structural driver. Simultaneously, the carry-trade reload dynamic \u2014 Japanese investors using intervention rallies to ADD foreign exposure rather than reduce it \u2014 means the yen-strengthening risk (USD/JPY indicator) is now asymmetrically dangerous: a September BoJ hike could trigger a disorderly unwind of freshly rebuilt positions, spilling into US Treasuries (Japan holds ~$1.2trn) and global equity markets.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-25",
+      "last_seen": "2026-08-26",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 17
+      "sightings": 18
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -586,12 +585,13 @@
     },
     "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca": {
       "headline": "Japan yen hits 4-decade lows; 10yr JGB at ~2.65%; BoJ July 31 hike decision imminent amid Middle East energy import stress",
-      "summary": "The Bank of Japan held its policy rate at 1% on July 31 and upgraded its GDP forecast, while USD/JPY hit multi-decade lows above 163; JPMorgan noted that the prior ~162 intervention threshold has been breached without triggering action, effectively raising the bar and emboldening yen sellers. Japan's Ministry of Finance spent \u00a511.7 trillion (~$71.7 bn) on FX intervention Apr\u2013May with only temporary effect.",
-      "as_of": "2026-07-29",
+      "summary": "Reuters sources (Aug 14) say the BoJ is poised to hike to 1.25% as soon as its Sept 17\u201318 meeting, citing Middle East energy costs, AI-driven demand, and persistent yen weakness (~159/$). Paradoxically, Japanese investors used last month's joint US-Japan intervention-induced yen rally to NET BUY over \u00a55trn of foreign assets in two weeks ended Aug 15, turbo-charging the carry trade rather than unwinding it.",
+      "as_of": "2026-08-23",
       "sources": [
-        "https://www.techtimes.com/articles/321731/20260727/bank-japan-holds-rates-1-upgrades-gdp-forecast-yen-nears-40-year-low.htm",
-        "https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html",
-        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/"
+        "https://www.fxstreet.com/news/boj-set-to-hike-rates-as-soon-as-september-202608140605",
+        "https://www.cnbc.com/2026/08/20/us-japan-yen-intervention-bank-of-japan-carry-trade.html",
+        "https://www.bloomberg.com/news/articles/2026-08-23/boj-set-to-offer-clues-as-markets-bet-heavily-on-september-hike",
+        "https://tradingeconomics.com/japan/interest-rate"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -599,12 +599,12 @@
       "target_indicator": "USD/JPY (yen strengthening = lower = risk)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "USD/JPY at 163+ is a direct, live reading of the s2_japan indicator 'USD/JPY'. Yen weakness at 40-year lows means carry-trade unwind risk is now skewed the other way \u2014 yen shorts are crowded \u2014 and capital repatriation by Japanese institutions (already $29.6 bn in USTs sold Q1 2026) is accelerating. The 'Takaichi plan financing clarity' sub-indicator also warrants an upgrade from 'unclear' to 'disorderly' given the June 30 Basic Policy shock (government blueprint language interpreted as pressuring BOJ to slow hikes) and the MoF's exhausted intervention credibility.",
+      "rationale": "A confirmed Sept-18 BoJ hike to 1.25% \u2014 the most aggressive move of this cycle \u2014 would compress the USD-JPY carry differential sharply and risk a rapid, non-linear unwind of the \u00a55trn freshly-added carry positions. USD/JPY at ~159 and the paradoxical re-leveraging of carry trades post-intervention are exactly what the s2 USD/JPY indicator is designed to flag. The 10-yr JGB yield at 2.89% (Aug 25) is also a direct read on the existing 30-yr JGB yield indicator.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-29",
+      "last_seen": "2026-08-26",
       "id": "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca",
-      "sightings": 6
+      "sightings": 7
     },
     "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
       "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
@@ -991,13 +991,12 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "China's November 2025 suspension of its October 2025 rare-earth export controls expires on November 10, 2026. With the deadline under 90 days away, niche rare-earth prices jumped (Aug 13) on market fears of reinstatement; China's 2026 Import-Export Licensing Catalogue has already added new controls on samarium, gadolinium, and lutetium, with extraterritorial enforcement delayed only to November 2026.",
-      "as_of": "2026-08-16",
+      "summary": "China in mid-2026 formalized a public reporting mechanism for export-control violations (MOFCOM Announcement 26/2026), detained two Japanese nationals in Dalian for alleged rare-earth smuggling, and the NdPr alloy benchmark rose 21.4% in a single month through July 1 2026. The Nov 10 suspension of the Oct-2025 second-wave controls is now less than 11 weeks away, creating a countdown risk.",
+      "as_of": "2026-08-26",
       "sources": [
-        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
-        "https://investornews.com/critical-minerals-rare-earths/critical-minerals-report-08-16-2026-the-critical-minerals-bull-market-is-here-as-china-puts-its-arsenal-back-in-play/",
-        "https://www.certivo.com/blog-details/china-rare-earth-export-controls-2026-what-new-licensing-rules-mean-for-manufacturers",
-        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+        "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/",
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1005,12 +1004,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Nov-2025 pause status indicator should now read 1 (expiring): the one-year suspension ends Nov 10, 2026, and market participants are already pricing reinstatement risk (niche RE price spike Aug 13). China has simultaneously added new licensing requirements via the 2026 Catalogue (samarium, gadolinium, lutetium) with extraterritorial enforcement set for November \u2014 a convergence of cliff-edge timing. The 'Rare-earth export license flow' indicator may also shift from 1 (slowing) toward 2 (frozen) if reinstatement occurs. High materiality given the broad downstream exposure across defense, EVs, wind turbines, and AI data-center magnets.",
+      "rationale": "The Nov 10 pause expiry is now inside the 3-month horizon with no renewal signal \u2014 the indicator should shift from '0 extended' toward '1 expiring'. Simultaneously, rising enforcement intensity (formal violation-reporting mechanism, criminal detentions, NdPr +21%) points to the pause lapsing into a live supply shock rather than being quietly extended again. This is directly material to s6 and to s8_ai_capex (magnets in GPU cooling fans, HDD actuators) and s19_lithography (CMP chemistry).",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-08-26",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 11
+      "sightings": 12
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -6034,10 +6033,129 @@
       "last_seen": "2026-08-25",
       "sightings": 1,
       "id": "us-30-year-yield-at-5-34-19-year-high-prompts-tr-e44fb9"
+    },
+    "treasury-secretary-bessent-doubles-long-dated-bu-812a11": {
+      "headline": "Treasury Secretary Bessent doubles long-dated buybacks to \u2265$4bn/operation after 30-year yield hits 19-year high of ~5.27%",
+      "summary": "The US Treasury on Aug 19 at-least doubled liquidity-support buybacks for 10\u201330yr off-the-run Treasuries, effective Sept 9, after the 30-year yield briefly hit its highest level since 2007. The buyback rally fizzled within 48 hours, with the 30-year back above 5.27% by Aug 21, signalling the market doubts the intervention can hold back structural supply pressure.",
+      "as_of": "2026-08-21",
+      "sources": [
+        "https://www.cnbc.com/2026/08/19/treasury-announces-upscaled-buyback-operation-for-longer-term-debt-sending-yields-lower.html",
+        "https://www.cnbc.com/2026/08/21/treasury-yields-bonds-inflation-rates.html",
+        "https://finance.yahoo.com/economy/article/one-day-after-doubling-treasury-buybacks-bessent-says-hes-ready-to-boost-them-further-to-push-down-long-term-yields-181218236.html",
+        "https://alternativefundinsight.com/treasury-intervention-adds-new-twist-to-hedge-fund-basis-trade/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US 30-year Treasury yield (%)",
+        "type": "value",
+        "rubric": "Tracks the long-end yield that the buyback program targets and that drives off-the-run/on-the-run spread dynamics. >5.0% = elevated; >5.5% = stress; >6.0% = crisis. Rising yield post-buyback signals market override of fiscal intervention.",
+        "sources": [
+          "https://www.cnbc.com/2026/08/19/treasury-announces-upscaled-buyback-operation-for-longer-term-debt-sending-yields-lower.html",
+          "https://www.cnbc.com/2026/08/21/treasury-yields-bonds-inflation-rates.html"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The basis-trade story (s1) already tracks SOFR-EFFR spread and MOVE, but has no indicator for the outright long-end yield level that is now the proximate stress point. Bessent's failed buyback intervention is a material new development: the 30-year yield at 19-year highs directly affects the carry on basis positions, the off-the-run collateral market, and the hedge-fund repo funding calculus. A dedicated 30-year yield indicator closes this gap and is directly relevant to whether basis-trade unwinds accelerate.",
+      "status": "pending",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "sightings": 1,
+      "id": "treasury-secretary-bessent-doubles-long-dated-bu-812a11"
+    },
+    "treasury-buyback-sparks-dollar-debasement-debate-eba7a4": {
+      "headline": "Treasury buyback sparks dollar debasement debate; hedge funds accelerate USD-selling as dollar drops ~0.8% in a session",
+      "summary": "Bessent's Aug 19 buyback announcement triggered an immediate ~0.8% intraday dollar decline; Barclays reported acceleration in dollar-selling by hedge fund clients through Aug 21, with options demand for dollar puts vs. the euro rising 47% over calls. Economists (Brookings' Robin Brooks) warned the intervention parallels Japan's QE-era dollar-debasement path.",
+      "as_of": "2026-08-21",
+      "sources": [
+        "https://alternativefundinsight.com/treasury-intervention-adds-new-twist-to-hedge-fund-basis-trade/",
+        "https://fortune.com/2026/08/21/scott-bessent-treasury-debt-buyback-dollar-debasement-trade-devaluation-spiral-yen/",
+        "https://www.cnbc.com/2026/08/19/bessent-treasury-buybacks-yields-warsh-fed.html"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s12_gold_dedollar",
+      "target_indicator": "Reserve-weaponization / settlement shift (0 none / 1 talk / 2 action)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Active, debate-driven dollar-debasement narrative directly feeds the de-dollarization story (s12). Bessent's active yield-curve management \u2014 analogized publicly to Japan's failed YCC \u2014 is stoking reserve-manager conversations about USD alternatives. The 'talk' level (1) on the reserve-weaponization rubric should be flagged as potentially escalating toward 'action' if the buyback program expands further. The gold price and USD reserve-share indicators in s12 are also immediately affected.",
+      "status": "pending",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "sightings": 1,
+      "id": "treasury-buyback-sparks-dollar-debasement-debate-eba7a4"
+    },
+    "us-national-debt-surpasses-40-trillion-963bn-in--597d23": {
+      "headline": "US national debt surpasses $40 trillion; $963bn in net interest payments in first 10 months of FY2026 (~15% of federal spending)",
+      "summary": "The US national debt crossed $40 trillion this week (c. Aug 19\u201321 2026) \u2014 adding $1 trillion in just a few months \u2014 while net interest payments through July 2026 hit $963bn (\u224815% of federal spending), per CBO. The backdrop of widening deficits, above-target inflation, and weakening dollar is driving a buyers' strike in long-dated Treasuries since late June.",
+      "as_of": "2026-08-21",
+      "sources": [
+        "https://finance.yahoo.com/economy/article/one-day-after-doubling-treasury-buybacks-bessent-says-hes-ready-to-boost-them-further-to-push-down-long-term-yields-181218236.html",
+        "https://www.cnbc.com/2026/08/19/bessent-treasury-buybacks-yields-warsh-fed.html",
+        "https://www.cnbc.com/2026/08/20/treasury-bond-buybacks-long-term-yields.html"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US sovereign fiscal dominance / debt spiral",
+        "why": "The $40trn debt milestone combined with $963bn in annual interest costs (~15% of spending), a widening deficit set to exceed 2025 levels, and active Treasury intervention to suppress long-end yields signals a qualitative shift from 'large deficits' to potential fiscal dominance \u2014 where debt-service costs constrain Fed independence and force ongoing yield-curve management. This is distinct from the basis-trade story (s1) which is about market-microstructure leverage, not sovereign solvency dynamics, and from gold/de-dollarization (s12) which tracks FX reserve shifts. A dedicated fiscal-dominance story would capture the structural fiscal trajectory, Treasury-Fed coordination tension (Bessent vs. Warsh), and the risk of a non-linear loss of market confidence.",
+        "proposed_level": 7,
+        "set": 3,
+        "indicators": [
+          {
+            "label": "US federal net interest / revenue ratio (%)",
+            "type": "value",
+            "rubric": "Net interest as % of federal tax revenue. >20% = elevated; >25% = stress; >30% = fiscal dominance warning. Rising ratio signals shrinking fiscal space. Source: CBO Monthly Budget Review.",
+            "sources": [
+              "https://www.cnbc.com/2026/08/19/bessent-treasury-buybacks-yields-warsh-fed.html"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "US 30-year Treasury yield (%, off-the-run buyers' strike proxy)",
+            "type": "value",
+            "rubric": "Sustained yield above 5.5% = buyers' strike conditions; above 6% = acute fiscal stress. Monitor alongside buyback program size as proxy for market's fiscal confidence.",
+            "sources": [
+              "https://www.cnbc.com/2026/08/21/treasury-yields-bonds-inflation-rates.html"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Treasury-Fed coordination tension (0 independent / 1 pressure / 2 fiscal dominance)",
+            "type": "band",
+            "rubric": "0 = Fed fully independent; 1 = public friction between Treasury and Fed over yield management (current: Bessent buybacks vs. Warsh's stated independence); 2 = Fed demonstrably subordinating rate decisions to fiscal needs.",
+            "sources": [
+              "https://www.cnbc.com/2026/08/19/bessent-treasury-buybacks-yields-warsh-fed.html"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "US national debt $trn (milestone tracker)",
+            "type": "value",
+            "rubric": "Milestone and velocity tracker. Current: $40.0trn (Aug 2026). Rate of accumulation ($1trn in a few months) is the key signal \u2014 acceleration above $4trn/year = high concern.",
+            "sources": [
+              "https://finance.yahoo.com/economy/article/one-day-after-doubling-treasury-buybacks-bessent-says-hes-ready-to-boost-them-further-to-push-down-long-term-yields-181218236.html"
+            ],
+            "suggested_weight": 0.15
+          }
+        ]
+      },
+      "rationale": "The $40trn milestone, $963bn interest bill, and Bessent's active yield-curve suppression represent a qualitative escalation that no existing story directly captures. s1 (basis trade) covers microstructure leverage; s4 (dev-world debt) covers EM; s12 (gold/de-dollar) covers reserve diversification. A new sovereign fiscal dominance story fills a critical gap: the risk that the US government's own debt-service arithmetic begins to constrain monetary policy and erode bond-market credibility \u2014 the most important macro risk not yet in the tracker.",
+      "status": "pending",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "sightings": 1,
+      "id": "us-national-debt-surpasses-40-trillion-963bn-in--597d23"
     }
   },
-  "generated": "2026-08-25",
+  "generated": "2026-08-26",
   "model": "claude-sonnet-4-6",
-  "new_count": 4,
-  "pending_count": 184
+  "new_count": 3,
+  "pending_count": 187
 }
