@@ -6217,10 +6217,147 @@
       "last_seen": "2026-08-27",
       "sightings": 1,
       "id": "us-iran-war-and-hormuz-crisis-propagating-into-a-d81823"
+    },
+    "us-iran-ceasefire-collapses-hormuz-transit-near--cae485": {
+      "headline": "US\u2013Iran ceasefire collapses; Hormuz transit near-halved, Brent ~$87\u201394/bbl and climbing",
+      "summary": "The 60-day US\u2013Iran ceasefire expired around 25 August 2026 with both sides adopting more confrontational stances, pushing crude benchmarks to multi-week highs. Hormuz transits have fallen to 73 vessels per week (from ~135/day pre-war), Gulf crude exports are ~47% below pre-conflict levels, and US\u2013Iran diplomacy has 'effectively collapsed.'",
+      "as_of": "2026-08-27",
+      "sources": [
+        "https://www.lloydslistintelligence.com/resources/blog/strait-of-hormuz-brief-19-august-2026",
+        "https://www.aljazeera.com/news/2026/8/27/how-a-95-percent-drop-in-hormuz-traffic-changed-global-shipping",
+        "https://www.dtnpf.com/agriculture/web/ag/news/world-policy/article/2026/08/21/oil-track-weekly-jump-us-iran-mount",
+        "https://www.cnbc.com/amp/2026/08/18/oil-climbs-as-fading-us-iran-peace-hopes-raise-supply-risks.html"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status \u2192 upgrade to 2 (contested/effectively closed); WTI CL=F ~$86\u201387/bbl; Undersea cable incidents remain 0",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The ceasefire expiry this week is a direct, new, high-materiality shock to s20_sea_lanes. The Hormuz/Red Sea status indicator should be moved from 1 (contested) to 2 (effectively closed for normal commercial traffic), and WTI updated to ~$87/bbl. The development also cross-cuts s18_food_fertilizer (fertilizer flows from Gulf disrupted per WTO data) and s5_china_deflation (China is the largest Hormuz oil buyer, per EIA). A ceasefire collapse is structurally new versus the prior tracker state.",
+      "status": "pending",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "sightings": 1,
+      "id": "us-iran-ceasefire-collapses-hormuz-transit-near--cae485"
+    },
+    "hormuz-gulf-disruption-severs-fertilizer-export--2b039d": {
+      "headline": "Hormuz/Gulf disruption severs fertilizer export flows from Persian Gulf, threatening food-price spiral",
+      "summary": "WTO AIS data confirm that fertilizer-related outbound shipments from the Persian Gulf broke to near-zero simultaneously with crude and LNG flows when Iran closed the Strait in early March 2026; as of late August the disruption persists, with no resolution pathway. This is a separate, under-tracked channel from the energy shock.",
+      "as_of": "2026-08-27",
+      "sources": [
+        "https://globaltradedata.wto.org/Strait-of-Hormuz-Trade-Tracker",
+        "https://www.lloydslistintelligence.com/resources/blog/strait-of-hormuz-brief-19-august-2026"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s18_food_fertilizer",
+      "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs \u2192 upgrade to 2 (cut); Food-price trend likely trending toward 2 (spiking)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The WTO tracker explicitly flags fertilizer product flows collapsing alongside crude/LNG at Hormuz. The ceasefire collapse this week removes any near-term resolution, making the s18 indicator 'Hormuz/Gulf disruption to fertilizer inputs' a hard 2 (cut). The existing tracker likely had this at 1; the new development warrants an immediate upgrade and should be flagged as a second-order amplifier of the food-price risk.",
+      "status": "pending",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "sightings": 1,
+      "id": "hormuz-gulf-disruption-severs-fertilizer-export--2b039d"
+    },
+    "japan-fx-intervention-fails-to-hold-yen-investor-dba894": {
+      "headline": "Japan FX intervention fails to hold yen; investors rebuild carry-trade positions as USD/JPY re-weakens toward 159",
+      "summary": "Japan intervened to prop the yen from ~164 to ~155 per dollar in mid-August 2026, but the move quickly faded back toward 159. Japanese investors net-bought over \u00a55 trillion of foreign equities and bonds in the two weeks ended Aug. 15, using yen strength as a re-entry opportunity, suggesting carry-trade positions are being rebuilt rather than unwound.",
+      "as_of": "2026-08-20",
+      "sources": [
+        "https://www.cnbc.com/2026/08/20/us-japan-yen-intervention-bank-of-japan-carry-trade.html"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "USD/JPY \u2192 ~159 (yen re-weakening = risk rising); Takaichi plan financing clarity \u2192 1 (unclear, intervention failed to hold)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The failed intervention this week is new and material for s2_japan: the yen weakened back toward 159 post-intervention, and the carry trade is being rebuilt per MoF flow data. The US-Japan 10y spread of ~180bps remains wide enough to sustain carry, per W1M analysis. The BOJ's rising inflation forecast (2.8% for FY2026) and 3-of-9 dissenters at the April meeting add pressure. This is a live risk resurfacing event, not background drift.",
+      "status": "pending",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "sightings": 1,
+      "id": "japan-fx-intervention-fails-to-hold-yen-investor-dba894"
+    },
+    "china-rare-earth-oct-2025-suspension-expires-10--d5b51d": {
+      "headline": "China rare earth Oct-2025 suspension expires 10 Nov 2026; no extension signal from Beijing as geopolitics sour",
+      "summary": "The 12-month MOFCOM suspension of China's expanded rare-earth export controls (including extraterritorial '0.1% rule' and five additional elements) expires on 10 November 2026, with no public signal of extension from Beijing. The August\u2013September window is the historically critical period for pre-positioning, and June 2026 saw zero US-bound controlled rare-earth compounds for the first time since Sept 2025.",
+      "as_of": "2026-08-14",
+      "sources": [
+        "https://www.mining-technology.com/news/china-rare-earth-export-pause-nears-expiry-amid-persistent-supply-concentration/",
+        "https://www.materialsdispatch.com/en/blog/yttrium-the-overlooked-element-heading-for-a-supply",
+        "https://www.mainrichinternational.com/resources/articles/rare-earth-market-update-july-2026-ndpr-mofcom-western-supply",
+        "https://www.techtimes.com/articles/317208/20260526/china-rare-earth-export-controls-april-curbs-still-bite-after-beijing-summit.htm"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Nov-2025 pause status \u2192 upgrade from 0 (extended) toward 1 (expiring) given 74-day countdown with no extension signal; Ex-China heavy rare-earth price premium rising (NdPr +21% July, terbium +30% Q2)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "With exactly 74 days to 10 November expiry and no MOFCOM extension announcement, the pause status indicator should move from 0 (extended / status quo) to 1 (expiring). Industry sources identify August as the real heavy-rare-earth order deadline given 45+ day lead times. The June zero-export month to the US is a fresh data point. This is time-critical and materially worsened within the last week as the window narrows.",
+      "status": "pending",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "sightings": 1,
+      "id": "china-rare-earth-oct-2025-suspension-expires-10--d5b51d"
+    },
+    "mp-materials-and-usa-rare-earth-entity-listed-by-cc57e0": {
+      "headline": "MP Materials and USA Rare Earth entity-listed by Beijing; China's domestic enforcement posture sharply escalates",
+      "summary": "On 22 June 2026 China added MP Materials and USA Rare Earth to its entity lists, and a new MOFCOM whistleblower mechanism for export-control violations took effect 1 July 2026. Combined with the detention of Japanese nationals in Dalian and enforcement actions against Chinese exporters, Beijing has moved to active, extraterritorial enforcement pressure on rare-earth supply chains.",
+      "as_of": "2026-07-04",
+      "sources": [
+        "https://www.mainrichinternational.com/resources/articles/rare-earth-market-update-july-2026-ndpr-mofcom-western-supply",
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+        "https://www.materialsdispatch.com/en/blog/yttrium-the-overlooked-element-heading-for-a-supply"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "US domestic RE producer blacklist \u2192 upgrade to 1 (entity-specific ban: MP Materials + USA Rare Earth listed); Rare-earth export license flow \u2192 1 (slowing, especially to Japan and zero to US in June)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The entity-listing of the two largest US rare-earth producers (MP Materials, USA Rare Earth) is exactly the scenario the 'US domestic RE producer blacklist' indicator was designed to capture. This should move from 0 (none) to 1 (entity-specific ban). Combined with the zero-export month and MOFCOM whistleblower mechanism, this represents a structural ratchet tighter, not merely diplomatic signaling.",
+      "status": "pending",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "sightings": 1,
+      "id": "mp-materials-and-usa-rare-earth-entity-listed-by-cc57e0"
+    },
+    "ecb-june-2026-rate-hike-dents-mortgage-demand-in-2b6ae9": {
+      "headline": "ECB June 2026 rate hike dents mortgage demand in Central/Eastern Europe; PBOC readying RRR cut as China credit slows",
+      "summary": "The ECB's June 2026 rate hike has weakened retail mortgage demand across Central European banking sectors, per ECB data cited by S&P Global, compounding geopolitical risk aversion from the Middle East conflict. Separately, the PBOC is expected to cut the reserve requirement ratio (RRR) by year-end as Chinese credit growth slows, signaling domestic demand fragility.",
+      "as_of": "2026-08-11",
+      "sources": [
+        "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/08/banking-risk-monthly-outlook-august-2026"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s10_france",
+      "proposed_indicator": {
+        "label": "ECB policy-tightening mortgage demand stress (0 stable / 1 weakening / 2 severe contraction)",
+        "type": "band",
+        "rubric": "0 = retail mortgage demand stable or growing in eurozone/CEB; 1 = ECB/national CB data show meaningful demand decline in 2+ eurozone/CEB markets; 2 = sharp contraction in mortgage lending volumes threatening regional bank CRE/residential books and sovereign spreads",
+        "sources": [
+          "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/08/banking-risk-monthly-outlook-august-2026",
+          "https://www.ecb.europa.eu/stats/ecb_surveys/bank_lending_survey/html/index.en.html"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The existing s10_france tracker focuses on OAT-Bund spreads, government stability, and ratings, but has no indicator for the transmission channel of ECB tightening into eurozone/CEB bank lending and mortgage books. The June hike-induced mortgage demand decline reported this week is a new stress signal that could amplify fragility in French and Central European banks. Flagging as a story_gap under s10 with a proposed new indicator to monitor ECB tightening pass-through.",
+      "status": "pending",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "sightings": 1,
+      "id": "ecb-june-2026-rate-hike-dents-mortgage-demand-in-2b6ae9"
     }
   },
-  "generated": "2026-08-27",
+  "generated": "2026-08-28",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 189
+  "new_count": 6,
+  "pending_count": 195
 }
