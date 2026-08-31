@@ -199,12 +199,13 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The 10-year JGB yield rose to 2.89% on Aug 25 \u2014 up 127bps year-on-year \u2014 as the BoJ reduced monthly JGB purchases to \u00a52.9trn in Q1 2026. Japanese investors have net-sold \u00a54trn of foreign securities YTD per MoF data, but the US-Japan joint intervention-induced yen rally triggered a \u00a55trn foreign asset re-purchase in just two weeks, re-loading carry-trade risk.",
-      "as_of": "2026-08-25",
+      "summary": "Japan's 10-year JGB yield rose to its highest since 1996 (touching 2.945%) while the 30-year climbed to 4.07%, near its all-time record. Markets price an ~87% probability of a 25bp BOJ hike in September. A looming Takaichi cabinet reshuffle raises risk that fiscal-hawk Finance Minister Katayama is replaced, which analysts warn could trigger bear-steepening and renewed yen weakness.",
+      "as_of": "2026-08-28",
       "sources": [
-        "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://economics.td.com/gbl-what-happens-in-japan-may-not-stay-in-japan",
-        "https://www.cnbc.com/2026/08/20/us-japan-yen-intervention-bank-of-japan-carry-trade.html"
+        "https://www.bloomberg.com/news/articles/2026-08-17/japan-s-bond-yields-climb-on-boj-hike-bets-fiscal-concerns",
+        "https://wtvbam.com/2026/08/18/japan-bond-yields-near-3-as-inflation-fiscal-worries-mount/",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/",
+        "https://tradingeconomics.com/japan/government-bond-yield"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -212,12 +213,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 10-year JGB at 2.89% (and 30-year above 3.5%) is a direct, material update to the s2 JGB yield indicator. The BoJ's halving of monthly purchases (from \u00a55.7trn to \u00a52.9trn) is the structural driver. Simultaneously, the carry-trade reload dynamic \u2014 Japanese investors using intervention rallies to ADD foreign exposure rather than reduce it \u2014 means the yen-strengthening risk (USD/JPY indicator) is now asymmetrically dangerous: a September BoJ hike could trigger a disorderly unwind of freshly rebuilt positions, spilling into US Treasuries (Japan holds ~$1.2trn) and global equity markets.",
+      "rationale": "Both tracked s2_japan indicators are directly updated: 30-year JGB at 4.07% (near record high) and 'Takaichi plan financing clarity' should move to '1' (unclear) or '2' (disorderly) given the imminent cabinet reshuffle and risk of losing the key fiscal-discipline advocate. The 10-year JGB near 1996 highs is also a material carry-trade unwind signal (JPY repatriation). USD/JPY trajectory depends on the September BOJ decision outcome, making this a time-sensitive update to all three s2 indicators simultaneously.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-31",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 18
+      "sightings": 19
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -503,14 +504,13 @@
     },
     "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
       "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
-      "summary": "As of August 13-14, only 8-15 vessels/day transit the Strait versus ~130 pre-war; the IEA's August Oil Market Report now projects a Q3-2026 global supply deficit of 1.8 mb/d \u2014 more than double its prior estimate \u2014 with 8.3 mb/d of Gulf supply still offline and the US SPR falling below 300 million barrels for the first time since 1983. Iran is conditioning reopening on sanctions relief and war reparations, with no imminent resolution.",
-      "as_of": "2026-08-13",
+      "summary": "Six months into the US-Israel war on Iran, traffic through Hormuz has fallen from ~130 vessels/day to just 5-15, cutting Gulf crude exports by ~47% (from ~17 mb/d to ~9 mb/d) \u2014 the largest energy disruption in recorded history. Iran conditions reopening on US sanctions relief and war reparations, with no resolution in sight.",
+      "as_of": "2026-08-27",
       "sources": [
-        "https://edition.cnn.com/2026/08/13/world/live-news/iran-war-trump",
-        "https://www.supplychainbrain.com/articles/44642-iea-warns-global-oil-stockpiles-are-rapidly-depleting",
-        "https://www.iea.org/reports/oil-market-report-august-2026",
+        "https://www.aljazeera.com/news/2026/8/27/how-a-95-percent-drop-in-hormuz-traffic-changed-global-shipping",
         "https://www.aljazeera.com/economy/2026/8/10/oil-prices-climb-as-iranian-demands-cloud-outlook-for-strait-of-hormuz",
-        "https://www.congress.gov/crs-product/R45281"
+        "https://www.congress.gov/crs-product/R45281",
+        "https://www.cnn.com/2026/08/13/world/live-news/iran-war-trump"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -518,12 +518,12 @@
       "target_indicator": "Hormuz/Red Sea status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz indicator is already defined with a 0/1/2 rubric; current status is clearly '2 closed' \u2014 the most adverse reading. The IEA upgrade to a 1.8 mb/d Q3 deficit (double the prior estimate) and SPR falling to a 43-year low materially worsens the tracker's existing WTI and Hormuz indicators simultaneously and warrants an immediate flag to the highest-risk reading. This is the dominant macro shock of the current period.",
+      "rationale": "Hormuz/Red Sea status indicator is already in s20_sea_lanes and should be set to '2' (closed). The 95% traffic drop and 47% crude export reduction directly drive WTI crude (also an s20 indicator) and secondarily pressures s18_food_fertilizer (Hormuz/Gulf disruption indicator to '2') and s5_china_deflation (China is largest Hormuz oil buyer, supply shock disrupts its cost structure). The scale \u2014 largest maritime energy disruption ever recorded \u2014 warrants maximum severity on the existing rubric.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-31",
       "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
-      "sightings": 10
+      "sightings": 11
     },
     "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
       "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
@@ -782,10 +782,10 @@
     },
     "world-bank-cuts-em-global-growth-to-2-5-for-2026-be2ac5": {
       "headline": "World Bank Cuts EM/Global Growth to 2.5% for 2026; Developing-World Borrowing Costs Surge on Energy Shock",
-      "summary": "The IMF's July 2026 WEO Update (published July 12) revised global headline inflation up from 4.1% in 2025 to 4.7% in 2026, reversing the disinflation trend in place since 2024, and warned that increased global risk aversion and cross-border finance frictions could 'trigger capital outflows and abrupt asset repricing in emerging markets with weaker fundamentals.'",
-      "as_of": "2026-07-12",
+      "summary": "S&P Global's August 2026 Banking Risk Monthly flagged that debt restructuring is increasingly likely in Senegal, raising risks for its domestic banking system. This adds to an emerging cluster of frontier-market sovereign stress at a moment when Hormuz-driven oil prices and high US long-end yields are squeezing developing-country external financing.",
+      "as_of": "2026-08-11",
       "sources": [
-        "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf"
+        "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/08/banking-risk-monthly-outlook-august-2026"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -793,12 +793,12 @@
       "target_indicator": "New IMF programs / missed coupons (0 calm / 1 rising / 2 cluster)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The IMF's explicit flagging of EM capital-outflow risk and abrupt asset repricing \u2014 combined with the observation that 'rising debt is driving up EMDE borrowing costs, particularly for those most indebted' \u2014 is a direct and authoritative deterioration signal for s4_dev_debt. The re-acceleration of global inflation to 4.7% (above the prior 4.1% reading) tightens real financial conditions for commodity-importing developing-world sovereigns precisely when energy import bills are spiking due to Hormuz disruption. The 'New IMF programs / missed coupons' indicator should move toward 1 (rising) as fiscal buffers erode, and the US 10-year real yield indicator is also under upward pressure given sticky inflation.",
+      "rationale": "Senegal joining the restructuring queue \u2014 on top of the broader EM external financing squeeze from high US real yields and Hormuz-driven commodity price volatility \u2014 supports moving the 'New IMF programs / missed coupons' ordinal from '1 rising' toward '2 cluster'. Senegal is a CFA franc country; a restructuring there would carry systemic implications for the West African franc zone and French banking exposures, creating a potential link to s10_france as well.",
       "status": "pending",
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-08-31",
       "id": "world-bank-cuts-em-global-growth-to-2-5-for-2026-be2ac5",
-      "sightings": 2
+      "sightings": 3
     },
     "iran-re-asserts-route-control-over-strait-of-hor-558290": {
       "headline": "Iran re-asserts route control over Strait of Hormuz days into fragile ceasefire; oil near $72 but shipping volumes at ~30% of pre-war levels",
@@ -1367,24 +1367,24 @@
     },
     "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9": {
       "headline": "China PPI Surges to +3.9% YoY in May (3rd Consecutive Monthly Rise, Fastest Since July 2022) Driven by Iran-War Energy Spike",
-      "summary": "China's CPI fell 0.3% YoY in July 2026 and manufacturing PMI stayed at 49.4 for a fifth consecutive sub-50 month, with new export orders at a weak 47.2. Simultaneously, niche rare-earth prices surged mid-August on fears China may reinstate suspended export controls ahead of the November 10, 2026 expiry of the one-year pause.",
-      "as_of": "2026-08-14",
+      "summary": "China's official manufacturing PMI edged to only 49.4 in August \u2014 its fifth consecutive contractionary reading \u2014 as new export orders remain depressed at 47.2. The July 2026 PPI came in at -3.5% YoY (worse than the -3.9% forecast), and Standard Chartered projects August CPI will turn negative (-0.3% YoY), with food CPI deflation intensifying beyond -4.5% YoY.",
+      "as_of": "2026-08-31",
       "sources": [
-        "https://thetribune.asia/china-deflation-2026/",
-        "https://investornews.com/critical-minerals-rare-earths/critical-minerals-report-08-16-2026-the-critical-minerals-bull-market-is-here-as-china-puts-its-arsenal-back-in-play/",
-        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/"
+        "https://www.investing.com/economic-calendar/chinese-ppi-464",
+        "https://www.fxstreet.com/news/china-exports-likely-slowed-in-august-standard-chartered-202509021000",
+        "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/08/banking-risk-monthly-outlook-august-2026"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "existing_indicator",
       "target_story": "s5_china_deflation",
       "target_indicator": "China PPI YoY (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "China PPI for July 2026 is running deeply negative (tracker should log the current reading). CPI going negative again in July confirms deflation is not abating. PMI sub-50 for 5 months signals that overcapacity/export-led growth is worsening domestic price spillover. Simultaneously, market pricing of niche rare-earth price spikes (Aug 13) is captured under s6_rare_earths 'Ex-China heavy rare-earth price premium' indicator. Both stories are in adverse motion heading into the Nov 10 cliff for the suspended export controls, making this a dual-story update of high materiality.",
+      "rationale": "China PPI at -3.5% in July 2026 (actual NBS release Aug 9) with a fifth consecutive sub-50 PMI reinforces the deflation-export-spillover channel tracked in s5_china_deflation. The prospect of CPI also going negative in August (-0.3% projected) broadens the deflationary signal beyond PPI alone. This is material because Chinese goods deflation is being exported globally at exactly the moment Hormuz is driving cost-push inflation elsewhere \u2014 the divergence complicates central bank calibration worldwide. The tracker's PPI indicator should be updated to -3.5% and monitored for August release.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-08-21",
-      "sightings": 8,
+      "last_seen": "2026-08-31",
+      "sightings": 9,
       "id": "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9"
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
@@ -6039,13 +6039,12 @@
     },
     "treasury-secretary-bessent-doubles-long-dated-bu-812a11": {
       "headline": "Treasury Secretary Bessent doubles long-dated buybacks to \u2265$4bn/operation after 30-year yield hits 19-year high of ~5.27%",
-      "summary": "The US Treasury on Aug 19 at-least doubled liquidity-support buybacks for 10\u201330yr off-the-run Treasuries, effective Sept 9, after the 30-year yield briefly hit its highest level since 2007. The buyback rally fizzled within 48 hours, with the 30-year back above 5.27% by Aug 21, signalling the market doubts the intervention can hold back structural supply pressure.",
-      "as_of": "2026-08-21",
+      "summary": "The 30-year US Treasury yield surged to ~5.25% (a 19-year high) ahead of Jackson Hole, driven by fiscal-deficit fears, Iran-war inflation, and AI capex spending. Treasury Secretary Bessent announced a doubling of long-dated buybacks to stem the sell-off, with the 10-year holding near 4.71% and PCE inflation at 3.7% YoY as of July 2026.",
+      "as_of": "2026-08-26",
       "sources": [
-        "https://www.cnbc.com/2026/08/19/treasury-announces-upscaled-buyback-operation-for-longer-term-debt-sending-yields-lower.html",
-        "https://www.cnbc.com/2026/08/21/treasury-yields-bonds-inflation-rates.html",
-        "https://finance.yahoo.com/economy/article/one-day-after-doubling-treasury-buybacks-bessent-says-hes-ready-to-boost-them-further-to-push-down-long-term-yields-181218236.html",
-        "https://alternativefundinsight.com/treasury-intervention-adds-new-twist-to-hedge-fund-basis-trade/"
+        "https://www.cnbc.com/2026/08/26/jackson-hole-warsh-bessent-bonds-treasury-dollar.html",
+        "https://www.bloomberg.com/news/articles/2026-08-23/us-long-bonds-risk-deeper-selloff-without-clear-warsh-guidance",
+        "https://www.zerohedge.com/news/2026-08-24/bonds-will-break-warsh-jackson-hole"
       ],
       "materiality": "high",
       "classification": "story_gap",
@@ -6062,11 +6061,11 @@
         "suggested_weight": 0.2
       },
       "proposed_story": null,
-      "rationale": "The basis-trade story (s1) already tracks SOFR-EFFR spread and MOVE, but has no indicator for the outright long-end yield level that is now the proximate stress point. Bessent's failed buyback intervention is a material new development: the 30-year yield at 19-year highs directly affects the carry on basis positions, the off-the-run collateral market, and the hedge-fund repo funding calculus. A dedicated 30-year yield indicator closes this gap and is directly relevant to whether basis-trade unwinds accelerate.",
+      "rationale": "s1_basis_trade already tracks MOVE and SOFR-EFFR but has no indicator capturing the absolute level of long-end Treasury yields, which is the primary transmission channel for fiscal dominance risk. The Treasury's emergency buyback intervention \u2014 an extraordinary policy step \u2014 signals that the long-end is now a macro risk in its own right, not just a volatility or basis phenomenon. Adding 30-year yield as a value indicator closes this gap and would also inform s14_pensions (funded ratios) and s9_cre (refinancing costs).",
       "status": "pending",
       "first_seen": "2026-08-26",
-      "last_seen": "2026-08-26",
-      "sightings": 1,
+      "last_seen": "2026-08-31",
+      "sightings": 2,
       "id": "treasury-secretary-bessent-doubles-long-dated-bu-812a11"
     },
     "treasury-buyback-sparks-dollar-debasement-debate-eba7a4": {
@@ -6354,10 +6353,70 @@
       "last_seen": "2026-08-28",
       "sightings": 1,
       "id": "ecb-june-2026-rate-hike-dents-mortgage-demand-in-2b6ae9"
+    },
+    "global-multi-sovereign-bond-selloff-simultaneous-8fd004": {
+      "headline": "Global multi-sovereign bond selloff \u2014 simultaneous new highs in US, German, French, and Japanese long yields; fiscal dominance emerging as a systemic cross-asset risk",
+      "summary": "In the week of Aug 18-26, long-bond yields across the US (30Y to 5.25%, 19-yr high), Germany, France, and Japan (10Y to near-1996 highs) all rose simultaneously, driven by the Iran-war inflation shock, OBBBA fiscal expansion, and AI capex debt issuance. The concurrent multi-sovereign selloff \u2014 not captured by any single existing story \u2014 represents a new systemic channel where fiscal-dominance concerns are correlated globally.",
+      "as_of": "2026-08-26",
+      "sources": [
+        "https://www.cnbc.com/2026/08/26/jackson-hole-warsh-bessent-bonds-treasury-dollar.html",
+        "https://www.cnbc.com/2026/08/18/bond-market-treasury-yields-warsh-main-street.html",
+        "https://wtvbam.com/2026/08/18/japan-bond-yields-near-3-as-inflation-fiscal-worries-mount/",
+        "https://thepriceofrisk.substack.com/p/lets-talk-about-bond-yields-on-the"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Multi-sovereign fiscal dominance / simultaneous bond market revolt",
+        "why": "For the first time in this cycle, US, Japanese, German and French long-bond yields have hit multi-decade highs simultaneously in the same week, driven by a common mix of war-induced inflation, fiscal expansion (OBBBA in the US, rearmament in Europe, Takaichi investment plan in Japan), and AI capex crowding. No existing story covers the cross-sovereign correlation of this stress: s1_basis_trade covers US Treasury microstructure, s2_japan covers Japan specifically, s10_france covers France/eurozone fragility, and s4_dev_debt covers developing-world debt \u2014 but none captures the systemic risk that arises when ALL major sovereign bond markets move adversely together, undermining the diversification assumption embedded in global risk portfolios and threatening a coordinated tightening of global financial conditions independent of any central bank action.",
+        "proposed_level": 8,
+        "set": 3,
+        "indicators": [
+          {
+            "label": "G4 long-bond simultaneity score (# of US/DE/FR/JP 10Y yields at \u22655Y highs simultaneously)",
+            "type": "band",
+            "rubric": "Count of how many G4 sovereign 10Y yields are simultaneously at or above their 5-year highs in the same rolling 5-trading-day window. 0 = normal; 1-2 = elevated; 3-4 = systemic stress (current reading: 4/4 as of Aug 2026).",
+            "sources": [
+              "https://www.cnbc.com/2026/08/26/jackson-hole-warsh-bessent-bonds-treasury-dollar.html",
+              "https://wtvbam.com/2026/08/18/japan-bond-yields-near-3-as-inflation-fiscal-worries-mount/"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "G4 term premium composite (avg. ACM/BTP-style term premium across US, DE, JP, FR, bps)",
+            "type": "value",
+            "rubric": "Average estimated term premium across US (ACM model), Germany, Japan, and France 10Y bonds. Rising term premium signals markets demanding more fiscal-risk compensation. Threshold: <50bps normal; 50-100bps elevated; >100bps systemic (US alone ~80-90bps in Aug 2026).",
+            "sources": [
+              "https://www.bloomberg.com/news/articles/2026-08-23/us-long-bonds-risk-deeper-selloff-without-clear-warsh-guidance",
+              "https://thepriceofrisk.substack.com/p/lets-talk-about-bond-yields-on-the"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Emergency sovereign bond market intervention count (# of G7 treasury/central bank ad-hoc buyback or YCC-type actions in rolling 30 days)",
+            "type": "band",
+            "rubric": "Count of unscheduled/emergency sovereign debt management operations (e.g., US Treasury doubling buybacks Aug 2026, BOJ emergency purchase ops). 0 = none (normal); 1 = isolated; \u22652 = systemic coordination breakdown.",
+            "sources": [
+              "https://www.cnbc.com/2026/08/26/jackson-hole-warsh-bessent-bonds-treasury-dollar.html",
+              "https://www.bloomberg.com/news/articles/2026-08-23/us-long-bonds-risk-deeper-selloff-without-clear-warsh-guidance"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "The co-movement of US, Japanese, German, and French sovereign yields to multi-decade highs within the same week is a qualitatively new systemic signal not captured by any single existing story. It points to a global repricing of fiscal risk that could self-reinforce (higher yields \u2192 larger deficits \u2192 more issuance \u2192 higher yields) across multiple sovereigns simultaneously. The Treasury's emergency buyback doubling \u2014 an extraordinary fiscal-dominance intervention \u2014 confirms policymakers themselves recognise this as a market-stability event. Assigning this as a new Set 3 story (sovereign/structural) at level 8 reflects its potential to become the dominant macro risk of Q4 2026 if the Hormuz disruption and US fiscal trajectory remain unresolved.",
+      "status": "pending",
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31",
+      "sightings": 1,
+      "id": "global-multi-sovereign-bond-selloff-simultaneous-8fd004"
     }
   },
-  "generated": "2026-08-28",
+  "generated": "2026-08-31",
   "model": "claude-sonnet-4-6",
-  "new_count": 6,
-  "pending_count": 195
+  "new_count": 1,
+  "pending_count": 196
 }

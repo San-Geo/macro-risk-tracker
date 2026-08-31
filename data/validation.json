@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-28T21:32:58.583744+00:00",
+  "generated": "2026-08-31T18:15:17.874842+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -148,7 +148,7 @@
         "weight": 1.0,
         "story_swing": 2,
         "set_swing": 0.6,
-        "overall_swing": 0.0
+        "overall_swing": 0.1
       },
       {
         "id": "govt_stability",
@@ -158,7 +158,17 @@
         "weight": 1.0,
         "story_swing": 2,
         "set_swing": 0.6,
-        "overall_swing": 0.0
+        "overall_swing": 0.1
+      },
+      {
+        "id": "weaponization_event",
+        "label": "Reserve-weaponization / settlement shift (0 none / 1 talk / 2 action)",
+        "story": "Gold / de-dollarization",
+        "set": 3,
+        "weight": 1.0,
+        "story_swing": 2,
+        "set_swing": 0.6,
+        "overall_swing": 0.1
       },
       {
         "id": "usdcny",
@@ -221,16 +231,6 @@
         "overall_swing": 0.5
       },
       {
-        "id": "peg_deviation",
-        "label": "Largest stablecoin max peg deviation (%)",
-        "story": "Stablecoins & Treasury demand",
-        "set": 1,
-        "weight": 1.5,
-        "story_swing": 2,
-        "set_swing": 0.4,
-        "overall_swing": 0.0
-      },
-      {
         "id": "regional_bank_stress",
         "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
         "story": "CRE maturity wall / regional banks",
@@ -238,7 +238,7 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.4,
-        "overall_swing": 0.0
+        "overall_swing": 0.1
       },
       {
         "id": "subprime_auto_dpd",
@@ -248,7 +248,7 @@
         "weight": 1.0,
         "story_swing": 2,
         "set_swing": 0.4,
-        "overall_swing": 0.0
+        "overall_swing": 0.1
       }
     ],
     "note": "The overall is tail-weighted, not a flat mean, so a single indicator still can't swing it far - the headline is robust by construction. The leverage that matters is on each STORY: the indicators below are where a wrong fact does the most damage and most deserves cross-checking."

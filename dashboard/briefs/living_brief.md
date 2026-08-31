@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-08-28 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-08-31 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 7.1/10** — Set 1 5.8, Set 2 5.0, Set 3 4.5, Set 4 6.5, Set 5 5.8.
+**Overall risk 7.1/10** — Set 1 5.8, Set 2 5.0, Set 3 4.5, Set 4 6.5, Set 5 5.5.
 
 
 ## Set 1 — Funding & Leverage
@@ -127,7 +127,7 @@ Data-center electricity demand is colliding with multi-year grid interconnection
 
 *Indicators watched:* Grid interconnection wait (months), Data-center moratoria / backlash (0 none / 1 spreading / 2 widespread), AI power-demand pressure (0 easing / 1 tight / 2 acute)
 
-### Copper & the electrification deficit — 5/10 (Elevated)
+### Copper & the electrification deficit — 4/10 (Moderate)
 
 Electrification and AI infrastructure point to structural copper deficits as demand outruns new mine supply, which takes a decade to build. Price is the live signal; mine disruptions and inventory draws would confirm tightening.
 
