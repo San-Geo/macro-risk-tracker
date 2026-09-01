@@ -175,14 +175,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "The 2026 Hormuz crisis, triggered by the US-Israel war on Iran beginning Feb 28, has now persisted for ~6 months with shipping traffic collapsed to ~8\u201315 vessels/day in early August (vs. ~130 pre-conflict), though the US Navy is gradually restoring partial access with 236 transits recorded over 19 days in August. The IEA has called it the 'largest supply disruption in history,' with direct commodity-market and inflation feedback loops.",
-      "as_of": "2026-08-26",
+      "summary": "Six months into the US-Israel war on Iran, Hormuz traffic has collapsed from ~100+ vessels/day to roughly 5-10, cutting Gulf crude exports by nearly half to ~9 million bpd. A simultaneous Houthi maritime embargo on Saudi Arabia in late July collapsed the Bab al-Mandeb workaround, leaving both major Middle East chokepoints effectively blocked\u2014the IEA has called this the biggest oil disruption on record.",
+      "as_of": "2026-08-28",
       "sources": [
-        "https://www.congress.gov/crs-product/R45281",
-        "https://www.aljazeera.com/news/2026/8/20/are-hormuz-ships-more-willing-to-defy-iran-or-the-us-what-data-shows",
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
-        "https://insights.windward.ai/",
-        "https://www.cnn.com/2026/08/18/business/iran-strait-of-hormuz-oil"
+        "https://www.aljazeera.com/news/2026/8/27/how-a-95-percent-drop-in-hormuz-traffic-changed-global-shipping",
+        "https://www.thenationalnews.com/business/energy/2026/08/28/six-months-of-war-leaves-gulf-oil-trapped-between-two-chokepoints/",
+        "https://carraglobe.com/strait-of-hormuz-closure-2026/",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -190,22 +189,22 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz/Red Sea status indicator should be firmly at 2 (closed/severely disrupted): the CRS report confirms 'periodic Iranian attacks against shipping and retaliatory U.S. strikes against Iran have severely disrupted traffic through the Strait for most of the past five months.' While the US is gaining naval ground and partial reopening is occurring, only ~12 vessels/day (versus 130 pre-war) transit the strait as of early August, with an oil spill observed as recently as Aug 25. This also cascades into WTI crude (second indicator in s20_sea_lanes), s18_food_fertilizer (Hormuz/Gulf disruption to fertilizer inputs \u2192 2 cut), s2_japan (Japan imports almost all its oil, per Japan Times), and s1-global inflation/policy rate feedback described in S&P Global and MUFG reports.",
+      "rationale": "Hormuz is now effectively closed (status = 2) and the Bab al-Mandeb workaround has collapsed simultaneously. Gulf crude exports are down 47% from pre-war levels. WTI crude has risen sharply above $100/bbl. This is the most severe update to s20_sea_lanes since the story was set; the dual-chokepoint blockage directly sets the WTI and Hormuz/Red Sea indicators to their worst readings. It also materially feeds s18_food_fertilizer (fertilizer inputs via Hormuz) and s1_basis_trade/s8_ai_capex via inflation and rate-path effects.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-09-01",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 25
+      "sightings": 26
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 10-year JGB yield rose to its highest since 1996 (touching 2.945%) while the 30-year climbed to 4.07%, near its all-time record. Markets price an ~87% probability of a 25bp BOJ hike in September. A looming Takaichi cabinet reshuffle raises risk that fiscal-hawk Finance Minister Katayama is replaced, which analysts warn could trigger bear-steepening and renewed yen weakness.",
-      "as_of": "2026-08-28",
+      "summary": "As of 2026-09-01, Japan's 10-year JGB yield has hit ~3.0%, its highest since 1996, driven by BOJ hawkishness, import-driven inflation, and fiscal expansion fears under PM Takaichi. The BOJ is widely expected to raise its policy rate to 1.25% at the September meeting, while USD/JPY remains near 159 despite a recent US-Japan coordinated FX intervention\u2014the first since 1998.",
+      "as_of": "2026-09-01",
       "sources": [
-        "https://www.bloomberg.com/news/articles/2026-08-17/japan-s-bond-yields-climb-on-boj-hike-bets-fiscal-concerns",
-        "https://wtvbam.com/2026/08/18/japan-bond-yields-near-3-as-inflation-fiscal-worries-mount/",
+        "https://tradingeconomics.com/japan/government-bond-yield",
         "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/",
-        "https://tradingeconomics.com/japan/government-bond-yield"
+        "https://langleyesquire.com/en/japanese-politics-updates-20260816/",
+        "https://asia.nikkei.com/business/markets/growing-expectations-for-faster-boj-rate-hikes-push-up-bond-yields"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -213,12 +212,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Both tracked s2_japan indicators are directly updated: 30-year JGB at 4.07% (near record high) and 'Takaichi plan financing clarity' should move to '1' (unclear) or '2' (disorderly) given the imminent cabinet reshuffle and risk of losing the key fiscal-discipline advocate. The 10-year JGB near 1996 highs is also a material carry-trade unwind signal (JPY repatriation). USD/JPY trajectory depends on the September BOJ decision outcome, making this a time-sensitive update to all three s2 indicators simultaneously.",
+      "rationale": "The 10-year JGB at 3.0% (a 30-year high) and BOJ tightening acceleration are direct, material hits to s2_japan. Japanese investors have already sold $29.6bn of US Treasuries in Q1 2026, feeding back into s1_basis_trade and s20_sea_lanes via Treasury market function. A September rate hike could also sharply unwind remaining yen-funded carry trades. The Takaichi plan financing clarity indicator (FY27 budget requests just submitted with sharp aggregate spending increase) should move to '2 disorderly' given market's 'malicious yield rise' concern.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-01",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 19
+      "sightings": 20
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -897,12 +896,11 @@
     },
     "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec": {
       "headline": "Iran war energy shock drives Hormuz fertilizer disruption; Gulf fertilizer exports (especially Qatar LNG-linked urea) severely curtailed since March 2026",
-      "summary": "Since the Feb 28 US-Israel strike on Iran, Hormuz throughput has collapsed \u2014 LNG exports fell 95% and combined merchandise exports from Gulf states dropped 21% in April. FAO's Director-General has formally warned that fertilizer scarcity will reduce yields and tighten food supplies into 2027, with WFP estimating up to 45 million additional people at risk of hunger.",
-      "as_of": "2026-08-07",
+      "summary": "The simultaneous effective closure of both Hormuz (carrying ~20% of global LNG and fertilizer feedstock flows) and Bab al-Mandeb creates a direct supply shock to urea, ammonia, and natural gas-derived fertilizer inputs sourced from Gulf producers. Iraq, Kuwait, and Qatar\u2014almost entirely dependent on Hormuz for exports\u2014cannot reroute, cutting off fertilizer-producing nations from export markets and raising food-production input costs globally.",
+      "as_of": "2026-08-28",
       "sources": [
-        "https://news.un.org/en/story/2026/08/1168074",
-        "https://www.fao.org/newsroom/detail/strait-of-hormuz-crisis--fertilizer-scarcity-will-affect-next-harvests-and-food-supplies--fao-warns/en",
-        "https://www.securitycouncilreport.org/monthly-forecast/2026-08/conflict-and-food-insecurity-3.php"
+        "https://www.thenationalnews.com/business/energy/2026/08/28/six-months-of-war-leaves-gulf-oil-trapped-between-two-chokepoints/",
+        "https://law.wisc.edu/newsletter/Law_Library/The_Strait_of_Hormuz_Critical_Ma_2026-03-13"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -910,12 +908,12 @@
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz disruption indicator for s18 should now read 2 (cut): LNG exports -95%, fertilizer supplies materially severed for a prolonged period per FAO/UN/ITC. The food-price trend indicator also warrants upgrade toward 2 (spiking): Fitch raised 2026 ammonia/urea price expectations by ~25%, and fertilizer prices are 15\u201320% above prior year. This simultaneously pressures s20_sea_lanes (Hormuz/Red Sea status = 2, closed/contested). This is the single most acute cross-story shock in the tracker.",
+      "rationale": "The s18_food_fertilizer story tracks Hormuz disruption to fertilizer inputs as a distinct indicator. The dual-chokepoint blockage now makes this indicator '2 cut': Qatar (world's largest LNG exporter and a major ammonia/urea producer), Iraq, and Kuwait have no viable alternative export routes. Saudi Aramco's Jazan refinery was struck by Houthis in August. This is a new, escalatory development from July (when the Bab al-Mandeb workaround collapsed) that fully activates the worst-case reading on this indicator. It compounds the food-price trend indicator toward '2 spiking' and is distinct enough from the primary s20_sea_lanes entry above to warrant its own triage entry.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-09-01",
       "id": "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec",
-      "sightings": 10
+      "sightings": 11
     },
     "japan-s-energy-import-crisis-deepens-as-hormuz-c-e531e3": {
       "headline": "Japan's energy import crisis deepens as Hormuz closure compounds BOJ policy bind \u2014 new macro feedback loop not captured in existing indicators",
@@ -993,12 +991,12 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "China in mid-2026 formalized a public reporting mechanism for export-control violations (MOFCOM Announcement 26/2026), detained two Japanese nationals in Dalian for alleged rare-earth smuggling, and the NdPr alloy benchmark rose 21.4% in a single month through July 1 2026. The Nov 10 suspension of the Oct-2025 second-wave controls is now less than 11 weeks away, creating a countdown risk.",
-      "as_of": "2026-08-26",
+      "summary": "The November 2025 one-year suspension of China's expanded rare-earth export controls (covering five additional REEs plus extraterritorial provisions) is set to lapse on November 10, 2026, with no confirmed extension. Separately, China's 2026 Import-Export Licensing Catalogue has already added new licensing requirements for samarium, gadolinium, and lutetium, with enforcement of extraterritorial provisions delayed only until November 2026.",
+      "as_of": "2026-09-01",
       "sources": [
-        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
-        "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/",
-        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/"
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+        "https://www.certivo.com/blog-details/china-rare-earth-export-controls-2026-what-new-licensing-rules-mean-for-manufacturers",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1006,12 +1004,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Nov 10 pause expiry is now inside the 3-month horizon with no renewal signal \u2014 the indicator should shift from '0 extended' toward '1 expiring'. Simultaneously, rising enforcement intensity (formal violation-reporting mechanism, criminal detentions, NdPr +21%) points to the pause lapsing into a live supply shock rather than being quietly extended again. This is directly material to s6 and to s8_ai_capex (magnets in GPU cooling fans, HDD actuators) and s19_lithography (CMP chemistry).",
+      "rationale": "The Nov-2025 pause status indicator should now move from '0 extended' to '1 expiring': the one-year suspension clock is running with no confirmed renewal, and enforcement of the extraterritorial provisions of the new 2026 licensing catalogue is simultaneously converging on November 2026. Clark Hill explicitly flags 'regulatory tightening in late 2026 if bilateral conditions deteriorate.' With US-Iran conflict consuming US geopolitical bandwidth, the probability of a US-China deal to extend the pause before November 10 has decreased materially. Licensing approval rates are reportedly below 25% for European firms under the existing April 2025 controls.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-09-01",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 12
+      "sightings": 13
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -1367,12 +1365,11 @@
     },
     "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9": {
       "headline": "China PPI Surges to +3.9% YoY in May (3rd Consecutive Monthly Rise, Fastest Since July 2022) Driven by Iran-War Energy Spike",
-      "summary": "China's official manufacturing PMI edged to only 49.4 in August \u2014 its fifth consecutive contractionary reading \u2014 as new export orders remain depressed at 47.2. The July 2026 PPI came in at -3.5% YoY (worse than the -3.9% forecast), and Standard Chartered projects August CPI will turn negative (-0.3% YoY), with food CPI deflation intensifying beyond -4.5% YoY.",
-      "as_of": "2026-08-31",
+      "summary": "China's official manufacturing PMI edged up only 0.1pt to 49.4 in August, its fifth consecutive sub-50 reading, with new export orders at 47.2 as US reciprocal tariffs bite and front-loading fades. Standard Chartered forecasts August CPI at -0.3% YoY (confirmed deflation) and food CPI deflation intensifying to over 4.5%; PPI deflation is expected to ease from July's -4.1% but remain deeply negative.",
+      "as_of": "2026-09-01",
       "sources": [
-        "https://www.investing.com/economic-calendar/chinese-ppi-464",
         "https://www.fxstreet.com/news/china-exports-likely-slowed-in-august-standard-chartered-202509021000",
-        "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/08/banking-risk-monthly-outlook-august-2026"
+        "https://www.investing.com/economic-calendar/chinese-ppi-464"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -1380,11 +1377,11 @@
       "target_indicator": "China PPI YoY (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "China PPI at -3.5% in July 2026 (actual NBS release Aug 9) with a fifth consecutive sub-50 PMI reinforces the deflation-export-spillover channel tracked in s5_china_deflation. The prospect of CPI also going negative in August (-0.3% projected) broadens the deflationary signal beyond PPI alone. This is material because Chinese goods deflation is being exported globally at exactly the moment Hormuz is driving cost-push inflation elsewhere \u2014 the divergence complicates central bank calibration worldwide. The tracker's PPI indicator should be updated to -3.5% and monitored for August release.",
+      "rationale": "Five consecutive months of contractionary manufacturing PMI combined with a return of CPI to negative territory and stubbornly negative PPI confirms China's deflationary price spillover story is deepening rather than resolving. The July PPI reading of -4.1% (August data from Investing.com shows -3.5%, a slight improvement) remains in severe deflation territory. US global reciprocal tariffs are now explicitly cited as suppressing Chinese export orders, confirming the 'New tariff/anti-dumping actions' indicator should remain at '2 escalating'. This feeds global disinflationary pressure and threatens EMs dependent on Chinese demand.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-08-31",
-      "sightings": 9,
+      "last_seen": "2026-09-01",
+      "sightings": 10,
       "id": "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9"
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
@@ -6413,10 +6410,40 @@
       "last_seen": "2026-08-31",
       "sightings": 1,
       "id": "global-multi-sovereign-bond-selloff-simultaneous-8fd004"
+    },
+    "japan-cabinet-reshuffle-imminent-fiscal-hawk-fin-a58cc8": {
+      "headline": "Japan Cabinet Reshuffle Imminent: Fiscal-Hawk Finance Minister Katayama at Risk of Replacement",
+      "summary": "A September cabinet reshuffle is confirmed imminently under PM Takaichi; markets are focused on whether fiscal-discipline advocate Finance Minister Satsuki Katayama will be replaced. Visible friction between the PM's office and the Finance Ministry over budget-bureau appointments, combined with a FY27 supplementary budget cutting revenue while raising spending, has raised the prospect of a 'malicious' bear-steepening of the JGB curve.",
+      "as_of": "2026-08-23",
+      "sources": [
+        "https://langleyesquire.com/en/japanese-politics-updates-20260823/",
+        "https://langleyesquire.com/en/japanese-politics-updates-20260809/",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "proposed_indicator": {
+        "label": "Fiscal-hawk Finance Minister retention (0 retained / 1 replaced-neutral / 2 replaced-dovish)",
+        "type": "band",
+        "rubric": "0 = Katayama or equivalent fiscal-discipline figure retained after reshuffle; 1 = replaced by an ideologically neutral figure with no clear expansionary mandate; 2 = replaced by a figure aligned with Takaichi's expansionary fiscal agenda, signalling loss of a fiscal brake and risk of 'malicious' JGB yield spike",
+        "sources": [
+          "https://langleyesquire.com/en/japanese-politics-updates-20260823/",
+          "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan indicators track JGB yields, USD/JPY, and Takaichi plan financing clarity, but none specifically flags the personnel risk at the Finance Ministry. Markets are explicitly pricing the reshuffle outcome: a dovish replacement triggers yen weakness and JGB bear-steepening simultaneously, making this a distinct leading indicator not currently captured. It is a medium-lead signal for the existing financing-clarity indicator flipping to '2 disorderly'.",
+      "status": "pending",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "sightings": 1,
+      "id": "japan-cabinet-reshuffle-imminent-fiscal-hawk-fin-a58cc8"
     }
   },
-  "generated": "2026-08-31",
+  "generated": "2026-09-01",
   "model": "claude-sonnet-4-6",
   "new_count": 1,
-  "pending_count": 196
+  "pending_count": 197
 }
