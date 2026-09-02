@@ -6440,10 +6440,158 @@
       "last_seen": "2026-09-01",
       "sightings": 1,
       "id": "japan-cabinet-reshuffle-imminent-fiscal-hawk-fin-a58cc8"
+    },
+    "strait-of-hormuz-near-closure-persists-iea-calls-bf1b95": {
+      "headline": "Strait of Hormuz Near-Closure Persists \u2014 IEA Calls It Largest Supply Disruption in Oil Market History",
+      "summary": "Periodic Iranian attacks against shipping have collapsed Strait of Hormuz transits to 8\u201315 vessels/day vs. ~130 pre-conflict, pushing Brent to ~$90/bbl (+24% since late February 2026) with no reopening deal in sight. The EIA does not expect Middle East production to return to near pre-conflict levels until early 2027.",
+      "as_of": "2026-08-24",
+      "sources": [
+        "https://www.congress.gov/crs-product/R45281",
+        "https://www.aljazeera.com/economy/2026/8/12/oil-prices-rise-as-attacks-dent-hopes-for-strait-of-hormuz-reopening",
+        "https://www.cnbc.com/2026/08/11/hormuz-oil-prices-us-iran.html",
+        "https://www.ogj.com/IranWar"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status \u2192 update to '2 closed'; WTI crude oil \u2192 update to reflect ~$87\u201390 Brent-equivalent; Undersea cable incidents \u2192 no change",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Strait of Hormuz effective closure is the single largest active geophysical chokepoint event in the tracker. s20_sea_lanes already carries Hormuz/Red Sea status and WTI crude as primary indicators; the status should move to '2 closed' and WTI elevated accordingly. Materiality is high: the IEA characterizes this as the largest supply disruption in oil market history, with knock-on effects into inflation, EMDEs, and food/fertilizer (see also s18).",
+      "status": "pending",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "sightings": 1,
+      "id": "strait-of-hormuz-near-closure-persists-iea-calls-bf1b95"
+    },
+    "hormuz-fertilizer-shock-intensifies-urea-prices--b4c209": {
+      "headline": "Hormuz Fertilizer Shock Intensifies \u2014 Urea Prices 75\u2013108% Above Pre-Conflict; FAO Warns of Food-Security Crisis",
+      "summary": "The Strait of Hormuz closure has cut tanker-borne fertilizer shipments by more than 95%, driving World Bank fertilizer price index to its highest since October 2022 (+12% q/q in Q1 2026) and Middle East urea prices 75\u2013108% above pre-conflict levels. Qatar halted production at one of the world's largest urea plants; the World Food Programme estimates 45 million additional people risk acute hunger.",
+      "as_of": "2026-08-24",
+      "sources": [
+        "https://www.cfr.org/articles/the-clock-is-ticking-fertilizer-food-and-the-fragility-of-global-agriculture",
+        "https://blogs.worldbank.org/en/opendata/fertilizer-prices-surge-as-strait-of-hormuz-disruptions-tighten-",
+        "https://blogs.worldbank.org/en/opendata/food-prices-feel-the-heat-as-war-in-the-middle-east-rattles-comm",
+        "https://www.weforum.org/stories/2026/03/fertilizer-urea-middle-east-war-food-security/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s18_food_fertilizer",
+      "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs \u2192 update to '2 cut'; Food-price trend \u2192 update to '2 spiking' (urea +75\u2013108%, WB index at 4-yr high); China fertilizer export curbs \u2192 no change",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Hormuz crisis has directly severed the Gulf's fertilizer artery \u2014 the exact scenario s18_food_fertilizer's 'Hormuz/Gulf disruption' indicator was designed to capture. The indicator should move to '2 cut' (near-total disruption confirmed by FAO/World Bank/WFP data), and food-price trend escalates to '2 spiking' given WB's projected 30%+ fertilizer price increase in 2026. This is independently material from the s20 sea-lanes entry because the fertilizer transmission mechanism has its own multi-quarter lag into crop yields and EM food-import bills.",
+      "status": "pending",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "sightings": 1,
+      "id": "hormuz-fertilizer-shock-intensifies-urea-prices--b4c209"
+    },
+    "japan-fx-intervention-backfires-yen-slides-back--6aae2e": {
+      "headline": "Japan FX Intervention Backfires \u2014 Yen Slides Back to ~159/USD; Japanese Investors Net-Buy \u00a55 Trillion Overseas Assets Post-Intervention",
+      "summary": "A joint U.S.-Japan currency intervention temporarily strengthened the yen from ~164 to ~155/USD, but yen quickly retraced to ~159 as Japanese investors net-bought more than \u00a55 trillion of foreign equities and long-term bonds in the two weeks to Aug. 15, effectively using the intervention as a carry-trade reload opportunity. The BOJ has not hiked rates, and the U.S.-Japan 10-year yield spread stands at ~180bps, keeping carry incentives structurally intact.",
+      "as_of": "2026-08-20",
+      "sources": [
+        "https://www.cnbc.com/2026/08/20/us-japan-yen-intervention-bank-of-japan-carry-trade.html",
+        "https://www.stonex.com/en-us/insights/japan-yield-curve-pressure-threatens-global-carry-trades/",
+        "https://nz.amova-am.com/intermediary/insights/detail/2602-japans-bond-volatility-and-the-yen-carry-trade"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "proposed_indicator": {
+        "label": "Joint intervention effectiveness (0 durable / 1 partial fade / 2 full reversal within 4 weeks)",
+        "type": "band",
+        "rubric": "0 = yen holds \u226580% of intervention gain after 4 weeks; 1 = yen retraces 40\u201379% of gain; 2 = yen retraces >80% of gain AND carry-trade rebuilding confirmed by MOF flow data. Current reading: 2 (yen retraced ~80% of gain; Japanese investors net-bought \u00a55 trillion overseas assets in two weeks post-intervention).",
+        "sources": [
+          "https://www.cnbc.com/2026/08/20/us-japan-yen-intervention-bank-of-japan-carry-trade.html"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "s2_japan tracks USD/JPY and 30-year JGB yield, but has no indicator for intervention effectiveness or carry-trade rebuild velocity \u2014 the most actionable near-term signal. The CNBC Aug. 20 story is directly on point: the intervention 'turbo-charged' carry trade for long-term investors (per Monex Group), meaning official FX policy has become a carry-reload mechanism. This warrants a new ordinal indicator within s2 so the tracker can distinguish between an intervention that changes the regime versus one that merely provides better entry prices for carry traders.",
+      "status": "pending",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "sightings": 1,
+      "id": "japan-fx-intervention-backfires-yen-slides-back--6aae2e"
+    },
+    "china-ppi-deflation-deepens-further-below-consen-9fc71f": {
+      "headline": "China PPI Deflation Deepens Further Below Consensus in August Data \u2014 Manufacturing PMI Contractionary for 5th Consecutive Month",
+      "summary": "China's PPI printed \u20133.5% YoY for July (released Aug. 9, 2026), missing the \u20133.9% consensus and prior \u20134.1%, while Standard Chartered notes CPI likely turned negative (\u20130.3% YoY) in August driven by food deflation exceeding \u20134.5% YoY. Manufacturing PMI at 49.4 stayed contractionary for a fifth consecutive month, with new export orders at 47.2 amid fading tariff front-loading.",
+      "as_of": "2026-09-02",
+      "sources": [
+        "https://www.investing.com/economic-calendar/chinese-ppi-464",
+        "https://www.fxstreet.com/news/china-exports-likely-slowed-in-august-standard-chartered-202509021000"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s5_china_deflation",
+      "target_indicator": "China PPI YoY (%) \u2192 update to \u20133.5% (July actual); note that while this is less negative than June's \u20133.6% (some easing), CPI is turning negative (\u20130.3% est. Aug.) and PMI remains contractionary for 5 straight months, sustaining the deflationary spillover risk.",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The PPI remains deep in deflation territory (33+ consecutive months of factory-gate price declines confirmed through mid-2026) and the new data point (Aug. 9 release) directly updates the primary indicator in s5. CPI turning negative signals consumer-level deflation is now materialising alongside PPI, which broadens the spillover risk to trading partners. Materiality is medium rather than high only because the pace of deflation has very marginally eased from June's \u20133.6% trough \u2014 but five consecutive sub-50 PMI months and a contractionary export order sub-index keep the story firmly alive.",
+      "status": "pending",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "sightings": 1,
+      "id": "china-ppi-deflation-deepens-further-below-consen-9fc71f"
+    },
+    "china-nov-2025-rare-earth-pause-approaching-12-m-c5e512": {
+      "headline": "China Nov-2025 Rare-Earth Pause Approaching 12-Month Expiry \u2014 Late-2026 Reinstatement Risk Rising as EU Prices Hit 6\u00d7 China Domestic",
+      "summary": "China officially suspended its October 2025 comprehensive rare-earth export controls for one year (until November 10, 2026) under the Trump\u2013Xi de-escalation deal, but the April 2025 heavy rare-earth controls remain fully intact, licensing approval rates for European firms are below 25%, and ex-China prices for dysprosium/terbium reached up to six times Chinese domestic prices. Analysts warn of regulatory tightening in late 2026 if bilateral conditions deteriorate.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
+        "https://rareearthexchanges.com/news/chinas-2026-export-controls-redraw-the-global-supply-chain-map/",
+        "https://www.clarkhill.com/news-events/news/china-hits-pause-on-rare-earth-export-controls-and-what-it-means-for-supply-chains/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Nov-2025 pause status \u2192 current reading '1 expiring' (pause expires Nov. 10, 2026, ~10 weeks away; reinstatement risk rising); Ex-China heavy rare-earth price premium \u2192 update to ~6\u00d7 China domestic for dysprosium/terbium/yttrium; Rare-earth export license flow \u2192 update to '1 slowing' (approval rates <25% for EU firms despite nominal pause).",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The November 2026 expiry of the one-year pause is now within a 10-week horizon \u2014 a material clock that the tracker's 'Nov-2025 pause status' indicator is specifically designed to capture. The data confirms the pause is nominal for heavy RE (April controls still in force) and that European licensing approval rates are critically low (<25%), with ex-China prices already at 6\u00d7 domestic \u2014 meaning structural damage is accumulating even during the 'pause.' The tracker should shift this indicator from '0 extended' to '1 expiring' immediately.",
+      "status": "pending",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "sightings": 1,
+      "id": "china-nov-2025-rare-earth-pause-approaching-12-m-c5e512"
+    },
+    "us-iran-war-creates-new-cross-story-risk-global--3c4a0a": {
+      "headline": "US\u2013Iran War Creates New Cross-Story Risk: Global Growth Downgrade + EM Debt Stress via Energy Shock",
+      "summary": "The S&P Global August 2026 outlook cut global real GDP growth to 2.4% \u2014 0.5pp below pre-conflict projections \u2014 while the World Bank flags that EMDEs face their weakest per-capita income growth since the pandemic, driven by the Middle East energy shock. Higher oil/fertilizer import bills are pressuring EM current accounts and fiscal positions, raising the risk of a cluster of new IMF programs or missed coupons.",
+      "as_of": "2026-08-24",
+      "sources": [
+        "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/08/global-economic-outlook-august-2026",
+        "https://www.worldbank.org/en/publication/global-economic-prospects"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "proposed_indicator": {
+        "label": "EM energy/fertilizer import-bill shock (0 contained / 1 rising CA pressure / 2 acute BoP stress)",
+        "type": "band",
+        "rubric": "0 = EM current-account deterioration from oil/fertilizer price shock <1% GDP on average for oil-importing EMDEs; 1 = deterioration 1\u20133% GDP with at least 3 countries seeking IMF emergency financing; 2 = deterioration >3% GDP and/or cluster of missed external coupons or capital-flow sudden stops. Current reading: 1 (World Bank projects weakest EMDE per-capita growth since pandemic; WFP flags 45M additional people at risk of acute hunger; multiple EM countries facing twin CA/fiscal deterioration from oil import bills).",
+        "sources": [
+          "https://www.worldbank.org/en/publication/global-economic-prospects",
+          "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/08/global-economic-outlook-august-2026"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "s4_dev_debt already tracks the developing-world debt crisis via IMF programs and real yields, but has no indicator specifically capturing the transmission channel from an energy/fertilizer supply shock to EM balance-of-payments stress \u2014 which is the dominant new mechanism in 2026 (distinct from prior debt-service/dollar-squeeze drivers). The Hormuz closure is simultaneously raising EM import bills (energy + fertilizer) while suppressing export earnings in commodity-importing EMs, a dual squeeze not captured by the existing broad dollar index or 10y real-yield indicators. A dedicated 'EM energy/fertilizer import-bill shock' ordinal indicator would give the tracker early-warning of BoP deterioration before it shows up in IMF program counts.",
+      "status": "pending",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "sightings": 1,
+      "id": "us-iran-war-creates-new-cross-story-risk-global--3c4a0a"
     }
   },
-  "generated": "2026-09-01",
+  "generated": "2026-09-02",
   "model": "claude-sonnet-4-6",
-  "new_count": 1,
-  "pending_count": 197
+  "new_count": 6,
+  "pending_count": 203
 }
