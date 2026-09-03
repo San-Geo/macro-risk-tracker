@@ -6588,10 +6588,195 @@
       "last_seen": "2026-09-02",
       "sightings": 1,
       "id": "us-iran-war-creates-new-cross-story-risk-global--3c4a0a"
+    },
+    "japan-10y-jgb-yield-hits-3-02-30-year-high-since-b508cb": {
+      "headline": "Japan 10Y JGB yield hits 3.02% (30-year high since 1996) as BOJ rate hike seen imminent; USD/JPY near July highs",
+      "summary": "Japan's 10-year government bond yield climbed above 3% on September 2, 2026 \u2014 its highest level since 1996 \u2014 driven by surging oil prices, inflation fears, and fiscal concerns over PM Takaichi's spending plans. BOJ Governor Ueda signaled a rate hike is likely this month, with US Treasury Secretary Bessent publicly urging 'decisive' monetary steps, while USD/JPY remains elevated near July highs as carry-trade rebuilding offsets yen-support effects.",
+      "as_of": "2026-09-02",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.fxstreet.com/analysis/usd-jpy-at-highest-level-since-july-carry-trade-weighs-on-the-yen-202609021027",
+        "https://www.forbes.com/sites/investor-hub/article/how-japan-bond-market-affects-your-portfolio/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield (%) \u2014 proxy update: 10Y at 3.02%; Takaichi plan financing clarity moving toward '2 disorderly'; USD/JPY elevated",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The 10Y JGB breaching 3% for the first time since 1996 is a direct, high-materiality hit to all three s2 indicators simultaneously: it worsens the carry-trade unwind risk (USD/JPY dynamics), signals fiscal stress from Takaichi spending (financing clarity deteriorating), and the imminent BOJ hike \u2014 now verbally pressured by the US Treasury Secretary \u2014 could reprice global risk assets if yen appreciates sharply. Directly captured by s2's existing indicators; update all three.",
+      "status": "pending",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "sightings": 1,
+      "id": "japan-10y-jgb-yield-hits-3-02-30-year-high-since-b508cb"
+    },
+    "renewed-hormuz-tanker-attacks-push-brent-to-105--5a62c1": {
+      "headline": "Renewed Hormuz tanker attacks push Brent to $105/bbl on July 23; EIA (Aug 11) still forecasts traffic well below pre-war levels through Q4 2026",
+      "summary": "Following a June MOU between the US and Iran that briefly brought Brent to $69/bbl, renewed attacks on tankers transiting the Strait of Hormuz in late July drove prices back to $105/bbl on July 23. The EIA's August 11 Short-Term Energy Outlook forecasts only a gradual Strait reopening, with prices declining to ~$78/bbl by Q4 2026 as shut-in production is 'largely restored' only in Q1 2027.",
+      "as_of": "2026-08-28",
+      "sources": [
+        "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+        "https://www.ogj.com/IranWar",
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed) \u2014 should be set to '2 closed/contested'; WTI crude (CL=F) \u2014 elevated ~$90-105 range",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The renewed tanker attacks in late July \u2014 after a brief ceasefire-driven normalization \u2014 confirm the Hormuz status remains at '2 contested/effectively closed' for commercial traffic, directly updating s20's primary indicators. The volatility between $69 and $105/bbl within 3 weeks is extreme and material to any risk tracker. WTI/Brent should be updated to reflect current ~$90+ spot.",
+      "status": "pending",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "sightings": 1,
+      "id": "renewed-hormuz-tanker-attacks-push-brent-to-105--5a62c1"
+    },
+    "china-expands-rare-earth-entity-bans-to-14-eu-fi-bdf817": {
+      "headline": "China expands rare-earth entity bans to 14 EU firms in July 2026; YTD exports down 10% YoY; November 2026 extraterritorial enforcement deadline now ~10 weeks away",
+      "summary": "After blacklisting 10 US rare-earth and defense firms (including MP Materials and USA Rare Earth) in June 2026, China added 14 EU firms to its dual-use export ban in July. China's own customs data show rare-earth exports fell 10% YoY in the January\u2013July 2026 period. The November 10, 2026 extraterritorial enforcement deadline \u2014 when the Oct 2025 controls (suspended for one year) snap back \u2014 is now approximately 10 weeks away, with no new extension announced.",
+      "as_of": "2026-08-20",
+      "sources": [
+        "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/",
+        "https://source.benchmarkminerals.com/article/china-targets-us-rare-earth-and-defence-linked-entities-with-dual-use-export-ban",
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "US domestic RE producer blacklist (now '1 entity-specific ban' confirmed for MP Materials / USA Rare Earth); Nov-2025 pause status (approaching expiry \u2014 '1 expiring'); Rare-earth export license flow (moving toward '1 slowing' given 10% YoY volume decline)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Three of s6's four indicators are simultaneously moving in a deteriorating direction: entity-specific bans are confirmed (blacklist = 1), the November pause is ~10 weeks from lapsing with no extension signal (status = 1 expiring), and actual export volumes are down 10% YoY confirming license-flow friction (flow = 1 slowing). The EU expansion broadens the geopolitical scope beyond US-China bilateralism. High materiality.",
+      "status": "pending",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "sightings": 1,
+      "id": "china-expands-rare-earth-entity-bans-to-14-eu-fi-bdf817"
+    },
+    "hormuz-closure-cuts-19-of-global-lng-supply-no-d-0966d8": {
+      "headline": "Hormuz closure cuts 19% of global LNG supply \u2014 no dedicated LNG/gas indicator in s20 sea lanes story",
+      "summary": "The 2026 Strait of Hormuz crisis has severed approximately 19% of global LNG trade (per pre-war 2025 flow data), a disruption the IEA called 'the greatest global energy security challenge in history.' This LNG dimension \u2014 with distinct consequences for European and Asian gas markets, fertilizer feedstock (ammonia), and power-sector inflation \u2014 is not captured by s20's existing WTI crude and Hormuz-status indicators, which are oil-centric.",
+      "as_of": "2026-09-03",
+      "sources": [
+        "https://www.congress.gov/crs-product/R45281",
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
+        "https://www.ogj.com/IranWar"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Hormuz LNG disruption severity (% of pre-war global LNG trade transiting Strait)",
+        "type": "band",
+        "rubric": "0 = >15% flowing normally; 1 = 10-15% (partial disruption, rerouting possible); 2 = <10% (severe/near-total cut, as in current crisis where ~19% pre-war flow is now effectively zero for commercial vessels)",
+        "sources": [
+          "https://www.congress.gov/crs-product/R45281",
+          "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+          "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis"
+        ],
+        "suggested_weight": 0.35
+      },
+      "proposed_story": null,
+      "rationale": "The existing s20 indicators (WTI price, Hormuz status ordinal, cable incidents) are all oil-and-shipping-centric. The LNG disruption is a distinct second-order shock: European gas prices, Asian LNG spot prices, ammonia/fertilizer feedstock costs, and power-sector inflation in energy-importing EMs are all driven by gas, not crude. Without a dedicated LNG indicator, the tracker underweights this channel. The IEA's 'greatest energy security challenge in history' framing confirms this is not routine noise.",
+      "status": "pending",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "sightings": 1,
+      "id": "hormuz-closure-cuts-19-of-global-lng-supply-no-d-0966d8"
+    },
+    "china-crude-oil-imports-fell-32-in-q2-2026-hormu-9c954e": {
+      "headline": "China crude oil imports fell 32% in Q2 2026 \u2014 Hormuz shock triggers deflationary demand destruction feeding back into China PPI",
+      "summary": "China's crude oil imports collapsed 32% in Q2 2026 to their lowest level since 2016, as Hormuz-driven elevated prices forced demand destruction and drawdown of strategic reserves. This creates a novel feedback loop: higher imported energy costs suppress Chinese industrial output and worsen the already-negative PPI trajectory, while simultaneously reducing China's export competitiveness pressure \u2014 a mixed but net-negative signal for the s5 deflation story.",
+      "as_of": "2026-08-11",
+      "sources": [
+        "https://www.ogj.com/IranWar",
+        "https://www.elibrary.imf.org/view/journals/002/2026/044/article-A001-en.xml"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s5_china_deflation",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "China crude oil import volume YoY change (%) \u2014 energy-demand destruction proxy",
+        "type": "value",
+        "rubric": "Tracks China's monthly crude import volume YoY%; a sharp decline (e.g., >15% YoY drop) signals energy-price-driven demand destruction that compounds PPI deflation via industrial output contraction; source: China General Administration of Customs monthly release",
+        "sources": [
+          "https://www.ogj.com/IranWar",
+          "https://www.elibrary.imf.org/view/journals/002/2026/044/article-A001-en.xml"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The s5 story currently tracks PPI YoY, USD/CNY, and tariff/anti-dumping actions \u2014 all capturing the supply-side deflationary export channel. But the Q2 2026 32% crude import collapse reveals a new second-order mechanism: the Hormuz oil shock is now feeding *back into* China as a demand-destruction event that worsens industrial output and amplifies domestic deflation, while the IMF already projects China's GDP deflator at -0.7% for full-year 2026. This cross-story linkage (s20\u2192s5) is materially undertracked.",
+      "status": "pending",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "sightings": 1,
+      "id": "china-crude-oil-imports-fell-32-in-q2-2026-hormu-9c954e"
+    },
+    "hormuz-driven-stagflation-shock-creates-new-em-c-955dbc": {
+      "headline": "Hormuz-driven stagflation shock creates new EM central-bank divergence risk not captured by existing developing-world debt story",
+      "summary": "The Hormuz closure has forced energy-importing emerging markets (South/Southeast Asia, sub-Saharan Africa, parts of Latin America) into a stagflationary bind: oil at $90-105/bbl inflates import bills and currency pressures, while demand destruction slows growth, forcing central banks to choose between defending currencies (hike) or supporting growth (cut). This monetary-policy divergence is creating new sovereign stress distinct from the existing s4 framework, which focuses on dollar strength and IMF programs.",
+      "as_of": "2026-09-03",
+      "sources": [
+        "https://www.worldbank.org/en/publication/global-economic-prospects",
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
+        "https://www.eia.gov/outlooks/steo/report/global_oil.php"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "EM Oil-Shock Stagflation & Central-Bank Divergence",
+        "why": "The Hormuz closure has delivered an exogenous stagflation shock to energy-importing EMs that is qualitatively different from the generic 'developing-world debt crisis' in s4. Countries like India, Vietnam, South Korea, Turkey, South Africa, and Kenya face simultaneously: (1) surging fuel import bills eroding current accounts and FX reserves; (2) inflationary pass-through forcing rate hikes that crowd out growth; (3) weakening currencies that amplify dollar-debt service costs. The World Bank has already cut EM per-capita growth to its weakest since the pandemic, citing Middle East conflict. This is a distinct, time-stamped shock with its own causal chain separate from s4's structural debt-sustainability framing.",
+        "proposed_level": 7,
+        "set": "Set 3",
+        "indicators": [
+          {
+            "label": "EM energy-importer current-account deterioration (# of major EMs with CA deficit widening >2pp YoY)",
+            "type": "band",
+            "rubric": "0 = 0-2 countries; 1 = 3-5 countries; 2 = 6+ countries experiencing significant CA widening driven by fuel import bills",
+            "sources": [
+              "https://www.worldbank.org/en/publication/global-economic-prospects"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "EM central bank emergency rate actions (# of EM central banks hiking >50bps in a single meeting in response to currency/inflation pressure)",
+            "type": "band",
+            "rubric": "0 = 0-1; 1 = 2-4 (isolated stress); 2 = 5+ (systemic divergence/crisis signal)",
+            "sources": [
+              "https://www.eia.gov/outlooks/steo/report/global_oil.php"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "EM fuel-subsidy fiscal cost shock (0 manageable / 1 straining budgets / 2 subsidy removal riots or IMF emergency talks)",
+            "type": "band",
+            "rubric": "Tracks whether governments can absorb higher fuel costs via subsidies without fiscal blowout or social unrest; escalation = subsidy removal triggering protests (as seen in prior oil shocks) or emergency IMF engagement",
+            "sources": [
+              "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
+              "https://www.worldbank.org/en/publication/global-economic-prospects"
+            ],
+            "suggested_weight": 0.35
+          }
+        ]
+      },
+      "rationale": "The existing s4 (developing-world debt) story tracks dollar strength, real yields, and IMF program counts \u2014 structural fiscal-sustainability metrics. The Hormuz shock is a distinct exogenous energy-price event creating a new, acute stagflation channel for EMs that operates on a shorter timescale and through a different causal mechanism (terms-of-trade shock \u2192 CA deterioration \u2192 currency pressure \u2192 rate hike \u2192 growth collapse). The World Bank has already flagged 'weakest EM per-capita growth since the pandemic' driven by Middle East conflict. This warrants a new story at level 7, reflecting that it is acute, cross-regional, and interacting with the existing debt story in amplifying ways.",
+      "status": "pending",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "sightings": 1,
+      "id": "hormuz-driven-stagflation-shock-creates-new-em-c-955dbc"
     }
   },
-  "generated": "2026-09-02",
+  "generated": "2026-09-03",
   "model": "claude-sonnet-4-6",
   "new_count": 6,
-  "pending_count": 203
+  "pending_count": 209
 }
