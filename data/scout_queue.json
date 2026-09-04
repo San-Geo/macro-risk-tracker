@@ -6773,10 +6773,206 @@
       "last_seen": "2026-09-03",
       "sightings": 1,
       "id": "hormuz-driven-stagflation-shock-creates-new-em-c-955dbc"
+    },
+    "hormuz-vessel-crossings-collapse-to-5-day-as-us--f5af63": {
+      "headline": "Hormuz vessel crossings collapse to ~5/day as US-Iran exchange fresh strikes (Sep 1\u20132, 2026)",
+      "summary": "US CENTCOM launched new strikes on IRGC facilities on September 1 after Iranian mining attempts; Iran retaliated with missiles targeting US bases in Jordan and Bahrain. Hormuz daily oil flows have fallen from ~20\u201321 mb/d pre-war to roughly 4.9 mb/d, with tanker crossings dropping from 23 last Wednesday to as few as 5 on Tuesday \u2014 the sharpest single-week deterioration since the conflict began in late February 2026. WTI surged above $95/bbl on a 4.6% single-day rally.",
+      "as_of": "2026-09-02",
+      "sources": [
+        "https://www.thenationalnews.com/business/energy/2026/09/02/oil-surges-above-95-on-renewed-us-iran-fighting-and-hormuz-disruption-concerns/",
+        "https://www.cnbc.com/2026/09/01/us-strikes-iran-after-new-hormuz-strait-shipping-attacks-centcom.html",
+        "https://www.karmactive.com/us-iran-escalation-september-2026-hormuz-oil-crisis-centcom-strikes/",
+        "https://www.cnn.com/2026/09/02/politics/latest-us-strikes-against-iran-marked-a-shift-in-strategy",
+        "https://www.cnbc.com/2026/09/02/us-iran-war-trump-hormuz-irgc-jordan-bahrain.html",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed) \u2192 upgrade to 2 (effectively closed for normal commerce); WTI crude \u2192 ~$95/bbl",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Hormuz throughput has collapsed from 20+ mb/d pre-war to 4.9 mb/d, vessel crossings are in single digits, two tankers reportedly struck naval mines on September 2, and the US military is now escorting convoys as wartime operations \u2014 this is textbook 's20_sea_lanes' territory. The WTI indicator should be updated to ~$95. Both quantitative indicators and the ordinal status flag need immediate upward revision. The development also cascades into s18_food_fertilizer (Hormuz fertilizer input disruption \u2192 flag 2), s13_insurance (war-risk premiums surging), and s2_japan (Japan is a major Gulf oil importer with record-high JGB yields already under pressure from energy import costs).",
+      "status": "pending",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "sightings": 1,
+      "id": "hormuz-vessel-crossings-collapse-to-5-day-as-us--f5af63"
+    },
+    "japan-10-year-jgb-yield-breaches-3-30-year-high--fd3a73": {
+      "headline": "Japan 10-year JGB yield breaches 3% (30-year high) as \u00a5143tn FY2027 budget requests hit record; BOJ signals imminent September hike",
+      "summary": "On September 1, Japan's 10-year JGB yield crossed 3.000% for the first time since 1996 \u2014 exactly the rate assumed in Japan's FY2026 debt-service budget \u2014 while government ministries submitted a record \u00a5143 trillion in FY2027 budget requests. BOJ Governor Ueda signalled a likely rate hike at the September 18 MPM, as the 2-year yield hit a 31-year high of 1.81% and the 30-year surged to a record 4.18%; Japan's assumed FY2027 debt-service rate has already been raised to 3.8%, implying ~\u00a536.6tn (\u2248$230bn) in annual debt-service costs.",
+      "as_of": "2026-09-03",
+      "sources": [
+        "https://www.universalassetowners.com/probability-desk/the-probability-desk-2026-09-01/",
+        "https://www.thestar.com.my/business/business-news/2026/08/31/japan-bond-auction-faces-scrutiny-as-yields-rise-government-budget-swells",
+        "https://www.japantimes.co.jp/business/2026/08/22/markets/japan-assumed-bond-interest-rate-38/",
+        "https://www.japantimes.co.jp/business/2026/08/26/economy/dept-servicing-costs-record/",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.cnbc.com/quotes/JP10Y"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield (%) \u2192 4.18% (record); Takaichi plan financing clarity \u2192 2 (disorderly: \u00a5143tn requests with no funding clarity on consumption-tax cut or growth strategy)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The 10-year JGB breaching 3% in a single session is the exact threshold the FY2026 budget was calibrated against; any further rise forces emergency supplementary funding. The 30-year at 4.18% and the FY2027 assumed rate rising to 3.8% (from 3.0%) directly drive the 'Takaichi plan financing clarity' indicator toward 2 (disorderly). Ueda's explicit hawkish signal for a September hike adds a carry-unwind risk dimension. The 30-year JGB yield indicator should be updated from whatever it was to 4.18%, and the ordinal financing-clarity flag should move to 2.",
+      "status": "pending",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "sightings": 1,
+      "id": "japan-10-year-jgb-yield-breaches-3-30-year-high--fd3a73"
+    },
+    "china-oct-2025-rare-earth-export-control-suspens-85b036": {
+      "headline": "China Oct-2025 rare-earth export-control suspension (MOFCOM No.70) approaching November 10, 2026 expiry with enforcement already intensifying",
+      "summary": "The November 2025 one-year pause on China's broadest rare-earth export restrictions \u2014 covering five additional rare earth elements, extraterritorial rules for overseas-made products with Chinese-origin inputs, and technology-transfer curbs \u2014 is now confirmed to expire on November 10, 2026, just 67 days away. Enforcement of existing controls has simultaneously intensified: foreign nationals have been detained in China on rare-earth smuggling charges, MOFCOM launched a public whistleblower mechanism for violations, and the January 2026 licensing catalogue update added samarium, gadolinium, and lutetium compounds.",
+      "as_of": "2026-09-03",
+      "sources": [
+        "https://rare-earth-mining.com/rare-earth-market-outlook-september-2026/",
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
+        "https://www.certivo.com/blog-details/china-rare-earth-export-controls-2026-what-new-licensing-rules-mean-for-manufacturers",
+        "https://www.clarkhill.com/news-events/news/china-hits-pause-on-rare-earth-export-controls-and-what-it-means-for-supply-chains/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed) \u2192 move from 0 to 1 (expiring: 67 days to Nov 10 deadline with no extension signalled); Rare-earth export license flow \u2192 1 (slowing: enforcement tightening, detentions, new whistleblower mechanism active)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The tracker's 'Nov-2025 pause status' indicator was presumably sitting at 0 (extended/stable). The 67-day countdown to November 10 with no diplomatic extension yet agreed \u2014 and enforcement actively tightening through detentions and the new public reporting mechanism \u2014 warrants moving to 1 (expiring). If the US-China tariff relationship deteriorates further (another Section 301 action was imposed July 23), the risk of lapsing to 2 is material before year-end. This is a time-sensitive trigger event the tracker must watch on a weekly basis now.",
+      "status": "pending",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "sightings": 1,
+      "id": "china-oct-2025-rare-earth-export-control-suspens-85b036"
+    },
+    "new-us-section-301-tariff-layers-on-china-goods--a51ac9": {
+      "headline": "New US Section 301 tariff layers on China goods (forced-labor, polysilicon, drones) stack on top of post-IEEPA baseline, raising effective China tariff rate",
+      "summary": "Following the US Supreme Court's February 2026 invalidation of IEEPA tariffs, the USTR imposed a new 12.5% Section 301 forced-labor tariff effective July 24, 2026, plus a 15% tariff on Chinese polysilicon and 25\u2013100% tariffs on drones in August 2026, layering new permanent tariffs onto the residual 34% base. A second Section 301 investigation into excess capacity in 60 countries (launched March 2026) remains ongoing and could generate another tariff tranche.",
+      "as_of": "2026-09-02",
+      "sources": [
+        "https://www.congress.gov/crs-product/IF12990",
+        "https://www.china-briefing.com/news/us-china-tariff-rates-2025/",
+        "https://www.wiley.law/trump-administration-tariff-tracker"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s5_china_deflation",
+      "target_indicator": "New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating) \u2192 2 (escalating: multiple new permanent tariff tranches in July\u2013August 2026 replacing IEEPA, plus ongoing capacity investigation)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The tariff/anti-dumping indicator for s5_china_deflation should move to 2 (escalating). The permanent replacement of IEEPA tariffs with new Section 301 grounds removes the legal uncertainty that previously capped these tariffs but also removes any judicial vulnerability, making them harder to reverse. For China PPI (already deflationary from domestic overcapacity), additional tariff pressure on exports reinforces the deflationary spillover risk. The excess-capacity investigation could expand coverage to 60 countries, a novel multilateral dimension.",
+      "status": "pending",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "sightings": 1,
+      "id": "new-us-section-301-tariff-layers-on-china-goods--a51ac9"
+    },
+    "japan-s-fy2027-debt-service-costs-to-hit-36-6tn--a15aff": {
+      "headline": "Japan's FY2027 debt-service costs to hit \u00a536.6tn (~$230bn) record \u2014 a new quantitative indicator gap in s2_japan",
+      "summary": "Japan's Ministry of Finance has raised the assumed long-term rate for FY2027 debt-service costing to 3.8% (a 29-year high), generating a record \u00a536.64 trillion debt-service request \u2014 roughly \u00a55.4 trillion above FY2026 \u2014 with total budget requests exceeding \u00a5130 trillion for the first time. The tracker's s2_japan story has no indicator tracking the absolute level of Japan's debt-service burden, which is now the single most direct transmission channel from rising JGB yields to fiscal stress.",
+      "as_of": "2026-08-26",
+      "sources": [
+        "https://www.japantimes.co.jp/business/2026/08/26/economy/dept-servicing-costs-record/",
+        "https://www.universalassetowners.com/probability-desk/the-probability-desk-2026-09-01/",
+        "https://www.japantimes.co.jp/business/2026/08/22/markets/japan-assumed-bond-interest-rate-38/"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japan annual debt-service cost (\u00a5 trn, MOF budget assumption)",
+        "type": "value",
+        "rubric": "MOF's official debt-service budget request/plan for the coming fiscal year, in \u00a5 trillion. FY2026 baseline: \u00a531.3tn. Alert threshold: \u2265\u00a535tn (yellow); \u2265\u00a538tn (red \u2014 implies assumed rate has overshot the fiscal 2027 3.8% ceiling or bond issuance must expand). Updated annually at budget submission (August\u2013December) and revised at supplementary budget.",
+        "sources": [
+          "https://www.japantimes.co.jp/business/2026/08/26/economy/dept-servicing-costs-record/",
+          "https://www.universalassetowners.com/probability-desk/the-probability-desk-2026-09-01/",
+          "https://www.cnbc.com/2026/05/25/japan-takaichi-19-billion-extra-budget-reassures-bond-issuance.html"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan indicators (USD/JPY, 30yr JGB yield, financing-clarity ordinal) capture market pricing but not the fiscal arithmetic feedback loop: as yields rise, MOF must raise its assumed rate, which mechanically increases the debt-service budget line, which increases bond issuance, which pushes yields higher. Tracking the MOF's own assumed rate and resulting debt-service cost in \u00a5 trillion adds the crucial fiscal-solvency dimension currently missing from the story. Current reading: \u00a536.6tn requested for FY2027 vs \u00a531.3tn in FY2026 \u2014 a 17% single-year jump.",
+      "status": "pending",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "sightings": 1,
+      "id": "japan-s-fy2027-debt-service-costs-to-hit-36-6tn--a15aff"
+    },
+    "us-iran-war-generates-a-new-energy-war-inflation-4596d8": {
+      "headline": "US-Iran war generates a new 'energy-war inflation' transmission channel not captured by existing sea-lanes or food indicators",
+      "summary": "The ongoing US-Iran conflict, now entering its seventh month, has created a structural 'energy-war inflation' channel: US diesel prices hit a record ~$5.85/gallon average, Hormuz LNG flows (19% of global LNG pre-war) have been severed alongside oil, and Asian fuel rationing has emerged in Gulf-dependent markets. This multi-commodity supply shock (oil + LNG + petrochemical feedstocks simultaneously) is materially distinct from a pure sea-lanes disruption and is not captured by any single existing indicator.",
+      "as_of": "2026-09-02",
+      "sources": [
+        "https://www.britannica.com/event/2026-Iran-war",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://www.karmactive.com/us-iran-escalation-september-2026-hormuz-oil-crisis-centcom-strikes/",
+        "https://www.congress.gov/crs-product/R45281"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Energy-war inflation & LNG supply fracture",
+        "why": "The 2026 US-Iran war has simultaneously severed ~75% of normal Hormuz oil throughput (from ~20 mb/d to ~4.9 mb/d) and eliminated ~19% of global LNG supply through the same chokepoint. Unlike a transient tanker dispute, this involves a state-level military conflict now in its seventh month with no diplomatic resolution visible. The combined oil+LNG+petrochemical shock is driving record US diesel prices ($5.85/gal), Asian fuel rationing, and a global bond sell-off as investors price persistent inflation \u2014 a transmission path that cuts across s20_sea_lanes (crude), s18_food_fertilizer (feedstocks), s2_japan (energy import costs), and s13_insurance (war-risk premiums) but is not holistically tracked. A dedicated story captures the duration, multi-commodity scope, and second-order inflation/fiscal effects of a prolonged Middle East energy war.",
+        "proposed_level": 9,
+        "set": "Set 4",
+        "indicators": [
+          {
+            "label": "Hormuz LNG flow (% of pre-war baseline, ~7.5bn cfd = 100%)",
+            "type": "value",
+            "rubric": "Percentage of pre-war LNG volumes (\u22487.5 billion cubic feet/day through Hormuz) still transiting. Source: Kpler / EIA weekly. 100% = normal; <50% = elevated risk; <25% = severe disruption (current: ~0\u201310% based on near-zero tanker crossings).",
+            "sources": [
+              "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+              "https://www.congress.gov/crs-product/R45281"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "US retail diesel price (USD/gal, EIA weekly)",
+            "type": "value",
+            "rubric": "EIA weekly national average retail diesel. Pre-war baseline ~$3.80; alert at >$5.00; red at >$6.00 (record $5.85 already hit in Sep 2026). Proxy for energy-war inflation pass-through to US economy.",
+            "sources": [
+              "https://www.britannica.com/event/2026-Iran-war"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "Gulf LNG alternative-route premium ($/MMBtu, spot vs. pre-war forward)",
+            "type": "value",
+            "rubric": "Spot LNG price premium in Asian markets attributable to Hormuz diversion vs. pre-conflict 12-month forward. Source: Platts / Argus. >$5/MMBtu = elevated; >$10/MMBtu = severe. Captures rerouting costs and supply scarcity simultaneously.",
+            "sources": [
+              "https://www.karmactive.com/us-iran-escalation-september-2026-hormuz-oil-crisis-centcom-strikes/"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "Diplomatic resolution horizon (0 active talks / 1 stalled / 2 no talks)",
+            "type": "band",
+            "rubric": "Ordinal assessment of US-Iran ceasefire/diplomatic track: 0 = active back-channel or formal talks under way; 1 = talks stalled but contact maintained; 2 = no diplomatic contact, active escalation (current: 2, as of Sep 2 CENTCOM strikes and IRGC retaliation pledge).",
+            "sources": [
+              "https://www.cnbc.com/2026/09/01/us-strikes-iran-after-new-hormuz-strait-shipping-attacks-centcom.html",
+              "https://www.axios.com/2026/09/02/iran-tankers-hormuz-attacks-oil"
+            ],
+            "suggested_weight": 0.2
+          }
+        ]
+      },
+      "rationale": "The existing s20_sea_lanes story uses WTI and a Hormuz open/contested/closed ordinal that does not distinguish between a temporary disruption and a months-long wartime chokepoint closure affecting both oil AND LNG \u2014 44% of global LNG goes through Hormuz. Nor does it track the domestic inflation pass-through (diesel at record highs) or the absence of any diplomatic resolution track. A dedicated 'Energy-war inflation & LNG supply fracture' story at level 9 captures the duration, multi-commodity breadth, and macroeconomic second-order effects (inflation persistence, central bank dilemmas, sovereign fiscal stress in energy-importing nations like Japan) that no existing story holistically monitors. This is arguably the single highest-severity new development of the past 7 days.",
+      "status": "pending",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "sightings": 1,
+      "id": "us-iran-war-generates-a-new-energy-war-inflation-4596d8"
     }
   },
-  "generated": "2026-09-03",
+  "generated": "2026-09-04",
   "model": "claude-sonnet-4-6",
   "new_count": 6,
-  "pending_count": 209
+  "pending_count": 215
 }
