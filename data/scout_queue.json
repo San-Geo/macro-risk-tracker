@@ -175,13 +175,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "Six months into the US-Israel war on Iran, Hormuz traffic has collapsed from ~100+ vessels/day to roughly 5-10, cutting Gulf crude exports by nearly half to ~9 million bpd. A simultaneous Houthi maritime embargo on Saudi Arabia in late July collapsed the Bab al-Mandeb workaround, leaving both major Middle East chokepoints effectively blocked\u2014the IEA has called this the biggest oil disruption on record.",
-      "as_of": "2026-08-28",
+      "summary": "As of August 31, QatarEnergy has extended force majeure on LNG deliveries to European and Asian customers into November, with cancellations also continuing into October for Pakistan and Bangladesh. LNG flows through the Strait of Hormuz remain effectively halted six months after the Iran war began, with Qatar having lost ~$24 billion in LNG sales and Ras Laffan facility repairs estimated to take 3\u20135 years.",
+      "as_of": "2026-08-31",
       "sources": [
-        "https://www.aljazeera.com/news/2026/8/27/how-a-95-percent-drop-in-hormuz-traffic-changed-global-shipping",
-        "https://www.thenationalnews.com/business/energy/2026/08/28/six-months-of-war-leaves-gulf-oil-trapped-between-two-chokepoints/",
-        "https://carraglobe.com/strait-of-hormuz-closure-2026/",
-        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+        "https://www.euronews.com/business/2026/08/31/qatarenergy-extends-lng-cancellations-into-november-as-hormuz-disruption-drags-on",
+        "https://oilprice.com/Latest-Energy-News/World-News/Qatar-Extends-Force-Majeure-as-Hormuz-Crisis-Still-Blocks-LNG-Traffic.html",
+        "https://ieefa.org/impact-middle-east-crisis-global-energy-markets",
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -189,22 +189,22 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Hormuz is now effectively closed (status = 2) and the Bab al-Mandeb workaround has collapsed simultaneously. Gulf crude exports are down 47% from pre-war levels. WTI crude has risen sharply above $100/bbl. This is the most severe update to s20_sea_lanes since the story was set; the dual-chokepoint blockage directly sets the WTI and Hormuz/Red Sea indicators to their worst readings. It also materially feeds s18_food_fertilizer (fertilizer inputs via Hormuz) and s1_basis_trade/s8_ai_capex via inflation and rate-path effects.",
+      "rationale": "The Hormuz/Red Sea status indicator should be reading 2 (closed) for LNG, though partially 1 (contested) for oil given some crude rerouting. The LNG closure is materially distinct and worsening: force majeure now extends into November, QatarEnergy has lost $24bn in LNG revenue, and Ras Laffan repairs have a 3\u20135 year timeline. This is the most consequential near-term update to s20_sea_lanes; WTI/crude indicator should also be updated to reflect current price levels. The partial oil-flow resumption vs. continued LNG blockage creates a bifurcated status that the existing 0/1/2 band may understate.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-01",
+      "last_seen": "2026-09-07",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 26
+      "sightings": 27
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "As of 2026-09-01, Japan's 10-year JGB yield has hit ~3.0%, its highest since 1996, driven by BOJ hawkishness, import-driven inflation, and fiscal expansion fears under PM Takaichi. The BOJ is widely expected to raise its policy rate to 1.25% at the September meeting, while USD/JPY remains near 159 despite a recent US-Japan coordinated FX intervention\u2014the first since 1998.",
-      "as_of": "2026-09-01",
+      "summary": "Japan's 10-year JGB yield rose to 2.92% on September 7, up 11bps over the past month and 135bps year-on-year, its highest level since 1996. Markets are increasingly pricing a BOJ rate hike as soon as September, driven by sticky inflation (BOJ FY2026 core CPI revised to 2.8%) and yen weakness pressure from the Takaichi administration, materially raising carry-trade unwind risk.",
+      "as_of": "2026-09-07",
       "sources": [
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/",
-        "https://langleyesquire.com/en/japanese-politics-updates-20260816/",
-        "https://asia.nikkei.com/business/markets/growing-expectations-for-faster-boj-rate-hikes-push-up-bond-yields"
+        "https://guardian-gold.com.au/market-updates/the-yens-long-fall/",
+        "https://www.investing.com/analysis/japans-bond-market-is-no-longer-stable-200679428",
+        "https://www.w1m.com/insights/the-yen-carry-trade-approaching-a-tipping-point/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -212,12 +212,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 10-year JGB at 3.0% (a 30-year high) and BOJ tightening acceleration are direct, material hits to s2_japan. Japanese investors have already sold $29.6bn of US Treasuries in Q1 2026, feeding back into s1_basis_trade and s20_sea_lanes via Treasury market function. A September rate hike could also sharply unwind remaining yen-funded carry trades. The Takaichi plan financing clarity indicator (FY27 budget requests just submitted with sharp aggregate spending increase) should move to '2 disorderly' given market's 'malicious yield rise' concern.",
+      "rationale": "The 10Y JGB at 2.92% (and the 30Y having touched record highs above 4% earlier in 2026) is a direct read on the core s2_japan indicator. The BOJ reducing monthly bond purchases from \u00a55.7tn (Aug 2024) to \u00a52.9tn (Q1 2026), three dissenting board members favoring hikes in April, and rising market expectations for a September hike all materially update the 30-year JGB yield and Takaichi financing clarity indicators. The 10Y-UST vs. JGB spread has narrowed to ~180bps (from ~360bps at start of 2025), increasing repatriation risk. Takaichi financing clarity should move to 1 (unclear) given expansionary fiscal pressure meeting rising yields.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-01",
+      "last_seen": "2026-09-07",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 20
+      "sightings": 21
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -896,24 +896,25 @@
     },
     "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec": {
       "headline": "Iran war energy shock drives Hormuz fertilizer disruption; Gulf fertilizer exports (especially Qatar LNG-linked urea) severely curtailed since March 2026",
-      "summary": "The simultaneous effective closure of both Hormuz (carrying ~20% of global LNG and fertilizer feedstock flows) and Bab al-Mandeb creates a direct supply shock to urea, ammonia, and natural gas-derived fertilizer inputs sourced from Gulf producers. Iraq, Kuwait, and Qatar\u2014almost entirely dependent on Hormuz for exports\u2014cannot reroute, cutting off fertilizer-producing nations from export markets and raising food-production input costs globally.",
-      "as_of": "2026-08-28",
+      "summary": "The IEEFA and WEF document that approximately one-third of global seaborne fertilizer trade and key feedstocks (sulfur, ammonia precursors) transit through the Strait of Hormuz, which has been disrupted since March 2026. With the disruption now extending into its seventh month, downstream food production costs for the 2027 crop cycle are increasingly at risk, particularly in South and Southeast Asia.",
+      "as_of": "2026-09-01",
       "sources": [
-        "https://www.thenationalnews.com/business/energy/2026/08/28/six-months-of-war-leaves-gulf-oil-trapped-between-two-chokepoints/",
-        "https://law.wisc.edu/newsletter/Law_Library/The_Strait_of_Hormuz_Critical_Ma_2026-03-13"
+        "https://ieefa.org/impact-middle-east-crisis-global-energy-markets",
+        "https://www.weforum.org/stories/2026/04/beyond-oil-lng-commodities-impacted-closure-hormuz-strait/",
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "existing_indicator",
       "target_story": "s18_food_fertilizer",
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s18_food_fertilizer story tracks Hormuz disruption to fertilizer inputs as a distinct indicator. The dual-chokepoint blockage now makes this indicator '2 cut': Qatar (world's largest LNG exporter and a major ammonia/urea producer), Iraq, and Kuwait have no viable alternative export routes. Saudi Aramco's Jazan refinery was struck by Houthis in August. This is a new, escalatory development from July (when the Bab al-Mandeb workaround collapsed) that fully activates the worst-case reading on this indicator. It compounds the food-price trend indicator toward '2 spiking' and is distinct enough from the primary s20_sea_lanes entry above to warrant its own triage entry.",
+      "rationale": "The s18_food_fertilizer story already tracks 'Hormuz/Gulf disruption to fertilizer inputs' as a band indicator. The IEEFA data confirms that the Strait of Hormuz carries one-third of global seaborne fertilizer trade and the disruption has been ongoing since March 2026 with no near-term resolution. This indicator should now be reading 2 (cut) rather than 1 (disrupted), given six months of sustained disruption, QatarEnergy force majeure extension into November, and Ras Laffan repair timelines of 3\u20135 years affecting ammonia/urea feedstock gas. This is a material update that directly threatens the 2027 planting-season fertilizer supply and downstream food prices \u2014 especially for import-dependent economies in South Asia and Sub-Saharan Africa.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-09-01",
+      "last_seen": "2026-09-07",
       "id": "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec",
-      "sightings": 11
+      "sightings": 12
     },
     "japan-s-energy-import-crisis-deepens-as-hormuz-c-e531e3": {
       "headline": "Japan's energy import crisis deepens as Hormuz closure compounds BOJ policy bind \u2014 new macro feedback loop not captured in existing indicators",
@@ -6969,10 +6970,130 @@
       "last_seen": "2026-09-04",
       "sightings": 1,
       "id": "us-iran-war-generates-a-new-energy-war-inflation-4596d8"
+    },
+    "gpif-holds-unusual-august-management-meeting-fue-e4003d": {
+      "headline": "GPIF Holds Unusual August Management Meeting, Fueling Speculation of Domestic Bond Reallocation Reversal",
+      "summary": "Japan's $1.9 trillion Government Pension Investment Fund convened a rare publicly-announced August management committee meeting (Aug 21, announced Aug 31), its first in seven years during a holiday month, reigniting speculation it may boost domestic JGB allocations \u2014 a potential reversal of its May 2026 move that cut domestic bonds to 18%. A shift back toward JGBs would reduce structural yen outflows and pull Japanese capital out of US Treasuries and global equities.",
+      "as_of": "2026-09-03",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-09-03/gpif-s-unusual-meeting-fuels-speculation-over-allocation-change",
+        "https://funds-europe.com/japan-govt-signals-greater-domestic-pension-allocation-to-japan/",
+        "https://newskalinova.com/japan-gpif-asset-allocation-shift-2026/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "GPIF domestic-bond reallocation status (0 stable-at-18% / 1 review-underway / 2 shift-announced)",
+        "type": "band",
+        "rubric": "0 = GPIF holds current 18% domestic-bond target with no review; 1 = formal review underway or management committee convened out of cycle (current: 1); 2 = new higher domestic-bond target publicly announced, implying UST/foreign-bond selling flow",
+        "sources": [
+          "https://www.bloomberg.com/news/articles/2026-09-03/gpif-s-unusual-meeting-fuels-speculation-over-allocation-change",
+          "https://funds-europe.com/japan-govt-signals-greater-domestic-pension-allocation-to-japan/"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "GPIF is the world's largest pension fund at ~\u00a5294 trillion; even a small reallocation back to JGBs could be a multi-trillion-yen market event, reducing demand for US Treasuries and amplifying yen appreciation \u2014 directly feeding s2_japan carry-trade risk. The existing story has no indicator tracking GPIF allocation posture, which is now actively in play given the unusual meeting and government pressure. Current band reading: 1 (review underway).",
+      "status": "pending",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "sightings": 1,
+      "id": "gpif-holds-unusual-august-management-meeting-fue-e4003d"
+    },
+    "global-lng-supply-structural-loss-ras-laffan-dam-d345fb": {
+      "headline": "Global LNG Supply Structural Loss: Ras Laffan Damage Creates Multi-Year Deficit Risk Not Captured by Existing Sea-Lanes Story",
+      "summary": "Damage to Qatar's Ras Laffan LNG facility (two of 14 production trains) from March 2026 Iranian strikes will take 3\u20135 years to repair, removing ~20% of pre-war global LNG supply on a structural basis. The IEA warns cumulative LNG supply losses of ~140 billion cubic metres between 2026\u20132030 cannot be offset by alternative producers in the near term, threatening European and Asian energy security through the decade.",
+      "as_of": "2026-09-01",
+      "sources": [
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+        "https://www.csis.org/analysis/battle-hormuz-will-reshape-global-lng-market",
+        "https://ieefa.org/impact-middle-east-crisis-global-energy-markets",
+        "https://www.euronews.com/business/2026/08/31/qatarenergy-extends-lng-cancellations-into-november-as-hormuz-disruption-drags-on"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Global LNG structural supply loss \u2014 Ras Laffan repair status (0 on-track / 1 delayed / 2 multi-year impairment confirmed)",
+        "type": "band",
+        "rubric": "0 = Ras Laffan damage assessed as repairable within 12 months or Hormuz reopened to LNG; 1 = repairs underway but timeline of 1\u20133 years with partial supply restoration; 2 = confirmed 3\u20135 year repair horizon with cumulative multi-year supply deficit (current: 2, per QatarEnergy and CSIS statements)",
+        "sources": [
+          "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+          "https://www.csis.org/analysis/battle-hormuz-will-reshape-global-lng-market",
+          "https://ieefa.org/impact-middle-east-crisis-global-energy-markets"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s20_sea_lanes story tracks Hormuz open/closed status and WTI crude, but has no indicator for structural (multi-year) LNG supply impairment. The Ras Laffan 3\u20135 year repair timeline is qualitatively different from a shipping disruption: it represents a permanent reduction in global LNG nameplate capacity through the late 2020s, with the IEA flagging 140 BCM of cumulative loss by 2030. This creates sustained inflation in global gas and electricity prices \u2014 especially for European and Asian importers \u2014 that is not captured by WTI crude alone and feeds into s18_food_fertilizer (gas-based fertilizer feedstock) and s10_france (European energy price pressure) as well.",
+      "status": "pending",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "sightings": 1,
+      "id": "global-lng-supply-structural-loss-ras-laffan-dam-d345fb"
+    },
+    "helium-supply-shock-persian-gulf-accounts-for-40-620901": {
+      "headline": "Helium Supply Shock: Persian Gulf Accounts for 40% of Global Helium, Now Disrupted \u2014 Semiconductor Manufacturing at Risk",
+      "summary": "The IEEFA highlights that approximately 40% of the world's helium \u2014 a critical, non-substitutable input for semiconductor lithography cooling and MRI machines \u2014 originates from the Persian Gulf, which has been severely disrupted since March 2026. This creates a supply vulnerability for chip fabs globally that is not currently tracked in any existing story or indicator.",
+      "as_of": "2026-09-01",
+      "sources": [
+        "https://ieefa.org/impact-middle-east-crisis-global-energy-markets",
+        "https://www.weforum.org/stories/2026/04/beyond-oil-lng-commodities-impacted-closure-hormuz-strait/"
+      ],
+      "materiality": "medium",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Helium & Critical Industrial Gas Chokepoint",
+        "why": "Helium is irreplaceable in semiconductor fab cooling (EUV lithography), MRI manufacturing, fiber-optic production, and space launches. ~40% of global supply comes from the Persian Gulf (Qatar, UAE) which has been disrupted since March 2026. Unlike oil, helium cannot be synthesized or easily substituted; shortages cause fab downtime. The Hormuz crisis has created a structural supply shock to a material that underpins the entire semiconductor supply chain \u2014 directly intersecting with s19_lithography (ASML chokepoint) but not captured there. A multi-year Persian Gulf impairment could trigger semiconductor supply constraints independent of Taiwan tensions.",
+        "proposed_level": 5,
+        "set": "Set 4",
+        "indicators": [
+          {
+            "label": "Persian Gulf helium supply disruption status (0 flowing / 1 reduced / 2 severely curtailed)",
+            "type": "band",
+            "rubric": "0 = Gulf helium exports at \u226590% of pre-war levels; 1 = 10\u201350% reduction in Gulf helium exports with spot price elevated; 2 = >50% reduction with confirmed fab/industrial impact and spot helium price >3x pre-war level (current: likely 1\u20132 given Hormuz disruption duration)",
+            "sources": [
+              "https://ieefa.org/impact-middle-east-crisis-global-energy-markets",
+              "https://www.weforum.org/stories/2026/04/beyond-oil-lng-commodities-impacted-closure-hormuz-strait/"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Helium spot price premium vs. pre-war baseline (x)",
+            "type": "value",
+            "rubric": "Track helium spot price (USD/mcf) relative to Feb 2026 baseline; >2x signals market stress; >4x signals acute shortage with potential fab impact",
+            "sources": [
+              "https://ieefa.org/impact-middle-east-crisis-global-energy-markets"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "Reported semiconductor fab helium-driven production curtailments (0 none / 1 isolated / 2 widespread)",
+            "type": "band",
+            "rubric": "0 = no reported curtailments; 1 = 1\u20133 fabs or fab lines report helium-related slowdowns; 2 = multiple major foundries (TSMC, Samsung, Intel) report output cuts tied to helium availability",
+            "sources": [
+              "https://ieefa.org/impact-middle-east-crisis-global-energy-markets"
+            ],
+            "suggested_weight": 0.25
+          }
+        ]
+      },
+      "rationale": "No existing story covers helium, yet it is a single-point-of-failure industrial gas for the semiconductor supply chain. The Persian Gulf concentration (~40% of global supply per IEEFA) combined with the ongoing Hormuz/Ras Laffan disruption creates a novel, material chokepoint risk. It intersects with s19_lithography (fab production risk) but is physically distinct from export controls or Taiwan tensions. At medium materiality now, but escalates to high if fab curtailments emerge. Proposed at level 5 given disruption is ongoing but fab impact not yet confirmed.",
+      "status": "pending",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "sightings": 1,
+      "id": "helium-supply-shock-persian-gulf-accounts-for-40-620901"
     }
   },
-  "generated": "2026-09-04",
+  "generated": "2026-09-07",
   "model": "claude-sonnet-4-6",
-  "new_count": 6,
-  "pending_count": 215
+  "new_count": 3,
+  "pending_count": 218
 }

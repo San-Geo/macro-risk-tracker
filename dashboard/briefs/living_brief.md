@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-09-04 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-09-07 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 7.1/10** — Set 1 5.8, Set 2 5.0, Set 3 4.5, Set 4 6.5, Set 5 5.5.
+**Overall risk 7.5/10** — Set 1 5.8, Set 2 5.0, Set 3 4.5, Set 4 6.5, Set 5 5.8.
 
 
 ## Set 1 — Funding & Leverage
@@ -139,7 +139,7 @@ Water is systematically underpriced yet essential to chip fabrication, agricultu
 
 *Indicators watched:* Drought in a chip/farm hub (0 none / 1 emerging / 2 acute), Key reservoir / basin stress (0 normal / 1 low / 2 critical), Transboundary water dispute escalation (0 calm / 1 tense / 2 crisis)
 
-### Food & fertilizer fragility — 6/10 (Elevated)
+### Food & fertilizer fragility — 7/10 (High)
 
 Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag.
 
