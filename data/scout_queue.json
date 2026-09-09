@@ -198,11 +198,12 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 30-year JGB yield reached 4.03% on September 7 \u2014 up 74bps year-on-year \u2014 while the 10-year yield hit near-30-year highs before easing to ~2.89% on carry-trade unwinding. Markets price a BOJ rate hike this month, and an unusual GPIF management meeting has fueled speculation the $2 trillion fund will raise its domestic bond target allocation.",
-      "as_of": "2026-09-07",
+      "summary": "Japan's 10-year JGB yield briefly broke through 3% this week \u2014 the highest since 1996 \u2014 before easing to ~2.88% on September 9, driven by Takaichi fiscal expansion fears and global yield contagion; the US 10-year traded around 4.8% and German/French yields hit multi-decade highs. Oxford Economics raised its end-2026 10y JGB forecast to 2.8% just in June, already surpassed.",
+      "as_of": "2026-09-09",
       "sources": [
-        "https://tradingeconomics.com/japan/30-year-bond-yield",
-        "https://tradingeconomics.com/japan/government-bond-yield"
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -210,12 +211,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "30yr JGB at 4.03% is a direct update to the s2_japan 30-year JGB yield indicator; it is 74bps above a year ago and signals the Takaichi-era fiscal premium is firmly embedded. The GPIF reallocation speculation is a secondary but important driver (potential large buyer entering at high yields) and the carry-trade unwind (yen strengthening, lower USD/JPY) also updates the USD/JPY indicator. Together these represent a material shift across all three s2 indicators this week.",
+      "rationale": "A 10-year JGB yield breaching 3% (levels unseen since 1996) directly stresses the s2_japan story across multiple dimensions: carry-trade unwind risk, BoJ policy dilemma, yen dynamics, and financing cost for Takaichi's expansion. The 30-year JGB yield indicator should be flagged as moving into stress territory. Cross-contaminates s1_basis_trade (MOVE index spiking) and s14_pensions (GPIF allocation stress).",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 22
+      "sightings": 23
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -7210,10 +7211,169 @@
       "last_seen": "2026-09-08",
       "sightings": 1,
       "id": "synchronized-developed-market-sovereign-bond-sel-5cab49"
+    },
+    "middle-east-re-escalation-us-iran-exchange-attac-69a9dc": {
+      "headline": "Middle East re-escalation: US-Iran exchange attacks, Saudi Aramco hit, WTI surges to 3-month high (~$93.85)",
+      "summary": "On September 9, 2026, the US and Iran exchanged direct attacks; Houthis struck Saudi Aramco oil facilities in Jazan while Brent crude surged to $97.50/bbl (a six-week high, ~40% above pre-war levels). Goldman Sachs warned prices could reach $120/bbl if shipping disruptions worsen, with the EIA projecting ~0.6mb/d in ongoing Hormuz disruptions through end-2026.",
+      "as_of": "2026-09-09",
+      "sources": [
+        "https://www.fxstreet.com/news/wti-oil-rises-as-middle-east-escalation-threatens-global-supply-202609091501",
+        "https://tradingeconomics.com/commodity/brent-crude-oil",
+        "https://www.eia.gov/outlooks/steo/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed) \u2014 move toward 2; WTI crude oil (CL=F) \u2014 ~$93.85",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Direct US-Iran kinetic exchange, Houthi strikes on Saudi Aramco, and Brent at $97.50 represent a material re-escalation of the Hormuz/Red Sea status indicator (pushing it toward '2 closed') and a sharp WTI spike. This is the dominant cross-asset risk event of the week, feeding directly into s20_sea_lanes' two price indicators and also pressuring s18_food_fertilizer (Hormuz/Gulf disruption to fertilizer inputs) and the global inflation backdrop.",
+      "status": "pending",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "sightings": 1,
+      "id": "middle-east-re-escalation-us-iran-exchange-attac-69a9dc"
+    },
+    "gpif-holds-unprecedented-august-management-meeti-0cd3e0": {
+      "headline": "GPIF holds unprecedented August management meeting, fueling speculation of major domestic-bond reallocation up to \u00a512.3 trillion",
+      "summary": "Japan's $2 trillion GPIF convened an unusual management committee meeting on August 21 \u2014 its first publicly announced August session in seven years \u2014 sparking market speculation of a strategic domestic bond allocation increase worth up to \u00a512.3T ($76B), following Finance Minister Katayama's July 10 call for pension funds to invest more in Japanese assets. A reallocation would require selling foreign bonds (notably US Treasuries), with significant cross-market implications.",
+      "as_of": "2026-09-03",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-09-03/gpif-s-unusual-meeting-fuels-speculation-over-allocation-change",
+        "https://www.japantimes.co.jp/business/2026/07/14/societe-generale-jgb-gpif/",
+        "https://funds-europe.com/japan-govt-signals-greater-domestic-pension-allocation-to-japan/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "GPIF domestic-bond reallocation signal (0 no change / 1 verbal guidance / 2 formal SAA shift)",
+        "type": "band",
+        "rubric": "0 = GPIF confirms no change to strategic asset allocation; 1 = Finance Ministry or GPIF management signals intent to raise domestic bond weighting without formal decision (current state); 2 = GPIF formally revises its strategic asset allocation benchmark to raise domestic bonds above 25%, triggering mandatory foreign-bond sales",
+        "sources": [
+          "https://www.bloomberg.com/news/articles/2026-09-03/gpif-s-unusual-meeting-fuels-speculation-over-allocation-change",
+          "https://www.japantimes.co.jp/business/2026/07/14/societe-generale-jgb-gpif/"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan story captures USD/JPY, 30y JGB yield, and Takaichi plan financing clarity \u2014 but has no indicator for the GPIF institutional-flow dimension, which is a distinct and material transmission channel. A formal GPIF SAA shift could force up to $76B in US Treasury sales, directly impacting s1_basis_trade and s12_gold_dedollar (de-dollarization). Currently at level 1 (verbal guidance). The unusual August meeting date makes this a near-term binary trigger.",
+      "status": "pending",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "sightings": 1,
+      "id": "gpif-holds-unprecedented-august-management-meeti-0cd3e0"
+    },
+    "global-sovereign-bond-sell-off-us-10y-at-4-8-ger-eb4a7a": {
+      "headline": "Global sovereign bond sell-off: US 10y at 4.8%, German and French yields at multi-decade highs, driven by energy inflation and fiscal fears",
+      "summary": "As of September 7, 2026, US 10-year Treasuries traded around 4.8%, German and French 10-year yields hit levels last seen in 2011 and 2008 respectively, and UK 30-year gilt yields remain near three-decade highs. The sell-off reflects higher oil prices reigniting inflation expectations, record government borrowing requirements, and demands for higher term premia \u2014 creating a cross-asset tightening that threatens equity valuations and corporate refinancing.",
+      "as_of": "2026-09-07",
+      "sources": [
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Sovereign term-premium repricing / global bond bear market",
+        "why": "A synchronized, multi-decade-high sovereign yield spike across the US, Europe, and Japan represents a distinct macro risk not fully captured by existing stories. It is driven by the confluence of energy-inflation shock (s20), fiscal expansion (s2, s10), and investor demands for higher compensation \u2014 and it feeds back into virtually every other risk story (private credit spreads, CRE refinancing walls, pension LDI stress, AI capex cost of capital, and EM debt sustainability). No single existing story captures the systemic 'term premium re-rating' dynamic as a standalone risk.",
+        "proposed_level": 7,
+        "set": 1,
+        "indicators": [
+          {
+            "label": "US 10-year Treasury yield (%)",
+            "type": "value",
+            "rubric": "Real-time benchmark for global risk-free rate; current ~4.8%; stress threshold >5.0%",
+            "sources": [
+              "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "G4 sovereign yield synchronicity (0 diverging / 1 correlated / 2 synchronized sell-off)",
+            "type": "band",
+            "rubric": "0 = yields moving independently; 1 = 3 of 4 G4 sovereigns (US/DE/UK/JP) at multi-year highs simultaneously; 2 = all 4 at multi-decade highs simultaneously with >50bp monthly moves (current state)",
+            "sources": [
+              "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "US 10-year term premium (ACM estimate, %)",
+            "type": "value",
+            "rubric": "NY Fed ACM model term premium; rising term premium signals structural shift from technical/policy-driven to fundamental repricing; stress >1.5%",
+            "sources": [
+              "https://www.newyorkfed.org/research/data_indicators/term-premia-on-us-treasury-securities"
+            ],
+            "suggested_weight": 0.35
+          }
+        ]
+      },
+      "rationale": "No existing story directly captures synchronized G4 sovereign yield repricing as a standalone systemic risk. While s1_basis_trade (MOVE index) and s2_japan (JGB yield) capture pieces, neither tracks the full cross-market contagion of multi-decade-high yields in US, Germany, France, and the UK simultaneously. This is a macro amplifier for at least 8 of the existing 21 stories and merits dedicated tracking.",
+      "status": "pending",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "sightings": 1,
+      "id": "global-sovereign-bond-sell-off-us-10y-at-4-8-ger-eb4a7a"
+    },
+    "china-enters-fourth-consecutive-year-of-deflatio-474aec": {
+      "headline": "China enters fourth consecutive year of deflation; CPI near zero, PPI deeply negative, record $1.2T trade surplus accelerates global export-deflation spillover",
+      "summary": "China's CPI remained near zero through 2026 (entering a fourth year of deflation) while factory-gate PPI deflation deepened to approximately -2.6% YoY as of late 2025 and continues negative; the 2025 trade surplus hit a record ~$1.2 trillion as domestic demand stayed moribund. The combination of entrenched deflation, a 50-80% collapse in property investment from peak, and 16.9% youth unemployment is intensifying global deflationary export pressure.",
+      "as_of": "2026-09-01",
+      "sources": [
+        "https://english.ckgsb.edu.cn/knowledge/article/china-economic-consolidation-and-strategic-shifts-in-2026/",
+        "https://statisticsoftheworld.com/blog/china-economy-2026-deflation-property-crisis",
+        "https://www.cnbc.com/2026/03/05/china-gdp-two-sessions-.html"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s5_china_deflation",
+      "target_indicator": "China PPI YoY (%) \u2014 deeply negative, worsening; USD/CNY (yuan depreciation = higher = risk)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "China's confirmed fourth year of deflation with record trade surplus directly triggers s5_china_deflation indicators: PPI YoY is deeply negative (large swing = worse per rubric), and the structural export-deflation spillover is accelerating global anti-dumping actions (raising the 'New tariff/anti-dumping actions' sub-indicator toward '2 escalating'). Also cross-contaminates s4_dev_debt (weaker commodity demand) and s16_copper (lower Chinese demand impulse).",
+      "status": "pending",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "sightings": 1,
+      "id": "china-enters-fourth-consecutive-year-of-deflatio-474aec"
+    },
+    "ldp-cabinet-reshuffle-risk-finance-minister-kata-3151b3": {
+      "headline": "LDP cabinet reshuffle risk: Finance Minister Katayama's survival uncertain, replacement could trigger yen sell-off and JGB bear-steepening",
+      "summary": "MUFG Research (Aug 17, 2026) flagged that a September LDP cabinet reshuffle could see fiscal-hawk Finance Minister Satsuki Katayama replaced, which markets view as the key guardrail against Takaichi's expansionary fiscal stance; her removal would likely accelerate yen weakness and prompt bear-steepening of the JGB curve. The BoJ is simultaneously expected to hike to 1.25% in September 2026.",
+      "as_of": "2026-08-17",
+      "sources": [
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/",
+        "https://tradingeconomics.com/japan/government-bond-yield"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japan fiscal-discipline guardrail (0 intact / 1 at risk / 2 lost)",
+        "type": "band",
+        "rubric": "0 = Finance Minister Katayama or equivalent fiscal hawk in post, BoJ on tightening path, primary balance target upheld; 1 = Cabinet reshuffle removes fiscal-hawk FM or primary balance target is formally deferred (current risk: level 1 approaching); 2 = FM replaced by fiscal-dove, Takaichi directly controls fiscal stance, BOJ forced to pause tightening to contain JGB blowup",
+        "sources": [
+          "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/",
+          "https://tradingeconomics.com/japan/government-bond-yield"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan story has 'Takaichi plan financing clarity' as an indicator but no indicator specifically tracking the political-institutional guardrail \u2014 i.e., whether the fiscal-hawk Finance Minister Katayama remains in post. MUFG explicitly identifies this as the key near-term binary trigger for a yen/JGB blow-up. This is distinct from general financing clarity and captures the personnel/political dimension of the fiscal risk.",
+      "status": "pending",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "sightings": 1,
+      "id": "ldp-cabinet-reshuffle-risk-finance-minister-kata-3151b3"
     }
   },
-  "generated": "2026-09-08",
+  "generated": "2026-09-09",
   "model": "claude-sonnet-4-6",
-  "new_count": 3,
-  "pending_count": 221
+  "new_count": 5,
+  "pending_count": 226
 }
