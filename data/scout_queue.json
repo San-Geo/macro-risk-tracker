@@ -175,12 +175,11 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "As of August 31, QatarEnergy has extended force majeure on LNG deliveries to European and Asian customers into November, with cancellations also continuing into October for Pakistan and Bangladesh. LNG flows through the Strait of Hormuz remain effectively halted six months after the Iran war began, with Qatar having lost ~$24 billion in LNG sales and Ras Laffan facility repairs estimated to take 3\u20135 years.",
-      "as_of": "2026-08-31",
+      "summary": "The EIA's September 9 STEO confirms Middle East crude exports remain constrained, with Brent averaging $91/bbl in August (+$7/bbl vs July) and global inventories drawing at 3.0 million b/d in Q3-2026. The EIA expects elevated prices (~$90/bbl average H2-2026) as shippers use bypass routes, with normalisation not expected until mid-2027 when UAE pipeline capacity comes online.",
+      "as_of": "2026-09-09",
       "sources": [
-        "https://www.euronews.com/business/2026/08/31/qatarenergy-extends-lng-cancellations-into-november-as-hormuz-disruption-drags-on",
-        "https://oilprice.com/Latest-Energy-News/World-News/Qatar-Extends-Force-Majeure-as-Hormuz-Crisis-Still-Blocks-LNG-Traffic.html",
-        "https://ieefa.org/impact-middle-east-crisis-global-energy-markets",
+        "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+        "https://www.aljazeera.com/economy/2026/9/7/oil-prices-surge-as-us-iran-strikes-intensify-in-strait-of-hormuz",
         "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"
       ],
       "materiality": "high",
@@ -189,21 +188,22 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz/Red Sea status indicator should be reading 2 (closed) for LNG, though partially 1 (contested) for oil given some crude rerouting. The LNG closure is materially distinct and worsening: force majeure now extends into November, QatarEnergy has lost $24bn in LNG revenue, and Ras Laffan repairs have a 3\u20135 year timeline. This is the most consequential near-term update to s20_sea_lanes; WTI/crude indicator should also be updated to reflect current price levels. The partial oil-flow resumption vs. continued LNG blockage creates a bifurcated status that the existing 0/1/2 band may understate.",
+      "rationale": "The Hormuz status indicator is the most directly relevant. Status should be coded 1 (contested) given shippers are using workarounds but the strait is not fully normalised and US-Iran strikes are actively ongoing per Al Jazeera (September 7). WTI indicator also needs updating (~$88\u201391/bbl range). The energy shock cross-links materially to s18_food_fertilizer (fertilizer input costs), s15_ai_power (energy cost for data centres), and the global bond rout in s1/s2.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-10",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 27
+      "sightings": 28
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 10-year JGB yield briefly broke through 3% this week \u2014 the highest since 1996 \u2014 before easing to ~2.88% on September 9, driven by Takaichi fiscal expansion fears and global yield contagion; the US 10-year traded around 4.8% and German/French yields hit multi-decade highs. Oxford Economics raised its end-2026 10y JGB forecast to 2.8% just in June, already surpassed.",
-      "as_of": "2026-09-09",
+      "summary": "Japan's 10-year JGB yield cleared 3% on September 1 for the first time since 1996, while the BOJ is widely expected to hike its policy rate to 1.25% at its meeting next week\u2014its highest since 1995. PM Takaichi's own economic adviser has pivoted to endorsing consecutive hikes, and Japan spent \u00a515.4 trillion in late July\u2013August defending the yen, signalling forced Treasury selling that is already feeding the global bond rout.",
+      "as_of": "2026-09-10",
       "sources": [
-        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/",
+        "https://www.fxstreet.com/news/nobody-has-unwound-the-japanese-yen-carry-trade-yet-202609071701",
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
+        "https://www.forbes.com/sites/investor-hub/article/how-japan-bond-market-affects-your-portfolio/",
+        "https://guardian-gold.com.au/market-updates/the-yens-long-fall/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -211,12 +211,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "A 10-year JGB yield breaching 3% (levels unseen since 1996) directly stresses the s2_japan story across multiple dimensions: carry-trade unwind risk, BoJ policy dilemma, yen dynamics, and financing cost for Takaichi's expansion. The 30-year JGB yield indicator should be flagged as moving into stress territory. Cross-contaminates s1_basis_trade (MOVE index spiking) and s14_pensions (GPIF allocation stress).",
+      "rationale": "The 10-year JGB punching through 3% (a 30-year milestone) combined with an imminent BOJ hike and Takaichi's adviser endorsing consecutive hikes is a step-change escalation for s2_japan. The 30-year JGB yield indicator in the tracker should be updated to reflect multi-decade highs; the forced Treasury selling to defend the yen also directly feeds s1_basis_trade MOVE and s21_clearinghouses. Takaichi plan financing clarity should move to 1 (unclear) given the rate-hike cadence debate. Existing story and indicators fully capture this; no new story needed, but the indicator readings are materially changed.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-09",
+      "last_seen": "2026-09-10",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 23
+      "sightings": 24
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -1364,23 +1364,23 @@
     },
     "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9": {
       "headline": "China PPI Surges to +3.9% YoY in May (3rd Consecutive Monthly Rise, Fastest Since July 2022) Driven by Iran-War Energy Spike",
-      "summary": "China's PPI hit -3.6% YoY in June 2026, the steepest fall since July 2023, driven by weak domestic demand and tariff uncertainty, before easing marginally in July. The Hormuz energy shock now creates a contradictory cost-push on energy inputs while excess industrial capacity keeps goods prices deflationary \u2014 a destabilizing divergence for global pricing.",
-      "as_of": "2026-09-08",
+      "summary": "China's National Bureau of Statistics reported on September 9 that August PPI rose +3.8% year-on-year (vs. months of factory-gate deflation), driven by surging energy prices from the Iran war. CPI also beat at +0.8% YoY. This is a sharp directional reversal that flips the deflation/cost-push indicator in s5_china_deflation from one extreme to the other.",
+      "as_of": "2026-09-09",
       "sources": [
-        "https://www.fxstreet.com/amp/analysis/chinas-ppi-slides-australian-dollar-steady-202507091232",
+        "https://www.vantagemarkets.com/market-news/china-cpi-ppi-august-energy-prices-september-9-2026/",
         "https://www.investing.com/economic-calendar/chinese-ppi-464"
       ],
-      "materiality": "medium",
+      "materiality": "high",
       "classification": "existing_indicator",
       "target_story": "s5_china_deflation",
       "target_indicator": "China PPI YoY (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The -3.6% PPI print (June 2026) is a material worsening on the s5_china_deflation PPI indicator, extending a 33-month run of factory-gate deflation to its deepest since July 2023. The Hormuz energy shock adds a new cross-story complication: China faces deflationary goods prices but rising imported energy costs, which could force Beijing to accelerate currency depreciation or export dumping \u2014 amplifying the s5 'cost-push' risk variant tracked by the USD/CNY and tariff action indicators.",
+      "rationale": "The s5_china_deflation tracker explicitly notes 'large swing either way is worse' for China PPI. A swing from deeply negative PPI (\u22122 to \u22123% range earlier in 2025\u201326) to +3.8% YoY in a single print is precisely the kind of bi-directional shock the indicator is designed to flag. The reversal is energy-driven (Iran war spillover) rather than demand-led, meaning it could compress Chinese manufacturing margins while export competition intensifies\u2014a stagflationary export-cost-push risk for trading partners. Indicator reading should move to the cost-push risk quadrant; New tariff/anti-dumping actions remain elevated.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-09-08",
-      "sightings": 11,
+      "last_seen": "2026-09-10",
+      "sightings": 12,
       "id": "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9"
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
@@ -5945,12 +5945,11 @@
     },
     "big-tech-bond-issuance-tops-194bn-in-2026-as-ai--01d4e8": {
       "headline": "Big Tech bond issuance tops $194bn in 2026 as AI capex financing collides with 30-year yield at 19-year highs; refinancing stress emerging",
-      "summary": "Amazon, Alphabet, Meta, and Oracle have collectively issued ~$194bn in bonds in 2026 to fund AI infrastructure, adding significant crowding pressure to a US IG market already stressed by long-dated yields at 5.34% (30-year) \u2014 levels that directly raise the hurdle rate for GPU-backed and data-center debt. The Treasury's emergency buyback intervention was itself partly attributed by analysts to the 'AI-related corporate financing needs' overwhelming the long end.",
-      "as_of": "2026-08-22",
+      "summary": "AI companies have issued more than $1.5 trillion in new corporate bonds in 2026 YTD, a primary driver cited by TradingEconomics and WEF for the surge in long-end Treasury yields. This record supply, alongside an energy-driven inflation shock, is simultaneously tightening financial conditions across the economy and raising the spectre of GPU-backed debt refinancing stress as borrowing costs rise.",
+      "as_of": "2026-09-10",
       "sources": [
-        "https://rareearthexchanges.com/news/treasury-yields-rare-earth-supply-chain/",
-        "https://www.fxstreet.com/news/japanese-yen-jgb-spillover-supports-firmer-jpy-against-us-dollar-ocbc-202608190625",
-        "https://basispoint.net/economy-insights/treasury-bond-buyback-dollar-weakness-gold-rally-bessent-2026"
+        "https://tradingeconomics.com/united-states/government-bond-yield",
+        "https://www.weforum.org/stories/financial-and-monetary-systems/why-global-bond-market-treasury-yields/"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -5958,11 +5957,11 @@
       "target_indicator": "GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The $194bn of Big Tech bond issuance in 2026, colliding with 30-year yields at 5.34%, directly upgrades the s8_ai_capex 'GPU-backed debt refinancing stress' indicator from 0 toward 1 (signs of stress). OCBC strategists explicitly cited 'AI-related corporate financing needs' as a structural driver of the US long-end yield blowout, linking s8 and s1 in a feedback loop. The US IG OAS indicator in s8 should also be refreshed. This moves from background noise to material given the Treasury's emergency intervention.",
+      "rationale": "The s8_ai_capex story tracks AI capex circular financing risk. Record $1.5T+ in AI-company bond issuance in 2026 YTD (cited by multiple credible sources as a material driver of the Treasury yield surge) directly updates both 'AI capex-vs-revenue gap concern' (widening fast as debt grows) and 'GPU-backed debt refinancing stress' (should move from 0 to 1\u2014signs\u2014given that rising yields at 4.85% 10-year increase refinancing cost for this debt). The US investment-grade OAS proxy indicator should also be reviewed upward. This is already in scope for s8 but the quantum ($1.5T+) is new and material.",
       "status": "pending",
       "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "sightings": 1,
+      "last_seen": "2026-09-10",
+      "sightings": 2,
       "id": "big-tech-bond-issuance-tops-194bn-in-2026-as-ai--01d4e8"
     },
     "us-30-year-yield-at-5-34-19-year-high-prompts-tr-e44fb9": {
@@ -7370,10 +7369,102 @@
       "last_seen": "2026-09-09",
       "sightings": 1,
       "id": "ldp-cabinet-reshuffle-risk-finance-minister-kata-3151b3"
+    },
+    "global-sovereign-bond-rout-us-10-year-hits-4-85--bbd9a4": {
+      "headline": "Global Sovereign Bond Rout: US 10-Year Hits 4.85% (3-Year High); Treasury Tripling Buybacks to Suppress Long-End",
+      "summary": "The US 10-year Treasury yield hit 4.85% on September 9\u2014its highest since October 2023\u2014driven by energy-inflation spillover from the Iran war, record AI-sector corporate issuance (>$1.5 trillion new bonds YTD), and Japan's forced Treasury selling to defend the yen. The Treasury Department has tripled buybacks to $6 billion to suppress long-end yields, a manoeuvre that itself signals dysfunction.",
+      "as_of": "2026-09-10",
+      "sources": [
+        "https://tradingeconomics.com/united-states/government-bond-yield",
+        "https://www.cnbc.com/2026/09/03/global-bond-yields-rising-treasuries-jgb-bunds.html",
+        "https://www.cnbc.com/2026/09/04/global-bond-selloff-inflation-risk.html",
+        "https://www.weforum.org/stories/financial-and-monetary-systems/why-global-bond-market-treasury-yields/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US 10y Treasury yield (%)",
+        "type": "value",
+        "rubric": "Tracks 10-year UST yield as a direct input to basis-trade stress and broader financial-conditions tightening; readings above 4.5% are elevated, above 5% are acute stress territory for leveraged basis positions and clearinghouse margin calls",
+        "sources": [
+          "https://tradingeconomics.com/united-states/government-bond-yield",
+          "https://www.cnbc.com/2026/09/03/global-bond-yields-rising-treasuries-jgb-bunds.html"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The s1_basis_trade story monitors SOFR-EFFR spread and MOVE index but has no explicit level indicator for outright Treasury yields\u2014the primary driver of margin calls and basis-trade unwinds. At 4.85% (3-year high), with the Treasury resorting to emergency-scale buybacks, this is a direct and material gap. Record corporate bond supply from AI issuers (>$1.5T, per WEF/TradingEconomics) is simultaneously a s8_ai_capex indicator update, but the sovereign yield itself belongs in s1.",
+      "status": "pending",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
+      "sightings": 1,
+      "id": "global-sovereign-bond-rout-us-10-year-hits-4-85--bbd9a4"
+    },
+    "qatar-lng-capacity-loss-structurally-unresolved--c28e52": {
+      "headline": "Qatar LNG Capacity Loss Structurally Unresolved: Fitch Removes Negative Watch but 17% Export Capacity Offline for 3\u20135 Years",
+      "summary": "Fitch Ratings this week removed Qatar from Rating Watch Negative, citing reduced risk of further LNG facility damage, but affirmed a Negative outlook and forecasts Qatar's economy to contract 19% in 2026. Damage to Ras Laffan (12.8 Mt/year capacity) from March Iranian strikes will take 3\u20135 years to repair, with QatarEnergy force majeure extended through at least early September on Italian and other contracts.",
+      "as_of": "2026-09-08",
+      "sources": [
+        "https://www.agbi.com/economy/2026/09/fitch-backs-qatars-recovery-with-easing-lng-disruption-fears/",
+        "https://cryptobriefing.com/qatar-largest-quarterly-budget-deficit-decade/",
+        "https://www.cnbc.com/2026/07/01/qatarenergy-extend-force-majeure-september-italys-edison-iran-war-.html",
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Global LNG structural supply deficit (Qatar / Gulf shock)",
+        "why": "The 2026 Iran war has permanently destroyed ~17% of Qatar's LNG export capacity (12.8 Mt/yr) for 3\u20135 years, removing roughly 4% of total global LNG supply from a single supplier. This is not a temporary disruption but a structural multi-year supply hole affecting European and Asian importers that must now compete on the spot market. The IEA projects a cumulative loss of ~140 bcm of LNG supply through 2030. Unlike oil, LNG infrastructure cannot be rapidly sourced from elsewhere\u2014new US/Australian liquefaction capacity takes years to commission. This creates persistent energy-cost inflation for industry (especially fertilisers, chemicals, power generation) and strategic energy-security risk for LNG-dependent economies (Germany, Japan, South Korea, Italy). Existing stories s20_sea_lanes captures Hormuz status but not the multi-year structural LNG capacity destruction; s18_food_fertilizer captures fertilizer inputs but not the LNG supply architecture.",
+        "proposed_level": 7,
+        "set": "Set 5",
+        "indicators": [
+          {
+            "label": "Qatar/Gulf LNG force majeure status (0 lifted / 1 partial / 2 full)",
+            "type": "band",
+            "rubric": "0 = force majeure lifted, exports resuming toward pre-war levels; 1 = partial force majeure in effect, some cargoes withheld; 2 = full force majeure, major buyers fully redirected to spot market",
+            "sources": [
+              "https://www.cnbc.com/2026/07/01/qatarenergy-extend-force-majeure-september-italys-edison-iran-war-.html",
+              "https://www.agbi.com/economy/2026/09/fitch-backs-qatars-recovery-with-easing-lng-disruption-fears/"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Global LNG spot price benchmark (USD/MMBtu, TTF or JKM)",
+            "type": "value",
+            "rubric": "Tracks European (TTF) or Asian (JKM) LNG spot price as a real-time signal of supply tightness; sustained readings above $15/MMBtu signal acute stress for gas-dependent industry and power sectors",
+            "sources": [
+              "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+              "https://www.eia.gov/outlooks/steo/report/global_oil.php"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "European/Asian LNG import diversion stress (0 manageable / 1 elevated / 2 crisis)",
+            "type": "band",
+            "rubric": "0 = replacement supply secured, storage adequate; 1 = partial replacement, spot competition elevated, industrial demand rationing beginning; 2 = systemic shortfall, government emergency measures, industrial curtailments",
+            "sources": [
+              "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+              "https://www.agbi.com/economy/2026/09/fitch-backs-qatars-recovery-with-easing-lng-disruption-fears/"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "No existing story captures the structural, multi-year LNG supply destruction from the Qatar Ras Laffan damage. s20_sea_lanes tracks Hormuz flow (open/contested/closed) but not the permanent capacity loss that persists even when the strait is navigable. The IEA's projection of 140 bcm cumulative loss through 2030 is material enough to warrant a standalone story. Fitch's September 2026 action (rating watch removed but negative outlook kept, \u221219% GDP forecast) is a credible, current-week anchor for this risk.",
+      "status": "pending",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
+      "sightings": 1,
+      "id": "qatar-lng-capacity-loss-structurally-unresolved--c28e52"
     }
   },
-  "generated": "2026-09-09",
+  "generated": "2026-09-10",
   "model": "claude-sonnet-4-6",
-  "new_count": 5,
-  "pending_count": 226
+  "new_count": 2,
+  "pending_count": 228
 }
