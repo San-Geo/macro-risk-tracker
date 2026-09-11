@@ -197,13 +197,13 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 10-year JGB yield cleared 3% on September 1 for the first time since 1996, while the BOJ is widely expected to hike its policy rate to 1.25% at its meeting next week\u2014its highest since 1995. PM Takaichi's own economic adviser has pivoted to endorsing consecutive hikes, and Japan spent \u00a515.4 trillion in late July\u2013August defending the yen, signalling forced Treasury selling that is already feeding the global bond rout.",
+      "summary": "Japan's 10-year JGB yield pierced 3% in early September, a 30-year high, driven by carry-trade unwinding, yen repatriation, and energy-driven inflation from the Iran war. The BOJ is widely expected to raise its policy rate to 1.25% \u2014 the highest since ~1995 \u2014 at its next meeting, while the Takaichi administration faces mounting criticism over fiscal expansion financing.",
       "as_of": "2026-09-10",
       "sources": [
-        "https://www.fxstreet.com/news/nobody-has-unwound-the-japanese-yen-carry-trade-yet-202609071701",
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.forbes.com/sites/investor-hub/article/how-japan-bond-market-affects-your-portfolio/",
-        "https://guardian-gold.com.au/market-updates/the-yens-long-fall/"
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/",
+        "https://www.indmoney.com/blog/us-stocks/global-bond-market-selloff",
+        "https://www.archynewsy.com/global-bond-yields-surge-amid-inflation-fears-and-fiscal-uncertainty/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -211,12 +211,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 10-year JGB punching through 3% (a 30-year milestone) combined with an imminent BOJ hike and Takaichi's adviser endorsing consecutive hikes is a step-change escalation for s2_japan. The 30-year JGB yield indicator in the tracker should be updated to reflect multi-decade highs; the forced Treasury selling to defend the yen also directly feeds s1_basis_trade MOVE and s21_clearinghouses. Takaichi plan financing clarity should move to 1 (unclear) given the rate-hike cadence debate. Existing story and indicators fully capture this; no new story needed, but the indicator readings are materially changed.",
+      "rationale": "The 10-year JGB at 3%+ (30-year high) and an imminent hike to 1.25% are directly captured by the s2_japan story. The 30-year JGB yield should be updated (it hit 3.89% in January 2026 and has been elevated since). The Takaichi plan financing clarity indicator should be moved to 1 (unclear) or 2 (disorderly) given analyst warnings that the 3% 10-year level acts as a market forcing function on fiscal plans. Carry-trade unwinding pressure also feeds into USD/JPY (yen has strengthened to near 7-month highs), moving that indicator toward risk-on compression.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-09-11",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 24
+      "sightings": 25
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -502,12 +502,13 @@
     },
     "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
       "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
-      "summary": "Renewed fighting in July\u2013August 2026, following a brief June ceasefire, has kept Hormuz ship traffic near-zero; the IEA labels it 'the greatest threat to global energy security in history,' with global oil output down ~10 mb/d from March. WTI/Brent remain acutely elevated, directly registering in s20_sea_lanes indicators.",
-      "as_of": "2026-09-07",
+      "summary": "A 60-day US-Iran ceasefire lapsed in mid-August without a deal; fighting resumed with tit-for-tat tanker and warship strikes in the Strait of Hormuz, pushing Brent above $101/bbl by Sept 9 and Goldman Sachs warning of a >$120 scenario if attacks persist. Iran has threatened to strike energy infrastructure across the region, and Trump advisers privately warn the conflict could drag through the remainder of his term.",
+      "as_of": "2026-09-10",
       "sources": [
-        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
-        "https://blogs.worldbank.org/en/opendata/strait-of-hormuz-disruption-sends-oil-prices-surging",
-        "https://www.brookings.edu/articles/from-chokepoint-to-crisis-the-strait-of-hormuz-and-global-oil-markets/"
+        "https://www.cnbc.com/2026/09/09/oil-prices-today-wti-brent-us-iran-hormuz-attacks.html",
+        "https://www.cnbc.com/2026/09/10/iran-US-oil-hormuz-supply-trump-military-brent-wti.html",
+        "https://finance.yahoo.com/energy/articles/oil-extends-gains-us-iran-001532615.html",
+        "https://www.aljazeera.com/economy/2026/9/1/oil-prices-climb-as-us-iranian-attacks-stoke-fears-of-escalation"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -515,12 +516,12 @@
       "target_indicator": "Hormuz/Red Sea status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "IEA and World Bank confirm the Hormuz Strait remains effectively closed (contested \u2192 approaching closed) as of late August 2026, with renewed hostilities after the June ceasefire collapsing. This directly reads as a '2' (closed) on the Hormuz/Red Sea status ordinal indicator and drives WTI crude sharply higher \u2014 both core s20 indicators. Materiality is high given ~20% of global oil and ~20% of LNG normally transits this chokepoint.",
+      "rationale": "This is a direct, high-materiality update to s20_sea_lanes. The Hormuz/Red Sea status indicator should move from 1 (contested) toward 2 (effectively contested/partially closed): a 60-day truce has lapsed, tanker strikes are deliberate, and Brent has broken $101 \u2014 well above the existing WTI CL=F proxy level. The WTI/Brent indicator also needs an upward revision to ~$97\u2013101/bbl range. The conflict is now in its seventh month with no resolution timeline, and Goldman Sachs estimates a >$120/bbl tail risk \u2014 material for inflation, sovereign yields, and emerging-market fuel-import costs globally.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-11",
       "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
-      "sightings": 12
+      "sightings": 13
     },
     "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
       "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
@@ -2010,23 +2011,24 @@
     },
     "bank-of-england-governor-bailey-flags-rising-lev-fa9fc2": {
       "headline": "Bank of England Governor Bailey flags rising leverage in core government bonds, equity markets and private credit at Sintra as potential tail-risk-to-systemic-risk pipeline",
-      "summary": "At the ECB Sintra forum (July 1), BoE Governor Andrew Bailey publicly flagged growing leverage in core government bond markets, hedge fund equity leverage, ETF leverage, and private credit\u2014explicitly asking whether these tail risks could 'move into a broader consequence.' This comes as the BIS Annual Economic Report (late June) independently flagged NBFI leverage and rising public debt as two of three key global financial stability vulnerabilities.",
-      "as_of": "2026-07-01",
+      "summary": "The US 30-year Treasury yield at 5.25% and 10-year at 4.80% (as of Sept 8), alongside the US Treasury announcing emergency debt buybacks to cap yields, signals heightened Treasury market stress that raises the probability of basis-trade leverage unwinds. The WEF noted record government and corporate borrowing in 2026 is colliding with weakening long-duration demand.",
+      "as_of": "2026-09-08",
       "sources": [
-        "https://www.cnbc.com/2026/07/01/kevin-warsh-ecb-forum-live-updates.html",
-        "https://www.investing.com/analysis/bis-highlights-3-key-risks-to-global-financial-stability-200683182"
+        "https://www.indmoney.com/blog/us-stocks/global-bond-market-selloff",
+        "https://www.weforum.org/stories/financial-and-monetary-systems/why-global-bond-market-treasury-yields/",
+        "https://www.cnbc.com/2026/09/04/global-bond-selloff-inflation-risk.html"
       ],
-      "materiality": "medium",
+      "materiality": "high",
       "classification": "existing_indicator",
       "target_story": "s1_basis_trade",
       "target_indicator": "MOVE index (Treasury volatility)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Bailey's explicit public warning about leverage in core government bond markets maps directly onto s1 (Treasury basis trade / hidden leverage) and s3 (private credit). The fact that both the BoE Governor and the BIS\u2014within the same week\u2014are naming the same NBFI/leverage cluster as a systemic tail risk elevates the signal-to-noise ratio significantly. The MOVE index is the existing indicator best placed to reflect stress materializing in this channel. This also reinforces s3's 'large-fund redemption gates' indicator given Bailey's specific call-out of private credit as a candidate for tail-to-systemic contagion.",
+      "rationale": "The synchronized global sovereign selloff directly stresses s1_basis_trade. The MOVE index (Treasury volatility) should be updated upward given the US 30-year hitting 5.25% and emergency Treasury buybacks being deployed \u2014 a step not taken since COVID. The SOFR-EFFR spread should be checked for signs of repo stress. The SEC central clearing rollout indicator is also relevant: a period of acute Treasury volatility is precisely the scenario where clearing-margin requirements could trigger forced deleveraging of basis trades. This links directly to s21_clearinghouses as well (MOVE and Treasury-clearing rollout stress). Tagging to s1_basis_trade MOVE as primary indicator.",
       "status": "pending",
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05",
-      "sightings": 1,
+      "last_seen": "2026-09-11",
+      "sightings": 2,
       "id": "bank-of-england-governor-bailey-flags-rising-lev-fa9fc2"
     },
     "us-china-tariff-regime-restructured-post-supreme-6aede7": {
@@ -7461,10 +7463,97 @@
       "last_seen": "2026-09-10",
       "sightings": 1,
       "id": "qatar-lng-capacity-loss-structurally-unresolved--c28e52"
+    },
+    "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb": {
+      "headline": "Synchronized global sovereign bond rout: US 10y at 4.80%, UK 30y at 5.82% (highest since 1998), German 10y at 2011 highs",
+      "summary": "A multi-week global bond selloff, accelerated by oil-shock inflation from the Iran war, heavy government borrowing (record $29 trillion projected for 2026), and hawkish central bank signals, has pushed sovereign yields to multi-decade highs simultaneously across the US, UK, Germany, France, and Japan. France's OAT 10-year yield rose above 4.215%, its highest since 2008, with State Street analysts specifically flagging France as the most vulnerable developed-market sovereign.",
+      "as_of": "2026-09-08",
+      "sources": [
+        "https://www.cnbc.com/2026/09/03/global-bond-yields-rising-treasuries-jgb-bunds.html",
+        "https://www.indmoney.com/blog/us-stocks/global-bond-market-selloff",
+        "https://www.euronews.com/business/2026/09/01/european-government-bond-yields-surge-to-15-year-highs-as-sell-off-deepens",
+        "https://dailycaller.com/2026/09/01/global-bond-selloff-sends-yields-to-highest-level-since-2008/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s10_france",
+      "target_indicator": "OAT-Bund 10y spread (%)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The French OAT at 4.215% (highest since 2008) combined with Bund yields at 2011 highs directly updates the OAT-Bund spread indicator in s10_france. State Street explicitly named France as the standout developed-market vulnerability ('fiscal slippage, limited political appetite for fiscal consolidation and electoral uncertainty'). The Govt stability indicator for s10_france should be reviewed (currently 1 fragile). However, this synchronized selloff also has second-order effects on s1_basis_trade (MOVE index rising), s4_dev_debt (higher US real yields pressure EM), and s14_pensions (funded-ratio pressure). Tagging to s10_france as the most specific existing indicator match, but flagging cross-story amplification.",
+      "status": "pending",
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-11",
+      "sightings": 1,
+      "id": "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb"
+    },
+    "ai-hyperscaler-bond-issuance-hits-194bn-ytd-in-2-33afc6": {
+      "headline": "AI hyperscaler bond issuance hits ~$194bn YTD in 2026; Goldman projects ~$250bn full-year; spreads widening for AI cohort",
+      "summary": "Hyperscalers have issued $194 billion in bonds through mid-2026 (vs $108bn all of 2025), with Goldman Sachs estimating ~$250bn for the full year as roughly one-third of AI capex is now debt-financed. Allianz Research found AI-related borrowers raised $356 billion in US credit markets through August 2026, with spreads widening materially more for the AI borrower cohort than the broader IG market.",
+      "as_of": "2026-09-08",
+      "sources": [
+        "https://www.goldmansachs.com/insights/goldman-sachs-exchanges/how-ai-debt-is-reshaping-the-credit-market",
+        "https://www.indmoney.com/blog/us-stocks/global-bond-market-selloff",
+        "https://www.sageadvisory.com/article/hyperscaler-debt-deluge-the-new-driver-of-ig-spread-pressure",
+        "https://www.breckinridge.com/insights/the-price-of-ai-how-capex-is-rewriting-tech-balance-sheets"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s8_ai_capex",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "AI-cohort IG spread premium over broad IG (bps)",
+        "type": "band",
+        "rubric": "Measures the OAS differential between the AI-related borrower cohort (hyperscalers + broader AI ecosystem issuers) and the Bloomberg US Corporate IG Index. 0\u201315 bps = normal; 16\u201340 bps = elevated (score 1); >40 bps = stress (score 2). Allianz Research and Goldman Sachs track this cohort separately from broad IG.",
+        "sources": [
+          "https://www.indmoney.com/blog/us-stocks/global-bond-market-selloff",
+          "https://www.goldmansachs.com/insights/goldman-sachs-exchanges/how-ai-debt-is-reshaping-the-credit-market",
+          "https://www.sageadvisory.com/article/hyperscaler-debt-deluge-the-new-driver-of-ig-spread-pressure"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "s8_ai_capex already tracks 'US investment-grade OAS (big-issuer proxy)' and 'AI capex-vs-revenue gap concern,' but there is no indicator that captures the spread differential between AI borrowers specifically and the rest of IG \u2014 which is the key signal of whether the AI debt deluge is creating a localized stress or metastasizing into the broader credit market. Allianz and Goldman have both independently begun tracking this cohort separately. With $194bn issued YTD and $250bn projected for 2026 (vs $108bn in 2025), and AI spreads widening more than the IG average, a dedicated premium indicator is now warranted.",
+      "status": "pending",
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-11",
+      "sightings": 1,
+      "id": "ai-hyperscaler-bond-issuance-hits-194bn-ytd-in-2-33afc6"
+    },
+    "eurozone-energy-inflation-re-accelerates-to-14-3-7e295c": {
+      "headline": "Eurozone energy inflation re-accelerates to 14.3% YoY in August, core eases \u2014 stagflation risk re-emerges for France and periphery",
+      "summary": "Eurostat's August flash estimate showed eurozone headline inflation at 3.3% (up from 2.9%), almost entirely driven by energy inflation of 14.3% YoY stemming from the Iran-war oil shock, while core inflation edged down to 2.4%. The divergence \u2014 sticky energy, easing core \u2014 is forcing the ECB into a politically fraught position and is landing hardest on fiscally fragile France and southern Europe.",
+      "as_of": "2026-09-07",
+      "sources": [
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/",
+        "https://edition.cnn.com/2026/09/03/investing/bond-market-global-economy",
+        "https://www.euronews.com/business/2026/09/01/european-government-bond-yields-surge-to-15-year-highs-as-sell-off-deepens"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s10_france",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Eurozone energy CPI YoY (%) \u2014 oil-shock inflation transmission",
+        "type": "value",
+        "rubric": "Tracks Eurostat's monthly flash energy CPI component (YoY%). Below 5% = contained (0); 5\u201310% = elevated, ECB hawkish pressure (1); >10% = acute stagflationary shock, bond-spread widening risk (2). Currently at 14.3% (August 2026 flash). Source: Eurostat flash CPI release, monthly.",
+        "sources": [
+          "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/",
+          "https://www.euronews.com/business/2026/09/01/european-government-bond-yields-surge-to-15-year-highs-as-sell-off-deepens"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "s10_france tracks OAT-Bund spread, government stability, and rating actions \u2014 but has no indicator that captures the energy-inflation transmission channel from the Iran-war oil shock into eurozone monetary policy and hence sovereign spreads. With eurozone energy CPI at 14.3% YoY, the ECB faces a 'hike into fragility' dilemma: tightening to combat energy inflation will widen OAT-Bund and Italy-Bund spreads mechanically, potentially triggering the fragmentation scenario the tracker is designed to detect. A dedicated Eurostat energy CPI indicator would give the tracker an upstream leading signal before OAT-Bund spread moves materialize.",
+      "status": "pending",
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-11",
+      "sightings": 1,
+      "id": "eurozone-energy-inflation-re-accelerates-to-14-3-7e295c"
     }
   },
-  "generated": "2026-09-10",
+  "generated": "2026-09-11",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 228
+  "new_count": 3,
+  "pending_count": 231
 }
