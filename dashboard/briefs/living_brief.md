@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-09-11 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-09-14 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 7.5/10** — Set 1 5.8, Set 2 5.0, Set 3 4.5, Set 4 6.5, Set 5 5.8.
+**Overall risk 6.7/10** — Set 1 5.8, Set 2 4.8, Set 3 4.5, Set 4 6.8, Set 5 5.2.
 
 
 ## Set 1 — Funding & Leverage
@@ -46,7 +46,7 @@ AI infrastructure spending vastly exceeds current AI revenue, increasingly finan
 
 *Indicators watched:* US investment-grade OAS (%) - big-issuer proxy, AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast), GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)
 
-### CRE maturity wall / regional banks — 5/10 (Elevated)
+### CRE maturity wall / regional banks — 4/10 (Moderate)
 
 A wall of commercial real-estate loans - especially office - matures into higher rates and lower valuations, concentrated at regional banks. Rising delinquencies and 'extend and pretend' practices defer, rather than resolve, the losses.
 
@@ -112,7 +112,7 @@ ASML is the sole maker of EUV lithography machines, with Zeiss the sole optics s
 
 *Indicators watched:* Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis), Export-control escalation (0 stable / 1 tightening / 2 retaliation), Single-point concentration (0 easing / 1 high / 2 extreme)
 
-### Sea lanes & undersea cables — 7/10 (High)
+### Sea lanes & undersea cables — 8/10 (High)
 
 A few maritime chokepoints and undersea cables carry most global trade and data. The 2026 Hormuz/Red Sea disruptions showed how quickly closures spike energy and shipping costs; cable cuts are a parallel, under-watched vulnerability.
 
@@ -121,7 +121,7 @@ A few maritime chokepoints and undersea cables carry most global trade and data.
 
 ## Set 5 — Physical & Resource Limits
 
-### AI power & the grid bottleneck — 7/10 (High)
+### AI power & the grid bottleneck — 6/10 (Elevated)
 
 Data-center electricity demand is colliding with multi-year grid interconnection queues and slow capacity additions. Whether this is an acute shortfall or eases depends on the pace of AI build-out versus new supply - forecasts diverge widely.
 
@@ -139,7 +139,7 @@ Water is systematically underpriced yet essential to chip fabrication, agricultu
 
 *Indicators watched:* Drought in a chip/farm hub (0 none / 1 emerging / 2 acute), Key reservoir / basin stress (0 normal / 1 low / 2 critical), Transboundary water dispute escalation (0 calm / 1 tense / 2 crisis)
 
-### Food & fertilizer fragility — 7/10 (High)
+### Food & fertilizer fragility — 6/10 (Elevated)
 
 Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag.
 

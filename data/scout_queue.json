@@ -175,12 +175,12 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "The EIA's September 9 STEO confirms Middle East crude exports remain constrained, with Brent averaging $91/bbl in August (+$7/bbl vs July) and global inventories drawing at 3.0 million b/d in Q3-2026. The EIA expects elevated prices (~$90/bbl average H2-2026) as shippers use bypass routes, with normalisation not expected until mid-2027 when UAE pipeline capacity comes online.",
-      "as_of": "2026-09-09",
+      "summary": "As of 11 Sep 2026, WTI crude is ~$100/bbl and Brent ~$104, with industry delegates at the Asia Pacific Petroleum Conference (APPEC) in Singapore reaching consensus that the US\u2013Iran standoff will persist until at least the end of the current US administration, making supply disruption a structural baseline. Attacks on shipping and energy infrastructure in early September reversed a summer price dip.",
+      "as_of": "2026-09-11",
       "sources": [
-        "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+        "https://discoveryalert.com/analysis/us-iran-war-oil-prices-september-2026/",
         "https://www.aljazeera.com/economy/2026/9/7/oil-prices-surge-as-us-iran-strikes-intensify-in-strait-of-hormuz",
-        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"
+        "https://www.eia.gov/outlooks/steo/pdf/steo_full.pdf"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -188,12 +188,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz status indicator is the most directly relevant. Status should be coded 1 (contested) given shippers are using workarounds but the strait is not fully normalised and US-Iran strikes are actively ongoing per Al Jazeera (September 7). WTI indicator also needs updating (~$88\u201391/bbl range). The energy shock cross-links materially to s18_food_fertilizer (fertilizer input costs), s15_ai_power (energy cost for data centres), and the global bond rout in s1/s2.",
+      "rationale": "The Hormuz/Red Sea status indicator should move to '2 closed' given the near-standstill described at APPEC, and WTI ~$100 is a hard read into the s20 WTI crude indicator. The APPEC structural-baseline consensus (not merely a premium) is new and highly material \u2014 it implies EIA's own September STEO projects Middle East production below pre-conflict averages through Q2 2027. This also feeds s18_food_fertilizer (Hormuz/Gulf disruption indicator \u2192 '2 cut') and s15_ai_power (energy cost spike). The decision to mark s20 rather than create a new story reflects that the Hormuz lane constraint is explicitly captured there; however, tracker owners should note second-order impacts on s18 and s11 (consumer inflation squeeze on debt-service capacity).",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-09-14",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 28
+      "sightings": 29
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
@@ -585,13 +585,12 @@
     },
     "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca": {
       "headline": "Japan yen hits 4-decade lows; 10yr JGB at ~2.65%; BoJ July 31 hike decision imminent amid Middle East energy import stress",
-      "summary": "Reuters sources (Aug 14) say the BoJ is poised to hike to 1.25% as soon as its Sept 17\u201318 meeting, citing Middle East energy costs, AI-driven demand, and persistent yen weakness (~159/$). Paradoxically, Japanese investors used last month's joint US-Japan intervention-induced yen rally to NET BUY over \u00a55trn of foreign assets in two weeks ended Aug 15, turbo-charging the carry trade rather than unwinding it.",
-      "as_of": "2026-08-23",
+      "summary": "The Bank of Japan is widely expected to raise its policy rate to 1.25% \u2014 a 31-year high \u2014 at its meeting the week of 15 Sep 2026, driven by oil-cost inflation and political pressure. The yen has simultaneously strengthened ~4% in recent sessions to ~\u00a5154/USD, as carry-trade unwinding and capital-repatriation expectations intensify, while the 10-year JGB yield has broken 3% for the first time since 1996.",
+      "as_of": "2026-09-11",
       "sources": [
-        "https://www.fxstreet.com/news/boj-set-to-hike-rates-as-soon-as-september-202608140605",
-        "https://www.cnbc.com/2026/08/20/us-japan-yen-intervention-bank-of-japan-carry-trade.html",
-        "https://www.bloomberg.com/news/articles/2026-08-23/boj-set-to-offer-clues-as-markets-bet-heavily-on-september-hike",
-        "https://tradingeconomics.com/japan/interest-rate"
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://bitcoinethereumnews.com/tech/yen-strength-and-rising-jgb-yields-signal-risk-of-carry-trade-unwind/",
+        "https://www.fxstreet.com/analysis/hot-ppi-and-oil-prices-continue-to-drive-cb-rate-hike-expectations-and-yields-up-202609110547"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -599,12 +598,12 @@
       "target_indicator": "USD/JPY (yen strengthening = lower = risk)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "A confirmed Sept-18 BoJ hike to 1.25% \u2014 the most aggressive move of this cycle \u2014 would compress the USD-JPY carry differential sharply and risk a rapid, non-linear unwind of the \u00a55trn freshly-added carry positions. USD/JPY at ~159 and the paradoxical re-leveraging of carry trades post-intervention are exactly what the s2 USD/JPY indicator is designed to flag. The 10-yr JGB yield at 2.89% (Aug 25) is also a direct read on the existing 30-yr JGB yield indicator.",
+      "rationale": "USD/JPY at ~154 (near 7-month yen high) and a live BOJ hike to 1.25% directly read into the tracker's s2_japan USD/JPY and 30-year JGB yield indicators. The carry-trade unwind risk is the core s2 narrative; yen at \u00a5154 and 10y JGB above 3% are materially worse than prior tracker readings. The Takaichi administration's hawkish stance on yen strength is now an active policy catalyst, updating the 'Takaichi plan financing clarity' indicator toward '1 unclear' as the rate path accelerates faster than fiscal consolidation plans can absorb.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-09-14",
       "id": "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca",
-      "sightings": 7
+      "sightings": 8
     },
     "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
       "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
@@ -2968,23 +2967,23 @@
     },
     "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0": {
       "headline": "China June PPI +4.1% YoY (4-year high) driven by Iran energy shock\u2014but MoM turned negative and consumer goods PPI still -0.9%, revealing a dangerous bifurcation",
-      "summary": "China's July PPI fell 3.5% year-on-year (narrowing from June's \u20133.6% / \u20134.1% depending on source), remaining deeply negative after 33+ consecutive months of factory-gate deflation; China's manufacturing PMI stayed below 50 for a fifth straight month in August, with new export orders at 47.2. The persistence of deflation alongside tariff headwinds amplifies the risk of deflationary goods export to global trading partners.",
-      "as_of": "2026-08-09",
+      "summary": "China's National Bureau of Statistics reported August 2026 PPI at +3.8% YoY on 13 September, a dramatic reversal from deep deflation earlier in 2026, primarily fueled by the global oil price shock from the Iran war. The swing is large enough to shift China from being a deflationary exporter to a potential cost-push exporter.",
+      "as_of": "2026-09-13",
       "sources": [
-        "https://www.investing.com/news/economic-indicators/china-cpi-eases-ppi-deflation-moderates-in-july-4847797",
-        "https://www.fxstreet.com/amp/news/china-exports-likely-slowed-in-august-standard-chartered-202509021000"
+        "https://www.trend.az/world/4223315.html",
+        "https://www.lundgreensinvestorinsights.com/next-week-in-china-7-11-september-2026/"
       ],
-      "materiality": "medium",
+      "materiality": "high",
       "classification": "existing_indicator",
       "target_story": "s5_china_deflation",
       "target_indicator": "China PPI YoY (%) - large swing either way is worse",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "July PPI of \u20133.5% YoY is a material deflationary reading \u2014 deep in the danger zone for the PPI indicator \u2014 and signals continued price-export pressure on global goods markets. While the direction marginally improved from June (\u20134.1%), five consecutive months of sub-50 manufacturing PMI and sub-49 export-order PMI confirms China's domestic demand remains structurally weak. The indicator should be logged at \u20133.5% and flagged as persistently elevated-risk.",
+      "rationale": "The s5 story captures both deflation AND cost-push spillover scenarios, noting explicitly that 'a large swing either way is worse.' A +3.8% print \u2014 a nearly 5pp reversal from February \u2014 is precisely such a swing. This is not benign reflation driven by domestic demand; it is oil cost-push that bypasses the domestic consumption channel (manufacturing PMI still below 50 in August per Lundgreen's), meaning Chinese exporters may begin passing higher factory-gate costs into global goods prices. Tracker should update the China PPI indicator reading from deflation-risk to cost-push-risk.",
       "status": "pending",
       "first_seen": "2026-07-15",
-      "last_seen": "2026-08-20",
-      "sightings": 9,
+      "last_seen": "2026-09-14",
+      "sightings": 10,
       "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
     },
     "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328": {
@@ -3837,12 +3836,10 @@
     },
     "us-iran-war-inflation-feedback-10-yr-treasury-yi-92390d": {
       "headline": "US-Iran War Inflation Feedback: 10-yr Treasury Yield Hits 4.71% (6-Month High); Fed Rate-Hike Odds Re-Price",
-      "summary": "On July 23, the 10-year US Treasury yield surged to 4.71%, its highest since January 2025, driven by Brent at $100 and renewed inflation fears from the US-Iran conflict; the yield fell back to ~4.64% by July 28 after a partial hostilities pause, but remains materially above pre-war levels (<4%). Markets have swung from pricing two 2026 rate cuts to near-zero cut probability, with some analysts flagging a potential rate hike.",
-      "as_of": "2026-07-27",
+      "summary": "As of 7 September 2026, the US 10-year Treasury yield is ~4.8%, German and French 10-year yields are at levels last seen in 2011 and 2008 respectively, and UK 30-year gilts remain near three-decade highs \u2014 a synchronised developed-market bond sell-off driven by energy-inflation persistence and enormous government borrowing requirements. The move is now compressing fiscal space for high-debt emerging-market sovereigns relying on external financing.",
+      "as_of": "2026-09-07",
       "sources": [
-        "https://edition.cnn.com/2026/07/23/economy/bond-market-inflation-iran",
-        "https://tradingeconomics.com/united-states/government-bond-yield",
-        "https://www.cnbc.com/amp/2026/07/08/oil-prices-brent-wti-iran-us-hormuz.html"
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -3850,11 +3847,11 @@
       "target_indicator": "US 10y real yield (TIPS, %)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "A 10-yr nominal yield at 4.71% with inflation expectations rising implies real yields are staying structurally elevated, directly tightening the screw on developing-world debt (s4_dev_debt): higher US real yields = stronger dollar pressure + capital outflow risk from EMs. This also cross-contaminates s1_basis_trade (higher nominal yields increase basis-trade funding stress and Treasury volatility via MOVE), and s2_japan (higher US yields drag JGBs up, accelerating repatriation). The Fed re-pricing from cuts to potential hike is a discrete regime change in the rate backdrop that the tracker must reflect immediately.",
+      "rationale": "Rising US real yields (TIPS) are the primary mechanical driver of EM debt stress in the s4_dev_debt story \u2014 higher real yields strengthen the dollar (FRED DTWEXBGS indicator) and raise refinancing costs for developing-world sovereigns. The synchronised DM sovereign yield surge described here is directly material to both the 'US 10y real yield' and 'Broad US dollar index' indicators in s4. The fact that German/French yields are at 2011/2008 levels also feeds s10_france (OAT-Bund spread, Govt stability) \u2014 tracker owners should cross-check whether the OAT-Bund spread has widened relative to absolute yield levels, and whether France's fiscal position is deteriorating at current funding costs.",
       "status": "pending",
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
-      "sightings": 1,
+      "last_seen": "2026-09-14",
+      "sightings": 2,
       "id": "us-iran-war-inflation-feedback-10-yr-treasury-yi-92390d"
     },
     "obbba-signed-into-law-cbo-projects-us-deficit-av-e4c787": {
@@ -7550,10 +7547,72 @@
       "last_seen": "2026-09-11",
       "sightings": 1,
       "id": "eurozone-energy-inflation-re-accelerates-to-14-3-7e295c"
+    },
+    "china-bans-rare-earth-exports-to-14-eu-firms-jul-f1aeec": {
+      "headline": "China bans rare earth exports to 14 EU firms (July) with Nov 2026 'wave-2' expiry looming in 8 weeks",
+      "summary": "In July 2026 China blocked dual-use/rare-earth shipments to 14 European companies (following a June ban on 10 US firms), with China's rare-earth export volumes already down 10% YoY Jan\u2013Jul 2026. Critically, the Nov 10, 2026 expiry of the Wave-2 pause (covering holmium, erbium, thulium, europium, ytterbium and related technologies) is now only ~8 weeks away with no extension signals visible.",
+      "as_of": "2026-09-14",
+      "sources": [
+        "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/",
+        "https://www.spglobal.com/energy/en/news-research/latest-news/metals/072426-china-bans-rare-earth-exports-to-14-european-companies",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s6_rare_earths",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Entity-ban cumulative coverage (# firms blacklisted, US + EU)",
+        "type": "value",
+        "rubric": "Running total of named US and EU entities subject to Chinese rare-earth / dual-use export prohibitions. 0\u20135 firms = isolated; 6\u201320 firms = sector-targeted (current: ~24); 21+ or any Fortune-500 = systemic.",
+        "sources": [
+          "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/",
+          "https://www.spglobal.com/energy/en/news-research/latest-news/metals/072426-china-bans-rare-earth-exports-to-14-european-companies"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The existing s6 indicator 'US domestic RE producer blacklist (0 none / 1 entity-specific / 2 sector-wide ban)' only captures US-side blacklisting of Chinese firms. China's entity-specific bans on Western firms are the mirror image and equally material \u2014 they represent active supply denial rather than passive export slowdown. The Nov-2026 pause expiry (tracked under s6 as '1 expiring') is now 8 weeks away; adding a firm-count indicator captures the escalating breadth of China's targeted approach and gives the tracker a continuous numeric signal ahead of the binary Nov-10 cliff.",
+      "status": "pending",
+      "first_seen": "2026-09-14",
+      "last_seen": "2026-09-14",
+      "sightings": 1,
+      "id": "china-bans-rare-earth-exports-to-14-eu-firms-jul-f1aeec"
+    },
+    "fed-rate-hike-odds-near-66-for-september-meeting-b91deb": {
+      "headline": "Fed rate hike odds near 66% for September meeting; Chairman Warsh signals action amid energy-driven US PPI surge",
+      "summary": "US August PPI came in hot (released ~10 Sep 2026), pushing Fed funds futures to ~66% probability of a 25bp hike at the September FOMC meeting \u2014 the first hike after a full year on hold. Fed Chair Kevin Warsh publicly emphasized his inflation-fighting commitment, while oil prices above $100/bbl sustain cost-push pressure on the entire yield complex.",
+      "as_of": "2026-09-10",
+      "sources": [
+        "https://www.cnbc.com/2026/09/10/ppi-inflation-report-august-2026.html",
+        "https://www.fxstreet.com/analysis/hot-ppi-and-oil-prices-continue-to-drive-cb-rate-hike-expectations-and-yields-up-202609110547",
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Simultaneous multi-CB tightening shock (0 solo / 1 dual / 2 triple+)",
+        "type": "band",
+        "rubric": "Counts major central banks (Fed, BOJ, ECB) delivering or signaling imminent rate increases within the same 2-week window. 0 = only one CB tightening; 1 = two CBs tightening simultaneously; 2 = three or more CBs tightening simultaneously. Current reading: 2 (Fed ~66% hike, BOJ expected +25bp, ECB already moved per FXStreet).",
+        "sources": [
+          "https://www.cnbc.com/2026/09/10/ppi-inflation-report-august-2026.html",
+          "https://www.fxstreet.com/analysis/hot-ppi-and-oil-prices-continue-to-drive-cb-rate-hike-expectations-and-yields-up-202609110547"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "A synchronized Fed + BOJ + ECB tightening episode is the classic exogenous shock that stresses basis trades and clearinghouse margin models simultaneously \u2014 it raises SOFR, compresses Treasury futures carry, and spikes MOVE. The existing s1 indicators (SOFR\u2013EFFR spread, MOVE index) will register the outcome but no indicator currently tracks the input driver \u2014 the simultaneity of CB actions. This gap is material because it's the coordination of tightening, not just any single hike, that historically triggers basis unwinds. The story also maps onto s21_clearinghouses (Treasury-clearing rollout stress) and s8_ai_capex (IG OAS widening).",
+      "status": "pending",
+      "first_seen": "2026-09-14",
+      "last_seen": "2026-09-14",
+      "sightings": 1,
+      "id": "fed-rate-hike-odds-near-66-for-september-meeting-b91deb"
     }
   },
-  "generated": "2026-09-11",
+  "generated": "2026-09-14",
   "model": "claude-sonnet-4-6",
-  "new_count": 3,
-  "pending_count": 231
+  "new_count": 2,
+  "pending_count": 233
 }
