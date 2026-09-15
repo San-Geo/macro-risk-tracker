@@ -7609,10 +7609,147 @@
       "last_seen": "2026-09-14",
       "sightings": 1,
       "id": "fed-rate-hike-odds-near-66-for-september-meeting-b91deb"
+    },
+    "strait-of-hormuz-effectively-closed-east-west-pi-ef032b": {
+      "headline": "Strait of Hormuz effectively closed; East-West Pipeline shut Sep 11 \u2014 IEA calls it largest oil supply shock in history",
+      "summary": "The 2026 US-Iran war has reduced Hormuz tanker traffic by ~95%, with Brent at ~$104\u2013$110 and WTI above $100 as of Sep 11. The Sep 11 East-West Pipeline shutdown has pushed total disrupted global trade to ~39%, prompting the IEA's largest-ever coordinated emergency stock release (400 mb).",
+      "as_of": "2026-09-11",
+      "sources": [
+        "https://discoveryalert.com/analysis/us-iran-war-oil-prices-september-2026/",
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
+        "https://www.ogj.com/IranWar",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status \u2014 move from 1 (contested) to 2 (closed); WTI CL=F update to ~$100; Undersea cable incidents remain 0 but East-West Pipeline shutdown warrants story_gap (see rationale)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Hormuz/Red Sea status indicator should be hard-set to 2 (closed) \u2014 vessel traffic is down 95% and the IEA has declared this the largest supply disruption in oil market history. WTI is above $100, a level not seen since the prior energy crisis. The Sep 11 East-West Pipeline shutdown adds a new dimension (land-route energy infrastructure) not captured by the existing sea-lanes indicators, but the primary signal maps cleanly to s20_sea_lanes. Cross-story contamination to s18_food_fertilizer (fertilizer inputs from Gulf) and s20_sea_lanes (shipping) is now acute.",
+      "status": "pending",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-15",
+      "sightings": 1,
+      "id": "strait-of-hormuz-effectively-closed-east-west-pi-ef032b"
+    },
+    "boj-expected-to-hike-to-1-25-on-sep-19-highest-s-2a13e2": {
+      "headline": "BOJ expected to hike to 1.25% on Sep 19 \u2014 highest since 1995 \u2014 as Japan PPI hits 7.6% YoY and 10yr JGB approaches 3%",
+      "summary": "Bank of Japan board member Takata called 2026 a 'regime change' on Sep 10, and markets overwhelmingly expect a 25bp hike to 1.25% this Friday. Japan's 10-year JGB yield has climbed to ~2.93\u20132.98%, near 30-year highs, driven by domestic PPI at 7.6% YoY and rising global yields from oil-shock inflation.",
+      "as_of": "2026-09-11",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://tradingeconomics.com/japan/interest-rate"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield (%) \u2014 update upward; Takaichi plan financing clarity \u2014 deteriorating toward 2 (disorderly) as aggressive hiking collides with record fiscal issuance; USD/JPY to be monitored for carry-unwind risk",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "A BOJ hike to 1.25% \u2014 the highest in three decades \u2014 is a material inflection for s2_japan. At these yield levels (~2.93% for the 10-year; 30-year likely 3.5%+) the fiscal cost of Japan's record debt issuance escalates sharply. The oil shock simultaneously keeps domestic inflation above target, forcing the BOJ's hand even as the global growth outlook darkens. USD/JPY carry-trade positioning is again vulnerable; a rapid yen appreciation on a dovish surprise or global risk-off could replay August 2024-style volatility.",
+      "status": "pending",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-15",
+      "sightings": 1,
+      "id": "boj-expected-to-hike-to-1-25-on-sep-19-highest-s-2a13e2"
+    },
+    "china-ppi-swings-to-3-8-yoy-in-august-2026-a-4-7-783341": {
+      "headline": "China PPI swings to +3.8% YoY in August 2026 \u2014 a 4.7-point reversal from February \u2014 signaling cost-push export inflation risk",
+      "summary": "China's PPI rose 3.8% YoY in August, reversing deep deflation from earlier in the year, driven by energy price pass-through from the Iran war oil shock and earlier stimulus. The sharp swing from deflation to reflation raises the risk of China exporting inflation rather than deflation to trading partners.",
+      "as_of": "2026-09-13",
+      "sources": [
+        "https://www.trend.az/world/4223315.html",
+        "https://www.investing.com/economic-calendar/chinese-ppi-464"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s5_china_deflation",
+      "target_indicator": "China PPI YoY (%) \u2014 update to +3.8% (Aug 2026); this is a large swing to the upside, which the rubric flags as worse ('large swing either way is worse'); New tariff/anti-dumping actions remain relevant as trading partners react to Chinese goods price changes",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The story label 's5_china_deflation' now faces its mirror risk: a +3.8% PPI reading is a 4.7-point swing from February and represents a sudden reversal to cost-push pressure. The existing rubric explicitly flags large swings in either direction as risk-amplifying, making this a direct, high-materiality hit on the indicator. If Chinese export prices rise, importing nations face stagflationary pressure on top of the oil shock, compressing margins globally and complicating central bank paths. This is the largest PPI swing in the tracker's scope.",
+      "status": "pending",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-15",
+      "sightings": 1,
+      "id": "china-ppi-swings-to-3-8-yoy-in-august-2026-a-4-7-783341"
+    },
+    "fed-widely-expected-to-hike-25bp-to-3-75-4-00-on-4ff2a7": {
+      "headline": "Fed widely expected to hike 25bp to 3.75\u20134.00% on Sep 17 as 10yr Treasury clears 5% \u2014 new post-GFC high",
+      "summary": "Markets price a ~92% probability of a Sep 17 Fed hike following hotter-than-expected August CPI; the 10-year Treasury yield has broken above 5.02% for the first time since 2007, driven by sticky inflation, war-related energy costs, and heavy government borrowing needs. Treasury Secretary Bessent's bond buyback program at 5.25\u20135.30% is raising yield-curve-control concerns.",
+      "as_of": "2026-09-15",
+      "sources": [
+        "https://www.home.saxo/content/articles/macro/market-quick-take---ai-warning-hits-chips-as-ten-year-tops-5-before-fed---15-september-2026-15092026",
+        "https://predictmarketcap.com/events/fed-rate-hike",
+        "https://dollarcollapse.com/top-ten-videos-september-14-2026/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "proposed_indicator": {
+        "label": "US 10yr Treasury yield (%)",
+        "type": "value",
+        "rubric": "Current level: ~5.02% (Sep 15). 0 = below 4.5% (contained); 1 = 4.5\u20135.0% (elevated, watching basis trade leverage stress); 2 = above 5.0% (acute \u2014 basis-trade margin calls, duration losses at leveraged funds, Treasury market fragility). Currently scoring 2. Sources: FRED DGS10, Bloomberg.",
+        "sources": [
+          "https://www.home.saxo/content/articles/macro/market-quick-take---ai-warning-hits-chips-as-ten-year-tops-5-before-fed---15-september-2026-15092026",
+          "https://dollarcollapse.com/top-ten-videos-september-14-2026/"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s1_basis_trade indicators (SOFR-EFFR, MOVE, SEC clearing) track plumbing and volatility but lack a direct yield-level indicator. A 10yr yield above 5% is the single most important input for basis-trade stress: it widens the cash-futures gap, forces duration-hedging by leveraged players, and increases the probability of forced Treasury selling. The MOVE index will reflect this, but adding the 10yr yield as an explicit value indicator fills a gap. The Bessent long-end buyback at 5.25\u20135.30% \u2014 described by multiple analysts as incipient yield-curve control \u2014 is a novel sovereign intervention that the existing rubric does not capture.",
+      "status": "pending",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-15",
+      "sightings": 1,
+      "id": "fed-widely-expected-to-hike-25bp-to-3-75-4-00-on-4ff2a7"
+    },
+    "oat-bund-10yr-spread-hits-98bp-highest-since-eur-ef4078": {
+      "headline": "OAT-Bund 10yr spread hits 98bp \u2014 highest since Eurozone sovereign debt crisis \u2014 as France faces political and fiscal stress",
+      "summary": "The Germany-France 10-year yield spread widened to 98 basis points on September 15, far exceeding the prior post-2012 closing high of 88bp, amid French political fragility and market concerns about fiscal sustainability at a time of rising global rates and energy-shock inflation.",
+      "as_of": "2026-09-15",
+      "sources": [
+        "https://www.home.saxo/content/articles/macro/market-quick-take---ai-warning-hits-chips-as-ten-year-tops-5-before-fed---15-september-2026-15092026"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s10_france",
+      "target_indicator": "OAT-Bund 10y spread (%) \u2014 update to 0.98% / 98bp, a post-Eurozone-crisis high; Govt stability \u2014 remains at 1 (fragile) or consider moving to 2 given spread extremes; Rating action \u2014 monitor for S&P/Moody's reaction",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "An OAT-Bund spread of 98bp is not routine noise \u2014 it is the widest since the 2010\u201312 sovereign debt crisis and represents a genuine re-pricing of French fiscal risk. The combination of a global rate shock (Fed hiking, 10yr UST at 5%), energy-driven inflation, and French political fragility creates a classically dangerous cocktail. This directly updates the primary indicator for s10_france and may warrant a governance-level review of the story's severity rating. ECB fragmentation tools (TPI) may be tested.",
+      "status": "pending",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-15",
+      "sightings": 1,
+      "id": "oat-bund-10yr-spread-hits-98bp-highest-since-eur-ef4078"
+    },
+    "ai-industry-multipronged-revolt-complicates-fed--c46c1a": {
+      "headline": "AI industry 'multipronged revolt' complicates Fed decision; AI-capex debt financing accelerating off-balance-sheet as rates hit post-GFC highs",
+      "summary": "As of Sep 15, a 'multipronged revolt against AI' (regulatory, copyright, labor, and political) is creating crosscutting uncertainty for the Fed and for AI-linked debt markets. Q2 earnings highlighted accelerating AI capex financed through debt and off-balance-sheet structures, even as the 10yr yield breaks 5% \u2014 sharply raising the cost of GPU-backed and data-center debt.",
+      "as_of": "2026-09-15",
+      "sources": [
+        "https://prospect.org/2026/09/15/artificial-intelligence-federal-reserve-ai-bubble/",
+        "https://research-center.amundi.com/article/global-investment-views-september-2026",
+        "https://www.home.saxo/content/articles/macro/market-quick-take---ai-warning-hits-chips-as-ten-year-tops-5-before-fed---15-september-2026-15092026"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s8_ai_capex",
+      "target_indicator": "GPU-backed debt refinancing stress \u2014 move from 0 (none) toward 1 (signs): 10yr at 5%+ materially raises refinancing cost on floating-rate and short-duration AI infrastructure debt; AI capex-vs-revenue gap concern \u2014 remains at 1 (wide) or consider 2 (widening fast) given off-balance-sheet acceleration flagged by Amundi and the political revolt reducing near-term revenue visibility",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Two concurrent forces are tightening simultaneously on s8_ai_capex: (1) a 'multipronged revolt' against AI (regulatory, legal, social) that directly compresses near-term revenue expectations, widening the capex-vs-revenue gap; and (2) the 10yr Treasury breaking 5%, the highest since 2007, which directly raises the cost of the debt-financed AI build-out and stresses GPU-backed debt structures. Amundi's Sep 2026 GIV explicitly flagged Q2 earnings showed AI infrastructure 'increasingly through debt financing and off-balance sheet positions.' This is a material upgrade to at least two sub-indicators in s8_ai_capex.",
+      "status": "pending",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-15",
+      "sightings": 1,
+      "id": "ai-industry-multipronged-revolt-complicates-fed--c46c1a"
     }
   },
-  "generated": "2026-09-14",
+  "generated": "2026-09-15",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 233
+  "new_count": 6,
+  "pending_count": 239
 }
