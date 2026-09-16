@@ -7746,10 +7746,161 @@
       "last_seen": "2026-09-15",
       "sightings": 1,
       "id": "ai-industry-multipronged-revolt-complicates-fed--c46c1a"
+    },
+    "saudi-arabia-s-hormuz-bypass-east-west-pipeline--854912": {
+      "headline": "Saudi Arabia's Hormuz-bypass East-West Pipeline shut after drone strikes; Brent surges above $108/bbl and last safety valve closes",
+      "summary": "On Sept 10\u201311 drone attacks from Iraq struck pumping stations along Saudi Arabia's East-West Pipeline (up to 7 mb/d capacity), forcing a full shutdown with no restart timeline \u2014 eliminating the kingdom's main Hormuz bypass route just as the Strait itself remains severely contested. Brent surged ~3\u20134% to $108/bbl, marking the first close above $100 since May; global inventories fell 95 mb in August alone according to the IEA.",
+      "as_of": "2026-09-15",
+      "sources": [
+        "https://www.cnbc.com/2026/09/15/oil-prices-saudi-arabia-east-west-pipeline-iran.html",
+        "https://www.fdd.org/analysis/2026/09/13/saudi-arabia-closes-its-east-west-pipeline-after-attacks-from-iraq/",
+        "https://qz.com/saudi-arabia-east-west-pipeline-shutdown-oil-prices-hormuz-091426",
+        "https://www.home.saxo/en-hk/content/articles/macro/asia-market-quick-take-16-september-2026-16092026"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Saudi_EW_pipeline_status",
+        "type": "band",
+        "rubric": "0 = operational at \u226550% capacity; 1 = partially damaged / reduced flow; 2 = shut / no restart timeline \u2014 critical because it is the primary Hormuz bypass for 5\u20137 mb/d",
+        "sources": [
+          "https://www.cnbc.com/2026/09/15/oil-prices-saudi-arabia-east-west-pipeline-iran.html",
+          "https://www.fdd.org/analysis/2026/09/13/saudi-arabia-closes-its-east-west-pipeline-after-attacks-from-iraq/"
+        ],
+        "suggested_weight": 0.3
+      },
+      "proposed_story": null,
+      "rationale": "s20_sea_lanes already tracks Hormuz/Red Sea status and WTI crude, but has no indicator for the East-West Pipeline \u2014 the sole Saudi Hormuz-bypass route that was functioning as a critical relief valve. Its shutdown on Sept 11 eliminates the last major contingency for ~4\u20137 mb/d of Gulf supply, materially worsening the s20 risk picture beyond what the existing 'Hormuz/Red Sea status' band alone captures. A dedicated pipeline-status indicator is needed to distinguish between 'Hormuz contested + bypass intact' and the far more dangerous 'Hormuz contested + bypass gone' state the market is now in.",
+      "status": "pending",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "sightings": 1,
+      "id": "saudi-arabia-s-hormuz-bypass-east-west-pipeline--854912"
+    },
+    "iea-september-omr-global-oil-supply-forecast-cut-e1c8c9": {
+      "headline": "IEA September OMR: global oil supply forecast cut a further 6%, demand down 2.5 mb/d; strategic inventories nearing 'tank bottoms'",
+      "summary": "The IEA's September 2026 Oil Market Report cut the 2026 global oil supply forecast by 6% (to \u22125.7 mb/d vs 2025) and revised demand down by 2.5 mb/d, warning that stalled US-Iran diplomatic talks and renewed shipping-lane attacks are compounding the deepest supply disruption in history. Analysts note inventories have already drawn by ~1 billion barrels, with perhaps only ~1 billion remaining before structural shortfall.",
+      "as_of": "2026-09-11",
+      "sources": [
+        "https://www.cnbc.com/2026/09/11/iran-war-oil-diesel-iea-hormuz.html",
+        "https://qz.com/saudi-arabia-east-west-pipeline-shutdown-oil-prices-hormuz-091426"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "WTI_crude_oil_USD_bbl",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The IEA's sharply downgraded supply/demand balance directly updates the WTI crude and Hormuz/Red Sea status indicators in s20_sea_lanes. The 6% supply-forecast cut and inventory-depletion warning are the most material quantitative update to those indicators this week, confirming the 'closed/contested = 2' reading and pushing the crude indicator substantially higher. Also feeds s18_food_fertilizer (Hormuz/Gulf disruption indicator) and s5_china_deflation (cost-push channel).",
+      "status": "pending",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "sightings": 1,
+      "id": "iea-september-omr-global-oil-supply-forecast-cut-e1c8c9"
+    },
+    "boj-rate-hike-decision-imminent-10-year-jgb-yiel-0acc3c": {
+      "headline": "BOJ rate-hike decision imminent: 10-year JGB yield hits 3.00% (highest since 1996), yen at ~\u00a5154/$, carry-trade unwind risk elevated",
+      "summary": "Japan's 10-year JGB yield reached 3.00% on September 15 \u2014 up 140 bps year-on-year and the highest since 1996 \u2014 as markets price a BOJ hike at the September 19 meeting, with BOJ board member Masu signalling continued tightening. USD/JPY has strengthened to ~\u00a5154, the 30-year UST\u2013JGB spread has collapsed to ~120 bps, and GPIF repatriation pressure is mounting, raising carry-trade unwind risk.",
+      "as_of": "2026-09-15",
+      "sources": [
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.home.saxo/en-hk/content/articles/macro/asia-market-quick-take-16-september-2026-16092026",
+        "https://coinedition.com/yen-strength-and-rising-jgb-yields-signal-risk-of-global-carry-trade-unwind/",
+        "https://www.w1m.com/insights/the-yen-carry-trade-approaching-a-tipping-point/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30_year_JGB_yield_pct",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The 10-year JGB at 3.00% and the imminent BOJ September hike decision are fresh, material readings for s2_japan's core indicators (USD/JPY strengthening toward \u00a5154 is risk-on for the tracker; 30-year yield also at cycle highs; Takaichi financing clarity remains 'unclear' given the heavy auction calendar). The convergence of BOJ tightening signals, GPIF domestic reallocation pressure, and the collapsed UST-JGB spread materially raises the probability of a disorderly carry-trade unwind \u2014 the central scenario s2 tracks.",
+      "status": "pending",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "sightings": 1,
+      "id": "boj-rate-hike-decision-imminent-10-year-jgb-yiel-0acc3c"
+    },
+    "china-s-nov-10-rare-earth-export-control-pause-e-1fff74": {
+      "headline": "China's Nov-10 rare-earth export-control pause expiry approaches with no extension announced; MOFCOM enforcement posture hardening",
+      "summary": "The November 2025 suspension of China's second-wave rare-earth export controls (covering 5 additional REEs plus extraterritorial provisions) expires on November 10, 2026 \u2014 less than 8 weeks away \u2014 with no extension announced. Concurrently, MOFCOM Announcement No. 26 of 2026 formalized a public reporting mechanism for violations, and China tightened Japan-specific dual-use controls in January 2026, signalling an increasingly aggressive enforcement posture rather than rollback.",
+      "as_of": "2026-09-16",
+      "sources": [
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Nov_2025_pause_status",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Nov-10 expiry of the pause is now within the 8-week risk horizon and no renewal has been signalled; the tracker's 'Nov-2025 pause status' indicator should move from 0 (extended) toward 1 (expiring). The hardening MOFCOM enforcement posture \u2014 including arrest of Japanese nationals, formalized violation-reporting, and tightened Japan-specific controls \u2014 suggests the political will to let the pause lapse or replace it with tighter licensing has grown since the original Xi-Trump deal. This is exactly the scenario s6_rare_earths was designed to capture.",
+      "status": "pending",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "sightings": 1,
+      "id": "china-s-nov-10-rare-earth-export-control-pause-e-1fff74"
+    },
+    "us-treasury-10-year-yield-surges-past-5-as-energ-e92c41": {
+      "headline": "US Treasury 10-year yield surges past 5% as energy inflation keeps Fed on hold; bond selloff broadens globally",
+      "summary": "The US 10-year yield broke above 5% \u2014 the highest since 2007 \u2014 driven by repriced Fed-on-hold expectations amid sticky energy inflation from the Iran war, disappointing Treasury buyback announcements, and a global bond selloff that also pushed the German 10-year Bund to 3.54% and Japan's JGB to 3.05%. Wells Fargo simultaneously cut its S&P 500 target citing 5\u201310% near-term downside.",
+      "as_of": "2026-09-15",
+      "sources": [
+        "https://investing.com/news/commodities-news/us-energy-chief-says-saudi-arabia-oil-pipeline-should-be-back-online-within-days-4902318",
+        "https://www.home.saxo/en-hk/content/articles/macro/asia-market-quick-take-16-september-2026-16092026",
+        "https://tradingeconomics.com/japan/government-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US_10y_Treasury_yield_pct",
+        "type": "value",
+        "rubric": "Nominal 10-year UST yield (constant maturity, daily close). Acts as the primary rate-level input for basis-trade P&L and margin calls on leveraged Treasury positions; a rapid move above 5% is historically associated with forced deleveraging episodes that stress the basis trade.",
+        "sources": [
+          "https://investing.com/news/commodities-news/us-energy-chief-says-saudi-arabia-oil-pipeline-should-be-back-online-within-days-4902318",
+          "https://fred.stlouisfed.org/series/DGS10"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "s1_basis_trade currently tracks SOFR-EFFR spread and MOVE index but lacks a direct nominal yield-level indicator. The 10-year breaking 5% \u2014 the highest since 2007 \u2014 is the single most relevant trigger for basis-trade blowup risk because (a) it directly marks Treasury positions held by levered hedge funds to large losses, (b) it amplifies MOVE, and (c) it drives SOFR-EFFR dislocations as repo stress intensifies. The global bond selloff is also propagating through JGBs (s2) and Bunds (s10), making this a cross-story systemic signal that warrants a direct level indicator in the story that most depends on rate stability.",
+      "status": "pending",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "sightings": 1,
+      "id": "us-treasury-10-year-yield-surges-past-5-as-energ-e92c41"
+    },
+    "treasury-issues-genius-act-nprm-with-jan-2027-ef-ba9f9d": {
+      "headline": "Treasury issues GENIUS Act NPRM with Jan 2027 effective date; Tether delisted from EU venues under MiCA, stablecoin supply at $322bn",
+      "summary": "The US Treasury published its GENIUS Act Notice of Proposed Rulemaking in mid-August, with the licensing regime taking effect January 18, 2027, creating a live compliance deadline less than 4 months away. Simultaneously, MiCA enforcement delisted Tether from EU-regulated venues (Circle authorized), while total USD stablecoin supply reached $322.6bn in May 2026 \u2014 a new record \u2014 raising the materiality of any peg or redemption stress event.",
+      "as_of": "2026-09-16",
+      "sources": [
+        "https://home.treasury.gov/news/press-releases/sb0605",
+        "https://orochi.network/blog/2026-stablecoin-regulatory-expectations-the-future-of-global-payments",
+        "https://www.brookings.edu/articles/stablecoins-after-genius/"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s7_stablecoins",
+      "target_indicator": "GENIUS_implementation_friction",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Treasury NPRM moves GENIUS Act implementation from abstract to concrete: a Jan 2027 effective date with a multi-agency rulemaking pipeline still in progress creates meaningful execution risk (tracker indicator should move from 0 'smooth' toward 1 'gaps'). Tether's EU delisting is a real-world fragmentation event affecting the largest stablecoin by supply. With total stablecoin supply at a record $322.6bn \u2014 substantially above any prior tracker estimate \u2014 both the 'Total USD stablecoin supply' and 'GENIUS implementation friction' indicators need updating. The scale of Treasury-bill demand these reserves represent (~$300bn+ in T-bills) makes any redemption or regulatory disruption a material Treasury-market event, directly linking s7 to s1.",
+      "status": "pending",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "sightings": 1,
+      "id": "treasury-issues-genius-act-nprm-with-jan-2027-ef-ba9f9d"
     }
   },
-  "generated": "2026-09-15",
+  "generated": "2026-09-16",
   "model": "claude-sonnet-4-6",
   "new_count": 6,
-  "pending_count": 239
+  "pending_count": 245
 }
