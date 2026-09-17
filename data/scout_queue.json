@@ -175,12 +175,12 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "As of 11 Sep 2026, WTI crude is ~$100/bbl and Brent ~$104, with industry delegates at the Asia Pacific Petroleum Conference (APPEC) in Singapore reaching consensus that the US\u2013Iran standoff will persist until at least the end of the current US administration, making supply disruption a structural baseline. Attacks on shipping and energy infrastructure in early September reversed a summer price dip.",
-      "as_of": "2026-09-11",
+      "summary": "EIA's September 2026 STEO (released Sep 9) confirmed Brent averaged $91/bbl in August \u2014 $7 above July \u2014 as Middle Eastern oil exports remain constrained, with new US sanctions on Iran and attacks on Saudi infrastructure and Gulf shipping cited as the primary drivers. US distillate inventories are forecast to fall below 100 million barrels in September, their lowest since 2003.",
+      "as_of": "2026-09-09",
       "sources": [
-        "https://discoveryalert.com/analysis/us-iran-war-oil-prices-september-2026/",
-        "https://www.aljazeera.com/economy/2026/9/7/oil-prices-surge-as-us-iran-strikes-intensify-in-strait-of-hormuz",
-        "https://www.eia.gov/outlooks/steo/pdf/steo_full.pdf"
+        "https://www.eia.gov/outlooks/steo/pdf/steo_full.pdf",
+        "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+        "https://www.euronews.com/business/2026/09/15/us-10-year-treasury-yield-breaches-5-as-global-bond-sell-off-deepens"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -188,22 +188,21 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz/Red Sea status indicator should move to '2 closed' given the near-standstill described at APPEC, and WTI ~$100 is a hard read into the s20 WTI crude indicator. The APPEC structural-baseline consensus (not merely a premium) is new and highly material \u2014 it implies EIA's own September STEO projects Middle East production below pre-conflict averages through Q2 2027. This also feeds s18_food_fertilizer (Hormuz/Gulf disruption indicator \u2192 '2 cut') and s15_ai_power (energy cost spike). The decision to mark s20 rather than create a new story reflects that the Hormuz lane constraint is explicitly captured there; however, tracker owners should note second-order impacts on s18 and s11 (consumer inflation squeeze on debt-service capacity).",
+      "rationale": "This is the core exogenous shock driving nearly every other story in this week's scan. Attacks on Saudi energy infrastructure and Gulf shipping are cited by Reuters, EIA, and CNN as the primary driver of the global bond selloff, the energy inflation shock, and the food/fertilizer pressure. The Hormuz/Red Sea indicator should move to '2 closed / severely constrained' and WTI crude (CL=F) should be updated to ~$103/bbl. This event also has first-order cross-story feeds into s18_food_fertilizer (fertilizer input disruption), s4_dev_debt (EM energy import bills), and the newly discovered BoE gilt market stress.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-17",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 29
+      "sightings": 30
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 10-year JGB yield pierced 3% in early September, a 30-year high, driven by carry-trade unwinding, yen repatriation, and energy-driven inflation from the Iran war. The BOJ is widely expected to raise its policy rate to 1.25% \u2014 the highest since ~1995 \u2014 at its next meeting, while the Takaichi administration faces mounting criticism over fiscal expansion financing.",
-      "as_of": "2026-09-10",
+      "summary": "Japan's 10-year government bond yield reached 3.00% on September 17, a 27-year high, as the global bond selloff deepened and markets await the BOJ's policy meeting outcome. The 30-year JGB yield has also surged well above 3.5%, exacerbating concerns over Japan's fiscal sustainability under Takaichi's spending plans and threatening to unwind the global yen carry trade.",
+      "as_of": "2026-09-17",
       "sources": [
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/",
-        "https://www.indmoney.com/blog/us-stocks/global-bond-market-selloff",
-        "https://www.archynewsy.com/global-bond-yields-surge-amid-inflation-fears-and-fiscal-uncertainty/"
+        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield",
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -211,12 +210,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 10-year JGB at 3%+ (30-year high) and an imminent hike to 1.25% are directly captured by the s2_japan story. The 30-year JGB yield should be updated (it hit 3.89% in January 2026 and has been elevated since). The Takaichi plan financing clarity indicator should be moved to 1 (unclear) or 2 (disorderly) given analyst warnings that the 3% 10-year level acts as a market forcing function on fiscal plans. Carry-trade unwinding pressure also feeds into USD/JPY (yen has strengthened to near 7-month highs), moving that indicator toward risk-on compression.",
+      "rationale": "The 10-year JGB at 3% is a historically significant threshold not seen since 1996, with the 30-year elevated accordingly. Combined with USD/JPY 'intervention risk returning near 160' signals (per Investing.com headlines from Sep 15), the yen carry trade remains a live risk. The Takaichi fiscal plan financing clarity indicator should also be moved to '1 unclear' or '2 disorderly' given markets explicitly pricing in fiscal-risk premium alongside BOJ rate hike probability. This is a direct multi-indicator update for s2_japan and the most acute node in the current macro risk cluster.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-11",
+      "last_seen": "2026-09-17",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 25
+      "sightings": 26
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -2010,12 +2009,13 @@
     },
     "bank-of-england-governor-bailey-flags-rising-lev-fa9fc2": {
       "headline": "Bank of England Governor Bailey flags rising leverage in core government bonds, equity markets and private credit at Sintra as potential tail-risk-to-systemic-risk pipeline",
-      "summary": "The US 30-year Treasury yield at 5.25% and 10-year at 4.80% (as of Sept 8), alongside the US Treasury announcing emergency debt buybacks to cap yields, signals heightened Treasury market stress that raises the probability of basis-trade leverage unwinds. The WEF noted record government and corporate borrowing in 2026 is colliding with weakening long-duration demand.",
-      "as_of": "2026-09-08",
+      "summary": "The benchmark 10-year US Treasury yield broke above 5% on September 15 for the first time since October 2023, driven by surging energy prices from the Iran/Middle East conflict, mounting fiscal concerns, and heavy AI-linked corporate debt issuance. The 30-year yield hit 5.35%, and the selloff has spread across Germany, France, Italy, and Japan.",
+      "as_of": "2026-09-15",
       "sources": [
-        "https://www.indmoney.com/blog/us-stocks/global-bond-market-selloff",
-        "https://www.weforum.org/stories/financial-and-monetary-systems/why-global-bond-market-treasury-yields/",
-        "https://www.cnbc.com/2026/09/04/global-bond-selloff-inflation-risk.html"
+        "https://www.euronews.com/business/2026/09/15/us-10-year-treasury-yield-breaches-5-as-global-bond-sell-off-deepens",
+        "https://www.bloomberg.com/news/articles/2026-09-11/global-bond-selloff-sends-10-year-treasury-yields-to-cusp-of-5",
+        "https://www.cnbc.com/2026/09/14/10-year-us-treasury-is-closing-in-on-5percent.html",
+        "https://tradingeconomics.com/united-states/government-bond-yield"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -2023,11 +2023,11 @@
       "target_indicator": "MOVE index (Treasury volatility)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The synchronized global sovereign selloff directly stresses s1_basis_trade. The MOVE index (Treasury volatility) should be updated upward given the US 30-year hitting 5.25% and emergency Treasury buybacks being deployed \u2014 a step not taken since COVID. The SOFR-EFFR spread should be checked for signs of repo stress. The SEC central clearing rollout indicator is also relevant: a period of acute Treasury volatility is precisely the scenario where clearing-margin requirements could trigger forced deleveraging of basis trades. This links directly to s21_clearinghouses as well (MOVE and Treasury-clearing rollout stress). Tagging to s1_basis_trade MOVE as primary indicator.",
+      "rationale": "A move to 5%+ on the 10-year Treasury (20bp in one week, +30-year at 5.35%) dramatically elevates Treasury market volatility (MOVE index) and is the single most direct stressor for the basis trade. Leveraged hedge-fund positions in cash-futures arbitrage face mark-to-market losses and potential margin calls as yield curve volatility spikes. This event directly stresses the MOVE indicator and the 'SEC central clearing on track' ordinal, and indirectly feeds into s21_clearinghouses via equity VIX spillover. The 5% threshold is the same level that caused stress in Oct-2023, but this time the global backdrop \u2014 Iran war, energy shock, fiscal deficits \u2014 is more structurally embedded.",
       "status": "pending",
       "first_seen": "2026-07-05",
-      "last_seen": "2026-09-11",
-      "sightings": 2,
+      "last_seen": "2026-09-17",
+      "sightings": 3,
       "id": "bank-of-england-governor-bailey-flags-rising-lev-fa9fc2"
     },
     "us-china-tariff-regime-restructured-post-supreme-6aede7": {
@@ -2967,11 +2967,12 @@
     },
     "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0": {
       "headline": "China June PPI +4.1% YoY (4-year high) driven by Iran energy shock\u2014but MoM turned negative and consumer goods PPI still -0.9%, revealing a dangerous bifurcation",
-      "summary": "China's National Bureau of Statistics reported August 2026 PPI at +3.8% YoY on 13 September, a dramatic reversal from deep deflation earlier in 2026, primarily fueled by the global oil price shock from the Iran war. The swing is large enough to shift China from being a deflationary exporter to a potential cost-push exporter.",
+      "summary": "China's PPI rose 3.8% YoY in August 2026, a 4.7 percentage-point swing from February's deflationary reading, driven entirely by energy and commodity input cost inflation from the Middle East war rather than demand recovery. This 'cost-push' reversal \u2014 with CPI still subdued \u2014 represents a stagflationary squeeze on Chinese manufacturers who cannot pass costs downstream.",
       "as_of": "2026-09-13",
       "sources": [
         "https://www.trend.az/world/4223315.html",
-        "https://www.lundgreensinvestorinsights.com/next-week-in-china-7-11-september-2026/"
+        "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html",
+        "https://www.stats.gov.cn/english/PressRelease/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -2979,11 +2980,11 @@
       "target_indicator": "China PPI YoY (%) - large swing either way is worse",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s5 story captures both deflation AND cost-push spillover scenarios, noting explicitly that 'a large swing either way is worse.' A +3.8% print \u2014 a nearly 5pp reversal from February \u2014 is precisely such a swing. This is not benign reflation driven by domestic demand; it is oil cost-push that bypasses the domestic consumption channel (manufacturing PMI still below 50 in August per Lundgreen's), meaning Chinese exporters may begin passing higher factory-gate costs into global goods prices. Tracker should update the China PPI indicator reading from deflation-risk to cost-push-risk.",
+      "rationale": "The tracker's rubric explicitly flags 'large swing either way is worse.' A +3.8% reading after months at -2% to -3% is precisely the dangerous whipsaw the indicator was designed to capture. This is not demand-driven recovery \u2014 analysts note factories 'can't fully pass on cost increases to downstream clients,' meaning Chinese exporters face margin compression and may dump goods globally even more aggressively. This materially updates the China PPI indicator (from deeply negative to sharply positive) and should also move the 'new tariff/anti-dumping actions' ordinal, as cost-push inflation from energy may trigger new Chinese dumping in downstream goods, provoking Western anti-dumping responses.",
       "status": "pending",
       "first_seen": "2026-07-15",
-      "last_seen": "2026-09-14",
-      "sightings": 10,
+      "last_seen": "2026-09-17",
+      "sightings": 11,
       "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
     },
     "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328": {
@@ -7897,10 +7898,100 @@
       "last_seen": "2026-09-16",
       "sightings": 1,
       "id": "treasury-issues-genius-act-nprm-with-jan-2027-ef-ba9f9d"
+    },
+    "bank-of-england-halts-long-dated-gilt-sales-rewr-7a1e6f": {
+      "headline": "Bank of England Halts Long-Dated Gilt Sales, Rewrites QE Unwind Plan Amid Bond Rout",
+      "summary": "The Bank of England announced on September 17 it will permanently halt sales of 20- and 30-year gilts and pause all gilt auctions for six months, rewriting its quantitative tightening programme as 30-year UK yields hit their highest since 1998. The BoE will hold a 'substantial part' of its \u00a3488bn gilt stock indefinitely, a forced pivot echoing the September 2022 LDI crisis.",
+      "as_of": "2026-09-17",
+      "sources": [
+        "https://www.investing.com/news/economy-news/bank-of-england-halts-longdated-gilt-sales-rewrites-plan-to-unwind-qe-4906037",
+        "https://www.globalbankingandfinance.com/bank-england-sets-out-long-term-plan-unwind-qe-halts/",
+        "https://ifttt.itbehere.com/2026/09/16/bank-of-england-to-stop-selling-20-and-30-year-gilts-as-yields-soar/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s14_pensions",
+      "proposed_indicator": {
+        "label": "Major-CB QT reversal / emergency pivot (0 none / 1 slowdown / 2 halt-or-reversal)",
+        "type": "band",
+        "rubric": "0 = all major CBs proceeding with planned QT; 1 = one major CB slowing pace materially; 2 = one or more major CBs halting or reversing QT sales under market duress (analogous to BoE Sep 2022 and Sep 2026). Elevated readings signal that sovereign bond markets are too fragile to absorb private supply without CB backstop, a direct precursor to LDI/pension-fund stress.",
+        "sources": [
+          "https://www.investing.com/news/economy-news/bank-of-england-halts-longdated-gilt-sales-rewrites-plan-to-unwind-qe-4906037",
+          "https://www.globalbankingandfinance.com/bank-england-sets-out-long-term-plan-unwind-qe-halts/"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The BoE action is a direct replay of the precursor conditions to the October 2022 UK LDI crisis that nearly blew up defined-benefit pension funds. The existing s14_pensions story tracks 'UK-2022 type' events with a 0/1/2 ordinal, but no indicator captures the leading signal: when a major central bank is forced to halt/reverse QT to prevent a long-end gilt rout, pension funds with LDI overlays face collateral calls. The proposed indicator gives the tracker a forward-looking tripwire for that scenario. Current reading: 2 (BoE full halt plus forward guidance of permanent elimination of long-dated sales). France's OAT yield at 4.50% (per Euronews) and Germany's Bund at 3.54% (15-year high) also warrant an update to s10_france OAT-Bund spread indicator.",
+      "status": "pending",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "sightings": 1,
+      "id": "bank-of-england-halts-long-dated-gilt-sales-rewr-7a1e6f"
+    },
+    "synchronized-global-sovereign-bond-selloff-acros-c1a10d": {
+      "headline": "Synchronized Global Sovereign Bond Selloff Across G7 \u2014 New Cross-Story Systemic Amplifier",
+      "summary": "For the first time since 2008-equivalent stress periods, G7 sovereign yields have simultaneously hit multi-decade highs: US 10-year at 5%, UK 30-year at highest since 1998, Germany 10-year Bund at 15-year highs, Japan 10-year at 27-year highs, and France's OAT at 4.50%. The common driver is the Middle East energy shock compounding fiscal deficits and AI-capex debt issuance, creating a cross-asset correlation shock with no single-story capture.",
+      "as_of": "2026-09-15",
+      "sources": [
+        "https://www.euronews.com/business/2026/09/15/us-10-year-treasury-yield-breaches-5-as-global-bond-sell-off-deepens",
+        "https://www.cnn.com/2026/09/14/investing/bond-yields-market-turmoil",
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/",
+        "https://www.bis.org/publications/qr-202609"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Synchronized G7 Bond Selloff / Global Term-Premium Shock",
+        "why": "When all major sovereign bond markets sell off simultaneously \u2014 driven by a common exogenous shock (Middle East energy war) amplified by structural fiscal deterioration and AI capex debt supply \u2014 the resulting term-premium repricing functions as a global tightening impulse that no single central bank can offset. This is distinct from individual country stories (s2_japan, s10_france, s1_basis_trade) because the correlation itself is the risk: it eliminates the usual safe-haven diversification, forces leveraged players to de-risk across all duration assets at once, and threatens a reflexive loop where higher yields worsen fiscal sustainability which pushes yields higher still. The BIS September 2026 Quarterly Review specifically highlights fiscal policy as a new driver of bond market stress.",
+        "proposed_level": 8,
+        "set": "Set 1",
+        "indicators": [
+          {
+            "label": "G7 10-year yield average (%, GDP-weighted US/DE/UK/JP/FR)",
+            "type": "value",
+            "rubric": "Tracks the aggregate 'price of safe assets' globally. A rapid rise of >50bp in any rolling 4-week window signals a synchronized tightening impulse. Current reading: approx. 4.2% GDP-weighted, up ~60bp in 6 weeks.",
+            "sources": [
+              "https://www.euronews.com/business/2026/09/15/us-10-year-treasury-yield-breaches-5-as-global-bond-sell-off-deepens",
+              "https://tradingeconomics.com/united-states/government-bond-yield"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "G7 sovereign yield 4-week range (bp) \u2014 synchronicity proxy",
+            "type": "value",
+            "rubric": "Measures how many G7 markets moved >40bp in the same direction over 4 weeks (0 = none, 5 = all five). A reading of 4-5 indicates systemic correlation stress. Current reading: 5 of 5 G7 markets moved sharply higher.",
+            "sources": [
+              "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/",
+              "https://www.bloomberg.com/news/articles/2026-09-11/global-bond-selloff-sends-10-year-treasury-yields-to-cusp-of-5"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Treasury/Bund/Gilt term-premium estimate (%, ACM/KW model) \u2014 risk compensation",
+            "type": "value",
+            "rubric": "Rising term premium signals investors demanding more compensation for duration and fiscal risk beyond rate expectations alone \u2014 this is structurally more dangerous than rate-expectation-driven yield rises. Watch for >100bp ACM term premium on US 10-year.",
+            "sources": [
+              "https://www.cnn.com/2026/09/14/investing/bond-yields-market-turmoil",
+              "https://www.bis.org/publications/qr-202609"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "No single existing story in the tracker captures the cross-market correlation of a simultaneous G7 bond selloff as a standalone systemic risk. While individual nodes (s1_basis_trade, s2_japan, s10_france, s14_pensions) capture country-specific bond stress, the key new risk is the synchronized, multi-jurisdictional nature of the selloff eliminating diversification and creating a global tightening impulse equivalent to several rate hikes. The BIS Sep 2026 Quarterly Review explicitly highlights fiscal policy as a driver. This warrants a new story at risk level 8 because it is the amplifying mechanism linking the energy shock (s20_sea_lanes), fiscal deficits (s10_france, s2_japan), and financial system leverage (s1_basis_trade, s14_pensions, s21_clearinghouses) into a single destabilizing feedback loop.",
+      "status": "pending",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "sightings": 1,
+      "id": "synchronized-global-sovereign-bond-selloff-acros-c1a10d"
     }
   },
-  "generated": "2026-09-16",
+  "generated": "2026-09-17",
   "model": "claude-sonnet-4-6",
-  "new_count": 6,
-  "pending_count": 245
+  "new_count": 2,
+  "pending_count": 247
 }
