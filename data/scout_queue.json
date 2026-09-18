@@ -778,10 +778,11 @@
     },
     "world-bank-cuts-em-global-growth-to-2-5-for-2026-be2ac5": {
       "headline": "World Bank Cuts EM/Global Growth to 2.5% for 2026; Developing-World Borrowing Costs Surge on Energy Shock",
-      "summary": "S&P Global's August 2026 Banking Risk Monthly flagged that debt restructuring is increasingly likely in Senegal, raising risks for its domestic banking system. This adds to an emerging cluster of frontier-market sovereign stress at a moment when Hormuz-driven oil prices and high US long-end yields are squeezing developing-country external financing.",
-      "as_of": "2026-08-11",
+      "summary": "The World Bank's July 2026 Global Economic Prospects projects global growth at 2.5% in 2026, with EMDEs facing their weakest per-capita income growth since the pandemic, as the Hormuz-driven energy shock compounds existing debt burdens; fiscal pressures are explicitly cited as threatening poverty and food security. The IEA's March oil-supply crash of 10.1 mb/d and $46/bbl Brent spike disproportionately hit oil-importing frontier markets with thin reserve buffers.",
+      "as_of": "2026-07-10",
       "sources": [
-        "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/08/banking-risk-monthly-outlook-august-2026"
+        "https://www.worldbank.org/en/publication/global-economic-prospects",
+        "https://blogs.worldbank.org/en/opendata/strait-of-hormuz-disruption-sends-oil-prices-surging"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -789,12 +790,12 @@
       "target_indicator": "New IMF programs / missed coupons (0 calm / 1 rising / 2 cluster)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Senegal joining the restructuring queue \u2014 on top of the broader EM external financing squeeze from high US real yields and Hormuz-driven commodity price volatility \u2014 supports moving the 'New IMF programs / missed coupons' ordinal from '1 rising' toward '2 cluster'. Senegal is a CFA franc country; a restructuring there would carry systemic implications for the West African franc zone and French banking exposures, creating a potential link to s10_france as well.",
+      "rationale": "The Hormuz shock is a material, exogenous terms-of-trade shock for oil-importing EMDEs (Sub-Saharan Africa, South Asia, MENA non-producers) that directly worsens debt-service capacity and is likely to accelerate new IMF program requests. The World Bank explicitly flags fiscal stress threatening poverty targets. This should move the 'New IMF programs / missed coupons' indicator from '0 calm' toward '1 rising' and warrants a near-term watch for a cluster event, making it a medium-to-high materiality update for s4_dev_debt.",
       "status": "pending",
       "first_seen": "2026-07-02",
-      "last_seen": "2026-08-31",
+      "last_seen": "2026-09-18",
       "id": "world-bank-cuts-em-global-growth-to-2-5-for-2026-be2ac5",
-      "sightings": 3
+      "sightings": 4
     },
     "iran-re-asserts-route-control-over-strait-of-hor-558290": {
       "headline": "Iran re-asserts route control over Strait of Hormuz days into fragile ceasefire; oil near $72 but shipping volumes at ~30% of pre-war levels",
@@ -989,12 +990,12 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "The November 2025 one-year suspension of China's expanded rare-earth export controls (covering five additional REEs plus extraterritorial provisions) is set to lapse on November 10, 2026, with no confirmed extension. Separately, China's 2026 Import-Export Licensing Catalogue has already added new licensing requirements for samarium, gadolinium, and lutetium, with enforcement of extraterritorial provisions delayed only until November 2026.",
-      "as_of": "2026-09-01",
+      "summary": "China's suspension of its sweeping Oct-9-2025 rare-earth export controls (covering extraterritorial FDPR-style provisions) expires November 10, 2026. With the Trump-Xi summit scheduled for September 24, Reuters reports some Chinese suppliers have already paused certain US shipments amid licensing delays, elevating the risk that the pause lapses or is only partially extended.",
+      "as_of": "2026-09-18",
       "sources": [
+        "https://rareearthexchanges.com/news/china-rare-earth-controls-trump-xi-deadline/",
         "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
-        "https://www.certivo.com/blog-details/china-rare-earth-export-controls-2026-what-new-licensing-rules-mean-for-manufacturers",
-        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+        "https://referently.com/chinas-critical-mineral-export-controls-gallium-germanium-antimony-graphite-and-rare-earths-timeline/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1002,12 +1003,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Nov-2025 pause status indicator should now move from '0 extended' to '1 expiring': the one-year suspension clock is running with no confirmed renewal, and enforcement of the extraterritorial provisions of the new 2026 licensing catalogue is simultaneously converging on November 2026. Clark Hill explicitly flags 'regulatory tightening in late 2026 if bilateral conditions deteriorate.' With US-Iran conflict consuming US geopolitical bandwidth, the probability of a US-China deal to extend the pause before November 10 has decreased materially. Licensing approval rates are reportedly below 25% for European firms under the existing April 2025 controls.",
+      "rationale": "The Nov-2025 pause status indicator should move from '0 extended' toward '1 expiring': the deadline is 53 days away, diplomatic outcome is uncertain, and pre-summit supplier pauses signal that the market is already pricing partial reinstatement risk. The Sept 24 Trump-Xi summit is the pivotal near-term event. Additionally, the export-license flow indicator may need a concurrent update if pre-summit Chinese supplier pauses continue to be reported.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-09-01",
+      "last_seen": "2026-09-18",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 13
+      "sightings": 14
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -7988,10 +7989,103 @@
       "last_seen": "2026-09-17",
       "sightings": 1,
       "id": "synchronized-global-sovereign-bond-selloff-acros-c1a10d"
+    },
+    "boj-hikes-to-1-25-fastest-tightening-pace-since--db9ce9": {
+      "headline": "BOJ hikes to 1.25% \u2013 fastest tightening pace since normalization began",
+      "summary": "The Bank of Japan raised its policy rate 25 bp to 1.25% on 18 Sept 2026, the highest since 1995, in a 7-2 decision, and the inter-hike interval shortened to three months versus six months previously, signalling an accelerating cycle. USD/JPY and global carry-trade unwind risk intensify as 10-year JGB yields simultaneously climbed above 3% for the first time since 1996.",
+      "as_of": "2026-09-18",
+      "sources": [
+        "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html",
+        "https://tradingeconomics.com/japan/government-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield (%) \u2014 10y just crossed 3%; also flags USD/JPY carry-unwind pressure",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "BOJ policy rate at 1.25% and 10y JGB >3% are direct, material reads on s2_japan's JGB yield and carry-trade indicators. The quickening hike cadence and the Takaichi fiscal backdrop together make this a high-materiality update to existing indicator set: 30-year JGB yield and USD/JPY both need refreshing; Takaichi plan financing clarity likely shifts toward '1 unclear' given simultaneous rate pressure.",
+      "status": "pending",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "sightings": 1,
+      "id": "boj-hikes-to-1-25-fastest-tightening-pace-since--db9ce9"
+    },
+    "china-ppi-swings-3-8-yoy-in-august-sharpest-reve-1af710": {
+      "headline": "China PPI swings +3.8% YoY in August \u2013 sharpest reversal in the deflation story",
+      "summary": "China's August 2026 PPI rose 3.8% year-on-year (up 4.7 percentage points from the February trough), driven by surging energy costs from the Middle East conflict rather than genuine domestic demand recovery. CPI also printed 0.8% YoY, beating consensus, but analysts flag that energy-cost-push, not consumer strength, is the driver \u2013 raising the risk of a cost-push rather than demand-pull regime shift.",
+      "as_of": "2026-09-09",
+      "sources": [
+        "https://www.vantagemarkets.com/market-news/china-cpi-ppi-august-energy-prices-september-9-2026/",
+        "https://www.trend.az/world/4223315.html"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s5_china_deflation",
+      "target_indicator": "China PPI YoY (%) \u2014 large swing either way is worse",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The tracker explicitly flags 'large swing either way is worse.' A near-5pp reversal from deep deflation to +3.8% YoY within six months is precisely the non-linear swing the rubric is designed to catch. Unlike genuine reflation, the NBS attributed the move to imported energy prices, meaning Chinese exporters face margin pressure without pricing power downstream \u2014 a distinct risk from prior deflation-export scenarios.",
+      "status": "pending",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "sightings": 1,
+      "id": "china-ppi-swings-3-8-yoy-in-august-sharpest-reve-1af710"
+    },
+    "saudi-east-west-pipeline-shut-sept-11-pushes-bre-7accbc": {
+      "headline": "Saudi East-West Pipeline shut (Sept 11) pushes Brent to ~$105; Hormuz still 'contested'",
+      "summary": "On 11 September 2026 the East-West Crude Oil Pipeline was shut, briefly removing ~400,000 b/d from Saudi export capacity. Saudi Arabia is rerouting some volumes back through Hormuz, keeping Brent around $101\u2013105/bbl; Rapidan warns risk is 'skewed toward larger disruption' if the outage extends or proxy groups escalate.",
+      "as_of": "2026-09-17",
+      "sources": [
+        "https://www.cnbc.com/2026/09/17/oil-prices-today-wti-brent-hormuz-iran-war.html",
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "WTI crude oil (USD/bbl, CL=F) and Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "WTI ~$102 and Brent ~$105 are direct indicator updates for s20_sea_lanes. The status indicator should read '1 contested' (Hormuz partially re-opened per the June MOU but now re-stressed by the pipeline closure and ongoing rerouting). The new pipeline dimension adds a secondary chokepoint not previously flagged, making this a high-materiality update.",
+      "status": "pending",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "sightings": 1,
+      "id": "saudi-east-west-pipeline-shut-sept-11-pushes-bre-7accbc"
+    },
+    "qatar-uae-lng-infrastructure-damage-delays-globa-ee9e03": {
+      "headline": "Qatar/UAE LNG infrastructure damage delays global 'LNG supply wave' \u2013 energy prices spiking in Asia/Europe",
+      "summary": "The IEA reports that Hormuz disruption cut LNG flows from Qatar and UAE by over 300 million cubic metres per day since 1 March, and damage to Qatari liquefaction infrastructure is now set to permanently reduce projected LNG supply growth, delaying the anticipated 2026-27 supply wave. Asian and European spot gas prices hit their highest monthly averages since January 2023.",
+      "as_of": "2026-08-12",
+      "sources": [
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+        "https://cepr.org/voxeu/columns/energy-markets-under-chokepoint-stress-2026-hormuz-shock"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Global LNG supply disruption severity (0 minimal / 1 significant / 2 structural)",
+        "type": "band",
+        "rubric": "0 = Hormuz-related LNG loss <5% of global trade, no permanent infrastructure damage; 1 = 5-15% loss or temporary damage to liquefaction capacity; 2 = >15% loss or confirmed multi-year reduction to nameplate LNG capacity (e.g. Qatar North Field damage), with European/Asian spot gas >150% of 2025 average",
+        "sources": [
+          "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+          "https://cepr.org/voxeu/columns/energy-markets-under-chokepoint-stress-2026-hormuz-shock"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "s20_sea_lanes tracks Hormuz crude status and WTI but has no indicator for LNG infrastructure damage, which is a categorically different and longer-lasting risk. Qatari liquefaction damage is a multi-year supply reduction that persists even after Hormuz re-opens, driving structurally higher European and Asian gas prices that feed into inflation, industrial costs, and EM debt stress (s4). This gap is material and distinct from the crude-oil indicators already tracked.",
+      "status": "pending",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "sightings": 1,
+      "id": "qatar-uae-lng-infrastructure-damage-delays-globa-ee9e03"
     }
   },
-  "generated": "2026-09-17",
+  "generated": "2026-09-18",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 247
+  "new_count": 4,
+  "pending_count": 251
 }

@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-09-17 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-09-18 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 6.7/10** — Set 1 5.8, Set 2 4.8, Set 3 4.5, Set 4 6.8, Set 5 5.2.
+**Overall risk 6.6/10** — Set 1 5.8, Set 2 4.8, Set 3 4.5, Set 4 6.5, Set 5 5.2.
 
 
 ## Set 1 — Funding & Leverage
@@ -112,7 +112,7 @@ ASML is the sole maker of EUV lithography machines, with Zeiss the sole optics s
 
 *Indicators watched:* Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis), Export-control escalation (0 stable / 1 tightening / 2 retaliation), Single-point concentration (0 easing / 1 high / 2 extreme)
 
-### Sea lanes & undersea cables — 8/10 (High)
+### Sea lanes & undersea cables — 7/10 (High)
 
 A few maritime chokepoints and undersea cables carry most global trade and data. The 2026 Hormuz/Red Sea disruptions showed how quickly closures spike energy and shipping costs; cable cuts are a parallel, under-watched vulnerability.
 
