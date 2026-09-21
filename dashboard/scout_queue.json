@@ -8084,8 +8084,9 @@
       "id": "qatar-uae-lng-infrastructure-damage-delays-globa-ee9e03"
     }
   },
-  "generated": "2026-09-18",
+  "generated": "2026-09-21",
   "model": "claude-sonnet-4-6",
   "new_count": 4,
-  "pending_count": 251
+  "pending_count": 251,
+  "last_error": "HTTP Error 400: Bad Request"
 }

@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-09-18 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-09-21 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 6.6/10** — Set 1 5.8, Set 2 4.8, Set 3 4.5, Set 4 6.5, Set 5 5.2.
+**Overall risk 6.7/10** — Set 1 5.8, Set 2 5.0, Set 3 4.5, Set 4 6.5, Set 5 5.2.
 
 
 ## Set 1 — Funding & Leverage
@@ -46,7 +46,7 @@ AI infrastructure spending vastly exceeds current AI revenue, increasingly finan
 
 *Indicators watched:* US investment-grade OAS (%) - big-issuer proxy, AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast), GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)
 
-### CRE maturity wall / regional banks — 4/10 (Moderate)
+### CRE maturity wall / regional banks — 5/10 (Elevated)
 
 A wall of commercial real-estate loans - especially office - matures into higher rates and lower valuations, concentrated at regional banks. Rising delinquencies and 'extend and pretend' practices defer, rather than resolve, the losses.
 
