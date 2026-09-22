@@ -175,13 +175,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "The US-Iran conflict has throttled the Strait of Hormuz \u2014 historically carrying ~20% of global oil \u2014 and Houthi attacks on Saudi Aramco facilities on September 8 set oil sites ablaze, cutting Saudi output by ~1.9 million bpd. Brent peaked near $108 on September 10 and remained above $100 as of September 16, with Goldman Sachs flagging $120 upside risk; negotiations over a Hormuz deal collapsed over control terms.",
-      "as_of": "2026-09-16",
+      "summary": "Iran-war hostilities produced a simultaneous disruption of the Strait of Hormuz, Bab al-Mandab, and the Saudi East-West bypass pipeline (shut September 11), together removing an estimated 39% of global seaborne trade volume. The IEA characterised the combined disruption as the largest in market history, with Brent having surged above $90/bbl as of mid-September and strategic reserve releases underway.",
+      "as_of": "2026-09-15",
       "sources": [
-        "https://edition.cnn.com/2026/09/09/economy/oil-price-iran-war",
-        "https://economy.com.pk/oil-prices-break-100-in-2026-middle-east-conflict-energy-markets/",
-        "https://boereport.com/2026/09/16/oil-prices-extend-losses-on-easing-fears-of-middle-east-supply-disruption/",
-        "https://finance.yahoo.com/markets/article/oil-prices-approach-100-as-middle-east-conflict-flares-goldman-sees-potential-upside-to-120-122234220.html"
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
+        "https://www.ogj.com/IranWar",
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+        "https://www.congress.gov/crs-product/R45281"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -189,16 +189,16 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Both Hormuz and Bab al-Mandab are simultaneously contested; the IEA characterised this as 'the largest supply disruption in the history of the global oil market.' The Hormuz/Red Sea status indicator should be at '1 contested' approaching '2 closed' for Hormuz; WTI is above $100. This also cross-contaminates s18_food_fertilizer (Hormuz disruption to fertilizer inputs \u2192 '2 cut'), s4_dev_debt (oil import bills widening EM deficits), and s2_japan (Japan is ~90% import-dependent for energy).",
+      "rationale": "The simultaneous closure of Hormuz, Bab al-Mandab, and the Saudi bypass pipeline on September 11 moves the s20 Hormuz/Red Sea status indicator firmly to '2 closed' \u2014 the worst-case reading. WTI/Brent price indicator in s20 is also deeply affected. The East-West pipeline shutdown is a material new sub-event within the existing story that the tracker must register as a step-change in severity, not merely an ongoing trend.",
       "status": "pending",
       "first_seen": "2026-06-30",
       "last_seen": "2026-09-22",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 31
+      "sightings": 32
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The Bank of Japan raised its policy rate 25bp to 1.25% on September 18 in a 7-2 split vote, the highest level since April 1995 and only three months after the previous hike \u2014 the shortest inter-hike interval since 1990. Japan's 10-year JGB yield simultaneously climbed above 3%, a level last seen in September 1996, compounding fiscal stress under Takaichi's spending programme.",
+      "summary": "On September 18 the Bank of Japan hiked in a 7-2 vote, compressing the interval between hikes to three months (shortest since 1990) and signalling further increases. Japan's 10-year JGB yield crossed 3% on September 17, its highest level since September 1996, amplifying carry-trade unwind pressure and raising Takaichi fiscal-financing costs.",
       "as_of": "2026-09-18",
       "sources": [
         "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html",
@@ -211,12 +211,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "BOJ acceleration to a 3-month hike cadence (vs. 6 months prior) and 10Y JGB breaking 3% for the first time in 30 years materially reprices the yen carry trade unwind risk and JGB fiscal sustainability \u2014 both core s2_japan indicators. The 30Y yield almost certainly also rose sharply. The dissent pattern (2 doves) signals fragility in consensus, raising Takaichi financing-clarity risk to '1 unclear' if fiscal spending targets and BOJ QT collision intensifies.",
+      "rationale": "The BOJ accelerating its hike cycle to 1.25% \u2014 a 30-year high \u2014 while 10y JGBs breach 3% directly moves the tracker's core s2_japan indicators: the 30y JGB yield is now under acute upward pressure, USD/JPY yen-strengthening risk is live, and Takaichi fiscal-plan financing clarity (with surging yields) deteriorates toward '1 unclear'. This is the most material Japan development in years and fully captured by existing story and indicators.",
       "status": "pending",
       "first_seen": "2026-06-30",
       "last_seen": "2026-09-22",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 27
+      "sightings": 28
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -991,12 +991,12 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "China's suspension of its sweeping Oct-9-2025 rare-earth export controls (covering extraterritorial FDPR-style provisions) expires November 10, 2026. With the Trump-Xi summit scheduled for September 24, Reuters reports some Chinese suppliers have already paused certain US shipments amid licensing delays, elevating the risk that the pause lapses or is only partially extended.",
-      "as_of": "2026-09-18",
+      "summary": "Bloomberg reported on September 20 that Chinese rare-earth magnet shipments to the US declined in August, a signal of either supply-chain caution or deliberate pressure ahead of an imminent Xi-Trump meeting. The November 2025 one-year suspension of China's October-2025 comprehensive RE controls expires November 10, 2026 \u2014 less than seven weeks from today \u2014 creating a hard cliff for supply chains.",
+      "as_of": "2026-09-20",
       "sources": [
-        "https://rareearthexchanges.com/news/china-rare-earth-controls-trump-xi-deadline/",
+        "https://finance.yahoo.com/economy/policy/articles/china-rare-earth-magnet-exports-002819146.html",
         "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
-        "https://referently.com/chinas-critical-mineral-export-controls-gallium-germanium-antimony-graphite-and-rare-earths-timeline/"
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1004,12 +1004,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Nov-2025 pause status indicator should move from '0 extended' toward '1 expiring': the deadline is 53 days away, diplomatic outcome is uncertain, and pre-summit supplier pauses signal that the market is already pricing partial reinstatement risk. The Sept 24 Trump-Xi summit is the pivotal near-term event. Additionally, the export-license flow indicator may need a concurrent update if pre-summit Chinese supplier pauses continue to be reported.",
+      "rationale": "The falling magnet-export data and the looming November 10 suspension expiry move the s6 'Nov-2025 pause status' indicator from '0 extended' toward '1 expiring'. With Xi-Trump talks imminent and the suspension covering the sweeping Oct-2025 controls (including extraterritorial FDPR-mirror provisions), the outcome of those talks will be binary and extremely consequential for global defence/EV/semiconductor supply chains. The tracker must flag that the clock is running.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-09-18",
+      "last_seen": "2026-09-22",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 14
+      "sightings": 15
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -5945,11 +5945,12 @@
     },
     "big-tech-bond-issuance-tops-194bn-in-2026-as-ai--01d4e8": {
       "headline": "Big Tech bond issuance tops $194bn in 2026 as AI capex financing collides with 30-year yield at 19-year highs; refinancing stress emerging",
-      "summary": "AI companies have issued more than $1.5 trillion in new corporate bonds in 2026 YTD, a primary driver cited by TradingEconomics and WEF for the surge in long-end Treasury yields. This record supply, alongside an energy-driven inflation shock, is simultaneously tightening financial conditions across the economy and raising the spectre of GPU-backed debt refinancing stress as borrowing costs rise.",
-      "as_of": "2026-09-10",
+      "summary": "At his September 16 press conference, Chair Warsh explicitly identified AI-driven demand for debt capital as a structural contributor to elevated long-term Treasury yields near 5%, compounding energy-shock inflation. The dot plot now projects the fed funds rate at 4.00\u20134.25% at end-2026 and end-2027, raising refinancing costs for GPU-backed debt and large IG AI-infrastructure issuers.",
+      "as_of": "2026-09-16",
       "sources": [
-        "https://tradingeconomics.com/united-states/government-bond-yield",
-        "https://www.weforum.org/stories/financial-and-monetary-systems/why-global-bond-market-treasury-yields/"
+        "https://www.schwab.com/learn/story/fomc-meeting",
+        "https://www.bondsavvy.com/fixed-income-investments-blog/fed-dot-plot",
+        "https://www.ishares.com/us/insights/portfolio-insights/fed-outlook-rates-kevin-warsh-fixed-income-2026"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -5957,11 +5958,11 @@
       "target_indicator": "GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s8_ai_capex story tracks AI capex circular financing risk. Record $1.5T+ in AI-company bond issuance in 2026 YTD (cited by multiple credible sources as a material driver of the Treasury yield surge) directly updates both 'AI capex-vs-revenue gap concern' (widening fast as debt grows) and 'GPU-backed debt refinancing stress' (should move from 0 to 1\u2014signs\u2014given that rising yields at 4.85% 10-year increase refinancing cost for this debt). The US investment-grade OAS proxy indicator should also be reviewed upward. This is already in scope for s8 but the quantum ($1.5T+) is new and material.",
+      "rationale": "Warsh's explicit naming of AI-capex as a driver of structural yield elevation, combined with a dot plot that locks in 4%+ rates through 2027, moves the s8 'GPU-backed debt refinancing stress' indicator from '0 none' toward '1 signs' and the 'AI capex-vs-revenue gap concern' toward '2 widening fast'. The IG OAS indicator in s8 is also under upward pressure as IG spreads widen with rising base rates. This directly updates three of s8's existing indicators without requiring a new story.",
       "status": "pending",
       "first_seen": "2026-08-25",
-      "last_seen": "2026-09-10",
-      "sightings": 2,
+      "last_seen": "2026-09-22",
+      "sightings": 3,
       "id": "big-tech-bond-issuance-tops-194bn-in-2026-as-ai--01d4e8"
     },
     "us-30-year-yield-at-5-34-19-year-high-prompts-tr-e44fb9": {
@@ -8141,10 +8142,97 @@
       "last_seen": "2026-09-22",
       "sightings": 1,
       "id": "middle-east-energy-shock-forces-renewed-central--36d6e3"
+    },
+    "fed-raises-rates-25bp-to-3-75-4-00-12-0-vote-10--142984": {
+      "headline": "Fed raises rates 25bp to 3.75\u20134.00% (12-0 vote); 10-year Treasury hits 5%, dot plot signals two more hikes by end-2027",
+      "summary": "Chair Warsh's FOMC voted unanimously on September 16 to hike, citing energy-driven inflation and AI-capex demand for capital; the 10-year Treasury yield touched 5.04% and the dot plot's year-end 2026 median moved to 4.00\u20134.25%, implying at least one further hike. Long-term yields near 20-year highs are repricing credit across the economy.",
+      "as_of": "2026-09-16",
+      "sources": [
+        "https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html",
+        "https://www.bondsavvy.com/fixed-income-investments-blog/fed-dot-plot",
+        "https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-september-2026",
+        "https://www.schwab.com/learn/story/fomc-meeting"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US 10y nominal Treasury yield (%)",
+        "type": "value",
+        "rubric": "Current level ~5.01%; rising nominal yield tightens global dollar liquidity and raises EM refinancing costs independently of real yields. Flag at \u22655.0% (elevated), \u22655.5% (critical). Complements existing TIPS real-yield indicator in s4_dev_debt.",
+        "sources": [
+          "https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-september-2026",
+          "https://www.bondsavvy.com/fixed-income-investments-blog/fed-dot-plot"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The Fed's pivot to a full hiking cycle driven by an energy-shock inflation surge is a regime change that directly stresses s4_dev_debt (dollar index, real yields) and s8_ai_capex (IG OAS widening). The existing s4 indicator tracks TIPS real yield, but the nominal 10y yield near 5% is the dominant driver of EM refinancing cost and developing-world debt distress right now; adding it closes a gap. The FOMC hike also raises SOFR vs EFFR implications relevant to s1_basis_trade and s21_clearinghouses, but s4_dev_debt is the most directly impacted story without an existing indicator for nominal long rates.",
+      "status": "pending",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "sightings": 1,
+      "id": "fed-raises-rates-25bp-to-3-75-4-00-12-0-vote-10--142984"
+    },
+    "global-lng-supply-shock-hormuz-closure-cuts-qata-7b613d": {
+      "headline": "Global LNG supply shock: Hormuz closure cuts Qatar/UAE LNG exports by >300 mcm/day; IEA projects 140 bcm cumulative loss through 2030",
+      "summary": "The IEA quantified that disruption to Hormuz transit has cut Qatari and Emirati LNG exports by over 300 million cubic metres per day since March 1, with cumulative LNG supply loss projected at ~140 billion cubic metres through 2030 as liquefaction infrastructure damage delays the anticipated global LNG supply wave. Asian and European gas spot prices remain well above 2025 levels.",
+      "as_of": "2026-09-15",
+      "sources": [
+        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
+        "https://www.ogj.com/IranWar"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Global LNG chokepoint & gas-market fragmentation",
+        "why": "The 2026 Iran war has produced a structural, multi-year LNG supply shock (IEA: 140 bcm loss through 2030) that is distinct from the crude-oil/sea-lanes risk already tracked in s20_sea_lanes. LNG disruption drives European and Asian re-industrialisation costs, threatens power-grid stability for AI data centres (s15_ai_power), feeds food/fertiliser input costs (s18_food_fertilizer via ammonia), and hits developing-world import bills (s4_dev_debt). No existing story captures the medium-term gas-market dimension.",
+        "proposed_level": 8,
+        "set": "Set 4",
+        "indicators": [
+          {
+            "label": "Qatar/UAE LNG export volume vs pre-war baseline (%)",
+            "type": "value",
+            "rubric": "Baseline = Jan-2026 average. 0\u201310% shortfall = manageable; 11\u201330% = elevated; >30% = acute. Current reading: >300 mcm/day loss implies ~30\u201340% shortfall.",
+            "sources": [
+              "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Asian LNG spot price premium to TTF ($/mmBtu)",
+            "type": "value",
+            "rubric": "Normal = <$1; Elevated = $1\u20133; Acute = >$3. Sustained premium signals Asia outbidding Europe for scarce cargoes.",
+            "sources": [
+              "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "European gas storage fill rate vs 5-year average (%)",
+            "type": "value",
+            "rubric": "Track weekly Eurostat/GIE data. >100% = comfortable; 80\u2013100% = below normal; <80% = stress risk for winter rationing.",
+            "sources": [
+              "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "The IEA's projection of a 140 bcm cumulative LNG shortfall through 2030 \u2014 caused by physical damage to Qatari liquefaction infrastructure plus Hormuz transit risk \u2014 creates a multi-year structural gas-price floor that is categorically different from the near-term oil-price spike already covered by s20_sea_lanes. High gas prices feed AI-power grid stress, fertiliser production costs, and EM energy import bills. A dedicated story is warranted.",
+      "status": "pending",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "sightings": 1,
+      "id": "global-lng-supply-shock-hormuz-closure-cuts-qata-7b613d"
     }
   },
   "generated": "2026-09-22",
   "model": "claude-sonnet-4-6",
   "new_count": 2,
-  "pending_count": 253
+  "pending_count": 255
 }

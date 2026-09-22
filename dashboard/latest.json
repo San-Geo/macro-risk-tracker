@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22 06:18 UTC",
+  "generated_at": "2026-09-22 15:40 UTC",
   "aggregates": {
     "1": 5.8,
     "3": 4.2,
@@ -9,7 +9,7 @@
     "5": 5.2,
     "overall": 6.6
   },
-  "narrative": "**HEADLINE**\nMacro risk remains High at 6.6, with developing-world debt stabilizing but private credit opacity and Japan fiscal stress dominating the risk surface.\n\n**STORY CHANGES**\n\u2022 **Developing-world debt crisis** moved to Elevated (was 6.0): US real yields eased 50bp, reducing refinancing pressure, though IMF program activity remains calm\u2014practical risk is a false floor if global rates spike again.\n\n**ELEVATED OR HIGHER RISKS TO MONITOR**\nFive stories sit at High: Private credit's opaque expansion (8.0), Japan fiscal/JGB/carry trade (7.0), Critical minerals as a weapon (7.0), and Sea lanes & undersea cables (7.0). Eleven others at Elevated (5.0\u20136.0) span Treasury basis trades, China deflation, AI financing loops, CRE maturity walls, eurozone fragility, and supply-chain choke points.\n\n**WATCH CLOSEST**\nPrivate credit's opaque expansion at 8.0 (High) represents the least transparent systemic amplifier.",
+  "narrative": "**HEADLINE**\nMacro risk stands at High, driven by structural vulnerabilities in private credit, Japan's carry-trade exposure, and geopolitical leverage over critical inputs.\n\n**STORIES**\nNo intraday level changes recorded. Persistent High-band risks remain:\n\u2022 **Private credit's opaque expansion** (High): Rapid growth in unregulated lending with limited transparency creates tail-risk for sudden deleveraging.\n\u2022 **Japan fiscal / JGB / carry trade** (High): Sustained BoJ policy uncertainty and funding pressure amplify unwinding risk across global markets.\n\u2022 **Critical minerals as a weapon** (High): State control of supply chains creates asymmetric leverage; disruption cascades into semiconductors and energy transition.\n\u2022 **Sea lanes & underscore cables** (High): Geopolitical tensions threaten physical infrastructure for trade and data; limited redundancy.\n\nFive Elevated-band stories span Treasury basis trades, China spillover, CRE maturity stress, and commodity fragility. No momentum shifts observed.\n\n**WATCH**\nPrivate credit's opaque expansion carries highest structural risk\u2014opacity prevents early warning of forced liquidations.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -32,7 +32,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/SOFR",
-          "as_of": "2026-09-18",
+          "as_of": "2026-09-21",
           "provenance": "FRED"
         },
         {
@@ -104,7 +104,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 157.614,
+          "value": 157.466,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -326,7 +326,7 @@
         6,
         6,
         6,
-        6,
+        5,
         5
       ],
       "trend": {
@@ -362,7 +362,7 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.6964,
+          "value": 6.6991,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -539,7 +539,7 @@
         {
           "id": "stablecoin_supply",
           "label": "Total USD stablecoin supply ($bn)",
-          "value": 312.0,
+          "value": 311.9,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -727,12 +727,12 @@
         5,
         5,
         5,
+        4,
+        4,
+        4,
+        4,
+        4,
         5,
-        4,
-        4,
-        4,
-        4,
-        4,
         5,
         5
       ],
@@ -916,7 +916,7 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4358.2998,
+          "value": 4370.7002,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -1219,7 +1219,7 @@
         7,
         7,
         7,
-        7,
+        6,
         6,
         6,
         6,
@@ -1246,7 +1246,7 @@
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.818,
+          "value": 6.83,
           "band": 2,
           "baseline_band": 1,
           "weight": 0.5,
@@ -1459,12 +1459,12 @@
         6,
         6,
         6,
+        7,
+        7,
+        7,
+        7,
+        7,
         6,
-        7,
-        7,
-        7,
-        7,
-        7,
         6,
         6,
         6,
@@ -1587,7 +1587,7 @@
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 93.58,
+          "value": 91.39,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
@@ -1626,11 +1626,11 @@
         7,
         7,
         7,
+        8,
+        8,
+        8,
+        8,
         7,
-        8,
-        8,
-        8,
-        8,
         7,
         7,
         7
@@ -1653,7 +1653,7 @@
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 14.87,
+          "value": 14.3,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -1662,7 +1662,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^VIX",
-          "as_of": "2026-09-21",
+          "as_of": "2026-09-22",
           "provenance": "Market"
         },
         {
@@ -3810,8 +3810,8 @@
       {
         "id": "vix",
         "label": "VIX",
-        "value": 14.81,
-        "as_of": "2026-09-18",
+        "value": 14.87,
+        "as_of": "2026-09-21",
         "unit": "",
         "note": "Expected US stock-market volatility - the most-watched fear gauge. Calm markets usually sit below ~20.",
         "url": "https://fred.stlouisfed.org/series/VIXCLS"
