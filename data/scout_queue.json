@@ -175,12 +175,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "EIA's September 2026 STEO (released Sep 9) confirmed Brent averaged $91/bbl in August \u2014 $7 above July \u2014 as Middle Eastern oil exports remain constrained, with new US sanctions on Iran and attacks on Saudi infrastructure and Gulf shipping cited as the primary drivers. US distillate inventories are forecast to fall below 100 million barrels in September, their lowest since 2003.",
-      "as_of": "2026-09-09",
+      "summary": "The US-Iran conflict has throttled the Strait of Hormuz \u2014 historically carrying ~20% of global oil \u2014 and Houthi attacks on Saudi Aramco facilities on September 8 set oil sites ablaze, cutting Saudi output by ~1.9 million bpd. Brent peaked near $108 on September 10 and remained above $100 as of September 16, with Goldman Sachs flagging $120 upside risk; negotiations over a Hormuz deal collapsed over control terms.",
+      "as_of": "2026-09-16",
       "sources": [
-        "https://www.eia.gov/outlooks/steo/pdf/steo_full.pdf",
-        "https://www.eia.gov/outlooks/steo/report/global_oil.php",
-        "https://www.euronews.com/business/2026/09/15/us-10-year-treasury-yield-breaches-5-as-global-bond-sell-off-deepens"
+        "https://edition.cnn.com/2026/09/09/economy/oil-price-iran-war",
+        "https://economy.com.pk/oil-prices-break-100-in-2026-middle-east-conflict-energy-markets/",
+        "https://boereport.com/2026/09/16/oil-prices-extend-losses-on-easing-fears-of-middle-east-supply-disruption/",
+        "https://finance.yahoo.com/markets/article/oil-prices-approach-100-as-middle-east-conflict-flares-goldman-sees-potential-upside-to-120-122234220.html"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -188,21 +189,21 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "This is the core exogenous shock driving nearly every other story in this week's scan. Attacks on Saudi energy infrastructure and Gulf shipping are cited by Reuters, EIA, and CNN as the primary driver of the global bond selloff, the energy inflation shock, and the food/fertilizer pressure. The Hormuz/Red Sea indicator should move to '2 closed / severely constrained' and WTI crude (CL=F) should be updated to ~$103/bbl. This event also has first-order cross-story feeds into s18_food_fertilizer (fertilizer input disruption), s4_dev_debt (EM energy import bills), and the newly discovered BoE gilt market stress.",
+      "rationale": "Both Hormuz and Bab al-Mandab are simultaneously contested; the IEA characterised this as 'the largest supply disruption in the history of the global oil market.' The Hormuz/Red Sea status indicator should be at '1 contested' approaching '2 closed' for Hormuz; WTI is above $100. This also cross-contaminates s18_food_fertilizer (Hormuz disruption to fertilizer inputs \u2192 '2 cut'), s4_dev_debt (oil import bills widening EM deficits), and s2_japan (Japan is ~90% import-dependent for energy).",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-22",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 30
+      "sightings": 31
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 10-year government bond yield reached 3.00% on September 17, a 27-year high, as the global bond selloff deepened and markets await the BOJ's policy meeting outcome. The 30-year JGB yield has also surged well above 3.5%, exacerbating concerns over Japan's fiscal sustainability under Takaichi's spending plans and threatening to unwind the global yen carry trade.",
-      "as_of": "2026-09-17",
+      "summary": "The Bank of Japan raised its policy rate 25bp to 1.25% on September 18 in a 7-2 split vote, the highest level since April 1995 and only three months after the previous hike \u2014 the shortest inter-hike interval since 1990. Japan's 10-year JGB yield simultaneously climbed above 3%, a level last seen in September 1996, compounding fiscal stress under Takaichi's spending programme.",
+      "as_of": "2026-09-18",
       "sources": [
+        "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html",
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield",
-        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/"
+        "https://tradingeconomics.com/japan/interest-rate"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -210,12 +211,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 10-year JGB at 3% is a historically significant threshold not seen since 1996, with the 30-year elevated accordingly. Combined with USD/JPY 'intervention risk returning near 160' signals (per Investing.com headlines from Sep 15), the yen carry trade remains a live risk. The Takaichi fiscal plan financing clarity indicator should also be moved to '1 unclear' or '2 disorderly' given markets explicitly pricing in fiscal-risk premium alongside BOJ rate hike probability. This is a direct multi-indicator update for s2_japan and the most acute node in the current macro risk cluster.",
+      "rationale": "BOJ acceleration to a 3-month hike cadence (vs. 6 months prior) and 10Y JGB breaking 3% for the first time in 30 years materially reprices the yen carry trade unwind risk and JGB fiscal sustainability \u2014 both core s2_japan indicators. The 30Y yield almost certainly also rose sharply. The dissent pattern (2 doves) signals fragility in consensus, raising Takaichi financing-clarity risk to '1 unclear' if fiscal spending targets and BOJ QT collision intensifies.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-22",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 26
+      "sightings": 27
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -2968,24 +2969,23 @@
     },
     "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0": {
       "headline": "China June PPI +4.1% YoY (4-year high) driven by Iran energy shock\u2014but MoM turned negative and consumer goods PPI still -0.9%, revealing a dangerous bifurcation",
-      "summary": "China's PPI rose 3.8% YoY in August 2026, a 4.7 percentage-point swing from February's deflationary reading, driven entirely by energy and commodity input cost inflation from the Middle East war rather than demand recovery. This 'cost-push' reversal \u2014 with CPI still subdued \u2014 represents a stagflationary squeeze on Chinese manufacturers who cannot pass costs downstream.",
-      "as_of": "2026-09-13",
+      "summary": "China's PPI surged to +4.1% YoY in June 2026 \u2014 a near four-year high \u2014 before easing to +3.5% in July as energy costs driven by the Middle East conflict pushed upstream costs higher even as domestic consumer demand remained weak (CPI ~1%). The bifurcation \u2014 cost-push PPI inflation alongside soft CPI \u2014 represents a 'cost-push squeeze' rather than demand-reflation, threatening Chinese manufacturers' margins.",
+      "as_of": "2026-08-09",
       "sources": [
-        "https://www.trend.az/world/4223315.html",
         "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html",
-        "https://www.stats.gov.cn/english/PressRelease/"
+        "https://www.economy.com/china/producer-price-index-ppi"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "existing_indicator",
       "target_story": "s5_china_deflation",
       "target_indicator": "China PPI YoY (%) - large swing either way is worse",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The tracker's rubric explicitly flags 'large swing either way is worse.' A +3.8% reading after months at -2% to -3% is precisely the dangerous whipsaw the indicator was designed to capture. This is not demand-driven recovery \u2014 analysts note factories 'can't fully pass on cost increases to downstream clients,' meaning Chinese exporters face margin compression and may dump goods globally even more aggressively. This materially updates the China PPI indicator (from deeply negative to sharply positive) and should also move the 'new tariff/anti-dumping actions' ordinal, as cost-push inflation from energy may trigger new Chinese dumping in downstream goods, provoking Western anti-dumping responses.",
+      "rationale": "The PPI has swung from persistent deflation (historically a deflationary spillover risk) to +4.1% cost-push inflation driven by energy, which the tracker explicitly flags as 'large swing either way is worse.' This is a material directional reversal of the key indicator. It also interacts with s5's tariff/anti-dumping dimension: energy-pressured Chinese manufacturers may dump excess goods globally at compressed margins, triggering anti-dumping responses.",
       "status": "pending",
       "first_seen": "2026-07-15",
-      "last_seen": "2026-09-17",
-      "sightings": 11,
+      "last_seen": "2026-09-22",
+      "sightings": 12,
       "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
     },
     "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328": {
@@ -4000,12 +4000,11 @@
     },
     "china-bans-rare-earth-dual-use-exports-to-14-eu--eae640": {
       "headline": "China Bans Rare-Earth Dual-Use Exports to 14 EU Companies; New Public-Reporting Enforcement Mechanism Live July 1",
-      "summary": "On or around July 7, 2026 China's MOFCOM banned shipments of dual-use materials to 14 EU companies, impairing their ability to source rare-earth magnets and semiconductors; separately, MOFCOM Announcement No. 26 (effective July 1) formalises a public whistleblower mechanism for strategic-mineral export-control violations, and two Japanese nationals were detained in Dalian in May for alleged rare-earth smuggling. The IEA estimates China's rare-earth export curbs threaten $6.5 trillion of downstream global production.",
-      "as_of": "2026-07-29",
+      "summary": "Chinese customs data released September 21, 2026 showed only 512 metric tons of rare-earth permanent magnets shipped to the US in August \u2014 down 21% month-over-month from July's 647 tons and 13% below year-ago levels. The 2026 monthly average of ~503 tons is structurally below 2024 baselines, and the Nov 10 suspension expiry creates binary cliff risk as Beijing uses 'calibrated licensing' as leverage.",
+      "as_of": "2026-09-21",
       "sources": [
-        "https://legalinsurrection.com/2026/07/china-hits-u-s-europe-with-new-rare-earths-export-controls/",
-        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
-        "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/"
+        "https://discoveryalert.com/news/china-rare-earth-magnet-exports-september-2026/",
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -4013,11 +4012,11 @@
       "target_indicator": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The new EU entity-specific ban and active criminal enforcement (detentions, whistleblower regime) push the 'export license flow' indicator closer to 2 (frozen for named entities) and the 'US domestic RE producer blacklist' indicator should be re-evaluated for the EU parallel. The Nov-2025 pause (suspended controls through Nov 2026) is being circumvented by entity-level bans, meaning the rubric '0 extended' for the pause status may be misleading \u2014 the practical effect is partial re-escalation.",
+      "rationale": "A 21% MoM drop in magnet shipments with a structurally lower 2026 baseline (503 vs. 601\u2013621 t/month in 2024) signals the license flow indicator should move from '1 slowing' toward '2 frozen' for US-bound heavy RE magnets. US net import reliance for heavy rare earths is now 100% with zero terbium reserves, making this a high-materiality supply-chain vulnerability. The Nov-2025 pause status indicator is also approaching its Nov 10, 2026 expiry ('1 expiring').",
       "status": "pending",
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-29",
-      "sightings": 1,
+      "last_seen": "2026-09-22",
+      "sightings": 2,
       "id": "china-bans-rare-earth-dual-use-exports-to-14-eu--eae640"
     },
     "bank-of-england-fpc-ai-equity-concentration-high-7a2344": {
@@ -8082,11 +8081,70 @@
       "last_seen": "2026-09-18",
       "sightings": 1,
       "id": "qatar-uae-lng-infrastructure-damage-delays-globa-ee9e03"
+    },
+    "china-formalises-rare-earth-enforcement-architec-04c31c": {
+      "headline": "China formalises rare-earth enforcement architecture: MOFCOM No. 26, foreign nationals detained, active prosecution of exporters",
+      "summary": "China's MOFCOM Announcement No. 26 (effective July 1, 2026) created a formal public-reporting mechanism for strategic mineral export control violations, while two Japanese nationals were detained in Dalian in May 2026 for alleged rare-earth smuggling \u2014 the first known foreign-national detentions under the framework. Domestic Chinese exporters have also been prosecuted.",
+      "as_of": "2026-07-01",
+      "sources": [
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+        "https://en.wikipedia.org/wiki/Rare_earths_trade_dispute"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s6_rare_earths",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "China RE enforcement posture (0 administrative / 1 active prosecution / 2 criminal/detention)",
+        "type": "band",
+        "rubric": "0 = controls exist but enforcement is purely administrative/paperwork; 1 = active enforcement actions against companies, formal violation-reporting mechanisms, fines; 2 = criminal detention of foreign nationals, sector-wide prosecutions, or extraterritorial enforcement activated",
+        "sources": [
+          "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+          "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The existing s6 indicators capture export volume/license flow and pricing but miss the qualitative escalation in enforcement severity. Criminal detention of foreign nationals and a formalised public-reporting mechanism for violations represent a step-change in China's willingness to weaponise the controls \u2014 a leading indicator of further supply disruption that no current indicator tracks.",
+      "status": "pending",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "sightings": 1,
+      "id": "china-formalises-rare-earth-enforcement-architec-04c31c"
+    },
+    "middle-east-energy-shock-forces-renewed-central--36d6e3": {
+      "headline": "Middle East energy shock forces renewed central bank tightening \u2014 stagflation loop now a baseline risk for EMDEs",
+      "summary": "The World Bank (July 2026) and Conference Board (September 11, 2026) both warn that $100+ oil from the Iran conflict is forcing central banks to re-tighten, threatening to deepen consumer slowdowns especially in the US and Asia. Global growth is now projected to slow to 2.5% in 2026 with EMDEs facing their weakest per-capita income growth since the pandemic, while higher borrowing costs amplify developing-world debt stress.",
+      "as_of": "2026-09-11",
+      "sources": [
+        "https://www.conference-board.org/publications/global-economic-forecast-update",
+        "https://www.worldbank.org/en/publication/global-economic-prospects"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Oil-shock central-bank re-tightening index (0 no pivot / 1 pause / 2 hikes resumed)",
+        "type": "band",
+        "rubric": "0 = EM/DM central banks on hold or cutting despite elevated oil; 1 = majority on pause, some re-tightening rhetoric; 2 = multiple major EM or DM central banks have resumed rate hikes in response to energy-driven inflation, compressing growth and widening sovereign spreads",
+        "sources": [
+          "https://www.conference-board.org/publications/global-economic-forecast-update",
+          "https://www.worldbank.org/en/publication/global-economic-prospects"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The existing s4_dev_debt indicators (DXY, real yields, IMF programs) capture the debt-stress symptoms but not the proximate driver: an energy-shock-induced re-tightening cycle that simultaneously raises borrowing costs AND compresses EM current accounts (via oil import bills). This 'stagflation loop' indicator would act as an early-warning leading indicator for the New IMF programs / missed coupons indicator moving from '0 calm' to '1 rising'.",
+      "status": "pending",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "sightings": 1,
+      "id": "middle-east-energy-shock-forces-renewed-central--36d6e3"
     }
   },
-  "generated": "2026-09-21",
+  "generated": "2026-09-22",
   "model": "claude-sonnet-4-6",
-  "new_count": 4,
-  "pending_count": 251,
-  "last_error": "HTTP Error 400: Bad Request"
+  "new_count": 2,
+  "pending_count": 253
 }
