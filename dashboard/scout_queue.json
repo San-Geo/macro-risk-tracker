@@ -175,13 +175,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "Iran-war hostilities produced a simultaneous disruption of the Strait of Hormuz, Bab al-Mandab, and the Saudi East-West bypass pipeline (shut September 11), together removing an estimated 39% of global seaborne trade volume. The IEA characterised the combined disruption as the largest in market history, with Brent having surged above $90/bbl as of mid-September and strategic reserve releases underway.",
-      "as_of": "2026-09-15",
+      "summary": "The EIA's September 2026 Short-Term Energy Outlook reports Hormuz-linked crude production shut-ins averaged 6.7 mb/d in August (up from 5.0 mb/d in July), with disruptions expected to persist at ~5.7 mb/d through Q4 2026. Brent spiked to $113.48/bbl on September 9 before retreating toward $102 as Hormuz shipments partially recovered by September 21, but tanker traffic remains contested and Saudi East-West pipeline damage continues.",
+      "as_of": "2026-09-21",
       "sources": [
-        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
-        "https://www.ogj.com/IranWar",
-        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets",
-        "https://www.congress.gov/crs-product/R45281"
+        "https://www.eia.gov/outlooks/steo/pdf/steo_full.pdf",
+        "https://www.iea.org/reports/oil-market-report-september-2026",
+        "https://www.home.saxo/en-mena/content/articles/macro/market-quick-take---oil-extends-its-slide-before-the-trump-xi-summit---21-september-2026-21092026",
+        "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -189,12 +189,12 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The simultaneous closure of Hormuz, Bab al-Mandab, and the Saudi bypass pipeline on September 11 moves the s20 Hormuz/Red Sea status indicator firmly to '2 closed' \u2014 the worst-case reading. WTI/Brent price indicator in s20 is also deeply affected. The East-West pipeline shutdown is a material new sub-event within the existing story that the tracker must register as a step-change in severity, not merely an ongoing trend.",
+      "rationale": "A 6.7 mb/d shut-in is among the largest Hormuz disruptions on record and directly updates the Hormuz/Red Sea status indicator to '2' (contested-to-closed spectrum) and WTI crude indicator (above $94\u2013105 range over the period). Secondary effects are also material for s18_food_fertilizer (Hormuz/Gulf disruption indicator), s5_china_deflation (energy cost-push), s2_japan (energy inflation forcing BOJ's hand), and s13_insurance (catastrophe-loss pressure). The IEA's confirmation of record refining-margin disruption and tanker-traffic attacks make this a high-materiality multi-story update.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-22",
+      "last_seen": "2026-09-23",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 32
+      "sightings": 33
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
@@ -585,12 +585,13 @@
     },
     "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca": {
       "headline": "Japan yen hits 4-decade lows; 10yr JGB at ~2.65%; BoJ July 31 hike decision imminent amid Middle East energy import stress",
-      "summary": "The Bank of Japan is widely expected to raise its policy rate to 1.25% \u2014 a 31-year high \u2014 at its meeting the week of 15 Sep 2026, driven by oil-cost inflation and political pressure. The yen has simultaneously strengthened ~4% in recent sessions to ~\u00a5154/USD, as carry-trade unwinding and capital-repatriation expectations intensify, while the 10-year JGB yield has broken 3% for the first time since 1996.",
-      "as_of": "2026-09-11",
+      "summary": "The Bank of Japan raised its policy rate 25 bps to 1.25% on September 18 (7-2 vote), the highest level since 1995, accelerating its tightening cadence to three-month intervals. Despite a record \u00a515.4 trillion of FX intervention (July 30\u2013August 26) that included unprecedented US participation, USD/JPY traded back above 157 post-hike, signalling the rate differential versus the US (Fed at 3.75\u20134.00%) still dominates and carry-trade repatriation pressure on global assets remains acute.",
+      "as_of": "2026-09-18",
       "sources": [
-        "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://bitcoinethereumnews.com/tech/yen-strength-and-rising-jgb-yields-signal-risk-of-carry-trade-unwind/",
-        "https://www.fxstreet.com/analysis/hot-ppi-and-oil-prices-continue-to-drive-cb-rate-hike-expectations-and-yields-up-202609110547"
+        "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html",
+        "https://tiomarkets.com/article/boj-interest-rate-decision-yen-september-2026",
+        "https://www.fxleaders.com/news/2026/09/18/usd-jpy-forecast-15815-target-after-boj-hike/",
+        "https://tradingeconomics.com/japan/interest-rate"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -598,12 +599,12 @@
       "target_indicator": "USD/JPY (yen strengthening = lower = risk)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "USD/JPY at ~154 (near 7-month yen high) and a live BOJ hike to 1.25% directly read into the tracker's s2_japan USD/JPY and 30-year JGB yield indicators. The carry-trade unwind risk is the core s2 narrative; yen at \u00a5154 and 10y JGB above 3% are materially worse than prior tracker readings. The Takaichi administration's hawkish stance on yen strength is now an active policy catalyst, updating the 'Takaichi plan financing clarity' indicator toward '1 unclear' as the rate path accelerates faster than fiscal consolidation plans can absorb.",
+      "rationale": "The BOJ hike and persistent yen weakness above 157 despite record intervention directly updates the three core s2_japan indicators: USD/JPY remains elevated (risk-on reading), the 10-year JGB yield is near 2.99% (30-year well above prior highs), and Takaichi fiscal-plan financing clarity has deteriorated as the rate gap with the Fed widens and carry-unwind risk re-escalates. The coordinated US-Japan FX intervention is a material escalation of the story \u2014 it has never previously required Washington's participation \u2014 and the hike failing to materially strengthen the yen suggests the carry trade is structurally anchored at elevated risk.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-09-14",
+      "last_seen": "2026-09-23",
       "id": "japan-yen-hits-4-decade-lows-10yr-jgb-at-2-65-bo-2798ca",
-      "sightings": 8
+      "sightings": 9
     },
     "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
       "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
@@ -991,12 +992,13 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "Bloomberg reported on September 20 that Chinese rare-earth magnet shipments to the US declined in August, a signal of either supply-chain caution or deliberate pressure ahead of an imminent Xi-Trump meeting. The November 2025 one-year suspension of China's October-2025 comprehensive RE controls expires November 10, 2026 \u2014 less than seven weeks from today \u2014 creating a hard cliff for supply chains.",
-      "as_of": "2026-09-20",
+      "summary": "The one-year suspension of China's sweeping October 2025 rare-earth export controls (MOFCOM Announcements 55\u201358, 61, 62) lapses on November 10, 2026, with no renewal announced. Simultaneously China has tightened enforcement via MOFCOM Announcement No. 26 (effective July 1, 2026), detained Japanese nationals for rare-earth smuggling, and sanctioned a Chinese optics firm, signalling active escalation rather than de-escalation ahead of the expiry.",
+      "as_of": "2026-09-23",
       "sources": [
-        "https://finance.yahoo.com/economy/policy/articles/china-rare-earth-magnet-exports-002819146.html",
         "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
-        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
+        "https://en.wikipedia.org/wiki/Rare_earths_trade_dispute"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1004,12 +1006,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The falling magnet-export data and the looming November 10 suspension expiry move the s6 'Nov-2025 pause status' indicator from '0 extended' toward '1 expiring'. With Xi-Trump talks imminent and the suspension covering the sweeping Oct-2025 controls (including extraterritorial FDPR-mirror provisions), the outcome of those talks will be binary and extremely consequential for global defence/EV/semiconductor supply chains. The tracker must flag that the clock is running.",
+      "rationale": "The pause status indicator should move to '1 expiring' immediately: less than 7 weeks remain with no extension announced, active enforcement is accelerating (MOFCOM No. 26 reporting mechanism, foreign national detentions), and bilateral conditions have not clearly improved enough to guarantee renewal. When the pause lapses, full extraterritorial enforcement \u2014 covering any product with \u22650.1% Chinese-origin rare earths \u2014 would trigger a supply-chain crisis for defence, EV, and semiconductor sectors globally. The tracker should also update the 'Rare-earth export license flow' indicator toward '1 slowing' given documented administrative friction.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-09-22",
+      "last_seen": "2026-09-23",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 15
+      "sightings": 16
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -5523,12 +5525,12 @@
     },
     "france-bayrou-government-faces-september-8-no-co-97f145": {
       "headline": "France Bayrou government faces September 8 no-confidence vote; OAT-Bund spread widens toward 77-80 bp",
-      "summary": "French PM Fran\u00e7ois Bayrou announced on August 25 a no-confidence vote for September 8, triggering a market correction: the OAT-Bund 10-year spread widened from ~65 bp on August 15 to ~77 bp by August 25, with analysts at ABN AMRO targeting 85 bp by year-end. France's 2026 budget deficit is tracking near 5% of GDP \u2014 well above government targets \u2014 and public debt is projected to exceed 125% of GDP by 2030.",
-      "as_of": "2026-08-25",
+      "summary": "PM Fran\u00e7ois Bayrou was ousted on September 8 by 364\u2013194 votes \u2014 well above the 280-vote threshold \u2014 after his \u20ac43.8 billion austerity package (including scrapping two public holidays) was rejected, France's second government collapse in under a year. The OAT-Bund 10-year spread subsequently widened to over 104 bps, a 14-year high, with French yields surpassing those of Spain, Portugal, and Greece, and a potential sovereign rating review looming.",
+      "as_of": "2026-09-08",
       "sources": [
-        "https://www.fxstreet.com/amp/news/frances-government-faces-collapse-and-markets-react-abn-amro-202508261445",
-        "https://www.fi-desk.com/french-no-confidence-vote-sharpens-pressure-on-oat-bund-spread/",
-        "https://www.ubp.com/en/news-insights/newsroom/france-s-debt-puzzle"
+        "https://www.yahoo.com/news/articles/french-government-collapses-prime-minister-182222262.html",
+        "https://www.home.saxo/en-mena/content/articles/macro/market-quick-take---oil-extends-its-slide-before-the-trump-xi-summit---21-september-2026-21092026",
+        "https://www.fxstreet.com/amp/news/frances-government-faces-collapse-and-markets-react-abn-amro-202508261445"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -5536,11 +5538,11 @@
       "target_indicator": "Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "A scheduled no-confidence vote on September 8 moves the 'Govt stability' indicator to '2 = collapse-or-snap-election'. The OAT-Bund spread widening to 77 bp (from 65 bp in mid-August) is a direct update to the spread indicator. The story is escalating: credit agencies have already begun downgrading France, the deficit is tracking well above target, and a change in PM could produce looser fiscal policy (Citi flags far-right or left coalition would reverse pension reform). The rating action indicator may move from '1 negative outlook' to '2 downgrade' if political collapse materialises.",
+      "rationale": "Bayrou's ouster is a confirmed '2' on the Govt stability indicator \u2014 France has now lost two PMs in under 12 months with no budget enacted. The OAT-Bund spread at 104 bps (14-year high) is a direct read on the spread indicator and warrants an urgent update. The imminent rating-review risk (indicator: Rating action) is also flagged as a possible downgrade trigger. With French yields now above peripheral eurozone sovereigns, eurozone fragility contagion risk is acute and tracker values across all three s10 indicators need immediate upward revision.",
       "status": "pending",
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
-      "sightings": 1,
+      "last_seen": "2026-09-23",
+      "sightings": 2,
       "id": "france-bayrou-government-faces-september-8-no-co-97f145"
     },
     "iran-us-war-directly-threatens-hormuz-fertilizer-410f04": {
@@ -8229,10 +8231,101 @@
       "last_seen": "2026-09-22",
       "sightings": 1,
       "id": "global-lng-supply-shock-hormuz-closure-cuts-qata-7b613d"
+    },
+    "japanese-institutional-repatriation-accelerates--37976c": {
+      "headline": "Japanese institutional repatriation accelerates: GPIF nudged domestic, $29.6 bn US Treasuries sold in Q1 2026, 10-year JGB-UST spread narrows to ~180 bps",
+      "summary": "Japan's Finance Minister has urged GPIF (\u00a5300 trillion AUM) and other major pension funds to reallocate domestically, reinforcing structural repatriation flows already underway: Japanese investors sold an estimated $29.6 billion in US Treasuries in Q1 2026 alone, while the 10-year UST-JGB spread has narrowed to ~180 bps from ~360 bps in early 2025, and on a hedged basis some US Treasuries now yield less than equivalent JGBs.",
+      "as_of": "2026-09-23",
+      "sources": [
+        "https://guardian-gold.com.au/market-updates/the-yens-long-fall/",
+        "https://www.w1m.com/insights/the-yen-carry-trade-approaching-a-tipping-point/",
+        "https://economics.td.com/gbl-what-happens-in-japan-may-not-stay-in-japan"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japan institutional UST repatriation flow (quarterly $bn sold, rolling)",
+        "type": "value",
+        "rubric": "Net Japanese official + institutional sales of US Treasuries per quarter (TIC data, MoF disclosures). 0 = net buying or flat; negative values = selling. Alert threshold: > $20 bn sold/quarter (moderate), > $40 bn (severe). Q1 2026 reading: \u2013$29.6 bn. Deterioration direction: more negative.",
+        "sources": [
+          "https://guardian-gold.com.au/market-updates/the-yens-long-fall/",
+          "https://www.w1m.com/insights/the-yen-carry-trade-approaching-a-tipping-point/",
+          "https://economics.td.com/gbl-what-happens-in-japan-may-not-stay-in-japan"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan story focuses on JGB yields, USD/JPY, and Takaichi fiscal clarity, but none of its indicators captures the structural repatriation flow \u2014 arguably the most systemic global risk emanating from Japan right now. A $29.6 bn Q1 UST sell-off, GPIF being nudged home, and the hedged UST-JGB spread going negative together constitute a new, quantifiable, and high-frequency risk vector that feeds directly into US Treasury market depth and term-premium (also relevant to s1_basis_trade). This indicator would give the tracker a direct, data-driven early-warning signal for the 'Japan sells Treasuries' tail risk, which the current s2 indicator set does not capture.",
+      "status": "pending",
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "sightings": 1,
+      "id": "japanese-institutional-repatriation-accelerates--37976c"
+    },
+    "middle-east-conflict-drives-global-refined-produ-ff44cf": {
+      "headline": "Middle East conflict drives global refined-product exports down ~25% YoY; energy-driven inflation forces Fed to resume hiking cycle at 3.75\u20134.00%",
+      "summary": "Deloitte estimates global refined-product exports were down ~25% year-on-year through late July\u2013August 2026, with 75% of the decline attributable to Middle East refinery damage and Hormuz closure plus Russian refinery strikes; the 10-year Treasury yield hit 5.006% (highest since 2007), and the Federal Reserve raised its target range to 3.75\u20134.00% \u2014 its first hike in 2026 \u2014 driven by energy-inflation reacceleration.",
+      "as_of": "2026-09-22",
+      "sources": [
+        "https://www.deloitte.com/us/en/insights/topics/economy/global-economic-outlook/weekly-update.html",
+        "https://www.riotimesonline.com/global-economy-briefing-september-16-2026/",
+        "https://www.mufgresearch.com/macro/middle-east-daily-10-september-2026",
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Energy-driven inflation feedback loop: Middle East disruption \u2192 renewed central-bank tightening \u2192 financial-conditions shock",
+        "why": "A geopolitical supply shock (Hormuz/Russia refinery destruction) has pushed energy inflation to double-digit rates, forcing the Fed to resume hiking after a year on hold and driving the 10-year Treasury to 5% \u2014 a level that mechanically tightens mortgage rates, corporate financing, and sovereign debt-service costs simultaneously. This is a cross-cutting amplifier that the tracker's existing stories do not individually capture: s20_sea_lanes tracks the physical disruption, but no story tracks the monetary-policy feedback loop (forced hike \u2192 Treasury term premium surge \u2192 financial-conditions tightening) as a standalone systemic risk. With the US at 3.75\u20134.00% and Japan at 1.25%, the rate differential is also paradoxically widening \u2014 keeping carry trades alive and delaying yen stabilization \u2014 making this a compounding risk for s2_japan, s4_dev_debt, s10_france, and s9_cre.",
+        "proposed_level": 8,
+        "set": "Set 3",
+        "indicators": [
+          {
+            "label": "US 10-year Treasury yield (%)",
+            "type": "value",
+            "rubric": "Alert at >4.5% (elevated), >5.0% (severe). Current: 5.006%. Deterioration = rising.",
+            "sources": [
+              "https://www.riotimesonline.com/global-economy-briefing-september-16-2026/"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Fed policy rate / hiking-cycle status (0 on hold / 1 hiking / 2 emergency hiking)",
+            "type": "band",
+            "rubric": "0 = Fed on hold or cutting; 1 = Fed hiking in response to energy/supply shock; 2 = Fed hiking aggressively (>50 bps/meeting or inter-meeting). Current: 1 (resumed hiking to 3.75\u20134.00%).",
+            "sources": [
+              "https://www.riotimesonline.com/global-economy-briefing-september-16-2026/",
+              "https://tiomarkets.com/article/boj-interest-rate-decision-yen-september-2026"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Global refined-product export deficit (% YoY decline)",
+            "type": "value",
+            "rubric": "Tracks IEA/EIA and Deloitte estimates of global refined-product export volumes vs. prior year. Alert at >10% decline (elevated), >20% (severe supply shock). Current: ~\u201325% YoY.",
+            "sources": [
+              "https://www.deloitte.com/us/en/insights/topics/economy/global-economic-outlook/weekly-update.html",
+              "https://www.iea.org/reports/oil-market-report-september-2026"
+            ],
+            "suggested_weight": 0.35
+          }
+        ]
+      },
+      "rationale": "No existing tracker story models the second-order channel where a physical commodity supply shock forces a major central bank to abandon its pause and hike into a high-debt environment \u2014 creating a compounding tightening loop across mortgages, corporate credit, sovereign spreads, and EM carry trades simultaneously. The 25% refined-product export collapse is historically exceptional, the Fed resuming hikes with 10-year yields at 5% is a multi-asset shock, and the interaction with Japan's carry-trade dynamics (wider US-Japan differential post-hike) creates a non-linear tail. This warrants a dedicated story at level 8 given its capacity to trigger simultaneous stress across CRE (s9), France/eurozone (s10), private credit (s3), and developing-world debt (s4).",
+      "status": "pending",
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "sightings": 1,
+      "id": "middle-east-conflict-drives-global-refined-produ-ff44cf"
     }
   },
-  "generated": "2026-09-22",
+  "generated": "2026-09-23",
   "model": "claude-sonnet-4-6",
   "new_count": 2,
-  "pending_count": 255
+  "pending_count": 257
 }
