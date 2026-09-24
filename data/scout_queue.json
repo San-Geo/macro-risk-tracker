@@ -175,13 +175,14 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "The EIA's September 2026 Short-Term Energy Outlook reports Hormuz-linked crude production shut-ins averaged 6.7 mb/d in August (up from 5.0 mb/d in July), with disruptions expected to persist at ~5.7 mb/d through Q4 2026. Brent spiked to $113.48/bbl on September 9 before retreating toward $102 as Hormuz shipments partially recovered by September 21, but tanker traffic remains contested and Saudi East-West pipeline damage continues.",
-      "as_of": "2026-09-21",
+      "summary": "The Saudi East-West pipeline was struck on September 11, collapsing Iran-Oman strait-reopening talks; a cargo vessel was struck by an unknown projectile near Hormuz on September 17, with the strait handling only 9\u201314 ships per day versus pre-war norms. The energy shock pushed WTI oil above $103/barrel, drove diesel to an all-time US high of $6.23/gallon, and contributed to the 10-year Treasury briefly topping 5% and the 30-year hitting 5.37%.",
+      "as_of": "2026-09-23",
       "sources": [
-        "https://www.eia.gov/outlooks/steo/pdf/steo_full.pdf",
-        "https://www.iea.org/reports/oil-market-report-september-2026",
-        "https://www.home.saxo/en-mena/content/articles/macro/market-quick-take---oil-extends-its-slide-before-the-trump-xi-summit---21-september-2026-21092026",
-        "https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html"
+        "https://www.nbcnews.com/business/business-news/diesel-oil-prices-jump-saudi-pipeline-shut-hormuz-talks-postponed-iran-rcna597579",
+        "https://www.nbcnews.com/business/energy/treasury-yields-oil-stocks-rcna599398",
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
+        "https://www.congress.gov/crs-product/R45281",
+        "https://www.aljazeera.com/news/2026/8/30/mapping-the-iran-wars-strikes-on-gulf-energy-and-what-comes-next-for-oil"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -189,21 +190,23 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "A 6.7 mb/d shut-in is among the largest Hormuz disruptions on record and directly updates the Hormuz/Red Sea status indicator to '2' (contested-to-closed spectrum) and WTI crude indicator (above $94\u2013105 range over the period). Secondary effects are also material for s18_food_fertilizer (Hormuz/Gulf disruption indicator), s5_china_deflation (energy cost-push), s2_japan (energy inflation forcing BOJ's hand), and s13_insurance (catastrophe-loss pressure). The IEA's confirmation of record refining-margin disruption and tanker-traffic attacks make this a high-materiality multi-story update.",
+      "rationale": "The Hormuz/Red Sea status indicator should be updated to 2 (closed). Traffic is near zero (9\u201314 ships/day), the Saudi pipeline strike on Sept 11 eliminated an alternative bypass route, Iran-Oman talks to restore navigation collapsed, and a new vessel strike occurred Sept 17. The IEA has characterized this as the largest supply disruption in the history of the global oil market. Oil above $103 updates WTI (CL=F) indicator. This directly feeds s1_basis_trade (Treasury volatility), s4_dev_debt (dollar pressure on EM), s18_food_fertilizer (Gulf fertilizer disruption), and s13_insurance (catastrophe/commodity loss pressure).",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-23",
+      "last_seen": "2026-09-24",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 33
+      "sightings": 34
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "On September 18 the Bank of Japan hiked in a 7-2 vote, compressing the interval between hikes to three months (shortest since 1990) and signalling further increases. Japan's 10-year JGB yield crossed 3% on September 17, its highest level since September 1996, amplifying carry-trade unwind pressure and raising Takaichi fiscal-financing costs.",
-      "as_of": "2026-09-18",
+      "summary": "The Bank of Japan raised its policy rate by 25bps to 1.25% on September 18\u2014the fastest inter-hike pace since 1990\u2014just two days after the Federal Reserve's first hike since 2023 brought the fed funds rate to 3.75\u20134%. Japan's 10-year JGB yield climbed to ~3.08% (highest since August 1996), while the 30-year JGB surpassed 4%, making FX-hedged JGB yields more attractive than comparable US Treasuries for the first time in decades.",
+      "as_of": "2026-09-23",
       "sources": [
-        "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html",
+        "https://www.cnbc.com/2026/09/18/japan-rate-hike-stocks-rise-bond-yields-yen-fall.html",
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html",
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://tradingeconomics.com/japan/interest-rate"
+        "https://www.investing.com/news/economy-news/japans-steep-yield-curve-opens-reverse-carry-trade-opportunity-eastspring-says-4913530"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -211,12 +214,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The BOJ accelerating its hike cycle to 1.25% \u2014 a 30-year high \u2014 while 10y JGBs breach 3% directly moves the tracker's core s2_japan indicators: the 30y JGB yield is now under acute upward pressure, USD/JPY yen-strengthening risk is live, and Takaichi fiscal-plan financing clarity (with surging yields) deteriorates toward '1 unclear'. This is the most material Japan development in years and fully captured by existing story and indicators.",
+      "rationale": "The BOJ's September 18 hike to 1.25%\u2014its highest since 1995, with the shortest inter-hike interval since 1990\u2014directly updates the 30-year JGB yield indicator (now above 4%) and the USD/JPY indicator (yen +1.2% MTD). The simultaneous Fed hike to 3.75\u20134% and 10Y UST briefly topping 5% compounds the pressure on Japan's fiscal/carry dynamics. Two dissenting BOJ votes and Governor Ueda's continued-tightening commitment signal further hikes ahead, directly threatening yen carry trade unwind risk and Japanese repatriation of US Treasuries\u2014the core mechanics of s2_japan.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-22",
+      "last_seen": "2026-09-24",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 28
+      "sightings": 29
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -896,25 +899,26 @@
     },
     "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec": {
       "headline": "Iran war energy shock drives Hormuz fertilizer disruption; Gulf fertilizer exports (especially Qatar LNG-linked urea) severely curtailed since March 2026",
-      "summary": "The IEEFA and WEF document that approximately one-third of global seaborne fertilizer trade and key feedstocks (sulfur, ammonia precursors) transit through the Strait of Hormuz, which has been disrupted since March 2026. With the disruption now extending into its seventh month, downstream food production costs for the 2027 crop cycle are increasingly at risk, particularly in South and Southeast Asia.",
-      "as_of": "2026-09-01",
+      "summary": "The sustained near-closure of the Strait of Hormuz is disrupting not only oil but also ~81 million tonnes of LNG and a critical share of Gulf-sourced nitrogen and phosphate fertilizer shipments. The September 11 Saudi pipeline strike eliminated the primary alternative oil export bypass, deepening the supply shock to agricultural input markets and raising acute risks of a fertilizer price spike heading into the Northern Hemisphere winter planting season.",
+      "as_of": "2026-09-14",
       "sources": [
-        "https://ieefa.org/impact-middle-east-crisis-global-energy-markets",
-        "https://www.weforum.org/stories/2026/04/beyond-oil-lng-commodities-impacted-closure-hormuz-strait/",
-        "https://www.iea.org/topics/the-middle-east-and-global-energy-markets"
+        "https://www.ogj.com/IranWar",
+        "https://www.woodmac.com/market-insights/topics/middle-east-conflict/",
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
+        "https://www.congress.gov/crs-product/R45281"
       ],
-      "materiality": "medium",
+      "materiality": "high",
       "classification": "existing_indicator",
       "target_story": "s18_food_fertilizer",
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s18_food_fertilizer story already tracks 'Hormuz/Gulf disruption to fertilizer inputs' as a band indicator. The IEEFA data confirms that the Strait of Hormuz carries one-third of global seaborne fertilizer trade and the disruption has been ongoing since March 2026 with no near-term resolution. This indicator should now be reading 2 (cut) rather than 1 (disrupted), given six months of sustained disruption, QatarEnergy force majeure extension into November, and Ras Laffan repair timelines of 3\u20135 years affecting ammonia/urea feedstock gas. This is a material update that directly threatens the 2027 planting-season fertilizer supply and downstream food prices \u2014 especially for import-dependent economies in South Asia and Sub-Saharan Africa.",
+      "rationale": "The Hormuz/Gulf disruption indicator for s18_food_fertilizer should be updated from 1 to 2 (cut). The IEA-characterized 'largest supply disruption in oil market history' has eliminated most commercial Hormuz transit, directly severing Gulf LNG (81mt/year) and Gulf fertilizer export arteries. The Saudi pipeline strike on Sept 11 removed the key bypass that had kept some fertilizer and petrochemical feedstock flows alive. With the Bab al-Mandab also disrupted by Houthi attacks, both primary maritime routes for Gulf energy/fertilizer are now simultaneously impaired, warranting the highest severity rating on this indicator.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-24",
       "id": "iran-war-energy-shock-drives-hormuz-fertilizer-d-1a17ec",
-      "sightings": 12
+      "sightings": 13
     },
     "japan-s-energy-import-crisis-deepens-as-hormuz-c-e531e3": {
       "headline": "Japan's energy import crisis deepens as Hormuz closure compounds BOJ policy bind \u2014 new macro feedback loop not captured in existing indicators",
@@ -2971,23 +2975,25 @@
     },
     "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0": {
       "headline": "China June PPI +4.1% YoY (4-year high) driven by Iran energy shock\u2014but MoM turned negative and consumer goods PPI still -0.9%, revealing a dangerous bifurcation",
-      "summary": "China's PPI surged to +4.1% YoY in June 2026 \u2014 a near four-year high \u2014 before easing to +3.5% in July as energy costs driven by the Middle East conflict pushed upstream costs higher even as domestic consumer demand remained weak (CPI ~1%). The bifurcation \u2014 cost-push PPI inflation alongside soft CPI \u2014 represents a 'cost-push squeeze' rather than demand-reflation, threatening Chinese manufacturers' margins.",
-      "as_of": "2026-08-09",
+      "summary": "China's producer price index rose 3.8% year-on-year in August 2026, a 4.7 percentage-point reversal from its February trough, as energy and raw material input costs spiked due to the Iran war and Hormuz disruption. Unlike a genuine demand-led reflation, this cost-push dynamic risks China exporting inflation via manufactured goods prices globally, even as domestic consumer demand remains weak\u2014a materially different risk profile than the deflation scenario previously tracked.",
+      "as_of": "2026-09-13",
       "sources": [
+        "https://www.trend.az/world/4223315.html",
         "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html",
-        "https://www.economy.com/china/producer-price-index-ppi"
+        "https://tradingeconomics.com/china/producer-prices-change/news/493116",
+        "https://www.stats.gov.cn/english/PressRelease/"
       ],
-      "materiality": "medium",
+      "materiality": "high",
       "classification": "existing_indicator",
       "target_story": "s5_china_deflation",
       "target_indicator": "China PPI YoY (%) - large swing either way is worse",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The PPI has swung from persistent deflation (historically a deflationary spillover risk) to +4.1% cost-push inflation driven by energy, which the tracker explicitly flags as 'large swing either way is worse.' This is a material directional reversal of the key indicator. It also interacts with s5's tariff/anti-dumping dimension: energy-pressured Chinese manufacturers may dump excess goods globally at compressed margins, triggering anti-dumping responses.",
+      "rationale": "The s5_china_deflation story explicitly flags that large swings in China PPI in either direction are risks. A 4.7pp swing from -0.9% in February to +3.8% in August is precisely the indicator's worst-case scenario trigger. Critically, this is a cost-push (not demand-pull) reflation: factories still cannot pass costs to consumers per the EIU (domestic demand remains weak), but global buyers of Chinese goods will face higher prices. This creates a new stagflationary export channel\u2014China shipping cost-push inflation outward\u2014that is distinct from the original deflation-export thesis and requires immediate indicator update.",
       "status": "pending",
       "first_seen": "2026-07-15",
-      "last_seen": "2026-09-22",
-      "sightings": 12,
+      "last_seen": "2026-09-24",
+      "sightings": 13,
       "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
     },
     "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328": {
@@ -8322,10 +8328,76 @@
       "last_seen": "2026-09-23",
       "sightings": 1,
       "id": "middle-east-conflict-drives-global-refined-produ-ff44cf"
+    },
+    "japanese-investors-systematically-dumping-us-tre-fc9ba6": {
+      "headline": "Japanese investors systematically dumping US Treasuries as domestic JGB yields exceed FX-hedged US returns; GPIF repatriation guidance issued",
+      "summary": "With the 30-year JGB yield above 4%, Eastspring Investments confirmed on September 22 that swapping JGBs back into dollars now yields ~100bps more than comparable US Treasuries, eliminating the carry rationale for Japanese investors holding US debt. Japan's Finance Ministry has explicitly encouraged GPIF (\u00a5300tr AUM) to allocate more capital domestically, and Japanese investors sold ~$29.6bn of US Treasuries in Q1 2026 alone\u2014removing a structurally critical buyer at a time of record US issuance.",
+      "as_of": "2026-09-22",
+      "sources": [
+        "https://kfgo.com/2026/09/23/japans-steep-yield-curve-opens-reverse-carry-trade-opportunity-eastspring-says/",
+        "https://www.investing.com/news/economy-news/japans-steep-yield-curve-opens-reverse-carry-trade-opportunity-eastspring-says-4913530",
+        "https://guardian-gold.com.au/market-updates/the-yens-long-fall/",
+        "https://www.w1m.com/insights/the-yen-carry-trade-approaching-a-tipping-point/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s2_japan",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Japanese net UST selling (rolling 90-day, $bn)",
+        "type": "band",
+        "rubric": "0 = net buying or flat (<$5bn net sell); 1 = moderate repatriation ($5\u201330bn net sell per quarter); 2 = accelerating repatriation (>$30bn net sell per quarter, or GPIF formal domestic-tilt announcement)",
+        "sources": [
+          "https://guardian-gold.com.au/market-updates/the-yens-long-fall/",
+          "https://www.w1m.com/insights/the-yen-carry-trade-approaching-a-tipping-point/",
+          "https://kfgo.com/2026/09/23/japans-steep-yield-curve-opens-reverse-carry-trade-opportunity-eastspring-says/"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s2_japan story tracks JGB yields and USD/JPY, but lacks an indicator for Japanese investor repatriation flows\u2014the primary transmission channel from Japan's domestic yield normalization into global Treasury market dysfunction. With GPIF being nudged toward domestic allocation, FX-hedged JGB now beating US Treasuries by ~100bps, and $29.6bn already sold in Q1 alone, this is now a live, quantifiable risk requiring its own indicator to track whether the structural Treasury buyer is turning into a seller at the worst possible moment.",
+      "status": "pending",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24",
+      "sightings": 1,
+      "id": "japanese-investors-systematically-dumping-us-tre-fc9ba6"
+    },
+    "fed-boj-simultaneous-tightening-triggers-global--b0499c": {
+      "headline": "Fed + BOJ simultaneous tightening triggers global bond market repricing: synchronized hikes across DMs produce near-20-year Treasury yield highs and rising term premium",
+      "summary": "The simultaneous Fed hike (Sept 16) and BOJ hike (Sept 18)\u2014the first time both have tightened within days of each other in decades\u2014triggered a synchronized global bond selloff, pushing the US 10-year Treasury to briefly above 5% and the 30-year to 5.37% (near-20-year highs), while German and French yields hit levels last seen in 2011 and 2008 respectively. Term premiums have risen sharply, with the 10-year Treasury term premium at 70bps, compressing traditional carry strategies and raising refinancing costs for AI capex-driven debt at scale.",
+      "as_of": "2026-09-23",
+      "sources": [
+        "https://www.ishares.com/us/insights/portfolio-insights/fed-outlook-rates-kevin-warsh-fixed-income-2026",
+        "https://www.bloomberg.com/news/articles/2026-09-16/treasuries-hold-gains-as-fed-hikes-rates-signaling-more-ahead",
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/",
+        "https://www.rabobank.com/knowledge/q011509552-global-outlook-2026-new-rules-different-economy"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s8_ai_capex",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "DM synchronized tightening stress index (ordinal)",
+        "type": "band",
+        "rubric": "0 = policy divergence (not all major CBs hiking simultaneously); 1 = partial synchronization (2 of Fed/ECB/BOJ hiking within same quarter); 2 = full synchronization (Fed + BOJ + ECB all in active tightening cycles simultaneously, with 10Y term premium >50bps)",
+        "sources": [
+          "https://www.ishares.com/us/insights/portfolio-insights/fed-outlook-rates-kevin-warsh-fixed-income-2026",
+          "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/",
+          "https://www.rabobank.com/knowledge/q011509552-global-outlook-2026-new-rules-different-economy"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "No existing story or indicator tracks the systemic risk of synchronized DM central bank tightening\u2014arguably the macro regime shift of September 2026. The concurrent Fed hike and BOJ hike create a self-reinforcing dynamic: higher US yields reduce Treasury demand from Japan (feeding s2_japan repatriation risk), raise refinancing costs for AI capex debt (s8_ai_capex GPU-backed debt stress), compress private credit spreads (s3_private_credit), and elevate France's OAT-Bund spread (s10_france). The 10-year term premium at 70bps and yields at near-20-year highs are a common causal root for stress across at least five existing tracked stories, warranting an integrating indicator under the AI-capex story as the most leverage-sensitive sector.",
+      "status": "pending",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24",
+      "sightings": 1,
+      "id": "fed-boj-simultaneous-tightening-triggers-global--b0499c"
     }
   },
-  "generated": "2026-09-23",
+  "generated": "2026-09-24",
   "model": "claude-sonnet-4-6",
   "new_count": 2,
-  "pending_count": 257
+  "pending_count": 259
 }
