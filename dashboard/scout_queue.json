@@ -199,14 +199,13 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The Bank of Japan raised its policy rate by 25bps to 1.25% on September 18\u2014the fastest inter-hike pace since 1990\u2014just two days after the Federal Reserve's first hike since 2023 brought the fed funds rate to 3.75\u20134%. Japan's 10-year JGB yield climbed to ~3.08% (highest since August 1996), while the 30-year JGB surpassed 4%, making FX-hedged JGB yields more attractive than comparable US Treasuries for the first time in decades.",
-      "as_of": "2026-09-23",
+      "summary": "On 18 September 2026, the Bank of Japan raised its policy rate 25 bps to 1.25% in a contested 7\u20132 vote, with Takaichi-appointed reflationists dissenting. The 10-year JGB yield hit ~3.08% on 24 September (a 30-year high), while USD/JPY remains around 156\u2013157 after Japan burned a record $80bn in FX reserves in August. A former BOJ board member now signals rates could reach 2% by mid-2027.",
+      "as_of": "2026-09-24",
       "sources": [
-        "https://www.cnbc.com/2026/09/18/japan-rate-hike-stocks-rise-bond-yields-yen-fall.html",
-        "https://tradingeconomics.com/japan/interest-rate",
-        "https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html",
-        "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.investing.com/news/economy-news/japans-steep-yield-curve-opens-reverse-carry-trade-opportunity-eastspring-says-4913530"
+        "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html",
+        "https://www.cnbc.com/2026/09/01/japan-bonds-yen-intervention-bessent.html",
+        "https://www.cnbc.com/quotes/JP10Y",
+        "https://tradingeconomics.com/japan/government-bond-yield"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -214,12 +213,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The BOJ's September 18 hike to 1.25%\u2014its highest since 1995, with the shortest inter-hike interval since 1990\u2014directly updates the 30-year JGB yield indicator (now above 4%) and the USD/JPY indicator (yen +1.2% MTD). The simultaneous Fed hike to 3.75\u20134% and 10Y UST briefly topping 5% compounds the pressure on Japan's fiscal/carry dynamics. Two dissenting BOJ votes and Governor Ueda's continued-tightening commitment signal further hikes ahead, directly threatening yen carry trade unwind risk and Japanese repatriation of US Treasuries\u2014the core mechanics of s2_japan.",
+      "rationale": "s2_japan tracks USD/JPY, 30-year JGB yield, and Takaichi plan financing clarity. Three simultaneous trigger events this week: (1) BOJ hike to 30-year high accelerating the rate cycle; (2) 10-year JGB breaking 3% for first time since 1996, with 30-year JGB also elevated; (3) Japan's FX reserves fell $80bn in August \u2014 the largest-ever monthly drop \u2014 as Tokyo and Washington conducted coordinated intervention. The Takaichi-appointed dissenters signaling looser fiscal bias adds clarity ambiguity, nudging 'Takaichi plan financing clarity' toward '1 unclear'. All three existing indicators are simultaneously moving in risk-on direction.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-24",
+      "last_seen": "2026-09-25",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 29
+      "sightings": 30
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -505,13 +504,14 @@
     },
     "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
       "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
-      "summary": "A 60-day US-Iran ceasefire lapsed in mid-August without a deal; fighting resumed with tit-for-tat tanker and warship strikes in the Strait of Hormuz, pushing Brent above $101/bbl by Sept 9 and Goldman Sachs warning of a >$120 scenario if attacks persist. Iran has threatened to strike energy infrastructure across the region, and Trump advisers privately warn the conflict could drag through the remainder of his term.",
-      "as_of": "2026-09-10",
+      "summary": "As of the week of 18\u201325 Sep 2026, the US\u2013Iran conflict has escalated sharply in the Strait of Hormuz, with IRGC ballistic missiles targeting a US carrier group, US 'tanker-for-tanker' retaliatory strikes on Iranian tankers, and Iran's chief negotiator declaring the era of proportionate responses finished. Commercial shipping reroutes away from both Hormuz and the Red Sea are ongoing, with oil infrastructure across the Gulf region at continued risk.",
+      "as_of": "2026-09-23",
       "sources": [
-        "https://www.cnbc.com/2026/09/09/oil-prices-today-wti-brent-us-iran-hormuz-attacks.html",
-        "https://www.cnbc.com/2026/09/10/iran-US-oil-hormuz-supply-trump-military-brent-wti.html",
-        "https://finance.yahoo.com/energy/articles/oil-extends-gains-us-iran-001532615.html",
-        "https://www.aljazeera.com/economy/2026/9/1/oil-prices-climb-as-us-iranian-attacks-stoke-fears-of-escalation"
+        "https://www.britannica.com/event/2026-Iran-war",
+        "https://www.axios.com/2026/09/02/iran-tankers-hormuz-attacks-oil",
+        "https://abcnews.com/International/live-updates/iran-live-updates-centcom-targeted-iranian-forces-posed/?id=136080582",
+        "https://www.cnn.com/2026/09/02/politics/latest-us-strikes-against-iran-marked-a-shift-in-strategy",
+        "https://www.npr.org/2026/09/05/nx-s1-5959159/us-iran-warships-targeted"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -519,12 +519,12 @@
       "target_indicator": "Hormuz/Red Sea status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "This is a direct, high-materiality update to s20_sea_lanes. The Hormuz/Red Sea status indicator should move from 1 (contested) toward 2 (effectively contested/partially closed): a 60-day truce has lapsed, tanker strikes are deliberate, and Brent has broken $101 \u2014 well above the existing WTI CL=F proxy level. The WTI/Brent indicator also needs an upward revision to ~$97\u2013101/bbl range. The conflict is now in its seventh month with no resolution timeline, and Goldman Sachs estimates a >$120/bbl tail risk \u2014 material for inflation, sovereign yields, and emerging-market fuel-import costs globally.",
+      "rationale": "The Hormuz/Red Sea status indicator under s20_sea_lanes directly captures this. The IRGC's escalation doctrine shift ('no more proportionate responses'), confirmed ballistic-missile targeting of a US carrier, US 'tanker-for-tanker' policy, and Saudi Aramco infrastructure hits collectively move this indicator from 1 (contested) toward 2 (effectively closed/extreme risk). WTI and fertilizer-input disruption (s18) are secondary amplifiers. The week-on-week escalation \u2014 Iran warning all Gulf vessels, US striking ~60\u2013100 targets in a single day \u2014 is a clear material step-change, not routine noise.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-09-11",
+      "last_seen": "2026-09-25",
       "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
-      "sightings": 13
+      "sightings": 14
     },
     "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
       "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
@@ -611,12 +611,12 @@
     },
     "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
       "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
-      "summary": "IEA Executive Director Fatih Birol, speaking at the G7 Finance Ministers' meeting in Paris, warned that the surge in diesel and fertilizer prices \u2014 coinciding with both the planting season and summer travel demand \u2014 could significantly push up food prices, with commercial oil stockpiles drawing down at accelerating rates. The US SPR has fallen below 300 mb for the first time since 1983, critically limiting the remaining buffer.",
-      "as_of": "2026-08-12",
+      "summary": "The active naval conflict in the Strait of Hormuz \u2014 with Iran declaring the Persian Gulf restricted to all nations except China and ongoing tanker strikes \u2014 directly threatens ammonia, urea, and LNG feedstock flows through the Gulf, which supply fertilizer production globally. Saudi Aramco's Ras Tanura refinery was briefly closed and LNG tankers have been struck, creating a new vector of fertilizer and food-input disruption.",
+      "as_of": "2026-09-20",
       "sources": [
-        "https://www.indexbox.io/blog/iea-warns-global-oil-stockpiles-are-rapidly-depleting",
-        "https://www.supplychainbrain.com/articles/44642-iea-warns-global-oil-stockpiles-are-rapidly-depleting",
-        "https://www.iea.org/reports/oil-market-report-august-2026"
+        "https://en.wikipedia.org/wiki/Saudi_Arabia_in_the_2026_Iran_war",
+        "https://en.wikipedia.org/wiki/List_of_ships_attacked_during_the_2026_Iran_war",
+        "https://www.britannica.com/event/2026-Iran-war"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -624,12 +624,12 @@
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s18_food_fertilizer story has a 'Hormuz/Gulf disruption to fertilizer inputs' indicator (0 clear / 1 disrupted / 2 cut). The IEA chief's explicit warning about fertilizer and diesel spiking during planting season, combined with accelerating SPR depletion, upgrades this indicator to '2 cut' \u2014 the worst reading \u2014 and also implies the 'Food-price trend' indicator should move toward '2 spiking'. The fertilizer-food nexus is being directly activated by the Hormuz closure, making this a compounding cross-story risk.",
+      "rationale": "s18_food_fertilizer tracks 'Hormuz/Gulf disruption to fertilizer inputs' (0 clear / 1 disrupted / 2 cut). The IRGC's declaration that the Persian Gulf is restricted to non-Chinese vessels, the closure of Ras Tanura (Saudi Arabia's primary oil export terminal), and confirmed strikes on an LNG tanker in the Strait represent a step-change from '1 disrupted' toward '2 cut' for Gulf fertilizer inputs. Saudi Arabia, Qatar, and Iran are among the world's largest ammonia/urea exporters, and their export routes run through Hormuz. This is a distinct and material update to the s18 story, separate from the s20 sea-lanes indicator.",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-09-25",
       "id": "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f",
-      "sightings": 6
+      "sightings": 7
     },
     "strait-of-hormuz-remains-effectively-closed-bren-98679f": {
       "headline": "Strait of Hormuz Remains Effectively Closed \u2014 Brent ~$105/bbl, OECD Oil Inventories at 2003 Lows",
@@ -1371,23 +1371,23 @@
     },
     "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9": {
       "headline": "China PPI Surges to +3.9% YoY in May (3rd Consecutive Monthly Rise, Fastest Since July 2022) Driven by Iran-War Energy Spike",
-      "summary": "China's National Bureau of Statistics reported on September 9 that August PPI rose +3.8% year-on-year (vs. months of factory-gate deflation), driven by surging energy prices from the Iran war. CPI also beat at +0.8% YoY. This is a sharp directional reversal that flips the deflation/cost-push indicator in s5_china_deflation from one extreme to the other.",
+      "summary": "China's PPI swung from deeply negative (\u22123.6% YoY trough mid-2025) to near positive in 2026, driven by Middle East conflict-induced commodity cost inflation rather than domestic demand recovery. While factories cannot fully pass on input cost increases to domestic clients, the PPI rebound reduces China's deflationary export impulse \u2014 shifting the s5 risk vector from global deflation spillover toward a cost-push squeeze on margins.",
       "as_of": "2026-09-09",
       "sources": [
-        "https://www.vantagemarkets.com/market-news/china-cpi-ppi-august-energy-prices-september-9-2026/",
-        "https://www.investing.com/economic-calendar/chinese-ppi-464"
+        "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html",
+        "https://tradingeconomics.com/china/producer-prices-change/news/476556"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "existing_indicator",
       "target_story": "s5_china_deflation",
       "target_indicator": "China PPI YoY (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s5_china_deflation tracker explicitly notes 'large swing either way is worse' for China PPI. A swing from deeply negative PPI (\u22122 to \u22123% range earlier in 2025\u201326) to +3.8% YoY in a single print is precisely the kind of bi-directional shock the indicator is designed to flag. The reversal is energy-driven (Iran war spillover) rather than demand-led, meaning it could compress Chinese manufacturing margins while export competition intensifies\u2014a stagflationary export-cost-push risk for trading partners. Indicator reading should move to the cost-push risk quadrant; New tariff/anti-dumping actions remain elevated.",
+      "rationale": "s5_china_deflation's primary indicator is China PPI YoY, where 'large swing either way is worse.' The PPI has moved from a 34-month deflation streak into positive or near-zero territory in mid-2026, driven by war-related input cost inflation rather than genuine demand recovery. This is precisely the 'cost-push' tail risk in s5: China's factories absorb commodity input shocks without passing them downstream domestically, compressing margins and creating a different spillover channel (squeezed-exporter stress) than the original deflation-export scenario. The rubric 'large swing either way is worse' makes this a direct flag even as the sign flips.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-09-10",
-      "sightings": 12,
+      "last_seen": "2026-09-25",
+      "sightings": 13,
       "id": "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9"
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
@@ -1468,13 +1468,13 @@
     },
     "genius-act-implementing-regulations-missed-the-j-dc0151": {
       "headline": "GENIUS Act implementing regulations missed the July 18, 2026 statutory deadline; effective date now defaults to January 2027",
-      "summary": "Six federal agencies (OCC, FDIC, NCUA, Treasury, FinCEN, OFAC) face a statutory deadline of July 18, 2026, to finalize GENIUS Act implementing rules. All comment periods closed by June 9, leaving agencies only five weeks to reconcile six proposed frameworks. Failure to finalize on time would push the Act's effective date to the 18-month backstop of January 18, 2027, creating a regulatory gap that offshore competitors and non-compliant issuers could exploit.",
-      "as_of": "2026-07-16",
+      "summary": "On 24 September 2026, the Federal Reserve released proposed rules requiring Board-supervised stablecoin issuers to fully back coins with short-term US Treasuries and HQLA, with complementary OCC final rules expected by November 2026. The effective GENIUS Act licensing date is 18 January 2027, creating a narrow runway and multi-agency rulebook gaps that may slow stablecoin supply growth and near-term Treasury-bill demand.",
+      "as_of": "2026-09-24",
       "sources": [
-        "https://angelinvestorsnetwork.com/crypto-digital-assets/genius-act-stablecoin-final-rules-july-2026-accredited-investors",
-        "https://www.gibsondunn.com/the-genius-act-a-new-era-of-stablecoin-regulation/",
-        "https://eco.com/support/en/articles/15282223-what-is-the-genius-act-us-stablecoin-law-explained-for-2026",
-        "https://www.brookings.edu/articles/next-steps-for-genius-payment-stablecoins/"
+        "https://usethebitcoin.com/news/federal-reserve-stablecoin-reserve-capital-rules-genius-act/",
+        "https://home.treasury.gov/news/press-releases/sb0605",
+        "https://www.federalregister.gov/documents/2026/08/18/2026-16796/genius-act-regulations-on-payment-stablecoin-issuance-offer-and-sale",
+        "https://www.pymnts.com/cryptocurrency/2026/fed-proposes-stablecoin-reserve-and-capital-rules-under-genius-act"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -1482,11 +1482,11 @@
       "target_indicator": "GENIUS implementation friction",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The July 18 rulemaking deadline is the single most concrete near-term observable for the 'GENIUS implementation friction' indicator. If all six agencies publish final rules on or before July 18, the indicator reads 0 (smooth); if any agency misses or publishes rules with material inter-agency conflicts (e.g., FDIC no-deposit-insurance stance vs. OCC charter pathway), it escalates to 1 (gaps). The tracker should register this as a live, datable checkpoint: the outcome will be known within 48 hours of today's scout date and is directly measurable.",
+      "rationale": "s7_stablecoins tracks GENIUS implementation friction (0 smooth / 1 gaps / 2 problems). The Fed's late-stage NPRM \u2014 released literally one day before today, with OCC final rules still outstanding and a 4-month window to the effective licensing date \u2014 represents material gap risk: multiple parallel rulemakings (Fed, OCC, FDIC, Treasury, FinCEN/OFAC) must cohere by Jan 2027. This moves the friction indicator from 0 toward 1 (gaps). The reserve-backing rule (T-bills + HQLA) is also directly relevant to the 'Total USD stablecoin supply' and Treasury-demand sub-indicators.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-16",
-      "sightings": 6,
+      "last_seen": "2026-09-25",
+      "sightings": 7,
       "id": "genius-act-implementing-regulations-missed-the-j-dc0151"
     },
     "china-s-nov-10-2026-rare-earth-extraterritorial--6281bb": {
@@ -7381,13 +7381,12 @@
     },
     "global-sovereign-bond-rout-us-10-year-hits-4-85--bbd9a4": {
       "headline": "Global Sovereign Bond Rout: US 10-Year Hits 4.85% (3-Year High); Treasury Tripling Buybacks to Suppress Long-End",
-      "summary": "The US 10-year Treasury yield hit 4.85% on September 9\u2014its highest since October 2023\u2014driven by energy-inflation spillover from the Iran war, record AI-sector corporate issuance (>$1.5 trillion new bonds YTD), and Japan's forced Treasury selling to defend the yen. The Treasury Department has tripled buybacks to $6 billion to suppress long-end yields, a manoeuvre that itself signals dysfunction.",
-      "as_of": "2026-09-10",
+      "summary": "Through mid-to-late September 2026, a synchronized developed-market bond selloff has pushed US 10-year yields to ~4.8%, Japan's 10-year above 3% (first since 1996), and UK 30-year near 30-year highs, driven by Iran-war energy inflation and renewed Fed-tightening expectations. A weak US 5-year Treasury auction and below-expected Fed buyback further strained Treasury market liquidity.",
+      "as_of": "2026-09-23",
       "sources": [
-        "https://tradingeconomics.com/united-states/government-bond-yield",
-        "https://www.cnbc.com/2026/09/03/global-bond-yields-rising-treasuries-jgb-bunds.html",
-        "https://www.cnbc.com/2026/09/04/global-bond-selloff-inflation-risk.html",
-        "https://www.weforum.org/stories/financial-and-monetary-systems/why-global-bond-market-treasury-yields/"
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://logicmacroregime.substack.com/p/monthly-macro-map-september-2026"
       ],
       "materiality": "high",
       "classification": "story_gap",
@@ -7404,11 +7403,11 @@
         "suggested_weight": 0.25
       },
       "proposed_story": null,
-      "rationale": "The s1_basis_trade story monitors SOFR-EFFR spread and MOVE index but has no explicit level indicator for outright Treasury yields\u2014the primary driver of margin calls and basis-trade unwinds. At 4.85% (3-year high), with the Treasury resorting to emergency-scale buybacks, this is a direct and material gap. Record corporate bond supply from AI issuers (>$1.5T, per WEF/TradingEconomics) is simultaneously a s8_ai_capex indicator update, but the sovereign yield itself belongs in s1.",
+      "rationale": "s1_basis_trade currently tracks SOFR-EFFR spread, MOVE index, and SEC central-clearing status \u2014 but lacks a direct Treasury yield level indicator. A broad DM bond selloff at this magnitude (US 10Y ~4.8%, driven by war-inflation loop and heavy Treasury supply) directly stresses basis-trade positions: higher yields widen repo-to-cash spreads, compress basis margins, and trigger variation margin at hedge funds using leverage. The MOVE index is likely elevated in parallel, but the yield *level* is a distinct and missing input for the basis-trade story. Adding US 10Y yield as a standalone indicator closes this gap.",
       "status": "pending",
       "first_seen": "2026-09-10",
-      "last_seen": "2026-09-10",
-      "sightings": 1,
+      "last_seen": "2026-09-25",
+      "sightings": 2,
       "id": "global-sovereign-bond-rout-us-10-year-hits-4-85--bbd9a4"
     },
     "qatar-lng-capacity-loss-structurally-unresolved--c28e52": {
@@ -8396,8 +8395,8 @@
       "id": "fed-boj-simultaneous-tightening-triggers-global--b0499c"
     }
   },
-  "generated": "2026-09-24",
+  "generated": "2026-09-25",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
+  "new_count": 0,
   "pending_count": 259
 }
