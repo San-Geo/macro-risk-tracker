@@ -175,14 +175,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "The Saudi East-West pipeline was struck on September 11, collapsing Iran-Oman strait-reopening talks; a cargo vessel was struck by an unknown projectile near Hormuz on September 17, with the strait handling only 9\u201314 ships per day versus pre-war norms. The energy shock pushed WTI oil above $103/barrel, drove diesel to an all-time US high of $6.23/gallon, and contributed to the 10-year Treasury briefly topping 5% and the 30-year hitting 5.37%.",
-      "as_of": "2026-09-23",
+      "summary": "Iran gave Washington a deadline to accept terms\u2014end of naval blockade, $12bn in frozen assets, sanctions relief\u2014before reopening Hormuz; Trump rejected the plan on Sept 26 and told aides he expects renewed bombing after November midterms, leaving the strait still contested and oil prices elevated. As of Sept 28, ~25% of global seaborne oil trade remains disrupted.",
+      "as_of": "2026-09-26",
       "sources": [
-        "https://www.nbcnews.com/business/business-news/diesel-oil-prices-jump-saudi-pipeline-shut-hormuz-talks-postponed-iran-rcna597579",
-        "https://www.nbcnews.com/business/energy/treasury-yields-oil-stocks-rcna599398",
-        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
-        "https://www.congress.gov/crs-product/R45281",
-        "https://www.aljazeera.com/news/2026/8/30/mapping-the-iran-wars-strikes-on-gulf-energy-and-what-comes-next-for-oil"
+        "https://www.mappr.co/strait-of-hormuz-crisis-2026/",
+        "https://www.globalsecurity.org/military/ops/iran-war-oprep.htm",
+        "https://www.foxnews.com/live-news/iran-war-president-news-oil-prices-deal-9-25-26",
+        "https://en.wikipedia.org/wiki/2026_United_States_naval_blockade_of_Iran"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -190,22 +189,21 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz/Red Sea status indicator should be updated to 2 (closed). Traffic is near zero (9\u201314 ships/day), the Saudi pipeline strike on Sept 11 eliminated an alternative bypass route, Iran-Oman talks to restore navigation collapsed, and a new vessel strike occurred Sept 17. The IEA has characterized this as the largest supply disruption in the history of the global oil market. Oil above $103 updates WTI (CL=F) indicator. This directly feeds s1_basis_trade (Treasury volatility), s4_dev_debt (dollar pressure on EM), s18_food_fertilizer (Gulf fertilizer disruption), and s13_insurance (catastrophe/commodity loss pressure).",
+      "rationale": "Hormuz remains the single most acute chokepoint in the tracker. Trump's rejection of Iran's Sept 25 proposal and leaked intent for post-midterm strikes push the indicator toward '2 closed' or at minimum deepens '1 contested'. With ~25% of global seaborne oil trade still disrupted and a hard diplomatic deadline lapsing, WTI and fertilizer/food price indicators (s18) are also directly affected. This is the highest-materiality live event in the tracker right now.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-24",
+      "last_seen": "2026-09-28",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 34
+      "sightings": 35
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "On 18 September 2026, the Bank of Japan raised its policy rate 25 bps to 1.25% in a contested 7\u20132 vote, with Takaichi-appointed reflationists dissenting. The 10-year JGB yield hit ~3.08% on 24 September (a 30-year high), while USD/JPY remains around 156\u2013157 after Japan burned a record $80bn in FX reserves in August. A former BOJ board member now signals rates could reach 2% by mid-2027.",
-      "as_of": "2026-09-24",
+      "summary": "The Bank of Japan raised its policy rate to 1.25% on September 18 in a contested 7-2 vote, its highest level since April 1995, while the 10-year JGB yield climbed to ~3.08% on Sept 25 tracking a global bond selloff and Iran-driven oil inflation. A split BoJ board and continued Takaichi fiscal expansion uncertainty risk a bear-steepening of the JGB curve and renewed yen carry-trade unwinds.",
+      "as_of": "2026-09-25",
       "sources": [
-        "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html",
-        "https://www.cnbc.com/2026/09/01/japan-bonds-yen-intervention-bessent.html",
-        "https://www.cnbc.com/quotes/JP10Y",
-        "https://tradingeconomics.com/japan/government-bond-yield"
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -213,12 +211,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "s2_japan tracks USD/JPY, 30-year JGB yield, and Takaichi plan financing clarity. Three simultaneous trigger events this week: (1) BOJ hike to 30-year high accelerating the rate cycle; (2) 10-year JGB breaking 3% for first time since 1996, with 30-year JGB also elevated; (3) Japan's FX reserves fell $80bn in August \u2014 the largest-ever monthly drop \u2014 as Tokyo and Washington conducted coordinated intervention. The Takaichi-appointed dissenters signaling looser fiscal bias adds clarity ambiguity, nudging 'Takaichi plan financing clarity' toward '1 unclear'. All three existing indicators are simultaneously moving in risk-on direction.",
+      "rationale": "The 10-year JGB at 3.08% is a 30-year high and a material adverse move for the existing Japan story. The split BoJ vote (7-2) signals accelerating normalization risk, and MUFG flags that Finance Minister Katayama's potential replacement in the cabinet reshuffle could fuel a 'malicious' yield rise and renewed yen weakness. The 30-year JGB yield (tracker indicator) is also sharply higher. Combined with Takaichi financing uncertainty still unresolved, all three s2 indicators are deteriorating simultaneously.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-25",
+      "last_seen": "2026-09-28",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 30
+      "sightings": 31
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -996,13 +994,12 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "The one-year suspension of China's sweeping October 2025 rare-earth export controls (MOFCOM Announcements 55\u201358, 61, 62) lapses on November 10, 2026, with no renewal announced. Simultaneously China has tightened enforcement via MOFCOM Announcement No. 26 (effective July 1, 2026), detained Japanese nationals for rare-earth smuggling, and sanctioned a Chinese optics firm, signalling active escalation rather than de-escalation ahead of the expiry.",
-      "as_of": "2026-09-23",
+      "summary": "China's Ministry of Commerce published no regulatory notices as of Sept 6 regarding the Nov 10 expiration of its one-year pause on six sweeping critical-mineral export restrictions, raising the probability those curbs snap back. Separately, USA Rare Earth (USAR) was added to China's export control entity list on June 22, blocking Chinese suppliers from shipping feedstock to the firm.",
+      "as_of": "2026-09-06",
       "sources": [
-        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
-        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
-        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
-        "https://en.wikipedia.org/wiki/Rare_earths_trade_dispute"
+        "https://eastasiabrief.com/trade-policy/china-export-pause-rare-earths-nears-nov-10-expiration-197",
+        "https://www.sec.gov/Archives/edgar/data/0001970622/000121390026078760/ea029675201ex99-2.htm",
+        "https://discoveryalert.com/china-rare-earth-export-restrictions-supply-chain-geopolitics/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1010,12 +1007,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The pause status indicator should move to '1 expiring' immediately: less than 7 weeks remain with no extension announced, active enforcement is accelerating (MOFCOM No. 26 reporting mechanism, foreign national detentions), and bilateral conditions have not clearly improved enough to guarantee renewal. When the pause lapses, full extraterritorial enforcement \u2014 covering any product with \u22650.1% Chinese-origin rare earths \u2014 would trigger a supply-chain crisis for defence, EV, and semiconductor sectors globally. The tracker should also update the 'Rare-earth export license flow' indicator toward '1 slowing' given documented administrative friction.",
+      "rationale": "The Nov-10 expiration is now <6 weeks away, MOFCOM has been silent, and Fitch/BMI has called the pause a 'tactical diplomatic gesture.' This shifts the tracker indicator from '0 extended' toward '1 expiring.' Simultaneously, USAR's entity-list blacklisting on June 22 directly updates the 'US domestic RE producer blacklist' indicator from '1 entity-specific ban' (confirmed). The convergence of a lapsing pause + producer blacklisting materially raises supply disruption risk to Western defense and AI supply chains, per the sec.gov 8-K filing.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-09-23",
+      "last_seen": "2026-09-28",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 16
+      "sightings": 17
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -2975,12 +2972,11 @@
     },
     "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0": {
       "headline": "China June PPI +4.1% YoY (4-year high) driven by Iran energy shock\u2014but MoM turned negative and consumer goods PPI still -0.9%, revealing a dangerous bifurcation",
-      "summary": "China's producer price index rose 3.8% year-on-year in August 2026, a 4.7 percentage-point reversal from its February trough, as energy and raw material input costs spiked due to the Iran war and Hormuz disruption. Unlike a genuine demand-led reflation, this cost-push dynamic risks China exporting inflation via manufactured goods prices globally, even as domestic consumer demand remains weak\u2014a materially different risk profile than the deflation scenario previously tracked.",
+      "summary": "China's PPI surged 3.8% YoY in August\u2014a 4.7-point swing from February's reading\u2014driven by Middle East oil-cost pass-through, ending what had been a 30+ month deflationary streak at the factory gate. However, consumer CPI remains negative (-0.4% in August, -0.3% in September), indicating the PPI spike is cost-push rather than demand-driven, compressing industrial margins.",
       "as_of": "2026-09-13",
       "sources": [
         "https://www.trend.az/world/4223315.html",
         "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html",
-        "https://tradingeconomics.com/china/producer-prices-change/news/493116",
         "https://www.stats.gov.cn/english/PressRelease/"
       ],
       "materiality": "high",
@@ -2989,11 +2985,11 @@
       "target_indicator": "China PPI YoY (%) - large swing either way is worse",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The s5_china_deflation story explicitly flags that large swings in China PPI in either direction are risks. A 4.7pp swing from -0.9% in February to +3.8% in August is precisely the indicator's worst-case scenario trigger. Critically, this is a cost-push (not demand-pull) reflation: factories still cannot pass costs to consumers per the EIU (domestic demand remains weak), but global buyers of Chinese goods will face higher prices. This creates a new stagflationary export channel\u2014China shipping cost-push inflation outward\u2014that is distinct from the original deflation-export thesis and requires immediate indicator update.",
+      "rationale": "The tracker rubric explicitly flags large swings in either direction as worse. A near-4.8-percentage-point swing from deflation to +3.8% YoY in just six months is exactly the kind of volatility that matters. This is not demand-driven recovery but an oil-cost-push that squeezes downstream manufacturers unable to pass costs to consumers (CPI still negative). This combination\u2014rising PPI, falling CPI\u2014is the classic 'margin squeeze' deflation-export risk scenario the story tracks. The indicator value needs urgent updating from prior deflationary readings.",
       "status": "pending",
       "first_seen": "2026-07-15",
-      "last_seen": "2026-09-24",
-      "sightings": 13,
+      "last_seen": "2026-09-28",
+      "sightings": 14,
       "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
     },
     "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328": {
@@ -8393,10 +8389,99 @@
       "last_seen": "2026-09-24",
       "sightings": 1,
       "id": "fed-boj-simultaneous-tightening-triggers-global--b0499c"
+    },
+    "hyperscaler-ai-capex-cds-elevated-durable-goods--0c7ae3": {
+      "headline": "Hyperscaler AI capex CDS elevated; durable goods AI-driven surge to record $87.6bn; GPU-fiber germanium shortage crystallising",
+      "summary": "CDS on hyperscaler debt remains elevated as market participants hedge AI equity and debt exposure; durable goods ex-defense/air hit a record $87.6bn in September, almost entirely AI-driven. Separately, China's export controls on germanium\u2014the irreplaceable dopant for AI rack fiber optics\u2014have consumed all available US fiber inventory through year-end 2026, with no non-Chinese refining substitute available for 3\u20135 years.",
+      "as_of": "2026-09-26",
+      "sources": [
+        "https://www.marqueefinancebysagar.com/p/monthly-portfolio-update-september",
+        "https://www.useluminix.com/reports/industry-analysis/china-rare-earth-export-controls-2026-us-defense-ai-chip-supply-impact",
+        "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s8_ai_capex",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Germanium/critical-mineral input stress for AI infrastructure (0 adequate / 1 constrained / 2 acute shortage)",
+        "type": "band",
+        "rubric": "0 = non-Chinese germanium or equivalent dopant supply covers AI fiber demand with >6 months buffer; 1 = US inventory strained, <6 months buffer or price up >50% YoY; 2 = confirmed supply gap causing deployment delays in hyperscaler rack buildouts or defense fiber programs. Current reading: 2 (all US fiber inventory consumed through YE-2026 per useluminix report; germanium prices tripled since Jan 2024; no substitute refining online for 3\u20135 years).",
+        "sources": [
+          "https://www.useluminix.com/reports/industry-analysis/china-rare-earth-export-controls-2026-us-defense-ai-chip-supply-impact",
+          "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The s8_ai_capex story tracks GPU-backed debt refinancing stress and the capex-vs-revenue gap, but has no indicator for critical-mineral input constraints on the AI buildout itself. The germanium-fiber chokepoint is distinct from GPU silicon risk: it is a China-controlled supply-side lever with no near-term substitute, already causing inventory exhaustion. CDS elevation on hyperscaler debt (noted by multiple sources) adds debt-market signal. This is a meaningful gap in s8's indicator set and is directly amplified by s6 (rare earths) dynamics.",
+      "status": "pending",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "sightings": 1,
+      "id": "hyperscaler-ai-capex-cds-elevated-durable-goods--0c7ae3"
+    },
+    "us-iran-tanker-war-and-hormuz-deadlock-produce-e-d2f57c": {
+      "headline": "US-Iran tanker war and Hormuz deadlock produce energy-driven inflation shock feeding into global bond selloff and EM stress",
+      "summary": "The ongoing US-Iran conflict and Hormuz semi-closure have pushed oil and energy prices high enough to reignite inflation concerns globally, driving a synchronised global bond selloff (10-year JGBs at 30-year highs, global yields rising), threatening EM sovereign debt sustainability just as IMF programs are under pressure from higher-for-longer US rates.",
+      "as_of": "2026-09-25",
+      "sources": [
+        "https://www.fxcm.com/uk/insights/global-macro-and-markets-briefing-7-september-2026/",
+        "https://am.jpmorgan.com/gb/en/asset-management/adv/insights/market-insights/investment-outlook/macro-outlook/",
+        "https://tradingeconomics.com/japan/government-bond-yield"
+      ],
+      "materiality": "medium",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Iran-war energy shock: second-order financial contagion",
+        "why": "The 2026 US-Israel war on Iran and resulting Hormuz disruption have created a persistent energy price shock that is now feeding into a global bond selloff, tightening financial conditions for EM sovereigns and households simultaneously. This is distinct from s20_sea_lanes (which tracks the physical chokepoint) and s4_dev_debt (which tracks EM debt fundamentals): this story captures the transmission mechanism from the energy shock through inflation \u2192 central bank over-tightening \u2192 bond market selloff \u2192 credit spreads \u2192 EM/DM financial stress. No existing story tracks this cross-asset contagion channel as a unified risk.",
+        "proposed_level": 7,
+        "set": "Set 3",
+        "indicators": [
+          {
+            "label": "Global government bond yield synchronisation shock (avg G10 10Y YoY change, bps)",
+            "type": "value",
+            "rubric": "Measures the average YoY change in 10-year yields across G10 markets; >100bps YoY average = 1 (stress); >200bps = 2 (acute). Current: ~140bps average YoY (JGB +141bps, UST +~80bps).",
+            "sources": [
+              "https://tradingeconomics.com/japan/government-bond-yield",
+              "https://www.fxcm.com/uk/insights/global-macro-and-markets-briefing-7-september-2026/"
+            ],
+            "suggested_weight": 0.2
+          },
+          {
+            "label": "Energy-driven core inflation re-acceleration (0 contained / 1 re-accelerating / 2 entrenched)",
+            "type": "band",
+            "rubric": "0 = core CPI in G7 back within 50bps of target; 1 = at least 2 G7 central banks revising inflation forecasts higher due to energy pass-through; 2 = Fed/ECB/BoJ all forced to resume or accelerate tightening. Current reading: 1 (Fed tightening bias reinstated, BoJ hiking citing Iran-linked fuel costs).",
+            "sources": [
+              "https://tradingeconomics.com/japan/interest-rate",
+              "https://am.jpmorgan.com/gb/en/asset-management/adv/insights/market-insights/investment-outlook/macro-outlook/"
+            ],
+            "suggested_weight": 0.2
+          },
+          {
+            "label": "EM sovereign spread blowout from energy-shock contagion (JPM EMBI spread, bps)",
+            "type": "value",
+            "rubric": "EMBI spread >400bps = 1 (elevated); >550bps = 2 (crisis-adjacent). Tracks whether the energy-inflation \u2192 rate-hike channel is feeding into EM sovereign stress beyond what s4_dev_debt already captures.",
+            "sources": [
+              "https://am.jpmorgan.com/gb/en/asset-management/adv/insights/market-insights/investment-outlook/macro-outlook/"
+            ],
+            "suggested_weight": 0.15
+          }
+        ]
+      },
+      "rationale": "The Iran war's economic second-order effects\u2014persistent energy inflation re-accelerating global rates, BoJ forced to hike at a 30-year record pace, ECB facing energy shock, EM sovereigns squeezed by dollar strength and higher US yields\u2014constitute a distinct contagion pathway not fully captured by any single existing story. s20 tracks the physical strait; s4 tracks EM debt fundamentals; s2 tracks Japan specifically. None tracks the unified 'energy shock \u2192 global bond selloff \u2192 cross-asset tightening' transmission risk that is now the dominant macro regime driver as of late September 2026.",
+      "status": "pending",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "sightings": 1,
+      "id": "us-iran-tanker-war-and-hormuz-deadlock-produce-e-d2f57c"
     }
   },
-  "generated": "2026-09-25",
+  "generated": "2026-09-28",
   "model": "claude-sonnet-4-6",
-  "new_count": 0,
-  "pending_count": 259
+  "new_count": 2,
+  "pending_count": 261
 }
