@@ -175,13 +175,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "Iran gave Washington a deadline to accept terms\u2014end of naval blockade, $12bn in frozen assets, sanctions relief\u2014before reopening Hormuz; Trump rejected the plan on Sept 26 and told aides he expects renewed bombing after November midterms, leaving the strait still contested and oil prices elevated. As of Sept 28, ~25% of global seaborne oil trade remains disrupted.",
-      "as_of": "2026-09-26",
+      "summary": "The Strait of Hormuz \u2014 through which ~25% of global seaborne oil and ~19% of LNG transited in 2025 \u2014 continues to run at roughly 10 vessel-transits per day against a pre-crisis baseline of 88\u2013130, following breakdown of the June MOU. President Trump's public rejection of Iran's latest reopening conditions on September 28 signals no near-term diplomatic resolution, keeping the 'closed' status entrenched into Q4 2026.",
+      "as_of": "2026-09-28",
       "sources": [
-        "https://www.mappr.co/strait-of-hormuz-crisis-2026/",
-        "https://www.globalsecurity.org/military/ops/iran-war-oprep.htm",
-        "https://www.foxnews.com/live-news/iran-war-president-news-oil-prices-deal-9-25-26",
-        "https://en.wikipedia.org/wiki/2026_United_States_naval_blockade_of_Iran"
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://carraglobe.com/strait-of-hormuz-closure-2026/",
+        "https://www.congress.gov/crs-product/R45281",
+        "https://www.washingtontimes.com/news/2026/sep/10/oil-prices-rise-iran-targets-vessels-strait-hormuz-houthis-seize/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -189,21 +189,21 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Hormuz remains the single most acute chokepoint in the tracker. Trump's rejection of Iran's Sept 25 proposal and leaked intent for post-midterm strikes push the indicator toward '2 closed' or at minimum deepens '1 contested'. With ~25% of global seaborne oil trade still disrupted and a hard diplomatic deadline lapsing, WTI and fertilizer/food price indicators (s18) are also directly affected. This is the highest-materiality live event in the tracker right now.",
+      "rationale": "Trump's September 28 public rejection of Iran's reopening proposal is the week's most actionable update to the Hormuz/Red Sea status indicator, pushing it firmly to '2 closed' with no diplomatic off-ramp visible before Q1 2027. This also has second-order read-throughs to s18_food_fertilizer (Persian Gulf fertilizer inputs), s2_japan (Japan energy import costs/yen), and WTI crude pricing in s20. The tracker's Hormuz indicator should remain at maximum severity with a note that a Trump-Iran deal \u2014 not Iranian capitulation \u2014 is now the primary upside scenario.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-28",
+      "last_seen": "2026-09-29",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 35
+      "sightings": 36
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The Bank of Japan raised its policy rate to 1.25% on September 18 in a contested 7-2 vote, its highest level since April 1995, while the 10-year JGB yield climbed to ~3.08% on Sept 25 tracking a global bond selloff and Iran-driven oil inflation. A split BoJ board and continued Takaichi fiscal expansion uncertainty risk a bear-steepening of the JGB curve and renewed yen carry-trade unwinds.",
-      "as_of": "2026-09-25",
+      "summary": "The Bank of Japan raised its policy rate by 25bp to 1.25% on September 18 (effective Sep 24), its fastest inter-meeting cadence since normalization began, with the 10-year JGB yield climbing toward 3.1% \u2014 highest since 1996. A former BOJ official flagged the possibility of a back-to-back hike in October, materially tightening the rate gap that underwrites global carry trades.",
+      "as_of": "2026-09-28",
       "sources": [
-        "https://tradingeconomics.com/japan/interest-rate",
+        "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html",
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/"
+        "https://www.newtrading.io/japan-interest-rate/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -211,12 +211,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 10-year JGB at 3.08% is a 30-year high and a material adverse move for the existing Japan story. The split BoJ vote (7-2) signals accelerating normalization risk, and MUFG flags that Finance Minister Katayama's potential replacement in the cabinet reshuffle could fuel a 'malicious' yield rise and renewed yen weakness. The 30-year JGB yield (tracker indicator) is also sharply higher. Combined with Takaichi financing uncertainty still unresolved, all three s2 indicators are deteriorating simultaneously.",
+      "rationale": "The BOJ's September 2026 hike (7-2 vote, fastest cadence since normalization) and a 10yr JGB yield near 3.1% directly move the '30-year JGB yield' and 'Takaichi plan financing clarity' indicators in s2_japan. Accelerating BOJ normalization compresses the USD/JPY carry margin and raises the probability of disorderly JGB supply absorption \u2014 both core tracker concerns. The prospect of a consecutive October hike is a new tail catalyst not yet reflected in the tracker's current rubric calibration.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-28",
+      "last_seen": "2026-09-29",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 31
+      "sightings": 32
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -994,12 +994,12 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "China's Ministry of Commerce published no regulatory notices as of Sept 6 regarding the Nov 10 expiration of its one-year pause on six sweeping critical-mineral export restrictions, raising the probability those curbs snap back. Separately, USA Rare Earth (USAR) was added to China's export control entity list on June 22, blocking Chinese suppliers from shipping feedstock to the firm.",
-      "as_of": "2026-09-06",
+      "summary": "China's sweeping October 9, 2025 rare-earth export-control measures (modeled on the US FDPR, covering foreign-made goods with \u22650.1% Chinese-origin content) were suspended until November 10, 2026 as part of the APEC Busan stand-down. With the November expiry now six weeks away and the US-China tariff truce still fragile, no public extension or renewal has been signaled, creating a binary cliff-edge risk for global supply chains.",
+      "as_of": "2026-09-29",
       "sources": [
-        "https://eastasiabrief.com/trade-policy/china-export-pause-rare-earths-nears-nov-10-expiration-197",
-        "https://www.sec.gov/Archives/edgar/data/0001970622/000121390026078760/ea029675201ex99-2.htm",
-        "https://discoveryalert.com/china-rare-earth-export-restrictions-supply-chain-geopolitics/"
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1007,12 +1007,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Nov-10 expiration is now <6 weeks away, MOFCOM has been silent, and Fitch/BMI has called the pause a 'tactical diplomatic gesture.' This shifts the tracker indicator from '0 extended' toward '1 expiring.' Simultaneously, USAR's entity-list blacklisting on June 22 directly updates the 'US domestic RE producer blacklist' indicator from '1 entity-specific ban' (confirmed). The convergence of a lapsing pause + producer blacklisting materially raises supply disruption risk to Western defense and AI supply chains, per the sec.gov 8-K filing.",
+      "rationale": "The Nov-2025 pause status indicator should move from '0 extended' to '1 expiring' immediately, given the November 10 cliff is now within a 6-week horizon with no public renewal signal. The suspended measures include FDPR-mirror extraterritorial reach, MP Materials and USA Rare Earth entity-list blacklisting (Jun 2026), and broader midstream/downstream technology transfer bans \u2014 all of which would activate simultaneously. The Trump-Xi tariff truce may implicitly cover an extension, but no formal announcement exists, making this the tracker's nearest-term binary event.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-09-28",
+      "last_seen": "2026-09-29",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 17
+      "sightings": 18
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -4120,13 +4120,12 @@
     },
     "new-12-5-section-301-tariff-on-china-effective-j-229773": {
       "headline": "New 12.5% Section 301 Tariff on China Effective July 24; Second Overcapacity Probe Covering 60 Countries Still Live",
-      "summary": "As of Aug 24, Bloomberg reported the US is preparing a 7.5% 'overcapacity' tariff on Chinese goods ahead of a planned Xi-Trump summit, stacking on the 12.5% Section 301 forced-labor tariff that replaced IEEPA duties on July 24. A separate Section 301 excess-capacity investigation covering 60 countries launched in March 2026 remains ongoing, with 25 US states having sued to block the forced-labor tariff.",
-      "as_of": "2026-08-24",
+      "summary": "Following Xi Jinping's state visit to Washington on September 25, the US and China agreed to reduce tariffs on $60bn of bilateral trade (77 Chinese goods, 1,600+ US products) and extended the broader trade truce by two months, with further talks planned at APEC Shenzhen in November. Two-way trade had already fallen 25% YoY to $495bn in 2025, and analysts caution the announcement marks no structural shift.",
+      "as_of": "2026-09-28",
       "sources": [
-        "https://www.usnews.com/news/top-news/articles/2026-08-24/us-eyes-china-overcapacity-tariffs-of-7-5-before-xi-trump-talks-bloomberg-news-reports",
-        "https://www.china-briefing.com/news/us-china-tariff-rates-2025/",
-        "https://www.tariffstool.com/tariffs-from-china",
-        "https://budgetmodel.wharton.upenn.edu/p/2026-08-10-effective-tariff-rates-and-revenues-updated-august-10-2026/"
+        "https://www.aljazeera.com/economy/2026/9/28/us-china-list-goods-recommended-for-tariff-cuts-following-trump-xi-summit",
+        "https://www.axios.com/2026/09/26/us-china-tariffs-trade-30-billion",
+        "https://www.thenationalnews.com/business/economy/2026/09/27/china-and-us-agree-to-tariff-cuts-on-30-billion-in-goods-and-ai-dialogue/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -4134,11 +4133,11 @@
       "target_indicator": "New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The proposed new 7.5% overcapacity tariff \u2014 coming on top of the already-active 12.5% Section 301 forced-labor tariff (effective July 24) and legacy Section 301 duties (up to 25%) \u2014 signals further escalation, pushing the 'New tariff/anti-dumping actions' ordinal squarely to 2 (escalating). The ongoing Section 301 excess-capacity investigation covering 60 countries adds systemic breadth. The tariff/legal uncertainty (25 states suing, Supreme Court IEEPA ruling) creates reflexive uncertainty for Chinese export pricing and USD/CNY dynamics, both tracked in s5_china_deflation. The pre-summit timing also raises binary risk: a deal could rapidly de-escalate, but failure would intensify deflation-export pressure.",
+      "rationale": "The bilateral tariff partial rollback is a direct downward signal on the 'New tariff/anti-dumping actions' indicator in s5_china_deflation \u2014 it should move from escalating toward rising or calm in the near-term window. However, the truce is explicitly temporary (expires Nov 2026), structural decoupling in tech/defense remains intact, and the 25% YoY collapse in trade volume implies sustained deflation-export pressure from China persists even if headline tariff levels ease. The tracker should update the indicator rubric score downward but flag the binary reversal risk at the truce expiry.",
       "status": "pending",
       "first_seen": "2026-07-30",
-      "last_seen": "2026-08-27",
-      "sightings": 3,
+      "last_seen": "2026-09-29",
+      "sightings": 4,
       "id": "new-12-5-section-301-tariff-on-china-effective-j-229773"
     },
     "bank-of-england-fsr-ai-equity-concentration-valu-1b0c02": {
@@ -8478,10 +8477,97 @@
       "last_seen": "2026-09-28",
       "sightings": 1,
       "id": "us-iran-tanker-war-and-hormuz-deadlock-produce-e-d2f57c"
+    },
+    "global-long-duration-sovereign-bond-sell-off-dev-0dce3b": {
+      "headline": "Global long-duration sovereign bond sell-off: developed-market 30-year yields at multi-decade highs",
+      "summary": "A synchronized surge in long-end government bond yields across the US (~4.8% 10yr), Japan (30yr at historical highs), UK (30yr near 3-decade highs), and continental Europe reflects rising term premiums, energy-driven inflation, and fiscal sustainability doubts. The sell-off is compressing equity risk premiums and raising debt-service costs simultaneously across highly leveraged sovereigns and corporates.",
+      "as_of": "2026-09-07",
+      "sources": [
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/",
+        "https://logicmacroregime.substack.com/p/monthly-macro-map-september-2026",
+        "https://www.ubp.com/en/news-insights/newsroom/the-yen-rescue-that-can-t-beat-fundamentals"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s14_pensions",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "G4 30yr sovereign yield co-movement (bps spread vs Jan-2026 baseline)",
+        "type": "value",
+        "rubric": "Measures the average deviation of US/Japan/UK/Germany 30-year sovereign yields from their January 2026 level in basis points. 0\u201350bps = normal drift; 51\u2013150bps = elevated (rising term premium); >150bps = stress (systemic repricing, pension/LDI pressure analogous to UK 2022).",
+        "sources": [
+          "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/",
+          "https://tradingeconomics.com/japan/government-bond-yield"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The synchronized global long-duration sell-off \u2014 covering the US, Japan, UK, and Europe simultaneously \u2014 is not fully captured by any single existing indicator. s14_pensions tracks 'pension-fund leverage event, UK-2022 type' but has no leading indicator for the multi-sovereign term-premium surge that *precedes* such events. s2_japan captures JGB yields but only for Japan. A cross-G4 30yr co-movement measure would give the tracker an early-warning signal for LDI-style liability mismatches, pension funded-ratio deterioration, and CRE/corporate refinancing stress simultaneously, before a single-country blowup crystallizes.",
+      "status": "pending",
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "sightings": 1,
+      "id": "global-long-duration-sovereign-bond-sell-off-dev-0dce3b"
+    },
+    "trump-xi-ai-dialogue-framework-launched-us-china-a92220": {
+      "headline": "Trump-Xi AI dialogue framework launched; US-China agree on joint AI governance signaling channel",
+      "summary": "The September 25-26 Washington summit produced a formal agreement to launch a bilateral AI dialogue alongside the tariff package, the first institutionalized US-China communication channel on AI governance and dual-use AI risk. While thin on substance, it represents a structural departure from pure AI-decoupling and introduces a new diplomatic variable into technology-export-control trajectories.",
+      "as_of": "2026-09-26",
+      "sources": [
+        "https://www.thenationalnews.com/business/economy/2026/09/27/china-and-us-agree-to-tariff-cuts-on-30-billion-in-goods-and-ai-dialogue/",
+        "https://www.usnews.com/news/top-news/articles/2026-09-26/china-us-agree-to-ai-dialogue-tariff-cuts-on-30-billion-in-goods-during-xi-visit"
+      ],
+      "materiality": "medium",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "US-China AI governance / dual-use technology diplomacy",
+        "why": "The launch of a formal US-China AI dialogue introduces a new regime variable: bilateral AI governance agreements could either (a) slow export-control escalation on semiconductors/rare earths \u2014 reducing tail risk for s6, s8, s19 \u2014 or (b) collapse and trigger a sharper technology decoupling shock. Neither outcome is tracked anywhere in the existing framework. As AI capex, chip supply chains, and rare-earth weaponization all sit in the tracker, the diplomatic meta-layer that governs the rules of engagement for all three deserves its own story node.",
+        "proposed_level": 4,
+        "set": "Set 4",
+        "indicators": [
+          {
+            "label": "US-China AI dialogue status (0 active / 1 stalled / 2 collapsed)",
+            "type": "band",
+            "rubric": "Tracks operational status of the bilateral AI governance dialogue established at the Sep-2026 summit. Active = meetings scheduled or recently held; Stalled = no meeting in 90+ days or publicly disputed agenda; Collapsed = formal withdrawal by either party or major retaliatory tech action taken during active dialogue.",
+            "sources": [
+              "https://www.thenationalnews.com/business/economy/2026/09/27/china-and-us-agree-to-tariff-cuts-on-30-billion-in-goods-and-ai-dialogue/",
+              "https://www.usnews.com/news/top-news/articles/2026-09-26/china-us-agree-to-ai-dialogue-tariff-cuts-on-30-billion-in-goods-during-xi-visit"
+            ],
+            "suggested_weight": 0.15
+          },
+          {
+            "label": "AI-related export-control freeze index (0 no new actions / 1 minor additions / 2 major new restrictions)",
+            "type": "band",
+            "rubric": "Measures whether either side imposes new AI-relevant export controls (chips, HBM, RE magnets, frontier-model weights) during a period of active dialogue. 0 = no new actions consistent with diplomatic stand-down; 1 = minor entity-list additions or technical clarifications; 2 = major new unilateral restrictions announced while dialogue nominally active.",
+            "sources": [
+              "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals"
+            ],
+            "suggested_weight": 0.15
+          },
+          {
+            "label": "Dual-use AI governance agreement depth (0 binding / 1 framework only / 2 no agreement)",
+            "type": "band",
+            "rubric": "Tracks whether US-China AI dialogue produces enforceable agreements. 0 = signed protocols with verification mechanisms; 1 = high-level framework/principles only, no enforcement; 2 = dialogue exists in name but no substantive agreement or transparency measures established.",
+            "sources": [
+              "https://www.thenationalnews.com/business/economy/2026/09/27/china-and-us-agree-to-tariff-cuts-on-30-billion-in-goods-and-ai-dialogue/"
+            ],
+            "suggested_weight": 0.1
+          }
+        ]
+      },
+      "rationale": "The US-China AI dialogue is not merely a diplomatic footnote \u2014 it is the governance meta-layer for the technology-decoupling risk running through s6 (rare earths/AI magnets), s8 (AI capex), s19 (ASML/lithography export controls), and indirectly s5 (China PPI via tech-sector demand). A new story node is warranted because: (1) the dialogue's success or failure will be a leading indicator for export-control trajectories across multiple existing stories; (2) no existing story tracks US-China diplomatic signaling channels specifically on AI/technology; and (3) the dialogue creates a new binary event risk \u2014 a high-profile collapse would likely trigger simultaneous escalation across s6, s8, and s19, making it a cross-story amplifier with no current home in the tracker.",
+      "status": "pending",
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "sightings": 1,
+      "id": "trump-xi-ai-dialogue-framework-launched-us-china-a92220"
     }
   },
-  "generated": "2026-09-28",
+  "generated": "2026-09-29",
   "model": "claude-sonnet-4-6",
   "new_count": 2,
-  "pending_count": 261
+  "pending_count": 263
 }
