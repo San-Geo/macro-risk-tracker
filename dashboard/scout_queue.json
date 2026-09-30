@@ -198,12 +198,13 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The Bank of Japan raised its policy rate by 25bp to 1.25% on September 18 (effective Sep 24), its fastest inter-meeting cadence since normalization began, with the 10-year JGB yield climbing toward 3.1% \u2014 highest since 1996. A former BOJ official flagged the possibility of a back-to-back hike in October, materially tightening the rate gap that underwrites global carry trades.",
-      "as_of": "2026-09-28",
+      "summary": "The Bank of Japan raised its policy rate by 25 bps to 1.25% on September 18 in a 7-2 split vote, the highest since 1995 and a quickening of the hike cycle to quarterly cadence. The 10-year JGB yield hit 3.10% (highest since 1996) and the 30-year reached 4.16%, both up ~15 bps on the month, as fiscal concerns under PM Takaichi and energy-driven inflation compound BOJ tightening.",
+      "as_of": "2026-09-30",
       "sources": [
         "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html",
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.newtrading.io/japan-interest-rate/"
+        "https://tradingeconomics.com/japan/30-year-bond-yield",
+        "https://www.boj.or.jp/en/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -211,12 +212,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The BOJ's September 2026 hike (7-2 vote, fastest cadence since normalization) and a 10yr JGB yield near 3.1% directly move the '30-year JGB yield' and 'Takaichi plan financing clarity' indicators in s2_japan. Accelerating BOJ normalization compresses the USD/JPY carry margin and raises the probability of disorderly JGB supply absorption \u2014 both core tracker concerns. The prospect of a consecutive October hike is a new tail catalyst not yet reflected in the tracker's current rubric calibration.",
+      "rationale": "The BOJ's acceleration to quarterly hikes (from semi-annual) and JGB yields at multi-decade highs directly stress all three s2_japan indicators: the 30y JGB yield is now 4.16% (sharply above any prior tracker reading), USD/JPY at ~156 remains a live carry-trade flashpoint, and Takaichi's fiscal expansion ('bridging bonds', VAT cuts) makes financing clarity worse \u2014 update Takaichi plan financing clarity to '1 unclear'. The quarterly tightening cadence is itself new material information that the tracker must reflect.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 32
+      "sightings": 33
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -994,12 +995,12 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "China's sweeping October 9, 2025 rare-earth export-control measures (modeled on the US FDPR, covering foreign-made goods with \u22650.1% Chinese-origin content) were suspended until November 10, 2026 as part of the APEC Busan stand-down. With the November expiry now six weeks away and the US-China tariff truce still fragile, no public extension or renewal has been signaled, creating a binary cliff-edge risk for global supply chains.",
-      "as_of": "2026-09-29",
+      "summary": "The Council on Foreign Relations (Sept 21, 2026) warned that if the Busan truce \u2014 which paused China's October 2025 rare-earth export-control expansion \u2014 expires in November 2026, Beijing will impose controls on at least five more rare earths plus could activate a sweeping rule requiring export licenses for any product where China-origin RE content exceeds 0.1% of value. Silverado's September 2026 trade report confirms China's compound/metal exports to the US and Japan remained 'well below historical levels' in August, while magnet exports have largely recovered.",
+      "as_of": "2026-09-22",
       "sources": [
-        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
-        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
-        "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals"
+        "https://www.cfr.org/reports/dismantling-chinas-supply-chain-weapon",
+        "https://silverado.org/publications/rare-earth-trade-report/",
+        "https://en.wikipedia.org/wiki/Rare_earths_trade_dispute"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1007,12 +1008,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Nov-2025 pause status indicator should move from '0 extended' to '1 expiring' immediately, given the November 10 cliff is now within a 6-week horizon with no public renewal signal. The suspended measures include FDPR-mirror extraterritorial reach, MP Materials and USA Rare Earth entity-list blacklisting (Jun 2026), and broader midstream/downstream technology transfer bans \u2014 all of which would activate simultaneously. The Trump-Xi tariff truce may implicitly cover an extension, but no formal announcement exists, making this the tracker's nearest-term binary event.",
+      "rationale": "The Nov-2026 truce expiry deadline is now less than 5 weeks away and CFR has put a specific escalation scenario on the record: 5+ additional REEs plus a de-facto global-value-chain rule (0.1% content threshold) that 'would cover large swaths of global trade.' This moves the Nov-2025 pause status indicator from '0 extended' to '1 expiring' and warrants updating the Rare-earth export license flow from '1 slowing' to watch for rapid deterioration. The asymmetry between magnet exports (recovered) and compound/metal exports (still suppressed for US/Japan) also matters for the Ex-China heavy RE price premium indicator.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 18
+      "sightings": 19
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -2972,24 +2973,24 @@
     },
     "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0": {
       "headline": "China June PPI +4.1% YoY (4-year high) driven by Iran energy shock\u2014but MoM turned negative and consumer goods PPI still -0.9%, revealing a dangerous bifurcation",
-      "summary": "China's PPI surged 3.8% YoY in August\u2014a 4.7-point swing from February's reading\u2014driven by Middle East oil-cost pass-through, ending what had been a 30+ month deflationary streak at the factory gate. However, consumer CPI remains negative (-0.4% in August, -0.3% in September), indicating the PPI spike is cost-push rather than demand-driven, compressing industrial margins.",
+      "summary": "China's PPI rose 3.8% year-on-year in August 2026, a dramatic reversal from near-deflation in early 2026 (February reading implied a ~-0.9% level), driven by commodity cost pass-through and the oil-price impact of the Hormuz crisis. This marks the strongest factory-gate inflation in nearly four years and raises the risk that China shifts from exporting deflation to exporting cost-push inflation into global supply chains.",
       "as_of": "2026-09-13",
       "sources": [
         "https://www.trend.az/world/4223315.html",
         "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html",
-        "https://www.stats.gov.cn/english/PressRelease/"
+        "https://www.investing.com/economic-calendar/chinese-ppi-464"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "existing_indicator",
       "target_story": "s5_china_deflation",
       "target_indicator": "China PPI YoY (%) - large swing either way is worse",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The tracker rubric explicitly flags large swings in either direction as worse. A near-4.8-percentage-point swing from deflation to +3.8% YoY in just six months is exactly the kind of volatility that matters. This is not demand-driven recovery but an oil-cost-push that squeezes downstream manufacturers unable to pass costs to consumers (CPI still negative). This combination\u2014rising PPI, falling CPI\u2014is the classic 'margin squeeze' deflation-export risk scenario the story tracks. The indicator value needs urgent updating from prior deflationary readings.",
+      "rationale": "The story is framed as 'deflation OR cost-push' risk, and the tracker explicitly notes 'large swing either way is worse.' A 4.7-percentage-point swing in 7 months \u2014 from deflation to +3.8% PPI \u2014 is exactly the kind of large swing the indicator was designed to capture. The proximate driver (Hormuz oil shock feeding into Chinese factory costs) is distinct from domestic demand weakness and links s5 to s20 in a cross-story feedback loop. With CPI still weak (+0.5% YoY in July), the PPI-CPI wedge also signals margin pressure on Chinese manufacturers that could force export price adjustment, either absorbing costs (deflationary for importers) or passing them on (inflationary), both of which are tracker-relevant.",
       "status": "pending",
       "first_seen": "2026-07-15",
-      "last_seen": "2026-09-28",
-      "sightings": 14,
+      "last_seen": "2026-09-30",
+      "sightings": 15,
       "id": "china-june-ppi-4-1-yoy-4-year-high-driven-by-ira-37ffe0"
     },
     "japan-10-year-jgb-yield-touches-2-901-30-year-hi-341328": {
@@ -7467,13 +7468,13 @@
     },
     "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb": {
       "headline": "Synchronized global sovereign bond rout: US 10y at 4.80%, UK 30y at 5.82% (highest since 1998), German 10y at 2011 highs",
-      "summary": "A multi-week global bond selloff, accelerated by oil-shock inflation from the Iran war, heavy government borrowing (record $29 trillion projected for 2026), and hawkish central bank signals, has pushed sovereign yields to multi-decade highs simultaneously across the US, UK, Germany, France, and Japan. France's OAT 10-year yield rose above 4.215%, its highest since 2008, with State Street analysts specifically flagging France as the most vulnerable developed-market sovereign.",
-      "as_of": "2026-09-08",
+      "summary": "France's OAT-Bund 10-year spread surged to 111.2 bps as of September 29, up from ~85 bps just three weeks earlier, after the finance ministry disclosed public debt at 119.3% of GDP (deficit 5.4%) and PM Lecornu's \u20ac54 bn savings plan faces a bitterly divided National Assembly. Over 50% of OATs are now foreign-owned, raising 'swing investor' concerns flagged by HSBC's strategist.",
+      "as_of": "2026-09-29",
       "sources": [
-        "https://www.cnbc.com/2026/09/03/global-bond-yields-rising-treasuries-jgb-bunds.html",
-        "https://www.indmoney.com/blog/us-stocks/global-bond-market-selloff",
-        "https://www.euronews.com/business/2026/09/01/european-government-bond-yields-surge-to-15-year-highs-as-sell-off-deepens",
-        "https://dailycaller.com/2026/09/01/global-bond-selloff-sends-yields-to-highest-level-since-2008/"
+        "https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html",
+        "https://easternherald.com/2026/09/20/france-debt-119-gdp-oat-bund-spread-eurozone/",
+        "https://www.cnbc.com/2026/09/24/france-budget-debt-deficit-government.html",
+        "https://www.globalcapital.com/article/2gxtax8dc12widzvn1qm8/people-and-markets/leader/france-110bp-over-bunds-could-be-just-the-start"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -7481,11 +7482,11 @@
       "target_indicator": "OAT-Bund 10y spread (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The French OAT at 4.215% (highest since 2008) combined with Bund yields at 2011 highs directly updates the OAT-Bund spread indicator in s10_france. State Street explicitly named France as the standout developed-market vulnerability ('fiscal slippage, limited political appetite for fiscal consolidation and electoral uncertainty'). The Govt stability indicator for s10_france should be reviewed (currently 1 fragile). However, this synchronized selloff also has second-order effects on s1_basis_trade (MOVE index rising), s4_dev_debt (higher US real yields pressure EM), and s14_pensions (funded-ratio pressure). Tagging to s10_france as the most specific existing indicator match, but flagging cross-story amplification.",
+      "rationale": "The OAT-Bund spread has breached 110 bps \u2014 the 2012 eurozone crisis threshold \u2014 within a single week, a 26 bp jump. This moves the tracker's Govt stability to '2 collapse-or-snap-election' risk territory (Lecornu faces a no-confidence vote) and flags Rating action risk at '1 negative outlook'. The foreign-ownership concentration above 50% is a new structural fragility that amplifies any shock to investor confidence. This is the most acute near-term European systemic risk in the tracker.",
       "status": "pending",
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-11",
-      "sightings": 1,
+      "last_seen": "2026-09-30",
+      "sightings": 2,
       "id": "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb"
     },
     "ai-hyperscaler-bond-issuance-hits-194bn-ytd-in-2-33afc6": {
@@ -8564,10 +8565,66 @@
       "last_seen": "2026-09-29",
       "sightings": 1,
       "id": "trump-xi-ai-dialogue-framework-launched-us-china-a92220"
+    },
+    "strait-of-hormuz-attacks-escalate-3-tankers-stru-d389c2": {
+      "headline": "Strait of Hormuz attacks escalate: 3 tankers struck Sept 29, traffic at ~40% of pre-crisis norm; ongoing since Feb 28",
+      "summary": "Three tankers were struck by unknown projectiles in the Strait of Hormuz on September 29 alone, the 74th\u201376th recorded attacks since Iran blocked the strait following the US-Israel air campaign on February 28. IMO data shows only ~7\u201317 commodity vessels crossing daily versus a pre-war average roughly 20x higher, with 7 vessels 'dark' on September 29 and CENTCOM having redirected 115 commercial vessels since resuming its blockade on July 14.",
+      "as_of": "2026-09-30",
+      "sources": [
+        "https://insights.windward.ai/",
+        "https://cargolinked.com/blog/hormuz-red-sea-shipping-update-late-september-2026",
+        "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "https://portwatch.imf.org/pages/cc317ba850e34c4dadbead6f7b336fb1",
+        "https://news.un.org/en/story/2026/08/1168121"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Hormuz daily commodity vessel crossings (vs pre-crisis baseline)",
+        "type": "value",
+        "rubric": "Actual daily commodity vessel transits through Hormuz as reported by Reuters/IMO/Windward AI. Pre-crisis baseline ~150\u2013170/week (~22/day). Current: ~10\u201317/day (~40\u201355% of baseline). Threshold: <50% baseline = 2 (severely contested); 50\u201380% = 1 (contested); >80% = 0 (normalizing). Also track monthly attack count (current: 74 attacks + 7 near-misses since Feb 28).",
+        "sources": [
+          "https://insights.windward.ai/",
+          "https://portwatch.imf.org/pages/cc317ba850e34c4dadbead6f7b336fb1",
+          "https://cargolinked.com/blog/hormuz-red-sea-shipping-update-late-september-2026"
+        ],
+        "suggested_weight": 0.35
+      },
+      "proposed_story": null,
+      "rationale": "The s20_sea_lanes story already tracks Hormuz/Red Sea status with a 0/1/2 rubric, which is now firmly at '2 closed/contested'. However the tracker lacks a quantitative flow indicator that distinguishes 'contested' from 'near-total blockade' \u2014 the current ~40% transit rate and 74 attacks are materially worse than anything the original rubric was calibrated to. Adding a daily-vessel-crossing indicator captures the graduated real-world flow impact and allows early detection of normalization from a ceasefire deal (US-Iran talks reported unresolved as of Sept 25). WTI/crude price and pipeline rerouting effects also need this anchor.",
+      "status": "pending",
+      "first_seen": "2026-09-30",
+      "last_seen": "2026-09-30",
+      "sightings": 1,
+      "id": "strait-of-hormuz-attacks-escalate-3-tankers-stru-d389c2"
+    },
+    "fitch-records-private-credit-default-rate-at-6-3-e448dd": {
+      "headline": "Fitch records private credit default rate at 6.3% \u2014 all-time high \u2014 as FSB and Bank of Canada flag systemic bank linkages",
+      "summary": "Fitch's trailing 12-month private credit default rate across 1,300 US borrowers hit a record 6.3% in August 2026, surpassing the prior record set just one month earlier, with September recording the highest monthly default-event count in a year. The FSB's September 2026 regulatory brief simultaneously flagged that Canadian banks alone have lent at least $40 bn to private credit funds, with transparency and leverage assessment described as critically limited.",
+      "as_of": "2026-09-17",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-09-14/us-private-credit-default-rate-hits-a-record-of-6-3-fitch-says",
+        "https://www.bloomberg.com/news/articles/2026-09-17/private-credit-defaults-are-1-6-or-19-depending-who-you-ask",
+        "https://www.bloomberg.com/professional/insights/regulation/september-2026-global-regulatory-brief-private-credit-credit-risk-reform-and-liquidity-reporting/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s3_private_credit",
+      "target_indicator": "Direct-lending default rate (%, Fitch incl. distressed exchanges)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Fitch default rate at 6.3% is a new all-time record (prior tracker reference point was ~310 bps HY OAS proxy), moving consecutively higher month-on-month and with the highest single-month default event count in a year. This directly updates the Direct-lending default rate indicator. Concurrently the FSB/Bank of Canada disclosures of $40 bn+ bank-to-private-credit lending exposure \u2014 with leverage 'difficult to measure' \u2014 represent the first official quantification of the bank contagion channel and should nudge Large-fund redemption gates from '0 none' toward '1 isolated' monitoring. Combined materiality is high given the asset class is ~$2 trillion.",
+      "status": "pending",
+      "first_seen": "2026-09-30",
+      "last_seen": "2026-09-30",
+      "sightings": 1,
+      "id": "fitch-records-private-credit-default-rate-at-6-3-e448dd"
     }
   },
-  "generated": "2026-09-29",
+  "generated": "2026-09-30",
   "model": "claude-sonnet-4-6",
   "new_count": 2,
-  "pending_count": 263
+  "pending_count": 265
 }

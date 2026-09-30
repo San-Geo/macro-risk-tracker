@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-29",
-  "generated_at": "2026-09-29 16:59 UTC",
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30 16:59 UTC",
   "aggregates": {
     "1": 5.8,
     "3": 4.5,
@@ -9,7 +9,7 @@
     "5": 5.2,
     "overall": 6.7
   },
-  "narrative": "# EOD Macro-Risk Brief | 29 September 2026\n\n**Overall risk stands at High, with no intraday level changes.**\n\nNo stories moved today. Persistent structural pressures remain across three domains:\n\n\u2022 **Financial leverage & opacity**: Private credit's opaque expansion (High) and Treasury basis trade hidden leverage (Elevated) sustain tail risks in credit intermediation; Japan's fiscal/JGB/carry dynamics (High) add cross-border spillover exposure.\n\n\u2022 **Real economy constraints**: AI power & grid bottleneck (High) and sea lanes & undersea cables (High) expose supply chains to both demand shock and geopolitical disruption; CRE maturity wall (Elevated) and developing-world debt (Elevated) pressurize borrowers.\n\n\u2022 **Commodity & geopolitical shocks**: Critical minerals weaponization (Elevated), food/fertilizer fragility (Elevated), and lithography chokepoint (Elevated) remain structural vulnerabilities.\n\n**Watch: Private credit's opaque expansion (High, level 8)\u2014largest systemic amplitude and least transparent to regulators.**",
+  "narrative": "**HEADLINE**\nMacro risk stands at High (6.7), with private credit opacity, Japan's carry-trade vulnerability, and AI power demand creating cascading fault lines.\n\n**STORIES AT ELEVATED OR HIGH**\n\u2022 **Private credit's opaque expansion** (High, level 8) \u2013 Largest single risk; rapid growth in unregulated lending with limited transparency poses sudden liquidity or default contagion if rates hold or markets tighten.\n\u2022 **Japan fiscal / JGB / carry trade** (High, level 7) \u2013 BOJ normalization and yen strength threaten leveraged positions; unwinding could trigger sharp cross-currency volatility.\n\u2022 **AI power & the grid bottleneck** (High, level 7) \u2013 Infrastructure cannot keep pace with chip-farm demand; shortfalls risk capex disappointment and regional supply strain.\n\u2022 **Sea lanes & undersea cables** (High, level 7) \u2013 Geopolitical and weather threats to critical supply routes and data infrastructure remain uninsured at scale.\n\u2022 **Treasury basis trade, Developing-world debt, China deflation, Critical minerals, AI financing, CRE maturity wall, Food fragility, ASML chokepoint, France/eurozone, Hidden consumer debt** (Elevated, levels 5\u20136) \u2013 Each amplifies tail risk if concurrent stress emerges.\n\n**WATCH CLOSEST**\nPrivate credit's opacity at level 8 poses the most immediate systemic transmission risk given its scale and opaqueness.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -23,7 +23,7 @@
         {
           "id": "sofr_effr_spread",
           "label": "SOFR minus EFFR (%)",
-          "value": 0.02,
+          "value": 0.0,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -32,13 +32,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/SOFR",
-          "as_of": "2026-09-28",
+          "as_of": "2026-09-29",
           "provenance": "FRED"
         },
         {
           "id": "move",
           "label": "MOVE index (Treasury volatility)",
-          "value": 106.7733,
+          "value": 107.6513,
           "band": 1,
           "baseline_band": 0,
           "weight": 1.5,
@@ -47,7 +47,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-09-29",
+          "as_of": "2026-09-30",
           "provenance": "Market"
         },
         {
@@ -88,7 +88,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -104,7 +104,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 157.456,
+          "value": 157.275,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -113,13 +113,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/JPY=X",
-          "as_of": "2026-09-29",
+          "as_of": "2026-09-30",
           "provenance": "Market"
         },
         {
           "id": "jgb30",
           "label": "30-year JGB yield (%)",
-          "value": 4.122,
+          "value": 4.126,
           "band": 2,
           "baseline_band": 0,
           "weight": 1.0,
@@ -128,7 +128,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/index.htm",
-          "as_of": "2026-09-28",
+          "as_of": "2026-09-29",
           "provenance": "MOF"
         },
         {
@@ -169,7 +169,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -185,7 +185,7 @@
         {
           "id": "hy_oas",
           "label": "US high-yield OAS (%, \u2248310bps)",
-          "value": 3.02,
+          "value": 3.08,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -194,7 +194,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
-          "as_of": "2026-09-28",
+          "as_of": "2026-09-29",
           "provenance": "FRED"
         },
         {
@@ -250,7 +250,7 @@
       ],
       "trend": {
         "prev": 8,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -281,7 +281,7 @@
         {
           "id": "real10",
           "label": "US 10y real yield (TIPS, %)",
-          "value": 2.83,
+          "value": 2.9,
           "band": 2,
           "baseline_band": 0,
           "weight": 1.0,
@@ -290,7 +290,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/DFII10",
-          "as_of": "2026-09-25",
+          "as_of": "2026-09-28",
           "provenance": "FRED"
         },
         {
@@ -321,17 +321,17 @@
         6,
         6,
         6,
+        5,
+        5,
+        5,
+        5,
         6,
-        5,
-        5,
-        5,
-        5,
         6,
         6
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 1
       }
     },
@@ -362,7 +362,7 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.6976,
+          "value": 6.6978,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -371,7 +371,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CNY=X",
-          "as_of": "2026-09-29",
+          "as_of": "2026-09-30",
           "provenance": "Market"
         },
         {
@@ -412,7 +412,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -502,13 +502,13 @@
         7,
         7,
         7,
-        7,
+        6,
         6,
         6
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": -1
       }
     },
@@ -524,7 +524,7 @@
         {
           "id": "peg_deviation",
           "label": "Largest stablecoin max peg deviation (%)",
-          "value": 0.02,
+          "value": 0.05,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -533,13 +533,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-09-29",
+          "as_of": "2026-09-30",
           "provenance": "DefiLlama"
         },
         {
           "id": "stablecoin_supply",
           "label": "Total USD stablecoin supply ($bn)",
-          "value": 312.8,
+          "value": 313.0,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -548,7 +548,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-09-29",
+          "as_of": "2026-09-30",
           "provenance": "DefiLlama"
         },
         {
@@ -589,7 +589,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -605,7 +605,7 @@
         {
           "id": "ig_oas",
           "label": "US investment-grade OAS (%) - big-issuer proxy",
-          "value": 0.83,
+          "value": 0.84,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -614,7 +614,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
-          "as_of": "2026-09-28",
+          "as_of": "2026-09-29",
           "provenance": "FRED"
         },
         {
@@ -670,7 +670,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -720,7 +720,6 @@
         5,
         5,
         5,
-        5,
         4,
         4,
         4,
@@ -732,11 +731,12 @@
         5,
         5,
         6,
+        6,
         6
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 1
       }
     },
@@ -817,7 +817,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -844,7 +844,7 @@
           "source_url": "https://blog.cucollector.com/the-seasonal-loan-delinquency-reprieve-may-be-ending/",
           "as_of": "2026-07",
           "provenance": "Agent",
-          "age_days": 63,
+          "age_days": 64,
           "stale_for_cadence": true
         },
         {
@@ -876,7 +876,7 @@
           "source_url": "",
           "as_of": "2026-03-31",
           "provenance": "Agent",
-          "age_days": 185,
+          "age_days": 186,
           "stale_for_cadence": true
         }
       ],
@@ -902,7 +902,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -918,7 +918,7 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4180.6001,
+          "value": 4189.8999,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -927,7 +927,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/GC=F",
-          "as_of": "2026-09-29",
+          "as_of": "2026-09-30",
           "provenance": "Market"
         },
         {
@@ -944,7 +944,7 @@
           "source_url": "https://data.imf.org/en/news/imf%20data%20brief%20july%201",
           "as_of": "2026Q1",
           "provenance": "Agent",
-          "age_days": 185,
+          "age_days": 186,
           "stale_for_cadence": true
         },
         {
@@ -985,7 +985,7 @@
       ],
       "trend": {
         "prev": 3,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -1027,7 +1027,7 @@
           "source_url": "https://fred.stlouisfed.org/series/DRSFRMACBS",
           "as_of": "2026-04-01",
           "provenance": "FRED",
-          "age_days": 181,
+          "age_days": 182,
           "stale_for_cadence": true
         },
         {
@@ -1068,7 +1068,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -1149,7 +1149,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -1176,7 +1176,7 @@
           "source_url": "https://emp.lbl.gov/queues",
           "as_of": "2025-12-31",
           "provenance": "Agent",
-          "age_days": 275,
+          "age_days": 276,
           "stale_for_cadence": true
         },
         {
@@ -1216,23 +1216,23 @@
         7,
         7,
         7,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
         7,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
         7,
         7
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 1
       }
     },
@@ -1248,7 +1248,7 @@
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.608,
+          "value": 6.6225,
           "band": 2,
           "baseline_band": 1,
           "weight": 0.5,
@@ -1257,7 +1257,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/HG=F",
-          "as_of": "2026-09-29",
+          "as_of": "2026-09-30",
           "provenance": "Market"
         },
         {
@@ -1289,7 +1289,7 @@
           "source_url": "https://www.admis.com/icsg-flips-copper-forecast/",
           "as_of": "2026-04",
           "provenance": "Agent",
-          "age_days": 154,
+          "age_days": 155,
           "stale_for_cadence": true
         }
       ],
@@ -1315,7 +1315,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -1390,13 +1390,13 @@
         5,
         5,
         5,
-        5,
+        4,
         4,
         4
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": -1
       }
     },
@@ -1461,7 +1461,7 @@
         7,
         7,
         7,
-        7,
+        6,
         6,
         6,
         6,
@@ -1477,7 +1477,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -1558,7 +1558,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -1589,7 +1589,7 @@
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 90.53,
+          "value": 91.28,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
@@ -1598,7 +1598,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CL=F",
-          "as_of": "2026-09-29",
+          "as_of": "2026-09-30",
           "provenance": "Market"
         },
         {
@@ -1623,11 +1623,11 @@
         7,
         7,
         7,
+        8,
+        8,
+        8,
+        8,
         7,
-        8,
-        8,
-        8,
-        8,
         7,
         7,
         7,
@@ -1639,7 +1639,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     },
@@ -1655,7 +1655,7 @@
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 16.3,
+          "value": 15.85,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -1664,13 +1664,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^VIX",
-          "as_of": "2026-09-29",
+          "as_of": "2026-09-30",
           "provenance": "Market"
         },
         {
           "id": "move_ccp",
           "label": "Treasury volatility (MOVE)",
-          "value": 106.7733,
+          "value": 107.6513,
           "band": 1,
           "baseline_band": 0,
           "weight": 0.5,
@@ -1679,7 +1679,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-09-29",
+          "as_of": "2026-09-30",
           "provenance": "Market"
         },
         {
@@ -1720,7 +1720,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-09-22",
+        "since": "2026-09-23",
         "change": 0
       }
     }
@@ -3272,14 +3272,14 @@
     "live_total": 19,
     "fell_back": 0,
     "agent_last": "2026-09-28",
-    "agent_days_ago": 1,
+    "agent_days_ago": 2,
     "agent_flags": 34,
     "offline": false
   },
   "aggregates_trend": {
     "overall": {
       "prev": 6.6,
-      "since": "2026-09-22",
+      "since": "2026-09-23",
       "change": 0.1,
       "crosses_methodology": false,
       "ref_version": "2.0",
@@ -3329,7 +3329,7 @@
             "label": "US high-yield OAS (%, \u2248310bps)",
             "story": "Private credit's opaque expansion",
             "band": 0,
-            "value": 3.02
+            "value": 3.08
           }
         ]
       }
@@ -3777,8 +3777,8 @@
       {
         "id": "vix",
         "label": "VIX",
-        "value": 14.21,
-        "as_of": "2026-09-22",
+        "value": 16.04,
+        "as_of": "2026-09-29",
         "unit": "",
         "note": "Expected US stock-market volatility - the most-watched fear gauge. Calm markets usually sit below ~20.",
         "url": "https://fred.stlouisfed.org/series/VIXCLS"
@@ -3786,8 +3786,8 @@
       {
         "id": "curve",
         "label": "10y-2y curve",
-        "value": 0.32,
-        "as_of": "2026-09-28",
+        "value": 0.37,
+        "as_of": "2026-09-29",
         "unit": "pp",
         "note": "10-year minus 2-year Treasury yield. A negative (inverted) reading has historically preceded US recessions - with long and variable lags.",
         "url": "https://fred.stlouisfed.org/series/T10Y2Y"
@@ -3795,8 +3795,8 @@
       {
         "id": "hy_oas",
         "label": "High-yield spread",
-        "value": 3.02,
-        "as_of": "2026-09-28",
+        "value": 3.08,
+        "as_of": "2026-09-29",
         "unit": "pp",
         "note": "The extra yield markets demand to lend to risky companies - the market's own price of credit stress. Calm is roughly below ~4.",
         "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
@@ -3804,8 +3804,8 @@
       {
         "id": "nfci",
         "label": "Chicago Fed NFCI",
-        "value": -0.555,
-        "as_of": "2026-09-18",
+        "value": -0.548,
+        "as_of": "2026-09-25",
         "unit": "",
         "note": "The Chicago Fed's broad financial-conditions index across money, debt, and equity markets. Negative = looser (calmer) than average.",
         "url": "https://fred.stlouisfed.org/series/NFCI"
