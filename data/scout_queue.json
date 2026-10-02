@@ -8685,10 +8685,187 @@
       "last_seen": "2026-10-01",
       "sightings": 1,
       "id": "hormuz-crude-flows-near-pre-war-levels-but-refin-01239a"
+    },
+    "us-iran-war-keeps-hormuz-contested-us-deploys-th-230bf6": {
+      "headline": "US-Iran War Keeps Hormuz Contested; US Deploys Third Carrier Strike Group, Brent Near $100, Allies Pressured to Release Diesel Reserves",
+      "summary": "The eight-month-old US-Iran war continues to disrupt Strait of Hormuz flows, with Brent crude hovering around $99\u2013102/bbl and WTI near $89\u201393/bbl as of 2026-10-02; the US is pressing European allies to release emergency diesel stockpiles and is deploying a third carrier strike group, sustaining a high geopolitical risk premium. Saudi Hormuz throughput has partially recovered to 2.9 mb/d in September (up from 1 mb/d in August) but analysts have raised full-year 2026 Brent forecasts to $89/bbl average, implying persistent tightness.",
+      "as_of": "2026-10-02",
+      "sources": [
+        "https://www.thenationalnews.com/business/energy/2026/10/02/oil-prices-stable-amid-mixed-supply-signals-from-the-middle-east/",
+        "https://www.cnn.com/2026/10/02/europe/us-europe-diesel-reserves-intl",
+        "https://oilprice.com/Energy/Oil-Prices/Oil-Price-Forecasts-Jump-as-Hormuz-Disruption-Drags-On.html",
+        "https://www.eia.gov/todayinenergy/detail.php?id=67865"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status \u2192 update to '1 contested'; WTI crude oil \u2192 ~$89\u201393/bbl",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Ongoing Hormuz disruption with partial recovery but renewed military deployment and emergency reserve releases maps directly to s20_sea_lanes indicators: Hormuz status (1 contested), WTI crude (currently ~$92/bbl), and undersea cable incidents (0 none). The geopolitical risk premium is materially elevated and the allied reserve release is a policy escalation step that also touches s18_food_fertilizer (fertilizer input channel) and s15_ai_power (energy cost for data centers).",
+      "status": "pending",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "sightings": 1,
+      "id": "us-iran-war-keeps-hormuz-contested-us-deploys-th-230bf6"
+    },
+    "china-oct-2025-rare-earth-export-control-suspens-09d348": {
+      "headline": "China Oct-2025 Rare-Earth Export-Control Suspension Expires November 10, 2026 \u2014 With US Domestic Producers (MP Materials, USA Rare Earth) Already Blacklisted",
+      "summary": "The November 10, 2026 hard deadline for China's suspended October-9-2025 expanded rare-earth export controls is now 39 days away; Beijing blacklisted MP Materials and USA Rare Earth in June 2026, and the April 2025 controls on seven heavy rare earths remain in force. CFR analysis published September 21 confirms China has never reversed the April 4, 2025 controls and continues to use the licensing architecture to squeeze supply throughout 2026.",
+      "as_of": "2026-10-02",
+      "sources": [
+        "https://rareearthexchanges.com/news/china-rare-earth-controls-trump-xi-deadline/",
+        "https://en.wikipedia.org/wiki/Rare_earths_trade_dispute",
+        "https://www.cfr.org/reports/dismantling-chinas-supply-chain-weapon",
+        "https://theprint.in/diplomacy/china-weaponising-rare-earth-industry-against-the-world-says-us-envoy-david-perdue/3057768"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Nov-2025 pause status \u2192 update to '1 expiring' (39 days to hard deadline on Nov 10); US domestic RE producer blacklist \u2192 update to '1 entity-specific ban' (MP Materials + USA Rare Earth blacklisted June 2026); Rare-earth export license flow \u2192 '1 slowing' (April 2025 controls on 7 heavy REs remain fully active)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Three of the four s6 indicators require simultaneous updates: the November 10 cliff is now imminent (within the tracker's planning horizon), entity-level blacklisting of two US government-backed producers is a qualitative escalation, and the April-era license controls are confirmed to be squeezing supply in real time. Combined, these shift the story from 'pause holding' to 'pause expiring with escalation already embedded.'",
+      "status": "pending",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "sightings": 1,
+      "id": "china-oct-2025-rare-earth-export-control-suspens-09d348"
+    },
+    "japan-30-year-jgb-yield-at-4-18-10-year-at-3-09--535958": {
+      "headline": "Japan 30-Year JGB Yield at 4.18%, 10-Year at 3.09% \u2014 100bps+ Above Year-Ago Levels; GPIF Encouraged to Repatriate Capital",
+      "summary": "As of October 1\u20132, 2026, Japan's 30-year JGB yield sits at 4.18% (+100bps year-on-year) and the 10-year at 3.09% (+143bps year-on-year), both at multi-decade highs; Japan's finance minister has actively encouraged GPIF (\u00a5300 trillion) to shift allocations domestically, compressing the 30-year US-JGB spread to ~120 bps. The carry-trade economics have sharply deteriorated, with risk-adjusted carry on vanilla short-yen positions estimated at ~2.1% annualised versus 6.4% in early 2024.",
+      "as_of": "2026-10-02",
+      "sources": [
+        "https://tradingeconomics.com/japan/30-year-bond-yield",
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.w1m.com/insights/the-yen-carry-trade-approaching-a-tipping-point/",
+        "https://deluair.com/consultancy/insights/japan-policy-normalization-2026"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield \u2192 4.18% (materially above any prior tracker reading); Takaichi plan financing clarity \u2192 '1 unclear' (GPIF repatriation push adds disorderly flow risk); USD/JPY (monitor for yen strengthening as repatriation pressure builds)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "All three s2 indicators require refresh: the 30-year JGB yield at 4.18% is a record high and structurally narrows the US-Japan spread, the active GPIF repatriation push by the finance minister is a new policy escalation beyond what the tracker previously captured, and carry-trade math has deteriorated to the point where disorderly unwind risk (as in August 2024) is a live scenario. The 10-year at 3.09% has now breached the 3% threshold that analysts had identified as the 'cascade trigger.'",
+      "status": "pending",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "sightings": 1,
+      "id": "japan-30-year-jgb-yield-at-4-18-10-year-at-3-09--535958"
+    },
+    "rba-october-2026-fsr-ai-circular-financing-and-a-e2cc35": {
+      "headline": "RBA October 2026 FSR: AI 'Circular Financing' and AI-Driven Cyber Attacks Flagged as Top Global Financial Stability Threats",
+      "summary": "The Reserve Bank of Australia's October 1, 2026 Financial Stability Review\u2014drawing on parallel work by the BoE, BoC and ECB\u2014identifies AI circular financing (chipmakers financing neocloud customers who buy their products) and AI-amplified cyber attacks on concentrated financial-sector cloud providers as the two most prominent external threats to financial stability. The RBA explicitly warns that AI 'herd behaviour and market correlation' from algorithmic agents could trigger disorderly sell-offs in core bond markets.",
+      "as_of": "2026-10-01",
+      "sources": [
+        "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
+        "https://www.abc.net.au/news/2026-10-01/rba-financial-stability-review-october-2026/107215072",
+        "https://www.rba.gov.au/publications/fsr/2026/oct/pdf/financial-stability-review-2026-10.pdf",
+        "https://ozarab.media/rba-flags-ai-and-bond-market-risks/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s8_ai_capex",
+      "proposed_indicator": {
+        "label": "AI-driven cyber / operational disruption risk at financial-sector cloud providers (0 contained / 1 elevated / 2 acute)",
+        "type": "band",
+        "rubric": "0 = no major regulatory warnings, no incidents at systemically important cloud/AI providers; 1 = multiple G10 central bank FSRs flag concentrated cloud-provider risk as top-tier threat AND/OR at least one material incident at a major provider; 2 = confirmed disruption at a systemically important provider causing financial-market operational failure or liquidity impairment",
+        "sources": [
+          "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
+          "https://www.abc.net.au/news/2026-10-01/rba-financial-stability-review-october-2026/107215072"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "s8_ai_capex already tracks the circular-financing dimension and capex-vs-revenue gap, but has no indicator for the distinct and now formally flagged risk of AI-amplified cyber attacks on the concentrated financial-sector cloud infrastructure (AWS, Azure, Google Cloud) that underpin clearing, settlement and trading. The RBA FSR\u2014corroborated by BoE and ECB parallel publications\u2014elevates this from background noise to a named, top-tier systemic threat. It deserves a dedicated ordinal indicator separate from GPU-backed debt stress.",
+      "status": "pending",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "sightings": 1,
+      "id": "rba-october-2026-fsr-ai-circular-financing-and-a-e2cc35"
+    },
+    "china-ppi-turns-significantly-positive-in-2026-a-31a8d1": {
+      "headline": "China PPI Turns Significantly Positive in 2026 (Aug reading: +3.5% YoY, vs. years of deflation) \u2014 War-Driven Commodity Costs Replacing Deflation Narrative",
+      "summary": "China's PPI printed +3.5% YoY in August 2026 (latest available), a dramatic reversal from the multi-year deflationary streak; CNBC July 2026 reporting attributes the shift to Middle East war-induced commodity cost inflation and rising AI-hardware demand. The story for s5_china_deflation has inverted: the risk is now cost-push price spillover into global supply chains rather than deflationary dumping.",
+      "as_of": "2026-08-09",
+      "sources": [
+        "https://www.investing.com/economic-calendar/chinese-ppi-464",
+        "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s5_china_deflation",
+      "target_indicator": "China PPI YoY \u2192 +3.5% (Aug 2026 actual; large swing to positive is the flagged risk condition per tracker rubric); New tariff/anti-dumping actions \u2192 monitor for direction shift as PPI-positive China re-exports cost-push inflation",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The tracker rubric explicitly states 'large swing either way is worse.' China's PPI has swung from roughly -2.8% in H1 2025 to +3.5% in August 2026\u2014a +6.3pp reversal driven by war-induced energy/commodity costs and AI hardware demand. This is now a cost-push spillover risk (inflationary for importers) rather than the deflationary dumping risk the tracker was originally calibrated for. The indicator reading should be updated and the story narrative should be flagged as direction-reversed.",
+      "status": "pending",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "sightings": 1,
+      "id": "china-ppi-turns-significantly-positive-in-2026-a-31a8d1"
+    },
+    "rba-fsr-imf-pre-release-ai-agent-herd-behaviour--f0c9dc": {
+      "headline": "RBA FSR / IMF Pre-Release: AI-Agent 'Herd Behaviour' Identified as New Bond-Market Dislocation Channel Across Multiple G10 Financial Stability Reports",
+      "summary": "The October 2026 RBA FSR and forthcoming IMF GFSR (analytical chapters releasing Oct 6\u20138) both identify AI-driven algorithmic investment agents exhibiting correlated 'herd behaviour' as a new amplification channel that could cause disorderly sell-offs in core sovereign bond markets \u2014 a channel distinct from, but interacting with, the existing Treasury basis trade and clearinghouse chokepoint stories.",
+      "as_of": "2026-10-01",
+      "sources": [
+        "https://www.abc.net.au/news/2026-10-01/rba-financial-stability-review-october-2026/107215072",
+        "https://www.imf.org/en/publications/gfsr",
+        "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html"
+      ],
+      "materiality": "medium",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_story": {
+        "name": "AI-Agent Market Correlation & Bond-Market Dislocation",
+        "why": "Multiple G10 central bank FSRs (RBA Oct-2026, BoE, ECB) now formally identify AI-driven algorithmic trading agents as a systemic amplification channel: when many agents share similar models, training data or risk signals, they may simultaneously sell or buy the same instruments, producing flash-crash dynamics in sovereign bond and equity markets. This is distinct from the basis trade (leverage/repo) and clearinghouse (operational) risks already tracked, and from the AI capex circular-financing risk in s8. It represents a new market-structure vulnerability with no existing tracker story.",
+        "proposed_level": 5,
+        "set": "Set 1",
+        "indicators": [
+          {
+            "label": "G10 FSR AI-agent systemic risk citations (count of major central bank FSRs naming AI-agent herd behaviour as top-tier risk)",
+            "type": "value",
+            "rubric": "Count of G10 central bank FSRs (Fed, ECB, BoE, BoJ, BoC, RBA, SNB, Riksbank) in current semi-annual cycle that explicitly name AI-agent correlated trading as a top-tier financial stability risk. 0\u20131 = background; 2\u20133 = emerging consensus; 4+ = coordinated concern",
+            "sources": [
+              "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
+              "https://www.abc.net.au/news/2026-10-01/rba-financial-stability-review-october-2026/107215072"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "AI-agent-attributed flash event in sovereign bonds or major equity indices (0 none / 1 suspected / 2 confirmed)",
+            "type": "band",
+            "rubric": "0 = no material intraday dislocations attributed to algorithmic herding; 1 = regulators or exchanges investigate an anomalous intraday move with AI-agent herding as a plausible cause; 2 = confirmed post-mortem attribution of a material market dislocation to correlated AI-agent behaviour",
+            "sources": [
+              "https://www.rba.gov.au/publications/fsr/2026/oct/pdf/financial-stability-review-2026-10.pdf"
+            ],
+            "suggested_weight": 0.4
+          },
+          {
+            "label": "Regulatory action on AI-agent trading concentration (0 none / 1 consultation / 2 binding rule)",
+            "type": "band",
+            "rubric": "0 = no specific regulatory proposals; 1 = SEC, FCA, ESMA or equivalent publishes consultation paper or guidance on AI-agent trading concentration; 2 = binding position-limit, circuit-breaker or model-diversity rule imposed",
+            "sources": [
+              "https://www.imf.org/en/publications/gfsr"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "The RBA's October 2026 FSR\u2014corroborated by the ECB and BoE and anticipated in the upcoming IMF GFSR\u2014explicitly names AI herd behaviour in investment decisions as a new amplification channel for bond-market dislocation. This is not captured by any existing story: s8_ai_capex covers circular financing and capex overreach; s21_clearinghouses covers operational plumbing; s1_basis_trade covers leverage. A new story is warranted because the mechanism (correlated AI-agent behaviour causing simultaneous directional pressure across instruments) is structurally different and could interact adversely with all three existing stories simultaneously during a stress event.",
+      "status": "pending",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "sightings": 1,
+      "id": "rba-fsr-imf-pre-release-ai-agent-herd-behaviour--f0c9dc"
     }
   },
-  "generated": "2026-10-01",
+  "generated": "2026-10-02",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 267
+  "new_count": 6,
+  "pending_count": 273
 }
