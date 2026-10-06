@@ -177,13 +177,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "The Strait of Hormuz \u2014 through which ~25% of global seaborne oil and ~19% of LNG transited in 2025 \u2014 continues to run at roughly 10 vessel-transits per day against a pre-crisis baseline of 88\u2013130, following breakdown of the June MOU. President Trump's public rejection of Iran's latest reopening conditions on September 28 signals no near-term diplomatic resolution, keeping the 'closed' status entrenched into Q4 2026.",
-      "as_of": "2026-09-28",
+      "summary": "Ship attacks in the Strait of Hormuz escalated sharply in the week ending October 6, even as Gulf oil exports partially rebounded to near pre-war levels for portions of September; Saudi Aramco CEO Amin Nasser warned at the Energy Intelligence Forum in London that nearly 3 billion barrels of supply have been lost since late February and that restoring inventories could take two years, with the IEA having labeled this the largest supply disruption on record. War-risk insurance remains prohibitively expensive or unavailable, and strategic reserves are described as 'already thin'.",
+      "as_of": "2026-10-06",
       "sources": [
-        "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://carraglobe.com/strait-of-hormuz-closure-2026/",
-        "https://www.congress.gov/crs-product/R45281",
-        "https://www.washingtontimes.com/news/2026/sep/10/oil-prices-rise-iran-targets-vessels-strait-hormuz-houthis-seize/"
+        "https://www.aljazeera.com/news/2026/10/6/hormuz-ship-attacks-surge-are-increased-oil-exports-sustainable",
+        "https://www.nbcnews.com/business/energy/hormuz-oil-exports-increase-ship-attacks-rcna601597",
+        "https://energynow.com/2026/04/alternative-routes-for-middle-east-oil-and-gas-due-to-hormuz-disruption/",
+        "https://carraglobe.com/strait-of-hormuz-closure-2026/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -191,23 +191,21 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Trump's September 28 public rejection of Iran's reopening proposal is the week's most actionable update to the Hormuz/Red Sea status indicator, pushing it firmly to '2 closed' with no diplomatic off-ramp visible before Q1 2027. This also has second-order read-throughs to s18_food_fertilizer (Persian Gulf fertilizer inputs), s2_japan (Japan energy import costs/yen), and WTI crude pricing in s20. The tracker's Hormuz indicator should remain at maximum severity with a note that a Trump-Iran deal \u2014 not Iranian capitulation \u2014 is now the primary upside scenario.",
+      "rationale": "The Hormuz/Red Sea status indicator for s20_sea_lanes should be marked at 2 (effectively closed/severely contested): war-risk insurance is unavailable, tanker attacks are surging, both Hormuz and Red Sea were simultaneously blocked for a period in 2026, and the Aramco CEO's 'two years to rebuild inventories' warning signals this is no longer a short-term spike. The WTI/Brent crude indicator is also directly affected. This also flows into s18_food_fertilizer (Hormuz/Gulf disruption to fertilizer inputs) which should be marked 2 (cut), and into s4_dev_debt via elevated energy import costs for developing economies.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-10-06",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 36
+      "sightings": 37
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The Bank of Japan raised its policy rate to 1.25% in a 7-2 split on September 18\u2014the highest since 1995\u2014as US pressure on PM Takaichi's fiscal-dove stance intensified and underlying inflation approached 2%. The 30-year JGB yield surged to a record 4.22% and the 10-year cleared 3.10%, with an ex-BOJ policymaker publicly suggesting hikes every quarter are plausible, raising carry-trade unwind risk.",
-      "as_of": "2026-09-28",
+      "summary": "The 10-year JGB yield reached 3.11% on October 6, 2026 (up ~18 bps in a month and 143 bps year-on-year), driven by concerns that the Takaichi administration's fiscal expansion lacks credible funding, that the BoJ has fallen behind the curve on tightening, and that the FY27 budget/JGB issuance plan due in mid-December is a 'critical test' for market confidence. MUFG Research (October 5) flagged that unless permanent funding measures are announced, upward pressure on yields\u2014and downward pressure on the yen\u2014will persist.",
+      "as_of": "2026-10-06",
       "sources": [
-        "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html",
-        "https://tradingeconomics.com/japan/30-year-bond-yield",
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://asianbondsonline.adb.org/japan/",
-        "https://mufgresearch.com/rates/japan-economic-financial-weekly-17-august-2026/"
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-05-october-2026",
+        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -215,12 +213,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 30-year JGB yield hitting an all-time high of 4.22% and BOJ rate at a 31-year high are direct, material updates to s2_japan's core indicators. USD/JPY and carry-trade unwind risk are live. The political tension between PM Takaichi's fiscal expansion and BOJ tightening (flagged by the Finance Minister stability indicator) remains unresolved, keeping 'Takaichi plan financing clarity' at 1\u20132. This is the highest-materiality update in the Japan story this week.",
+      "rationale": "While the tracker's primary JGB indicator is the 30-year yield, the 10-year yield at 3.11% (143 bps above year-ago levels) is the most up-to-date signal of the same underlying stress. The Takaichi plan financing clarity indicator should be re-marked to 2 (disorderly): the market is explicitly testing whether 'responsible proactive fiscal policy' is credible, and the BoJ-behind-the-curve concern is compressing the yen while blowing out the long end. The December FY27 budget deadline is a near-term catalyst that the tracker must monitor.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-06",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 34
+      "sightings": 35
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -998,11 +996,12 @@
     },
     "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
       "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-      "summary": "The Council on Foreign Relations (Sept 21, 2026) warned that if the Busan truce \u2014 which paused China's October 2025 rare-earth export-control expansion \u2014 expires in November 2026, Beijing will impose controls on at least five more rare earths plus could activate a sweeping rule requiring export licenses for any product where China-origin RE content exceeds 0.1% of value. Silverado's September 2026 trade report confirms China's compound/metal exports to the US and Japan remained 'well below historical levels' in August, while magnet exports have largely recovered.",
-      "as_of": "2026-09-22",
+      "summary": "The one-year suspension of China's sweeping October 2025 rare-earth export controls (covering five additional REEs, extraterritorial reach over third-country trade, and the US-specific gallium/germanium ban) expires on November 10, 2026 with no publicly announced renewal or replacement deal; the CFR notes Beijing used the pause period to 'study and refine specific plans', while the April 2025 controls on seven REEs and the July 2026 enforcement-reporting mechanism remain in force. Markets face a hard deadline in 35 days.",
+      "as_of": "2026-10-06",
       "sources": [
         "https://www.cfr.org/reports/dismantling-chinas-supply-chain-weapon",
-        "https://silverado.org/publications/rare-earth-trade-report/",
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/",
+        "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/",
         "https://en.wikipedia.org/wiki/Rare_earths_trade_dispute"
       ],
       "materiality": "high",
@@ -1011,12 +1010,12 @@
       "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Nov-2026 truce expiry deadline is now less than 5 weeks away and CFR has put a specific escalation scenario on the record: 5+ additional REEs plus a de-facto global-value-chain rule (0.1% content threshold) that 'would cover large swaths of global trade.' This moves the Nov-2025 pause status indicator from '0 extended' to '1 expiring' and warrants updating the Rare-earth export license flow from '1 slowing' to watch for rapid deterioration. The asymmetry between magnet exports (recovered) and compound/metal exports (still suppressed for US/Japan) also matters for the Ex-China heavy RE price premium indicator.",
+      "rationale": "The Nov-2025 pause status indicator is precisely designed for this moment. It should now be re-marked from 0 to 1 (expiring): with the deadline 35 days away and no announced extension or framework deal, the probability of a full snap-back to the broader October 2025 controls\u2014including extraterritorial provisions covering EU-to-Ukraine trade in components with trace Chinese content\u2014is material. The April 2025 controls (seven REEs) and the June 2026 enforcement-reporting mechanism are already active. S6 Rare-earth export license flow should also be re-examined since supply bottlenecks in heavy REEs are described as persisting through 2026\u201327.",
       "status": "pending",
       "first_seen": "2026-07-03",
-      "last_seen": "2026-09-30",
+      "last_seen": "2026-10-06",
       "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-      "sightings": 19
+      "sightings": 20
     },
     "treasury-fincen-propose-genius-act-aml-sanctions-d8c824": {
       "headline": "Treasury/FinCEN propose GENIUS Act AML/sanctions rule as July 18 implementation deadline approaches \u2014 rulemaking gap risk",
@@ -7471,13 +7470,14 @@
     },
     "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb": {
       "headline": "Synchronized global sovereign bond rout: US 10y at 4.80%, UK 30y at 5.82% (highest since 1998), German 10y at 2011 highs",
-      "summary": "France's OAT-Bund 10-year spread surged to 111.2 bps as of September 29, up from ~85 bps just three weeks earlier, after the finance ministry disclosed public debt at 119.3% of GDP (deficit 5.4%) and PM Lecornu's \u20ac54 bn savings plan faces a bitterly divided National Assembly. Over 50% of OATs are now foreign-owned, raising 'swing investor' concerns flagged by HSBC's strategist.",
-      "as_of": "2026-09-29",
+      "summary": "France's OAT-Bund 10-year spread surged to ~147 bps on October 2 before partially retracing to 127 bps on October 6 after RN's Le Pen released an alternative 'shadow budget'; the spread\u2014driven by the Lecornu government's \u20ac54 bn austerity package, a fragmented parliament, and debt at 121.7% of GDP\u2014has inverted the traditional core/periphery order for the first time in the post-2012 era. ECB's TPI backstop is widely seen as inaccessible because the widening is France-driven rather than 'unwarranted'.",
+      "as_of": "2026-10-06",
       "sources": [
         "https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html",
-        "https://easternherald.com/2026/09/20/france-debt-119-gdp-oat-bund-spread-eurozone/",
-        "https://www.cnbc.com/2026/09/24/france-budget-debt-deficit-government.html",
-        "https://www.globalcapital.com/article/2gxtax8dc12widzvn1qm8/people-and-markets/leader/france-110bp-over-bunds-could-be-just-the-start"
+        "https://www.tftc.io/france-oat-bund-spread-wider-italy-greece-debt-121-percent-gdp",
+        "https://www.actionforex.com/action-insight/market-overview/656113-france-risk-premium-surges-as-oat-bund-spread-breaks-140bp-eur-chf-slides/",
+        "https://www.newsquawk.com/headlines/european-market-wrap---6th-october-2026",
+        "https://www.techtimes.com/articles/328563/20261005/france-bond-yields-top-italy-greece-ecb-crisis-rescue-tool-blocked.htm"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -7485,11 +7485,11 @@
       "target_indicator": "OAT-Bund 10y spread (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The OAT-Bund spread has breached 110 bps \u2014 the 2012 eurozone crisis threshold \u2014 within a single week, a 26 bp jump. This moves the tracker's Govt stability to '2 collapse-or-snap-election' risk territory (Lecornu faces a no-confidence vote) and flags Rating action risk at '1 negative outlook'. The foreign-ownership concentration above 50% is a new structural fragility that amplifies any shock to investor confidence. This is the most acute near-term European systemic risk in the tracker.",
+      "rationale": "The OAT-Bund spread is already the primary indicator for s10_france. The current reading of 127\u2013147 bps (intraweek range) is the highest since the 2011\u201312 eurozone debt crisis and represents a major step-change from the ~40\u201350 bps baseline of 2022\u20132024. The political backdrop (Lecornu minority government, RN counter-budget, 2027 presidential election dynamics, Le Pen explicitly warning of French default) and the arithmetic (\u20ac91 bn annual interest bill, deficit stuck at 5%+ despite full austerity package) make this a high-materiality escalation. The ECB TPI blockage angle is a new complication for the 'Rating action' indicator (fragility score should move toward 2). Govt stability indicator should be re-marked to 2 given the shadow-budget dynamic.",
       "status": "pending",
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-30",
-      "sightings": 2,
+      "last_seen": "2026-10-06",
+      "sightings": 3,
       "id": "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb"
     },
     "ai-hyperscaler-bond-issuance-hits-194bn-ytd-in-2-33afc6": {
@@ -8862,10 +8862,72 @@
       "last_seen": "2026-10-02",
       "sightings": 1,
       "id": "rba-fsr-imf-pre-release-ai-agent-herd-behaviour--f0c9dc"
+    },
+    "rba-financial-stability-review-october-2026-meta-a20d78": {
+      "headline": "RBA Financial Stability Review (October 2026): Meta/Blue Owl $30 bn AI-capex JV backed by investment-grade lease debt flagged as systemic novelty",
+      "summary": "The RBA's October 2026 Financial Stability Review specifically cited a ~$30 billion joint venture between Meta and Blue Owl Capital\u2014structured as investment-grade debt backed by a sequence of Meta leases\u2014as a novel and potentially systemic form of AI-build-out circular financing, alongside broader warnings about 'growing vulnerabilities in key sovereign bond and risk asset markets' that could spill over to the global financial system.",
+      "as_of": "2026-10-01",
+      "sources": [
+        "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s8_ai_capex",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "AI-capex structured-debt issuance volume ($bn, rolling 12m)",
+        "type": "band",
+        "rubric": "Tracks the cumulative face value of investment-grade or leveraged debt instruments backed by AI-infrastructure leases, hyperscaler power-purchase agreements, or GPU collateral, issued by non-bank vehicles (BDCs, JVs, SPVs). 0\u201320 bn = manageable/niche; 20\u201375 bn = elevated (watch); >75 bn = systemic concern requiring stress-scenario modelling.",
+        "sources": [
+          "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
+          "https://www.bloomberg.com (AI infrastructure debt league tables)",
+          "https://www.sec.gov (BDC filings, Blue Owl Capital Inc.)"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "S8_ai_capex already tracks AI capex circular financing and GPU-backed debt stress, but has no indicator capturing the specific and growing phenomenon of investment-grade structured debt backed by hyperscaler leases\u2014a form of off-balance-sheet leverage that a central bank FSR has now explicitly flagged. The Meta/Blue Owl $30 bn deal is a data point suggesting this market segment may already be material enough to affect credit spreads in ways not captured by the existing IG OAS proxy.",
+      "status": "pending",
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06",
+      "sightings": 1,
+      "id": "rba-financial-stability-review-october-2026-meta-a20d78"
+    },
+    "france-s-oat-bund-spread-inverts-core-periphery--9ec22d": {
+      "headline": "France's OAT-Bund spread inverts core/periphery order: proposed 'ECB TPI blockage' indicator gap in s10_france",
+      "summary": "As the OAT-Bund spread exceeded 140 bps this week\u2014surpassing Italian and Greek spreads\u2014commentators and markets are actively debating whether the ECB's Transmission Protection Instrument (TPI) can be deployed for France, with the emerging consensus that it cannot, because the spread reflects France's own fiscal choices rather than 'unwarranted' contagion. This creates a qualitative gap in s10_france: there is no indicator tracking TPI availability/activation risk, which is now the critical firebreak question.",
+      "as_of": "2026-10-06",
+      "sources": [
+        "https://thetwocents.substack.com/p/le-boomer-spread",
+        "https://www.techtimes.com/articles/328563/20261005/france-bond-yields-top-italy-greece-ecb-crisis-rescue-tool-blocked.htm",
+        "https://www.actionforex.com/action-insight/market-overview/656113-france-risk-premium-surges-as-oat-bund-spread-breaks-140bp-eur-chf-slides/"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s10_france",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "ECB TPI eligibility / activation risk (0 eligible / 1 contested / 2 blocked)",
+        "type": "band",
+        "rubric": "Ordinal assessment of whether the ECB's Transmission Protection Instrument could plausibly be deployed for France. 0 = France meets all four TPI eligibility criteria (fiscal compliance, no severe macroeconomic imbalances, debt sustainability, compliance with EU commitments); 1 = one or more criteria contested by ECB Governing Council or legal challenge pending; 2 = ECB explicitly rules out TPI deployment or Governing Council split blocks activation, leaving France without a backstop. Current assessment: 1 (contested\u2014deficit at 5.4% of GDP violates fiscal-compliance pillar; Governing Council reportedly divided).",
+        "sources": [
+          "https://thetwocents.substack.com/p/le-boomer-spread",
+          "https://www.techtimes.com/articles/328563/20261005/france-bond-yields-top-italy-greece-ecb-crisis-rescue-tool-blocked.htm",
+          "https://www.ecb.europa.eu/mopo/implement/omo/tpi/html/index.en.html"
+        ],
+        "suggested_weight": 0.3
+      },
+      "proposed_story": null,
+      "rationale": "The existing s10_france indicators (OAT-Bund spread, govt stability, rating action) capture the symptoms but not the critical firebreak mechanism. Whether or not the ECB can ride to France's rescue is the single most important second-order question: if TPI is blocked (score 2), France faces a self-reinforcing spiral with no lender of last resort, analogous to 2011 Italy before Draghi's 'whatever it takes'. This gap is material enough to add as a new indicator immediately, given that legal and political debates over TPI eligibility are already live.",
+      "status": "pending",
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06",
+      "sightings": 1,
+      "id": "france-s-oat-bund-spread-inverts-core-periphery--9ec22d"
     }
   },
-  "generated": "2026-10-02",
+  "generated": "2026-10-06",
   "model": "claude-sonnet-4-6",
-  "new_count": 6,
-  "pending_count": 273
+  "new_count": 2,
+  "pending_count": 275
 }
