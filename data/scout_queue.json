@@ -200,12 +200,14 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The 10-year JGB yield reached 3.11% on October 6, 2026 (up ~18 bps in a month and 143 bps year-on-year), driven by concerns that the Takaichi administration's fiscal expansion lacks credible funding, that the BoJ has fallen behind the curve on tightening, and that the FY27 budget/JGB issuance plan due in mid-December is a 'critical test' for market confidence. MUFG Research (October 5) flagged that unless permanent funding measures are announced, upward pressure on yields\u2014and downward pressure on the yen\u2014will persist.",
+      "summary": "Japan's 30-year JGB yield reached a record 4.25% and the 10-year 3.11% (up 106 bps YTD) as of early October, well past the 2.5\u20133.0% threshold analysts identify as the trigger for mass repatriation. Tokyo core CPI surged in September, boosting BOJ hike expectations, while Japanese investors already sold $29.6B of US Treasuries in Q1 2026 and GPIF is being encouraged to reallocate capital domestically.",
       "as_of": "2026-10-06",
       "sources": [
+        "https://tradingeconomics.com/japan/30-year-bond-yield",
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-05-october-2026",
-        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
+        "https://asianbondsonline.adb.org/japan/",
+        "https://guardian-gold.com.au/market-updates/the-yens-long-fall/",
+        "https://www.w1m.com/insights/the-yen-carry-trade-approaching-a-tipping-point/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -213,12 +215,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "While the tracker's primary JGB indicator is the 30-year yield, the 10-year yield at 3.11% (143 bps above year-ago levels) is the most up-to-date signal of the same underlying stress. The Takaichi plan financing clarity indicator should be re-marked to 2 (disorderly): the market is explicitly testing whether 'responsible proactive fiscal policy' is credible, and the BoJ-behind-the-curve concern is compressing the yen while blowing out the long end. The December FY27 budget deadline is a near-term catalyst that the tracker must monitor.",
+      "rationale": "The 30-year JGB yield is a primary tracked indicator for s2_japan. A new all-time high of 4.25% \u2014 95 bps above a year ago \u2014 materially updates this indicator. The 10-year at 3.11% has breached the 2.5\u20133.0% repatriation threshold, and Tokyo inflation is accelerating. The 'Takaichi plan financing clarity' ordinal should also be noted: with yields surging, fiscal financing stress is rising (moving toward 1\u20132). The carry-trade unwind feedback loop into US Treasuries amplifies systemic risk across multiple existing stories (s1_basis_trade, s12_gold_dedollar).",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-06",
+      "last_seen": "2026-10-07",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 35
+      "sightings": 36
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -3845,10 +3847,14 @@
     },
     "us-iran-war-inflation-feedback-10-yr-treasury-yi-92390d": {
       "headline": "US-Iran War Inflation Feedback: 10-yr Treasury Yield Hits 4.71% (6-Month High); Fed Rate-Hike Odds Re-Price",
-      "summary": "As of 7 September 2026, the US 10-year Treasury yield is ~4.8%, German and French 10-year yields are at levels last seen in 2011 and 2008 respectively, and UK 30-year gilts remain near three-decade highs \u2014 a synchronised developed-market bond sell-off driven by energy-inflation persistence and enormous government borrowing requirements. The move is now compressing fiscal space for high-debt emerging-market sovereigns relying on external financing.",
-      "as_of": "2026-09-07",
+      "summary": "The Federal Reserve raised rates on September 16 \u2014 its first hike since 2023 \u2014 and the US 10-year yield climbed to 5.28\u20135.31% and the 30-year to 5.62\u20135.67% as of early October, the highest since 2007. Futures now price the fed funds rate at ~4.8% by October 2027, with elevated rates expected through 2031; Treasury buybacks by Secretary Bessent failed to suppress the rise.",
+      "as_of": "2026-10-06",
       "sources": [
-        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-7-september-2026/"
+        "https://www.cnbc.com/2026/09/16/treasury-yield-bond-market-fed-decision.html",
+        "https://streetstats.finance/rates/treasuries",
+        "https://streetstats.finance/rates/fedfunds",
+        "https://www.federalreserve.gov/releases/h15/",
+        "https://www.nuveen.com/global/insights/fixed-income/fixed-income-weekly-commentary"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -3856,11 +3862,11 @@
       "target_indicator": "US 10y real yield (TIPS, %)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Rising US real yields (TIPS) are the primary mechanical driver of EM debt stress in the s4_dev_debt story \u2014 higher real yields strengthen the dollar (FRED DTWEXBGS indicator) and raise refinancing costs for developing-world sovereigns. The synchronised DM sovereign yield surge described here is directly material to both the 'US 10y real yield' and 'Broad US dollar index' indicators in s4. The fact that German/French yields are at 2011/2008 levels also feeds s10_france (OAT-Bund spread, Govt stability) \u2014 tracker owners should cross-check whether the OAT-Bund spread has widened relative to absolute yield levels, and whether France's fiscal position is deteriorating at current funding costs.",
+      "rationale": "A renewed Fed tightening cycle with the 10-year nominal yield at 5.28\u20135.31% (and the 30-year at 5.67%) is the single most important driver of the US 10y real yield, which is the primary stress indicator for s4_dev_debt (developing-world debt crisis). Higher real yields compress EM fiscal space, strengthen the dollar, and increase the cost of dollar-denominated debt service. This also cross-impacts s1_basis_trade (Treasury volatility, MOVE index), s9_cre (CRE refinancing), s11_consumer_debt (debt servicing), and s8_ai_capex (cost of capital for AI buildout). The real-yield indicator reading should be pushed materially higher.",
       "status": "pending",
       "first_seen": "2026-07-27",
-      "last_seen": "2026-09-14",
-      "sightings": 2,
+      "last_seen": "2026-10-07",
+      "sightings": 3,
       "id": "us-iran-war-inflation-feedback-10-yr-treasury-yi-92390d"
     },
     "obbba-signed-into-law-cbo-projects-us-deficit-av-e4c787": {
@@ -7470,14 +7476,15 @@
     },
     "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb": {
       "headline": "Synchronized global sovereign bond rout: US 10y at 4.80%, UK 30y at 5.82% (highest since 1998), German 10y at 2011 highs",
-      "summary": "France's OAT-Bund 10-year spread surged to ~147 bps on October 2 before partially retracing to 127 bps on October 6 after RN's Le Pen released an alternative 'shadow budget'; the spread\u2014driven by the Lecornu government's \u20ac54 bn austerity package, a fragmented parliament, and debt at 121.7% of GDP\u2014has inverted the traditional core/periphery order for the first time in the post-2012 era. ECB's TPI backstop is widely seen as inaccessible because the widening is France-driven rather than 'unwarranted'.",
+      "summary": "France's 10-year OAT/Bund spread spiked to 146.9 bps intraday on Oct 2 (settling at 127.4 bps Oct 6), its widest since the 2012 eurozone crisis, after the government's \u20ac43B austerity package was seen as insufficient to stabilise debt rising to 121.7% of GDP. CDS markets signal rising sovereign default risk, and France faces a record \u20ac340B medium/long-term issuance programme in 2027.",
       "as_of": "2026-10-06",
       "sources": [
-        "https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html",
         "https://www.tftc.io/france-oat-bund-spread-wider-italy-greece-debt-121-percent-gdp",
-        "https://www.actionforex.com/action-insight/market-overview/656113-france-risk-premium-surges-as-oat-bund-spread-breaks-140bp-eur-chf-slides/",
-        "https://www.newsquawk.com/headlines/european-market-wrap---6th-october-2026",
-        "https://www.techtimes.com/articles/328563/20261005/france-bond-yields-top-italy-greece-ecb-crisis-rescue-tool-blocked.htm"
+        "https://www.cnbc.com/2026/10/06/france-debt-crisis-ubs-ermotti.html",
+        "https://robinr.substack.com/p/frances-debt-crisis-was-in-plain",
+        "https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html",
+        "https://fortune.com/2026/10/02/france-debt-crisis-bond-investors-odds-sovereign-default-cds-yield-spread-deficit-presidential-race/",
+        "https://www.fxstreet.com/analysis/le-pens-shadow-budget-narrows-yield-spreads-a-bit-202610060957"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -7485,11 +7492,11 @@
       "target_indicator": "OAT-Bund 10y spread (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The OAT-Bund spread is already the primary indicator for s10_france. The current reading of 127\u2013147 bps (intraweek range) is the highest since the 2011\u201312 eurozone debt crisis and represents a major step-change from the ~40\u201350 bps baseline of 2022\u20132024. The political backdrop (Lecornu minority government, RN counter-budget, 2027 presidential election dynamics, Le Pen explicitly warning of French default) and the arithmetic (\u20ac91 bn annual interest bill, deficit stuck at 5%+ despite full austerity package) make this a high-materiality escalation. The ECB TPI blockage angle is a new complication for the 'Rating action' indicator (fragility score should move toward 2). Govt stability indicator should be re-marked to 2 given the shadow-budget dynamic.",
+      "rationale": "The OAT-Bund spread is the primary indicator for s10_france. The spread breached 130 bps on Oct 1 and peaked at 146.9 bps on Oct 2 \u2014 the widest since 2012 \u2014 before partially retracing to 127.4 bps on Oct 6. This is a direct, high-materiality update to the existing tracked indicator. Government stability also shifts from 'fragile' toward 'collapse risk' given student riots, presidential election dynamics, and Le Pen's shadow budget; the Govt stability ordinal should move toward 2. No new indicator or story is needed.",
       "status": "pending",
       "first_seen": "2026-09-11",
-      "last_seen": "2026-10-06",
-      "sightings": 3,
+      "last_seen": "2026-10-07",
+      "sightings": 4,
       "id": "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb"
     },
     "ai-hyperscaler-bond-issuance-hits-194bn-ytd-in-2-33afc6": {
@@ -8924,10 +8931,99 @@
       "last_seen": "2026-10-06",
       "sightings": 1,
       "id": "france-s-oat-bund-spread-inverts-core-periphery--9ec22d"
+    },
+    "hormuz-partially-reopening-under-reported-irania-d6923f": {
+      "headline": "Hormuz Partially Reopening Under Reported Iranian 'Transit Toll' \u2014 Oil Contested Status Continues",
+      "summary": "Al Jazeera reported on Oct 5 that crude exports past Hormuz climbed back above pre-war levels (~18M bpd) in late September for the first time since the US-Israel war on Iran began in February, yet oil prices remain elevated, with reports Iran may be charging a covert transit fee. The CFR and IEA continue to characterize Hormuz as 'contested' with night-only tanker runs; oil, LNG, and fertilizer supply chains remain simultaneously disrupted.",
+      "as_of": "2026-10-05",
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/5/is-iran-charging-a-toll-to-allow-oil-traffic-through-hormuz",
+        "https://www.cfr.org/reports/conflict-driven-chokepoint-disruptions",
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis",
+        "https://www.fxstreet.com/analysis/le-pens-shadow-budget-narrows-yield-spreads-a-bit-202610060957"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Hormuz effective throughput recovery (% of pre-war 18M bpd baseline)",
+        "type": "band",
+        "rubric": "0 = >90% flowing freely; 1 = 50\u201390% flowing / contested / tolled / night-only; 2 = <50% / effectively closed",
+        "sources": [
+          "https://www.aljazeera.com/news/2026/10/5/is-iran-charging-a-toll-to-allow-oil-traffic-through-hormuz",
+          "https://www.iea.org/",
+          "https://www.cfr.org/reports/conflict-driven-chokepoint-disruptions"
+        ],
+        "suggested_weight": 0.35
+      },
+      "proposed_story": null,
+      "rationale": "s20_sea_lanes already tracks Hormuz status as a binary (open/contested/closed), but the emerging dynamic \u2014 partial reopening under a reported covert Iranian toll regime \u2014 is qualitatively different from both 'open' and 'closed.' A throughput-recovery percentage indicator captures the nuanced, economically significant middle state. WTI remaining elevated despite higher flows also suggests covert pricing distortions not reflected in the binary ordinal. This is medium-high materiality for energy markets, inflation (s18_food_fertilizer via fertilizer inputs), and developing-world debt (s4_dev_debt).",
+      "status": "pending",
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-07",
+      "sightings": 1,
+      "id": "hormuz-partially-reopening-under-reported-irania-d6923f"
+    },
+    "private-credit-fitch-default-rate-hits-record-6--15c347": {
+      "headline": "Private Credit: Fitch Default Rate Hits Record 6.0%; $15B+ Redemption Requests in Q2; FSB Issues Structural Warning",
+      "summary": "Fitch's US private credit default rate reached a record 6.0% in April 2026 (Proskauer's narrower index: 2.51% in Q2 across $195.6B of loans). Non-traded US private credit funds received over $15B in redemption requests (~12% of NAV) in Q2, with some managers imposing gates while others stretched beyond their 5% quarterly limits. The FSB's May 2026 full report flagged rising PIK loan use, valuation opacity, leverage stacking, and warned the sector has never been tested through a prolonged downturn.",
+      "as_of": "2026-10-01",
+      "sources": [
+        "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
+        "https://www.investing.com/analysis/private-credit-in-2026-record-defaults-softer-returns-and-new-regulatory-focus-200686600",
+        "https://www.fsb.org/uploads/P060526.pdf",
+        "https://www.hamiltonlane.com/en-us/insight/private-credit-focus"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s3_private_credit",
+      "target_indicator": "Large-fund redemption gates (0 none / 1 isolated / 2 widespread)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Multiple large-fund managers have imposed gates (some partially, some fully) as Q2 redemption requests exceeded the standard 5% NAV quarterly limit at scale ($15B+). The ordinal for 'Large-fund redemption gates' should move from 0 to 1 (isolated) at minimum, with risk of moving to 2 (widespread) if Fitch's record default rate of 6.0% continues to drive further redemption pressure. The direct-lending default rate indicator also needs updating significantly upward. This is cross-referenced by the RBA's October 2026 FSR and the FSB's May 2026 structural report.",
+      "status": "pending",
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-07",
+      "sightings": 1,
+      "id": "private-credit-fitch-default-rate-hits-record-6--15c347"
+    },
+    "us-treasury-yield-surge-fed-hike-cycle-creates-a-81dbc7": {
+      "headline": "US Treasury Yield Surge + Fed Hike Cycle Creates Acute Basis-Trade Stress as MOVE Stays Elevated",
+      "summary": "The September 2026 Fed rate hike and resulting Treasury yield surge (10-year +54 bps in September alone to 5.27%, with rate volatility remaining above April 2026 highs into early October) has materially elevated the MOVE index and stress in leveraged Treasury positions. Treasury Secretary Bessent's buyback programme failed to suppress yields, with 49% market-implied probability of an October hike noted post-FOMC.",
+      "as_of": "2026-10-06",
+      "sources": [
+        "https://www.nuveen.com/global/insights/fixed-income/fixed-income-weekly-commentary",
+        "https://finance.yahoo.com/economy/article/federal-reserve-interest-rate-hike-may-trigger-another-brutal-move-for-us-treasury-yields-103135302.html",
+        "https://www.rba.gov.au/publications/fsr/2026/oct/pdf/financial-stability-review-2026-10.pdf",
+        "https://www.schwab.com/learn/story/fomc-meeting"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US Treasury 30-year yield (%), as tail-risk amplifier for basis-trade leverage",
+        "type": "value",
+        "rubric": "Track the 30-year nominal yield; values above 5.5% indicate severe duration stress that amplifies basis-trade unwind risk via margin calls on long-duration Treasury repo legs; sustained breach of 5.5% = elevated stress signal",
+        "sources": [
+          "https://streetstats.finance/rates/treasuries",
+          "https://www.federalreserve.gov/releases/h15/",
+          "https://www.nuveen.com/global/insights/fixed-income/fixed-income-weekly-commentary"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "s1_basis_trade currently tracks SOFR minus EFFR, the MOVE index, and SEC clearing status. The MOVE index captures volatility, but the actual price-level of the 30-year yield (now 5.62\u20135.67%) is a separate and important stress input: at these levels, the mark-to-market losses on long Treasury positions used in basis trades are acute, increasing margin calls and the risk of a disorderly unwind. Rate volatility staying above April highs into October (per Nuveen) confirms MOVE is elevated. Adding the 30-year yield as a value indicator captures the price-level dimension that the MOVE index alone misses.",
+      "status": "pending",
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-07",
+      "sightings": 1,
+      "id": "us-treasury-yield-surge-fed-hike-cycle-creates-a-81dbc7"
     }
   },
-  "generated": "2026-10-06",
+  "generated": "2026-10-07",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 275
+  "new_count": 3,
+  "pending_count": 278
 }
