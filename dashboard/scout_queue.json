@@ -200,14 +200,13 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 30-year JGB yield reached a record 4.25% and the 10-year 3.11% (up 106 bps YTD) as of early October, well past the 2.5\u20133.0% threshold analysts identify as the trigger for mass repatriation. Tokyo core CPI surged in September, boosting BOJ hike expectations, while Japanese investors already sold $29.6B of US Treasuries in Q1 2026 and GPIF is being encouraged to reallocate capital domestically.",
-      "as_of": "2026-10-06",
+      "summary": "Japan's 10-year JGB yield rose to 3.09% on October 8, 2026, up ~20bps over the past month and 139bps above a year ago, reflecting BoJ tightening (policy rate at 1.25%, a 31-year high after a split September hike), fiscal expansion vows from PM Takaichi, and insurer duration-shortening. The 30-year JGB yield is at structurally elevated levels, with the BoJ's next decision due October 30.",
+      "as_of": "2026-10-08",
       "sources": [
-        "https://tradingeconomics.com/japan/30-year-bond-yield",
         "https://tradingeconomics.com/japan/government-bond-yield",
         "https://asianbondsonline.adb.org/japan/",
-        "https://guardian-gold.com.au/market-updates/the-yens-long-fall/",
-        "https://www.w1m.com/insights/the-yen-carry-trade-approaching-a-tipping-point/"
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://www.ubp.com/en/news-insights/newsroom/the-yen-rescue-that-can-t-beat-fundamentals"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -215,12 +214,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 30-year JGB yield is a primary tracked indicator for s2_japan. A new all-time high of 4.25% \u2014 95 bps above a year ago \u2014 materially updates this indicator. The 10-year at 3.11% has breached the 2.5\u20133.0% repatriation threshold, and Tokyo inflation is accelerating. The 'Takaichi plan financing clarity' ordinal should also be noted: with yields surging, fiscal financing stress is rising (moving toward 1\u20132). The carry-trade unwind feedback loop into US Treasuries amplifies systemic risk across multiple existing stories (s1_basis_trade, s12_gold_dedollar).",
+      "rationale": "The 10-year JGB at 3.09% (up 139bps YoY) signals that super-long yields are also at multi-decade highs, directly pressuring the 30-year JGB yield indicator. The split-vote September hike to 1.25% \u2014 the highest since 1995 \u2014 plus Takaichi's fiscal expansion commitments and insurer repositioning (selling low-coupon legacy bonds) all compound carry-trade unwind risk. The Takaichi plan financing clarity indicator should also be updated to 1 (unclear) given absence of offsetting fiscal measures. The BoJ Oct 30 meeting is a near-term catalyst.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 36
+      "sightings": 37
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -506,14 +505,13 @@
     },
     "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
       "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
-      "summary": "As of the week of 18\u201325 Sep 2026, the US\u2013Iran conflict has escalated sharply in the Strait of Hormuz, with IRGC ballistic missiles targeting a US carrier group, US 'tanker-for-tanker' retaliatory strikes on Iranian tankers, and Iran's chief negotiator declaring the era of proportionate responses finished. Commercial shipping reroutes away from both Hormuz and the Red Sea are ongoing, with oil infrastructure across the Gulf region at continued risk.",
-      "as_of": "2026-09-23",
+      "summary": "The ongoing US-Iran conflict has kept the Strait of Hormuz under severe stress, with the IEA characterising it as the largest oil-supply disruption in global history and cutting 2026 world supply forecasts by ~6% (\u20135.7 mb/d). As of October 8, fresh fears of renewed Middle East escalation are pushing US Treasury yields to 20-year-plus highs and whipsawing equities, compounding fertilizer, LNG, and shipping disruptions.",
+      "as_of": "2026-10-08",
       "sources": [
-        "https://www.britannica.com/event/2026-Iran-war",
-        "https://www.axios.com/2026/09/02/iran-tankers-hormuz-attacks-oil",
-        "https://abcnews.com/International/live-updates/iran-live-updates-centcom-targeted-iranian-forces-posed/?id=136080582",
-        "https://www.cnn.com/2026/09/02/politics/latest-us-strikes-against-iran-marked-a-shift-in-strategy",
-        "https://www.npr.org/2026/09/05/nx-s1-5959159/us-iran-warships-targeted"
+        "https://www.aljazeera.com/news/2026/10/8/us-stocks-slide-as-oil-prices-fluctuate-over-renewed-iran-war-fears",
+        "https://www.cnbc.com/2026/09/11/iran-war-oil-diesel-iea-hormuz.html",
+        "https://www.kpler.com/blog/us-iran-conflict-strait-of-hormuz-crisis-reshapes-global-oil-markets",
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -521,12 +519,12 @@
       "target_indicator": "Hormuz/Red Sea status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz/Red Sea status indicator under s20_sea_lanes directly captures this. The IRGC's escalation doctrine shift ('no more proportionate responses'), confirmed ballistic-missile targeting of a US carrier, US 'tanker-for-tanker' policy, and Saudi Aramco infrastructure hits collectively move this indicator from 1 (contested) toward 2 (effectively closed/extreme risk). WTI and fertilizer-input disruption (s18) are secondary amplifiers. The week-on-week escalation \u2014 Iran warning all Gulf vessels, US striking ~60\u2013100 targets in a single day \u2014 is a clear material step-change, not routine noise.",
+      "rationale": "Hormuz/Red Sea status should be set to 2 (closed/contested): the IEA calls this the worst supply disruption in history, with ~20% of global oil trade disrupted and insurance effectively withdrawn from the strait. WTI/Brent indicators are also directly triggered. Spillover is material to s18_food_fertilizer (Hormuz/Gulf disruption indicator \u2192 2, cut), s13_insurance (catastrophe-loss pressure elevated from tanker and Gulf infrastructure attacks), and s1_basis_trade / s21_clearinghouses (US Treasury yields at 20-year highs signal acute duration stress that could interact with basis-trade leverage).",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-09-25",
+      "last_seen": "2026-10-08",
       "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
-      "sightings": 14
+      "sightings": 15
     },
     "fed-chair-warsh-abolishes-forward-guidance-at-fi-abe9f7": {
       "headline": "Fed Chair Warsh abolishes forward guidance at first FOMC meeting (June 17); hawkish dot plot; largest front-end UST selloff at an FOMC event since 2008",
@@ -613,12 +611,12 @@
     },
     "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f": {
       "headline": "Hormuz disruption to fertilizer inputs: >30% of global urea and ~45% of global sulfur exports halted; WFP warns of food-crisis repeat akin to 2022",
-      "summary": "The active naval conflict in the Strait of Hormuz \u2014 with Iran declaring the Persian Gulf restricted to all nations except China and ongoing tanker strikes \u2014 directly threatens ammonia, urea, and LNG feedstock flows through the Gulf, which supply fertilizer production globally. Saudi Aramco's Ras Tanura refinery was briefly closed and LNG tankers have been struck, creating a new vector of fertilizer and food-input disruption.",
-      "as_of": "2026-09-20",
+      "summary": "The ongoing closure/contestation of the Strait of Hormuz has severed a critical conduit for Persian Gulf LPG (a key feedstock for nitrogen fertilizers) and ammonia exports, with analysts warning of spillover into agricultural commodity markets; the IEA and Wood Mackenzie flag fertilizer and helium shortages as near-term consequences of the sustained Hormuz disruption.",
+      "as_of": "2026-10-08",
       "sources": [
-        "https://en.wikipedia.org/wiki/Saudi_Arabia_in_the_2026_Iran_war",
-        "https://en.wikipedia.org/wiki/List_of_ships_attacked_during_the_2026_Iran_war",
-        "https://www.britannica.com/event/2026-Iran-war"
+        "https://www.fortune.com/2026/03/14/peak-war-panic-financial-markets-stock-selloff-us-iran-escalation",
+        "https://www.cnbc.com/2026/09/11/iran-war-oil-diesel-iea-hormuz.html",
+        "https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -626,12 +624,12 @@
       "target_indicator": "Hormuz/Gulf disruption to fertilizer inputs",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "s18_food_fertilizer tracks 'Hormuz/Gulf disruption to fertilizer inputs' (0 clear / 1 disrupted / 2 cut). The IRGC's declaration that the Persian Gulf is restricted to non-Chinese vessels, the closure of Ras Tanura (Saudi Arabia's primary oil export terminal), and confirmed strikes on an LNG tanker in the Strait represent a step-change from '1 disrupted' toward '2 cut' for Gulf fertilizer inputs. Saudi Arabia, Qatar, and Iran are among the world's largest ammonia/urea exporters, and their export routes run through Hormuz. This is a distinct and material update to the s18 story, separate from the s20 sea-lanes indicator.",
+      "rationale": "The Hormuz/Gulf disruption to fertilizer inputs indicator should be set to 2 (cut): the Hormuz de facto closure has directly restricted LPG/ammonia flows that underpin nitrogen fertilizer production in Asia and Europe. Analysts quoted in Fortune and the IEA's September report explicitly flag fertilizer shortages as a near-term Hormuz spillover. This interacts with s18's food-price trend indicator (upward pressure) and is separate from but reinforcing of the s20_sea_lanes Hormuz flag, warranting an independent alert on the food/fertilizer story given the second-order agricultural impact on developing-world food security (cross-link to s4_dev_debt).",
       "status": "pending",
       "first_seen": "2026-07-01",
-      "last_seen": "2026-09-25",
+      "last_seen": "2026-10-08",
       "id": "hormuz-disruption-to-fertilizer-inputs-30-of-glo-2c8b0f",
-      "sightings": 7
+      "sightings": 8
     },
     "strait-of-hormuz-remains-effectively-closed-bren-98679f": {
       "headline": "Strait of Hormuz Remains Effectively Closed \u2014 Brent ~$105/bbl, OECD Oil Inventories at 2003 Lows",
@@ -1373,11 +1371,12 @@
     },
     "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9": {
       "headline": "China PPI Surges to +3.9% YoY in May (3rd Consecutive Monthly Rise, Fastest Since July 2022) Driven by Iran-War Energy Spike",
-      "summary": "China's PPI swung from deeply negative (\u22123.6% YoY trough mid-2025) to near positive in 2026, driven by Middle East conflict-induced commodity cost inflation rather than domestic demand recovery. While factories cannot fully pass on input cost increases to domestic clients, the PPI rebound reduces China's deflationary export impulse \u2014 shifting the s5 risk vector from global deflation spillover toward a cost-push squeeze on margins.",
-      "as_of": "2026-09-09",
+      "summary": "China's PPI came in at +3.5% YoY in the August 2026 release (vs. +3.9% forecast and +4.1% prior), with factory-gate inflation decelerating more sharply than consensus expected, while CPI rose only 0.8% YoY \u2014 well below levels consistent with demand recovery. This follows a multi-year PPI deflation cycle and raises the risk of renewed price-export pressure on global goods markets.",
+      "as_of": "2026-08-09",
       "sources": [
-        "https://www.cnbc.com/2026/07/09/china-cpi-ppi-june-inflation-iran-war-.html",
-        "https://tradingeconomics.com/china/producer-prices-change/news/476556"
+        "https://www.investing.com/economic-calendar/chinese-ppi-464",
+        "https://blog.primestrider.com/article/china-july-2026-ppi-slowdown-macro-analysis",
+        "https://tradingeconomics.com/china/inflation-cpi"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -1385,21 +1384,22 @@
       "target_indicator": "China PPI YoY (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "s5_china_deflation's primary indicator is China PPI YoY, where 'large swing either way is worse.' The PPI has moved from a 34-month deflation streak into positive or near-zero territory in mid-2026, driven by war-related input cost inflation rather than genuine demand recovery. This is precisely the 'cost-push' tail risk in s5: China's factories absorb commodity input shocks without passing them downstream domestically, compressing margins and creating a different spillover channel (squeezed-exporter stress) than the original deflation-export scenario. The rubric 'large swing either way is worse' makes this a direct flag even as the sign flips.",
+      "rationale": "The August 2026 print of +3.5% PPI (missing +3.9% consensus) is a directional deterioration after PPI appeared to recover earlier in 2026 (April hit near 4-year highs). The miss suggests the tariff-truce-driven demand impulse is fading and domestic demand headwinds persist. While PPI is no longer negative (unlike the prolonged 2022-2025 deflation streak), the deceleration trajectory matters: a large swing downward from recent highs is precisely what the indicator flags as worse. With Hormuz-linked supply-chain stress potentially rerouting Chinese export flows and yuan depreciation pressure from the Middle East shock, this indicator warrants an amber update.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-09-25",
-      "sightings": 13,
+      "last_seen": "2026-10-08",
+      "sightings": 14,
       "id": "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9"
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
       "headline": "China\u2013Japan Rare-Earth / Dual-Use Controls Expand to Trigger GDP-Level Supply Chain Risk; November 2026 Broader Suspension Expiry Looms",
-      "summary": "China's June exports hit $412bn (+27% YoY, fastest since Oct 2021), with semiconductors and rare earths among the top-growing categories. As Section 301 tariffs approach, Chinese commentators and the Asia Times warn Beijing could reimpose rare-earth export restrictions if the US proceeds\u2014directly threatening the Kuala Lumpur/Nov-2025 commitment to suspend coercive rare-earth controls.",
-      "as_of": "2026-07-15",
+      "summary": "The November 2025 one-year suspension of China's expanded rare-earth export controls (covering 5 additional REEs plus extraterritorial rules) expires November 10, 2026; Beijing has given chipmakers and automakers no signal on renewal, extension, or revision five weeks out. The underlying April 2025 licensing regime on 7 heavy REEs remains fully active, and June 2026 saw a targeted entity-list ban on MP Materials and USA Rare Earth.",
+      "as_of": "2026-10-06",
       "sources": [
-        "https://www.cnbc.com/2026/07/14/china-june-trade-data-exports-imports.html",
-        "https://asiatimes.com/2026/03/us-warned-of-china-rare-earth-curbs-if-section-301-tariffs-expand/",
-        "https://www.whitehouse.gov/presidential-actions/2025/11/modifying-reciprocal-tariff-rates-consistent-with-the-economic-and-trade-arrangement-between-the-united-states-and-the-peoples-republic-of-china/"
+        "https://startupfortune.com/chinas-rare-earth-export-truce-expires-november-10-with-no-renewal-in-sight",
+        "https://landedmath.com/blog/china-rare-earth-export-controls-licence-regime/",
+        "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2026/6/china-tightens-rare-earth-export-curbs-on-10-us-companies-103014947",
+        "https://www.cfr.org/reports/dismantling-chinas-supply-chain-weapon"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1407,11 +1407,11 @@
       "target_indicator": "Nov-2025 pause status",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Nov-2025 Kuala Lumpur Arrangement committed China to suspend coercive rare-earth export controls; that pause is now explicitly flagged by Chinese policy commentators as a potential retaliation lever if Section 301 tariffs proceed. The Nov-2025 pause status indicator should escalate from 0 (extended) toward 1 (expiring/threatened) given the credible and public nature of these warnings, the imminent Section 301 decision (July 20 deadline), and the fact that rare earths are simultaneously surging as an export category\u2014meaning China still has economic incentive to keep volumes flowing, but the political calculus is changing rapidly with the tariff cliff.",
+      "rationale": "The Nov-2025 pause status indicator (rubric: 0=extended / 1=expiring / 2=lapsed) should now be set to 1 (expiring): the defined 12-month window closes November 10 with zero public signal of renewal, creating a hard binary cliff for extraterritorial controls and expanded-element licensing. Simultaneously the US domestic RE producer blacklist indicator moves to 1 (entity-specific ban) following the June 2026 banning of MP Materials and USA Rare Earth from receiving Chinese dual-use exports. These two simultaneous deteriorations materially elevate the story's overall risk posture.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-16",
-      "sightings": 4,
+      "last_seen": "2026-10-08",
+      "sightings": 5,
       "id": "china-japan-rare-earth-dual-use-controls-expand--f24a9c"
     },
     "strait-of-hormuz-60-day-mou-signed-june-17-iran--eef3e4": {
@@ -9020,10 +9020,38 @@
       "last_seen": "2026-10-07",
       "sightings": 1,
       "id": "us-treasury-yield-surge-fed-hike-cycle-creates-a-81dbc7"
+    },
+    "meta-blue-owl-30bn-ai-data-centre-jv-gpu-backed--eeb796": {
+      "headline": "Meta / Blue Owl $30bn AI Data-Centre JV: GPU-Backed Lease Debt Enters IG Market at Scale",
+      "summary": "A joint venture between Meta and Blue Owl Capital raised approximately US$30 billion through investment-grade debt backed by a sequence of Meta data-centre leases, as flagged in the RBA's October 2026 Financial Stability Review. This is the largest single AI-infrastructure debt issuance to date and creates a novel form of lease-backed, GPU-linked IG paper whose collateral value depends entirely on AI revenue generation.",
+      "as_of": "2026-10-01",
+      "sources": [
+        "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s8_ai_capex",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Largest single AI lease-backed IG debt deal ($bn)",
+        "type": "value",
+        "rubric": "Tracks the notional size of the largest outstanding AI data-centre lease-backed IG debt instrument or JV. Rising values indicate growing concentration of lease-collateral risk inside IG indices; a distress event on such a deal would simultaneously spike IG OAS and trigger GPU-backed debt refinancing stress. Flag if any single deal exceeds $20bn (watch) or $40bn (alert).",
+        "sources": [
+          "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s8_ai_capex story tracks AI capex-vs-revenue gap and GPU-backed debt refinancing stress but has no indicator capturing the concentration risk of a single mega-deal funnelling $30bn of lease-backed IG debt into credit markets. The Meta/Blue Owl structure is novel: if Meta's AI revenue disappoints, the lease cash flows backing the bonds could deteriorate, causing a correlated IG OAS spike and a refinancing event for Blue Owl's fund. This is precisely the 'circular financing' vulnerability the story is designed to monitor, but at a new order of magnitude.",
+      "status": "pending",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "sightings": 1,
+      "id": "meta-blue-owl-30bn-ai-data-centre-jv-gpu-backed--eeb796"
     }
   },
-  "generated": "2026-10-07",
+  "generated": "2026-10-08",
   "model": "claude-sonnet-4-6",
-  "new_count": 3,
-  "pending_count": 278
+  "new_count": 1,
+  "pending_count": 279
 }
