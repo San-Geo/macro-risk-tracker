@@ -177,13 +177,13 @@
     },
     "us-iran-ceasefire-collapses-for-4th-consecutive--40920a": {
       "headline": "US\u2013Iran ceasefire collapses for 4th consecutive day; Iran attacks Bahrain & Kuwait, Hormuz status contested",
-      "summary": "Ship attacks in the Strait of Hormuz escalated sharply in the week ending October 6, even as Gulf oil exports partially rebounded to near pre-war levels for portions of September; Saudi Aramco CEO Amin Nasser warned at the Energy Intelligence Forum in London that nearly 3 billion barrels of supply have been lost since late February and that restoring inventories could take two years, with the IEA having labeled this the largest supply disruption on record. War-risk insurance remains prohibitively expensive or unavailable, and strategic reserves are described as 'already thin'.",
-      "as_of": "2026-10-06",
+      "summary": "Iranian attacks on commercial shipping in the Strait of Hormuz have kept throughput at roughly 10.3 million bpd vs. a pre-war 13.5 million bpd baseline; Brent crude hit ~$105 on Oct 8, and the cost of shipping Gulf oil to China reached a record $1.3M per day (vs. ~$60K pre-war average). Trump's Oct 8 pledge to hold off further airstrikes before the midterms failed to reverse the oil price surge.",
+      "as_of": "2026-10-08",
       "sources": [
-        "https://www.aljazeera.com/news/2026/10/6/hormuz-ship-attacks-surge-are-increased-oil-exports-sustainable",
-        "https://www.nbcnews.com/business/energy/hormuz-oil-exports-increase-ship-attacks-rcna601597",
-        "https://energynow.com/2026/04/alternative-routes-for-middle-east-oil-and-gas-due-to-hormuz-disruption/",
-        "https://carraglobe.com/strait-of-hormuz-closure-2026/"
+        "https://www.cnbc.com/2026/10/06/crude-oil-tanker-strait-hormuz-iran-attack.html",
+        "https://www.energyconnects.com/news/gas-lng/2026/october/iran-ramps-up-ship-attacks-in-hormuz-as-oil-gas-flows-rise/",
+        "https://nbcnews.com/business/energy/oil-prices-stocks-trump-iran-rcna602248",
+        "https://www.euronews.com/2026/10/08/oil-prices-are-climbing-on-concerns-about-an-escalating-iran-war"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -191,22 +191,21 @@
       "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Hormuz/Red Sea status indicator for s20_sea_lanes should be marked at 2 (effectively closed/severely contested): war-risk insurance is unavailable, tanker attacks are surging, both Hormuz and Red Sea were simultaneously blocked for a period in 2026, and the Aramco CEO's 'two years to rebuild inventories' warning signals this is no longer a short-term spike. The WTI/Brent crude indicator is also directly affected. This also flows into s18_food_fertilizer (Hormuz/Gulf disruption to fertilizer inputs) which should be marked 2 (cut), and into s4_dev_debt via elevated energy import costs for developing economies.",
+      "rationale": "The Hormuz situation has materially worsened this week: volumes are 23% below baseline, freight costs are at records, and Trump's midterm-politics pledge not to re-strike removes the near-term escalation de-escalation lever markets had been pricing. The current status is firmly '1 contested' and edging toward '2 closed' by volume metrics. WTI/Brent above $105 should also trigger a direct update to the WTI crude indicator. Cross-story: elevated oil = renewed US inflation = s11_consumer_debt stress; fertilizer input disruption feeds s18_food_fertilizer.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-06",
+      "last_seen": "2026-10-09",
       "id": "us-iran-ceasefire-collapses-for-4th-consecutive--40920a",
-      "sightings": 37
+      "sightings": 38
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 10-year JGB yield rose to 3.09% on October 8, 2026, up ~20bps over the past month and 139bps above a year ago, reflecting BoJ tightening (policy rate at 1.25%, a 31-year high after a split September hike), fiscal expansion vows from PM Takaichi, and insurer duration-shortening. The 30-year JGB yield is at structurally elevated levels, with the BoJ's next decision due October 30.",
-      "as_of": "2026-10-08",
+      "summary": "The 30-year JGB yield reached 4.166% on Oct 5 (highest in the MoF series back to 1999) and the 10-year touched 3.097% on Oct 2 (highest since August 1996), with the BOJ at 1.25% and Summary of Opinions explicitly flagging the need to 'accelerate the pace of rate hikes.' Japanese investors have been selling US Treasuries (est. $29.6bn in Q1 2026 alone) as domestic yields now clear the repatriation threshold.",
+      "as_of": "2026-10-09",
       "sources": [
-        "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://asianbondsonline.adb.org/japan/",
-        "https://tradingeconomics.com/japan/interest-rate",
-        "https://www.ubp.com/en/news-insights/newsroom/the-yen-rescue-that-can-t-beat-fundamentals"
+        "https://www.indrastra.com/2026/10/japan-has-left-zero-rate-world-what.html",
+        "https://tradingeconomics.com/japan/30-year-bond-yield",
+        "https://guardian-gold.com.au/market-updates/the-yens-long-fall/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -214,12 +213,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 10-year JGB at 3.09% (up 139bps YoY) signals that super-long yields are also at multi-decade highs, directly pressuring the 30-year JGB yield indicator. The split-vote September hike to 1.25% \u2014 the highest since 1995 \u2014 plus Takaichi's fiscal expansion commitments and insurer repositioning (selling low-coupon legacy bonds) all compound carry-trade unwind risk. The Takaichi plan financing clarity indicator should also be updated to 1 (unclear) given absence of offsetting fiscal measures. The BoJ Oct 30 meeting is a near-term catalyst.",
+      "rationale": "The 30-yr JGB at 4.06% (Oct 9) and 10-yr at 3.02% are multi-decade records, directly hitting the tracker's primary JGB yield indicator. The BOJ Summary of Opinions (released Oct 1) with language about 'accelerating' hikes and a scheduled Oct 29-30 meeting with a new Outlook Report add imminent catalyst risk. The US-Japan 10-yr spread has compressed to ~200 bps from ~400 bps in 2023, degrading carry-trade math materially and triggering sustained repatriation flows out of US Treasuries \u2014 a direct cross-story threat to s1_basis_trade and s4_dev_debt.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-08",
+      "last_seen": "2026-10-09",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 37
+      "sightings": 38
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -7476,15 +7475,13 @@
     },
     "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb": {
       "headline": "Synchronized global sovereign bond rout: US 10y at 4.80%, UK 30y at 5.82% (highest since 1998), German 10y at 2011 highs",
-      "summary": "France's 10-year OAT/Bund spread spiked to 146.9 bps intraday on Oct 2 (settling at 127.4 bps Oct 6), its widest since the 2012 eurozone crisis, after the government's \u20ac43B austerity package was seen as insufficient to stabilise debt rising to 121.7% of GDP. CDS markets signal rising sovereign default risk, and France faces a record \u20ac340B medium/long-term issuance programme in 2027.",
-      "as_of": "2026-10-06",
+      "summary": "The 10-yr OAT-Bund spread hit 146.9 bps on Oct 2 and remained at 134.4 bps on Oct 7, with French 10-yr yields touching 4.935% (an 18-year high), as the government's Oct 1 \u20ac43bn fiscal package was met with skepticism given parliamentary fragmentation ahead of 2027 elections. French public debt is projected to climb to 121.7% of GDP in 2027, and annual interest costs are approaching \u20ac91bn.",
+      "as_of": "2026-10-07",
       "sources": [
-        "https://www.tftc.io/france-oat-bund-spread-wider-italy-greece-debt-121-percent-gdp",
-        "https://www.cnbc.com/2026/10/06/france-debt-crisis-ubs-ermotti.html",
-        "https://robinr.substack.com/p/frances-debt-crisis-was-in-plain",
         "https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html",
-        "https://fortune.com/2026/10/02/france-debt-crisis-bond-investors-odds-sovereign-default-cds-yield-spread-deficit-presidential-race/",
-        "https://www.fxstreet.com/analysis/le-pens-shadow-budget-narrows-yield-spreads-a-bit-202610060957"
+        "https://www.tftc.io/france-oat-bund-spread-wider-italy-greece-debt-121-percent-gdp",
+        "https://www.efginternational.com/us/insights/2026/french_debt_crisis_causes_repercussions_and_risks.html",
+        "https://www.rothschildandco.com/en-ch/newsroom/insights/2026/10/wm-strategy-blog-france-fiscal-pressure/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -7492,11 +7489,11 @@
       "target_indicator": "OAT-Bund 10y spread (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The OAT-Bund spread is the primary indicator for s10_france. The spread breached 130 bps on Oct 1 and peaked at 146.9 bps on Oct 2 \u2014 the widest since 2012 \u2014 before partially retracing to 127.4 bps on Oct 6. This is a direct, high-materiality update to the existing tracked indicator. Government stability also shifts from 'fragile' toward 'collapse risk' given student riots, presidential election dynamics, and Le Pen's shadow budget; the Govt stability ordinal should move toward 2. No new indicator or story is needed.",
+      "rationale": "The OAT-Bund spread at 134-147 bps this week is a direct, hard update to the tracker's primary s10 indicator. The spread is now wider than Italy's (~106 bps) and Greece's \u2014 a remarkable inversion that signals France has become the eurozone's marginal sovereign risk. The budget package's political viability is questionable with a fractured parliament, which maps squarely onto the tracker's 'Govt stability' ordinal (currently should be scored 1 fragile, risk of moving to 2). The CAC 40 in correction territory (~10% off August highs) adds equity-market contagion dimension.",
       "status": "pending",
       "first_seen": "2026-09-11",
-      "last_seen": "2026-10-07",
-      "sightings": 4,
+      "last_seen": "2026-10-09",
+      "sightings": 5,
       "id": "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb"
     },
     "ai-hyperscaler-bond-issuance-hits-194bn-ytd-in-2-33afc6": {
@@ -9048,10 +9045,136 @@
       "last_seen": "2026-10-08",
       "sightings": 1,
       "id": "meta-blue-owl-30bn-ai-data-centre-jv-gpu-backed--eeb796"
+    },
+    "fed-hikes-to-3-75-4-in-september-fomc-minutes-an-347f5b": {
+      "headline": "Fed hikes to 3.75\u20134% in September; FOMC minutes and Governor Wallace signal further hikes likely \u2014 market-implied probability of another hike reaches 86\u201390%",
+      "summary": "The Federal Reserve raised rates in September to 3.75\u20134% (the first hike since July 2023), and the September FOMC minutes released this week showed most officials view another hike as 'likely appropriate' before year-end; Governor Wallace explicitly flagged that 'multiple rate increases might be needed,' with futures markets pricing an 86\u201390% probability of a further move.",
+      "as_of": "2026-10-08",
+      "sources": [
+        "https://www.euronews.com/2026/10/08/oil-prices-are-climbing-on-concerns-about-an-escalating-iran-war",
+        "https://www.schwab.com/learn/story/stock-market-update-open",
+        "https://iqiglobal.com/blog/global-economic-outlook-october-2026/"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Fed re-tightening cycle / global rate re-shock",
+        "why": "The Fed reversing course to hike again \u2014 driven by oil-shock inflation from the Iran conflict \u2014 after a prior easing cycle is a systemic multiplier. It tightens financial conditions simultaneously across private credit (s3), developing-world debt (s4), consumer debt (s11), AI capex financing (s8), and CRE refinancing (s9). It also interacts with the JGB carry-trade unwind (s2) by narrowing the argument for yen repatriation. A new explicit story is warranted because no existing tracker story captures the Fed's policy-reversal shock as a standalone systemic amplifier.",
+        "proposed_level": 8,
+        "set": "Set 1",
+        "indicators": [
+          {
+            "label": "Fed funds target upper bound (%)",
+            "type": "value",
+            "rubric": "Current upper bound of the FOMC target range, updated at each meeting or inter-meeting action",
+            "sources": [
+              "https://www.federalreserve.gov/monetarypolicy/openmarket.htm"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Market-implied probability of next hike within 90 days (%)",
+            "type": "value",
+            "rubric": "CME FedWatch tool probability of at least one 25bp hike at the next two FOMC meetings; >60% = elevated",
+            "sources": [
+              "https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "US 10-year Treasury yield (%)",
+            "type": "value",
+            "rubric": "Benchmark long-term rate; rising above 5% = high stress given existing sovereign and private debt burdens",
+            "sources": [
+              "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "Global financial-conditions index direction (0 easing / 1 tightening / 2 sharply tightening)",
+            "type": "band",
+            "rubric": "Goldman Sachs or Chicago Fed NFCI; 0 = net easing vs prior month, 1 = tightening, 2 = rapid tightening (>0.5 sigma move)",
+            "sources": [
+              "https://www.chicagofed.org/research/data/nfci/current-data"
+            ],
+            "suggested_weight": 0.2
+          }
+        ]
+      },
+      "rationale": "A Fed that pivots from cutting to hiking \u2014 triggered by an exogenous energy/war shock \u2014 is qualitatively different from a routine tightening cycle and is not captured by any existing story's indicators. The re-tightening acts as a cross-story stress amplifier: it raises the floor on US Treasury yields (pressuring s1 basis trades), tightens dollar funding for EM (s4), increases private-credit default risk (s3), and raises the hurdle for AI-capex debt servicing (s8). At 86-90% market-implied probability of another hike this is high-materiality and time-sensitive.",
+      "status": "pending",
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-09",
+      "sightings": 1,
+      "id": "fed-hikes-to-3-75-4-in-september-fomc-minutes-an-347f5b"
+    },
+    "china-ppi-surges-to-3-8-yoy-in-august-2026-drama-ed893c": {
+      "headline": "China PPI surges to +3.8% YoY in August 2026 \u2014 dramatic reversal from 39 months of factory-gate deflation, shifting global price spillover from deflationary to cost-push",
+      "summary": "China's PPI turned sharply positive in 2026 (Aug reading: +3.8% YoY, following +4.1% in prior month and +3.5% actual vs 3.9% forecast), reversing the prolonged deflation streak of 2023\u20132025; CPI rose to 0.8% in August. This shifts the tracker's s5 China spillover from a deflationary drag concern to a cost-push / inflationary export risk, particularly relevant with the Jan 10, 2027 US-China trade truce deadline approaching.",
+      "as_of": "2026-10-08",
+      "sources": [
+        "https://www.investing.com/economic-calendar/chinese-ppi-464",
+        "https://admiralmarkets.com/analytics/traders-blog/china-cpi-september-2026-preview-and-market-scenarios",
+        "https://tradingeconomics.com/china/inflation-cpi"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s5_china_deflation",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "China PPI YoY direction-of-risk flag (0 moderate/falling / 1 rising cost-push >2% / 2 deflationary <-1%)",
+        "type": "band",
+        "rubric": "Current China PPI YoY reading from NBS: score 0 if between -1% and +2% (benign range); score 1 if >+2% (cost-push export risk, inflationary spillover to global goods); score 2 if <-1% (deflationary dump risk). A large positive swing (now at +3.8%) flips the risk direction from deflation to inflation and should trigger a re-labeling of the story's headline risk.",
+        "sources": [
+          "https://www.stats.gov.cn/english/",
+          "https://www.investing.com/economic-calendar/chinese-ppi-464"
+        ],
+        "suggested_weight": 0.35
+      },
+      "proposed_story": null,
+      "rationale": "The existing s5 story and its China PPI indicator are calibrated for deflationary spillover risk, but the current data shows a dramatic reversal: PPI at +3.8% YoY in August is a near-4-year high in the positive direction. The tracker's rubric ('large swing either way is worse') correctly identifies this as material, but there is no directional flag indicator to distinguish which type of risk is active. A band indicator that codes the direction of the PPI shock is needed so the story's risk narrative can be accurately re-framed \u2014 from 'China dumping cheap goods' to 'China exporting cost-push inflation via energy-linked input prices,' especially as Brent crude near $105 feeds Chinese PPI further.",
+      "status": "pending",
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-09",
+      "sightings": 1,
+      "id": "china-ppi-surges-to-3-8-yoy-in-august-2026-drama-ed893c"
+    },
+    "rba-financial-stability-review-flags-leveraged-s-94b676": {
+      "headline": "RBA Financial Stability Review flags leveraged sovereign-bond positions and basis-trade hidden leverage as top systemic risks; warns of disorderly repricing potential",
+      "summary": "The Reserve Bank of Australia's October 2026 Financial Stability Review, published Oct 1, explicitly warns that 'heightened risk that any disruptions could amplify volatility and impair market functioning' in sovereign bond markets, singling out leveraged arbitrage positions \u2014 a direct reference to basis-trade dynamics. It identifies elevated geopolitical tensions, rising government bond yields, and low risk premia as the primary vectors of potential systemic disruption.",
+      "as_of": "2026-10-01",
+      "sources": [
+        "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
+        "https://www.rba.gov.au/publications/fsr/2026/oct/pdf/financial-stability-review-2026-10.pdf"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Major central bank / FSB systemic-leverage warning flag (0 none / 1 flagged in FSR / 2 formal action or emergency alert)",
+        "type": "band",
+        "rubric": "Score 0 if no major central bank financial stability report specifically calls out leveraged basis-trade or hidden-leverage risk in sovereign bond markets in the prior 90 days; score 1 if one or more FSRs (Fed, ECB, RBA, BoE, FSB) explicitly flag this as a top systemic concern; score 2 if a formal regulatory action, margin call cascade, or emergency liquidity facility is triggered. Current score: 1 (RBA FSR Oct 2026 explicitly flagged).",
+        "sources": [
+          "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
+          "https://www.fsb.org/work-of-the-fsb/financial-stability-surveillance/"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "The existing s1_basis_trade story tracks SOFR-EFFR, the MOVE index, and SEC clearing progress \u2014 all market-price or implementation indicators. The RBA FSR is the first major central bank stability review of the October cycle to explicitly name leveraged sovereign-bond arbitrage as a primary systemic concern, validating the tracker's hypothesis. A 'regulatory/official warning' indicator adds an institutional-consensus dimension that precedes market dislocations and is not captured by existing price-based proxies. With the Fed hiking and JGB yields at multi-decade highs simultaneously, basis-trade stress conditions are the most acute since March 2020.",
+      "status": "pending",
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-09",
+      "sightings": 1,
+      "id": "rba-financial-stability-review-flags-leveraged-s-94b676"
     }
   },
-  "generated": "2026-10-08",
+  "generated": "2026-10-09",
   "model": "claude-sonnet-4-6",
-  "new_count": 1,
-  "pending_count": 279
+  "new_count": 3,
+  "pending_count": 282
 }
