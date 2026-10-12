@@ -200,12 +200,14 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The 30-year JGB yield reached 4.166% on Oct 5 (highest in the MoF series back to 1999) and the 10-year touched 3.097% on Oct 2 (highest since August 1996), with the BOJ at 1.25% and Summary of Opinions explicitly flagging the need to 'accelerate the pace of rate hikes.' Japanese investors have been selling US Treasuries (est. $29.6bn in Q1 2026 alone) as domestic yields now clear the repatriation threshold.",
-      "as_of": "2026-10-09",
+      "summary": "The 30-year JGB yield touched a record 4.235% on Oct 5 (up 87bps YoY), driven by fiscal fears around PM Takaichi's stimulus agenda and Middle-East-linked inflation. A relaunched DOGE-style review of 201 government funds targeting \u00a57 trillion yielded only 3 abolition proposals in its first round, while record budget requests of \u00a5143 trillion dwarf the \u00a540 trillion issuance cap Takaichi has pledged.",
+      "as_of": "2026-10-07",
       "sources": [
-        "https://www.indrastra.com/2026/10/japan-has-left-zero-rate-world-what.html",
+        "https://www.indexbox.io/blog/japan-pm-takaichi-pledges-bond-issuance-control-as-30-year-jgb-yield-hits-record-4235/",
+        "https://investinglive.com/news/japan-reboots-doge-style-spending-review-to-fund-takaichi-pledges-as-jgb-yields-climb/",
+        "https://finance.yahoo.com/economy/policy/articles/takaichi-says-japan-may-review-063447010.html",
         "https://tradingeconomics.com/japan/30-year-bond-yield",
-        "https://guardian-gold.com.au/market-updates/the-yens-long-fall/"
+        "https://finance.yahoo.com/economy/policy/articles/takaichi-tells-japanese-investors-rest-223351303.html"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -213,12 +215,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 30-yr JGB at 4.06% (Oct 9) and 10-yr at 3.02% are multi-decade records, directly hitting the tracker's primary JGB yield indicator. The BOJ Summary of Opinions (released Oct 1) with language about 'accelerating' hikes and a scheduled Oct 29-30 meeting with a new Outlook Report add imminent catalyst risk. The US-Japan 10-yr spread has compressed to ~200 bps from ~400 bps in 2023, degrading carry-trade math materially and triggering sustained repatriation flows out of US Treasuries \u2014 a direct cross-story threat to s1_basis_trade and s4_dev_debt.",
+      "rationale": "The 30Y JGB yield is a direct tracked indicator for s2_japan and just set an all-time record. The Takaichi plan financing clarity indicator should move to '1 unclear' given the spending review's thin output (3 proposals from 120 tax breaks reviewed), the \u00a5143tn vs \u00a540tn gap, and Nomura's warning that rhetorical fiscal discipline does not equal policy adjustment. The BOJ at 1.25% (31-year high) is also compressing carry-trade viability (USD/JPY relevant). Multiple s2 indicators are simultaneously stressed.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-10-12",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 38
+      "sightings": 39
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -1370,12 +1372,12 @@
     },
     "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9": {
       "headline": "China PPI Surges to +3.9% YoY in May (3rd Consecutive Monthly Rise, Fastest Since July 2022) Driven by Iran-War Energy Spike",
-      "summary": "China's PPI came in at +3.5% YoY in the August 2026 release (vs. +3.9% forecast and +4.1% prior), with factory-gate inflation decelerating more sharply than consensus expected, while CPI rose only 0.8% YoY \u2014 well below levels consistent with demand recovery. This follows a multi-year PPI deflation cycle and raises the risk of renewed price-export pressure on global goods markets.",
-      "as_of": "2026-08-09",
+      "summary": "BBVA's September 2026 China outlook confirms CPI at 0.8% with PPI-to-CPI pass-through limited by a supply-demand mismatch and 15% youth unemployment; fixed asset investment contracted 7.2% YoY through August, dragged by a -19.2% collapse in real estate investment. The September CPI/PPI release on Oct 14 is the next material data point.",
+      "as_of": "2026-10-12",
       "sources": [
-        "https://www.investing.com/economic-calendar/chinese-ppi-464",
-        "https://blog.primestrider.com/article/china-july-2026-ppi-slowdown-macro-analysis",
-        "https://tradingeconomics.com/china/inflation-cpi"
+        "https://www.bbvaresearch.com/en/publicaciones/china-economic-outlook-september-2026/",
+        "https://www.financecalendar.com/event/china-cpi-october-2026/",
+        "https://am.gs.com/en-us/advisors/insights/article/market-pulse"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -1383,11 +1385,11 @@
       "target_indicator": "China PPI YoY (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The August 2026 print of +3.5% PPI (missing +3.9% consensus) is a directional deterioration after PPI appeared to recover earlier in 2026 (April hit near 4-year highs). The miss suggests the tariff-truce-driven demand impulse is fading and domestic demand headwinds persist. While PPI is no longer negative (unlike the prolonged 2022-2025 deflation streak), the deceleration trajectory matters: a large swing downward from recent highs is precisely what the indicator flags as worse. With Hormuz-linked supply-chain stress potentially rerouting Chinese export flows and yuan depreciation pressure from the Middle East shock, this indicator warrants an amber update.",
+      "rationale": "China's deflation story remains active. CPI at 0.5-0.8% (well below target) and persistent property-sector drag confirm continued deflationary pressure, keeping China PPI as a key risk indicator. The Oct 14 release (Sept data) may move the indicator meaningfully \u2014 prior July print was 0.5% CPI. Goldman Sachs notes 4% Q3 GDP growth, but goods inflation is being exported (s5's tariff/anti-dumping sub-indicator also remains elevated given ongoing trade friction context). Tracker should be watching Oct 14 release as a near-term catalyst.",
       "status": "pending",
       "first_seen": "2026-07-04",
-      "last_seen": "2026-10-08",
-      "sightings": 14,
+      "last_seen": "2026-10-12",
+      "sightings": 15,
       "id": "china-ppi-surges-to-3-9-yoy-in-may-3rd-consecuti-808df9"
     },
     "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
@@ -7475,13 +7477,14 @@
     },
     "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb": {
       "headline": "Synchronized global sovereign bond rout: US 10y at 4.80%, UK 30y at 5.82% (highest since 1998), German 10y at 2011 highs",
-      "summary": "The 10-yr OAT-Bund spread hit 146.9 bps on Oct 2 and remained at 134.4 bps on Oct 7, with French 10-yr yields touching 4.935% (an 18-year high), as the government's Oct 1 \u20ac43bn fiscal package was met with skepticism given parliamentary fragmentation ahead of 2027 elections. French public debt is projected to climb to 121.7% of GDP in 2027, and annual interest costs are approaching \u20ac91bn.",
-      "as_of": "2026-10-07",
+      "summary": "The French 10-year OAT yield surged to ~4.92% intraday (highest since 2002) before easing slightly to 4.86% as of Oct 12, with the OAT-Bund spread peaking above 150bps \u2014 levels last seen during the eurozone debt crisis. The Lecornu government's \u20ac54bn draft 2027 budget faces a fractious parliament vote on Oct 20 and 27, while contagion to Italian and Spanish spreads is already visible.",
+      "as_of": "2026-10-12",
       "sources": [
         "https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html",
-        "https://www.tftc.io/france-oat-bund-spread-wider-italy-greece-debt-121-percent-gdp",
+        "https://tradingeconomics.com/france/government-bond-yield/news/590139",
+        "https://www.allianz-trade.com/en_global/news-insights/economic-insights/Toasted-not-burnt-France-bond-and-the-road-2027-election.html",
         "https://www.efginternational.com/us/insights/2026/french_debt_crisis_causes_repercussions_and_risks.html",
-        "https://www.rothschildandco.com/en-ch/newsroom/insights/2026/10/wm-strategy-blog-france-fiscal-pressure/"
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-12-october-2026/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -7489,11 +7492,11 @@
       "target_indicator": "OAT-Bund 10y spread (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The OAT-Bund spread at 134-147 bps this week is a direct, hard update to the tracker's primary s10 indicator. The spread is now wider than Italy's (~106 bps) and Greece's \u2014 a remarkable inversion that signals France has become the eurozone's marginal sovereign risk. The budget package's political viability is questionable with a fractured parliament, which maps squarely onto the tracker's 'Govt stability' ordinal (currently should be scored 1 fragile, risk of moving to 2). The CAC 40 in correction territory (~10% off August highs) adds equity-market contagion dimension.",
+      "rationale": "OAT-Bund spread at 139.5bps (Oct 12) after peaking ~152bps on Oct 2 \u2014 directly tracked by s10's primary spread indicator. The 10Y OAT at 4.86% (near 2002 highs) and parliament budget votes Oct 20/27 put Govt stability squarely at '1 fragile'; spillover to Italian/Spanish spreads and bank CDS widening are confirmed. Rating action risk is also rising. This is a clean hit on three of the story's four indicators simultaneously.",
       "status": "pending",
       "first_seen": "2026-09-11",
-      "last_seen": "2026-10-09",
-      "sightings": 5,
+      "last_seen": "2026-10-12",
+      "sightings": 6,
       "id": "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb"
     },
     "ai-hyperscaler-bond-issuance-hits-194bn-ytd-in-2-33afc6": {
@@ -8609,24 +8612,23 @@
     },
     "fitch-records-private-credit-default-rate-at-6-3-e448dd": {
       "headline": "Fitch records private credit default rate at 6.3% \u2014 all-time high \u2014 as FSB and Bank of Canada flag systemic bank linkages",
-      "summary": "Fitch's trailing 12-month private credit default rate across 1,300 US borrowers hit a record 6.3% in August 2026, surpassing the prior record set just one month earlier, with September recording the highest monthly default-event count in a year. The FSB's September 2026 regulatory brief simultaneously flagged that Canadian banks alone have lent at least $40 bn to private credit funds, with transparency and leverage assessment described as critically limited.",
-      "as_of": "2026-09-17",
+      "summary": "The Reserve Bank of Australia's October 2026 Financial Stability Review explicitly names high-profile private credit defaults in late 2025/early 2026 and warns that concerns over asset quality in private credit remain elevated, though stress is characterized as 'largely idiosyncratic' so far.",
+      "as_of": "2026-10-01",
       "sources": [
-        "https://www.bloomberg.com/news/articles/2026-09-14/us-private-credit-default-rate-hits-a-record-of-6-3-fitch-says",
-        "https://www.bloomberg.com/news/articles/2026-09-17/private-credit-defaults-are-1-6-or-19-depending-who-you-ask",
-        "https://www.bloomberg.com/professional/insights/regulation/september-2026-global-regulatory-brief-private-credit-credit-risk-reform-and-liquidity-reporting/"
+        "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
+        "https://www.rba.gov.au/publications/fsr/2026/oct/pdf/financial-stability-review-2026-10.pdf"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "existing_indicator",
       "target_story": "s3_private_credit",
       "target_indicator": "Direct-lending default rate (%, Fitch incl. distressed exchanges)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The Fitch default rate at 6.3% is a new all-time record (prior tracker reference point was ~310 bps HY OAS proxy), moving consecutively higher month-on-month and with the highest single-month default event count in a year. This directly updates the Direct-lending default rate indicator. Concurrently the FSB/Bank of Canada disclosures of $40 bn+ bank-to-private-credit lending exposure \u2014 with leverage 'difficult to measure' \u2014 represent the first official quantification of the bank contagion channel and should nudge Large-fund redemption gates from '0 none' toward '1 isolated' monitoring. Combined materiality is high given the asset class is ~$2 trillion.",
+      "rationale": "The RBA FSR is a credible multilateral financial-stability source, and its specific naming of default events (First Brands, Tricolor, Market Financial Solutions) across late 2025\u2013early 2026 confirms the direct-lending default rate is rising materially. The tracker's current indicator baseline (~Fitch incl. distressed exchanges) should be refreshed. The RBA's 'idiosyncratic but elevated' framing is consistent with the large-fund redemption gates indicator remaining at '0 none' for now, but default clustering warrants a watchlist upgrade.",
       "status": "pending",
       "first_seen": "2026-09-30",
-      "last_seen": "2026-09-30",
-      "sightings": 1,
+      "last_seen": "2026-10-12",
+      "sightings": 2,
       "id": "fitch-records-private-credit-default-rate-at-6-3-e448dd"
     },
     "china-ppi-swings-to-3-8-yoy-in-august-4-7-point--e50311": {
@@ -9171,10 +9173,112 @@
       "last_seen": "2026-10-09",
       "sightings": 1,
       "id": "rba-financial-stability-review-flags-leveraged-s-94b676"
+    },
+    "strait-of-hormuz-surging-tanker-attacks-persist--09735d": {
+      "headline": "Strait of Hormuz: surging tanker attacks persist even as Gulf oil exports partially recover via rerouting",
+      "summary": "Gulf crude and condensate exports have partially rebounded to ~18.6m bpd (pre-conflict levels) via Saudi rerouting through the East-West pipeline and Red Sea, but tanker attacks around the strait are described as a 'heightened and increasingly unpredictable kinetic threat.' War-risk insurance premiums remain many multiples of pre-crisis levels, and Brent is trading in the mid-80s to low 90s.",
+      "as_of": "2026-10-06",
+      "sources": [
+        "https://www.nbcnews.com/business/energy/hormuz-oil-exports-increase-ship-attacks-rcna601597",
+        "https://www.aljazeera.com/news/2026/10/6/hormuz-ship-attacks-surge-are-increased-oil-exports-sustainable",
+        "https://carraglobe.com/strait-of-hormuz-closure-2026/",
+        "https://www.amundi.com/insights/article/global-investment-views-october-2026"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
+      "proposed_indicator": {
+        "label": "Gulf crude export recovery rate (% of pre-conflict baseline, via rerouting)",
+        "type": "band",
+        "rubric": "0 = \u226595% of pre-conflict baseline restored via any route; 1 = 70\u201394% restored with significant rerouting; 2 = <70% restored \u2014 sustained supply shortfall regardless of route",
+        "sources": [
+          "https://www.nbcnews.com/business/energy/hormuz-oil-exports-increase-ship-attacks-rcna601597",
+          "https://www.aljazeera.com/news/2026/10/6/hormuz-ship-attacks-surge-are-increased-oil-exports-sustainable"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing Hormuz/Red Sea status indicator captures the strait's open/closed state, but the current situation is a new regime: the strait is 'contested' (level 1) yet exports are partially recovering via expensive rerouting. This creates a false sense of normalcy while hiding war-risk insurance cost spikes, refining capacity mismatches (s20 also notes undersea cable exposure from Middle East conflict). A rerouting-recovery rate indicator would distinguish 'flow restored at high cost' from 'flow genuinely safe,' which matters for inflation and fertilizer input paths (s18 also affected).",
+      "status": "pending",
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "sightings": 1,
+      "id": "strait-of-hormuz-surging-tanker-attacks-persist--09735d"
+    },
+    "global-sovereign-bond-term-premium-surge-us-10y--cf8f60": {
+      "headline": "Global sovereign bond term premium surge: US 10Y above 5%, average global government bond yield near 4% (highest since 2007) as AI capex debt and fiscal deficits crowd out",
+      "summary": "Multiple sources (Goldman GSAM, Amundi, RBA FSR, rickmcelderry.com) converge on a common signal: global government bond yields have risen sharply in Q3\u2013Q4 2026, with the US 10Y above 5%, the average global sovereign yield near 4% (a 19-year high), and term premiums rising as AI infrastructure debt issuance and sovereign fiscal needs compete for capital. The Fed is pausing but not cutting, with CPI consensus at ~3.7% YoY.",
+      "as_of": "2026-10-12",
+      "sources": [
+        "https://am.gs.com/en-us/advisors/insights/article/market-know-how",
+        "https://research-center.amundi.com/article/global-investment-views-october-2026",
+        "https://www.rba.gov.au/publications/fsr/2026/oct/pdf/financial-stability-review-2026-10.pdf",
+        "https://rickmcelderry.com/global-economy-report-october-2026/",
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-12-october-2026/"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Sovereign term-premium spike / global bond market re-pricing",
+        "why": "A simultaneous, multi-country rise in long-end sovereign yields \u2014 US 10Y >5%, global avg ~4% (19-yr high), Japan 30Y all-time record, France 10Y at 2002 high \u2014 represents a systemic re-pricing of duration risk that is not fully captured by any single existing story. The mechanism is a crowding-out loop: AI capex debt issuance + defense/fiscal expansion + BOJ tapering + Fed-on-hold all compete for the same long-duration investor base, compressing term premiums back toward historical norms and creating a tightening impulse even without central bank rate hikes. This affects the s1 basis trade (higher MOVE), s2 Japan, s8 AI capex financing costs, s10 France, s14 pensions (funded ratio), and s9 CRE (cap rates) simultaneously \u2014 making it a cross-cutting systemic driver rather than a story-specific update.",
+        "proposed_level": 7,
+        "set": "Set 1",
+        "indicators": [
+          {
+            "label": "US 10Y Treasury yield (%)",
+            "type": "value",
+            "rubric": "Track absolute level; >5% = elevated stress on duration-sensitive leveraged positions and cross-asset crowding out",
+            "sources": [
+              "https://rickmcelderry.com/global-economy-report-october-2026/",
+              "https://am.gs.com/en-us/advisors/insights/article/market-know-how"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Global avg govt bond yield (%, ICE BofA Global Govt Index or equiv.)",
+            "type": "value",
+            "rubric": "0 = <3.0% (accommodative); 1 = 3.0\u20134.0% (tightening); 2 = >4.0% (restrictive, crowding out)",
+            "sources": [
+              "https://am.gs.com/en-us/advisors/insights/article/market-know-how",
+              "https://research-center.amundi.com/article/global-investment-views-october-2026"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "US 10Y term premium (ACM model, bps)",
+            "type": "band",
+            "rubric": "0 = <50bps (contained); 1 = 50\u2013100bps (rising); 2 = >100bps (disorderly \u2014 basis-trade / pension / CRE stress threshold)",
+            "sources": [
+              "https://www.rba.gov.au/publications/fsr/2026/oct/pdf/financial-stability-review-2026-10.pdf"
+            ],
+            "suggested_weight": 0.25
+          },
+          {
+            "label": "AI + sovereign net bond supply overhang ($tn annualised)",
+            "type": "band",
+            "rubric": "0 = <$3tn net; 1 = $3\u20135tn; 2 = >$5tn (absorption risk \u2014 requires significant term-premium compensation)",
+            "sources": [
+              "https://am.gs.com/en-us/advisors/insights/article/market-know-how",
+              "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-12-october-2026/"
+            ],
+            "suggested_weight": 0.15
+          }
+        ]
+      },
+      "rationale": "The global long-bond re-pricing is now a confirmed, multi-source, cross-asset phenomenon as of early October 2026. It is not adequately represented by any single existing story: s1 watches MOVE/SOFR but not the underlying term-premium driver; s2 watches Japanese yields but not the crowding-out mechanism; s8 watches AI capex financing but not the sovereign-demand competition. A dedicated story would capture how this single macro factor transmits simultaneously into basis-trade stress, pension funded-ratio deterioration, CRE cap-rate pressure, AI debt refinancing risk, and EM currency pressure \u2014 making it a high-leverage entry point for tracker alerts.",
+      "status": "pending",
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "sightings": 1,
+      "id": "global-sovereign-bond-term-premium-surge-us-10y--cf8f60"
     }
   },
-  "generated": "2026-10-09",
+  "generated": "2026-10-12",
   "model": "claude-sonnet-4-6",
-  "new_count": 3,
-  "pending_count": 282
+  "new_count": 2,
+  "pending_count": 284
 }

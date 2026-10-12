@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-10-09 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-10-12 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 6.7/10** — Set 1 5.8, Set 2 5.2, Set 3 4.5, Set 4 6.2, Set 5 5.2.
+**Overall risk 7.1/10** — Set 1 5.8, Set 2 5.2, Set 3 4.8, Set 4 6.5, Set 5 5.5.
 
 
 ## Set 1 — Funding & Leverage
@@ -79,7 +79,7 @@ France combines a wide deficit, a fragmented parliament, and recurring budget st
 
 *Indicators watched:* OAT-Bund 10y spread (%), Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election), Rating action (0 stable / 1 negative outlook / 2 downgrade)
 
-### Gold / de-dollarization — 3/10 (Moderate)
+### Gold / de-dollarization — 4/10 (Moderate)
 
 Central banks are accumulating gold and building non-dollar settlement arrangements at the margin. It is a slow erosion rather than a sudden shift, but reserve 'weaponization' events can accelerate diversification away from the dollar.
 
@@ -100,7 +100,7 @@ China's factory-gate prices spill into global goods markets in BOTH directions: 
 
 *Indicators watched:* China PPI YoY (%) - large swing either way is worse, USD/CNY (yuan depreciation = higher = risk), New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating)
 
-### Critical minerals as a weapon — 6/10 (Elevated)
+### Critical minerals as a weapon — 7/10 (High)
 
 China dominates the mining and especially the processing of rare earths and critical minerals, and has shown willingness to use export licensing as leverage. Supply chains for magnets and defense inputs have little near-term substitute.
 
@@ -133,7 +133,7 @@ Electrification and AI infrastructure point to structural copper deficits as dem
 
 *Indicators watched:* Copper price (USD/lb, COMEX HG=F), Major mine disruptions (0 none / 1 some / 2 cluster), Deficit timing (0 surplus / 1 balanced / 2 deficit)
 
-### Water - the underpriced input — 4/10 (Moderate)
+### Water - the underpriced input — 5/10 (Elevated)
 
 Water is systematically underpriced yet essential to chip fabrication, agriculture, and power. Droughts in key hubs (Taiwan's fabs, major farming regions) and transboundary disputes can disrupt supply chains in ways markets rarely price in advance.
 
