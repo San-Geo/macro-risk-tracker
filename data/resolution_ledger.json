@@ -18,9 +18,18 @@
         "Ex-China heavy rare-earth price premium (x China): 4.5 (band 2)"
       ],
       "closed": "2026-08-21",
-      "grade": null,
-      "grade_note": null,
-      "close_level": 6
+      "grade": "contained",
+      "grade_note": "Ex-China dysprosium rose from 6.8x to 16.3x the China price in Q3 as buyers scrambled, but there was no new Chinese ban and no reported production stoppages.",
+      "close_level": 6,
+      "grade_source": "owner",
+      "grade_timing": null,
+      "graded_on": "2026-10-13",
+      "brief_crossing": false,
+      "triggers": {
+        "close": [
+          "Ex-China heavy rare-earth price premium (x China): 4.5 -> 3.9 (band 2 -> 1)"
+        ]
+      }
     },
     {
       "id": "s15_ai_power-2026-06-30",
@@ -41,7 +50,13 @@
       "closed": "2026-09-18",
       "grade": null,
       "grade_note": null,
-      "close_level": 6
+      "close_level": 6,
+      "brief_crossing": false,
+      "triggers": {
+        "close": [
+          "AI power-demand pressure (0 easing / 1 tight / 2 acute): 2 -> 1 (band 2 -> 1)"
+        ]
+      }
     },
     {
       "id": "s2_japan-2026-07-03",
@@ -87,7 +102,12 @@
       ],
       "closed": null,
       "grade": null,
-      "grade_note": null
+      "grade_note": null,
+      "triggers": {
+        "open": [
+          "Direct-lending default rate (%, Fitch incl. distressed exchanges): 2.73 -> 6.0 (band 0 -> 2)"
+        ]
+      }
     },
     {
       "id": "s5_china_deflation-2026-07-13",
@@ -105,9 +125,21 @@
         "New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating): 2 (band 2)"
       ],
       "closed": "2026-08-14",
-      "grade": null,
-      "grade_note": null,
-      "close_level": 6
+      "grade": "contained",
+      "grade_note": "China's PPI swung to +4.1% (June) then eased to +3.5-3.8%; anti-dumping cases kept coming, but no sector-wide overcapacity tariff and the yuan held steady.",
+      "close_level": 6,
+      "grade_source": "owner",
+      "grade_timing": null,
+      "graded_on": "2026-10-13",
+      "brief_crossing": false,
+      "triggers": {
+        "open": [
+          "China PPI YoY (%) - large swing either way is worse: 3.9 -> 4.1 (band 1 -> 2)"
+        ],
+        "close": [
+          "China PPI YoY (%) - large swing either way is worse: 4.1 -> 3.5 (band 2 -> 1)"
+        ]
+      }
     },
     {
       "id": "s18_food_fertilizer-2026-07-13",
@@ -126,9 +158,21 @@
         "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut): 2 (band 2)"
       ],
       "closed": "2026-07-24",
-      "grade": null,
-      "grade_note": null,
-      "close_level": 6
+      "grade": "contained",
+      "grade_note": "Gulf sulfur and ammonia flows stayed disrupted, but urea fell back near year-ago prices and the FAO food index rose only 1-2.5% y/y; India and Brazil added offsets.",
+      "close_level": 6,
+      "grade_source": "owner",
+      "grade_timing": null,
+      "graded_on": "2026-10-13",
+      "brief_crossing": true,
+      "triggers": {
+        "open": [
+          "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut): 1 -> 2 (band 1 -> 2)"
+        ],
+        "close": [
+          "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut): 2 -> 1 (band 2 -> 1)"
+        ]
+      }
     },
     {
       "id": "s20_sea_lanes-2026-07-20",
@@ -147,9 +191,23 @@
         "Undersea cable incidents (0 none / 1 threatened / 2 cut): 1 (band 1)"
       ],
       "closed": "2026-08-07",
-      "grade": null,
-      "grade_note": null,
-      "close_level": 6
+      "grade": "materialized",
+      "grade_note": "Hormuz stayed shut through the window: IRGC re-closed it Jul 12, the US blockade resumed Jul 14, and large-ship transits were near zero by early September.",
+      "close_level": 6,
+      "grade_source": "owner",
+      "grade_timing": "concurrent",
+      "graded_on": "2026-10-13",
+      "brief_crossing": false,
+      "triggers": {
+        "open": [
+          "Hormuz/Red Sea status (0 open / 1 contested / 2 closed): 1 -> 2 (band 1 -> 2)"
+        ],
+        "close": [
+          "Hormuz/Red Sea status (0 open / 1 contested / 2 closed): 2 -> 1 (band 2 -> 1)",
+          "WTI crude oil (USD/bbl, CL=F): 85.55 -> 78.6 (band 1 -> 0)",
+          "Undersea cable incidents (0 none / 1 threatened / 2 cut): 1 -> 2 (band 1 -> 2)"
+        ]
+      }
     },
     {
       "id": "s18_food_fertilizer-2026-07-27",
@@ -168,9 +226,21 @@
         "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut): 2 (band 2)"
       ],
       "closed": "2026-08-07",
-      "grade": null,
-      "grade_note": null,
-      "close_level": 6
+      "grade": "contained",
+      "grade_note": "Same stress as the Jul 13 episode: fertilizer inputs disrupted, food prices up only modestly (FAO index +2.5% y/y in August).",
+      "close_level": 6,
+      "grade_source": "owner",
+      "grade_timing": null,
+      "graded_on": "2026-10-13",
+      "brief_crossing": true,
+      "triggers": {
+        "open": [
+          "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut): 1 -> 2 (band 1 -> 2)"
+        ],
+        "close": [
+          "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut): 2 -> 1 (band 2 -> 1)"
+        ]
+      }
     },
     {
       "id": "s20_sea_lanes-2026-08-17",
@@ -190,7 +260,12 @@
       ],
       "closed": null,
       "grade": null,
-      "grade_note": null
+      "grade_note": null,
+      "triggers": {
+        "open": [
+          "Hormuz/Red Sea status (0 open / 1 contested / 2 closed): 1 -> 2 (band 1 -> 2)"
+        ]
+      }
     },
     {
       "id": "s6_rare_earths-2026-08-24",
@@ -212,7 +287,16 @@
       "closed": "2026-10-02",
       "grade": null,
       "grade_note": null,
-      "close_level": 6
+      "close_level": 6,
+      "brief_crossing": false,
+      "triggers": {
+        "open": [
+          "Ex-China heavy rare-earth price premium (x China): 3.9 -> 4.5 (band 1 -> 2)"
+        ],
+        "close": [
+          "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed): 1 -> 0 (band 1 -> 0)"
+        ]
+      }
     },
     {
       "id": "s18_food_fertilizer-2026-09-07",
@@ -233,7 +317,16 @@
       "closed": "2026-09-18",
       "grade": null,
       "grade_note": null,
-      "close_level": 6
+      "close_level": 6,
+      "brief_crossing": true,
+      "triggers": {
+        "open": [
+          "China fertilizer export curbs (0 lifted / 1 in place / 2 tightened): 1 -> 2 (band 1 -> 2)"
+        ],
+        "close": [
+          "China fertilizer export curbs (0 lifted / 1 in place / 2 tightened): 2 -> 1 (band 2 -> 1)"
+        ]
+      }
     },
     {
       "id": "s15_ai_power-2026-09-28",
@@ -253,7 +346,12 @@
       ],
       "closed": null,
       "grade": null,
-      "grade_note": null
+      "grade_note": null,
+      "triggers": {
+        "open": [
+          "AI power-demand pressure (0 easing / 1 tight / 2 acute): 1 -> 2 (band 1 -> 2)"
+        ]
+      }
     },
     {
       "id": "s6_rare_earths-2026-10-12",
@@ -274,9 +372,18 @@
       ],
       "closed": null,
       "grade": null,
-      "grade_note": null
+      "grade_note": null,
+      "triggers": {
+        "open": [
+          "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed): 0 -> 1 (band 0 -> 1)"
+        ]
+      }
     }
   ],
   "note": "Record begins with the ledger feature (Jun 30 2026). Rebuilt on 2026-10-13 by replaying history.csv after a malformed hand edit had frozen the file since Jul 22.",
-  "close_rule": "An episode opens when a story reaches 7+ and closes after 5 consecutive runs below 7."
+  "close_rule": "An episode opens when a story reaches 7+ and closes after 5 consecutive runs below 7.",
+  "grading": {
+    "window_days": 30,
+    "rubric_version": "1.0"
+  }
 }

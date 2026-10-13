@@ -1842,13 +1842,12 @@
     },
     "japan-10-year-jgb-yield-surges-to-2-7-2-8-30-yea-d8fccc": {
       "headline": "Japan 10-Year JGB Yield Surges to ~2.7\u20132.8% (30-Year High), Yen Near 4-Decade Low; BOJ Hikes to 1%",
-      "summary": "Japan's June 30 fiscal blueprint (mobilising \u00a5370 trillion through 2040) contained language calling for 'appropriate monetary policy' to support growth, sparking fears the government would rein in BOJ rate hikes. The 10-year JGB yield surged to 2.88% \u2014 a 30-year high \u2014 while USD/JPY ground near \u00a5162, close to 40-year yen lows, with long/super-long yields under sustained selling pressure.",
-      "as_of": "2026-07-09",
+      "summary": "PM Takaichi's \u00a510 trillion two-year consumption-tax cut is scheduled for submission to parliament in mid-October, but funding clarity remains elusive: the government pledged to avoid deficit-financing bonds yet has not identified an alternative revenue source. Oxford Economics has raised its end-2026 10Y JGB forecast to 2.8%; actual 10Y yields have already blown through that to 3.02% on Oct 12, with 30Y at 4.06%, pressuring carry-trade unwinds and JGB market functioning amid BoJ QT.",
+      "as_of": "2026-10-12",
       "sources": [
-        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-6-july-2026/",
-        "https://finance.yahoo.com/economy/policy/articles/japan-benchmark-bond-yield-hits-004445377.html",
-        "https://www.brecorder.com/news/amp/40429050",
-        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield"
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-05-october-2026",
+        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -1856,11 +1855,11 @@
       "target_indicator": "30-year JGB yield (%) AND Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 10-year JGB yield at 2.88% (30-year high) directly updates the '30-year JGB yield' indicator. The government blueprint language pressuring the BOJ to slow hikes is exactly the 'Takaichi plan financing clarity' indicator \u2014 status has moved from 1 (unclear) toward 2 (disorderly) given market reaction. USD/JPY near \u00a5162 (40-year yen low) is simultaneously a carry-trade unwind risk signal and a BOJ-pressure amplifier, materially elevating the Japan fiscal/JGB/carry risk story.",
+      "rationale": "30Y JGB is at 4.06% (data from Oct 12 Trading Economics), well above any prior tracker levels. The Takaichi financing-clarity indicator should move from 1 (unclear) toward 2 (disorderly): the mid-October bill submission without a credible funding mechanism was flagged explicitly by MUFG Research as 'a critical test.' Trump administration pressure on Japan's fiscal stance (noted by MUFG) adds an external layer. Both existing s2 indicators need immediate updates.",
       "status": "pending",
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-10",
-      "sightings": 2,
+      "last_seen": "2026-10-13",
+      "sightings": 3,
       "id": "japan-10-year-jgb-yield-surges-to-2-7-2-8-30-yea-d8fccc"
     },
     "section-301-tariff-cliff-july-24-expiry-of-secti-61ed67": {
@@ -7476,14 +7475,13 @@
     },
     "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb": {
       "headline": "Synchronized global sovereign bond rout: US 10y at 4.80%, UK 30y at 5.82% (highest since 1998), German 10y at 2011 highs",
-      "summary": "The French 10-year OAT yield surged to ~4.92% intraday (highest since 2002) before easing slightly to 4.86% as of Oct 12, with the OAT-Bund spread peaking above 150bps \u2014 levels last seen during the eurozone debt crisis. The Lecornu government's \u20ac54bn draft 2027 budget faces a fractious parliament vote on Oct 20 and 27, while contagion to Italian and Spanish spreads is already visible.",
+      "summary": "France's OAT/Bund 10-year spread widened past 130 bps after the Oct 1 budget unveiling (a \u20ac43 bn austerity package) and reached 139.5 bps on Oct 12 \u2014 now wider than both Italy's and Greece's spreads. France's deficit is projected to miss its 5% target, debt climbs to 121.7% of GDP in 2027, and political fragmentation ahead of the 2027 presidential election is pricing in sovereign-default risk via CDS markets.",
       "as_of": "2026-10-12",
       "sources": [
         "https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html",
-        "https://tradingeconomics.com/france/government-bond-yield/news/590139",
-        "https://www.allianz-trade.com/en_global/news-insights/economic-insights/Toasted-not-burnt-France-bond-and-the-road-2027-election.html",
-        "https://www.efginternational.com/us/insights/2026/french_debt_crisis_causes_repercussions_and_risks.html",
-        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-12-october-2026/"
+        "https://www.tftc.io/france-oat-bund-spread-wider-italy-greece-debt-121-percent-gdp",
+        "https://fortune.com/2026/10/02/france-debt-crisis-bond-investors-odds-sovereign-default-cds-yield-spread-deficit-presidential-race/",
+        "https://www.rothschildandco.com/en-ch/newsroom/insights/2026/10/wm-strategy-blog-france-fiscal-pressure/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -7491,11 +7489,11 @@
       "target_indicator": "OAT-Bund 10y spread (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "OAT-Bund spread at 139.5bps (Oct 12) after peaking ~152bps on Oct 2 \u2014 directly tracked by s10's primary spread indicator. The 10Y OAT at 4.86% (near 2002 highs) and parliament budget votes Oct 20/27 put Govt stability squarely at '1 fragile'; spillover to Italian/Spanish spreads and bank CDS widening are confirmed. Rating action risk is also rising. This is a clean hit on three of the story's four indicators simultaneously.",
+      "rationale": "OAT-Bund spread is already an s10_france indicator. At 139.5 bps \u2014 a level not seen since 2011 \u2014 with the 10Y OAT briefly above 5% (a 24-year high), a \u20ac43 bn austerity plan that still fails to stabilise debt, and CDS pricing in rising default risk ahead of the 2027 election, this is a direct, high-materiality update to that indicator. The ECB's TPI backstop is legally constrained from acting on self-inflicted fiscal slippage, adding tail risk. Govt_stability should also tick from 1\u21922 fragile given repeated no-confidence threat dynamics.",
       "status": "pending",
       "first_seen": "2026-09-11",
-      "last_seen": "2026-10-12",
-      "sightings": 6,
+      "last_seen": "2026-10-13",
+      "sightings": 7,
       "id": "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb"
     },
     "ai-hyperscaler-bond-issuance-hits-194bn-ytd-in-2-33afc6": {
@@ -9420,10 +9418,162 @@
       "last_seen": "2026-10-13",
       "sightings": 1,
       "id": "us-china-60bn-tariff-cut-list-published-post-tru-718b47"
+    },
+    "imf-oct-2026-gfsr-flags-hedge-fund-treasury-leve-7119fb": {
+      "headline": "IMF Oct 2026 GFSR flags hedge-fund Treasury leverage as systemic amplifier; hedge funds' share of US Treasuries rose to ~9% from ~4% in 2022",
+      "summary": "The IMF's October 13 Global Financial Stability Report ('Resilience, Risk, and Transformation') warns that hedge funds \u2014 now holding ~$13 trillion in assets, $7.7 trillion of it borrowed \u2014 have doubled their sovereign-debt exposure and leave the Treasury market 'susceptible to a disorderly unwind.' Crowded positions, correlated redemptions, and prime-broker spillover are cited as the mechanism by which a rates shock could cascade into repo and broader funding markets.",
+      "as_of": "2026-10-13",
+      "sources": [
+        "https://www.investmentnews.com/alternatives/imf-warns-bond-yields-face-disorderly-spike-on-debt-and-ai-risks/268570",
+        "https://www.cnbc.com/2026/10/13/treasury-yields-imf-debt-inflation-.html",
+        "https://www.axios.com/2026/10/07/hedge-fund-risks-imf",
+        "https://mediacenter.imf.org/news/imf---global-financial-stability-report-annual-meetings--2026/s/f55368c1-983b-45b7-ba7c-1978f67c168c"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s1_basis_trade",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Hedge-fund Treasury share & leverage (% of outstanding; gross leverage ratio)",
+        "type": "band",
+        "rubric": "0 = share <6% and gross leverage <10x (contained); 1 = share 6-9% or leverage 10-15x (elevated); 2 = share >9% or leverage >15x, or rapid deleveraging episode underway (systemic threat). Current: share ~9%, leverage elevated \u2014 score 1\u21922.",
+        "sources": [
+          "https://www.imf.org/en/publications/gfsr/issues/2026/10/13/global-financial-stability-report-october-2026",
+          "https://www.cnbc.com/2026/10/13/treasury-yields-imf-debt-inflation-.html"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "s1_basis_trade already covers Treasury basis-trade hidden leverage, but its existing indicators (SOFR-EFFR, MOVE, SEC clearing) don't directly capture hedge-fund ownership share and gross leverage \u2014 the specific amplification channel now quantified by the IMF GFSR. The IMF's finding that hedge-fund Treasury share more than doubled to ~9% in three years, with $7.7 tn of borrowing behind it and crowded AI-equity positions reinforcing reflexive risk, is a material new datapoint that belongs inside s1 but needs its own indicator.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "imf-oct-2026-gfsr-flags-hedge-fund-treasury-leve-7119fb"
+    },
+    "imf-gfsr-oct-2026-ai-hyperscalers-share-of-globa-a9ee33": {
+      "headline": "IMF GFSR Oct 2026: AI hyperscalers' share of global IG bond issuance surged to 10% from <1% since 2024, directly crowding sovereign and corporate bond markets",
+      "summary": "The October 13 IMF report quantifies for the first time that hyperscaler AI infrastructure firms have seized 10% of global investment-grade bond issuance \u2014 up from under 1% in 2024 \u2014 competing directly with sovereigns and raising term premiums. The IMF names this as a second-order sovereign-bond risk: higher discount rates triggered by an AI-linked correction would simultaneously impair government-bond collateral values and AI equity valuations.",
+      "as_of": "2026-10-13",
+      "sources": [
+        "https://www.investmentnews.com/alternatives/imf-warns-bond-yields-face-disorderly-spike-on-debt-and-ai-risks/268570",
+        "https://www.cnbc.com/2026/10/13/treasury-yields-imf-debt-inflation-.html",
+        "https://mediacenter.imf.org/news/imf---global-financial-stability-report-annual-meetings--2026/s/f55368c1-983b-45b7-ba7c-1978f67c168c"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s8_ai_capex",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Hyperscaler share of global IG bond issuance (%)",
+        "type": "band",
+        "rubric": "0 = <3% (contained, modest crowding-out); 1 = 3-7% (elevated, measurable term-premium effect); 2 = >7% or issuance pace accelerating AND sovereign yield correlation rising (systemic crowding-out risk). Current reading: ~10% \u2192 score 2.",
+        "sources": [
+          "https://www.imf.org/en/publications/gfsr/issues/2026/10/13/global-financial-stability-report-october-2026",
+          "https://www.cnbc.com/2026/10/13/treasury-yields-imf-debt-inflation-."
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "s8_ai_capex tracks US IG OAS and capex-vs-revenue gap, but neither indicator captures the supply-side sovereign crowding-out dynamic now formally quantified by the IMF: hyperscalers going from <1% to 10% of global IG issuance in two years is a structurally new transmission channel linking AI capex finance to sovereign bond market stress. This warrants a dedicated indicator within s8, as the mechanism runs in both directions (AI correction \u2192 rate spike \u2192 collateral impairment).",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "imf-gfsr-oct-2026-ai-hyperscalers-share-of-globa-a9ee33"
+    },
+    "imf-oct-2026-gfsr-zero-day-exploit-window-now-af-b5de9d": {
+      "headline": "IMF Oct 2026 GFSR: zero-day exploit window now affects >70% of cyber incidents in 2026 \u2014 a 20-percentage-point jump year-on-year \u2014 threatening financial-system operational continuity",
+      "summary": "The October 13 IMF GFSR names cyber incidents as its third systemic risk trigger, citing new data that in over 70% of cases in 2026 software providers had almost no time to patch vulnerabilities before exploitation began \u2014 up ~20 ppts from 2025. The RBA's concurrent Financial Stability Review (Oct 1) independently flags frontier AI models as expanding the international cyber threat landscape via state-sponsored actors and common financial-service providers outside the regulatory perimeter.",
+      "as_of": "2026-10-13",
+      "sources": [
+        "https://unite.ai/imf-warns-ai-market-correction-could-trigger-global-financial-turmoil/",
+        "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
+        "https://mediacenter.imf.org/news/imf---global-financial-stability-report-annual-meetings--2026/s/f55368c1-983b-45b7-ba7c-1978f67c168c"
+      ],
+      "materiality": "medium",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Cyber systemic risk to financial infrastructure",
+        "why": "The IMF (Oct 13) and RBA (Oct 1) have simultaneously elevated cyber risk to co-equal status with sovereign-yield and AI-correction risk as a systemic financial-stability threat. The zero-day exploitation window now covers >70% of incidents in 2026 (up 20 ppts YoY), and frontier AI is compounding both offensive capabilities and the opacity of common third-party service providers (cloud, data, payments) that sit outside regulatory perimeters. No existing story in the tracker captures this as a standalone systemic financial chokepoint \u2014 s21_clearinghouses mentions operational risk but only in the context of clearing mechanics, not the broader financial-services attack surface.",
+        "proposed_level": 5,
+        "set": 1,
+        "indicators": [
+          {
+            "label": "Zero-day exploitation rate in financial-sector incidents (% of incidents with no patch window)",
+            "type": "band",
+            "rubric": "0 = <50% (manageable with standard patch cycles); 1 = 50-70% (elevated, patching cycles structurally failing); 2 = >70% or major financial-infrastructure breach confirmed (systemic). Current: >70% \u2192 score 2.",
+            "sources": [
+              "https://unite.ai/imf-warns-ai-market-correction-could-trigger-global-financial-turmoil/",
+              "https://www.imf.org/en/publications/gfsr/issues/2026/10/13/global-financial-stability-report-october-2026"
+            ],
+            "suggested_weight": 0.3
+          },
+          {
+            "label": "Confirmed state-sponsored financial-sector cyber incidents (count, rolling 90 days)",
+            "type": "value",
+            "rubric": "Track confirmed incidents targeting systemically important financial institutions or payment infrastructure attributable to state/state-sponsored actors. Threshold: 0 = 0-1 (background noise); 1 = 2-4 (elevated); 2 = \u22655 or single event causing operational halt at a SIFI.",
+            "sources": [
+              "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Concentration in common third-party financial-service providers outside regulatory perimeter (0 low / 1 medium / 2 high)",
+            "type": "band",
+            "rubric": "0 = diversified, majority of critical functions at regulated entities; 1 = one or two unregulated providers (cloud/AI infra) with >30% market share in a critical function; 2 = single unregulated provider >50% or regulator-flagged concentration risk in systemically important function.",
+            "sources": [
+              "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
+              "https://mediacenter.imf.org/news/imf---global-financial-stability-report-annual-meetings--2026/s/f55368c1-983b-45b7-ba7c-1978f67c168c"
+            ],
+            "suggested_weight": 0.35
+          }
+        ]
+      },
+      "rationale": "Two major multilateral financial-stability authorities (IMF and RBA) independently flagged cyber risk as a top-tier systemic threat in the same week, with new quantitative evidence (>70% zero-day exploitation rate, AI-enhanced attack vectors). This is not routine IT noise: it represents a structurally worsening attack surface targeting the operational backbone of global finance (payments, settlement, clearing, AI-embedded financial services). No existing story covers this as a first-class risk; s21_clearinghouses is too narrow. Medium materiality now, but the trajectory justifies immediate story creation.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "imf-oct-2026-gfsr-zero-day-exploit-window-now-af-b5de9d"
+    },
+    "imf-gfsr-oct-2026-private-credit-faces-higher-ba-d3cc0d": {
+      "headline": "IMF GFSR Oct 2026: private credit faces 'higher balance-sheet leverage and growing liquidity pressures'; insurance/pension funds hold more illiquid assets \u2014 NBFI tail risks sharpening",
+      "summary": "The October 13 IMF GFSR specifically calls out two NBFI sub-sectors: (1) private credit funds facing higher balance-sheet leverage and liquidity pressures that 'could restrict lending,' and (2) insurance and pension funds holding more illiquid assets, raising downturn risks. The RBA's concurrent FSR notes idiosyncratic stress events in private credit have remained elevated. The combination \u2014 private credit leverage + insurance/pension illiquidity \u2014 creates a joint NBFI amplification risk not fully captured by the existing s3 and s14 indicator sets.",
+      "as_of": "2026-10-13",
+      "sources": [
+        "https://mediacenter.imf.org/news/imf---global-financial-stability-report-annual-meetings--2026/s/f55368c1-983b-45b7-ba7c-1978f67c168c",
+        "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
+        "https://www.rba.gov.au/publications/fsr/2026/oct/pdf/financial-stability-review-2026-10.pdf"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s3_private_credit",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Private-credit-fund balance-sheet leverage trend (0 stable / 1 rising / 2 acute)",
+        "type": "band",
+        "rubric": "0 = fund-level gross leverage broadly flat or declining, no liquidity mismatch warnings from major regulators; 1 = leverage rising QoQ at major direct-lending platforms, semi-liquid vehicle redemption pace accelerating, or single-regulator warning; 2 = IMF/FSB/multiple-regulator formal warning on systemic leverage, gate activations at >1 large platform, or credit-restriction episode linked to fund deleveraging. Current: IMF Oct 2026 GFSR names 'higher balance-sheet leverage and growing liquidity pressures' explicitly \u2192 score 1-2.",
+        "sources": [
+          "https://mediacenter.imf.org/news/imf---global-financial-stability-report-annual-meetings--2026/s/f55368c1-983b-45b7-ba7c-1978f67c168c",
+          "https://www.imf.org/-/media/files/publications/gfsr/2026/april/english/text.pdf"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "s3_private_credit currently tracks default rates, HY OAS, and redemption gates \u2014 all output/symptom indicators. The IMF has now flagged the input problem: rising fund-level balance-sheet leverage itself (not just downstream defaults) is creating a potential credit-restriction channel. This is a distinct leading indicator \u2014 leverage \u2192 lending pullback \u2192 credit crunch \u2014 that the existing s3 rubric does not capture and that the IMF has formally elevated as a near-term systemic concern alongside the insurance/pension illiquidity issue (s14). Proposed indicator sits in s3; the insurance/pension link reinforces s14 monitoring but does not require a new indicator there given existing funded-ratio and leverage-event tracking.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "imf-gfsr-oct-2026-private-credit-faces-higher-ba-d3cc0d"
     }
   },
   "generated": "2026-10-13",
   "model": "claude-sonnet-4-6",
   "new_count": 4,
-  "pending_count": 288
+  "pending_count": 292
 }
