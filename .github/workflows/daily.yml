@@ -10,8 +10,10 @@ name: daily-risk-tracker
 #     so that week had no agent pass). Any scheduled run now ALSO runs the agent when the
 #     last agent pass is 7+ days old - a missed Monday is made up the next weekday, and
 #     the weekly API cost stays the same (one agent pass per week).
-# Grading the track record: Run workflow -> fill in grade_episode / grade / grade_note.
-# No hand-editing of data/resolution_ledger.json (a missing comma froze it for 12 weeks).
+# Track record grading is AUTOMATIC on agent runs (src/grader.py, rubric in
+# config/grading.yaml): two independent agents must agree or it waits for you.
+# Your own grade always wins: add a row to grades.csv, or use the Run workflow form
+# (grade_episode / grade / grade_note). Never hand-edit data/resolution_ledger.json.
 # Manual runs from the Actions tab are FREE by default (data refresh + redeploy only);
 # tick the "run_agent" box to also run the AI agent (uses API credits).
 on:
@@ -109,6 +111,7 @@ jobs:
           AGENT_MODEL_2: ${{ vars.AGENT_MODEL_2 || secrets.AGENT_MODEL_2 }}   # 'asi1' for independent cross-check; works as a variable OR a secret
           ASI1_API_KEY: ${{ secrets.ASI1_API_KEY }}           # required only if AGENT_MODEL_2 starts with 'asi1'
           SCOUT_MODEL: ${{ vars.SCOUT_MODEL || 'claude-sonnet-4-6' }}
+          GRADER_MODEL: ${{ vars.GRADER_MODEL || vars.AGENT_MODEL || 'claude-sonnet-4-6' }}   # Track record auto-grader (runs with the weekly agent)
           # Optional alert channels (set as repo secrets; any/all/none):
           ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
