@@ -1,0 +1,45 @@
+# IMF PortWatch - measured strait traffic (AIS ship counts), used to SET the
+# chokepoint ratings by rule instead of by agent judgment.
+#
+# Source: IMF PortWatch "Daily Chokepoints Data" (public ArcGIS service, no key).
+# https://portwatch.imf.org  - updated weekly, so readings lag 2-9 days.
+# Counts ships broadcasting AIS; vessels running dark and oil moved by pipeline or
+# ship-to-ship transfer are not counted. Measures shipping through the strait,
+# not oil supply.
+#
+# Rule (same as the rubric in framework.yaml):
+#   7-day average transits / same-month normal  <  closed_below  -> 2 (closed / cut)
+#                                               <= normal_above  -> 1 (contested / disrupted)
+#                                               >  normal_above  -> agent decides 0 or 1
+#                                                                   (attacks in last 30 days?)
+# A human pin in manual_input.csv still overrides everything. If the feed fails or
+# the data is too old, the agent's rating is used exactly as before.
+
+enabled: true
+service: https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer/0/query
+page_url: https://portwatch.imf.org
+window_days: 7          # average over the latest 7 days of data
+min_days: 5             # need at least this many of those 7 days present
+max_age_days: 21        # newest data point must be at most this old, else fall back
+min_baseline: 20        # a "normal" below this many ships/day is treated as unusable
+closed_below: 0.25
+normal_above: 0.80
+
+chokepoints:
+  hormuz:
+    portid: chokepoint6
+    name: Strait of Hormuz
+    # normal = same calendar month, averaged over these years (before the 2026 war)
+    baseline_years: [2023, 2024, 2025]
+  bab_el_mandeb:
+    portid: chokepoint4
+    name: Bab el-Mandeb (Red Sea)
+    # Red Sea traffic has been depressed since the Houthi attacks began in Nov 2023,
+    # so its normal comes from the years before that.
+    baseline_years: [2021, 2022, 2023]
+    baseline_last_month: "2023-10"
+
+# which measured chokepoints set which indicator (the WORSE one counts)
+rules:
+  hormuz_redsea_status: [hormuz, bab_el_mandeb]
+  hormuz_fertilizer: [hormuz]

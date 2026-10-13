@@ -41,6 +41,8 @@ def write_json(result, narrative, date, path):
         payload["playbook"] = result["playbook"]
     if result.get("context"):
         payload["context"] = result["context"]
+    if result.get("measured"):
+        payload["measured"] = result["measured"]
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(payload, f, indent=2)

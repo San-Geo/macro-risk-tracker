@@ -102,6 +102,23 @@ def main():
 
     values.update(manual)  # human overrides always win
 
+    # Measured strait traffic (IMF PortWatch) sets the chokepoint ratings by rule where
+    # the measurement is decisive; the agent's read stands where it is not. Human pins
+    # still win. Any failure leaves the agent's ratings untouched.
+    pw_readings, measured = {}, {}
+    if not args.offline:
+        try:
+            import portwatch
+            pw_readings = portwatch.read(args.date)
+            measured = portwatch.apply(values, pw_readings, overrides)
+            for r in pw_readings.values():
+                print(f"  PortWatch {r['name']}: " + (f"{r['avg7']:g} ships/day vs {r['baseline']:g} normal "
+                      f"({r['ratio'] * 100:.0f}%), data to {r['as_of']}" if "ratio" in r else f"unavailable ({r.get('error')})"))
+            for ind, m in measured.items():
+                print(f"  measured -> {ind} = {m['value']} (agent read {m['agent_value']})")
+        except Exception as e:
+            print(f"  (PortWatch skipped: {e})")
+
     # Deterministic citation check (no AI, plain HTTP): verify agent facts against
     # their cited URLs. Runs when the agent just ran, or once as backfill if the
     # stored log has never been checked. Zero API cost; failures never break the run.
@@ -128,6 +145,9 @@ def main():
 
     result = score.score_all(config, values)
     result["date"] = args.date
+    if pw_readings:
+        result["measured"] = {"source": "IMF PortWatch", "url": "https://portwatch.imf.org",
+                              "readings": pw_readings, "applied": measured}
     result["sets"] = config.get("sets", {})
 
     # Attach per-story background + full-brief link (from config/briefs.yaml).
@@ -223,6 +243,9 @@ def main():
             changed = prior_v is not None and val is not None and val != prior_v
             soft = []
             if changed: soft.append(f"changed {fmt_v(prior_v)} -> {fmt_v(val)}")
+            if ind_id in measured and measured[ind_id]["value"] != val:
+                soft.append(f"board uses the IMF PortWatch measurement ({fmt_v(measured[ind_id]['value'])}) "
+                            f"instead of this read")
             if a.get("reversal_guard") == "held":
                 soft.append(f"reversal to {fmt_v(a.get('pending'))} held - applied next week only if the next read confirms it")
             if a.get("parse") == "repaired": soft.append("recovered from a malformed reply")
@@ -283,6 +306,20 @@ def main():
     enrich.attach_trends(result, hist, args.date)
     enrich.attach_provenance(result, alog if alog.get("assessments") else None, fetched, args.date)
     result["data_health"] = enrich.data_health(config, fetched, alog, args.date, args.offline)
+    if pw_readings:
+        ok = [r for r in pw_readings.values() if "ratio" in r]
+        result["data_health"]["portwatch"] = {"ok": len(ok), "total": len(pw_readings),
+                                              "as_of": min((r["as_of"] for r in ok), default=None)}
+    # measured indicators: show where the number really came from
+    for s_ in result["stories"]:
+        for ind in s_["indicators"]:
+            m = measured.get(ind["id"])
+            if m:
+                ind["provenance"] = "PortWatch"
+                ind["source_url"] = "https://portwatch.imf.org"
+                ind["as_of"] = m["as_of"]
+                ind["measured_note"] = m["note"]
+                ind.pop("stale_for_cadence", None)
     if result.get("agent_review"):
         # count what is actually in the review queue, not every annotated item
         result["data_health"]["agent_flags"] = len(result["agent_review"].get("review_flags", []))

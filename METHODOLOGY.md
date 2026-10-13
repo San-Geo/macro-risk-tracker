@@ -1,6 +1,6 @@
 # Methodology
 
-**Version 1.2 — 2026.** This document explains exactly how the Global Macro Risk Tracker turns
+**Version 1.3 — 2026.** This document explains exactly how the Global Macro Risk Tracker turns
 data and current events into a 1–10 risk level for each story, what the numbers mean, and — just
 as importantly — what they do *not* mean. It is meant to be read by a skeptical professional.
 
@@ -40,6 +40,13 @@ its `baseline_value` maps to. This guarantees the day-zero levels reproduce the 
 - **Judgment indicators** (e.g. Taiwan tension, the status of the Strait of Hormuz, China export
   curbs, government stability) have no clean numeric feed. These are set by the rating agent against
   a fixed rubric (Section 4), or pinned by a human.
+- **Measured where possible.** The two Strait of Hormuz / Red Sea ratings are set from the IMF's PortWatch
+  ship counts (AIS transits): the latest 7-day average is compared with the same month's normal, and
+  below 25% of normal the strait is rated closed by rule, 25-80% contested. The agent only judges whether
+  recent attacks make an otherwise near-normal strait "contested", and is the fallback if the feed is
+  unavailable or older than three weeks. Caveats: PortWatch updates weekly (2-9 days behind), and ships
+  that switch off their transponders - or oil moved by pipeline - are not counted, so it measures
+  shipping through the strait, not oil supply.
 
 ## 4. The rating agent and its trust model
 
@@ -131,6 +138,8 @@ never overwritten. Episodes of a week or less that were opened by a signal which
 are marked **brief crossing**, so base-rate analysis can treat them as boundary noise.
 
 ## Changelog
+
+- **1.3** - Hormuz / Red Sea ratings set from measured IMF PortWatch transit counts where decisive.
 
 - **1.2** - Rating stability: continuity prompt with logged change reasons, reversal confirmation guard,
   measured or time-windowed rubrics for six indicators that had been flipping week to week.

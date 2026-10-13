@@ -423,7 +423,10 @@ indicators:
       per day). 1 = DISRUPTED: transits 25-80% of baseline, OR documented Gulf fertilizer, sulfur or ammonia
       loadings below 50% of normal in the latest month reported. 0 = FLOWING: transits above 80% of baseline
       and Gulf fertilizer loadings near normal. Diplomacy, naval escorts and insurance costs do not change the
-      rating by themselves. State the transit figure, its date, source and the baseline used.'
+      rating by themselves. State the transit figure, its date, source and the baseline used.
+       When IMF PortWatch data is available the board applies this transit rule automatically from the
+      measured counts (config/portwatch.yaml); your reading decides only whether recent attacks make it
+      contested when traffic is above 80% of normal, and is the fallback if the feed is unavailable.'
     sources:
     - https://portwatch.imf.org
     - https://www.fao.org
@@ -470,7 +473,10 @@ indicators:
       mining, or declared transit restrictions in the last 30 days while traffic stays above 25%. 0 = OPEN:
       above 80% of baseline and no attacks in the last 30 days. Talks, memoranda, ceasefire announcements and
       naval escorts do NOT change the rating by themselves - only measured traffic and actual attacks do.
-      State the transit figure, its date and source, and the baseline used.'
+      State the transit figure, its date and source, and the baseline used.
+       When IMF PortWatch data is available the board applies this transit rule automatically from the
+      measured counts (config/portwatch.yaml); your reading decides only whether recent attacks make it
+      contested when traffic is above 80% of normal, and is the fallback if the feed is unavailable.'
     sources:
     - https://portwatch.imf.org
     - https://www.reuters.com/world/middle-east

@@ -70,6 +70,15 @@
   /* Keep every long token (hashes, URLs, ids, driver strings) inside its box. */
   .pbody, .narr, .story, .gist, .hgrid div, td, .asof, .sgist, .gisttxt { overflow-wrap:anywhere; }
   .panel, .pbody { min-width:0; }
+  /* Tables: words break only at spaces - never letter by letter ("BAN/D", "CADEN/CE").
+     A genuinely long token can still wrap, and wide tables scroll sideways in .tscroll. */
+  td, th, td .asof, td.asof { overflow-wrap:break-word; word-break:normal; }
+  th{ white-space:nowrap; }
+  .itbl td:first-child{ min-width:190px; }
+  .itbl td:nth-child(2){ white-space:nowrap; }
+  .itbl td:nth-child(3), .itbl td:nth-child(4), .itbl td:nth-child(5), .itbl td:nth-child(7){ white-space:nowrap; width:1%; }
+  .itbl td:nth-child(6){ min-width:96px; }
+  .setpill{ white-space:nowrap; }
   .phead{ flex-wrap:wrap; row-gap:2px; }
   code{ background:rgba(127,127,127,.12); padding:1px 5px; border-radius:4px; font-size:12px;
         white-space:pre-wrap; word-break:break-all; }
@@ -178,7 +187,8 @@
   .swipehint{ display:none; font-size:11px; color:var(--muted); margin:10px 2px -6px; }
   @media (max-width:640px){
     .swipehint{ display:block; }
-    .sacbody table{ min-width:430px; }
+    .sacbody table{ min-width:540px; }
+    .itbl td:first-child{ min-width:150px; }
     .sacbody th:nth-child(5), .sacbody td:nth-child(5){ display:none; } /* Cadence column: age lives in As-of */
   }
   table{ border-collapse:collapse; width:100%; font-size:12.5px; min-width:520px; }
@@ -559,9 +569,10 @@ function healthBar(d){
     ot=`overall ${trendBadge(t)} vs ${t.since}`;
     if(t.crosses_methodology) ot=`overall vs ${t.since} <span class="htip" data-tip="Scoring methodology changed between then (v${t.ref_version}) and now (v${t.version}), so this delta mixes regimes and is not comparable. Story-level history is unaffected.">\u26A0 methodology changed (v${t.ref_version}\u2192v${t.version})</span>`;
   }
+  const pw=h.portwatch?`<span class="htip" data-tip="IMF PortWatch measured ship counts for the Hormuz and Red Sea chokepoints - used to set those ratings by rule.">PortWatch <b>${h.portwatch.ok}/${h.portwatch.total}</b> straits measured${h.portwatch.as_of?` (data to ${h.portwatch.as_of})`:''}</span>`:'';
   const mv=d.method_version?`<span class="htip" data-tip="Scoring methodology version. Every saved history row is stamped with it so trends and backtests never silently mix scoring regimes.">methodology v${d.method_version}</span>`:'';
   const lerr=h.ledger_ok===false?`<span class="htip" style="color:#C0392B;font-weight:700" data-tip="${String(h.ledger_error||'').replace(/"/g,'&quot;')}">\u26A0 track record not updated this run</span>`:'';
-  return `<div class="health"><span><span class="dot" style="background:${dot}"></span>${feeds}</span>${lerr}<span>${agent}</span>${ot?`<span>${ot}</span>`:''}${mv?`<span>${mv}</span>`:''}</div>`;
+  return `<div class="health"><span><span class="dot" style="background:${dot}"></span>${feeds}</span>${lerr}<span>${agent}</span>${pw}${ot?`<span>${ot}</span>`:''}${mv?`<span>${mv}</span>`:''}</div>`;
 }
 function consistencyPanel(d){
   const c=d.consistency;
@@ -674,6 +685,9 @@ function briefHTML(md){
   if(list) out+='</ul>';
   return out;
 }
+
+// keep dates whole ("2026-09-30" never splits at its hyphens); text around them still wraps
+function keepDates(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\d{4}-(?:\d{2}-\d{2}|\d{2}|Q[1-4](?:-end)?)/g,m=>`<span style="white-space:nowrap">${m}</span>`); }
 
 let BACKTEST=null;
 let VALIDATION=null;
@@ -1083,21 +1097,22 @@ function render(d){
         <div style="font-size:12.5px;line-height:1.55;margin:6px 0 2px">${s.summary||''}</div></details>`;
     }
     html+=`<div class="swipehint">table scrolls sideways for all columns \u2192</div>`;
-    html+=`<div class="tscroll"><table><thead><tr><th>Indicator</th><th>Value</th>`+
+    html+=`<div class="tscroll"><table class="itbl"><thead><tr><th>Indicator</th><th>Value</th>`+
       `<th class="tip" tabindex="0" data-tip="Each indicator is bucketed: 0 = benign, 1 = watch, 2 = stress.">Band</th>`+
       `<th class="tip" tabindex="0" data-tip="How much this indicator is currently pushing the story's level up or down vs its normal baseline (0 = at baseline).">&Delta;</th>`+
       `<th class="tip" tabindex="0" data-tip="daily = refreshed from a live feed each run; event = updated when something happens (AI-rated or human-set).">Cadence</th>`+
       `<th>As of</th>`+
-      `<th class="tip r" tabindex="0" data-tip="Where the value comes from: FRED / Market / MOF / DefiLlama = live official or aggregator feed, Agent = AI-rated against a rubric, Baseline = analyst's starting value.">Source</th>`+
+      `<th class="tip r" tabindex="0" data-tip="Where the value comes from: FRED / Market / MOF / DefiLlama = live official or aggregator feed, PortWatch = measured ship counts from the IMF, Agent = AI-rated against a rubric, Baseline = analyst's starting value.">Source</th>`+
       `</tr></thead><tbody>`;
     for(const ind of s.indicators){
       const bc=ind.band===null?'#999':bandColor(ind.band<=0?1:ind.band===1?5:9);
       const srcCell=ind.source_url?`<a href="${ind.source_url}" target="_blank" rel="noopener">${ind.provenance||'src'}</a>`:(ind.provenance||ind.source);
       const ageWarn=ind.stale_for_cadence?`<span class="htip" style="color:#E8710A;font-weight:700;cursor:default" data-tip="This data is ${Math.round(ind.age_days/30)||1} month(s) old for a ${ind.cadence} indicator \u2014 the underlying source hasn't published (or the agent hasn't found) anything fresher. The value may lag reality."> \u23F3</span>`:'';
-      html+=`<tr class="${ind.stale?'stale':''}"><td>${ind.label}</td><td>${fmt(ind.value)}${miniSpark(ind.id)}</td>
+      const mNote=ind.measured_note?`<div class="asof htip" style="margin-top:3px" data-tip="Set by rule from the IMF's measured ship counts (7-day average vs the same month's normal): below 25% of normal = closed, 25-80% = contested. AIS-based, so ships running dark are not counted; updated weekly.">Measured: ${ind.measured_note}</div>`:'';
+      html+=`<tr class="${ind.stale?'stale':''}"><td>${ind.label}${mNote}</td><td>${fmt(ind.value)}${miniSpark(ind.id)}</td>
         <td><span class="pill" style="background:${bc}">${ind.band===null?'-':ind.band}</span></td>
         <td>${ind.delta>0?'+':''}${ind.delta||0}</td><td>${ind.cadence}</td>
-        <td class="asof">${ind.as_of||'\u2014'}${ageWarn}</td>
+        <td class="asof">${ind.as_of?keepDates(ind.as_of):'\u2014'}${ageWarn}</td>
         <td style="color:var(--muted)">${srcCell}${ind.stale?' <span class="prov">baseline</span>':''}</td></tr>`;
     }
     html+=`</tbody></table></div>${escalationBox(d,s)}</div></div>`;
