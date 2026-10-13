@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-12",
-  "generated_at": "2026-10-12 20:31 UTC",
+  "date": "2026-10-13",
+  "generated_at": "2026-10-13 13:50 UTC",
   "aggregates": {
     "1": 5.8,
     "3": 4.8,
@@ -9,14 +9,14 @@
     "5": 5.5,
     "overall": 7.1
   },
-  "narrative": "**HEADLINE**\nOverall macro risk stands at High, with three stories escalating today amid supply-chain weaponization and physical resource stress.\n\n**CHANGED STORIES**\n\n\u2022 **Critical minerals as a weapon** (6\u21927, High): US entity-specific rare-earth blacklist and heavy rare-earth price premium at 16.3x China baseline both tightened. Risk: supply concentration and cost pass-through to defence and semiconductor sectors.\n\n\u2022 **Gold / de-dollarization** (3\u21924, Moderate): Reserve-weaponization rhetoric moved from absent to active discussion at BRICS forum. Risk: gradual shift in settlement behaviour could reduce dollar velocity in trade corridors.\n\n\u2022 **Water \u2013 the underpriced input** (4\u21925, Elevated): Acute drought in chip/farm hubs (Taiwan) combined with critical reservoir stress (Lake Mead) and emerging transboundary tension (Indus waters). Risk: production constraints in semiconductors and agriculture; cross-border dispute escalation potential.\n\n**WATCH**\nPrivate credit's opaque expansion remains highest-level story at 8 (High band); interconnection risk to financial stability poorly understood.",
+  "narrative": "# EOD Macro Risk Brief | 13 Oct 2026\n\n**Overall risk sentiment is High, with no intraday changes to tracked stories.**\n\nNo stories shifted bands today. The portfolio remains anchored by four High-rated risks: Private credit's opaque expansion (8/10\u2014the largest single exposure, reflecting unmonitored leverage in non-bank lending); Japan fiscal/JGB/carry trade (7/10\u2014structural imbalance in sovereign debt and FX positioning); Critical minerals as a weapon (7/10\u2014geopolitical supply concentration); and AI power & the grid bottleneck (7/10\u2014infrastructure inadequacy for demand). Nine additional stories remain Elevated, spanning Treasury basis trades, developing-world debt, China deflation spillover, CRE maturity stress, and supply-chain chokepoints.\n\n**Watch: Private credit's opaque expansion\u2014largest systemic risk by score and most resistant to policy visibility.**",
   "stories": [
     {
       "id": "s1_basis_trade",
       "name": "Treasury basis trade (hidden leverage)",
       "set": 1,
       "base_level": 5,
-      "raw_level": 5.5,
+      "raw_level": 6.25,
       "level": 6,
       "band": "Elevated",
       "indicators": [
@@ -32,22 +32,22 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/SOFR",
-          "as_of": "2026-10-08",
+          "as_of": "2026-10-09",
           "provenance": "FRED"
         },
         {
           "id": "move",
           "label": "MOVE index (Treasury volatility)",
-          "value": 98.47,
-          "band": 0,
+          "value": 100.6772,
+          "band": 1,
           "baseline_band": 0,
           "weight": 1.5,
-          "delta": 0.0,
+          "delta": 0.75,
           "source": "market:^MOVE",
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-10-09",
+          "as_of": "2026-10-13",
           "provenance": "Market"
         },
         {
@@ -88,7 +88,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -104,7 +104,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 158.633,
+          "value": 158.39,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -113,13 +113,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/JPY=X",
-          "as_of": "2026-10-12",
+          "as_of": "2026-10-13",
           "provenance": "Market"
         },
         {
           "id": "jgb30",
           "label": "30-year JGB yield (%)",
-          "value": 4.136,
+          "value": 4.085,
           "band": 2,
           "baseline_band": 0,
           "weight": 1.0,
@@ -128,7 +128,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/index.htm",
-          "as_of": "2026-10-08",
+          "as_of": "2026-10-09",
           "provenance": "MOF"
         },
         {
@@ -169,7 +169,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -250,7 +250,7 @@
       ],
       "trend": {
         "prev": 8,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -276,7 +276,9 @@
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/DTWEXBGS",
           "as_of": "2026-10-02",
-          "provenance": "FRED"
+          "provenance": "FRED",
+          "age_days": 11,
+          "stale_for_cadence": true
         },
         {
           "id": "real10",
@@ -313,11 +315,11 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=29",
       "spark": [
         6,
+        5,
+        5,
+        5,
+        5,
         6,
-        5,
-        5,
-        5,
-        5,
         6,
         6,
         6,
@@ -331,7 +333,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -362,7 +364,7 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.6831,
+          "value": 6.6806,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -371,7 +373,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CNY=X",
-          "as_of": "2026-10-12",
+          "as_of": "2026-10-13",
           "provenance": "Market"
         },
         {
@@ -412,7 +414,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -494,21 +496,21 @@
         7,
         7,
         7,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
         7,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
         7
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 1
       }
     },
@@ -533,13 +535,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-10-12",
+          "as_of": "2026-10-13",
           "provenance": "DefiLlama"
         },
         {
           "id": "stablecoin_supply",
           "label": "Total USD stablecoin supply ($bn)",
-          "value": 313.0,
+          "value": 312.9,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -548,7 +550,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-10-12",
+          "as_of": "2026-10-13",
           "provenance": "DefiLlama"
         },
         {
@@ -589,7 +591,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -670,7 +672,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -717,12 +719,12 @@
       "summary": "A wall of commercial real-estate loans - especially office - matures into higher rates and lower valuations, concentrated at regional banks. Rising delinquencies and 'extend and pretend' practices defer, rather than resolve, the losses.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=20",
       "spark": [
-        4,
         5,
         5,
         5,
         5,
         5,
+        6,
         6,
         6,
         6,
@@ -736,7 +738,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -763,7 +765,7 @@
           "source_url": "https://fred.stlouisfed.org/series/IRLTLT01FRM156N",
           "as_of": "2026-08-01",
           "provenance": "FRED",
-          "age_days": 72,
+          "age_days": 73,
           "stale_for_cadence": true
         },
         {
@@ -819,7 +821,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -846,7 +848,7 @@
           "source_url": "https://blog.cucollector.com/the-seasonal-loan-delinquency-reprieve-may-be-ending/",
           "as_of": "2026-07",
           "provenance": "Agent",
-          "age_days": 76,
+          "age_days": 77,
           "stale_for_cadence": true
         },
         {
@@ -902,7 +904,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -918,7 +920,7 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4193.8999,
+          "value": 4209.6001,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -927,7 +929,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/GC=F",
-          "as_of": "2026-10-12",
+          "as_of": "2026-10-13",
           "provenance": "Market"
         },
         {
@@ -978,12 +980,12 @@
         3,
         3,
         3,
-        3,
+        4,
         4
       ],
       "trend": {
         "prev": 3,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 1
       }
     },
@@ -1025,7 +1027,7 @@
           "source_url": "https://fred.stlouisfed.org/series/DRSFRMACBS",
           "as_of": "2026-04-01",
           "provenance": "FRED",
-          "age_days": 194,
+          "age_days": 195,
           "stale_for_cadence": true
         },
         {
@@ -1066,7 +1068,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -1147,7 +1149,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -1174,7 +1176,7 @@
           "source_url": "https://emp.lbl.gov/queues",
           "as_of": "2025-12-31",
           "provenance": "Agent",
-          "age_days": 288,
+          "age_days": 289,
           "stale_for_cadence": true
         },
         {
@@ -1216,7 +1218,7 @@
         6,
         6,
         6,
-        6,
+        7,
         7,
         7,
         7,
@@ -1230,7 +1232,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -1246,7 +1248,7 @@
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.7615,
+          "value": 6.7575,
           "band": 2,
           "baseline_band": 1,
           "weight": 0.5,
@@ -1255,7 +1257,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/HG=F",
-          "as_of": "2026-10-12",
+          "as_of": "2026-10-13",
           "provenance": "Market"
         },
         {
@@ -1287,7 +1289,7 @@
           "source_url": "https://www.marketscreener.com/news/world-refined-copper-balance-projections-indicate-a-surplus-of-about-96-000-tonnes-for-2026-and-377-ce7f59deda8ff526",
           "as_of": "2026-04-23",
           "provenance": "Agent",
-          "age_days": 172,
+          "age_days": 173,
           "stale_for_cadence": true
         }
       ],
@@ -1313,7 +1315,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -1380,21 +1382,21 @@
         5,
         5,
         5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
         5,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
         5
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 1
       }
     },
@@ -1475,7 +1477,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -1556,7 +1558,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -1587,7 +1589,7 @@
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 93.21,
+          "value": 92.78,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
@@ -1596,7 +1598,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CL=F",
-          "as_of": "2026-10-12",
+          "as_of": "2026-10-13",
           "provenance": "Market"
         },
         {
@@ -1637,7 +1639,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     },
@@ -1646,14 +1648,14 @@
       "name": "Clearinghouses (financial chokepoint)",
       "set": 1,
       "base_level": 4,
-      "raw_level": 4.25,
+      "raw_level": 4.5,
       "level": 4,
       "band": "Moderate",
       "indicators": [
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 15.22,
+          "value": 15.26,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -1662,22 +1664,22 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^VIX",
-          "as_of": "2026-10-12",
+          "as_of": "2026-10-13",
           "provenance": "Market"
         },
         {
           "id": "move_ccp",
           "label": "Treasury volatility (MOVE)",
-          "value": 98.47,
-          "band": 0,
+          "value": 100.6772,
+          "band": 1,
           "baseline_band": 0,
           "weight": 0.5,
-          "delta": 0.0,
+          "delta": 0.25,
           "source": "market:^MOVE",
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-10-09",
+          "as_of": "2026-10-13",
           "provenance": "Market"
         },
         {
@@ -1718,7 +1720,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-10-02",
+        "since": "2026-10-06",
         "change": 0
       }
     }
@@ -1732,42 +1734,342 @@
       "independent": true
     },
     "review_flags": [
-      "ai_power_pressure",
-      "ai_revenue_gap",
+      "bnpl_delinq",
       "cable_incidents",
-      "cat_losses",
-      "china_export_curbs",
-      "clearing_status",
       "cmbs_office_delinq",
-      "copper_deficit_timing",
-      "dc_moratoria",
-      "direct_lending_default",
       "dollar_reserve_share",
       "drought_chip_farm",
-      "export_controls",
-      "fab_concentration",
-      "funded_ratio",
-      "genius_impl",
-      "gpu_refi_stress",
-      "hormuz_redsea_status",
-      "hree_premium",
-      "insurer_exits",
-      "interconnection_months",
-      "license_flow",
-      "new_imf_programs",
-      "plan_financing",
-      "rating_action",
+      "mine_disruptions",
       "redemption_gates",
-      "reservoir_stress",
-      "ss_reform_news",
-      "subprime_auto_dpd",
-      "taiwan_tension",
-      "treasury_clearing_rollout",
-      "truce_status",
-      "water_dispute",
-      "weaponization_event"
+      "regional_bank_stress",
+      "trade_actions",
+      "truce_status"
     ],
     "items": [
+      {
+        "id": "redemption_gates",
+        "label": "Large-fund redemption gates (0 none / 1 isolated / 2 widespread)",
+        "story": "Private credit's opaque expansion",
+        "set": 1,
+        "value": 2,
+        "confidence": "high",
+        "applied": true,
+        "note": "applied",
+        "rationale": "The rubric threshold for WIDESPREAD is >=3 of the largest funds gating in the same quarter or combined AUM >$100B; at least 7-10 named major funds have simultaneously breached their 5% quarterly repurchase caps across Q1-Q3 2026 with combined AUM well exceeding $250B, satisfying the WIDESPREAD criterion by a large margin. Corroborating signals include: FOMC policy anchored at 3.50-3.75% (higher-for-longer), sticky CPI at 4.2%, new direct-lending issuance down ~40%, and a $14B cumulative redemption backlog reported by Bloomberg (July 2026), all consistent with structural funding stress in semi-liquid private credit vehicles.",
+        "sources": [],
+        "as_of": "Q3 2026 (data through 2026-10-02)",
+        "out_of_range": false,
+        "fact": "Per Valuation Research (Oct 2, 2026), average redemption requests across 11 of the 14 largest non-traded BDCs stood at 13.0% in Q3 2026, still well above the standard 5% quarterly cap, with named funds including Blackstone BCRED (~$79B, gated at 5% after ~10% requests per Yardeni/Bloomberg Sept 2026), Cliffwater Corporate Lending Fund (~$31B, capped at 5% after 16% requests), and Blue Owl OTIC/funds (capped at 5%, 39% requests) all actively gating in Q3; in Q2 2026 Fitch tracked 10 of 16 BDCs breaching caps on $15.6B in requests (Fitch/angelinvestorsnetwork.com, ~Aug 2026); cumulative gated AUM across BCRED, Apollo ADS, BlackRock HLEND, Ares ASIF, Cliffwater, Partners Group, Blue Owl funds exceeds $250B.",
+        "dissent": [],
+        "domain": "Funding & Leverage",
+        "crosscheck": null,
+        "parse": "repaired",
+        "vintage": null,
+        "citecheck": null,
+        "stale_guard": null,
+        "tier": "glance",
+        "why": [
+          "recovered from a malformed reply",
+          "no sources"
+        ]
+      },
+      {
+        "id": "bnpl_delinq",
+        "label": "BNPL delinquency trend (0 stable / 1 rising / 2 spiking)",
+        "story": "Hidden consumer debt",
+        "set": 2,
+        "value": 1,
+        "confidence": "high",
+        "applied": true,
+        "note": "applied",
+        "rationale": "30+ DPD rose ~18-29 bps YoY through mid-FY2026 before improving in Q4, placing it squarely in the RISING band; the <100 bps YoY move precludes Score 2, and charge-offs remain below 3% on the regulator's pay-in-four series and below 5% on Affirm's own vintage metric, consistent with Score 1.",
+        "sources": [],
+        "as_of": "2026-08-27",
+        "out_of_range": false,
+        "fact": "Affirm Q4 FY2026 Earnings Supplement (Aug 27, 2026): 30+ DPD on monthly installment loans ex-Peloton/Pay-in-X = 2.5%, down from 2.7-2.8% in prior three quarters but up ~29 bps YoY in FQ3'26 per shareholder letter; cohort net charge-offs track ~3.5% of GMV (lifetime vintage). CFPB Dec-2025 report: aggregate BNPL pay-in-four charge-off rate 1.83% in 2023 (latest official figure). Richmond Fed Feb-2026: 'no direct evidence of rising aggregate BNPL charge-off rates to date.'",
+        "dissent": [],
+        "domain": "Credit, Consumers & Valuations",
+        "crosscheck": null,
+        "parse": "repaired",
+        "vintage": null,
+        "citecheck": null,
+        "stale_guard": null,
+        "tier": "glance",
+        "why": [
+          "recovered from a malformed reply",
+          "no sources"
+        ]
+      },
+      {
+        "id": "cmbs_office_delinq",
+        "label": "CMBS office delinquency rate (%)",
+        "story": "CRE maturity wall / regional banks",
+        "set": 2,
+        "value": 12.16,
+        "confidence": "medium",
+        "applied": true,
+        "note": "applied",
+        "rationale": "The Trepp September 2026 office CMBS delinquency rate of 12.16% is the most recent published figure and maps directly to the rubric, which calls for the latest percent reading from Trepp; this sits near cycle highs and reflects persistent maturity-default stress in the office sector.",
+        "sources": [
+          "https://www.vaquerowealth.com/insights/september-2026-market-update",
+          "https://curatedcommercial.substack.com/p/cmbs-caught-up-retail-fundamentals",
+          "https://finance.yahoo.com/real-estate/articles/cmbs-delinquency-holds-7-85-045757883.html"
+        ],
+        "as_of": "2026-09",
+        "out_of_range": false,
+        "fact": "Trepp September 2026 CMBS office delinquency rate: 12.16%, up 16 bps from August's 12.00%; per vaquerowealth.com (Oct 6 2026) and curatedcommercial.substack.com (Oct 12 2026), both citing Trepp September 2026 data.",
+        "dissent": [
+          {
+            "view": "KBRA reports a higher office CMBS delinquency rate of ~12.8% (Feb-Mar 2026) due to inclusion of a broader KBRA-rated universe and different loan classification methodology",
+            "source": "https://www.businesswire.com/news/home/20260227302299/en"
+          }
+        ],
+        "domain": "Credit, Consumers & Valuations",
+        "crosscheck": null,
+        "parse": null,
+        "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://www.vaquerowealth.com/insights/september-2026-market-update",
+          "matched": "12.16"
+        },
+        "stale_guard": null,
+        "tier": "glance",
+        "why": [
+          "changed 13.2 -> 12.16"
+        ]
+      },
+      {
+        "id": "regional_bank_stress",
+        "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
+        "story": "CRE maturity wall / regional banks",
+        "set": 2,
+        "value": 1,
+        "confidence": "medium",
+        "applied": true,
+        "note": "applied",
+        "rationale": "Within the trailing 6 months, at least 1 confirmed CRE-linked failure (Nano Banc, $736M assets, <$10bn) with a public enforcement action explicitly citing CRE concentration satisfies the ISOLATED threshold of 1-2 such failures each <$10bn plus >=1 new enforcement action/consent order citing CRE concentration. CLUSTER (2) is not warranted because credible sources do not firmly attribute >=3 in-window failures primarily to CRE exposure, and no single failure exceeded $10bn or triggered a coordinated interagency action.",
+        "sources": [],
+        "as_of": "2026-10-12",
+        "out_of_range": false,
+        "fact": "FDIC failed-bank list shows 5 US bank failures in the trailing 6 months (Apr 12-Oct 12 2026): Community Bank and Trust-West Georgia (May 1), Kentland Federal S&L (Jul 10), Small Business Bank (Jul 17), Tioga-Franklin Savings Bank (Aug 21), and Nano Banc (Sep 25, $736M assets). Of these, Nano Banc is explicitly CRE-linked: American Banker (Sep 26 2026) reports it 'had been the subject of enforcement actions in connection with both commercial real estate lending and governance issues'; FedFis notes 'high concentrations in CRE'; a March 2026 DFPI consent order cited deteriorating financial condition tied to CRE concentration. Metropolitan Capital (Jan 30, CRE skilled-nursing loan) falls outside the 6-month window. No other in-window failure has explicit primary-source CRE attribution. No single failure exceeded $10bn assets; no coordinated interagency CRE supervisory action found. Source: fdic.gov/bank-failures/failed-bank-list (Oct 2026); americanbanker.com (Sep 28 2026); fintechcowboys.com/bank-failure-alert-nano-banc.",
+        "dissent": [],
+        "domain": "Credit, Consumers & Valuations",
+        "crosscheck": {
+          "second_value": 1,
+          "agree": true,
+          "by": "asi1",
+          "provider": "asi1"
+        },
+        "parse": "repaired",
+        "vintage": null,
+        "citecheck": null,
+        "stale_guard": null,
+        "tier": "glance",
+        "why": [
+          "recovered from a malformed reply",
+          "no sources"
+        ]
+      },
+      {
+        "id": "dollar_reserve_share",
+        "label": "USD share of FX reserves (%, IMF COFER)",
+        "story": "Gold / de-dollarization",
+        "set": 3,
+        "value": 56.7,
+        "confidence": "high",
+        "applied": true,
+        "note": "applied",
+        "rationale": "The IMF COFER release dated 30-Sep-2026 is the most recent official publication; it reports 56.70% as the USD share for end-June 2026 (2026Q2), which maps directly and mechanically to the rubric requiring the latest published percent figure.",
+        "sources": [],
+        "as_of": "2026-Q2 (end-June 2026)",
+        "out_of_range": false,
+        "fact": "IMF COFER data brief published 30 September 2026 (data.imf.org): 'the dollar\\'s share of global foreign exchange reserves declined to 56.70 percent' in 2026Q2, from 57.18 percent in 2026Q1. Total global FX reserves rose to $13.22 trillion. Source: https://data.imf.org/en/news/imf%20data%20brief%20september%2030",
+        "dissent": [],
+        "domain": "Sovereigns & the Monetary Order",
+        "crosscheck": null,
+        "parse": "repaired",
+        "vintage": null,
+        "citecheck": null,
+        "stale_guard": null,
+        "tier": "glance",
+        "why": [
+          "changed 57.13 -> 56.7",
+          "recovered from a malformed reply",
+          "no sources"
+        ]
+      },
+      {
+        "id": "trade_actions",
+        "label": "New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating)",
+        "story": "China's price spillover (deflation or cost-push)",
+        "set": 4,
+        "value": 2,
+        "confidence": "high",
+        "applied": true,
+        "note": "applied",
+        "rationale": "Six or more new measures in the trailing 3 months satisfies the rubric threshold of >=4 new measures for ESCALATING (score 2), and the EU tyre anti-dumping (up to 45.3%) qualifies as a broad tariff round exceeding 10% across a sector. The ongoing US-China truce extension prevents a clean 'truce breakdown' characterization, but the measure count and sectoral breadth independently clear the ESCALATING bar.",
+        "sources": [],
+        "as_of": "2026-10-12",
+        "out_of_range": false,
+        "fact": "At least 6 distinct new major-economy trade measures against Chinese exports were enacted in the trailing 3 months: (1) EU definitive anti-dumping on Chinese car/lorry tyres (4.3%-45.3%), published July 7, 2026 (policy.trade.ec.europa.eu); (2) EU definitive anti-dumping on Chinese polyamide filament yarns (60%-67.6%), EU Reg. 2026/1823, July 27, 2026 (catts.eu/august-2026); (3) EU provisional anti-dumping on Chinese benzyl alcohol, July 27, 2026 (catts.eu/august-2026); (4) Canada CBSA provisional anti-dumping/CVD on unarmored building cables from China, effective July 29, 2026 (catts.eu/august-2026); (5) China extended anti-dumping on single-mode optical fiber from India, effective August 14, 2026 (catts.eu/august-2026); (6) US imposed 7.5% overcapacity tariff on China restoring ~20% total rate, reported August 24, 2026 (china-briefing.com). Simultaneously, the US-China bilateral truce was extended two months on September 27, 2026 (rvia.org), and US-China recommended $30bn in mutual tariff cuts (euronews.com, September 28, 2026). EU safeguard tariffs on Chinese hybrid EVs are under active deliberation but not yet enacted (asiatimes.com, October 9, 2026).",
+        "dissent": [],
+        "domain": "Geoeconomics & Trade Weapons",
+        "crosscheck": null,
+        "parse": "repaired",
+        "vintage": null,
+        "citecheck": null,
+        "stale_guard": null,
+        "tier": "glance",
+        "why": [
+          "recovered from a malformed reply",
+          "no sources"
+        ]
+      },
+      {
+        "id": "truce_status",
+        "label": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
+        "story": "Critical minerals as a weapon",
+        "set": 4,
+        "value": 1,
+        "confidence": "medium",
+        "applied": true,
+        "note": "applied",
+        "rationale": "The truce is formally extended (not lapsed), ruling out Score 2; but partial breaches \u2014 new entity-list additions targeting the two lead US rare-earth firms and persistent sub-commitment supply volumes \u2014 satisfy the rubric's 'partial breach' prong for Score 1 (EXPIRING/fraying), and the extended deadline of Jan 10 2027 is itself <90 days from today with no further renewal announced.",
+        "sources": [
+          "https://www.investing.com/news/economy-news/us-china-agree-to-extend-trade-truce-until-january-bessent-says-4914257",
+          "https://www.nbcnews.com/business/economy/us-china-extend-trade-truce-trump-rcna599525",
+          "https://theconversation.com/how-the-us-gave-up-its-edge-to-china-in-processing-vital-rare-earth-minerals-and-what-thats-costing-292631"
+        ],
+        "as_of": "2026-10-12",
+        "out_of_range": false,
+        "fact": "US Treasury Secretary Bessent announced on Sep 23, 2026 an extension of the Busan truce from Nov 10, 2026 to Jan 10, 2027 (Investing.com/NBC News, Sep 23 2026); however, China added MP Materials and USA Rare Earth to its export control entity list on Jun 22, 2026 (The Conversation/Modern Diplomacy), and US officials assessed Chinese rare-earth compliance at ~two-thirds of commitments with yttrium exports down ~95% (startupfortune.com, Oct 10 2026).",
+        "dissent": [
+          {
+            "view": "Some sources (startupfortune.com, Oct 6 2026) framed the Nov 10 date as expiring 'with no renewal in sight' before the Sep 23 extension was announced; post-extension reporting broadly converges on Jan 10 2027 as the new deadline, so the 'no renewal' characterisation is outdated but circulates in older articles.",
+            "source": "https://startupfortune.com/chinas-rare-earth-export-truce-expires-november-10-with-no-renewal-in-sight/"
+          }
+        ],
+        "domain": "Geoeconomics & Trade Weapons",
+        "crosscheck": null,
+        "parse": null,
+        "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
+        "stale_guard": null,
+        "tier": "glance",
+        "why": [
+          "changed 0 -> 1"
+        ]
+      },
+      {
+        "id": "cable_incidents",
+        "label": "Undersea cable incidents (0 none / 1 threatened / 2 cut)",
+        "story": "Sea lanes & undersea cables",
+        "set": 4,
+        "value": 1,
+        "confidence": "medium",
+        "applied": true,
+        "note": "applied",
+        "rationale": "The Sept 2025 Red Sea multi-cable cut is the most recent confirmed severing event but ~13 months elapsed and prior cuts of similar scale were repaired within weeks-to-months, so current severed status is unconfirmed; Iran Hormuz threats and ongoing Baltic hybrid-warfare pattern constitute credible ongoing threats, mapping to rubric level 1 (THREATENED) rather than 2 (CUT), as no market-corroborated unrepaired outage is confirmed for October 2026.",
+        "sources": [
+          "https://capacityglobal.com/news/ship-likely-cut-subsea-cables-in-the-red-sea-disrupting-connectivity-across-three-continents/",
+          "https://gulfnews.com/technology/red-sea-cable-chaos-why-the-internet-didnt-go-dark-1.500263896",
+          "https://asiatimes.com/2026/09/iran-threat-to-cut-hormuz-undersea-cables-puts-gulf-on-edge/"
+        ],
+        "as_of": "2026-10-12",
+        "out_of_range": false,
+        "fact": "On 6 September 2025, at least four Red Sea cables (SMW4, IMEWE, FALCON GCX, Europe India Gateway) were severed near Jeddah by likely commercial anchor drag, causing internet degradation across India, Pakistan, Gulf states and Africa (Capacity Global / Gulf News, Sept 2025). PEACE and AAE-1 cuts from early 2025 were repaired by April 2025. No confirmed new Red Sea, Baltic, or Hormuz cut is reported in 2026; Iran issued credible Hormuz cable-cut threats (Asia Times, Sept 2026) and Baltic incidents remain under hybrid-warfare investigation but no unrepaired severance confirmed.",
+        "dissent": [
+          {
+            "view": "September 2025 Red Sea cuts to SMW4/IMEWE/FALCON/EIG may still be unrepaired given repair-ship scarcity and geopolitical permitting delays in Red Sea conflict zone",
+            "source": "https://gulfnews.com/amp/story/technology%2Fred-sea-cable-chaos-subsea-cable-repairs-are-not-an-easy-fix-1.500290675"
+          },
+          {
+            "view": "Iran threat to cut Hormuz cables assessed as operationally feasible and affecting project planning, implying elevated risk beyond mere threat",
+            "source": "https://asiatimes.com/2026/09/iran-threat-to-cut-hormuz-undersea-cables-puts-gulf-on-edge/"
+          }
+        ],
+        "domain": "Geoeconomics & Trade Weapons",
+        "crosscheck": null,
+        "parse": null,
+        "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
+        "stale_guard": null,
+        "tier": "glance",
+        "why": [
+          "changed 2 -> 1"
+        ]
+      },
+      {
+        "id": "drought_chip_farm",
+        "label": "Drought in a chip/farm hub (0 none / 1 emerging / 2 acute)",
+        "story": "Water - the underpriced input",
+        "set": 5,
+        "value": 2,
+        "confidence": "medium",
+        "applied": true,
+        "note": "applied",
+        "rationale": "A confirmed government water-rationing order affecting chipmaking hubs Hsinchu and Taichung satisfies rubric level 2 ('confirmed production curtailment / water-rationing order at a fab'). The US Southwest concurrently improved to D0-D1 after tropical moisture (USDM Oct 8, 2026), so Taiwan is the binding region driving the score.",
+        "sources": [
+          "https://www.taipeitimes.com/News/front/archives/2026/03/27/2003854549",
+          "https://droughtmonitor.unl.edu/summary.aspx",
+          "https://www.drought.gov/current-conditions"
+        ],
+        "as_of": "2026-03-27 to 2026-10",
+        "out_of_range": false,
+        "fact": "Taiwan's Water Resources Agency imposed formal water rationing after 'the driest winter in 75 years,' with reservoirs in chipmaking hub Hsinchu County at 60-80% of 2021 severe-drought levels and Zengwen Reservoir at 28.5% capacity; private industries cut usage up to 7%. Source: Taipei Times, 2026-03-27 (https://www.taipeitimes.com/News/front/archives/2026/03/27/2003854549). By Aug-Oct 2026 southern Taiwan reservoir levels improved with rainfall (Astute Group, ~Aug 2026), but TSMC CEO still cited water as a production-planning concern in June 2026.",
+        "dissent": [
+          {
+            "view": "By ~August 2026, recent rainfall improved southern Taiwan reservoir levels, reducing immediate pressure on industrial water supplies \u2014 suggesting conditions may have retreated from acute to emerging by Q4 2026.",
+            "source": "https://www.astutegroup.com/news/general/tsmc-talent-and-water-shortages-raise-chip-supply-risks/"
+          }
+        ],
+        "domain": "Physical & Resource Limits",
+        "crosscheck": null,
+        "parse": null,
+        "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://www.taipeitimes.com/News/front/archives/2026/03/27/2003854549",
+          "matched": "28.5"
+        },
+        "stale_guard": null,
+        "tier": "glance",
+        "why": [
+          "changed 1 -> 2"
+        ]
+      },
+      {
+        "id": "mine_disruptions",
+        "label": "Major mine disruptions (0 none / 1 some / 2 cluster)",
+        "story": "Copper & the electrification deficit",
+        "set": 5,
+        "value": 2,
+        "confidence": "high",
+        "applied": true,
+        "note": "applied",
+        "rationale": "Three named top-20 mines (Grasberg, Kamoa-Kakula, Centinela) have confirmed, physically measured production cuts currently active, satisfying the >=3 threshold; additionally, multiple institutions (Goldman Sachs, BMI) have explicitly forecast a market deficit attributable to these combined losses, satisfying both prongs of the rubric's level-2 definition.",
+        "sources": [],
+        "as_of": "2026-10-12",
+        "out_of_range": false,
+        "fact": "Three confirmed major-mine disruptions active simultaneously: (1) Grasberg Block Cave (world #2) running at ~60% of capacity during phased ramp-up following Sep 2025 mud rush, with 2026 output ~35% below pre-incident forecast per Freeport 10-Q filed 2026; (2) Kamoa-Kakula (top-5 globally) 2026 guidance cut from 420,000 t to 290,000-330,000 t after 2025 seismic/flood event plus a 56-day smelter shutdown in Q2 2026 (mining.com, April 1 2026; Ivanhoe Q2 2026 release); (3) Antofagasta Centinela strike by 709 workers since Oct 7 2026, mining/haulage/development disrupted with unions projecting ~50% output cut in November (northernminer.com, discoveryalert.com, Oct 8-12 2026). BMI revised 2026 copper deficit from 72,000 t to 400,000 t citing these disruptions; Cochilco forecasts 5.27 Mt Chilean output, lowest since 2003 (discoveryalert.com, Oct 12 2026).",
+        "dissent": [],
+        "domain": "Physical & Resource Limits",
+        "crosscheck": null,
+        "parse": "repaired",
+        "vintage": null,
+        "citecheck": null,
+        "stale_guard": null,
+        "tier": "glance",
+        "why": [
+          "recovered from a malformed reply",
+          "no sources"
+        ]
+      },
       {
         "id": "direct_lending_default",
         "label": "Direct-lending default rate (%, Fitch incl. distressed exchanges)",
@@ -1817,7 +2119,9 @@
           "verdict": "unreachable",
           "url": "https://www.bloomberg.com/news/articles/2026-09-14/us-private-credit-default-rate-hits-a-record-of-6-3-fitch-says"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "genius_impl",
@@ -1856,29 +2160,9 @@
           "url": "https://www.regwatch.io/blog/genius-act-implementation-tracker",
           "matched": "19860"
         },
-        "tier": "glance"
-      },
-      {
-        "id": "redemption_gates",
-        "label": "Large-fund redemption gates (0 none / 1 isolated / 2 widespread)",
-        "story": "Private credit's opaque expansion",
-        "set": 1,
-        "value": 2,
-        "confidence": "high",
-        "applied": true,
-        "note": "applied",
-        "rationale": "The rubric threshold for WIDESPREAD is >=3 of the largest funds gating in the same quarter or combined AUM >$100B; at least 7-10 named major funds have simultaneously breached their 5% quarterly repurchase caps across Q1-Q3 2026 with combined AUM well exceeding $250B, satisfying the WIDESPREAD criterion by a large margin. Corroborating signals include: FOMC policy anchored at 3.50-3.75% (higher-for-longer), sticky CPI at 4.2%, new direct-lending issuance down ~40%, and a $14B cumulative redemption backlog reported by Bloomberg (July 2026), all consistent with structural funding stress in semi-liquid private credit vehicles.",
-        "sources": [],
-        "as_of": "Q3 2026 (data through 2026-10-02)",
-        "out_of_range": false,
-        "fact": "Per Valuation Research (Oct 2, 2026), average redemption requests across 11 of the 14 largest non-traded BDCs stood at 13.0% in Q3 2026, still well above the standard 5% quarterly cap, with named funds including Blackstone BCRED (~$79B, gated at 5% after ~10% requests per Yardeni/Bloomberg Sept 2026), Cliffwater Corporate Lending Fund (~$31B, capped at 5% after 16% requests), and Blue Owl OTIC/funds (capped at 5%, 39% requests) all actively gating in Q3; in Q2 2026 Fitch tracked 10 of 16 BDCs breaching caps on $15.6B in requests (Fitch/angelinvestorsnetwork.com, ~Aug 2026); cumulative gated AUM across BCRED, Apollo ADS, BlackRock HLEND, Ares ASIF, Cliffwater, Partners Group, Blue Owl funds exceeds $250B.",
-        "dissent": [],
-        "domain": "Funding & Leverage",
-        "crosscheck": null,
-        "parse": "repaired",
-        "vintage": null,
-        "citecheck": null,
-        "tier": "ok"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "clearing_status",
@@ -1916,7 +2200,9 @@
           "verdict": "unreachable",
           "url": "https://www.sec.gov/newsroom/speeches-statements/uyeda-remarks-2026-u-s-treasury-market-conference-092226"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "plan_financing",
@@ -1954,7 +2240,9 @@
           "verdict": "not_found",
           "url": "https://www.mof.go.jp/english/policy/jgbs/auction/calendar/eresul/eresul20261006.htm"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "treasury_clearing_rollout",
@@ -1992,7 +2280,9 @@
           "verdict": "not_found",
           "url": "https://www.sifma.org/news/press-releases/us-treasury-central-clearing-survey-broad-industry-readiness-for-cash-clearing-industry-moving-towards-execution-but-work-remains-ahead-of-repo-deadline"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "ai_revenue_gap",
@@ -2030,42 +2320,9 @@
           "verdict": "not_found",
           "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/press-release-webcast"
         },
-        "tier": "glance"
-      },
-      {
-        "id": "cmbs_office_delinq",
-        "label": "CMBS office delinquency rate (%)",
-        "story": "CRE maturity wall / regional banks",
-        "set": 2,
-        "value": 12.16,
-        "confidence": "medium",
-        "applied": true,
-        "note": "applied",
-        "rationale": "The Trepp September 2026 office CMBS delinquency rate of 12.16% is the most recent published figure and maps directly to the rubric, which calls for the latest percent reading from Trepp; this sits near cycle highs and reflects persistent maturity-default stress in the office sector.",
-        "sources": [
-          "https://www.vaquerowealth.com/insights/september-2026-market-update",
-          "https://curatedcommercial.substack.com/p/cmbs-caught-up-retail-fundamentals",
-          "https://finance.yahoo.com/real-estate/articles/cmbs-delinquency-holds-7-85-045757883.html"
-        ],
-        "as_of": "2026-09",
-        "out_of_range": false,
-        "fact": "Trepp September 2026 CMBS office delinquency rate: 12.16%, up 16 bps from August's 12.00%; per vaquerowealth.com (Oct 6 2026) and curatedcommercial.substack.com (Oct 12 2026), both citing Trepp September 2026 data.",
-        "dissent": [
-          {
-            "view": "KBRA reports a higher office CMBS delinquency rate of ~12.8% (Feb-Mar 2026) due to inclusion of a broader KBRA-rated universe and different loan classification methodology",
-            "source": "https://www.businesswire.com/news/home/20260227302299/en"
-          }
-        ],
-        "domain": "Credit, Consumers & Valuations",
-        "crosscheck": null,
-        "parse": null,
-        "vintage": null,
-        "citecheck": {
-          "verdict": "verified",
-          "url": "https://www.vaquerowealth.com/insights/september-2026-market-update",
-          "matched": "12.16"
-        },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "cat_losses",
@@ -2098,7 +2355,9 @@
         "citecheck": {
           "verdict": "skipped"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "gpu_refi_stress",
@@ -2135,7 +2394,9 @@
         "citecheck": {
           "verdict": "skipped"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "insurer_exits",
@@ -2170,7 +2431,9 @@
           "url": "https://www.rff.org/publications/issue-briefs/the-evolving-us-homeowners-insurance-market-four-major-trends-and-what-we-know-about-them/",
           "matched": "4.45"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "subprime_auto_dpd",
@@ -2209,7 +2472,41 @@
           "url": "https://blog.cucollector.com/the-seasonal-loan-delinquency-reprieve-may-be-ending/",
           "matched": "6.13"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
+      },
+      {
+        "id": "govt_stability",
+        "label": "Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election)",
+        "story": "France / eurozone fragility",
+        "set": 3,
+        "value": 1,
+        "confidence": "high",
+        "applied": true,
+        "note": "applied",
+        "rationale": "France operates under a hung parliament with an explicit minority-coalition status; the government has governed only by deploying Art. 49.3 and surviving successive no-confidence votes without ever holding a working majority \u2014 the textbook definition of rubric band 1 (FRAGILE). No collapse, resignation, or dissolution has occurred.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Second_Lecornu_government",
+          "https://www.euronews.com/2026/02/02/france-adopts-2026-budget-after-government-survives-no-confidence-votes",
+          "https://www.aljazeera.com/news/2026/2/2/france-adopts-2026-budget-after-two-no-confidence-votes-fail"
+        ],
+        "as_of": "2026-10-12",
+        "out_of_range": false,
+        "fact": "The Second Lecornu government (formed 10 Oct 2025) is the incumbent minority government of France. It has survived multiple no-confidence votes (most recently 2 Feb 2026, when two motions fell short of the 289-vote threshold), invoked Article 49.3 repeatedly to pass the 2026 budget, and PM Lecornu remains in office as of 9-10 Oct 2026. Sources: Wikipedia 'Second Lecornu government'; Euronews 02 Feb 2026; Al Jazeera 02 Feb 2026; JPost 09 Oct 2026.",
+        "dissent": [],
+        "domain": "Sovereigns & the Monetary Order",
+        "crosscheck": null,
+        "parse": null,
+        "vintage": null,
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://en.wikipedia.org/wiki/Second_Lecornu_government",
+          "matched": "49.3"
+        },
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "funded_ratio",
@@ -2244,7 +2541,9 @@
           "url": "https://www.milliman.com/en/insight/public-pension-funding-index-august-2026",
           "matched": "88.2"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "new_imf_programs",
@@ -2277,7 +2576,39 @@
         "citecheck": {
           "verdict": "skipped"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
+      },
+      {
+        "id": "pension_leverage_event",
+        "label": "Pension-fund leverage event, UK-2022 type (0 none / 1 stress / 2 blowup)",
+        "story": "Pensions / demographics",
+        "set": 3,
+        "value": 0,
+        "confidence": "high",
+        "applied": true,
+        "note": "applied",
+        "rationale": "Multiple FPC records through September 2026 explicitly characterise the LDI sector as resilient with adequate buffers; the March 2026 gilt selloff produced only limited, manageable cash calls and no forced selling or central-bank intervention. This maps cleanly to rubric band 0 (buffers adequate, no margin stress).",
+        "sources": [
+          "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/april-2026",
+          "https://www.bankofengland.co.uk/financial-stability-report/2026/july-2026",
+          "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/september-2026"
+        ],
+        "as_of": "2026-09-25",
+        "out_of_range": false,
+        "fact": "Bank of England FPC Record \u2013 March 2026 (published 1 April 2026) states: 'The FPC noted that the liability driven investment (LDI) sector had remained resilient in the current market environment,' supported by post-2022 liquidity buffer requirements (min 250 bps TPR/300 bps ESMA). The July 2026 BoE Financial Stability Report (data as at 25 June 2026) confirmed 'The LDI sector also remained resilient, reflecting policy measures taken since the Autumn 2022 gilt market stress.' The September 2026 FPC Record (meeting 25 September 2026) makes no mention of any LDI stress episode. A March 2026 gilt selloff produced only 'limited pension cash calls' and 'far smaller' impact than 2022 per Reuters/AlphaSquawk (August 2026 update), with the PPF Purple Book 2025 aggregate DB funding ratio at 125% and a net surplus of \u00a3214bn. Sources: bankofengland.co.uk FPC Records March/July/September 2026; BoE FSR July 2026; alphasquawk.com August 2026.",
+        "dissent": [],
+        "domain": "Sovereigns & the Monetary Order",
+        "crosscheck": null,
+        "parse": null,
+        "vintage": null,
+        "citecheck": {
+          "verdict": "skipped"
+        },
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "rating_action",
@@ -2310,7 +2641,9 @@
         "citecheck": {
           "verdict": "skipped"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "weaponization_event",
@@ -2343,7 +2676,9 @@
         "citecheck": {
           "verdict": "skipped"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "ss_reform_news",
@@ -2377,29 +2712,41 @@
           "verdict": "unreachable",
           "url": "https://www.ssa.gov/oact/"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
-        "id": "dollar_reserve_share",
-        "label": "USD share of FX reserves (%, IMF COFER)",
-        "story": "Gold / de-dollarization",
-        "set": 3,
-        "value": 56.7,
+        "id": "china_ppi",
+        "label": "China PPI YoY (%) - large swing either way is worse",
+        "story": "China's price spillover (deflation or cost-push)",
+        "set": 4,
+        "value": 3.8,
         "confidence": "high",
         "applied": true,
         "note": "applied",
-        "rationale": "The IMF COFER release dated 30-Sep-2026 is the most recent official publication; it reports 56.70% as the USD share for end-June 2026 (2026Q2), which maps directly and mechanically to the rubric requiring the latest published percent figure.",
-        "sources": [],
-        "as_of": "2026-Q2 (end-June 2026)",
+        "rationale": "The rubric requires the signed YoY percent as published by NBS; +3.8% is the latest confirmed official figure. The engine scores on magnitude: +3.8% is a moderately elevated positive reading, signalling cost-push pressure at factory gates that could export input-cost inflation to trading partners.",
+        "sources": [
+          "https://landedmath.com/instrument/national-bureau-of-statistics-of-china-producer-price-index/",
+          "https://admiralmarkets.com/analytics/traders-blog/china-cpi-september-2026-preview-and-market-scenarios",
+          "https://www.investing.com/economic-calendar/chinese-ppi-464"
+        ],
+        "as_of": "2026-08",
         "out_of_range": false,
-        "fact": "IMF COFER data brief published 30 September 2026 (data.imf.org): 'the dollar\\'s share of global foreign exchange reserves declined to 56.70 percent' in 2026Q2, from 57.18 percent in 2026Q1. Total global FX reserves rose to $13.22 trillion. Source: https://data.imf.org/en/news/imf%20data%20brief%20september%2030",
+        "fact": "China PPI rose +3.8% year-on-year in August 2026, per NBS release dated 9 September 2026 (landedmath.com citing NBS; corroborated by admiralmarkets.com preview table and investing.com calendar). September 2026 data is not yet published; NBS release scheduled 14 October 2026.",
         "dissent": [],
-        "domain": "Sovereigns & the Monetary Order",
+        "domain": "Geoeconomics & Trade Weapons",
         "crosscheck": null,
-        "parse": "repaired",
+        "parse": null,
         "vintage": null,
-        "citecheck": null,
-        "tier": "glance"
+        "citecheck": {
+          "verdict": "verified",
+          "url": "https://landedmath.com/instrument/national-bureau-of-statistics-of-china-producer-price-index/",
+          "matched": "3.8"
+        },
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "hree_premium",
@@ -2442,7 +2789,9 @@
           "url": "https://source.benchmarkminerals.com/article/ex-china-heavy-rare-earths-continue-to-surge-q3-2026-rare-earths-price-review",
           "matched": "16.3"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "export_controls",
@@ -2475,7 +2824,9 @@
         "citecheck": {
           "verdict": "skipped"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "hormuz_redsea_status",
@@ -2512,40 +2863,9 @@
         "citecheck": {
           "verdict": "skipped"
         },
-        "tier": "glance"
-      },
-      {
-        "id": "truce_status",
-        "label": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
-        "story": "Critical minerals as a weapon",
-        "set": 4,
-        "value": 1,
-        "confidence": "medium",
-        "applied": true,
-        "note": "applied",
-        "rationale": "The truce is formally extended (not lapsed), ruling out Score 2; but partial breaches \u2014 new entity-list additions targeting the two lead US rare-earth firms and persistent sub-commitment supply volumes \u2014 satisfy the rubric's 'partial breach' prong for Score 1 (EXPIRING/fraying), and the extended deadline of Jan 10 2027 is itself <90 days from today with no further renewal announced.",
-        "sources": [
-          "https://www.investing.com/news/economy-news/us-china-agree-to-extend-trade-truce-until-january-bessent-says-4914257",
-          "https://www.nbcnews.com/business/economy/us-china-extend-trade-truce-trump-rcna599525",
-          "https://theconversation.com/how-the-us-gave-up-its-edge-to-china-in-processing-vital-rare-earth-minerals-and-what-thats-costing-292631"
-        ],
-        "as_of": "2026-10-12",
-        "out_of_range": false,
-        "fact": "US Treasury Secretary Bessent announced on Sep 23, 2026 an extension of the Busan truce from Nov 10, 2026 to Jan 10, 2027 (Investing.com/NBC News, Sep 23 2026); however, China added MP Materials and USA Rare Earth to its export control entity list on Jun 22, 2026 (The Conversation/Modern Diplomacy), and US officials assessed Chinese rare-earth compliance at ~two-thirds of commitments with yttrium exports down ~95% (startupfortune.com, Oct 10 2026).",
-        "dissent": [
-          {
-            "view": "Some sources (startupfortune.com, Oct 6 2026) framed the Nov 10 date as expiring 'with no renewal in sight' before the Sep 23 extension was announced; post-extension reporting broadly converges on Jan 10 2027 as the new deadline, so the 'no renewal' characterisation is outdated but circulates in older articles.",
-            "source": "https://startupfortune.com/chinas-rare-earth-export-truce-expires-november-10-with-no-renewal-in-sight/"
-          }
-        ],
-        "domain": "Geoeconomics & Trade Weapons",
-        "crosscheck": null,
-        "parse": null,
-        "vintage": null,
-        "citecheck": {
-          "verdict": "skipped"
-        },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "license_flow",
@@ -2587,7 +2907,9 @@
         "citecheck": {
           "verdict": "skipped"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "fab_concentration",
@@ -2622,7 +2944,9 @@
           "url": "https://focustaiwan.tw/business/202604160016",
           "matched": "120,000"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "taiwan_tension",
@@ -2664,36 +2988,29 @@
         "citecheck": {
           "verdict": "skipped"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
-        "id": "cable_incidents",
-        "label": "Undersea cable incidents (0 none / 1 threatened / 2 cut)",
-        "story": "Sea lanes & undersea cables",
+        "id": "re_blacklist",
+        "label": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
+        "story": "Critical minerals as a weapon",
         "set": 4,
         "value": 1,
-        "confidence": "medium",
+        "confidence": "high",
         "applied": true,
         "note": "applied",
-        "rationale": "The Sept 2025 Red Sea multi-cable cut is the most recent confirmed severing event but ~13 months elapsed and prior cuts of similar scale were repaired within weeks-to-months, so current severed status is unconfirmed; Iran Hormuz threats and ongoing Baltic hybrid-warfare pattern constitute credible ongoing threats, mapping to rubric level 1 (THREATENED) rather than 2 (CUT), as no market-corroborated unrepaired outage is confirmed for October 2026.",
+        "rationale": "Two named US rare-earth producers (MP Materials, USA Rare Earth) are on China's MOFCOM export-control list as of 22 June 2026, satisfying rubric level 1 (entity-specific). The restriction is firm-specific, not a categorical sector-wide or class ban on all US rare-earth producers, so level 2 is not warranted.",
         "sources": [
-          "https://capacityglobal.com/news/ship-likely-cut-subsea-cables-in-the-red-sea-disrupting-connectivity-across-three-continents/",
-          "https://gulfnews.com/technology/red-sea-cable-chaos-why-the-internet-didnt-go-dark-1.500263896",
-          "https://asiatimes.com/2026/09/iran-threat-to-cut-hormuz-undersea-cables-puts-gulf-on-edge/"
+          "https://source.benchmarkminerals.com/article/china-targets-us-rare-earth-and-defence-linked-entities-with-dual-use-export-ban",
+          "https://www.bloomberg.com/news/articles/2026-06-22/china-places-two-us-rare-earths-producers-on-export-control-list",
+          "https://www.aljazeera.com/news/2026/6/22/china-adds-10-us-firms-including-rare-earth-miner-to-export-control-list"
         ],
-        "as_of": "2026-10-12",
+        "as_of": "2026-06-22",
         "out_of_range": false,
-        "fact": "On 6 September 2025, at least four Red Sea cables (SMW4, IMEWE, FALCON GCX, Europe India Gateway) were severed near Jeddah by likely commercial anchor drag, causing internet degradation across India, Pakistan, Gulf states and Africa (Capacity Global / Gulf News, Sept 2025). PEACE and AAE-1 cuts from early 2025 were repaired by April 2025. No confirmed new Red Sea, Baltic, or Hormuz cut is reported in 2026; Iran issued credible Hormuz cable-cut threats (Asia Times, Sept 2026) and Baltic incidents remain under hybrid-warfare investigation but no unrepaired severance confirmed.",
-        "dissent": [
-          {
-            "view": "September 2025 Red Sea cuts to SMW4/IMEWE/FALCON/EIG may still be unrepaired given repair-ship scarcity and geopolitical permitting delays in Red Sea conflict zone",
-            "source": "https://gulfnews.com/amp/story/technology%2Fred-sea-cable-chaos-subsea-cable-repairs-are-not-an-easy-fix-1.500290675"
-          },
-          {
-            "view": "Iran threat to cut Hormuz cables assessed as operationally feasible and affecting project planning, implying elevated risk beyond mere threat",
-            "source": "https://asiatimes.com/2026/09/iran-threat-to-cut-hormuz-undersea-cables-puts-gulf-on-edge/"
-          }
-        ],
+        "fact": "On 22 June 2026, China MOFCOM issued Announcement No. 23 of 2026, adding 10 US entities to its export control list; the two named US rare-earth producers are MP Materials Corp. and USA Rare Earth Inc. The restriction bans Chinese exporters and all global parties from supplying Chinese-origin dual-use items to those specific firms. Source: MOFCOM Announcement No. 23 of 2026, corroborated by Bloomberg (2026-06-22), Al Jazeera (2026-06-22), Benchmark Minerals (2026-06-22), and Morgan Lewis (2026-07-01). Benchmark Minerals explicitly notes 'the measure is entity-specific rather than a blanket restriction on rare earth exports to the US.'",
+        "dissent": [],
         "domain": "Geoeconomics & Trade Weapons",
         "crosscheck": null,
         "parse": null,
@@ -2701,7 +3018,9 @@
         "citecheck": {
           "verdict": "skipped"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "ai_power_pressure",
@@ -2739,7 +3058,9 @@
           "verdict": "not_found",
           "url": "https://www.energy.gov/node/4855857"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "china_export_curbs",
@@ -2774,7 +3095,9 @@
           "url": "https://www.foodsecurityportal.org/tools/COVID-19-food-trade-policy-tracker",
           "matched": "3.3"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "dc_moratoria",
@@ -2807,7 +3130,9 @@
         "citecheck": {
           "verdict": "skipped"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "copper_deficit_timing",
@@ -2846,42 +3171,41 @@
           "url": "https://www.indexbox.io/blog/global-refined-copper-market-expected-to-shift-to-surplus-in-2026/",
           "matched": "96,000"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
-        "id": "drought_chip_farm",
-        "label": "Drought in a chip/farm hub (0 none / 1 emerging / 2 acute)",
-        "story": "Water - the underpriced input",
+        "id": "fao_food_trend",
+        "label": "Food-price trend (0 falling / 1 elevated / 2 spiking)",
+        "story": "Food & fertilizer fragility",
         "set": 5,
-        "value": 2,
-        "confidence": "medium",
+        "value": 1,
+        "confidence": "high",
         "applied": true,
         "note": "applied",
-        "rationale": "A confirmed government water-rationing order affecting chipmaking hubs Hsinchu and Taichung satisfies rubric level 2 ('confirmed production curtailment / water-rationing order at a fab'). The US Southwest concurrently improved to D0-D1 after tropical moisture (USDM Oct 8, 2026), so Taiwan is the binding region driving the score.",
+        "rationale": "MoM rise of 1.5% is below the 5% SPIKING threshold and the 3-month gain (Jul-Sep) is ~3.7%, well below 10%; index is rising and at a post-2022 high, placing it squarely in ELEVATED (band 1).",
         "sources": [
-          "https://www.taipeitimes.com/News/front/archives/2026/03/27/2003854549",
-          "https://droughtmonitor.unl.edu/summary.aspx",
-          "https://www.drought.gov/current-conditions"
+          "https://www.fao.org/newsroom/detail/fao-food-price-index-rises-in-september-amid-weather-concerns-and-transport-disruptions/en",
+          "https://wikifarmer.com/library/en/article/fao-food-price-index-september-2026",
+          "https://www.indexbox.io/blog/fao-food-price-index-rises-in-september-2026-as-wheat-and-maize-hit-multi-year-highs/"
         ],
-        "as_of": "2026-03-27 to 2026-10",
+        "as_of": "2026-09",
         "out_of_range": false,
-        "fact": "Taiwan's Water Resources Agency imposed formal water rationing after 'the driest winter in 75 years,' with reservoirs in chipmaking hub Hsinchu County at 60-80% of 2021 severe-drought levels and Zengwen Reservoir at 28.5% capacity; private industries cut usage up to 7%. Source: Taipei Times, 2026-03-27 (https://www.taipeitimes.com/News/front/archives/2026/03/27/2003854549). By Aug-Oct 2026 southern Taiwan reservoir levels improved with rainfall (Astute Group, ~Aug 2026), but TSMC CEO still cited water as a production-planning concern in June 2026.",
-        "dissent": [
-          {
-            "view": "By ~August 2026, recent rainfall improved southern Taiwan reservoir levels, reducing immediate pressure on industrial water supplies \u2014 suggesting conditions may have retreated from acute to emerging by Q4 2026.",
-            "source": "https://www.astutegroup.com/news/general/tsmc-talent-and-water-shortages-raise-chip-supply-risks/"
-          }
-        ],
+        "fact": "FAO Food Price Index averaged 136.0 points in September 2026, up 2.0 points (+1.5%) MoM from revised August and +5.8% YoY; third consecutive monthly increase and highest since November 2022. Source: FAO (fao.org/newsroom), released 2 October 2026.",
+        "dissent": [],
         "domain": "Physical & Resource Limits",
         "crosscheck": null,
         "parse": null,
         "vintage": null,
         "citecheck": {
           "verdict": "verified",
-          "url": "https://www.taipeitimes.com/News/front/archives/2026/03/27/2003854549",
-          "matched": "28.5"
+          "url": "https://www.fao.org/newsroom/detail/fao-food-price-index-rises-in-september-amid-weather-concerns-and-transport-disruptions/en",
+          "matched": "136.0"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "interconnection_months",
@@ -2919,7 +3243,40 @@
           "verdict": "unreachable",
           "url": "https://emp.lbl.gov/queues"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
+      },
+      {
+        "id": "hormuz_fertilizer",
+        "label": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
+        "story": "Food & fertilizer fragility",
+        "set": 5,
+        "value": 2,
+        "confidence": "high",
+        "applied": true,
+        "note": "applied",
+        "rationale": "The strait is rated CLOSED with throughput near zero (4 vs. 85 daily transits) and Brent above $100/bbl corroborates the closure signal; sulfur and ammonia fertilizer input flows from Gulf producers are effectively halted, satisfying both prongs of the rubric's level-2 threshold.",
+        "sources": [
+          "https://straits.live/briefs/2026-10-12",
+          "https://openknowledge.fao.org/server/api/core/bitstreams/1aafb5d8-39d1-481a-b1f8-25facaec3051/content",
+          "https://www.ifpri.org/blog/how-are-fertilizer-markets-coping-with-the-continued-closure-of-the-strait-of-hormuz/"
+        ],
+        "as_of": "2026-10-12",
+        "out_of_range": false,
+        "fact": "IMF PortWatch recorded 4 transits on Oct 4 vs. pre-crisis baseline of 85/day; Brent at ~$103-104/bbl; Gulf sulfur shipments collapsed to 147,000 MT in June vs. 11-year floor of 730,000 MT; FAO reports 3-4 Mt/month of fertilizer trade stalled; strait effectively closed since Feb 28 2026 with ongoing vessel attacks and deadlocked negotiations (straits.live, IFPRI, FAO/openknowledge, Oct 12 2026)",
+        "dissent": [],
+        "domain": "Physical & Resource Limits",
+        "crosscheck": null,
+        "parse": null,
+        "vintage": null,
+        "citecheck": {
+          "verdict": "not_found",
+          "url": "https://straits.live/briefs/2026-10-12"
+        },
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "reservoir_stress",
@@ -2958,7 +3315,9 @@
           "url": "https://coloradorivermonitor.com/lake-mead-water-level",
           "matched": "6,820,887"
         },
-        "tier": "glance"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       },
       {
         "id": "water_dispute",
@@ -2995,275 +3354,9 @@
         "citecheck": {
           "verdict": "skipped"
         },
-        "tier": "glance"
-      },
-      {
-        "id": "bnpl_delinq",
-        "label": "BNPL delinquency trend (0 stable / 1 rising / 2 spiking)",
-        "story": "Hidden consumer debt",
-        "set": 2,
-        "value": 1,
-        "confidence": "high",
-        "applied": true,
-        "note": "applied",
-        "rationale": "30+ DPD rose ~18-29 bps YoY through mid-FY2026 before improving in Q4, placing it squarely in the RISING band; the <100 bps YoY move precludes Score 2, and charge-offs remain below 3% on the regulator's pay-in-four series and below 5% on Affirm's own vintage metric, consistent with Score 1.",
-        "sources": [],
-        "as_of": "2026-08-27",
-        "out_of_range": false,
-        "fact": "Affirm Q4 FY2026 Earnings Supplement (Aug 27, 2026): 30+ DPD on monthly installment loans ex-Peloton/Pay-in-X = 2.5%, down from 2.7-2.8% in prior three quarters but up ~29 bps YoY in FQ3'26 per shareholder letter; cohort net charge-offs track ~3.5% of GMV (lifetime vintage). CFPB Dec-2025 report: aggregate BNPL pay-in-four charge-off rate 1.83% in 2023 (latest official figure). Richmond Fed Feb-2026: 'no direct evidence of rising aggregate BNPL charge-off rates to date.'",
-        "dissent": [],
-        "domain": "Credit, Consumers & Valuations",
-        "crosscheck": null,
-        "parse": "repaired",
-        "vintage": null,
-        "citecheck": null,
-        "tier": "ok"
-      },
-      {
-        "id": "regional_bank_stress",
-        "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
-        "story": "CRE maturity wall / regional banks",
-        "set": 2,
-        "value": 1,
-        "confidence": "medium",
-        "applied": true,
-        "note": "applied",
-        "rationale": "Within the trailing 6 months, at least 1 confirmed CRE-linked failure (Nano Banc, $736M assets, <$10bn) with a public enforcement action explicitly citing CRE concentration satisfies the ISOLATED threshold of 1-2 such failures each <$10bn plus >=1 new enforcement action/consent order citing CRE concentration. CLUSTER (2) is not warranted because credible sources do not firmly attribute >=3 in-window failures primarily to CRE exposure, and no single failure exceeded $10bn or triggered a coordinated interagency action.",
-        "sources": [],
-        "as_of": "2026-10-12",
-        "out_of_range": false,
-        "fact": "FDIC failed-bank list shows 5 US bank failures in the trailing 6 months (Apr 12-Oct 12 2026): Community Bank and Trust-West Georgia (May 1), Kentland Federal S&L (Jul 10), Small Business Bank (Jul 17), Tioga-Franklin Savings Bank (Aug 21), and Nano Banc (Sep 25, $736M assets). Of these, Nano Banc is explicitly CRE-linked: American Banker (Sep 26 2026) reports it 'had been the subject of enforcement actions in connection with both commercial real estate lending and governance issues'; FedFis notes 'high concentrations in CRE'; a March 2026 DFPI consent order cited deteriorating financial condition tied to CRE concentration. Metropolitan Capital (Jan 30, CRE skilled-nursing loan) falls outside the 6-month window. No other in-window failure has explicit primary-source CRE attribution. No single failure exceeded $10bn assets; no coordinated interagency CRE supervisory action found. Source: fdic.gov/bank-failures/failed-bank-list (Oct 2026); americanbanker.com (Sep 28 2026); fintechcowboys.com/bank-failure-alert-nano-banc.",
-        "dissent": [],
-        "domain": "Credit, Consumers & Valuations",
-        "crosscheck": {
-          "second_value": 1,
-          "agree": true,
-          "by": "asi1",
-          "provider": "asi1"
-        },
-        "parse": "repaired",
-        "vintage": null,
-        "citecheck": null,
-        "tier": "ok"
-      },
-      {
-        "id": "govt_stability",
-        "label": "Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election)",
-        "story": "France / eurozone fragility",
-        "set": 3,
-        "value": 1,
-        "confidence": "high",
-        "applied": true,
-        "note": "applied",
-        "rationale": "France operates under a hung parliament with an explicit minority-coalition status; the government has governed only by deploying Art. 49.3 and surviving successive no-confidence votes without ever holding a working majority \u2014 the textbook definition of rubric band 1 (FRAGILE). No collapse, resignation, or dissolution has occurred.",
-        "sources": [
-          "https://en.wikipedia.org/wiki/Second_Lecornu_government",
-          "https://www.euronews.com/2026/02/02/france-adopts-2026-budget-after-government-survives-no-confidence-votes",
-          "https://www.aljazeera.com/news/2026/2/2/france-adopts-2026-budget-after-two-no-confidence-votes-fail"
-        ],
-        "as_of": "2026-10-12",
-        "out_of_range": false,
-        "fact": "The Second Lecornu government (formed 10 Oct 2025) is the incumbent minority government of France. It has survived multiple no-confidence votes (most recently 2 Feb 2026, when two motions fell short of the 289-vote threshold), invoked Article 49.3 repeatedly to pass the 2026 budget, and PM Lecornu remains in office as of 9-10 Oct 2026. Sources: Wikipedia 'Second Lecornu government'; Euronews 02 Feb 2026; Al Jazeera 02 Feb 2026; JPost 09 Oct 2026.",
-        "dissent": [],
-        "domain": "Sovereigns & the Monetary Order",
-        "crosscheck": null,
-        "parse": null,
-        "vintage": null,
-        "citecheck": {
-          "verdict": "verified",
-          "url": "https://en.wikipedia.org/wiki/Second_Lecornu_government",
-          "matched": "49.3"
-        },
-        "tier": "ok"
-      },
-      {
-        "id": "pension_leverage_event",
-        "label": "Pension-fund leverage event, UK-2022 type (0 none / 1 stress / 2 blowup)",
-        "story": "Pensions / demographics",
-        "set": 3,
-        "value": 0,
-        "confidence": "high",
-        "applied": true,
-        "note": "applied",
-        "rationale": "Multiple FPC records through September 2026 explicitly characterise the LDI sector as resilient with adequate buffers; the March 2026 gilt selloff produced only limited, manageable cash calls and no forced selling or central-bank intervention. This maps cleanly to rubric band 0 (buffers adequate, no margin stress).",
-        "sources": [
-          "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/april-2026",
-          "https://www.bankofengland.co.uk/financial-stability-report/2026/july-2026",
-          "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/september-2026"
-        ],
-        "as_of": "2026-09-25",
-        "out_of_range": false,
-        "fact": "Bank of England FPC Record \u2013 March 2026 (published 1 April 2026) states: 'The FPC noted that the liability driven investment (LDI) sector had remained resilient in the current market environment,' supported by post-2022 liquidity buffer requirements (min 250 bps TPR/300 bps ESMA). The July 2026 BoE Financial Stability Report (data as at 25 June 2026) confirmed 'The LDI sector also remained resilient, reflecting policy measures taken since the Autumn 2022 gilt market stress.' The September 2026 FPC Record (meeting 25 September 2026) makes no mention of any LDI stress episode. A March 2026 gilt selloff produced only 'limited pension cash calls' and 'far smaller' impact than 2022 per Reuters/AlphaSquawk (August 2026 update), with the PPF Purple Book 2025 aggregate DB funding ratio at 125% and a net surplus of \u00a3214bn. Sources: bankofengland.co.uk FPC Records March/July/September 2026; BoE FSR July 2026; alphasquawk.com August 2026.",
-        "dissent": [],
-        "domain": "Sovereigns & the Monetary Order",
-        "crosscheck": null,
-        "parse": null,
-        "vintage": null,
-        "citecheck": {
-          "verdict": "skipped"
-        },
-        "tier": "ok"
-      },
-      {
-        "id": "china_ppi",
-        "label": "China PPI YoY (%) - large swing either way is worse",
-        "story": "China's price spillover (deflation or cost-push)",
-        "set": 4,
-        "value": 3.8,
-        "confidence": "high",
-        "applied": true,
-        "note": "applied",
-        "rationale": "The rubric requires the signed YoY percent as published by NBS; +3.8% is the latest confirmed official figure. The engine scores on magnitude: +3.8% is a moderately elevated positive reading, signalling cost-push pressure at factory gates that could export input-cost inflation to trading partners.",
-        "sources": [
-          "https://landedmath.com/instrument/national-bureau-of-statistics-of-china-producer-price-index/",
-          "https://admiralmarkets.com/analytics/traders-blog/china-cpi-september-2026-preview-and-market-scenarios",
-          "https://www.investing.com/economic-calendar/chinese-ppi-464"
-        ],
-        "as_of": "2026-08",
-        "out_of_range": false,
-        "fact": "China PPI rose +3.8% year-on-year in August 2026, per NBS release dated 9 September 2026 (landedmath.com citing NBS; corroborated by admiralmarkets.com preview table and investing.com calendar). September 2026 data is not yet published; NBS release scheduled 14 October 2026.",
-        "dissent": [],
-        "domain": "Geoeconomics & Trade Weapons",
-        "crosscheck": null,
-        "parse": null,
-        "vintage": null,
-        "citecheck": {
-          "verdict": "verified",
-          "url": "https://landedmath.com/instrument/national-bureau-of-statistics-of-china-producer-price-index/",
-          "matched": "3.8"
-        },
-        "tier": "ok"
-      },
-      {
-        "id": "trade_actions",
-        "label": "New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating)",
-        "story": "China's price spillover (deflation or cost-push)",
-        "set": 4,
-        "value": 2,
-        "confidence": "high",
-        "applied": true,
-        "note": "applied",
-        "rationale": "Six or more new measures in the trailing 3 months satisfies the rubric threshold of >=4 new measures for ESCALATING (score 2), and the EU tyre anti-dumping (up to 45.3%) qualifies as a broad tariff round exceeding 10% across a sector. The ongoing US-China truce extension prevents a clean 'truce breakdown' characterization, but the measure count and sectoral breadth independently clear the ESCALATING bar.",
-        "sources": [],
-        "as_of": "2026-10-12",
-        "out_of_range": false,
-        "fact": "At least 6 distinct new major-economy trade measures against Chinese exports were enacted in the trailing 3 months: (1) EU definitive anti-dumping on Chinese car/lorry tyres (4.3%-45.3%), published July 7, 2026 (policy.trade.ec.europa.eu); (2) EU definitive anti-dumping on Chinese polyamide filament yarns (60%-67.6%), EU Reg. 2026/1823, July 27, 2026 (catts.eu/august-2026); (3) EU provisional anti-dumping on Chinese benzyl alcohol, July 27, 2026 (catts.eu/august-2026); (4) Canada CBSA provisional anti-dumping/CVD on unarmored building cables from China, effective July 29, 2026 (catts.eu/august-2026); (5) China extended anti-dumping on single-mode optical fiber from India, effective August 14, 2026 (catts.eu/august-2026); (6) US imposed 7.5% overcapacity tariff on China restoring ~20% total rate, reported August 24, 2026 (china-briefing.com). Simultaneously, the US-China bilateral truce was extended two months on September 27, 2026 (rvia.org), and US-China recommended $30bn in mutual tariff cuts (euronews.com, September 28, 2026). EU safeguard tariffs on Chinese hybrid EVs are under active deliberation but not yet enacted (asiatimes.com, October 9, 2026).",
-        "dissent": [],
-        "domain": "Geoeconomics & Trade Weapons",
-        "crosscheck": null,
-        "parse": "repaired",
-        "vintage": null,
-        "citecheck": null,
-        "tier": "ok"
-      },
-      {
-        "id": "re_blacklist",
-        "label": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
-        "story": "Critical minerals as a weapon",
-        "set": 4,
-        "value": 1,
-        "confidence": "high",
-        "applied": true,
-        "note": "applied",
-        "rationale": "Two named US rare-earth producers (MP Materials, USA Rare Earth) are on China's MOFCOM export-control list as of 22 June 2026, satisfying rubric level 1 (entity-specific). The restriction is firm-specific, not a categorical sector-wide or class ban on all US rare-earth producers, so level 2 is not warranted.",
-        "sources": [
-          "https://source.benchmarkminerals.com/article/china-targets-us-rare-earth-and-defence-linked-entities-with-dual-use-export-ban",
-          "https://www.bloomberg.com/news/articles/2026-06-22/china-places-two-us-rare-earths-producers-on-export-control-list",
-          "https://www.aljazeera.com/news/2026/6/22/china-adds-10-us-firms-including-rare-earth-miner-to-export-control-list"
-        ],
-        "as_of": "2026-06-22",
-        "out_of_range": false,
-        "fact": "On 22 June 2026, China MOFCOM issued Announcement No. 23 of 2026, adding 10 US entities to its export control list; the two named US rare-earth producers are MP Materials Corp. and USA Rare Earth Inc. The restriction bans Chinese exporters and all global parties from supplying Chinese-origin dual-use items to those specific firms. Source: MOFCOM Announcement No. 23 of 2026, corroborated by Bloomberg (2026-06-22), Al Jazeera (2026-06-22), Benchmark Minerals (2026-06-22), and Morgan Lewis (2026-07-01). Benchmark Minerals explicitly notes 'the measure is entity-specific rather than a blanket restriction on rare earth exports to the US.'",
-        "dissent": [],
-        "domain": "Geoeconomics & Trade Weapons",
-        "crosscheck": null,
-        "parse": null,
-        "vintage": null,
-        "citecheck": {
-          "verdict": "skipped"
-        },
-        "tier": "ok"
-      },
-      {
-        "id": "fao_food_trend",
-        "label": "Food-price trend (0 falling / 1 elevated / 2 spiking)",
-        "story": "Food & fertilizer fragility",
-        "set": 5,
-        "value": 1,
-        "confidence": "high",
-        "applied": true,
-        "note": "applied",
-        "rationale": "MoM rise of 1.5% is below the 5% SPIKING threshold and the 3-month gain (Jul-Sep) is ~3.7%, well below 10%; index is rising and at a post-2022 high, placing it squarely in ELEVATED (band 1).",
-        "sources": [
-          "https://www.fao.org/newsroom/detail/fao-food-price-index-rises-in-september-amid-weather-concerns-and-transport-disruptions/en",
-          "https://wikifarmer.com/library/en/article/fao-food-price-index-september-2026",
-          "https://www.indexbox.io/blog/fao-food-price-index-rises-in-september-2026-as-wheat-and-maize-hit-multi-year-highs/"
-        ],
-        "as_of": "2026-09",
-        "out_of_range": false,
-        "fact": "FAO Food Price Index averaged 136.0 points in September 2026, up 2.0 points (+1.5%) MoM from revised August and +5.8% YoY; third consecutive monthly increase and highest since November 2022. Source: FAO (fao.org/newsroom), released 2 October 2026.",
-        "dissent": [],
-        "domain": "Physical & Resource Limits",
-        "crosscheck": null,
-        "parse": null,
-        "vintage": null,
-        "citecheck": {
-          "verdict": "verified",
-          "url": "https://www.fao.org/newsroom/detail/fao-food-price-index-rises-in-september-amid-weather-concerns-and-transport-disruptions/en",
-          "matched": "136.0"
-        },
-        "tier": "ok"
-      },
-      {
-        "id": "hormuz_fertilizer",
-        "label": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
-        "story": "Food & fertilizer fragility",
-        "set": 5,
-        "value": 2,
-        "confidence": "high",
-        "applied": true,
-        "note": "applied",
-        "rationale": "The strait is rated CLOSED with throughput near zero (4 vs. 85 daily transits) and Brent above $100/bbl corroborates the closure signal; sulfur and ammonia fertilizer input flows from Gulf producers are effectively halted, satisfying both prongs of the rubric's level-2 threshold.",
-        "sources": [
-          "https://straits.live/briefs/2026-10-12",
-          "https://openknowledge.fao.org/server/api/core/bitstreams/1aafb5d8-39d1-481a-b1f8-25facaec3051/content",
-          "https://www.ifpri.org/blog/how-are-fertilizer-markets-coping-with-the-continued-closure-of-the-strait-of-hormuz/"
-        ],
-        "as_of": "2026-10-12",
-        "out_of_range": false,
-        "fact": "IMF PortWatch recorded 4 transits on Oct 4 vs. pre-crisis baseline of 85/day; Brent at ~$103-104/bbl; Gulf sulfur shipments collapsed to 147,000 MT in June vs. 11-year floor of 730,000 MT; FAO reports 3-4 Mt/month of fertilizer trade stalled; strait effectively closed since Feb 28 2026 with ongoing vessel attacks and deadlocked negotiations (straits.live, IFPRI, FAO/openknowledge, Oct 12 2026)",
-        "dissent": [],
-        "domain": "Physical & Resource Limits",
-        "crosscheck": null,
-        "parse": null,
-        "vintage": null,
-        "citecheck": {
-          "verdict": "not_found",
-          "url": "https://straits.live/briefs/2026-10-12"
-        },
-        "tier": "ok"
-      },
-      {
-        "id": "mine_disruptions",
-        "label": "Major mine disruptions (0 none / 1 some / 2 cluster)",
-        "story": "Copper & the electrification deficit",
-        "set": 5,
-        "value": 2,
-        "confidence": "high",
-        "applied": true,
-        "note": "applied",
-        "rationale": "Three named top-20 mines (Grasberg, Kamoa-Kakula, Centinela) have confirmed, physically measured production cuts currently active, satisfying the >=3 threshold; additionally, multiple institutions (Goldman Sachs, BMI) have explicitly forecast a market deficit attributable to these combined losses, satisfying both prongs of the rubric's level-2 definition.",
-        "sources": [],
-        "as_of": "2026-10-12",
-        "out_of_range": false,
-        "fact": "Three confirmed major-mine disruptions active simultaneously: (1) Grasberg Block Cave (world #2) running at ~60% of capacity during phased ramp-up following Sep 2025 mud rush, with 2026 output ~35% below pre-incident forecast per Freeport 10-Q filed 2026; (2) Kamoa-Kakula (top-5 globally) 2026 guidance cut from 420,000 t to 290,000-330,000 t after 2025 seismic/flood event plus a 56-day smelter shutdown in Q2 2026 (mining.com, April 1 2026; Ivanhoe Q2 2026 release); (3) Antofagasta Centinela strike by 709 workers since Oct 7 2026, mining/haulage/development disrupted with unions projecting ~50% output cut in November (northernminer.com, discoveryalert.com, Oct 8-12 2026). BMI revised 2026 copper deficit from 72,000 t to 400,000 t citing these disruptions; Cochilco forecasts 5.27 Mt Chilean output, lowest since 2003 (discoveryalert.com, Oct 12 2026).",
-        "dissent": [],
-        "domain": "Physical & Resource Limits",
-        "crosscheck": null,
-        "parse": "repaired",
-        "vintage": null,
-        "citecheck": null,
-        "tier": "ok"
+        "stale_guard": null,
+        "tier": "ok",
+        "why": []
       }
     ]
   },
@@ -3272,14 +3365,15 @@
     "live_total": 19,
     "fell_back": 0,
     "agent_last": "2026-10-12",
-    "agent_days_ago": 0,
-    "agent_flags": 33,
-    "offline": false
+    "agent_days_ago": 1,
+    "agent_flags": 10,
+    "offline": false,
+    "ledger_ok": true
   },
   "aggregates_trend": {
     "overall": {
       "prev": 6.7,
-      "since": "2026-10-02",
+      "since": "2026-10-06",
       "change": 0.4,
       "crosses_methodology": false,
       "ref_version": "2.0",
@@ -3777,8 +3871,8 @@
       {
         "id": "vix",
         "label": "VIX",
-        "value": 14.84,
-        "as_of": "2026-10-09",
+        "value": 15.21,
+        "as_of": "2026-10-12",
         "unit": "",
         "note": "Expected US stock-market volatility - the most-watched fear gauge. Calm markets usually sit below ~20.",
         "url": "https://fred.stlouisfed.org/series/VIXCLS"

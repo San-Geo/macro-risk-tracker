@@ -99,12 +99,12 @@
     },
     "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
       "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
-      "summary": "Q2 2026 earnings season confirmed that AI infrastructure investment is accelerating sharply but increasingly financed through debt issuance and off-balance-sheet structures, amplifying long-end Treasury supply pressure and creating a feedback loop between tech valuations and credit markets flagged by Amundi and other major houses. The 30-year Treasury yield reached its highest since 2007 in the same week as the Fed hike.",
-      "as_of": "2026-09-16",
+      "summary": "In its October 13 WEO and associated communications, the IMF for the first time explicitly warned that borrowing linked to AI investment carries financial stability risks, noting that financial markets have stayed 'largely calm' in part due to 'AI-related exuberance' that may not reflect fundamentals. The Fund urged policymakers to monitor AI-related leverage, flagging that benefits of AI demand are unevenly distributed and could reverse if capex does not translate into revenue.",
+      "as_of": "2026-10-13",
       "sources": [
-        "https://research-center.amundi.com/article/global-investment-views-september-2026",
-        "https://www.ishares.com/us/insights/portfolio-insights/fed-outlook-rates-kevin-warsh-fixed-income-2026",
-        "https://www.schwab.com/learn/story/fed-hikes-whats-next-treasury-yields"
+        "https://www.cnbc.com/2026/10/12/imf-world-bank-annual-meetings-october-bangkok-asia-.html",
+        "https://abcnews.com/International/wireStory/imf-raises-forecast-world-growth-year-economies-slow-137214411",
+        "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026"
       ],
       "materiality": "medium",
       "classification": "existing_indicator",
@@ -112,12 +112,12 @@
       "target_indicator": "AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Amundi's direct Q2 observation that AI infrastructure build-out is 'increasingly through debt financing and off-balance sheet positions' and is 'adding to long-end supply pressure' is a material update to s8_ai_capex. The capex-vs-revenue gap indicator should move toward 2 (widening fast) as debt-financed AI capex at a moment of rising rates tightens the circularity risk. The 30-year Treasury at a 19-year high simultaneously raises GPU-backed debt refinancing stress. This is one of the most systemically novel developments of the past week.",
+      "rationale": "The IMF's first formal institutional warning about AI-related debt and 'AI exuberance' masking market complacency is a direct, high-credibility signal that upgrades the s8_ai_capex qualitative indicator 'AI capex-vs-revenue gap concern' from its current level toward '2 \u2014 widening fast.' When the IMF's chief economist names a risk category in the flagship WEO, it typically precedes regulatory and rating-agency attention; the tracker should record this as a sentiment/institutional escalation even if underlying capex data has not yet moved.",
       "status": "pending",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-13",
       "id": "bofa-estimates-ai-hyperscaler-capex-approaching--36c944",
-      "sightings": 2
+      "sightings": 3
     },
     "eba-june-2026-risk-assessment-eu-eea-headline-in-61a55e": {
       "headline": "EBA June 2026 Risk Assessment: EU/EEA headline inflation rising to 3.0\u20133.1% on energy shock; EA GDP slowing to 0.9%; bank-NBFI linkages up 10.4% YoY \u2014 energy-driven credit risk spreading beyond directly exposed sectors",
@@ -200,14 +200,13 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The 30-year JGB yield touched a record 4.235% on Oct 5 (up 87bps YoY), driven by fiscal fears around PM Takaichi's stimulus agenda and Middle-East-linked inflation. A relaunched DOGE-style review of 201 government funds targeting \u00a57 trillion yielded only 3 abolition proposals in its first round, while record budget requests of \u00a5143 trillion dwarf the \u00a540 trillion issuance cap Takaichi has pledged.",
-      "as_of": "2026-10-07",
+      "summary": "The 30-year JGB yield reached 4.04% on October 13, 2026 \u2014 the highest in the MOF's series back to 1999 \u2014 and the 10-year touched 3.097% in early October, its highest since August 1996. The US-Japan 30Y spread has compressed to ~120 bps, the risk-adjusted carry on a vanilla short-yen position has fallen to ~2.1% annualised vs 6.4% in early 2024, and Japanese life insurers are now adding domestic duration at every auction.",
+      "as_of": "2026-10-13",
       "sources": [
-        "https://www.indexbox.io/blog/japan-pm-takaichi-pledges-bond-issuance-control-as-30-year-jgb-yield-hits-record-4235/",
-        "https://investinglive.com/news/japan-reboots-doge-style-spending-review-to-fund-takaichi-pledges-as-jgb-yields-climb/",
-        "https://finance.yahoo.com/economy/policy/articles/takaichi-says-japan-may-review-063447010.html",
         "https://tradingeconomics.com/japan/30-year-bond-yield",
-        "https://finance.yahoo.com/economy/policy/articles/takaichi-tells-japanese-investors-rest-223351303.html"
+        "https://www.indrastra.com/2026/10/japan-has-left-zero-rate-world-what.html",
+        "https://www.w1m.com/insights/the-yen-carry-trade-approaching-a-tipping-point/",
+        "https://deluair.com/consultancy/insights/japan-policy-normalization-2026"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -215,12 +214,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 30Y JGB yield is a direct tracked indicator for s2_japan and just set an all-time record. The Takaichi plan financing clarity indicator should move to '1 unclear' given the spending review's thin output (3 proposals from 120 tax breaks reviewed), the \u00a5143tn vs \u00a540tn gap, and Nomura's warning that rhetorical fiscal discipline does not equal policy adjustment. The BOJ at 1.25% (31-year high) is also compressing carry-trade viability (USD/JPY relevant). Multiple s2 indicators are simultaneously stressed.",
+      "rationale": "The 30Y JGB yield is a direct tracked indicator for s2_japan. At 4.04% it has broken through the 'danger zone' thresholds analysts flagged (3.0\u20133.5% range) and is 81 bps above a year ago. The carry-trade math deterioration (2.1% annualised risk-adjusted carry vs 6.4% in 2024) and Japanese lifer repatriation flows are now live risks, not hypothetical. The tracker's 30Y JGB indicator needs an immediate alert-level update; this is the single most material s2_japan data point of the past 7 days.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-13",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 39
+      "sightings": 40
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -9275,10 +9274,156 @@
       "last_seen": "2026-10-12",
       "sightings": 1,
       "id": "global-sovereign-bond-term-premium-surge-us-10y--cf8f60"
+    },
+    "strait-of-hormuz-remains-contested-brent-hit-114-c74260": {
+      "headline": "Strait of Hormuz remains contested: Brent hit $114/bbl in September; EIA forecasts $105/bbl Q4 2026; Saudi East-West pipeline attacked",
+      "summary": "EIA's October 6 STEO reports Brent averaged $114/bbl in September after attacks on Saudi Arabia's East-West pipeline temporarily halted the key Hormuz bypass route; crude shut-ins are still estimated at 4.5 mb/d in Q4 2026. Simultaneously, the Mecca Joint Defense Agreement was invoked for the first time in October 2026 following fresh Houthi strikes on Saudi infrastructure, threatening to widen the conflict to the Red Sea corridor as well.",
+      "as_of": "2026-10-06",
+      "sources": [
+        "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+        "https://www.cfr.org/articles/another-hormuz-the-red-seas-threat-to-the-global-economy",
+        "https://en.wikipedia.org/wiki/2026_Aramco_refinery_attack"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Middle East crude shut-in volume (mb/d, EIA estimate)",
+        "type": "band",
+        "rubric": "0 = <1 mb/d (normal); 1 = 1\u20134 mb/d (disrupted); 2 = >4 mb/d (severe, as now at 4.5 mb/d)",
+        "sources": [
+          "https://www.eia.gov/outlooks/steo/report/global_oil.php"
+        ],
+        "suggested_weight": 0.3
+      },
+      "proposed_story": null,
+      "rationale": "s20_sea_lanes tracks Hormuz/Red Sea status as an ordinal 0/1/2 flag and WTI crude price, but has no indicator capturing the physical volume of supply knocked offline. With 4.5 mb/d still shut-in in Q4 2026 \u2014 the largest sustained disruption in history per the World Bank \u2014 the existing binary status flag is insufficient granularity. The pipeline attack also opens a new bypass-route vulnerability that the existing rubric does not address. Adding a mb/d shut-in indicator would give the tracker a continuous, source-able signal tied directly to EIA's monthly STEO.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "strait-of-hormuz-remains-contested-brent-hit-114-c74260"
+    },
+    "mecca-joint-defense-agreement-invoked-for-first--8869b8": {
+      "headline": "Mecca Joint Defense Agreement invoked for first time (October 2026) after Houthi attacks on Saudi Arabia",
+      "summary": "The trilateral Mecca Joint Defense Agreement between Pakistan, Saudi Arabia, and Turkey was invoked for the first time in October 2026 following a series of Houthi drone and missile strikes on Saudi infrastructure. Yemen's internationally recognized government simultaneously launched 'Operation Dawn of Yemen', a large-scale counteroffensive targeting Houthi-held Red Sea coastal territory, risking further escalation of a second maritime chokepoint.",
+      "as_of": "2026-10-09",
+      "sources": [
+        "https://www.cfr.org/articles/another-hormuz-the-red-seas-threat-to-the-global-economy"
+      ],
+      "materiality": "high",
+      "classification": "new_risk",
+      "target_story": null,
+      "target_indicator": null,
+      "proposed_indicator": null,
+      "proposed_story": {
+        "name": "Gulf War Spillover \u2014 Regional Coalition Escalation Risk",
+        "why": "The invocation of the Mecca Joint Defense Agreement introduces a multi-state military alliance dynamic not captured by any existing story. If Pakistan (a nuclear state) becomes operationally entangled alongside Saudi Arabia and Turkey against Houthi-Iranian forces, the conflict crosses a systemic threshold: it is no longer a bilateral US-Israel-Iran war but a regional coalition war with nuclear overhang, direct implications for Pakistan's fiscal stability (IMF program), and cascading effects on LNG/oil routes, food/fertilizer supply chains (Pakistani wheat imports), and EM sovereign spreads. None of s20_sea_lanes, s18_food_fertilizer, or s4_dev_debt individually captures a nuclear-armed state's entry into the conflict as a formal co-belligerent.",
+        "proposed_level": 7,
+        "set": "Set 4",
+        "indicators": [
+          {
+            "label": "Mecca JDA activation status (0 = dormant / 1 = invoked-non-kinetic / 2 = kinetic coalition operations)",
+            "type": "band",
+            "rubric": "0 = agreement not activated; 1 = invoked for diplomatic/logistical support (current); 2 = Pakistani or Turkish forces engaged in active combat operations",
+            "sources": [
+              "https://www.cfr.org/articles/another-hormuz-the-red-seas-threat-to-the-global-economy"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Pakistan sovereign CDS 5Y (bps)",
+            "type": "value",
+            "rubric": "Rising spread signals market pricing of fiscal/conflict stress on the nuclear-armed coalition partner; threshold >800 bps = high alert",
+            "sources": [
+              "https://www.aljazeera.com/news/2026/10/11/war-and-high-debt-to-dominate-imf-world-bank-meetings-in-bangkok"
+            ],
+            "suggested_weight": 0.35
+          },
+          {
+            "label": "Red Sea container transit volume (% of pre-crisis baseline)",
+            "type": "value",
+            "rubric": "0 = >80% of baseline (near-normal); 1 = 50\u201380% (disrupted); 2 = <50% (severely disrupted, as currently ~49%)",
+            "sources": [
+              "https://carraglobe.com/strait-of-hormuz-closure-2026/"
+            ],
+            "suggested_weight": 0.3
+          }
+        ]
+      },
+      "rationale": "The first-ever invocation of a formal multilateral defense treaty in response to the Iran war is a qualitative escalation that no existing story tracks. It introduces Pakistan (nuclear state, IMF program country, large wheat importer) as a potential direct participant, creates a new military-alliance feedback loop, and threatens to transform the Red Sea from a contested to a fully blocked chokepoint. This materially affects s4_dev_debt, s18_food_fertilizer, and s20_sea_lanes simultaneously, warranting its own story node.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "mecca-joint-defense-agreement-invoked-for-first--8869b8"
+    },
+    "imf-weo-bangkok-oct-13-global-public-debt-near-p-bdad2c": {
+      "headline": "IMF WEO Bangkok (Oct 13): global public debt near post-WWII highs; developing nations face $400bn external payments in 2026",
+      "summary": "The IMF's October 2026 WEO, released in Bangkok today, warns that global public debt is at its highest since World War II and will exceed 100% of GDP before 2030; developing countries collectively face $400bn in external debt payments this year, with interest already exceeding 10% of revenue on average. The Fund explicitly flagged that energy-importer EMDEs are being squeezed simultaneously by $96/bbl average oil prices and high refinancing costs.",
+      "as_of": "2026-10-13",
+      "sources": [
+        "https://www.cnbc.com/2026/10/12/imf-world-bank-annual-meetings-october-bangkok-asia-.html",
+        "https://www.aljazeera.com/news/2026/10/11/war-and-high-debt-to-dominate-imf-world-bank-meetings-in-bangkok",
+        "https://abcnews.com/International/wireStory/imf-raises-forecast-world-growth-year-economies-slow-137214411"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "EM external debt service pressure index (IMF/World Bank: 0 = manageable / 1 = rising / 2 = cluster of missed payments or restructurings)",
+        "type": "band",
+        "rubric": "Combines: (a) share of EMDEs with interest>10% of revenue, (b) new IMF emergency programs activated in past 90 days, (c) missed coupon events. Score 2 if $400bn+ in annual payments coincides with commodity shock \u2014 current reading is '2'.",
+        "sources": [
+          "https://www.aljazeera.com/news/2026/10/11/war-and-high-debt-to-dominate-imf-world-bank-meetings-in-bangkok",
+          "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026"
+        ],
+        "suggested_weight": 0.35
+      },
+      "proposed_story": null,
+      "rationale": "s4_dev_debt already tracks the US dollar index, US 10Y real yield, and a qualitative IMF-programs indicator. The IMF's Bangkok data point \u2014 $400bn external payments wall for developing nations, interest >10% of revenue on average, post-WWII debt levels \u2014 is a material new quantification of the stress that the existing IMF-programs indicator only partially captures. A formal 'EM external debt service pressure index' would give the tracker a forward-looking, IMF-sourced composite that fires before missed coupons appear in headlines.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "imf-weo-bangkok-oct-13-global-public-debt-near-p-bdad2c"
+    },
+    "us-china-60bn-tariff-cut-list-published-post-tru-718b47": {
+      "headline": "US-China $60bn tariff-cut list published post Trump-Xi summit; trade truce expiry November 10, 2026 creates cliff-edge risk",
+      "summary": "Following the late-September Trump-Xi Washington summit, the US and China released lists of goods recommended for tariff cuts on $30bn of trade each way, covering 77 Chinese product categories and 1,619 US goods. However, the underlying IEEPA-replacement 10% tariff stop-gap measure is set to expire on November 10, 2026, and no agreement on a formal truce extension has been announced, creating a near-term cliff-edge for US-China trade policy.",
+      "as_of": "2026-09-28",
+      "sources": [
+        "https://www.aljazeera.com/economy/2026/9/28/us-china-list-goods-recommended-for-tariff-cuts-following-trump-xi-summit",
+        "https://time.com/article/2026/09/29/us-china-reciprocal-tariffs-cut-trade-goods-60-billion/",
+        "https://www.china-briefing.com/news/us-china-tariff-rates-2025/"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s5_china_deflation",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US-China trade truce continuity (0 = extended / 1 = expiring-imminent / 2 = lapsed-tariffs-ratcheting)",
+        "type": "band",
+        "rubric": "0 = truce formally extended with clear timeline; 1 = truce within 30 days of expiry with no announced extension (current: Nov 10 expiry, no deal); 2 = truce lapsed and escalatory tariffs re-applied",
+        "sources": [
+          "https://www.china-briefing.com/news/us-china-tariff-rates-2025/",
+          "https://time.com/article/2026/09/29/us-china-reciprocal-tariffs-cut-trade-goods-60-billion/"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "s5_china_deflation tracks new tariff/anti-dumping actions but has no indicator for the binary cliff-edge of truce expiry. The November 10 deadline is 28 days away and a lapse would immediately ratchet baseline China tariffs back toward pre-truce levels, directly amplifying China's deflationary export pressure and potentially triggering CNY depreciation \u2014 the two core s5 indicators. A truce-continuity flag is a well-defined, trackable leading indicator with a hard expiry date.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "us-china-60bn-tariff-cut-list-published-post-tru-718b47"
     }
   },
-  "generated": "2026-10-12",
+  "generated": "2026-10-13",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 284
+  "new_count": 4,
+  "pending_count": 288
 }
