@@ -6,6 +6,12 @@ name: daily-risk-tracker
 #     inside the run). SINGLE cron on purpose: the old two-cron design (weekdays + Mondays
 #     at the same minute) fired twice on Mondays and the concurrency guard cancelled one at
 #     random - making the Monday agent pass a coin flip.
+#   * CATCH-UP: GitHub sometimes drops a scheduled run outright (Mon 2026-10-05 never ran,
+#     so that week had no agent pass). Any scheduled run now ALSO runs the agent when the
+#     last agent pass is 7+ days old - a missed Monday is made up the next weekday, and
+#     the weekly API cost stays the same (one agent pass per week).
+# Grading the track record: Run workflow -> fill in grade_episode / grade / grade_note.
+# No hand-editing of data/resolution_ledger.json (a missing comma froze it for 12 weeks).
 # Manual runs from the Actions tab are FREE by default (data refresh + redeploy only);
 # tick the "run_agent" box to also run the AI agent (uses API credits).
 on:
@@ -18,11 +24,27 @@ on:
         description: "Run the AI rating agent (uses API credits). Leave unchecked to only refresh data + redeploy the site - no agent, no API cost."
         type: boolean
         default: false
+      grade_episode:
+        description: "OPTIONAL - grade a closed Track record episode: paste its ID from the dashboard (e.g. s6_rare_earths-2026-06-30). Leave blank otherwise."
+        type: string
+        default: ""
+      grade:
+        description: "Grade for that episode"
+        type: choice
+        options: ["(none)", "materialized", "contained", "faded"]
+        default: "(none)"
+      grade_note:
+        description: "One-line reason for the grade (shown publicly next to it)"
+        type: string
+        default: ""
 
-# Only one run at a time; a new run supersedes a stuck one.
+# Only one run at a time. A new run WAITS for the current one instead of cancelling it,
+# so a manual run (e.g. grading) can never kill a scheduled run mid-way - with GitHub's
+# multi-hour schedule delays you can't predict when that one is executing.
+# (A stuck run is still capped by timeout-minutes below.)
 concurrency:
   group: tracker
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -47,9 +69,12 @@ jobs:
         id: mode
         run: |
           DOW=$(date -u +%u)   # 1 = Monday
-          if [ "${{ github.event.inputs.run_agent }}" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && [ "$DOW" = "1" ]; }; then
+          # Days since the last agent pass (99 if it can't be read -> treated as overdue).
+          AGE=$(python3 -c "import json,datetime as d; g=json.load(open('data/agent_assessments.json')).get('generated',''); print((d.datetime.now(d.timezone.utc)-d.datetime.fromisoformat(g)).days if g else 99)" 2>/dev/null || echo 99)
+          echo "Last agent pass: $AGE day(s) ago"
+          if [ "${{ github.event.inputs.run_agent }}" = "true" ] || { [ "${{ github.event_name }}" = "schedule" ] && { [ "$DOW" = "1" ] || [ "$AGE" -ge 7 ]; }; }; then
             echo "flag=--agent" >> "$GITHUB_OUTPUT"
-            echo "Agent: ON for this run (you ticked run_agent, or it's a Monday scheduled run)"
+            echo "Agent: ON for this run (you ticked run_agent, it's a Monday scheduled run, or the last pass is $AGE days old - catch-up)"
           else
             echo "flag=" >> "$GITHUB_OUTPUT"
             echo "Agent: OFF - market refresh + redeploy only, no API cost"
@@ -57,6 +82,23 @@ jobs:
 
       - name: Config self-test (guard)
         run: python tests/selftest.py
+
+      - name: Grade a Track record episode (only if filled in on the Run workflow form)
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.grade_episode != ''
+        continue-on-error: true   # a typo in the ID must never block the daily update
+        env:
+          EP: ${{ github.event.inputs.grade_episode }}
+          GR: ${{ github.event.inputs.grade }}
+          NOTE: ${{ github.event.inputs.grade_note }}
+        run: |
+          EP=$(echo "$EP" | xargs)
+          if [ "$GR" = "(none)" ]; then
+            echo "::error title=Grade not set::You entered an episode ID but left 'grade' at (none). Pick materialized, contained or faded."
+            exit 1
+          fi
+          python src/ledger.py --grade "$EP" "$GR" --note "$NOTE" \
+            || { echo "::error title=Grading failed::Check the ID (copy it from the dashboard's Track record) - open episodes cannot be graded."; exit 1; }
+          echo "::notice title=Graded::$EP -> $GR"
 
       - name: Run tracker
         env:
@@ -105,7 +147,7 @@ jobs:
           fi
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dashboard
           # unique per run AND attempt: re-running a failed run would otherwise leave
@@ -115,7 +157,7 @@ jobs:
       - name: Deploy to Pages
         id: deploy1
         continue-on-error: true
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
         with:
           artifact_name: pages-${{ github.run_id }}-${{ github.run_attempt }}
 
@@ -128,6 +170,6 @@ jobs:
 
       - name: Deploy to Pages (retry)
         if: steps.deploy1.outcome == 'failure'
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
         with:
           artifact_name: pages-${{ github.run_id }}-${{ github.run_attempt }}
