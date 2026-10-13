@@ -1,35 +1,34 @@
-FIX BUNDLE - 2026-10-13
-=======================
-Upload these folders/files to the repo root (GitHub -> Add file -> Upload files ->
-drag in src, config, data, dashboard and FRAMEWORK.md). They replace existing files.
-Then paste daily.yml into .github/workflows/daily.yml (uploads can't reach .github/).
-Then Actions -> daily-risk-tracker -> Run workflow (leave run_agent unticked = free)
-to publish. If a run is already in progress, wait for it to finish first.
+AUTO-GRADING BUNDLE - 2026-10-13
+================================
+1. Open grades.csv here and review the 5 rows (the walkthrough grades). Delete any row
+   you disagree with - that episode is then graded automatically instead.
+2. Upload everything to the repo root (Add file -> Upload files -> drag in src, config,
+   dashboard, grades.csv, METHODOLOGY.md).
+3. Paste daily.yml into .github/workflows/daily.yml.
+4. Actions -> Run workflow (run_agent unticked = free) to publish.
 
-WHAT CHANGED
-data/resolution_ledger.json  Rebuilt from history.csv (the old file had a missing comma
-                             and had been frozen since Jul 22). 13 episodes: 5 open,
-                             8 closed awaiting grade. Japan's "faded" grade is shown as
-                             withdrawn (it never closed under the one-week rule).
-src/ledger.py                Episodes close only after 5 consecutive runs below High
-                             ("cooling" in between). A broken file now fails loudly.
-src/main.py                  Ledger failure = red annotation + dashboard warning.
-                             Review queue: dissent alone no longer flags (~33 -> ~10/week);
-                             recovered/unsourced reads and real changes do.
-src/narrative.py             The brief explains moves ONLY with indicators that changed band.
-src/agent.py                 Recovers sources from cut-off replies; token headroom (billed
-                             only if used); "A to B" as-of ranges keyed on A; a band can't
-                             RISE on evidence >90 days old (held for review); prompt asks
-                             for current conditions; API error text is logged.
-config/framework.yaml        truce_status: Jan 10 2027 expiry; entity listings no longer
-                             double-counted (they belong to re_blacklist).
-dashboard/index.html         Footer/help "—" text, "\203A" headings, raw ** in the brief,
-                             countdown (11:37 UTC + "queued at GitHub"), tab links, favicon,
-                             one VIX number, review-table columns, ledger IDs + cooling.
-daily.yml                    Agent catch-up if last pass is 7+ days old; grade episodes from
-                             the Run workflow form; a new run waits instead of cancelling;
-                             Pages actions bumped to v5 (Node 24).
+HOW GRADING WORKS NOW
+- An episode closes after 5 runs below High. 30 days later (follow-through window)
+  it becomes due.
+- On the weekly agent run, two independent agents (Claude + ASI1) mark the story's
+  tests in config/grading.yaml as met / not met, each with a dated source.
+- Code computes the grade from those tests. If both agents' tests give the same
+  grade with at least medium confidence, it is applied ("auto-graded, confirmed").
+  Otherwise the dashboard shows "owner decides" with both readings.
+- YOUR grade always wins: add a row to grades.csv (episode_id,grade,note,timing)
+  or use the Run workflow form. Rows in grades.csv are re-applied every run.
+- Timing (only for materialized): concurrent = already under way when the episode
+  opened; lead = happened after. Brief crossings (<= 1 week, same signal flipped
+  back) are tagged automatically.
 
-GRADING AN EPISODE
-Actions -> daily-risk-tracker -> Run workflow -> paste the ID shown under the episode
-on the dashboard's Track record -> pick a grade -> add a one-line note -> Run.
+FILES
+src/grader.py (new)        the two-agent grader; the AI never picks the grade
+config/grading.yaml (new)  the rubric: 21 stories x concrete materialized/contained tests
+grades.csv (new)           owner grades (pre-filled with the walkthrough)
+src/ledger.py              grades.csv, triggers + brief-crossing flag, owner precedence
+src/main.py                wires grading into the weekly agent run
+src/agent.py               shared cross-check routing (no behaviour change)
+src/narrative.py           the brief must use the exact number of High stories
+dashboard/index.html       Track record shows auto / owner / watching / owner-decides
+METHODOLOGY.md             new section 9 on grading (v1.1)
+daily.yml                  GRADER_MODEL setting + updated notes

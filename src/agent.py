@@ -265,10 +265,11 @@ def _post_json(req, timeout=120):
     raise RuntimeError("no response from API")
 
 
-def _call_anthropic(prompt, model, api_key):
+def _call_anthropic(prompt, model, api_key, max_uses=4, max_tokens=None):
     body = json.dumps({
-        "model": model or AGENT_MODEL, "max_tokens": int(os.environ.get("AGENT_MAX_TOKENS", "3000") or 3000),
-        "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
+        "model": model or AGENT_MODEL,
+        "max_tokens": max_tokens or int(os.environ.get("AGENT_MAX_TOKENS", "3000") or 3000),
+        "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": max_uses}],
         "messages": [{"role": "user", "content": prompt}],
     }).encode()
     req = urllib.request.Request(
@@ -282,12 +283,12 @@ def _call_anthropic(prompt, model, api_key):
     return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
 
 
-def _call_asi1(prompt, model, api_key):
+def _call_asi1(prompt, model, api_key, max_tokens=1500):
     """ASI1 (asi1.ai) is an OpenAI-compatible, agentic endpoint - a genuinely
     independent provider for the cross-check. It does its own research; there is no
     Anthropic-style web_search tool to pass."""
     body = json.dumps({
-        "model": model or "asi1", "max_tokens": 1500, "temperature": 0, "stream": False,
+        "model": model or "asi1", "max_tokens": max_tokens, "temperature": 0, "stream": False,
         "messages": [{"role": "user", "content": prompt}],
     }).encode()
     req = urllib.request.Request(
@@ -363,6 +364,27 @@ def _in_range(value, spec):
     return True, ""
 
 
+def resolve_crosscheck(api_key):
+    """Second-opinion routing, shared by the rating agent and the episode grader.
+    AGENT_MODEL_2 names the model; an "asi1*" model uses the ASI1 provider (key in
+    ASI1_API_KEY) for genuine cross-provider independence. Anything else stays on
+    Anthropic. Tolerates common mis-entries: "AGENT_MODEL_2=asi1" (KEY=value form) or
+    a value wrapped in quotes/backticks/spaces. Returns (provider, key, model)."""
+    m2 = (os.environ.get("AGENT_MODEL_2") or "").strip().strip("`\"'").strip()
+    if "=" in m2:
+        m2 = m2.split("=")[-1].strip().strip("`\"'").strip()
+    if m2 and m2.lower().startswith("asi1"):
+        asi1_key = os.environ.get("ASI1_API_KEY")
+        if asi1_key:
+            return "asi1", asi1_key, m2
+        print("  (AGENT_MODEL_2 is asi1 but ASI1_API_KEY is unset; "
+              "cross-check falls back to the primary model)")
+        return "anthropic", api_key, None
+    if m2:
+        return "anthropic", api_key, m2
+    return "anthropic", api_key, None
+
+
 def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5):
     """Assess each framework indicator. Returns (values_to_apply, log_dict)."""
     overrides = overrides or set()
@@ -372,26 +394,7 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
     ind_sets = load_ind_sets()
     domains = load_domains()
     xcheck_min = float(os.environ.get("AGENT_CROSSCHECK_MIN_WEIGHT", "1.5") or 1.5)
-    # Second-opinion routing for the cross-check. AGENT_MODEL_2 names the model;
-    # an "asi1*" model uses the ASI1 provider (key in ASI1_API_KEY) for genuine
-    # cross-provider independence. Anything else stays on Anthropic.
-    # Tolerate common mis-entries: a value pasted as "AGENT_MODEL_2=asi1" (KEY=value
-    # form) or wrapped in quotes/backticks/spaces -> reduce to just the model name.
-    m2 = (os.environ.get("AGENT_MODEL_2") or "").strip().strip("`\"'").strip()
-    if "=" in m2:
-        m2 = m2.split("=")[-1].strip().strip("`\"'").strip()
-    if m2 and m2.lower().startswith("asi1"):
-        asi1_key = os.environ.get("ASI1_API_KEY")
-        if asi1_key:
-            xprovider, xkey, xmodel = "asi1", asi1_key, m2
-        else:
-            xprovider, xkey, xmodel = "anthropic", api_key, None
-            print("  (AGENT_MODEL_2 is asi1 but ASI1_API_KEY is unset; "
-                  "cross-check falls back to the primary model)")
-    elif m2:
-        xprovider, xkey, xmodel = "anthropic", api_key, m2
-    else:
-        xprovider, xkey, xmodel = "anthropic", api_key, None
+    xprovider, xkey, xmodel = resolve_crosscheck(api_key)
 
     # 1) Overrides and carry-forwards are instant; only the rest need a (slow) web call.
     to_assess = []

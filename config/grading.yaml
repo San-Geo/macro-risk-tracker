@@ -1,0 +1,367 @@
+# Track-record grading rubric
+# ===========================
+# Answers one question for every closed High episode: when the tracker said High,
+# what actually happened next?
+#
+# SAME PHILOSOPHY AS THE SCORING ENGINE: the AI only sets inputs, the rules decide.
+#   * Two independent agents each research the episode and mark every test below
+#     as met / not met, with a dated, sourced piece of evidence for each "met".
+#   * The GRADE is then computed by code from those test results (decision_order),
+#     never chosen by the AI.
+#   * The grade is applied automatically only if both agents' results produce the
+#     SAME grade with at least medium confidence. Otherwise it goes to the owner.
+#   * An owner's grade (grades.csv or the Actions form) always wins and is never
+#     overwritten.
+#
+# Edit this file to sharpen a test. Bump `version` when you do - every grade records
+# the rubric version it was made under, so the record stays auditable.
+
+version: "1.0"
+
+# How long after an episode closes we keep watching before grading it. A risk that
+# materializes two weeks after the score cooled still counts as "what happened next".
+window_days_after_close: 30
+
+grades:
+  materialized: >-
+    At least one MATERIALIZED test for the story was met by an event inside the
+    evaluation window: the specific adverse outcome the story warns about happened.
+  contained: >-
+    No materialized test was met, but at least one CONTAINED test was: real,
+    measurable stress showed up, and it was absorbed - by policy, backstops, or
+    the market - before it became the outcome the story warns about.
+  faded: >-
+    Neither: the pressure receded without measurable stress beyond what was already
+    priced in when the episode opened.
+
+decision_order: >-
+  Any materialized test met -> materialized. Otherwise any contained test met ->
+  contained. Otherwise -> faded.
+
+timing:
+  lead: >-
+    The materializing event began on or after the day the episode opened - the
+    tracker was at High before it happened.
+  concurrent: >-
+    The materializing event was already under way before the episode opened - the
+    tracker was reflecting it, not anticipating it. Still a correct call; just not
+    an early one. Reported separately so the record never overstates foresight.
+
+evidence_rules:
+  - "Evaluation window: from the episode's opening date to window_days_after_close days after it closed. Only conditions present inside that window can meet a test; a condition that began earlier but was still in force inside the window counts (and makes the timing 'concurrent')."
+  - "Every test marked met needs: a one-sentence description of the event, the date it began (onset), and at least one source URL. Prefer official data, regulators, central banks, exchanges, and major newswires. A claim you cannot source is NOT met."
+  - "Judge the real world, never this tracker's own scores or agent ratings - grading the tracker with its own readings would be circular."
+  - "Numeric thresholds are strict: 'at least 10%' means 10.0% or more on the stated measure."
+  - "Grade the story's own outcome. An adverse event that belongs to a different story does not meet this story's tests."
+  - "Be hindsight-neutral: grade what happened, not whether the call looked smart."
+
+confidence:
+  high: "Every test decision rests on primary or official sources and none is borderline."
+  medium: "The decisive test is clearly sourced, but at least one other decision is borderline or rests on a single secondary source."
+  low: "The decisive test could not be verified, or sources conflict. A low-confidence grade is never applied automatically."
+
+stories:
+  s1_basis_trade:
+    risk: Leveraged Treasury basis / relative-value positions unwind at once and break Treasury market liquidity.
+    materialized:
+      - id: M1
+        test: The Federal Reserve or Treasury takes an emergency or unscheduled action explicitly to restore Treasury market functioning (emergency purchases, a new facility, or an unscheduled liquidity operation).
+      - id: M2
+        test: The MOVE index closes above 150, or the 10-year Treasury yield moves 40bp or more within 5 trading days, with reporting attributing the move to forced deleveraging of basis or relative-value positions.
+      - id: M3
+        test: A hedge fund, dealer or other leveraged holder publicly fails, or is reported to have been forced to liquidate Treasury basis or swap-spread positions of USD 10bn notional or more.
+    contained:
+      - id: C1
+        test: MOVE closes between 130 and 150, SOFR minus EFFR reaches 15bp or more, or daily Standing Repo Facility usage reaches USD 25bn or more - without any materialized test being met.
+      - id: C2
+        test: The Fed, OFR, FSOC, BIS or IMF publicly warns of basis-trade deleveraging stress tied to a specific market episode inside the window.
+
+  s2_japan:
+    risk: Rising Japanese yields trigger yen repatriation and a global carry-trade unwind, or a disorderly JGB sell-off.
+    materialized:
+      - id: M1
+        test: USD/JPY falls 8% or more within 30 calendar days, with major reporting attributing global de-leveraging to a yen carry-trade unwind.
+      - id: M2
+        test: The Bank of Japan conducts an emergency or unscheduled JGB purchase operation, or explicitly halts or reverses its bond-purchase taper, to calm a JGB sell-off.
+      - id: M3
+        test: The 30-year JGB yield rises 40bp or more within 20 trading days alongside a failed or near-failed JGB auction (lowest bid-to-cover on record for that tenor, or an auction widely reported as a failure).
+    contained:
+      - id: C1
+        test: The 30-year JGB yield sets a new record high, or a 20-year-or-longer JGB auction is widely reported as weak (large tail or multi-year-low bid-to-cover), without a materialized test.
+      - id: C2
+        test: The Ministry of Finance cuts super-long JGB issuance, or the Bank of Japan adjusts its purchase plan, in response to market stress - and the stress eases.
+
+  s3_private_credit:
+    risk: Opaque private-credit marks break - redemptions overwhelm gates, funds fire-sell, and credit to mid-sized firms contracts.
+    materialized:
+      - id: M1
+        test: A private-credit fund or BDC with USD 5bn or more in assets fully suspends redemptions (beyond routine pro-rata caps), announces a wind-down, or sells loans in bulk at 10% or more below its own marks.
+      - id: M2
+        test: Three or more large private-credit vehicles (USD 5bn+) cut net asset value by 10% or more within one quarter.
+      - id: M3
+        test: A bank or insurer reports losses of USD 1bn or more on private-credit exposures, or a regulator takes emergency action over the sector; or US high-yield OAS closes above 5.0%.
+    contained:
+      - id: C1
+        test: Redemption requests exceed quarterly caps at one or more large funds and are pro-rated or gated, without a materialized test.
+      - id: C2
+        test: An authoritative private-credit default measure (Fitch, Moody's, Proskauer or KBRA) prints a new record high inside the window.
+      - id: C3
+        test: US high-yield OAS widens by 75bp or more within one month but stays at or below 5.0%.
+
+  s4_dev_debt:
+    risk: A cluster of developing-country sovereign defaults overwhelms the restructuring machinery and spreads through common creditors.
+    materialized:
+      - id: M1
+        test: Two or more sovereigns miss an external debt payment beyond the grace period, or announce a default or distressed restructuring, within any 6-month span that overlaps the window.
+      - id: M2
+        test: A broad emerging-market hard-currency sovereign spread index (e.g. JPMorgan EMBI Global Diversified) widens 150bp or more within one month.
+      - id: M3
+        test: Three or more countries request new IMF emergency or upper-credit-tranche financing within one quarter, citing external financing stress.
+    contained:
+      - id: C1
+        test: One sovereign misses a payment, launches a distressed exchange, or requests an IMF program, without a materialized test.
+      - id: C2
+        test: Emerging-market hard-currency spreads widen 75-149bp within one month, or major EM debt funds report outflows described as the largest in at least a year.
+
+  s5_china_deflation:
+    risk: China's factory-gate price swings (deflation or cost-push) are exported to the rest of the world, squeezing producers and triggering trade retaliation.
+    materialized:
+      - id: M1
+        test: China's official export price index (or customs unit-value index) moves 5% or more year-on-year in either direction for two consecutive months, with major reporting linking it to price spillover into trading partners.
+      - id: M2
+        test: The US, EU, Japan or India imposes a sector-wide tariff or safeguard on Chinese goods explicitly justified by Chinese overcapacity or price pressure (not by forced labour, security or other grounds).
+      - id: M3
+        test: The yuan moves 3% or more against the US dollar within one month.
+    contained:
+      - id: C1
+        test: China's PPI prints at or beyond +/-4% year-on-year, or three or more new anti-dumping or countervailing measures against Chinese goods are imposed by major economies within three months - without a materialized test.
+      - id: C2
+        test: Beijing announces a stimulus or pricing intervention (e.g. anti-involution capacity curbs) that is followed by an easing of the price swing.
+
+  s6_rare_earths:
+    risk: China's export controls tighten into denial - magnet and heavy-rare-earth supply to manufacturers halts and buyers panic.
+    materialized:
+      - id: M1
+        test: China announces a new export ban or licence suspension covering additional rare-earth elements or magnet categories, or denies rare-earth exports to an entire major economy. (Listings of individual named firms are a contained-level event - see C3.)
+      - id: M2
+        test: A major manufacturer (automotive, defence, electronics or robotics) publicly reports a production stoppage or cut attributed to rare-earth or magnet shortages.
+      - id: M3
+        test: A government invokes emergency powers to allocate or release rare earths or magnets (e.g. Defense Production Act allocation, strategic stockpile release) in response to an acute shortage.
+    contained:
+      - id: C1
+        test: The ex-China price of dysprosium or terbium oxide reaches 5x or more the China domestic price, or rises 50% or more within the window, without a materialized test.
+      - id: C2
+        test: Official or industry reporting documents licence delays, or Chinese rare-earth export volumes down 30% or more year-on-year, without production stoppages.
+      - id: C3
+        test: China adds named foreign companies to its export-control or unreliable-entity list in connection with rare earths or magnets.
+
+  s7_stablecoins:
+    risk: A run on a major stablecoin forces fire sales of its Treasury bill reserves and freezes crypto's dollar rails.
+    materialized:
+      - id: M1
+        test: A top-5 USD stablecoin trades 3% or more below its peg for more than 24 hours, or suspends or limits redemptions.
+      - id: M2
+        test: Net redemptions of USD 20bn or more across USD stablecoins within 30 days, with reporting of forced Treasury bill sales or bill-market dislocation.
+    contained:
+      - id: C1
+        test: A top-5 USD stablecoin deviates 0.5-3% from its peg and recovers within 24 hours, or total USD stablecoin supply falls 5% or more in a month.
+      - id: C2
+        test: A regulator takes formal enforcement action against a top-5 stablecoin issuer, or a GENIUS Act implementation failure is formally acknowledged, without a run.
+
+  s8_ai_capex:
+    risk: Debt-funded AI build-out meets a revenue shortfall - one credit event reprices all AI-adjacent borrowing and capex is cut.
+    materialized:
+      - id: M1
+        test: A data-centre operator, GPU-backed lender or AI-infrastructure borrower with USD 1bn or more of debt defaults, files for bankruptcy, or completes a distressed restructuring.
+      - id: M2
+        test: Two or more of the five largest hyperscalers cut capital-spending guidance within one quarter.
+      - id: M3
+        test: US investment-grade OAS closes at 1.6% or above, with AI-related issuers among the leading wideners.
+    contained:
+      - id: C1
+        test: A GPU-backed or data-centre debt deal is pulled, re-priced materially wider, or a borrower seeks covenant relief - without a materialized test.
+      - id: C2
+        test: One hyperscaler cuts capex guidance, or US investment-grade OAS reaches 1.4-1.6%.
+
+  s9_cre:
+    risk: Office-refinancing failures cluster into regional-bank failures and deposit flight.
+    materialized:
+      - id: M1
+        test: A US bank with USD 10bn or more in assets fails or receives emergency support, with commercial real estate losses a stated cause.
+      - id: M2
+        test: Three or more US banks fail within one quarter with commercial real estate a stated or widely reported cause.
+      - id: M3
+        test: The KBW Regional Bank Index falls 20% or more within one month, with reported deposit outflows from regional lenders.
+    contained:
+      - id: C1
+        test: CMBS office delinquency (Trepp) sets a new record, or a single smaller bank fails with commercial real estate as a stated cause.
+      - id: C2
+        test: A regional bank announces CRE losses or reserve builds large enough to move its shares 15% or more in a day, absorbed without contagion.
+
+  s10_france:
+    risk: French fiscal paralysis drives borrowing costs through crisis thresholds and reawakens the euro-area sovereign-bank doom loop.
+    materialized:
+      - id: M1
+        test: The 10-year OAT-Bund spread closes above 1.20 percentage points.
+      - id: M2
+        test: The ECB activates its Transmission Protection Instrument or conducts targeted purchases of French debt.
+      - id: M3
+        test: The government falls and a rating agency downgrades France, and the OAT-Bund spread widens 30bp or more within one month.
+    contained:
+      - id: C1
+        test: The government falls or loses a confidence vote, or a rating agency downgrades France, without a materialized test.
+      - id: C2
+        test: The OAT-Bund spread closes between 0.85 and 1.20 percentage points.
+
+  s11_consumer_debt:
+    risk: Subprime and BNPL stress spreads upward into charge-offs, lender pullback, and broad consumer weakness.
+    materialized:
+      - id: M1
+        test: The US unemployment rate's 3-month average rises 0.5 percentage points or more above its low of the previous 12 months (the Sahm-rule trigger).
+      - id: M2
+        test: A major US consumer lender, subprime auto lender or BNPL provider fails or files for bankruptcy, or multiple consumer ABS deals breach early-amortisation triggers.
+      - id: M3
+        test: Fitch's subprime auto ABS 60+ day delinquency index reaches 7.0% or more.
+    contained:
+      - id: C1
+        test: A consumer-delinquency measure (subprime auto 60+, credit-card or BNPL delinquency) sets a new record, without a materialized test.
+      - id: C2
+        test: Major lenders announce tightened consumer-credit standards or raised loss reserves citing deteriorating borrowers.
+
+  s12_gold_dedollar:
+    risk: A reserve-weaponization event accelerates central banks' shift from dollar assets to gold.
+    materialized:
+      - id: M1
+        test: The sovereign reserves of a G20 country are frozen, seized or sanctioned, or a major bloc launches live non-dollar settlement of reserve-scale transactions.
+      - id: M2
+        test: The dollar's share of global FX reserves (IMF COFER) falls 1.5 percentage points or more in one quarter, or gold rises 15% or more within one month.
+    contained:
+      - id: C1
+        test: Official declarations or summit communiques announce de-dollarization or alternative-settlement plans, without implementation inside the window.
+      - id: C2
+        test: Central-bank gold purchases (World Gold Council) are reported at a multi-year high for the quarter, or the COFER dollar share falls 0.4-1.49 points in a quarter.
+
+  s13_insurance:
+    risk: A mega-catastrophe season collides with insurers' retreat - property becomes uninsurable and stress hits mortgages and state backstops.
+    materialized:
+      - id: M1
+        test: A state insurer of last resort needs an emergency assessment or bailout, or a top-20 US property insurer becomes insolvent or is placed in receivership.
+      - id: M2
+        test: A single catastrophe or season produces USD 100bn or more in insured losses.
+      - id: M3
+        test: A US state suspends new homeowners policies market-wide, or regulators report mortgage delinquencies rising because borrowers cannot obtain insurance.
+    contained:
+      - id: C1
+        test: A large insurer announces non-renewals or exits a state or line, or insured catastrophe losses for an event reach USD 25bn or more, without a materialized test.
+      - id: C2
+        test: Regulators approve emergency rate increases or a state backstop expands materially.
+
+  s14_pensions:
+    risk: A rate spike forces leveraged pension strategies into a collateral-call spiral that needs a central-bank rescue.
+    materialized:
+      - id: M1
+        test: A central bank intervenes to stop a pension or LDI-driven bond sell-off (UK-2022 type).
+      - id: M2
+        test: A major economy enacts benefit cuts or a pension-reform shock that markets react to with a 25bp or more move in long-dated government yields within a week.
+    contained:
+      - id: C1
+        test: Pension funds or LDI managers report emergency collateral calls or forced asset sales, without central-bank intervention.
+      - id: C2
+        test: A major pension-reform proposal is formally tabled, or a large public pension's funded ratio falls 5 points or more, without a materialized test.
+
+  s15_ai_power:
+    risk: Data-centre demand outruns the grid - curtailments, queues and moratoria stall the build-out and turn it political.
+    materialized:
+      - id: M1
+        test: A government or grid operator orders curtailment of data-centre load during a declared grid emergency, or rolling outages are attributed to load growth.
+      - id: M2
+        test: Moratoria or pauses on new data-centre connections take effect in two or more major data-centre markets, or a major utility halts new large-load interconnections.
+    contained:
+      - id: C1
+        test: A grid operator issues emergency alerts or conservation appeals during peak demand that are met without curtailment.
+      - id: C2
+        test: One jurisdiction enacts a moratorium or large-load surcharge, or a published interconnection-queue study shows waits lengthening, without a materialized test.
+
+  s16_copper:
+    risk: A structural copper deficit meets a supply shock and prices ration demand across grids, vehicles and data centres.
+    materialized:
+      - id: M1
+        test: A force majeure, closure or disaster removes 2% or more of annual global mine supply, and copper prices rise 15% or more within one month or set a record high.
+      - id: M2
+        test: An exchange (LME, COMEX or SHFE) intervenes in a copper squeeze - position limits, delivery deferrals or a trading halt.
+    contained:
+      - id: C1
+        test: A major mine (top 20) declares force majeure or cuts guidance materially, without a materialized test.
+      - id: C2
+        test: Copper sets a new record high, or exchange inventories hit a multi-year low, absorbed without rationing or intervention.
+
+  s17_water:
+    risk: Severe drought hits a chip hub, a farm belt and cooling-dependent power at once, turning water into a binding constraint.
+    materialized:
+      - id: M1
+        test: A semiconductor fab or major industrial site confirms a production curtailment caused by water rationing.
+      - id: M2
+        test: A government declares a binding water shortage with mandated cuts for a major farm region (e.g. a Colorado River shortage tier 2 or higher).
+      - id: M3
+        test: Drought forces curtailment of hydro or thermal power generation large enough to trigger grid emergency measures.
+    contained:
+      - id: C1
+        test: Water rationing or restrictions are imposed in a chip hub or major farm region without confirmed production curtailment.
+      - id: C2
+        test: A key reservoir or basin reaches a record or multi-decade low, or a transboundary water dispute escalates diplomatically, without a materialized test.
+
+  s18_food_fertilizer:
+    risk: Fertilizer disruption cuts application, yields fall, grain prices spike, and food inflation becomes social and fiscal stress in import-dependent nations.
+    materialized:
+      - id: M1
+        test: The FAO Food Price Index rises 10% or more year-on-year, or 5% or more month-on-month.
+      - id: M2
+        test: Two or more major grain or fertilizer exporters impose new export bans or quotas within the window.
+      - id: M3
+        test: Food-price-driven unrest, emergency food-import financing, or food-emergency declarations occur in three or more import-dependent countries.
+    contained:
+      - id: C1
+        test: A major fertilizer price benchmark (urea, ammonia or DAP) rises 25% or more within three months, or fertilizer or input flows are documented as disrupted - while the FAO Food Price Index stays below a 10% year-on-year rise.
+      - id: C2
+        test: Governments adopt offsetting measures (fertilizer or input subsidies, priority port handling, stock releases) in response to fertilizer stress.
+
+  s19_lithography:
+    risk: Conflict or blockade around Taiwan halts leading-edge chip production and seizes every electronics supply chain.
+    materialized:
+      - id: M1
+        test: A blockade, quarantine, or military action around Taiwan disrupts commercial shipping or air traffic, or halts fab operations.
+      - id: M2
+        test: Export-control escalation cuts servicing of installed lithography tools in a major market, or a retaliatory ban on a critical input causes a confirmed fab stoppage.
+    contained:
+      - id: C1
+        test: Large-scale military exercises around Taiwan, or a formal diplomatic crisis, without disruption to shipping or production.
+      - id: C2
+        test: New semiconductor export controls or retaliatory measures are announced without a confirmed supply disruption.
+
+  s20_sea_lanes:
+    risk: A shipping chokepoint closes and freight, war-risk insurance and energy prices spike together; cable cuts do the same for data.
+    materialized:
+      - id: M1
+        test: Traffic through Hormuz, Bab el-Mandeb or Suez, Malacca, or the Taiwan Strait runs 50% or more below its pre-crisis baseline for 14 days or more.
+      - id: M2
+        test: Undersea cable cuts cause a multi-country internet or data outage lasting 7 days or more.
+      - id: M3
+        test: Brent crude closes at USD 100 or above, with war-risk insurance premiums reported at 1% of hull value or more for the affected route.
+    contained:
+      - id: C1
+        test: Attacks on shipping, threats, or temporary diversions occur but traffic stays within 50% of baseline, without a materialized test.
+      - id: C2
+        test: Undersea cables are damaged but repaired or rerouted within 7 days.
+
+  s21_clearinghouses:
+    risk: A clearing member defaults into a volatile market and the clearinghouse's loss waterfall turns plumbing into the crisis.
+    materialized:
+      - id: M1
+        test: A major central counterparty (CCP) declares a clearing-member default or draws on its default fund.
+      - id: M2
+        test: A central bank provides emergency liquidity explicitly to CCP members or a CCP to meet margin calls.
+    contained:
+      - id: C1
+        test: A major CCP raises initial margins 30% or more on benchmark contracts within one week, or a member's default is resolved without touching the default fund.
+      - id: C2
+        test: Regulators delay or modify the Treasury central-clearing rollout because of market-functioning concerns.

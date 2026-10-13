@@ -679,6 +679,41 @@ const BT_DASH=['','7 3','2 4','10 3 2 3','5 4','1 4'];
 let SCOUT=null;
 let IHIST=null;
 let LEDGER=null;
+const RUBRIC_URL='https://github.com/San-Geo/macro-risk-tracker/blob/main/config/grading.yaml';
+function escT(t){ return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function safeUrl(u){ return /^https?:\/\//.test(String(u||''))?escT(u):''; }
+function gradeBlock(e){
+  const W=(LEDGER&&LEDGER.grading&&LEDGER.grading.window_days)||30;
+  const addDays=(d,n)=>{const x=new Date(d+'T00:00:00Z'); x.setUTCDate(x.getUTCDate()+n); return x.toISOString().slice(0,10);};
+  const today=new Date().toISOString().slice(0,10);
+  const gb=g=>({materialized:'#C0392B',contained:'#E8710A',faded:'#2E7D32'}[g]||'#8a8f98');
+  const gtip={materialized:'The specific outcome this story warns about happened inside the evaluation window.',
+    contained:'Real, measurable stress showed up but was absorbed before it became the outcome the story warns about.',
+    faded:'The pressure receded without measurable stress beyond what was already priced in.'};
+  const id=`<code class="epid" style="font-size:11px;user-select:all">${escT(e.id)}</code>`;
+  const ag=e.auto_grade||{};
+  if(e.grade){
+    const t=e.grade==='materialized'&&e.grade_timing
+      ?` <span class="pill htip" style="background:#5b6170" data-tip="${e.grade_timing==='concurrent'?'The outcome was already under way when the episode opened - a correct call, not an early one.':'The outcome began after the episode opened - the tracker was at High first.'}">${e.grade_timing==='concurrent'?'already under way':'called ahead'}</span>`:'';
+    let who='';
+    if(e.grade_source==='auto'&&ag.check){
+      const met=((ag.primary&&ag.primary.tests)||[]).filter(x=>x.met);
+      const ev=met.map(x=>{const u=safeUrl(x.source); return u?`<a href="${u}" target="_blank" rel="noopener" class="htip" data-tip="${escT(x.evidence)}">${escT(x.id)}</a>`:escT(x.id);}).join(' ');
+      who=`<div class="asof" style="margin-top:3px">Auto-graded under rubric v${escT(e.rubric_version||ag.rubric_version||'')} \u00B7 confirmed by an ${ag.independent?'independent':'second'} read (${escT(ag.check.by)})${ev?` \u00B7 tests met: ${ev}`:''}</div>`;
+    }else{
+      who=`<div class="asof" style="margin-top:3px">Graded by the owner${e.graded_on?' on '+escT(e.graded_on):''}</div>`;
+    }
+    return `<span class="pill htip" style="background:${gb(e.grade)}" data-tip="${gtip[e.grade]||''}">${e.grade}</span>${t}${e.grade_note?`<span class="asof"> \u2014 ${escT(e.grade_note)}</span>`:''}${who}`;
+  }
+  if(ag.status==='needs_owner'){
+    const r=x=>x?`${escT(x.by)}: <b>${escT(x.grade)}</b> (${escT(x.confidence)})`:'';
+    return `<span class="pill htip" style="background:#8a8f98" data-tip="The two agents did not agree, or one was unsure, so nothing was applied automatically. The owner grades it via grades.csv or the Actions form.">owner decides</span> <span class="asof">${escT(ag.reason||'')} \u2014 ${r(ag.primary)} \u00B7 ${r(ag.check)}</span> ${id}`;
+  }
+  if(ag.status==='error') return `<span class="pill" style="background:#8a8f98">awaiting grade</span> <span class="asof">automatic grading failed (${escT(ag.error||'')}); retried at the next weekly agent run</span> ${id}`;
+  const due=addDays(e.closed,W);
+  if(today<due) return `<span class="pill htip" style="background:var(--track);color:var(--text)" data-tip="We keep watching for ${W} days after an episode closes - a risk that hits two weeks after the score cooled still counts.">watching</span> <span class="asof">follow-through window open until ${due}; graded automatically after that</span> ${id}`;
+  return `<span class="pill" style="background:#8a8f98">awaiting grade</span> <span class="asof">due \u2014 graded at the next weekly agent run</span> ${id}`;
+}
 function ledgerPanel(){
   const led=LEDGER; const eps=(led&&led.episodes)||[];
   const days=(a,b)=>Math.max(1,Math.round((new Date(b)-new Date(a))/864e5)+1);
@@ -691,7 +726,7 @@ function ledgerPanel(){
     faded:'the pressure receded without a materialized event'};
   let body='';
   if(!eps.length){
-    body=`<div class="asof" style="padding:6px 0">No story has entered High since the record began. When one does, an episode opens here automatically and is graded by a human after it closes.</div>`;
+    body=`<div class="asof" style="padding:6px 0">No story has entered High since the record began. When one does, an episode opens here automatically and is graded against the published rubric after it closes.</div>`;
   }else{
     if(open.length){
       body+=`<div class="asof" style="margin:6px 0 4px"><b>Open now</b> \u2014 stories currently at High; the clock is running:</div>`;
@@ -703,13 +738,11 @@ function ledgerPanel(){
         ${e.drivers_at_open&&e.drivers_at_open.length?`<div class="asof" style="margin-top:4px">Drivers at entry: ${e.drivers_at_open.join(' \u00B7 ')}</div>`:''}</div>`).join('');
     }
     if(closed.length){
-      body+=`<div class="asof" style="margin:10px 0 4px"><b>Closed episodes</b> \u2014 what the tracker called, and what a human judged afterwards:</div>`;
+      body+=`<div class="asof" style="margin:10px 0 4px"><b>Closed episodes</b> \u2014 what the tracker called, and what happened next:</div>`;
       body+=closed.map(e=>{
-        const g=e.grade
-          ?`<span class="pill htip" style="background:${gb(e.grade)}" data-tip="${gtip[e.grade]||''}">${e.grade}</span>${e.grade_note?`<span class="asof"> \u2014 ${e.grade_note}</span>`:''}`
-          :`<span class="pill htip" style="background:#8a8f98" data-tip="Closed but not yet judged. Owner: GitHub \u2192 Actions \u2192 daily-risk-tracker \u2192 Run workflow, paste this episode ID, pick a grade, add a one-line note.">awaiting grade</span> <code class="epid" style="font-size:11px;user-select:all">${e.id}</code>`;
+        const brief=e.brief_crossing?` <span class="pill htip" style="background:var(--track);color:var(--muted)" data-tip="A week or less at High, opened by a signal that flipped straight back. Kept in the record, but best read as the story hovering at the line rather than a distinct call.">brief crossing</span>`:'';
         return `<div style="border:1px solid var(--line);border-radius:10px;padding:10px 13px;margin-bottom:8px">
-          <b>${e.story}</b> <span class="asof">High ${e.opened} \u2192 ${e.last_seen} (${days(e.opened,e.last_seen)} days, peak ${e.peak_level}/10) \u00B7 closed ${e.closed}</span><div style="margin-top:4px">${g}</div></div>`;}).join('');
+          <b>${e.story}</b> <span class="asof">High ${e.opened} \u2192 ${e.last_seen} (${days(e.opened,e.last_seen)} days, peak ${e.peak_level}/10) \u00B7 closed ${e.closed}</span>${brief}<div style="margin-top:4px">${gradeBlock(e)}</div></div>`;}).join('');
     }
   }
   const right = eps.length
@@ -719,7 +752,7 @@ function ledgerPanel(){
       <span><strong>Track record</strong> <span class="asof">every High call, and what happened next</span></span>
       <span class="asof">${right}<span class="chev"></span></span></div>
     <div class="pbody">
-      <div class="asof" style="margin:2px 0 8px">Episodes open and close <b>automatically</b> from the scored levels \u2014 the machine cannot edit or forget a call. ${led&&led.close_rule?led.close_rule+' ':''}Outcome grades are <b>human judgments</b>, added only after an episode closes. The honest caveat: this record only starts accumulating from ${led&&led.episodes&&led.episodes.length?'its first entry below':'today'}, so it proves nothing yet \u2014 that is the point of starting it now.</div>
+      <div class="asof" style="margin:2px 0 8px">Episodes open and close <b>automatically</b> from the scored levels \u2014 the machine cannot edit or forget a call. ${led&&led.close_rule?led.close_rule+' ':''}Outcomes are graded against a <a href="${RUBRIC_URL}" target="_blank" rel="noopener">published rubric</a>: two independent AI agents check each story's concrete tests, code turns their findings into the grade, and it is applied only when both agree \u2014 otherwise the owner decides. Owner grades always take precedence. The honest caveat: this record only starts accumulating from ${led&&led.episodes&&led.episodes.length?'its first entry below':'today'}, so it proves nothing yet \u2014 that is the point of starting it now.</div>
       ${body}</div></div>`;
 }
 function miniSpark(id){

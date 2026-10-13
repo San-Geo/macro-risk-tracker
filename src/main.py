@@ -296,6 +296,34 @@ def main():
     try:
         import ledger
         led = ledger.update_ledger(result, args.date, hist)
+        # Owner grades (grades.csv) always win; bad rows warn but never break the run.
+        for m in ledger.apply_owner_grades(os.path.join(ROOT, "grades.csv")):
+            print(f"::warning title=grades.csv::{m}")
+        try:
+            with open(os.path.join(ROOT, "config", "grading.yaml")) as f:
+                _gr = yaml.safe_load(f)
+            ledger.set_meta({"grading": {"window_days": int(_gr.get("window_days_after_close", 30)),
+                                         "rubric_version": str(_gr.get("version", ""))}})
+        except Exception as e:
+            print(f"  (grading rubric not loaded: {e})")
+        labels = {i["id"]: i.get("label", i["id"]) for s_ in config["stories"] for i in s_["indicators"]}
+        ledger.annotate_triggers(hist, os.path.join(ROOT, "data", "indicator_history.csv"), labels)
+        # Automated grading: weekly, on agent runs only, and only for episodes whose
+        # follow-through window has passed. Two independent agents must agree.
+        if args.agent and key and not args.offline:
+            try:
+                import grader
+                print("Grading closed Track record episodes (rubric: config/grading.yaml) ...")
+                gs = grader.run(key, args.date)
+                if gs:
+                    print(f"  grader: {gs.get('due', 0)} due, {gs.get('applied', 0)} applied, "
+                          f"{gs.get('needs_owner', 0)} need the owner, {gs.get('error', 0)} errors")
+                    if gs.get("needs_owner"):
+                        print(f"::notice title=Track record::{gs['needs_owner']} episode(s) need your "
+                              f"grade - the two agents disagreed or were unsure. See the dashboard.")
+            except Exception as e:
+                print(f"::warning title=Auto-grader skipped::{e}")
+        led = ledger.load_ledger()
         n_open = sum(1 for e in led["episodes"] if e.get("status") == "open")
         n_ungraded = sum(1 for e in led["episodes"] if e.get("status") == "closed" and not e.get("grade"))
         print(f"  resolution ledger: {n_open} episode(s) open, {n_ungraded} awaiting grade")

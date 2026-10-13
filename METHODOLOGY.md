@@ -1,6 +1,6 @@
 # Methodology
 
-**Version 1.0 — 2026.** This document explains exactly how the Global Macro Risk Tracker turns
+**Version 1.1 — 2026.** This document explains exactly how the Global Macro Risk Tracker turns
 data and current events into a 1–10 risk level for each story, what the numbers mean, and — just
 as importantly — what they do *not* mean. It is meant to be read by a skeptical professional.
 
@@ -98,7 +98,32 @@ proxied by IG spreads) are also anachronistic before the story existed, and shou
 - Aggregates are unweighted averages and can mask a single severe story — always read the stories.
 - This is informational analysis only, not investment, legal, tax, or financial advice.
 
+## 9. Track record and outcome grading
+
+Every time a story reaches High (7+), an **episode** opens automatically; it closes after five
+consecutive runs below High, so a one-day dip is not mistaken for an outcome. After a 30-day
+follow-through window, each closed episode is graded:
+
+- **materialized** - the specific outcome the story warns about happened inside the window;
+- **contained** - real, measurable stress appeared but was absorbed before it became that outcome;
+- **faded** - the pressure receded without measurable stress.
+
+A materialized grade also records **timing**: *called ahead* if the outcome began after the episode
+opened, *already under way* if it began before - so the record never overstates foresight.
+
+Grading follows the same contract as scoring: **the AI sets inputs, the rules decide.** Each story has
+concrete, pre-published tests in `config/grading.yaml` (e.g. "the FAO Food Price Index rises 10% or more
+year-on-year"). Two independent agents research the episode and mark each test met or not met, citing a
+dated source for every "met". Code then computes the grade from those test results. A grade is applied
+automatically only when both agents' results produce the same grade with at least medium confidence;
+otherwise the owner decides. The owner can also grade or override any episode, and owner grades are
+never overwritten. Episodes of a week or less that were opened by a signal which flipped straight back
+are marked **brief crossing**, so base-rate analysis can treat them as boundary noise.
+
 ## Changelog
+
+- **1.1** - Track record grading: published per-story rubric, two-agent automatic grading with
+  code-computed grades, timing qualifier, brief-crossing flag, one-week episode close rule.
 
 - **1.0** — Initial published methodology: deterministic scoring, agent rubric + trust model, market
   backtest, cross-checking, data-health and provenance.

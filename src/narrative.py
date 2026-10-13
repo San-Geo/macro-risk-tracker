@@ -190,6 +190,8 @@ def claude_narrative(today, changes, api_key):
         # The engine's band word for the overall score - the model must not invent its own.
         "overall_band": overall_band(today),
         "changes": changes,
+        # counts are facts too - the model once wrote "four High-rated risks" when there were five
+        "n_stories_at_high_or_above": sum(1 for s in today["stories"] if s["level"] >= 7),
         "elevated_or_higher": [
             {"name": s["name"], "level": s["level"], "band": s["band"]}
             for s in today["stories"] if s["level"] >= 5
@@ -209,7 +211,8 @@ def claude_narrative(today, changes, api_key):
         "BAND WORDS ARE FIXED BY THE ENGINE. When you describe the overall score, use EXACTLY "
         "the word given in 'overall_band' - never substitute your own judgement (e.g. if "
         "overall_band is 'High', do not call the score 'elevated'). For each story, use that "
-        "story's own 'band' value verbatim. These words have precise numeric thresholds; "
+        "story's own 'band' value verbatim. If you say how many stories are at High, use "
+        "'n_stories_at_high_or_above' exactly and name every one of them. These words have precise numeric thresholds; "
         "choosing a different one misstates the result.\n\nDATA:\n" + json.dumps(payload, indent=2)
     )
     body = json.dumps({

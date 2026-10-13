@@ -13,14 +13,18 @@ Deterministic part (runs automatically, no AI):
     line is noise, not an outcome - without this rule a story hovering around 7
     produces a string of one-week "episodes" that each need grading.
 
-Human part (never automated):
-  * Grade a closed episode with one of:
+Grading (what happened next?):
+  * Each closed episode gets one of:
       materialized - the risk this story warned about actually happened
       contained    - real stress occurred but was absorbed/managed
       faded        - the pressure receded without a materialized event
-    from the GitHub Actions tab (Run workflow -> fill in "grade_episode", "grade",
-    "grade_note") - preferred, no hand-editing of JSON - or locally via:
-          python src/ledger.py --grade <episode_id> <grade> [--note "..."]
+  * AUTOMATIC (src/grader.py): once the follow-through window after closing has
+    passed, two independent agents mark the story's tests in config/grading.yaml;
+    code computes the grade; it is applied only if both agree. Otherwise it waits
+    for the owner.
+  * OWNER (always wins, never overwritten): a row in grades.csv
+    (episode_id,grade,note), or the Actions tab form (grade_episode / grade /
+    grade_note), or locally:  python src/ledger.py --grade <id> <grade> [--note "..."]
 
 Over time this answers the only question a public risk tracker must eventually
 answer: when this thing said High, what happened next?
@@ -151,6 +155,114 @@ def update_ledger(result, date, history_path):
     return led
 
 
+def set_meta(meta):
+    """Merge display metadata (e.g. the grading window) into the ledger file."""
+    led = load_ledger()
+    if any(led.get(k) != v for k, v in meta.items()):
+        led.update(meta)
+        save_ledger(led)
+
+
+def _set_owner_grade(e, grade_value, note):
+    e["grade"] = grade_value
+    e["grade_note"] = note or e.get("grade_note")
+    e["grade_source"] = "owner"
+    e["grade_timing"] = e.get("grade_timing") if grade_value == "materialized" else None
+    e["graded_on"] = __import__("datetime").date.today().isoformat()
+    if (e.get("auto_grade") or {}).get("status") == "needs_owner":
+        e["auto_grade"]["status"] = "resolved_by_owner"
+
+
+def apply_owner_grades(csv_path):
+    """Apply grades.csv (episode_id,grade,note[,timing]). Idempotent - rows stay in the
+    file and are re-applied each run, so an owner grade always wins over the auto-
+    grader. Bad rows are reported as warnings and skipped; they never break a run."""
+    if not os.path.exists(csv_path):
+        return []
+    led = load_ledger()
+    by_id = {e["id"]: e for e in led["episodes"]}
+    msgs, changed = [], False
+    with open(csv_path, newline="") as f:
+        for n, row in enumerate(csv.DictReader(f), start=2):
+            eid = (row.get("episode_id") or "").strip()
+            if not eid or eid.startswith("#"):
+                continue
+            g = (row.get("grade") or "").strip().lower()
+            note = (row.get("note") or "").strip() or None
+            timing = (row.get("timing") or "").strip().lower() or None
+            e = by_id.get(eid)
+            if e is None:
+                msgs.append(f"grades.csv line {n}: no episode '{eid}' - check the ID on the dashboard")
+                continue
+            if g not in GRADES:
+                msgs.append(f"grades.csv line {n}: grade must be one of {', '.join(GRADES)}")
+                continue
+            if e.get("status") != "closed":
+                msgs.append(f"grades.csv line {n}: {eid} is still open - graded after it closes")
+                continue
+            if timing not in (None, "lead", "concurrent"):
+                msgs.append(f"grades.csv line {n}: timing must be lead or concurrent (or blank)")
+                timing = None
+            if (e.get("grade") != g or e.get("grade_source") != "owner"
+                    or (note and e.get("grade_note") != note)
+                    or (timing and e.get("grade_timing") != timing)):
+                _set_owner_grade(e, g, note)
+                if g == "materialized" and timing:
+                    e["grade_timing"] = timing
+                changed = True
+    if changed:
+        save_ledger(led)
+    return msgs
+
+
+def _band_diffs(ih_rows, story_id, d_prev, d):
+    a = ih_rows.get((story_id, d_prev), {})
+    b = ih_rows.get((story_id, d), {})
+    return [(k, a[k], v) for k, v in b.items() if k in a and a[k][1] != v[1]]
+
+
+def annotate_triggers(history_path, ih_path, labels):
+    """Deterministic, no AI: record which indicator moves opened and closed each
+    episode, and flag a BRIEF CROSSING - a week or less at High, opened by an
+    indicator that flipped back when it dropped. Those are kept in the record but
+    marked, so later base-rate analysis can treat them as boundary noise."""
+    if not os.path.exists(ih_path):
+        return
+    ih_rows = {}
+    with open(ih_path, newline="") as f:
+        for r in csv.DictReader(f):
+            ih_rows.setdefault((r["story_id"], r["date"]), {})[r["indicator_id"]] = (r["value"], r["band"])
+    dates = sorted({d for (_, d) in ih_rows})
+    led = load_ledger()
+    changed = False
+    for e in led["episodes"]:
+        if e.get("triggers") and (e.get("status") == "open" or "close" in e["triggers"]):
+            continue
+        sid, trig = e["story_id"], {}
+        if e["opened"] in dates and dates.index(e["opened"]) > 0:
+            d0 = dates[dates.index(e["opened"]) - 1]
+            trig["open"] = [f"{labels.get(k, k)}: {a[0]} -> {b[0]} (band {a[1]} -> {b[1]})"
+                            for k, a, b in _band_diffs(ih_rows, sid, d0, e["opened"])]
+            open_ids = {k for k, _, _ in _band_diffs(ih_rows, sid, d0, e["opened"])}
+        else:
+            open_ids = set()
+        if e.get("status") == "closed":
+            later = [d for d in dates if d > e["last_seen"]]
+            if later:
+                dd = later[0]
+                diffs = _band_diffs(ih_rows, sid, e["last_seen"], dd)
+                trig["close"] = [f"{labels.get(k, k)}: {a[0]} -> {b[0]} (band {a[1]} -> {b[1]})"
+                                 for k, a, b in diffs]
+                days = (__import__("datetime").date.fromisoformat(e["last_seen"]) -
+                        __import__("datetime").date.fromisoformat(e["opened"])).days + 1
+                e["brief_crossing"] = bool(days <= 7 and open_ids & {k for k, _, _ in diffs})
+        if trig and trig != e.get("triggers"):
+            e["triggers"] = trig
+            changed = True
+    if changed:
+        save_ledger(led)
+
+
 def grade(episode_id, grade_value, note=None):
     if grade_value not in GRADES:
         raise SystemExit(f"grade must be one of {GRADES}")
@@ -159,9 +271,7 @@ def grade(episode_id, grade_value, note=None):
         if e["id"] == episode_id:
             if e.get("status") != "closed":
                 raise SystemExit(f"{episode_id} is still open - episodes are graded after they close.")
-            e["grade"] = grade_value
-            e["grade_note"] = note or e.get("grade_note")
-            e["graded_on"] = __import__("datetime").date.today().isoformat()
+            _set_owner_grade(e, grade_value, note)
             save_ledger(led)
             print(f"graded {episode_id}: {grade_value}")
             return
