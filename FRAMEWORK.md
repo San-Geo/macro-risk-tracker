@@ -37,20 +37,6 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 
 **Authoritative sources.** https://www.sec.gov, https://www.dtcc.com, https://www.risk.net
 
-### 30-year JGB yield (%)  
-
-*Story:* Japan fiscal / JGB / carry trade  
-*Indicator id:* `jgb30`  
-*Type:* value  
-*Bands from thresholds:* good ≤ 3.4, warn ≈ 3.9  
-*Weight on the meter:* 1.0  
-
-**Rubric.** Report the latest 30-year Japanese Government Bond yield as a percent (e.g. 3.4).
-
-**What the agent searches.** Japan 30-year JGB yield today percent
-
-**Authoritative sources.** https://www.investing.com/rates-bonds/japan-30-year-bond-yield, https://tradingeconomics.com/japan/government-bond-yield
-
 ### Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)  
 
 *Story:* Japan fiscal / JGB / carry trade  
@@ -64,7 +50,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 
 **Authoritative sources.** https://www.reuters.com/markets/asia, https://www.bloomberg.com/markets
 
-### Direct-lending default rate (%)  
+### Direct-lending default rate (%, Fitch incl. distressed exchanges)  
 
 *Story:* Private credit's opaque expansion  
 *Indicator id:* `direct_lending_default`  
@@ -72,11 +58,11 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Bands from thresholds:* good ≤ 3.0, warn ≈ 5.0  
 *Weight on the meter:* 1.5  
 
-**Rubric.** Report the latest direct-lending / private-credit default rate as a percent (e.g. 3.0).
+**Rubric.** Report the latest US direct-lending/private-credit default rate as a percent, ANCHORED TO FITCH'S INCLUSIVE MEASURE (the Fitch rate that counts distressed exchanges and liability-management exercises; April 2026 record = 6.0). DO NOT switch measurement anchors between runs: if no new Fitch print is available for the period, retain the prior Fitch reading rather than substituting a different methodology. Report Proskauer's count-based index (typically 2-3 points lower), With Intelligence, and Moody's estimates as DISSENT context only, never as the applied value. State the Fitch publication month in as_of.
 
-**What the agent searches.** private credit direct lending default rate latest 2026 percent
+**What the agent searches.** Fitch US private credit direct lending default rate including distressed exchanges latest percent
 
-**Authoritative sources.** https://www.imf.org/en/Publications/GFSR, https://pitchbook.com, https://www.ft.com
+**Authoritative sources.** https://www.fitchratings.com, https://www.forbes.com, https://www.ft.com
 
 ### Large-fund redemption gates (0 none / 1 isolated / 2 widespread)  
 
@@ -90,34 +76,6 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 **What the agent searches.** private credit fund redemption gates limits 2026
 
 **Authoritative sources.** https://www.ft.com, https://www.bloomberg.com
-
-### Largest stablecoin max peg deviation (%)  
-
-*Story:* Stablecoins & Treasury demand  
-*Indicator id:* `peg_deviation`  
-*Type:* value  
-*Bands from thresholds:* good ≤ 0.5, warn ≈ 2.0  
-*Weight on the meter:* 1.5  
-
-**Rubric.** Report the largest recent peg deviation of a major stablecoin as a percent away from $1 (e.g. 0.1).
-
-**What the agent searches.** largest stablecoin USDT USDC peg deviation depeg percent latest
-
-**Authoritative sources.** https://www.coindesk.com, https://defillama.com/stablecoins
-
-### Total USD stablecoin supply ($bn)  
-
-*Story:* Stablecoins & Treasury demand  
-*Indicator id:* `stablecoin_supply`  
-*Type:* value  
-*Bands from thresholds:* good ≤ 350, warn ≈ 600  
-*Weight on the meter:* 0.5  
-
-**Rubric.** Report total USD stablecoin supply in billions of dollars (e.g. 280).
-
-**What the agent searches.** total stablecoin market cap supply USD billions latest
-
-**Authoritative sources.** https://defillama.com/stablecoins, https://www.theblock.co/data/stablecoins
 
 ### GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)  
 
@@ -195,7 +153,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.5  
 
-**Rubric.** COUNT CRE-driven regional-bank failures or named distress events in the trailing 6 months. 0 = CALM: none. 1 = ISOLATED: 1-2 firm-specific failures/distress, described by supervisors as idiosyncratic. 2 = CLUSTER: >=3 CRE-linked failures, or a supervisory warning of systemic regional-bank CRE stress. Cite the FDIC failed-bank list.
+**Rubric.** Count US bank failures on the FDIC failed-bank list in the trailing 6 months where FDIC/Fed/OCC materials or credible reporting cite CRE/real-estate exposure as a contributing factor. 0 = CALM: zero such failures AND no new public enforcement action or supervisory statement citing regional-bank CRE concentration in the trailing 6 months. 1 = ISOLATED: 1-2 such failures (each <$10bn assets), OR >=1 new public enforcement action/consent order citing CRE concentration. 2 = CLUSTER: >=3 such failures in 6 months, OR any single CRE-linked failure >$10bn assets, OR a coordinated supervisory action (e.g. interagency statement, emergency facility) aimed at regional-bank CRE stress.
 
 **What the agent searches.** regional bank commercial real estate stress failures 2026
 
@@ -400,7 +358,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.5  
 
-**Rubric.** 0 = FLOWING: rare-earth/magnet export licenses issued on normal timelines to most applicants. 1 = SLOWING: non-automatic licensing with whitelists, review >30 days, or licenses only to a handful of producers. 2 = FROZEN: a categorical export halt or suspension of magnet/HREE licenses. Cite MOFCOM/customs or named-exporter reports.
+**Rubric.** Judge China's rare-earth export licensing regime by APPROVAL BREADTH and PROCESSING TIME per MOFCOM announcements and credible trade reporting. 0 = FLOWING: general/blanket licences cover most export volume AND typical approvals <30 days, no new categories restricted in the trailing 3 months. 1 = SLOWING: case-by-case or whitelist licensing (approvals limited to named producers/end-users), OR typical processing >30 days, OR a new category added to the control list in the trailing 3 months. 2 = FROZEN: categorical denials to a country/sector, OR no new licences issued for >30 days, OR an announced suspension of export licensing.
 
 **What the agent searches.** China rare earth magnet export licenses approvals status 2026
 
@@ -413,9 +371,9 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** Track the specific Nov-2025 US-China minerals truce (nominal expiry 2026-11-10). 0 = EXTENDED/holding: in force, no breach. 1 = EXPIRING/fraying: <90 days to expiry with no renewal, OR a partial breach (e.g. new entity-list additions). 2 = LAPSED: truce expired or formally abandoned / controls reimposed.
+**Rubric.** Track the US-China minerals truce itself (agreed Nov 2025; extended on 2026-09-23 to a nominal expiry of 2027-01-10 - use any later extension if one is announced). 0 = EXTENDED/holding: in force, more than 90 days to expiry, no formal breach. 1 = EXPIRING/fraying: 90 days or fewer to expiry with no renewal announced, OR either government formally accuses the other of breaching truce terms, OR an official assessment finds licensing of truce-covered minerals materially below committed volumes. 2 = LAPSED: truce expired or formally abandoned / controls reimposed. Entity-list additions (MOFCOM listings of named firms) are scored separately by re_blacklist and must NOT be counted here.
 
-**What the agent searches.** US China rare earth trade truce November 2025 status extended expired
+**What the agent searches.** US China rare earth trade truce status extension expiry January 10 2027 breach
 
 **Authoritative sources.** https://www.reuters.com, https://www.csis.org
 

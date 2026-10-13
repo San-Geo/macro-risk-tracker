@@ -20,6 +20,14 @@ sys.path.insert(0, HERE)
 import score, fetch, narrative, report, agent, enrich, alerts, consistency  # noqa: E402
 
 
+def fmt_v(v):
+    try:
+        f = float(v)
+        return str(int(f)) if f.is_integer() else f"{f:g}"
+    except (TypeError, ValueError):
+        return str(v)
+
+
 def load_config():
     with open(os.path.join(ROOT, "config", "stories.yaml")) as f:
         return yaml.safe_load(f)
@@ -198,15 +206,32 @@ def main():
             lbl, story, setno = idmap.get(ind_id, (ind_id, "", 0))
             cc = a.get("crosscheck") or {}
             conf = str(a.get("confidence", "")).lower()
-            # Triage tier: ACT = something was held/rejected/failed and needs a human
-            # decision; GLANCE = value changed or sources dissent (informational).
-            if (cc.get("agree") is False or a.get("out_of_range")
-                    or a.get("vintage") == "rejected" or conf in ("low", "error")):
+            # Triage tier - kept deliberately small so real items are not buried:
+            #   ACT    = held / rejected / disagreed / failed -> needs a human decision
+            #   GLANCE = the value moved this run, or the read is weakly evidenced
+            #            (recovered from a broken response, or arrived with no sources)
+            #   OK     = everything else. Source DISSENT alone no longer flags an item:
+            #            it is still shown on the row (annotate, don't reconcile), but it
+            #            was putting ~30 of 44 items in the queue every single week.
+            why = []
+            if cc.get("agree") is False: why.append("second read disagreed")
+            if a.get("out_of_range"): why.append("out of plausible range")
+            if a.get("vintage") == "rejected": why.append("older-data read rejected")
+            if a.get("stale_guard") == "held": why.append("upgrade on old evidence held")
+            if conf in ("low", "error"): why.append("low confidence / error - prior kept")
+            prior_v, val = a.get("prior"), a.get("value")
+            changed = prior_v is not None and val is not None and val != prior_v
+            soft = []
+            if changed: soft.append(f"changed {fmt_v(prior_v)} -> {fmt_v(val)}")
+            if a.get("parse") == "repaired": soft.append("recovered from a malformed reply")
+            if not (a.get("sources") or []): soft.append("no sources")
+            if why:
                 tier = "act"
-            elif ind_id in flags:
+            elif soft:
                 tier = "glance"
             else:
                 tier = "ok"
+            why += soft
             items.append({
                 "id": ind_id, "label": lbl, "story": story, "set": setno,
                 "value": a.get("value"), "confidence": a.get("confidence"),
@@ -219,9 +244,11 @@ def main():
                 "parse": a.get("parse"),
                 "vintage": a.get("vintage"),
                 "citecheck": a.get("citecheck"),
-                "tier": tier,
+                "stale_guard": a.get("stale_guard"),
+                "tier": tier, "why": why,
             })
         items.sort(key=lambda x: ({"act": 0, "glance": 1, "ok": 2}[x["tier"]], x["set"], x["label"]))
+        flags = {it["id"] for it in items if it["tier"] in ("act", "glance")}
         result["agent_review"] = {"generated": alog.get("generated"), "model": alog.get("model"),
                                   "crosscheck": alog.get("crosscheck"),
                                   "review_flags": sorted(flags), "items": items}
@@ -240,13 +267,21 @@ def main():
                 if ind["id"] in rated:
                     rf.add(ind["id"])
         result["agent_review"]["review_flags"] = sorted(rf)
-        result["agent_review"]["items"].sort(key=lambda x: (x["id"] not in rf, x["set"], x["label"]))
+        for it in result["agent_review"]["items"]:
+            if it["id"] in rf and it["tier"] == "ok":
+                it["tier"] = "glance"
+                it.setdefault("why", []).append("contradicted by a consistency check")
+        result["agent_review"]["items"].sort(
+            key=lambda x: ({"act": 0, "glance": 1, "ok": 2}[x["tier"]], x["set"], x["label"]))
 
     hist = os.path.join(ROOT, "data", "history.csv")
     # Phase 1 enrichments (read history BEFORE appending today's row)
     enrich.attach_trends(result, hist, args.date)
     enrich.attach_provenance(result, alog if alog.get("assessments") else None, fetched, args.date)
     result["data_health"] = enrich.data_health(config, fetched, alog, args.date, args.offline)
+    if result.get("agent_review"):
+        # count what is actually in the review queue, not every annotated item
+        result["data_health"]["agent_flags"] = len(result["agent_review"].get("review_flags", []))
 
     prev = None
     latest_path = os.path.join(ROOT, "data", "latest.json")
@@ -264,8 +299,13 @@ def main():
         n_open = sum(1 for e in led["episodes"] if e.get("status") == "open")
         n_ungraded = sum(1 for e in led["episodes"] if e.get("status") == "closed" and not e.get("grade"))
         print(f"  resolution ledger: {n_open} episode(s) open, {n_ungraded} awaiting grade")
+        result["data_health"]["ledger_ok"] = True
     except Exception as e:
-        print(f"  (resolution ledger skipped: {e})")
+        # LOUD on purpose: shows as a red annotation on the run summary and as a
+        # warning on the dashboard health line, instead of a quiet log line.
+        print(f"::error title=Resolution ledger NOT updated::{e}")
+        result["data_health"]["ledger_ok"] = False
+        result["data_health"]["ledger_error"] = str(e)[:300]
     ih = os.path.join(ROOT, "data", "indicator_history.csv")
     report.append_indicator_history(result, args.date, ih)
     report.write_indicator_history_json(ih, os.path.join(ROOT, "dashboard", "indicator_history.json"))

@@ -122,16 +122,46 @@ def enforce_band_words(text, today):
     return text, fixes
 
 
+def _fmt(v):
+    try:
+        f = float(v)
+        return str(int(f)) if f.is_integer() else f"{f:g}"
+    except (TypeError, ValueError):
+        return str(v)
+
+
 def diff_changes(today, yesterday):
-    """List stories whose level changed vs the previous run."""
-    prev = {s["id"]: s["level"] for s in (yesterday or {}).get("stories", [])}
+    """List stories whose level changed vs the previous run, with the indicators
+    that ACTUALLY moved.
+
+    A story level only moves when one of its indicators changes band, so the
+    drivers are exactly the indicators whose band differs from the previous run.
+    (The old version passed every indicator sitting away from its baseline,
+    which let the AI attribute a move to something that had not changed - e.g.
+    a June blacklist blamed for an October move.)"""
+    prev_stories = {s["id"]: s for s in (yesterday or {}).get("stories", [])}
+    # the agent's own load-bearing fact, so the brief can say WHAT happened
+    facts = {it["id"]: (it.get("fact") or "")[:260]
+             for it in ((today.get("agent_review") or {}).get("items") or [])}
     changes = []
     for s in today["stories"]:
-        old = prev.get(s["id"])
-        if old is not None and old != s["level"]:
-            movers = [i for i in s["indicators"] if i["delta"] and not i["stale"]]
-            changes.append({"name": s["name"], "old": old, "new": s["level"],
-                            "band": s["band"], "drivers": movers})
+        ps = prev_stories.get(s["id"])
+        if ps is None or ps.get("level") == s["level"]:
+            continue
+        prev_ind = {i["id"]: i for i in ps.get("indicators", [])}
+        movers = []
+        for i in s["indicators"]:
+            pi = prev_ind.get(i["id"])
+            if pi is None or pi.get("band") == i.get("band"):
+                continue
+            movers.append({"label": i["label"], "band": i.get("band"),
+                           "old_band": pi.get("band"),
+                           "value": _fmt(i.get("value")), "old_value": _fmt(pi.get("value")),
+                           "as_of": i.get("as_of") or "",
+                           "evidence": facts.get(i["id"], ""),
+                           "direction": "up" if (i.get("band") or 0) > (pi.get("band") or 0) else "down"})
+        changes.append({"name": s["name"], "old": ps["level"], "new": s["level"],
+                        "band": s["band"], "drivers": movers})
     return changes
 
 
@@ -148,7 +178,8 @@ def template_narrative(today, changes):
     else:
         for c in changes:
             arrow = "up" if c["new"] > c["old"] else "down"
-            drv = "; ".join(f"{d['label']} now band {d['band']}" for d in c["drivers"][:3]) or "indicator shifts"
+            drv = "; ".join(f"{d['label']} {d['old_value']} -> {d['value']} (band {d['old_band']} -> {d['band']})"
+                            for d in c["drivers"][:3]) or "a scoring-rule change (no indicator changed band)"
             lines.append(f"- {c['name']}: {c['old']} -> {c['new']}/10 ({c['band']}), {arrow}. Driver: {drv}.")
     return "\n".join(lines)
 
@@ -170,6 +201,11 @@ def claude_narrative(today, changes, api_key):
         "(1) one-sentence headline on overall risk; (2) bullet each story whose level changed, "
         "saying what moved it and the practical risk; (3) one line on the highest-risk story to watch. "
         "Neutral, precise, no hype.\n\n"
+        "ATTRIBUTION IS FIXED TOO. Each changed story lists its 'drivers': the complete and ONLY "
+        "set of indicators that changed band since the previous run, with old and new values. "
+        "Explain each move using ONLY its drivers (and each driver's 'evidence' text, when present). Do not cite any other indicator, event or "
+        "number as a cause, and do not add background events that are not in the drivers. If a "
+        "story has no drivers, say the move came from a scoring-rule change.\n\n"
         "BAND WORDS ARE FIXED BY THE ENGINE. When you describe the overall score, use EXACTLY "
         "the word given in 'overall_band' - never substitute your own judgement (e.g. if "
         "overall_band is 'High', do not call the score 'elevated'). For each story, use that "

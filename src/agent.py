@@ -126,6 +126,22 @@ def _salvage_fields(text):
         m = re.search(r'"%s"\s*:\s*"(.*?)"\s*,\s*"(?:%s)"\s*:' % (fld, keys), text, re.DOTALL)
         if m:
             out[fld] = m.group(1).replace('"', "'")
+    # Sources sit LAST in the schema, so a reply cut off at the token limit loses
+    # them first. Recover the URLs from the sources array if it is there, otherwise
+    # from anywhere in the reply (the fact text usually names its primary URL).
+    urls = []
+    m = re.search(r'"sources"\s*:\s*\[(.*?)(?:\]|$)', text, re.DOTALL)
+    pool = m.group(1) if m else text
+    found = (re.findall(r'"(https?://[^"\s]+)"', pool) if m      # only fully-quoted URLs
+             else re.findall(r'https?://[^\s"\'<>\]\),]+', pool))   # (a cut-off one is broken)
+    for u in found:
+        u = u.rstrip(".;:")
+        if u not in urls:
+            urls.append(u)
+    if urls:
+        out["sources"] = urls[:8]
+        if not m:
+            out["sources_note"] = "recovered from reply text"
     if "value" in out:
         out["parse"] = "repaired"
     return out
@@ -167,6 +183,8 @@ def _coerce(value, kind):
 
 
 ASI1_URL = "https://api.asi1.ai/v1/chat/completions"
+# A band rating may not RISE on evidence older than this (see the stale-upgrade guard).
+STALE_UPGRADE_DAYS = int(os.environ.get("AGENT_STALE_UPGRADE_DAYS", "90") or 90)
 
 
 def _build_prompt(spec, date, domain, kind):
@@ -178,7 +196,11 @@ def _build_prompt(spec, date, domain, kind):
     framing_line = (framing + "\n\n") if framing else ""
     if kind == "band":
         out_rule = ('Return "value" as the integer 0, 1, or 2 that the rubric '
-                    "matches. Do not assign the most severe level (2) without clear evidence.")
+                    "matches. Do not assign the most severe level (2) without clear evidence. "
+                    "RECENCY: rate CURRENT conditions. An event more than 90 days old counts only if "
+                    "authoritative sources confirm it is STILL in force or still unfolding today; "
+                    "otherwise rate on what is happening now. Set \"as_of\" to the single date of "
+                    "the load-bearing evidence, not a range.")
     else:
         out_rule = ('Return "value" as a single number: the latest published figure '
                     "in the indicator's natural units (no text, no % sign).")
@@ -222,7 +244,16 @@ def _post_json(req, timeout=120):
             if e.code in (429, 529, 503) and attempt < 3:
                 time.sleep(2 ** attempt + 1)
                 continue
-            raise
+            try:
+                detail = e.read().decode("utf-8", "replace")
+                try:
+                    j = json.loads(detail)
+                    detail = (j.get("error") or {}).get("message") or detail
+                except Exception:
+                    pass
+            except Exception:
+                detail = ""
+            raise RuntimeError(f"HTTP {e.code}: {detail[:240] or e.reason}") from None
         except (urllib.error.URLError, TimeoutError) as e:
             last = e
             if attempt < 3:
@@ -236,7 +267,7 @@ def _post_json(req, timeout=120):
 
 def _call_anthropic(prompt, model, api_key):
     body = json.dumps({
-        "model": model or AGENT_MODEL, "max_tokens": 1400,
+        "model": model or AGENT_MODEL, "max_tokens": int(os.environ.get("AGENT_MAX_TOKENS", "3000") or 3000),
         "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
         "messages": [{"role": "user", "content": prompt}],
     }).encode()
@@ -245,6 +276,9 @@ def _call_anthropic(prompt, model, api_key):
         headers={"content-type": "application/json", "x-api-key": api_key,
                  "anthropic-version": "2023-06-01"})
     data = _post_json(req)
+    if data.get("stop_reason") == "max_tokens":
+        # billed only for tokens actually produced, so headroom costs nothing unless used
+        print("  (agent reply hit max_tokens - truncated; field salvage will recover what it can)")
     return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
 
 
@@ -293,11 +327,17 @@ def assess_one(ind_id, spec, api_key, date, prior=None, model=None, domain=None,
 def _as_of_key(s):
     """Parse an as_of string into a sortable (year, month, day) key.
     Tolerates 'YYYY-MM-DD', 'YYYY-MM', 'YYYY-Qn', 'YYYY/M/D' and dates embedded in
-    longer strings like '2026-Q2 (as of 2026-06-30)' (takes the LATEST date found).
+    longer strings like '2026-Q2 (as of 2026-06-30)' (takes the LATEST date found),
+    except an explicit range 'A to B', which is keyed on its START A.
     Returns None when nothing parseable - callers must skip the check then."""
     if not s:
         return None
     s = str(s)
+    # An explicit RANGE ("2026-03-27 to 2026-10") means the evidence starts at the
+    # first date - taking the latest let a 6-month-old event slip past the guard.
+    rng = re.search(r"(\d{4}[-/]\d{1,2}(?:[-/]\d{1,2})?)\s*(?:to|until|\u2013|\u2014|\s-\s)\s*\d{4}", s, re.I)
+    if rng:
+        s = rng.group(1)
     keys = []
     for y, m, d in re.findall(r"(\d{4})[-/](\d{1,2})(?:[-/](\d{1,2}))?", s):
         keys.append((int(y), int(m), int(d) if d else 28))
@@ -456,6 +496,25 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
                     f"applied value was {prior.get('as_of')} data; kept the newer vintage]").strip())
                 a["value"], a["as_of"] = prior["value"], prior.get("as_of")
                 a["confidence"] = "medium" if str(a.get("confidence", "")).lower() == "high" else a.get("confidence")
+                review.append(ind_id)
+        # Stale-upgrade guard: a band rating may not RISE on evidence older than
+        # STALE_UPGRADE_DAYS (live case: a March rationing order re-discovered in October
+        # moved Water 4 -> 5 although the agent's own fact said conditions had eased).
+        # The prior value is kept and the item lands in "action needed" for a human.
+        if (str(framework[ind_id].get("type", "band")) == "band" and a.get("vintage") != "rejected"
+                and prior and prior.get("value") is not None and a.get("value") is not None
+                and a["value"] > prior["value"]):
+            k = _as_of_key(a.get("as_of"))
+            try:
+                age = (datetime.date.fromisoformat(date) - datetime.date(*k)).days if k else None
+            except Exception:
+                age = None
+            if age is not None and age > STALE_UPGRADE_DAYS:
+                a["stale_guard"] = "held"
+                a["rationale"] = ((a.get("rationale", "") +
+                    f" [stale-evidence guard: the upgrade {prior['value']} -> {a['value']} rests on "
+                    f"evidence dated {a.get('as_of')} ({age} days old); prior value kept for review]").strip())
+                a["value"] = prior["value"]
                 review.append(ind_id)
         conf = str(a.get("confidence", "low")).lower()
         if conf == "low" or a.get("value") is None:

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="theme-color" content="#1F4E79"/>
 <title>Global Macro Risk Tracker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%231F3A5F%27/%3E%3Cpath d=%27M6 22a10 10 0 0 1 20 0%27 fill=%27none%27 stroke=%27%23F5A623%27 stroke-width=%273.2%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M16 22l5-7%27 stroke=%27%23fff%27 stroke-width=%272.6%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
 <style>
   :root{
     --bg:#f4f6f9; --card:#ffffff; --line:#e6e9ee; --text:#161a1f; --muted:#677182;
@@ -87,7 +88,7 @@
   .aend{ position:absolute; top:16px; font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; }
   .aend.l{ left:0; } .aend.r{ right:0; }
   .plainq{ font-size:14px; font-weight:600; color:var(--text); margin:18px 2px 6px; display:flex; gap:7px; align-items:baseline; }
-  .plainq::before{ content:"\\203A"; color:var(--accent); font-weight:800; }
+  .plainq::before{ content:"\203A"; color:var(--accent); font-weight:800; }
   .sgist{ font-size:13.5px; line-height:1.5; color:var(--muted); margin:2px 0 10px; max-width:64ch; }
   .ctx{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 14px; margin:0 0 12px; box-shadow:var(--shadow); }
   .ctxhead{ font-size:11px; text-transform:uppercase; letter-spacing:.06em; font-weight:700; color:var(--muted); margin-bottom:7px; cursor:default; }
@@ -130,6 +131,15 @@
   /* narrative + panels */
   .narr{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px; box-shadow:var(--shadow);
          white-space:pre-wrap; line-height:1.55; font-size:14px; }
+  #review td:nth-child(1), #review th:nth-child(1){ min-width:170px; }
+  #review td:nth-child(2), #review td:nth-child(3), #review td:nth-child(4),
+  #review th:nth-child(2), #review th:nth-child(3), #review th:nth-child(4){ white-space:nowrap; overflow-wrap:normal; }
+  #review td:nth-child(5){ min-width:300px; }
+  .narr.brief{ white-space:normal; }
+  .narr.brief .bh{ font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:12px 0 4px; }
+  .narr.brief p{ margin:4px 0; }
+  .narr.brief ul{ margin:4px 0; padding-left:20px; }
+  .narr.brief li{ margin:6px 0; }
   .panel{ background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); overflow:hidden; }
   .phead{ padding:14px 18px; cursor:pointer; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center; }
   .phead:hover{ background:rgba(127,127,127,.05); }
@@ -232,7 +242,7 @@
   <div class="hwrap">
     <div>
       <h1>Global Macro Risk Tracker</h1>
-      <div class="sub" id="sub">loading\u2026</div>
+      <div class="sub" id="sub">loading…</div>
     </div>
     <div style="display:flex;gap:8px">
       <button id="modeBtn" class="tbtn" style="width:auto;padding:0 12px;font-weight:600" title="Reading level" onclick="toggleMode()">Plain</button>
@@ -242,7 +252,7 @@
   </div>
 </header>
 <div class="wrap">
-  <div id="sched" class="sched" title="Scheduled times are UTC; GitHub Actions may run a few minutes late."></div>
+  <div id="sched" class="sched" title="Scheduled times are UTC. GitHub Actions often starts scheduled runs late - recently by several hours."></div>
   <div id="app">
     <div class="sk" style="height:92px;margin-bottom:12px"></div>
     <div class="sk" style="height:64px;margin-bottom:12px"></div>
@@ -315,7 +325,7 @@
         <div class="k">Data health</div><div>How many live feeds updated vs fell back to baseline, when the AI agent last ran, and the overall trend &mdash; a trust check at a glance.</div>
         <div class="k">Scout</div><div>Watches credible feeds for developments the tracker doesn't already capture and <b>proposes</b> additions (re-rate existing / coverage gap / new risk) with a materiality rating. It only proposes &mdash; a human approves.</div>
         <div class="k">Agent review</div><div>The AI rating agent's worklist. Each row separates the <b>FACT</b> (the load-bearing measured datum + primary source) from the rule-applied rating, so the meter is driven by facts, not vibes. Where authoritative sources disagree, the conflict is shown as <b>Dissent</b> and annotated rather than silently resolved. Confidence/applied/held/overridden and reasoning + sources are shown; low-confidence calls are flagged, not applied. Readings outside an indicator's plausible range are caught, marked <b>auto-corrected</b>, and held at the last trusted value.</div>
-        <div class="k">Consistency checks</div><div>Deterministic whole-picture cross-checks that run after scoring. They flag ratings the rest of the board contradicts \u2014 e.g. a chokepoint rated "closed" while crude oil stays benign, or a positive China PPI when the story tracks deflation. These are review flags, not auto-corrections.</div>
+        <div class="k">Consistency checks</div><div>Deterministic whole-picture cross-checks that run after scoring. They flag ratings the rest of the board contradicts — e.g. a chokepoint rated "closed" while crude oil stays benign, or a positive China PPI when the story tracks deflation. These are review flags, not auto-corrections.</div>
         <div class="k">Validation</div><div>Two honest tests. <b>Calibration</b> replays documented stress episodes (2008/2020/2022/2023) through the live engine and shows whether the overall rises and separates from a calm baseline (market indicators only, so a lower bound). <b>Dynamic range</b> shows the overall now spans ~4.7-9.0: it reaches High/Severe only under broad, correlated stress. <b>Sensitivity</b> ranks which indicators most move their story/set/overall, i.e. where a wrong fact matters most.</div>
         <div class="k">Backtest</div><div>Replays real 2020 &amp; 2022 market data through the engine to show it responds sensibly to stress. Only the market indicators vary (judgement ones are held at baseline), so it validates mechanics, not predictions.</div>
         <div class="k">Background</div><div>An expandable plain-language summary of each story, with a link to the full written brief (PDF).</div>
@@ -330,7 +340,7 @@
     </div>
   </div>
 </div>
-<footer>Informational analysis only \u2014 not investment, legal, or financial advice. Levels are a judgement, not a forecast.</footer>
+<footer>Informational analysis only — not investment, legal, or financial advice. Levels are a judgement, not a forecast.</footer>
 <script>
 const moonIcon='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
 const sunIcon='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
@@ -387,6 +397,10 @@ function applyView(id,init){
   document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.id==='nav-'+ACTIVE_VIEW));
   if(!init){ try{window.scrollTo({top:0});}catch(e){} }
 }
+window.addEventListener('hashchange',function(){
+  const h=(location.hash||'').replace('#','');
+  if(LAYOUT==='tabs' && VIEWS.some(v=>v[0]===h) && h!==ACTIVE_VIEW) applyView(h);
+});
 function scrollSec(id){
   const el=document.getElementById('sec-'+id);
   if(el&&el.scrollIntoView) el.scrollIntoView({behavior:'smooth'});
@@ -412,11 +426,12 @@ function gotoStory(id){
   if(el.scrollIntoView) setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'start'}), LAYOUT==='tabs'?30:80);
 }
 
-// ---- next-run countdown (mirrors .github/workflows/daily.yml crons, all UTC) ----
+// ---- next-run countdown (mirrors the cron in .github/workflows/daily.yml, all UTC) ----
 const SCHEDULE = {
-  agent: { dows:[1],          hour:12, min:0, label:"agent run" },   // Monday 12:00 UTC
-  data:  { dows:[1,2,3,4,5],  hour:12, min:0, label:"data refresh" } // weekdays 12:00 UTC
+  agent: { dows:[1],          hour:11, min:37, label:"agent run" },   // Monday 11:37 UTC
+  data:  { dows:[1,2,3,4,5],  hour:11, min:37, label:"data refresh" } // weekdays 11:37 UTC
 };
+let DATA_DATE=null;   // date of the board on screen, set when latest.json loads
 function nextRun(spec){
   const now=new Date();
   for(let i=0;i<15;i++){
@@ -445,8 +460,11 @@ function utcOf(d){ const dow=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][d.getUT
   return `${dow} ${String(d.getUTCHours()).padStart(2,"0")}:${String(d.getUTCMinutes()).padStart(2,"0")} UTC`; }
 function segHTML(spec){
   const now=new Date(), nx=nextRun(spec), lr=lastRun(spec);
-  const running = lr && (now.getTime()-lr.getTime() < 30*60*1000);  // within ~30 min of a scheduled time
-  if(running) return `<span class="seg"><span class="live soon"></span>${spec.label[0].toUpperCase()+spec.label.slice(1)} <b>running\u2026</b></span>`;
+  // GitHub starts scheduled runs late under load (recently 3-9 h). If today's slot has
+  // passed but the board on screen is still from an earlier day, say "queued" honestly.
+  const slotISO = lr ? lr.toISOString().slice(0,10) : null;
+  const queued = lr && DATA_DATE && DATA_DATE < slotISO && (now.getTime()-lr.getTime() < 14*3600*1000);
+  if(queued) return `<span class="seg htip" data-tip="Scheduled for ${utcOf(lr)}. GitHub often starts scheduled runs hours late; the page updates as soon as it finishes."><span class="live soon"></span>${spec.label[0].toUpperCase()+spec.label.slice(1)} <b>queued at GitHub</b> <span style="opacity:.85">(slot ${utcOf(lr)})</span></span>`;
   return `<span class="seg"><span class="live"></span>Next ${spec.label} <b>in ${fmtLeft(nx-now)}</b> `
        + `<span style="opacity:.85">(${utcOf(nx)} \u00B7 ${localOf(nx)} your time)</span></span>`;
 }
@@ -542,7 +560,8 @@ function healthBar(d){
     if(t.crosses_methodology) ot=`overall vs ${t.since} <span class="htip" data-tip="Scoring methodology changed between then (v${t.ref_version}) and now (v${t.version}), so this delta mixes regimes and is not comparable. Story-level history is unaffected.">\u26A0 methodology changed (v${t.ref_version}\u2192v${t.version})</span>`;
   }
   const mv=d.method_version?`<span class="htip" data-tip="Scoring methodology version. Every saved history row is stamped with it so trends and backtests never silently mix scoring regimes.">methodology v${d.method_version}</span>`:'';
-  return `<div class="health"><span><span class="dot" style="background:${dot}"></span>${feeds}</span><span>${agent}</span>${ot?`<span>${ot}</span>`:''}${mv?`<span>${mv}</span>`:''}</div>`;
+  const lerr=h.ledger_ok===false?`<span class="htip" style="color:#C0392B;font-weight:700" data-tip="${String(h.ledger_error||'').replace(/"/g,'&quot;')}">\u26A0 track record not updated this run</span>`:'';
+  return `<div class="health"><span><span class="dot" style="background:${dot}"></span>${feeds}</span>${lerr}<span>${agent}</span>${ot?`<span>${ot}</span>`:''}${mv?`<span>${mv}</span>`:''}</div>`;
 }
 function consistencyPanel(d){
   const c=d.consistency;
@@ -575,6 +594,8 @@ function reviewRows(arr){ return arr.map(i=>{
   const src=(i.sources||[]).map(u=>`<a href="${u}" target="_blank" rel="noopener">src</a>`).join(' ');
   const rangeTag=i.out_of_range?`<span class="pill" style="background:#C0392B;color:#fff;margin-right:4px">out of range</span>`:'';
   const vinTag=i.vintage==='rejected'?`<span class="pill" style="background:#E8710A;color:#fff;margin-right:4px" title="the new read was based on OLDER source data than the prior applied value; the newer vintage was kept">older data rejected</span>`:'';
+  const staleTag=i.stale_guard==='held'?`<span class="pill" style="background:#E8710A;color:#fff;margin-right:4px" title="the rating tried to rise on evidence older than 90 days; the prior value was kept until a human confirms">old-evidence upgrade held</span>`:'';
+  const whyLine=(i.why&&i.why.length&&i.tier!=='ok')?`<div style="margin-bottom:3px;color:var(--muted);font-size:11px">Flagged: ${i.why.join(' \u00B7 ')}</div>`:'';
   const parseTag=i.parse==='repaired'?`<span class="pill" style="background:#F5A623;color:#fff;margin-right:4px" title="the agent's JSON was malformed; the score was recovered but the fact text may be partial">fact recovered</span>`:'';
   let xc='';
   if(i.crosscheck&&i.crosscheck.by){ const c=i.crosscheck;
@@ -591,7 +612,7 @@ function reviewRows(arr){ return arr.map(i=>{
   return `<tr><td>${i.label}<div style="color:var(--muted);font-size:11px">${i.story}${i.domain?` \u00B7 <span style="color:var(--accent)">${i.domain} desk</span>`:''}</div></td>
     <td>${fmt(i.value)}</td>
     <td><span class="pill" style="background:${confColor(i.confidence)};text-transform:capitalize">${i.confidence||'-'}</span></td>
-    <td>${statusOf(i)}</td><td>${rangeTag}${vinTag}${parseTag}${citeTag(i)}${xc}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
+    <td>${statusOf(i)}</td><td>${whyLine}${rangeTag}${vinTag}${staleTag}${parseTag}${citeTag(i)}${xc}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
 }).join(''); }
 function reviewPanel(d){
   const r=d.agent_review;
@@ -607,7 +628,7 @@ function reviewPanel(d){
   const gen=r.generated? new Date(r.generated).toLocaleString():'n/a';
   const actT=act.length?`<div class="tscroll"><table>${head}<tbody>${reviewRows(act)}</tbody></table></div>`
     :`<div class="asof" style="padding:6px 0;color:#2E7D32">\u2713 Nothing needs a decision \u2014 no holds, disagreements, or failed reads this run.</div>`;
-  const glanceT=glance.length?`<details style="margin-top:10px"${act.length?'':' open'}><summary class="asof"><b>${glance.length}</b> changed or annotated \u2014 informational, applied normally</summary>
+  const glanceT=glance.length?`<details style="margin-top:10px"${act.length?'':' open'}><summary class="asof"><b>${glance.length}</b> changed or thinly sourced \u2014 applied normally, worth a glance</summary>
       <div class="tscroll"><table style="margin-top:8px">${head}<tbody>${reviewRows(glance)}</tbody></table></div></details>`:'';
   let xcLine='';
   if(r.crosscheck){ const c=r.crosscheck;
@@ -629,6 +650,26 @@ function reviewPanel(d){
       <details style="margin-top:12px"><summary class="asof">Show all ${r.items.length} agent-rated indicators</summary>
         <div class="tscroll"><table style="margin-top:8px">${head}<tbody>${reviewRows(r.items)}</tbody></table></div></details>
       <div class="asof" style="margin-top:10px">Override any rating: edit <code>manual_input.csv</code> and commit. Full log: <code>data/agent_assessments.json</code>.</div></div></div>`;
+}
+
+// The daily brief arrives as light markdown from the narrative writer. Render it
+// safely: escape everything first, then allow only **bold**, headings and bullets.
+function briefHTML(md){
+  const esc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const inline=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+  let out='', list=false;
+  for(const raw of String(md).split(/\r?\n/)){
+    const ln=raw.trim();
+    const bullet=ln.match(/^(?:[\u2022*\-]|\d+[.)])\s+(.*)$/);
+    if(bullet){ if(!list){ out+='<ul>'; list=true; } out+=`<li>${inline(bullet[1])}</li>`; continue; }
+    if(list){ out+='</ul>'; list=false; }
+    if(!ln) continue;
+    const h=ln.match(/^(?:#{1,4}\s*)?\*\*([^*]+)\*\*:?$/)||ln.match(/^#{1,4}\s+(.*)$/);
+    if(h){ out+=`<div class="bh">${esc(h[1].replace(/:$/,''))}</div>`; continue; }
+    out+=`<p>${inline(ln)}</p>`;
+  }
+  if(list) out+='</ul>';
+  return out;
 }
 
 let BACKTEST=null;
@@ -657,6 +698,8 @@ function ledgerPanel(){
       body+=open.map(e=>`<div style="border:1px solid var(--line);border-radius:10px;padding:10px 13px;margin-bottom:8px">
         <b>${e.story}</b> <span class="pill" style="background:#E8710A">High since ${e.opened}</span>
         <span class="asof">\u00B7 day ${days(e.opened,e.last_seen)} \u00B7 peak ${e.peak_level}/10${e.peak_date&&e.peak_date!==e.opened?' on '+e.peak_date:''}</span>
+        ${e.cooling?`<span class="pill htip" style="background:#8a8f98" data-tip="Below High now. The episode closes only after ${e.cooling.of} runs in a row below High, so a brief dip is not counted as an outcome.">cooling \u00B7 ${e.cooling.runs_below} of ${e.cooling.of} runs below High</span>`:''}
+        ${(e.grade_history||[]).map(g=>`<div class="asof" style="margin-top:4px">\u21BA An earlier \u201c${g.grade}\u201d grade was withdrawn on ${g.withdrawn}: ${g.reason||''}</div>`).join('')}
         ${e.drivers_at_open&&e.drivers_at_open.length?`<div class="asof" style="margin-top:4px">Drivers at entry: ${e.drivers_at_open.join(' \u00B7 ')}</div>`:''}</div>`).join('');
     }
     if(closed.length){
@@ -664,9 +707,9 @@ function ledgerPanel(){
       body+=closed.map(e=>{
         const g=e.grade
           ?`<span class="pill htip" style="background:${gb(e.grade)}" data-tip="${gtip[e.grade]||''}">${e.grade}</span>${e.grade_note?`<span class="asof"> \u2014 ${e.grade_note}</span>`:''}`
-          :`<span class="pill htip" style="background:#8a8f98" data-tip="Closed but not yet judged. Grade it with: python src/ledger.py --grade ${e.id} materialized|contained|faded">awaiting grade</span>`;
+          :`<span class="pill htip" style="background:#8a8f98" data-tip="Closed but not yet judged. Owner: GitHub \u2192 Actions \u2192 daily-risk-tracker \u2192 Run workflow, paste this episode ID, pick a grade, add a one-line note.">awaiting grade</span> <code class="epid" style="font-size:11px;user-select:all">${e.id}</code>`;
         return `<div style="border:1px solid var(--line);border-radius:10px;padding:10px 13px;margin-bottom:8px">
-          <b>${e.story}</b> <span class="asof">High ${e.opened} \u2192 ${e.closed} (${days(e.opened,e.closed)} days, peak ${e.peak_level}/10)</span><div style="margin-top:4px">${g}</div></div>`;}).join('');
+          <b>${e.story}</b> <span class="asof">High ${e.opened} \u2192 ${e.last_seen} (${days(e.opened,e.last_seen)} days, peak ${e.peak_level}/10) \u00B7 closed ${e.closed}</span><div style="margin-top:4px">${g}</div></div>`;}).join('');
     }
   }
   const right = eps.length
@@ -676,7 +719,7 @@ function ledgerPanel(){
       <span><strong>Track record</strong> <span class="asof">every High call, and what happened next</span></span>
       <span class="asof">${right}<span class="chev"></span></span></div>
     <div class="pbody">
-      <div class="asof" style="margin:2px 0 8px">Episodes open and close <b>automatically</b> from the scored levels \u2014 the machine cannot edit or forget a call. Outcome grades are <b>human judgments</b>, added only after an episode closes. The honest caveat: this record only starts accumulating from ${led&&led.episodes&&led.episodes.length?'its first entry below':'today'}, so it proves nothing yet \u2014 that is the point of starting it now.</div>
+      <div class="asof" style="margin:2px 0 8px">Episodes open and close <b>automatically</b> from the scored levels \u2014 the machine cannot edit or forget a call. ${led&&led.close_rule?led.close_rule+' ':''}Outcome grades are <b>human judgments</b>, added only after an episode closes. The honest caveat: this record only starts accumulating from ${led&&led.episodes&&led.episodes.length?'its first entry below':'today'}, so it proves nothing yet \u2014 that is the point of starting it now.</div>
       ${body}</div></div>`;
 }
 function miniSpark(id){
@@ -863,7 +906,12 @@ function backtestPanel(){
 // Fed from payload.context, which main.py keeps entirely outside the scoring values.
 function contextStrip(d){
   const c=d.context; if(!c||!c.items||!c.items.some(i=>i.value!=null)) return '';
-  const pills=c.items.filter(i=>i.value!=null).map(i=>{
+  // Same series scored on the board (e.g. VIX)? Show the fresher reading so the page
+  // never shows two different numbers for the same dial.
+  const scored={}; for(const st of d.stories||[]) for(const ind of st.indicators||[]) scored[ind.id]=ind;
+  const items=c.items.map(i=>{ const b=scored[i.id];
+    return (b&&b.value!=null&&b.as_of&&(!i.as_of||String(b.as_of)>String(i.as_of)))?{...i,value:b.value,as_of:b.as_of}:i; });
+  const pills=items.filter(i=>i.value!=null).map(i=>{
     const val=`${i.value}${i.unit==='pp'?' pp':(i.unit||'')}`;
     const body=`<b>${i.label}</b> ${val}<span class="asof" style="margin-left:5px">${i.as_of||''}</span>`;
     return `<span class="ctxpill htip" data-tip="${(i.note||'').replace(/"/g,'&quot;')}">${i.url?`<a href="${i.url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">${body}</a>`:body}</span>`;
@@ -969,7 +1017,7 @@ function render(d){
     <a href="briefs/Global_Macro_Intelligence_Brief_2026.pdf" target="_blank" rel="noopener"><b>Global Macro Intelligence Brief \u2014 2026 Edition</b> (5 sections, 21 stories) \u2197</a>
     <a href="briefs/living_brief.html" target="_blank" rel="noopener">Living brief (auto-updated) \u2197</a></div>`;
   T+=`<div class="section-label">Summary</div>`;
-  T+=`<div class="narr"><strong>Daily brief</strong>\n${d.narrative||''}</div>`;
+  T+=`<div class="narr brief"><strong>Daily brief</strong>${briefHTML(d.narrative||'')}</div>`;
   const INS = plainQ('scout')+scoutPanel()+plainQ('review')+reviewPanel(d);
   const TRUST = plainQ('consistency')+consistencyPanel(d)+plainQ('backtest')+backtestPanel()
     +plainQ('validation')+validationPanel()+plainQ('ledger')+ledgerPanel();
@@ -1048,7 +1096,7 @@ Promise.all([
   fetch('./scout_queue.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
   fetch('./indicator_history.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
   fetch('./ledger.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null)
-]).then(([d,bt,va,sc,ih,lg])=>{ BACKTEST=bt; VALIDATION=va; SCOUT=sc; IHIST=ih; LEDGER=lg; render(d); })
+]).then(([d,bt,va,sc,ih,lg])=>{ BACKTEST=bt; VALIDATION=va; SCOUT=sc; IHIST=ih; LEDGER=lg; DATA_DATE=d.date||null; render(d); tickSchedule(); })
   .catch(e=>{ document.getElementById('app').innerHTML=
     `<div class="err"><strong>Could not load data.</strong><br>${e.message}<br><br>
      Run <code>python src/main.py --offline --no-ai</code>, then open this page via a local server

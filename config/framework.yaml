@@ -104,10 +104,14 @@ indicators:
     - https://www.csis.org
   truce_status:
     type: band
-    query: US China rare earth trade truce November 2025 status extended expired
-    rubric: 'Track the specific Nov-2025 US-China minerals truce (nominal expiry 2026-11-10). 0 = EXTENDED/holding:
-      in force, no breach. 1 = EXPIRING/fraying: <90 days to expiry with no renewal, OR a partial breach
-      (e.g. new entity-list additions). 2 = LAPSED: truce expired or formally abandoned / controls reimposed.'
+    query: US China rare earth trade truce status extension expiry January 10 2027 breach
+    rubric: 'Track the US-China minerals truce itself (agreed Nov 2025; extended on 2026-09-23 to a nominal
+      expiry of 2027-01-10 - use any later extension if one is announced). 0 = EXTENDED/holding: in force,
+      more than 90 days to expiry, no formal breach. 1 = EXPIRING/fraying: 90 days or fewer to expiry with
+      no renewal announced, OR either government formally accuses the other of breaching truce terms, OR
+      an official assessment finds licensing of truce-covered minerals materially below committed volumes.
+      2 = LAPSED: truce expired or formally abandoned / controls reimposed. Entity-list additions (MOFCOM
+      listings of named firms) are scored separately by re_blacklist and must NOT be counted here.'
     sources:
     - https://www.reuters.com
     - https://www.csis.org
