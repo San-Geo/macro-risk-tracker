@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13 16:14 UTC",
+  "generated_at": "2026-10-13 18:29 UTC",
   "aggregates": {
     "1": 5.8,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 7.1
   },
-  "narrative": "# EOD Macro-Risk Brief | 2026-10-13\n\n**Headline:** Overall macro risk stands at High with no intraday moves; five stories remain at High severity.\n\n**Changed Stories:**\nNone. No driver shifts occurred today.\n\n**Stories at High or Above:**\nPrivate credit's opaque expansion, Japan fiscal / JGB / carry trade, Critical minerals as a weapon, AI power & the grid bottleneck, and Sea lanes & undersea cables remain the five elevated focal points.\n\n**Watch Priority:**\nPrivate credit's opaque expansion (level 8, High) remains the single highest-risk story to monitor.",
+  "narrative": "**HEADLINE**\nOverall macro risk stands at High, with five stories at High or above and no changes in driver readings since yesterday.\n\n**UNCHANGED STORIES**\nNo stories moved today. All 5 n_stories_at_high_or_above remain at High: Japan fiscal / JGB / carry trade, Private credit's opaque expansion, Critical minerals as a weapon, AI power & the grid bottleneck, and Sea lanes & undersea cables. Risk to financial stability and supply-chain resilience persists without new triggering conditions.\n\n**TOP WATCH**\nPrivate credit's opaque expansion (High) poses the sharpest near-term risk given its rapid growth outside regulated banking channels and opacity to systemic stress.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -38,7 +38,7 @@
         {
           "id": "move",
           "label": "MOVE index (Treasury volatility)",
-          "value": 100.6698,
+          "value": 100.9292,
           "band": 1,
           "baseline_band": 0,
           "weight": 1.5,
@@ -104,7 +104,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 158.349,
+          "value": 158.331,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -364,7 +364,7 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.6808,
+          "value": 6.6807,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -526,7 +526,7 @@
         {
           "id": "peg_deviation",
           "label": "Largest stablecoin max peg deviation (%)",
-          "value": 0.08,
+          "value": 0.07,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -541,7 +541,7 @@
         {
           "id": "stablecoin_supply",
           "label": "Total USD stablecoin supply ($bn)",
-          "value": 312.9,
+          "value": 313.1,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -920,7 +920,7 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4181.0,
+          "value": 4183.2002,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -1248,7 +1248,7 @@
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.723,
+          "value": 6.732,
           "band": 2,
           "baseline_band": 1,
           "weight": 0.5,
@@ -1591,7 +1591,7 @@
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 93.9,
+          "value": 94.36,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
@@ -1657,7 +1657,7 @@
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 15.44,
+          "value": 15.41,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -1672,7 +1672,7 @@
         {
           "id": "move_ccp",
           "label": "Treasury volatility (MOVE)",
-          "value": 100.6698,
+          "value": 100.9292,
           "band": 1,
           "baseline_band": 0,
           "weight": 0.5,

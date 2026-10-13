@@ -200,13 +200,12 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "Japan's 30-year JGB yield eased slightly to 4.04% on October 13 (from a high of 4.17% on October 5), while the 10-year held at 3.02%, the highest since the mid-1990s; the US-Japan 10-year spread has compressed to ~200 bps, eroding carry-trade profitability to ~2.1% annualised versus 6.4% in early 2024. Japan's finance minister has nudged GPIF toward domestic allocation, and an estimated $280 bn of leveraged short-yen exposure remains outstanding across hedge funds and CTAs.",
+      "summary": "Japan's 30-year JGB yield reached a Ministry of Finance series high of 4.166% on October 5 before settling at 4.04% on October 13; the 10-year is at 3.02%, up 132 bps year-on-year. The US\u2013Japan 30-year spread has compressed to ~120 bps, eroding the risk-adjusted carry on leveraged short-yen positions to an estimated 2.1% annualised vs. 6.4% in early 2024.",
       "as_of": "2026-10-13",
       "sources": [
+        "https://www.indrastra.com/2026/10/japan-has-left-zero-rate-world-what.html",
         "https://tradingeconomics.com/japan/30-year-bond-yield",
         "https://tradingeconomics.com/japan/government-bond-yield",
-        "https://www.indrastra.com/2026/10/japan-has-left-zero-rate-world-what.html",
-        "https://deluair.com/consultancy/insights/japan-policy-normalization-2026",
         "https://www.w1m.com/insights/the-yen-carry-trade-approaching-a-tipping-point/"
       ],
       "materiality": "high",
@@ -215,12 +214,12 @@
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 30-yr JGB yield is a direct tracker indicator for s2_japan. At 4.04% (up ~81 bps year-on-year), the carry-trade math is deteriorating sharply; a disorderly steepening event or failed JGB auction would be the trigger for a global unwind. The BOJ's QT pace and GPIF reallocation signals have intensified over the past week, making this a high-materiality update to an existing indicator that is clearly moving in the adverse direction.",
+      "rationale": "The 30-year JGB yield is a direct tracker indicator for s2_japan. At 4.04%\u2014a series record\u2014and with the US\u2013Japan 30-year spread compressed to ~120 bps (from ~360 bps at start-2025), the fiscal and carry-trade channels are simultaneously under pressure. An estimated $280 bn of leveraged short-yen offshore positions remain; the August 2024 VaR shock analogue is now live again. This is the single most material development of the week and warrants an immediate indicator update and elevated alert on s2_japan.",
       "status": "pending",
       "first_seen": "2026-06-30",
       "last_seen": "2026-10-13",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 41
+      "sightings": 42
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -5934,25 +5933,24 @@
     },
     "us-treasury-emergency-long-bond-buybacks-send-go-a233e7": {
       "headline": "US Treasury emergency long-bond buybacks send gold to ~$4,719/oz; dollar index at 3-month lows \u2014 de-dollarization safe-haven dynamic intensifying",
-      "summary": "Gold surged to approximately $4,719/oz by August 24\u201325, up ~11% month-to-date and ~34% year-over-year, driven by the combined shock of US long-yield stress, emergency Treasury intervention signaling fiscal limit concerns, a weaker dollar (3-month low), and ongoing geopolitical risk from the Middle East conflict. Markets are increasingly debating whether Treasury's buyback program signals a stealth form of yield-curve control, amplifying reserve-weaponization / de-dollarization concern.",
-      "as_of": "2026-08-24",
+      "summary": "Gold is trading at approximately $4,157\u20134,182/oz on October 13, more than 20% below the January 28, 2026 record high (estimated $5,420\u20135,595/oz), as the World Gold Council revised Q1 2026 central bank purchases sharply down from 244 tonnes to 56.5 tonnes. The correction calls into question the structural central-bank-demand pillar that drove the 2025 rally.",
+      "as_of": "2026-10-13",
       "sources": [
-        "https://www.mining.com/gold-price-rises-silver-slips-on-treasury-cash-pile-buyback-signal/",
-        "https://www.canadianminingreport.com/blog/gold-jumps-3-as-treasury-steps-in-to-calm-bond-rout-can-bulls-push-prices-higher",
-        "https://www.mining.com/gold-silver-miners-surge-as-treasury-doubles-buybacks/",
-        "https://basispoint.net/economy-insights/treasury-bond-buyback-dollar-weakness-gold-rally-bessent-2026"
+        "https://tradingeconomics.com/commodity/gold",
+        "https://fortune.com/article/current-price-of-gold-10-13-2026",
+        "https://www.moneymagpie.com/investment-articles/gold-price-prediction-october"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "existing_indicator",
       "target_story": "s12_gold_dedollar",
       "target_indicator": "Gold price (USD/oz)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "Gold at ~$4,719 is a live, real-time update for s12_gold_dedollar's primary indicator. More importantly, the narrative driving the surge \u2014 emergency Treasury intervention, stealth yield-curve control debate, dollar weakness \u2014 directly upgrades the 'Reserve-weaponization / settlement shift' indicator toward '2 = action' territory, as market participants are treating the TGA-draw/buyback program as evidence of fiscal dominance over monetary policy, a key de-dollarization accelerant.",
+      "rationale": "Gold price is a direct indicator for s12_gold_dedollar. A >20% decline from an all-time record, combined with a World Gold Council data revision showing central bank buying collapsed from 244 to 56.5 tonnes in Q1 2026, is material: the de-dollarization narrative was predicated partly on sustained EM central bank accumulation. A sharp reversal in that demand pillar, combined with gold still elevated in absolute terms (~$4,157), suggests the 'Reserve-weaponization / settlement shift' indicator may need re-assessment\u2014the structural shift is continuing but the velocity of demand has stalled, a nuance not captured by the existing band indicator.",
       "status": "pending",
       "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "sightings": 1,
+      "last_seen": "2026-10-13",
+      "sightings": 2,
       "id": "us-treasury-emergency-long-bond-buybacks-send-go-a233e7"
     },
     "big-tech-bond-issuance-tops-194bn-in-2026-as-ai--01d4e8": {
@@ -7476,14 +7474,12 @@
     },
     "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb": {
       "headline": "Synchronized global sovereign bond rout: US 10y at 4.80%, UK 30y at 5.82% (highest since 1998), German 10y at 2011 highs",
-      "summary": "France's 10-year OAT-Bund spread reached 146.9 bps on October 2 and remains at 139.5 bps as of October 12, wider than both Italy and Greece, as the Lecornu government's \u20ac43 bn austerity budget \u2014 targeting a deficit reduction from 5.4% to 5.0% of GDP \u2014 begins National Assembly debate on October 14 with a major revenue vote on October 20. Public debt is projected to climb to 121.7% of GDP regardless, and annual debt-service costs approach \u20ac91 bn.",
+      "summary": "The 10-year OAT\u2013Bund spread touched 146.9 bps on October 2 and remained at 139.5 bps on October 12, as France's National Assembly opened budget debate on October 13 targeting a still-wide 5% of GDP deficit in 2027. Moody's sovereign review is scheduled for October 23; a downgrade would push French banks\u2014large holders of domestic sovereign debt\u2014into further stress.",
       "as_of": "2026-10-12",
       "sources": [
         "https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html",
-        "https://www.tftc.io/france-oat-bund-spread-wider-italy-greece-debt-121-percent-gdp",
-        "https://www.fxstreet.com/analysis/french-risk-spreads-from-oats-into-the-euro-as-assembly-takes-up-the-budget-202610130958",
-        "https://www.actionforex.com/action-insight/market-overview/656113-france-risk-premium-surges-as-oat-bund-spread-breaks-140bp-eur-chf-slides/",
-        "https://www.rothschildandco.com/en-ch/newsroom/insights/2026/10/wm-strategy-blog-france-fiscal-pressure/"
+        "https://thoughtsfortheday.substack.com/p/thoughts-for-the-day-news-7d4",
+        "https://exante.eu/press/market-updates/3281-can-paris-afford-its-politics/"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -7491,11 +7487,11 @@
       "target_indicator": "OAT-Bund 10y spread (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The OAT-Bund spread is a core s10_france indicator. At 139.5\u2013147 bps \u2014 the widest since the 2011-12 eurozone debt crisis and now worse than Italy and Greece \u2014 this is a high-materiality deterioration in an existing tracked indicator. The imminent parliamentary budget vote (Oct 14-20) is the near-term catalyst for further spread widening or stabilisation. The Govt stability indicator for s10_france should also be flagged as '1 fragile' given Lecornu's razor-thin parliamentary arithmetic.",
+      "rationale": "OAT\u2013Bund spread and Rating action are both direct tracker indicators for s10_france. The spread at 139.5\u2013146.9 bps is at a 15-year extreme, and an imminent Moody's review on Oct 23 creates a binary event risk that directly maps to the 'Rating action' indicator (currently 1-negative outlook, risk of flipping to 2-downgrade). The budget debate also touches 'Govt stability' (Article 49.3 risk). All three s10_france indicators are simultaneously elevated, making this the highest-urgency eurozone item of the week.",
       "status": "pending",
       "first_seen": "2026-09-11",
       "last_seen": "2026-10-13",
-      "sightings": 8,
+      "sightings": 9,
       "id": "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb"
     },
     "ai-hyperscaler-bond-issuance-hits-194bn-ytd-in-2-33afc6": {
@@ -9757,10 +9753,102 @@
       "last_seen": "2026-10-13",
       "sightings": 1,
       "id": "imf-projects-hormuz-closure-until-march-2027-sau-f450b5"
+    },
+    "china-rare-earth-nov-2025-pause-rolled-over-to-j-042afd": {
+      "headline": "China rare-earth Nov-2025 pause rolled over to January 10, 2027\u2014but no critical-minerals settlement reached at Trump-Xi summit",
+      "summary": "Following the Trump-Xi Washington summit in late September 2026, China extended the suspension of its expanded October-2025 rare-earth export controls (covering 5 additional elements and extraterritorial licensing) until January 10, 2027. However, no jointly documented agreement on critical minerals was reached, and Beijing has reportedly reduced heavy rare-earth and gallium supplies to Japan to near zero throughout 2026.",
+      "as_of": "2026-10-01",
+      "sources": [
+        "https://bisi.org.uk/reports/chinas-rare-earth-processing-dominance-and-what-the-trump-xi-summit-didnt-change",
+        "https://rareearthdirectory.com/policy/china-export-controls-timeline/",
+        "https://www.cfr.org/reports/dismantling-chinas-supply-chain-weapon",
+        "https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/"
+      ],
+      "materiality": "high",
+      "classification": "story_gap",
+      "target_story": "s6_rare_earths",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Nov-2025 pause extension status",
+        "type": "band",
+        "rubric": "0 = formally extended with documented settlement; 1 = rolled over without settlement (current: Jan 10, 2027 deadline, no deal); 2 = lapsed or controls reimposed",
+        "sources": [
+          "https://bisi.org.uk/reports/chinas-rare-earth-processing-dominance-and-what-the-trump-xi-summit-didnt-change",
+          "https://rareearthdirectory.com/policy/china-export-controls-timeline/"
+        ],
+        "suggested_weight": 0.25
+      },
+      "proposed_story": null,
+      "rationale": "The existing s6_rare_earths indicator 'Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)' exists but its rubric does not distinguish between a clean extension backed by a settlement versus a bare rollover without one. The BISI finding that there was 'no jointly documented settlement on critical minerals' is material because it means the structural leverage remains fully intact and the January 2027 re-expiry cliff is now the new trigger date. The CFR documentation of near-zero gallium/heavy-RE flows to Japan confirms the existing April-2025 licensing regime (7 elements) is already acting as a partial freeze. A refined indicator capturing 'settled vs. unsettled extension' is needed.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "china-rare-earth-nov-2025-pause-rolled-over-to-j-042afd"
+    },
+    "fsb-calls-for-g20-stablecoin-crisis-cross-border-5afa9d": {
+      "headline": "FSB calls for G20 stablecoin crisis cross-border contingency planning\u2014regulatory gap flagged days before summit",
+      "summary": "On October 12, the Financial Stability Board\u2014chaired by Bank of England Governor Andrew Bailey\u2014called for cross-border information sharing and formal contingency planning for stablecoin crises, ahead of the October 16 G20 meeting. The FSB's public call signals that regulators consider existing frameworks insufficient for a coordinated cross-border stablecoin stress event.",
+      "as_of": "2026-10-12",
+      "sources": [
+        "https://thoughtsfortheday.substack.com/p/thoughts-for-the-day-news-7d4"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s7_stablecoins",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "FSB / G20 cross-border stablecoin crisis-framework status",
+        "type": "band",
+        "rubric": "0 = coordinated framework in place and tested; 1 = framework called for but not yet agreed (current: FSB Oct-12 call, G20 pending); 2 = no framework, active cross-border stress",
+        "sources": [
+          "https://thoughtsfortheday.substack.com/p/thoughts-for-the-day-news-7d4"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "s7_stablecoins currently tracks GENIUS implementation friction domestically but has no indicator for the international coordination gap. The FSB call\u2014the highest-level multilateral financial-stability body flagging systemic stablecoin risk one week before a G20\u2014is a story_gap: it fits s7_stablecoins thematically but no existing indicator captures the cross-border regulatory vacuum. A stablecoin stress in one jurisdiction (e.g., a peg break) with no agreed resolution mechanism across G20 could propagate rapidly; this is the mechanism the FSB is flagging.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "fsb-calls-for-g20-stablecoin-crisis-cross-border-5afa9d"
+    },
+    "us-china-60-bn-non-sensitive-goods-tariff-cut-de-9b6830": {
+      "headline": "US\u2013China $60 bn 'non-sensitive goods' tariff-cut deal announced, but Nov 10, 2026 IEEPA successor truce expiry looms",
+      "summary": "Following Xi Jinping's Washington visit in late September 2026, the US and China announced recommended tariff cuts on $30 bn of goods each way covering consumer and agricultural products. However, the one-year trade truce negotiated in October 2025 has not been formally extended, and the Section 122 tariff authority expired in July 2026, leaving the post-SCOTUS tariff architecture in legal and diplomatic flux ahead of the November 10 deadline.",
+      "as_of": "2026-09-29",
+      "sources": [
+        "https://time.com/article/2026/09/29/us-china-reciprocal-tariffs-cut-trade-goods-60-billion/",
+        "https://www.china-briefing.com/news/us-china-tariff-rates-2025/",
+        "https://www.wiley.law/trump-administration-tariff-tracker",
+        "https://www.freightamigo.com/en/blog/global-trade/overview-of-the-2026-us-china-tariff-deal-on-product-lists-and-reductions/"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s5_china_deflation",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "US\u2013China tariff-truce legal / expiry status",
+        "type": "band",
+        "rubric": "0 = truce formally extended with durable legal basis; 1 = nominal deal reached but truce not extended, legal architecture in flux (current: $60bn goods deal, truce unextended, Nov-10 cliff); 2 = truce lapsed, escalatory tariffs reinstated",
+        "sources": [
+          "https://time.com/article/2026/09/29/us-china-reciprocal-tariffs-cut-trade-goods-60-billion/",
+          "https://www.wiley.law/trump-administration-tariff-tracker"
+        ],
+        "suggested_weight": 0.2
+      },
+      "proposed_story": null,
+      "rationale": "s5_china_deflation captures 'New tariff/anti-dumping actions' as a band indicator, but the current situation is the inverse and more nuanced: a partial roll-back of tariffs on non-sensitive goods while the overarching truce framework has not been extended. The November 10, 2026 expiry of China's reciprocal tariff rate cap\u2014coinciding with the rare-earth pause deadline\u2014creates a dual cliff that the existing indicator does not capture. A tariff-truce legal-status indicator would let the tracker distinguish between a genuine de-escalation and a fragile standstill prone to sudden reversal, which is the current state.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "us-china-60-bn-non-sensitive-goods-tariff-cut-de-9b6830"
     }
   },
   "generated": "2026-10-13",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 299
+  "new_count": 3,
+  "pending_count": 302
 }
