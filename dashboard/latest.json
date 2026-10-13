@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13 14:29 UTC",
+  "generated_at": "2026-10-13 14:53 UTC",
   "aggregates": {
     "1": 5.8,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 7.1
   },
-  "narrative": "**Headline**\nMacro risk stands at High overall, with five stories at High or above: Japan fiscal/JGB/carry trade, Private credit's opaque expansion, Critical minerals as a weapon, AI power & the grid bottleneck, and Sea lanes & undersea cables.\n\n**No stories changed bands since the previous run.**\n\n**Watch list**\nPrivate credit's opaque expansion remains the single highest-risk story at level 8.",
+  "narrative": "**HEADLINE**\nMacro risk stands at High, with 5 stories at High or above and no intraday moves.\n\n**STORY CHANGES**\nNo stories experienced level changes today.\n\n**HIGHEST-RISK WATCH**\nPrivate credit's opaque expansion remains the most acute risk at level 8.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -38,7 +38,7 @@
         {
           "id": "move",
           "label": "MOVE index (Treasury volatility)",
-          "value": 100.7189,
+          "value": 100.6915,
           "band": 1,
           "baseline_band": 0,
           "weight": 1.5,
@@ -104,7 +104,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 158.375,
+          "value": 158.36,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -185,7 +185,7 @@
         {
           "id": "hy_oas",
           "label": "US high-yield OAS (%, \u2248310bps)",
-          "value": 3.15,
+          "value": 3.11,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -194,7 +194,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
-          "as_of": "2026-10-08",
+          "as_of": "2026-10-09",
           "provenance": "FRED"
         },
         {
@@ -607,7 +607,7 @@
         {
           "id": "ig_oas",
           "label": "US investment-grade OAS (%) - big-issuer proxy",
-          "value": 0.82,
+          "value": 0.83,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -616,7 +616,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
-          "as_of": "2026-10-08",
+          "as_of": "2026-10-09",
           "provenance": "FRED"
         },
         {
@@ -920,7 +920,7 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4189.5,
+          "value": 4191.5,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -1248,7 +1248,7 @@
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.7375,
+          "value": 6.738,
           "band": 2,
           "baseline_band": 1,
           "weight": 0.5,
@@ -1589,7 +1589,7 @@
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 93.68,
+          "value": 93.77,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
@@ -1670,7 +1670,7 @@
         {
           "id": "move_ccp",
           "label": "Treasury volatility (MOVE)",
-          "value": 100.7189,
+          "value": 100.6915,
           "band": 1,
           "baseline_band": 0,
           "weight": 0.5,
@@ -1767,6 +1767,9 @@
         "vintage": null,
         "citecheck": null,
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "glance",
         "why": [
           "recovered from a malformed reply",
@@ -1794,6 +1797,9 @@
         "vintage": null,
         "citecheck": null,
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "glance",
         "why": [
           "recovered from a malformed reply",
@@ -1834,6 +1840,9 @@
           "matched": "12.16"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "glance",
         "why": [
           "changed 13.2 -> 12.16"
@@ -1865,6 +1874,9 @@
         "vintage": null,
         "citecheck": null,
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "glance",
         "why": [
           "recovered from a malformed reply",
@@ -1892,6 +1904,9 @@
         "vintage": null,
         "citecheck": null,
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "glance",
         "why": [
           "changed 57.13 -> 56.7",
@@ -1920,6 +1935,9 @@
         "vintage": null,
         "citecheck": null,
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "glance",
         "why": [
           "recovered from a malformed reply",
@@ -1958,6 +1976,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "glance",
         "why": [
           "changed 0 -> 1"
@@ -1999,6 +2020,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "glance",
         "why": [
           "changed 2 -> 1"
@@ -2038,6 +2062,9 @@
           "matched": "28.5"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "glance",
         "why": [
           "changed 1 -> 2"
@@ -2064,6 +2091,9 @@
         "vintage": null,
         "citecheck": null,
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "glance",
         "why": [
           "recovered from a malformed reply",
@@ -2120,6 +2150,9 @@
           "url": "https://www.bloomberg.com/news/articles/2026-09-14/us-private-credit-default-rate-hits-a-record-of-6-3-fitch-says"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2161,6 +2194,9 @@
           "matched": "19860"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2201,6 +2237,9 @@
           "url": "https://www.sec.gov/newsroom/speeches-statements/uyeda-remarks-2026-u-s-treasury-market-conference-092226"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2241,6 +2280,9 @@
           "url": "https://www.mof.go.jp/english/policy/jgbs/auction/calendar/eresul/eresul20261006.htm"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2281,6 +2323,9 @@
           "url": "https://www.sifma.org/news/press-releases/us-treasury-central-clearing-survey-broad-industry-readiness-for-cash-clearing-industry-moving-towards-execution-but-work-remains-ahead-of-repo-deadline"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2321,6 +2366,9 @@
           "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q3/press-release-webcast"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2356,6 +2404,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2395,6 +2446,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2432,6 +2486,9 @@
           "matched": "4.45"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2473,6 +2530,9 @@
           "matched": "6.13"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2505,6 +2565,9 @@
           "matched": "49.3"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2542,6 +2605,9 @@
           "matched": "88.2"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2577,6 +2643,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2607,6 +2676,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2642,6 +2714,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2677,6 +2752,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2713,6 +2791,9 @@
           "url": "https://www.ssa.gov/oact/"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2745,6 +2826,9 @@
           "matched": "3.8"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2790,6 +2874,9 @@
           "matched": "16.3"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2825,6 +2912,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2864,6 +2954,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2908,6 +3001,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2945,6 +3041,9 @@
           "matched": "120,000"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -2989,6 +3088,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -3019,6 +3121,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -3059,6 +3164,9 @@
           "url": "https://www.energy.gov/node/4855857"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -3096,6 +3204,9 @@
           "matched": "3.3"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -3131,6 +3242,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -3172,6 +3286,9 @@
           "matched": "96,000"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -3204,6 +3321,9 @@
           "matched": "136.0"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -3244,6 +3364,9 @@
           "url": "https://emp.lbl.gov/queues"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -3275,6 +3398,9 @@
           "url": "https://straits.live/briefs/2026-10-12"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -3316,6 +3442,9 @@
           "matched": "6,820,887"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       },
@@ -3355,6 +3484,9 @@
           "verdict": "skipped"
         },
         "stale_guard": null,
+        "reversal_guard": null,
+        "pending": null,
+        "change_reason": "",
         "tier": "ok",
         "why": []
       }
@@ -3423,7 +3555,7 @@
             "label": "US high-yield OAS (%, \u2248310bps)",
             "story": "Private credit's opaque expansion",
             "band": 0,
-            "value": 3.15
+            "value": 3.11
           }
         ]
       }
@@ -3889,8 +4021,8 @@
       {
         "id": "hy_oas",
         "label": "High-yield spread",
-        "value": 3.15,
-        "as_of": "2026-10-08",
+        "value": 3.11,
+        "as_of": "2026-10-09",
         "unit": "pp",
         "note": "The extra yield markets demand to lend to risky companies - the market's own price of credit stress. Calm is roughly below ~4.",
         "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"

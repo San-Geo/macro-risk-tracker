@@ -5012,15 +5012,15 @@
     },
     "japan-us-coordinated-fx-intervention-july-31-str-7cd83d": {
       "headline": "Japan\u2013US coordinated FX intervention July 31: structural yen weakness unresolved as BOJ faces fiscal-monetary trilemma",
-      "summary": "The US Treasury and Japan's Finance Ministry conducted a joint yen-buying, euro-selling intervention on July 31 \u2014 the first US-assisted yen intervention in decades \u2014 after USD/JPY fell to 40-year lows; Treasury Secretary Bessent publicly confirmed it on August 3. Analysts at MUFG and Investing.com note the intervention has not resolved the underlying drivers (rate gap, fiscal risk, import inflation), and markets still assign a high probability of a BoJ rate hike in September, which would further raise Japan's debt-servicing cost against a backdrop of the Takaichi tax cut.",
-      "as_of": "2026-08-03",
+      "summary": "The Bank of Japan raised its policy rate 25bps to 1.25% in a split 7-2 decision on September 18, citing upside inflation risk, taking rates to their highest since 1995. The yen remains near 156-157 post-intervention (Japan and US conducted coordinated yen-buying in late July), while the 10-yr JGB yield sits at ~3.10% and the 30-yr at ~4.04%, with the curve reflecting both BOJ tightening trajectory and unresolved Takaichi fiscal risk premium.",
+      "as_of": "2026-10-12",
       "sources": [
-        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-10-august-2026/",
-        "https://newsonjapan.com/article/150259.php",
-        "https://www.investing.com/rates-bonds/japan-10-year-bond-yield",
-        "https://tradingeconomics.com/japan/government-bond-yield"
+        "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html",
+        "https://tradingeconomics.com/japan/interest-rate",
+        "https://tradingeconomics.com/japan/30-year-bond-yield",
+        "https://asianbondsonline.adb.org/japan/"
       ],
-      "materiality": "high",
+      "materiality": "medium",
       "classification": "story_gap",
       "target_story": "s2_japan",
       "target_indicator": null,
@@ -5035,11 +5035,11 @@
         "suggested_weight": 0.15
       },
       "proposed_story": null,
-      "rationale": "s2_japan tracks USD/JPY as a value indicator but has no binary flag for the qualitative escalation of a coordinated US-Japan intervention \u2014 a rare event last seen in 1998 and 2011. Joint intervention signals that yen weakness has crossed a threshold of systemic concern for both sovereigns, creating a distinct macro signal beyond the spot rate itself. Without this flag, the tracker cannot distinguish between routine yen drift and a structural crisis requiring cross-border policy coordination.",
+      "rationale": "The US-Japan coordinated FX intervention in late July is a qualitative escalation not captured by the current USD/JPY level indicator alone. Coordinated intervention signals a geopolitical dimension to yen management (Treasury Secretary Bessent publicly confirmed US involvement), changing the risk topology: it creates a de facto floor but also a political tripwire if the yen depreciates past it again. This gap in the indicator set matters for carry-unwind risk assessment.",
       "status": "pending",
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12",
-      "sightings": 1,
+      "last_seen": "2026-10-13",
+      "sightings": 2,
       "id": "japan-us-coordinated-fx-intervention-july-31-str-7cd83d"
     },
     "obbba-enacted-us-debt-to-gdp-projected-to-hit-12-9d22ed": {
@@ -9570,10 +9570,132 @@
       "last_seen": "2026-10-13",
       "sightings": 1,
       "id": "imf-gfsr-oct-2026-private-credit-faces-higher-ba-d3cc0d"
+    },
+    "japan-30-yr-jgb-hits-record-4-24-takaichi-doge-r-b87875": {
+      "headline": "Japan 30-yr JGB hits record 4.24%; Takaichi DOGE review yields only 3 proposals from 120 tax breaks; PM warns on yield spike",
+      "summary": "Japan's 30-year JGB yield struck a record 4.235% on Oct 5 as markets priced fiscal-sustainability risk from PM Takaichi's spending pledges against a record 143-trillion-yen budget request. A rebooted 'DOGE' spending review targeting 201 public funds (~\u00a57 trillion) follows a first round that abolished just 3 of 120 tax breaks, leaving Takaichi's plan-financing clarity firmly in 'unclear' territory.",
+      "as_of": "2026-10-09",
+      "sources": [
+        "https://www.investing.com/news/economy-news/takaichi-pledges-fiscal-discipline-as-japans-debt-bill-rises-4931016",
+        "https://money.usnews.com/investing/news/articles/2026-10-08/japan-reboots-doge-style-spending-review-in-hunt-for-funds-for-takaichi-pledges",
+        "https://finance.yahoo.com/economy/policy/articles/takaichi-says-japan-may-review-063447010.html",
+        "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-05-october-2026",
+        "https://tradingeconomics.com/japan/30-year-bond-yield"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s2_japan",
+      "target_indicator": "30-year JGB yield (%) \u2192 update to 4.04\u20134.24% range (record high Oct 5); Takaichi plan financing clarity \u2192 move from 1 (unclear) to 2 (disorderly) given DOGE round-1 failure and PM's explicit yield-spike warning",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The 30-yr JGB record and Takaichi's public acknowledgment that yields could 'move unexpectedly' are textbook signals that Japan fiscal/JGB risk is escalating from 'unclear' toward 'disorderly.' The DOGE review's near-zero first-round output is material new evidence that credible fiscal consolidation is not imminent, directly informing the 'Takaichi plan financing clarity' ordinal indicator.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "japan-30-yr-jgb-hits-record-4-24-takaichi-doge-r-b87875"
+    },
+    "imf-weo-oct-13-global-inflation-lifted-to-4-7-on-982332": {
+      "headline": "IMF WEO Oct 13: global inflation lifted to 4.7% on 41% oil-price surge; Hormuz not expected to reopen until March 2027; sovereign buffers 'rapidly narrowing'",
+      "summary": "The IMF's October 2026 World Economic Outlook, released at the Bangkok Annual Meetings today, raised the global inflation forecast to 4.7% for 2026, underpinned by a ~41% oil-price increase (average ~$96/bbl), and warned that the policy buffers that allowed economies to absorb recent shocks are 'rapidly narrowing.' The IMF now estimates the Strait of Hormuz will not fully reopen until October 2027, with Gulf crude exports running at only 88% of pre-conflict levels in September.",
+      "as_of": "2026-10-13",
+      "sources": [
+        "https://mediacenter.imf.org/news/imf---world-economic-outlook-annual-meetings--2026/s/22f94667-d194-473b-87b2-34c692b5a5a3",
+        "https://www.cnbc.com/2026/10/12/imf-world-bank-annual-meetings-october-bangkok-asia-.html",
+        "https://www.usnews.com/news/business/articles/2026-10-12/imf-raises-its-forecast-for-world-growth-this-year-but-warns-of-risks-from-ai-boom-and-debt",
+        "https://www.aljazeera.com/news/2026/10/11/war-and-high-debt-to-dominate-imf-world-bank-meetings-in-bangkok"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status \u2192 escalate from 1 (contested) toward 2 (effectively closed for meaningful share of Gulf crude); WTI crude \u2192 update to ~$96/bbl average per IMF baseline; s4_dev_debt: US 10y real yield and New IMF programs/missed coupons \u2192 rising, as IMF explicitly flags sovereign debt stress and narrowing buffers among energy-importing EMDEs",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The IMF's official Hormuz reopening timeline (March 2027 partial, October 2027 full) and the 88%-of-normal Gulf export flow are the first authoritative quantifications of ongoing disruption severity. Combined with the 4.7% global inflation and 'narrowing buffers' warning, this directly updates three existing indicators across s20 and s4. The Middle East war's inflationary pass-through to food/fertilizer (s18) is also implicitly worsened.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "imf-weo-oct-13-global-inflation-lifted-to-4-7-on-982332"
+    },
+    "china-s-heavy-rare-earth-export-control-suspensi-7e2db3": {
+      "headline": "China's heavy rare-earth export control suspension expires November 2026; ex-China prices already 5x domestic (IEA); $6.5 trillion downstream at risk",
+      "summary": "The IEA's Global Critical Minerals Outlook 2026 confirms that expanded Chinese rare-earth export restrictions\u2014extended to internationally-made products containing Chinese-sourced RE or Chinese processing technology\u2014were suspended for one year until November 2026, with that deadline now imminent. European prices for gallium and heavy rare earths (dysprosium, terbium) are running at approximately 5x Chinese domestic prices, and the IEA estimates full implementation could put ~$6.5 trillion/year of downstream production at risk globally.",
+      "as_of": "2026-10-09",
+      "sources": [
+        "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary",
+        "https://www.ces-intelligence.com/analysis/critical-minerals-2026-geopolitical-risk-assessment",
+        "https://www.whitecase.com/insight-our-thinking/mining-metals-2026-adapting-policy-driven-business-cycle"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Nov-2025 pause status \u2192 escalate from 0 (extended) to 1 (expiring): the one-year suspension expires November 2026, making lapse imminent; Ex-China heavy rare-earth price premium \u2192 update to ~5x China domestic (gallium, dysprosium, terbium in Europe per IEA); Rare-earth export license flow \u2192 tighten from 1 (slowing) toward 2 (frozen) if November deadline lapses without renewal",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The November 2026 expiry of the one-year suspension is the single most time-sensitive binary event in the tracker. The IEA's $6.5 trillion at-risk figure and the 5x European price premium quantify the stakes precisely. This is the highest-urgency clock in the existing story set and warrants immediate indicator escalation ahead of the deadline.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "china-s-heavy-rare-earth-export-control-suspensi-7e2db3"
+    },
+    "imf-global-financial-stability-report-oct-13-fla-fd9cc9": {
+      "headline": "IMF Global Financial Stability Report (Oct 13) flags AI-boom hidden dangers and hedge fund vulnerabilities as new systemic financial risks",
+      "summary": "The IMF's Global Financial Stability Report, released simultaneously with the WEO at the Bangkok Annual Meetings on October 13, explicitly identifies the 'hidden dangers of the artificial intelligence boom' and 'hedge fund vulnerabilities' as emergent systemic risks not previously central to the Fund's stability assessments. The report notes that AI-related investment provided a global demand impulse in H1 2026 but that its financial stability implications\u2014concentrated leverage, opaque AI-asset collateral, and uneven benefit distribution\u2014are under-monitored.",
+      "as_of": "2026-10-13",
+      "sources": [
+        "https://www.chiangraitimes.com/business/imf-global-economic-outlook/",
+        "https://www.cnbc.com/2026/10/12/imf-world-bank-annual-meetings-october-bangkok-asia-.html",
+        "https://www.usnews.com/news/business/articles/2026-10-12/imf-raises-its-forecast-for-world-growth-this-year-but-warns-of-risks-from-ai-boom-and-debt"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s8_ai_capex",
+      "proposed_indicator": {
+        "label": "IMF/FSB systemic-risk flag on AI financing (0 none / 1 flagged / 2 formal warning)",
+        "type": "band",
+        "rubric": "0 = no major multilateral body has issued a formal stability warning on AI financing; 1 = IMF GFSR or FSB explicitly names AI-asset leverage or collateral opacity as a systemic concern (current: 1); 2 = FSB or BIS issues a formal recommendation or stress-test requirement targeting AI-backed debt structures",
+        "sources": [
+          "https://www.chiangraitimes.com/business/imf-global-economic-outlook/",
+          "https://www.imf.org/en/publications/gfsr"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "The existing s8 indicators track market-observable stress (IG OAS, capex-revenue gap, GPU-debt refinancing). The GFSR's formal naming of AI-boom hidden dangers and hedge fund vulnerabilities introduces a regulatory/multilateral-flag dimension that is not captured by any current indicator. As a leading indicator, official multilateral flagging historically precedes macro-prudential action by 6\u201318 months.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "imf-global-financial-stability-report-oct-13-fla-fd9cc9"
+    },
+    "imf-weo-flags-record-public-debt-and-sovereign-b-e7509d": {
+      "headline": "IMF WEO flags record public debt and sovereign bond yield risks as top-tier threats; just 32 countries drive 95% of global growth as EM buffers erode",
+      "summary": "The October 2026 IMF WEO warns that record levels of public debt and rising sovereign bond yields are among the top global risks, with IMF MD Georgieva identifying them as one of three major challenges to the world economy alongside high energy prices and AI. Growth concentration has narrowed to just 32 countries generating 95% of global expansion, while energy-importing low-income economies face the weakest per-capita income growth since the pandemic\u2014directly elevating the risk of new debt crises in EMDEs.",
+      "as_of": "2026-10-13",
+      "sources": [
+        "https://www.moroccoworldnews.com/2026/10/341755/imf-and-world-bank-annual-meetings-open-in-bangkok-amid-global-economic-risks/",
+        "https://fortune.com/2026/10/13/imf-global-growth-forecast-2026-ai-economic-divide/",
+        "https://www.usnews.com/news/business/articles/2026-10-12/imf-raises-its-forecast-for-world-growth-this-year-but-warns-of-risks-from-ai-boom-and-debt",
+        "https://mediacenter.imf.org/news/imf---world-economic-outlook-annual-meetings--2026/s/22f94667-d194-473b-87b2-34c692b5a5a3"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s4_dev_debt",
+      "target_indicator": "New IMF programs / missed coupons \u2192 escalate from 1 (rising) to 2 (cluster) given IMF's formal cluster-level warning on sovereign debt stress and shrinking buffers among energy-importing EMDEs; Broad US dollar index and US 10y real yield \u2192 flag upward pressure given energy-driven inflation keeping Fed restrictive longer",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The IMF's explicit identification of record public debt and sovereign bond yields as a top-tier risk\u2014coupled with the finding that 95% of global growth is concentrated in 32 countries\u2014constitutes a meaningful escalation signal for the s4 story. Energy-importing EMDEs are the most exposed: higher oil prices compress current accounts, weaker currencies inflate dollar debt burdens, and shrinking IMF/fiscal buffers reduce crisis-response capacity. This is a direct, same-day trigger for the s4 ordinal indicator.",
+      "status": "pending",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "sightings": 1,
+      "id": "imf-weo-flags-record-public-debt-and-sovereign-b-e7509d"
     }
   },
   "generated": "2026-10-13",
   "model": "claude-sonnet-4-6",
-  "new_count": 4,
-  "pending_count": 292
+  "new_count": 5,
+  "pending_count": 297
 }
