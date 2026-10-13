@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13 14:53 UTC",
+  "generated_at": "2026-10-13 16:14 UTC",
   "aggregates": {
     "1": 5.8,
     "3": 4.8,
@@ -9,7 +9,7 @@
     "5": 5.5,
     "overall": 7.1
   },
-  "narrative": "**HEADLINE**\nMacro risk stands at High, with 5 stories at High or above and no intraday moves.\n\n**STORY CHANGES**\nNo stories experienced level changes today.\n\n**HIGHEST-RISK WATCH**\nPrivate credit's opaque expansion remains the most acute risk at level 8.",
+  "narrative": "# EOD Macro-Risk Brief | 2026-10-13\n\n**Headline:** Overall macro risk stands at High with no intraday moves; five stories remain at High severity.\n\n**Changed Stories:**\nNone. No driver shifts occurred today.\n\n**Stories at High or Above:**\nPrivate credit's opaque expansion, Japan fiscal / JGB / carry trade, Critical minerals as a weapon, AI power & the grid bottleneck, and Sea lanes & undersea cables remain the five elevated focal points.\n\n**Watch Priority:**\nPrivate credit's opaque expansion (level 8, High) remains the single highest-risk story to monitor.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -38,7 +38,7 @@
         {
           "id": "move",
           "label": "MOVE index (Treasury volatility)",
-          "value": 100.6915,
+          "value": 100.6698,
           "band": 1,
           "baseline_band": 0,
           "weight": 1.5,
@@ -104,7 +104,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 158.36,
+          "value": 158.349,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -194,7 +194,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
-          "as_of": "2026-10-09",
+          "as_of": "2026-10-12",
           "provenance": "FRED"
         },
         {
@@ -616,7 +616,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
-          "as_of": "2026-10-09",
+          "as_of": "2026-10-12",
           "provenance": "FRED"
         },
         {
@@ -920,7 +920,7 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4191.5,
+          "value": 4181.0,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -1248,7 +1248,7 @@
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.738,
+          "value": 6.723,
           "band": 2,
           "baseline_band": 1,
           "weight": 0.5,
@@ -1450,9 +1450,10 @@
           "source": "manual",
           "cadence": "event",
           "stale": false,
-          "source_url": "https://straits.live/briefs/2026-10-12",
-          "as_of": "2026-10-12",
-          "provenance": "Agent"
+          "source_url": "https://portwatch.imf.org",
+          "as_of": "2026-10-04",
+          "provenance": "PortWatch",
+          "measured_note": "Strait of Hormuz 2.7 ships/day vs 91.55 normal (3%)"
         }
       ],
       "summary": "Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag.",
@@ -1582,14 +1583,15 @@
           "source": "manual",
           "cadence": "event",
           "stale": false,
-          "source_url": "https://straits.live/",
-          "as_of": "2026-10-12",
-          "provenance": "Agent"
+          "source_url": "https://portwatch.imf.org",
+          "as_of": "2026-10-04",
+          "provenance": "PortWatch",
+          "measured_note": "Strait of Hormuz 2.7 ships/day vs 91.55 normal (3%); Bab el-Mandeb (Red Sea) 29.6 ships/day vs 69.42 normal (43%)"
         },
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 93.77,
+          "value": 93.9,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
@@ -1655,7 +1657,7 @@
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 15.24,
+          "value": 15.44,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -1670,7 +1672,7 @@
         {
           "id": "move_ccp",
           "label": "Treasury volatility (MOVE)",
-          "value": 100.6915,
+          "value": 100.6698,
           "band": 1,
           "baseline_band": 0,
           "weight": 0.5,
@@ -3500,6 +3502,11 @@
     "agent_days_ago": 1,
     "agent_flags": 10,
     "offline": false,
+    "portwatch": {
+      "ok": 2,
+      "total": 2,
+      "as_of": "2026-10-04"
+    },
     "ledger_ok": true
   },
   "aggregates_trend": {
@@ -4022,7 +4029,7 @@
         "id": "hy_oas",
         "label": "High-yield spread",
         "value": 3.11,
-        "as_of": "2026-10-09",
+        "as_of": "2026-10-12",
         "unit": "pp",
         "note": "The extra yield markets demand to lend to risky companies - the market's own price of credit stress. Calm is roughly below ~4.",
         "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
@@ -4046,5 +4053,66 @@
         "url": "https://fred.stlouisfed.org/series/UNRATE"
       }
     ]
+  },
+  "measured": {
+    "source": "IMF PortWatch",
+    "url": "https://portwatch.imf.org",
+    "readings": {
+      "hormuz": {
+        "name": "Strait of Hormuz",
+        "avg7": 2.7,
+        "baseline": 91.55,
+        "ratio": 0.03,
+        "as_of": "2026-10-04",
+        "days": 7
+      },
+      "bab_el_mandeb": {
+        "name": "Bab el-Mandeb (Red Sea)",
+        "avg7": 29.6,
+        "baseline": 69.42,
+        "ratio": 0.426,
+        "as_of": "2026-10-04",
+        "days": 7
+      }
+    },
+    "applied": {
+      "hormuz_redsea_status": {
+        "value": 2,
+        "agent_value": 2,
+        "as_of": "2026-10-04",
+        "readings": {
+          "hormuz": {
+            "name": "Strait of Hormuz",
+            "avg7": 2.7,
+            "baseline": 91.55,
+            "ratio": 0.03,
+            "as_of": "2026-10-04"
+          },
+          "bab_el_mandeb": {
+            "name": "Bab el-Mandeb (Red Sea)",
+            "avg7": 29.6,
+            "baseline": 69.42,
+            "ratio": 0.426,
+            "as_of": "2026-10-04"
+          }
+        },
+        "note": "Strait of Hormuz 2.7 ships/day vs 91.55 normal (3%); Bab el-Mandeb (Red Sea) 29.6 ships/day vs 69.42 normal (43%)"
+      },
+      "hormuz_fertilizer": {
+        "value": 2,
+        "agent_value": 2,
+        "as_of": "2026-10-04",
+        "readings": {
+          "hormuz": {
+            "name": "Strait of Hormuz",
+            "avg7": 2.7,
+            "baseline": 91.55,
+            "ratio": 0.03,
+            "as_of": "2026-10-04"
+          }
+        },
+        "note": "Strait of Hormuz 2.7 ships/day vs 91.55 normal (3%)"
+      }
+    }
   }
 }
