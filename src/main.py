@@ -223,6 +223,8 @@ def main():
             changed = prior_v is not None and val is not None and val != prior_v
             soft = []
             if changed: soft.append(f"changed {fmt_v(prior_v)} -> {fmt_v(val)}")
+            if a.get("reversal_guard") == "held":
+                soft.append(f"reversal to {fmt_v(a.get('pending'))} held - applied next week only if the next read confirms it")
             if a.get("parse") == "repaired": soft.append("recovered from a malformed reply")
             if not (a.get("sources") or []): soft.append("no sources")
             if why:
@@ -245,6 +247,8 @@ def main():
                 "vintage": a.get("vintage"),
                 "citecheck": a.get("citecheck"),
                 "stale_guard": a.get("stale_guard"),
+                "reversal_guard": a.get("reversal_guard"), "pending": a.get("pending"),
+                "change_reason": a.get("change_reason") or "",
                 "tier": tier, "why": why,
             })
         items.sort(key=lambda x: ({"act": 0, "glance": 1, "ok": 2}[x["tier"]], x["set"], x["label"]))

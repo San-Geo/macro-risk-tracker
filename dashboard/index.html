@@ -595,6 +595,9 @@ function reviewRows(arr){ return arr.map(i=>{
   const rangeTag=i.out_of_range?`<span class="pill" style="background:#C0392B;color:#fff;margin-right:4px">out of range</span>`:'';
   const vinTag=i.vintage==='rejected'?`<span class="pill" style="background:#E8710A;color:#fff;margin-right:4px" title="the new read was based on OLDER source data than the prior applied value; the newer vintage was kept">older data rejected</span>`:'';
   const staleTag=i.stale_guard==='held'?`<span class="pill" style="background:#E8710A;color:#fff;margin-right:4px" title="the rating tried to rise on evidence older than 90 days; the prior value was kept until a human confirms">old-evidence upgrade held</span>`:'';
+  const revTag=i.reversal_guard==='held'?`<span class="pill" style="background:#5b6170;color:#fff;margin-right:4px" title="this read would undo last week's change; it is held until a second consecutive read confirms it">reversal awaiting confirmation</span>`
+    :i.reversal_guard==='confirmed'?`<span class="pill" style="background:var(--track);color:var(--text);margin-right:4px" title="a reversal confirmed by two consecutive weekly reads">reversal confirmed</span>`:'';
+  const chgLine=i.change_reason?`<div style="margin-bottom:3px;font-size:11px"><span style="font-weight:700;color:var(--accent)">CHANGE:</span> ${String(i.change_reason).replace(/</g,'&lt;')}</div>`:'';
   const whyLine=(i.why&&i.why.length&&i.tier!=='ok')?`<div style="margin-bottom:3px;color:var(--muted);font-size:11px">Flagged: ${i.why.join(' \u00B7 ')}</div>`:'';
   const parseTag=i.parse==='repaired'?`<span class="pill" style="background:#F5A623;color:#fff;margin-right:4px" title="the agent's JSON was malformed; the score was recovered but the fact text may be partial">fact recovered</span>`:'';
   let xc='';
@@ -612,7 +615,7 @@ function reviewRows(arr){ return arr.map(i=>{
   return `<tr><td>${i.label}<div style="color:var(--muted);font-size:11px">${i.story}${i.domain?` \u00B7 <span style="color:var(--accent)">${i.domain} desk</span>`:''}</div></td>
     <td>${fmt(i.value)}</td>
     <td><span class="pill" style="background:${confColor(i.confidence)};text-transform:capitalize">${i.confidence||'-'}</span></td>
-    <td>${statusOf(i)}</td><td>${whyLine}${rangeTag}${vinTag}${staleTag}${parseTag}${citeTag(i)}${xc}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
+    <td>${statusOf(i)}</td><td>${whyLine}${rangeTag}${vinTag}${staleTag}${revTag}${parseTag}${citeTag(i)}${xc}${chgLine}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
 }).join(''); }
 function reviewPanel(d){
   const r=d.agent_review;

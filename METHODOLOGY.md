@@ -1,6 +1,6 @@
 # Methodology
 
-**Version 1.1 — 2026.** This document explains exactly how the Global Macro Risk Tracker turns
+**Version 1.2 — 2026.** This document explains exactly how the Global Macro Risk Tracker turns
 data and current events into a 1–10 risk level for each story, what the numbers mean, and — just
 as importantly — what they do *not* mean. It is meant to be read by a skeptical professional.
 
@@ -55,6 +55,16 @@ Safeguards that make this trustworthy rather than a black box:
   flagged for human review.
 - **Cross-checked** — the highest-weight indicators are rated twice and any disagreement is treated
   as low-confidence and flagged (Section 6).
+- **Continuous, not amnesiac** — the agent sees last week's applied reading and its evidence, and may
+  change it only for a new, dated event or a stated correction (the reason is logged). The independent
+  cross-check never sees that prior reading, so it stays a blind second opinion.
+- **Reversal confirmation** — a judgment rating that would flip straight back to its previous value within
+  three weeks is held until a second consecutive weekly read (or an agreeing independent cross-check)
+  confirms it. Replayed over the first 18 weekly runs, this removes all 18 back-and-forth flips at the
+  cost of delaying a genuine reversal by one week.
+- **Measured anchors** — where a judgment can rest on a measurement, the rubric uses it (e.g. a strait is
+  "closed" when commercial transits are below 25% of the pre-crisis baseline - talks and escorts alone do
+  not change the rating), and event-based ratings only count events inside a stated recent window.
 - **Human-final** — anything pinned in `manual_input.csv` overrides the agent and is never changed.
 
 ## 5. Data sources
@@ -121,6 +131,9 @@ never overwritten. Episodes of a week or less that were opened by a signal which
 are marked **brief crossing**, so base-rate analysis can treat them as boundary noise.
 
 ## Changelog
+
+- **1.2** - Rating stability: continuity prompt with logged change reasons, reversal confirmation guard,
+  measured or time-windowed rubrics for six indicators that had been flipping week to week.
 
 - **1.1** - Track record grading: published per-story rubric, two-agent automatic grading with
   code-computed grades, timing qualifier, brief-crossing flag, one-week episode close rule.

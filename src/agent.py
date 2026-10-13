@@ -121,8 +121,8 @@ def _salvage_fields(text):
     m = re.search(r'"as_of"\s*:\s*"([^"]+)"', text)
     if m:
         out["as_of"] = m.group(1)
-    keys = "value|confidence|as_of|fact|rationale|dissent|sources"
-    for fld in ("fact", "rationale"):
+    keys = "value|confidence|as_of|fact|rationale|change_reason|dissent|sources"
+    for fld in ("fact", "rationale", "change_reason"):
         m = re.search(r'"%s"\s*:\s*"(.*?)"\s*,\s*"(?:%s)"\s*:' % (fld, keys), text, re.DOTALL)
         if m:
             out[fld] = m.group(1).replace('"', "'")
@@ -183,11 +183,41 @@ def _coerce(value, kind):
 
 
 ASI1_URL = "https://api.asi1.ai/v1/chat/completions"
+# A band rating that REVERSES its last change within this many days needs a second
+# consecutive read (or an agreeing independent cross-check) before it is applied.
+REVERSAL_DAYS = int(os.environ.get("AGENT_REVERSAL_DAYS", "21") or 21)
 # A band rating may not RISE on evidence older than this (see the stale-upgrade guard).
 STALE_UPGRADE_DAYS = int(os.environ.get("AGENT_STALE_UPGRADE_DAYS", "90") or 90)
 
 
-def _build_prompt(spec, date, domain, kind):
+def _prior_block(prior):
+    """Continuity: show the primary agent last week's applied reading so it re-checks
+    rather than re-discovers. Changing it requires a stated reason; the cross-check
+    agent never sees this (it stays a blind, independent read)."""
+    if not prior or prior.get("value") is None:
+        return ""
+    v = prior["value"]
+    v = int(v) if isinstance(v, float) and v.is_integer() else v
+    fact = str(prior.get("fact") or "").replace('"', "'")[:420]
+    held = (prior.get("reversal_guard") == "held" or prior.get("stale_guard") == "held"
+            or prior.get("vintage") == "rejected")
+    if held:
+        # the stored fact belongs to the read a safeguard declined, not to the value
+        head = (f"LAST APPLIED VALUE: {v} (kept by a safeguard). The most recent read proposed a "
+                f"different value based on: {fact or 'n/a'}\n")
+    else:
+        head = (f"LAST APPLIED READING (as of {prior.get('as_of') or 'unknown'}): value {v}. "
+                f"Its load-bearing fact: {fact or 'n/a'}\n")
+    return (head +
+            "Re-verify from scratch against the rubric. KEEP the same value unless (a) something "
+            f"NEW happened after {prior.get('as_of') or 'that reading'} that changes the rubric "
+            "outcome, or (b) that reading misapplied the rubric. Do not flip back and forth on "
+            "the same facts week to week. If you change the value, set \"change_reason\" to "
+            "'new_event: <what happened, and its date>' or 'correction: <what was misapplied>'; "
+            "otherwise leave it empty.\n\n")
+
+
+def _build_prompt(spec, date, domain, kind, prior=None):
     domain = domain or {}
     auth = list(spec.get("authorities") or spec.get("sources") or [])
     auth += [s for s in (domain.get("authorities") or []) if s not in auth]
@@ -211,6 +241,7 @@ def _build_prompt(spec, date, domain, kind):
         f"INDICATOR: {spec.get('query', '')}\n"
         f"RUBRIC: {spec.get('rubric','')}\n"
         f"PREFER THESE PRIMARY SOURCES: {sources}\n\n"
+        f"{_prior_block(prior)}"
         "Research the most recent authoritative information BEFORE answering (use web "
         "search/tools if available). Base the rating ONLY on what you actually find; do not guess.\n"
         "Work in two separate steps so fact and interpretation never blur:\n"
@@ -229,6 +260,7 @@ def _build_prompt(spec, date, domain, kind):
         '"as_of": "<YYYY-MM-DD or period>", '
         '"fact": "<the load-bearing fact verbatim, with primary source + date>", '
         '"rationale": "<=2 sentences: how that fact maps to the rubric>", '
+        '"change_reason": "<empty, or new_event: ... / correction: ...>", '
         '"dissent": [{"view": "<competing reading and who reports it>", "source": "<url>"}], '
         '"sources": ["<url>", ...]}'
     )
@@ -315,9 +347,10 @@ def _finalize(parsed, kind):
     parsed["type"] = kind
     return parsed
 
-def assess_one(ind_id, spec, api_key, date, prior=None, model=None, domain=None, provider="anthropic"):
+def assess_one(ind_id, spec, api_key, date, prior=None, model=None, domain=None, provider="anthropic",
+               show_prior=True):
     kind = spec.get("type", "band")
-    prompt = _build_prompt(spec, date, domain, kind)
+    prompt = _build_prompt(spec, date, domain, kind, prior if show_prior else None)
     if provider == "asi1":
         text = _call_asi1(prompt, model or "asi1", api_key)
     else:
@@ -385,6 +418,31 @@ def resolve_crosscheck(api_key):
     return "anthropic", api_key, None
 
 
+def _change_history(ih_path=None):
+    """Backfill {indicator_id: (prev_value, changed_on)} from data/indicator_history.csv
+    for logs written before the reversal guard existed: the date the current value
+    began, and the value it replaced."""
+    ih_path = ih_path or os.path.join(ROOT, "data", "indicator_history.csv")
+    out, series = {}, {}
+    if not os.path.exists(ih_path):
+        return out
+    import csv
+    with open(ih_path, newline="") as f:
+        for r in csv.DictReader(f):
+            try:
+                series.setdefault(r["indicator_id"], []).append((r["date"], float(r["value"])))
+            except (TypeError, ValueError):
+                continue
+    for k, ser in series.items():
+        ser.sort()
+        cur = ser[-1][1]
+        for i in range(len(ser) - 1, 0, -1):
+            if ser[i - 1][1] != cur:
+                out[k] = (ser[i - 1][1], ser[i][0])
+                break
+    return out
+
+
 def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5):
     """Assess each framework indicator. Returns (values_to_apply, log_dict)."""
     overrides = overrides or set()
@@ -424,7 +482,7 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
         # Cross-check the highest-weight indicators with a second independent read.
         if weights.get(ind_id, 0) >= xcheck_min and a.get("value") is not None:
             try:
-                b = assess_one(ind_id, spec, xkey, date, prior, model=xmodel,
+                b = assess_one(ind_id, spec, xkey, date, prior, model=xmodel, show_prior=False,
                                domain=domain, provider=xprovider)
                 kind = spec.get("type", "band")
                 b_val = b.get("value")
@@ -464,6 +522,7 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
 
     # 3) Apply confidence gating in framework order (deterministic, no network).
     sanity_on = os.environ.get("AGENT_SANITY", "1") not in ("0", "false", "no")
+    backfill = _change_history()
     for ind_id in to_assess:
         prior = prior_log.get(ind_id)
         a = results.get(ind_id)
@@ -519,6 +578,37 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
                     f"evidence dated {a.get('as_of')} ({age} days old); prior value kept for review]").strip())
                 a["value"] = prior["value"]
                 review.append(ind_id)
+        # Reversal guard: a band rating that flips straight back to the value it had before
+        # its last change (A -> B -> A) within REVERSAL_DAYS is applied only when a second
+        # consecutive weekly read says the same thing, or an independent cross-check agrees.
+        # Live case: Hormuz flipped closed/contested six times in ten weeks on the same facts
+        # while the strait stayed shut - each flip opened or closed a Track record episode.
+        hist_prev, hist_on = (prior or {}).get("prev_value"), (prior or {}).get("changed_on")
+        if prior and hist_on is None and ind_id in backfill:
+            hist_prev, hist_on = backfill[ind_id]
+        if (str(framework[ind_id].get("type", "band")) == "band" and prior
+                and prior.get("value") is not None and a.get("value") is not None
+                and a["value"] != prior["value"] and hist_prev is not None
+                and a["value"] == hist_prev and a.get("vintage") != "rejected"
+                and a.get("stale_guard") != "held"
+                and (a.get("crosscheck") or {}).get("agree") is not True):
+            try:
+                recent = (datetime.date.fromisoformat(date) -
+                          datetime.date.fromisoformat(str(hist_on)[:10])).days <= REVERSAL_DAYS
+            except Exception:
+                recent = False
+            if recent:
+                if prior.get("pending") == a["value"]:
+                    a["reversal_guard"] = "confirmed"   # second consecutive read -> apply
+                else:
+                    a["reversal_guard"] = "held"
+                    a["pending"] = a["value"]
+                    a["rationale"] = ((a.get("rationale", "") +
+                        f" [reversal guard: {prior['value']} -> {a['value']} would undo the change made "
+                        f"on {str(hist_on)[:10]}; held at {prior['value']} until a second consecutive "
+                        f"read confirms it]").strip())
+                    a["value"] = prior["value"]
+                    review.append(ind_id)
         conf = str(a.get("confidence", "low")).lower()
         if conf == "low" or a.get("value") is None:
             # don't flip on weak evidence: retain prior applied value if we have one
@@ -539,6 +629,14 @@ def run_agent(framework, api_key, date, overrides=None, only_ids=None, pause=0.5
         if a.get("dissent"):
             review.append(ind_id)  # sources disagree -> surface the annotated divergence
         a["prior"] = (prior or {}).get("value")
+        # change bookkeeping for the reversal guard
+        if (prior and prior.get("value") is not None and a.get("applied")
+                and a.get("value") is not None and a["value"] != prior["value"]):
+            a["prev_value"], a["changed_on"] = prior["value"], date
+        else:
+            a["prev_value"], a["changed_on"] = hist_prev, hist_on
+        if a.get("reversal_guard") != "held":
+            a.pop("pending", None)
         assessments[ind_id] = a
 
     log = {"generated": datetime.datetime.now(datetime.timezone.utc).isoformat(), "date": date,

@@ -222,9 +222,9 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** COUNT sovereign-distress events in the trailing 6 months. 0 = CALM: no new IMF programs or missed coupons. 1 = RISING: 1-2 new IMF arrangements, OR a single sovereign missed coupon/standstill. 2 = CLUSTER: >=3 sovereigns newly in IMF programs or in default/missed-coupon in the window. List the countries.
+**Rubric.** COUNT distinct sovereigns in the trailing 6 months (state the exact window) that EITHER (a) had a NEW IMF lending arrangement APPROVED BY THE IMF EXECUTIVE BOARD (count SBA, EFF, ECF, RFI or RCF emergency financing; do NOT count staff-level agreements, reviews, augmentations or extensions of existing programs, or non-financing instruments such as PCI or PSI), OR (b) newly missed an external bond or loan payment beyond its grace period, announced a standstill, or launched a distressed exchange. Count each country once. 0 = CALM: none. 1 = RISING: 1-2 countries. 2 = CLUSTER: 3 or more. List every country counted with its event and date.
 
-**What the agent searches.** IMF new program emerging market default missed coupon 2026
+**What the agent searches.** IMF Executive Board approves new arrangement 2026; sovereign missed coupon default distressed exchange 2026
 
 **Authoritative sources.** https://www.imf.org/en/News, https://www.worldbank.org
 
@@ -450,11 +450,11 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** Rate Strait of Hormuz / Red Sea transit. 0 = open, traffic ~normal. 1 = CONTESTED: threatened, partially disrupted, moving under naval-escorted convoys, OR a ceasefire / MOU / active de-escalation in effect even if volumes are reduced. 2 = CLOSED: commercial transit physically/legally halted at well under ~25% of normal with NO functioning convoy workaround. Apply 2 ONLY if a corroborating market signal is consistent with a closure (notably crude oil elevated); if oil is benign, treat it as contested (1), not closed. Convoys moving, talks underway, or a signed truce CAP this at 1.
+**Rubric.** Rate the WORSE of the two chokepoints - the Strait of Hormuz and the Red Sea / Bab el-Mandeb - by MEASURED traffic, not by diplomacy. Step 1: find the latest 7-day average of commercial transits (IMF PortWatch preferred; Lloyd's List, Kpler or Windward otherwise) and the pre-crisis baseline (Hormuz about 85-100 per day; Bab el-Mandeb about 70 per day before November 2023). Step 2: compute traffic as a percent of baseline. 2 = CLOSED: below 25% of baseline. 1 = CONTESTED: 25-80% of baseline, OR attacks on shipping, mining, or declared transit restrictions in the last 30 days while traffic stays above 25%. 0 = OPEN: above 80% of baseline and no attacks in the last 30 days. Talks, memoranda, ceasefire announcements and naval escorts do NOT change the rating by themselves - only measured traffic and actual attacks do. State the transit figure, its date and source, and the baseline used.
 
-**What the agent searches.** Strait of Hormuz Red Sea shipping status open closed ceasefire latest 2026
+**What the agent searches.** Strait of Hormuz daily transits IMF PortWatch Lloyd's List latest week; Red Sea Bab el-Mandeb transits; attacks on shipping
 
-**Authoritative sources.** https://www.reuters.com/world/middle-east, https://www.imo.org, https://www.cfr.org
+**Authoritative sources.** https://portwatch.imf.org, https://www.reuters.com/world/middle-east, https://www.imo.org, https://www.cfr.org
 
 ### Undersea cable incidents (0 none / 1 threatened / 2 cut)  
 
@@ -463,7 +463,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 0.5  
 
-**Rubric.** 0 = NONE: no recent damage to major submarine cables. 1 = THREATENED: credible threats, anchor-dragging incidents, or a single repaired cut. 2 = CUT: >=1 major cable currently severed and unrepaired causing connectivity loss, or multiple simultaneous cuts. Name the cable(s) and date.
+**Rubric.** 0 = NONE: no damage to major submarine cables in the last 90 days and none currently unrepaired. 1 = THREATENED: credible official threats, or anchor-dragging or damage incidents in the last 90 days, or a cut in the last 90 days that has since been repaired. 2 = CUT: at least one major cable is severed and unrepaired TODAY, causing connectivity loss, or multiple simultaneous cuts in the last 30 days. Cuts more than 90 days old that have been repaired do not count. Name the cable(s) and the date.
 
 **What the agent searches.** undersea submarine cable damage cut Red Sea Hormuz Baltic latest 2026
 
@@ -545,7 +545,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** Use a drought monitor for a named chip/agri hub (US Southwest, Taiwan). 0 = NONE: normal precipitation/snowpack. 1 = EMERGING: 'severe' (D2) drought OR snowpack 20-50% below normal, no production impact yet. 2 = ACUTE: 'extreme/exceptional' (D3-D4) OR a confirmed production curtailment / water-rationing order at a fab or farm region. Cite the monitor.
+**Rubric.** Use a drought monitor for a named chip or farm hub (US Southwest, Taiwan, others). Rate CURRENT conditions. 0 = NONE: normal precipitation and snowpack. 1 = EMERGING: 'severe' (D2) drought, or snowpack 20-50% below normal, or an earlier rationing order that has since been lifted, with no production impact now. 2 = ACUTE: 'extreme' or 'exceptional' (D3-D4) drought now, OR a water-rationing order or production curtailment at a fab or farm region that is IN FORCE today or was imposed in the last 90 days. Cite the monitor, and the date of any order and whether it is still in force.
 
 **What the agent searches.** drought Taiwan US Southwest major farming region chip fab water 2026
 
@@ -571,7 +571,7 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 0.5  
 
-**Rubric.** Track named transboundary disputes (Indus, Nile/GERD, etc.). 0 = CALM: treaties functioning. 1 = TENSE: a treaty suspended/contested or official threats exchanged, no kinetic action. 2 = CRISIS: an armed clash, a deliberate flow cut-off carried out, or a war threat tied to a dam/river. State the dispute and latest action.
+**Rubric.** Track named transboundary river disputes (Indus, Nile/GERD, Mekong, Tigris-Euphrates and others). Rate on DATED events. 2 = CRISIS: within the last 90 days, an armed clash over water, a deliberate cut-off or major flow manipulation actually carried out, or an explicit threat of war tied to a dam or river by a head of state or government, defence minister or foreign minister. 1 = TENSE: a treaty is suspended, in abeyance or formally contested (a standing condition), or level-2 events occurred more than 90 days ago without resolution. 0 = CALM: treaties functioning and no such events in the last 12 months. Older events are background - do not score them again as if new. Name the dispute and give the date of the most recent qualifying event.
 
 **What the agent searches.** transboundary water dispute Nile GERD Indus escalation 2026
 
@@ -610,9 +610,9 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 *Type:* band  
 *Weight on the meter:* 1.0  
 
-**Rubric.** Rate Gulf fertilizer/sulfur/ammonia INPUT flow through the same Strait of Hormuz that hormuz_redsea_status tracks - the two MUST agree on whether the strait is open/contested/closed. 0 = inputs flowing ~normally. 1 = DISRUPTED: flows reduced, costs/insurance elevated, but moving (including under naval-escorted convoys or a partial reopening / ceasefire / MOU). 2 = CUT: input transit effectively halted by a genuine closure - apply ONLY if the strait is rated CLOSED (2) and a market signal corroborates it (crude oil elevated). Convoys moving, a signed truce, or benign oil CAP this at 1, even if volumes are far below normal.
+**Rubric.** Rate Gulf fertilizer, sulfur and ammonia flows through the Strait of Hormuz using the SAME transit measure as hormuz_redsea_status (Hormuz only), so the two reads cannot disagree about the strait. 2 = CUT: Hormuz commercial transits below 25% of the pre-crisis baseline (latest 7-day average; baseline about 85-100 per day). 1 = DISRUPTED: transits 25-80% of baseline, OR documented Gulf fertilizer, sulfur or ammonia loadings below 50% of normal in the latest month reported. 0 = FLOWING: transits above 80% of baseline and Gulf fertilizer loadings near normal. Diplomacy, naval escorts and insurance costs do not change the rating by themselves. State the transit figure, its date, source and the baseline used.
 
-**What the agent searches.** Strait of Hormuz sulfur ammonia fertilizer shipping disruption 2026
+**What the agent searches.** Strait of Hormuz daily transits IMF PortWatch latest; Gulf sulfur ammonia urea loadings latest month
 
-**Authoritative sources.** https://www.fao.org, https://blogs.worldbank.org, https://www.reuters.com/markets/commodities
+**Authoritative sources.** https://portwatch.imf.org, https://www.fao.org, https://blogs.worldbank.org, https://www.reuters.com/markets/commodities
 
