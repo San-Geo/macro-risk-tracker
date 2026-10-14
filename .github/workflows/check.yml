@@ -1,0 +1,30 @@
+name: check
+
+# Runs on every push (including your web-UI uploads and the bot's daily commits).
+# Within about a minute it parses every data/config file, runs the config self-test
+# and the unit tests, and marks the commit with a green tick or a red cross.
+# Read-only: it changes nothing and uses no API keys.
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Every data and config file parses
+        run: python tests/check_files.py
+      - name: Config self-test
+        run: python tests/selftest.py
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p "test_*.py" -v
