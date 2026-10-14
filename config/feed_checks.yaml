@@ -1,0 +1,38 @@
+# Plausibility checks for the automatic market/data feeds (methodology 3.0).
+#
+# A fetched value is HELD (the last good value is kept, and the run is flagged) when
+#   - it falls outside [min, max]  (e.g. a unit switch: copper in cents, not dollars), or
+#   - it jumps more than max_jump from the last good value seen in the last 10 days
+#     (rel = fraction of the last value, abs = in the indicator's own units).
+# A genuine big move is accepted as soon as the NEXT run sees the same value again
+# (two consecutive observations confirm it) - so a real crash is delayed by one run
+# at most, while a one-off bad print never reaches the score.
+#
+# When a feed FAILS, the last good value is carried forward (marked "carried", with
+# its real as-of date) instead of falling back to the June starting value, which by
+# construction reads as "normal".
+
+defaults:
+  confirm_runs: 2        # consecutive identical out-of-bounds reads that confirm a move
+  jump_window_days: 10   # only compare against a last good value this recent
+
+indicators:
+  sofr_effr_spread:  {min: -1.0, max: 3.0,   max_jump: {abs: 0.75}}
+  move:              {min: 30,   max: 400,   max_jump: {rel: 1.0}}
+  move_ccp:          {min: 30,   max: 400,   max_jump: {rel: 1.0}}
+  vix:               {min: 5,    max: 150,   max_jump: {rel: 2.0}}
+  usdjpy:            {min: 70,   max: 250,   max_jump: {rel: 0.15}}
+  usdcny:            {min: 5,    max: 9.5,   max_jump: {rel: 0.10}}
+  dxy:               {min: 80,   max: 200,   max_jump: {rel: 0.10}}
+  jgb30:             {min: -1.0, max: 10.0,  max_jump: {abs: 1.0}}
+  real10:            {min: -4.0, max: 6.0,   max_jump: {abs: 1.5}}
+  hy_oas:            {min: 1.0,  max: 25.0,  max_jump: {abs: 3.0}}
+  ig_oas:            {min: 0.3,  max: 8.0,   max_jump: {abs: 1.5}}
+  oat_bund:          {min: -1.0, max: 6.0,   max_jump: {abs: 1.5}}
+  unrate:            {min: 1.0,  max: 30.0,  max_jump: {abs: 3.0}}
+  mortgage_delinq:   {min: 0.0,  max: 20.0,  max_jump: {abs: 3.0}}
+  peg_deviation:     {min: 0.0,  max: 100.0, max_jump: {abs: 50.0}}
+  stablecoin_supply: {min: 50,   max: 3000,  max_jump: {rel: 0.30}}
+  gold:              {min: 500,  max: 20000, max_jump: {rel: 0.25}}
+  copper_price:      {min: 1.0,  max: 30.0,  max_jump: {rel: 0.30}}
+  oil_price:         {min: -50,  max: 300,   max_jump: {rel: 0.50}}

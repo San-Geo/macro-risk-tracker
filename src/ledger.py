@@ -188,6 +188,16 @@ def apply_owner_grades(csv_path):
             if not eid or eid.startswith("#"):
                 continue
             g = (row.get("grade") or "").strip().lower()
+            if eid.startswith("miss-"):
+                m = next((x for x in led.get("misses", []) if x.get("id") == eid), None)
+                if m is None:
+                    msgs.append(f"grades.csv line {n}: no possible miss '{eid}'")
+                elif g not in ("confirmed", "rejected"):
+                    msgs.append(f"grades.csv line {n}: a miss is 'confirmed' or 'rejected'")
+                elif m.get("status") != g or (row.get("note") or "").strip() != (m.get("owner_note") or ""):
+                    m["status"], m["owner_note"] = g, (row.get("note") or "").strip()
+                    changed = True
+                continue
             note = (row.get("note") or "").strip() or None
             timing = (row.get("timing") or "").strip().lower() or None
             e = by_id.get(eid)

@@ -245,3 +245,87 @@ def run(api_key, date_str):
     if len(due) > MAX_PER_RUN:
         print(f"  ({len(due) - MAX_PER_RUN} more episode(s) due - graded on the next agent run)")
     return summary
+
+
+# ---------------------------------------------------------------------------
+# MISS CHECK - the track record must count misses, not just hits.
+# Once a month (first agent run of the month), every story that is NOT at High is
+# checked against its own MATERIALIZED tests for the past 30 days. A test met while
+# the tracker sat below High is logged as a POSSIBLE MISS for the owner to confirm
+# or reject (grades.csv: miss id, "confirmed" or "rejected"). Primary agent only,
+# so the cost stays small; nothing is published as a miss until the owner confirms.
+# ---------------------------------------------------------------------------
+MISS_WINDOW_DAYS = 30
+
+
+def _miss_prompt(story_id, story_name, level, rubric, start, end, today):
+    s_rub = rubric["stories"][story_id]
+    tests = "\n".join(f"  {t['id']}: {t['test']}" for t in s_rub["materialized"])
+    rules = "\n".join(f"- {r}" for r in rubric.get("evidence_rules", []))
+    ids = [t["id"] for t in s_rub["materialized"]]
+    return (
+        f"You are auditing a macro-risk tracker for MISSED calls. Today is {today}.\n\n"
+        f"STORY: {story_name}\nWHAT THIS STORY WARNS ABOUT: {s_rub['risk']}\n"
+        f"The tracker rated this story {level}/10 (below High) during the window.\n\n"
+        f"WINDOW: {start} to {end} inclusive.\n\n"
+        "Research what ACTUALLY happened and decide, for EVERY test below, whether it was met "
+        "inside the window (a condition that began earlier but was still in force counts).\n\n"
+        f"TESTS:\n{tests}\n\nEVIDENCE RULES:\n{rules}\n\n"
+        "For each test marked met give 'onset' (date the condition began), a one-sentence "
+        "'evidence' and a 'source' URL. A test you cannot source is NOT met.\n"
+        "Respond with ONLY a single-line, valid, minified JSON object; inside strings use single "
+        "quotes only:\n"
+        '{"tests": [{"id": "<id>", "met": true|false, "onset": "", "evidence": "", "source": ""}], '
+        '"confidence": "low|medium|high", "note": "<=30 words on what happened"}\n'
+        f"Include all of these test ids exactly once: {', '.join(ids)}."
+    )
+
+
+def run_miss_check(api_key, date_str, stories, force=False):
+    """stories: [{'id','name','level'}] from today's board. Never raises."""
+    if os.environ.get("GRADER_MISS_CHECK", "1") in ("0", "false", "no"):
+        return {}
+    try:
+        rubric = load_rubric()
+        today = datetime.date.fromisoformat(date_str)
+        led = ledger.load_ledger()
+        meta = led.setdefault("miss_checks", {})
+        month = today.strftime("%Y-%m")
+        if meta.get("last_month") == month and not force:
+            return {"skipped": "already checked this month"}
+        start = (today - datetime.timedelta(days=MISS_WINDOW_DAYS)).isoformat()
+        misses = led.setdefault("misses", [])
+        known = {m["id"] for m in misses}
+        summary = {"checked": 0, "possible_misses": 0, "errors": 0}
+        for s in stories:
+            if s["level"] >= ledger.OPEN_LEVEL or s["id"] not in rubric["stories"]:
+                continue
+            summary["checked"] += 1
+            try:
+                text = agent._call_anthropic(_miss_prompt(s["id"], s["name"], s["level"], rubric, start,
+                                                          date_str, date_str),
+                                             GRADER_MODEL, api_key, max_uses=5, max_tokens=3000)
+                raw = _parse(text)
+                fake_ep = {"story_id": s["id"], "opened": start, "closed": date_str}
+                ev = evaluate(raw, fake_ep, {**rubric, "window_days_after_close": 0,
+                                             "stories": {s["id"]: {**rubric["stories"][s["id"]], "contained": []}}})
+                met = [t for t in ev["tests"] if t["kind"] == "M" and t["met"]]
+                if met and ev["confidence"] != "low":
+                    mid = f"miss-{s['id']}-{date_str}"
+                    if mid not in known:
+                        misses.append({"id": mid, "story_id": s["id"], "story": s["name"],
+                                       "level": s["level"], "window": [start, date_str], "tests": met,
+                                       "note": ev["note"], "confidence": ev["confidence"],
+                                       "status": "needs_owner", "found": date_str,
+                                       "rubric_version": str(rubric.get("version", ""))})
+                        summary["possible_misses"] += 1
+            except Exception as e:
+                summary["errors"] += 1
+                print(f"  miss check {s['id']}: error ({e})")
+        if summary["errors"] < max(1, summary["checked"]):   # an all-error run retries next week
+            meta["last_month"] = month
+        meta["last_run"] = date_str
+        ledger.save_ledger(led)
+        return summary
+    except Exception as e:
+        return {"error": str(e)[:200]}

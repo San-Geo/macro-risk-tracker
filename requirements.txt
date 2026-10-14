@@ -1,2 +1,5 @@
-pyyaml>=6.0
-openpyxl>=3.1
+# Exact versions (methodology 3.0 hardening): a future release can't slip into a job that holds API keys.
+# Upgrade deliberately: change the number, push, and the check workflow tests it.
+pyyaml==6.0.3
+openpyxl==3.1.5
+et-xmlfile==2.0.0

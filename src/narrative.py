@@ -146,7 +146,14 @@ def diff_changes(today, yesterday):
     changes = []
     for s in today["stories"]:
         ps = prev_stories.get(s["id"])
-        if ps is None or ps.get("level") == s["level"]:
+        if ps is None:
+            continue
+        try:
+            import score as _score
+            prev_level = _score.level_of(ps)       # same rounding rule as today
+        except Exception:
+            prev_level = ps.get("level")
+        if prev_level == s["level"]:
             continue
         prev_ind = {i["id"]: i for i in ps.get("indicators", [])}
         movers = []
@@ -160,7 +167,7 @@ def diff_changes(today, yesterday):
                            "as_of": i.get("as_of") or "",
                            "evidence": facts.get(i["id"], ""),
                            "direction": "up" if (i.get("band") or 0) > (pi.get("band") or 0) else "down"})
-        changes.append({"name": s["name"], "old": ps["level"], "new": s["level"],
+        changes.append({"name": s["name"], "old": prev_level, "new": s["level"],
                         "band": s["band"], "drivers": movers})
     return changes
 

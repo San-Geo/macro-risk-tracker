@@ -1,12 +1,12 @@
 {
-  "generated": "2026-10-13T18:30:46.912806+00:00",
+  "generated": "2026-10-13T16:47:00.101776+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
     "range": {
       "floor_all_low": 4.7,
       "baseline": 5.6,
-      "ceiling_all_high": 9.0
+      "ceiling_all_high": 9.2
     },
     "episodes": [
       {
@@ -21,14 +21,14 @@
           "2009-03-31"
         ],
         "overall": [
-          5.9,
-          6.2,
-          5.9,
-          5.9,
           5.8,
-          5.8
+          6.2,
+          6.0,
+          6.0,
+          6.0,
+          6.0
         ],
-        "start_overall": 5.9,
+        "start_overall": 5.8,
         "peak_overall": 6.2,
         "peak_band": "Elevated",
         "peak_date": "2008-09-30",
@@ -50,20 +50,20 @@
         ],
         "overall": [
           5.5,
-          5.5,
-          5.8,
-          5.7,
           5.6,
-          5.6
+          6.0,
+          5.7,
+          5.7,
+          5.7
         ],
         "start_overall": 5.5,
-        "peak_overall": 5.8,
+        "peak_overall": 6.0,
         "peak_band": "Elevated",
         "peak_date": "2020-03-31",
         "reached_elevated": true,
         "reached_high": false,
         "rose_into_event": true,
-        "separation_vs_calm": 0.3
+        "separation_vs_calm": 0.5
       },
       {
         "name": "Rate & inflation shock (2022)",
@@ -79,19 +79,19 @@
         "overall": [
           5.6,
           5.7,
-          5.9,
-          5.7,
+          6.0,
           5.8,
-          5.5
+          5.9,
+          5.6
         ],
         "start_overall": 5.6,
-        "peak_overall": 5.9,
+        "peak_overall": 6.0,
         "peak_band": "Elevated",
         "peak_date": "2022-06-30",
         "reached_elevated": true,
         "reached_high": false,
         "rose_into_event": true,
-        "separation_vs_calm": 0.4
+        "separation_vs_calm": 0.5
       },
       {
         "name": "SVB / regional banks (2023)",
@@ -103,133 +103,33 @@
           "2023-05-31"
         ],
         "overall": [
-          5.5,
           5.6,
-          5.5,
-          5.5
+          5.7,
+          5.7,
+          5.6
         ],
-        "start_overall": 5.5,
-        "peak_overall": 5.6,
+        "start_overall": 5.6,
+        "peak_overall": 5.7,
         "peak_band": "Elevated",
         "peak_date": "2023-03-15",
         "reached_elevated": true,
         "reached_high": false,
         "rose_into_event": true,
-        "separation_vs_calm": 0.1
+        "separation_vs_calm": 0.2
       }
     ],
     "summary": {
       "n_episodes": 4,
       "lit_elevated_or_higher": 4,
-      "mean_separation": 0.38,
+      "mean_separation": 0.47,
       "finding": "The overall is now tail-weighted: it tracks the worst cluster of stories and adds a premium when many are High at once, so a broad correlated shock lifts it (range ~4.7-9.0). These episodes replay MARKET indicators only with judgment indicators held at baseline, so they remain a LOWER BOUND - a real crisis that also lit the judgment layer would read materially higher."
     }
   },
   "sensitivity": {
-    "as_of_overall": 7.1,
+    "as_of_overall": 7.6,
     "max_story_swing": 2,
-    "max_overall_swing": 0.5,
+    "max_overall_swing": 0.4,
     "movers": [
-      {
-        "id": "license_flow",
-        "label": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
-        "story": "Critical minerals as a weapon",
-        "set": 4,
-        "weight": 1.5,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.5
-      },
-      {
-        "id": "ig_oas",
-        "label": "US investment-grade OAS (%) - big-issuer proxy",
-        "story": "AI build-out circular financing",
-        "set": 2,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.5
-      },
-      {
-        "id": "oil_price",
-        "label": "WTI crude oil (USD/bbl, CL=F)",
-        "story": "Sea lanes & undersea cables",
-        "set": 4,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.5
-      },
-      {
-        "id": "cat_losses",
-        "label": "Catastrophe-loss pressure (0 normal / 1 elevated / 2 severe season)",
-        "story": "Insurance retreat",
-        "set": 2,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.1
-      },
-      {
-        "id": "real10",
-        "label": "US 10y real yield (TIPS, %)",
-        "story": "Developing-world debt crisis",
-        "set": 3,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.6,
-        "overall_swing": 0.0
-      },
-      {
-        "id": "usdcny",
-        "label": "USD/CNY (yuan depreciation = higher = risk)",
-        "story": "China's price spillover (deflation or cost-push)",
-        "set": 4,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.5,
-        "overall_swing": 0.5
-      },
-      {
-        "id": "oat_bund",
-        "label": "OAT-Bund 10y spread (%)",
-        "story": "France / eurozone fragility",
-        "set": 3,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.5,
-        "overall_swing": 0.0
-      },
-      {
-        "id": "govt_stability",
-        "label": "Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election)",
-        "story": "France / eurozone fragility",
-        "set": 3,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.5,
-        "overall_swing": 0.0
-      },
-      {
-        "id": "subprime_auto_dpd",
-        "label": "Subprime auto 60+ day delinquency (%)",
-        "story": "Hidden consumer debt",
-        "set": 2,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.5,
-        "overall_swing": 0.0
-      },
-      {
-        "id": "plan_financing",
-        "label": "Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)",
-        "story": "Japan fiscal / JGB / carry trade",
-        "set": 1,
-        "weight": 1.0,
-        "story_swing": 2,
-        "set_swing": 0.4,
-        "overall_swing": 0.5
-      },
       {
         "id": "direct_lending_default",
         "label": "Direct-lending default rate (%, Fitch incl. distressed exchanges)",
@@ -237,18 +137,118 @@
         "set": 1,
         "weight": 1.5,
         "story_swing": 2,
-        "set_swing": 0.4,
-        "overall_swing": 0.5
+        "set_swing": 0.3,
+        "overall_swing": 0.4
       },
       {
-        "id": "redemption_gates",
-        "label": "Large-fund redemption gates (0 none / 1 isolated / 2 widespread)",
-        "story": "Private credit's opaque expansion",
-        "set": 1,
-        "weight": 1.0,
+        "id": "license_flow",
+        "label": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
+        "story": "Critical minerals as a weapon",
+        "set": 4,
+        "weight": 1.5,
         "story_swing": 2,
-        "set_swing": 0.4,
-        "overall_swing": 0.5
+        "set_swing": 0.3,
+        "overall_swing": 0.4
+      },
+      {
+        "id": "usdjpy",
+        "label": "USD/JPY (yen strengthening = lower = risk)",
+        "story": "Japan fiscal / JGB / carry trade",
+        "set": 1,
+        "weight": 1.5,
+        "story_swing": 2,
+        "set_swing": 0.3,
+        "overall_swing": 0.2
+      },
+      {
+        "id": "regional_bank_stress",
+        "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
+        "story": "CRE maturity wall / regional banks",
+        "set": 2,
+        "weight": 1.5,
+        "story_swing": 2,
+        "set_swing": 0.3,
+        "overall_swing": 0.2
+      },
+      {
+        "id": "move",
+        "label": "MOVE index (Treasury volatility)",
+        "story": "Treasury basis trade (hidden leverage)",
+        "set": 1,
+        "weight": 1.5,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.3
+      },
+      {
+        "id": "china_ppi",
+        "label": "China PPI YoY (%) - large swing either way is worse",
+        "story": "China's price spillover (deflation or cost-push)",
+        "set": 4,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.3
+      },
+      {
+        "id": "usdcny",
+        "label": "USD/CNY (yuan depreciation = higher = risk)",
+        "story": "China's price spillover (deflation or cost-push)",
+        "set": 4,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.3
+      },
+      {
+        "id": "truce_status",
+        "label": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
+        "story": "Critical minerals as a weapon",
+        "set": 4,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.3
+      },
+      {
+        "id": "re_blacklist",
+        "label": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
+        "story": "Critical minerals as a weapon",
+        "set": 4,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.3
+      },
+      {
+        "id": "ig_oas",
+        "label": "US investment-grade OAS (%) - big-issuer proxy",
+        "story": "AI build-out circular financing",
+        "set": 2,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.3
+      },
+      {
+        "id": "ai_revenue_gap",
+        "label": "AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast)",
+        "story": "AI build-out circular financing",
+        "set": 2,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.3
+      },
+      {
+        "id": "gpu_refi_stress",
+        "label": "GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)",
+        "story": "AI build-out circular financing",
+        "set": 2,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.3
       }
     ],
     "note": "The overall is tail-weighted, not a flat mean, so a single indicator still can't swing it far - the headline is robust by construction. The leverage that matters is on each STORY: the indicators below are where a wrong fact does the most damage and most deserves cross-checking."

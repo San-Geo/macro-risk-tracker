@@ -58,11 +58,49 @@ def load_queue():
     return {"items": {}}
 
 
+EXPIRE_DAYS = int(os.environ.get("SCOUT_EXPIRE_DAYS", "30") or 30)
+PUBLIC_MAX = 10
+
+
+def expire(q, date):
+    """Pending items not seen for EXPIRE_DAYS become 'expired' (kept in the full file,
+    hidden from the page). An unread backlog of 300 cards helps nobody."""
+    try:
+        today = datetime.date.fromisoformat(str(date)[:10])
+    except Exception:
+        return 0
+    n = 0
+    for it in (q.get("items") or {}).values():
+        if it.get("status") != "pending":
+            continue
+        seen = it.get("last_seen") or it.get("first_seen") or it.get("as_of") or ""
+        try:
+            age = (today - datetime.date.fromisoformat(str(seen)[:10])).days
+        except Exception:
+            continue
+        if age > EXPIRE_DAYS:
+            it["status"] = "expired"
+            n += 1
+    q["pending_count"] = sum(1 for v in q.get("items", {}).values() if v.get("status") == "pending")
+    return n
+
+
 def save_queue(q):
-    for p in (QUEUE_PATH, DASH_PATH):
-        os.makedirs(os.path.dirname(p), exist_ok=True)
-        with open(p, "w") as f:
-            json.dump(q, f, indent=2)
+    """Full queue in data/ (the record); a slim copy for the public page: only the
+    newest PUBLIC_MAX pending items plus counts - the page used to download 855 KB."""
+    os.makedirs(os.path.dirname(QUEUE_PATH), exist_ok=True)
+    with open(QUEUE_PATH, "w") as f:
+        json.dump(q, f, indent=2)
+    items = q.get("items") or {}
+    pend = sorted((v for v in items.values() if v.get("status") == "pending"),
+                  key=lambda v: (v.get("last_seen") or v.get("first_seen") or ""), reverse=True)
+    slim = {k: v for k, v in q.items() if k != "items"}
+    slim["items"] = {v["id"]: v for v in pend[:PUBLIC_MAX] if v.get("id")}
+    slim["pending_count"] = len(pend)
+    slim["shown"] = len(slim["items"])
+    os.makedirs(os.path.dirname(DASH_PATH), exist_ok=True)
+    with open(DASH_PATH, "w") as f:
+        json.dump(slim, f, indent=1)
 
 
 def _extract_json_array(text):
@@ -200,6 +238,7 @@ def run_scout(config, api_key, date, days=7, max_items=6, discover_fn=discover):
     q["generated"] = date
     q["model"] = SCOUT_MODEL
     q["new_count"] = new_count
+    q["expired_now"] = expire(q, date)
     q["pending_count"] = sum(1 for v in items.values() if v.get("status") == "pending")
     q.pop("last_error", None)
     save_queue(q)

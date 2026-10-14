@@ -144,6 +144,8 @@
   #review td:nth-child(2), #review td:nth-child(3), #review td:nth-child(4),
   #review th:nth-child(2), #review th:nth-child(3), #review th:nth-child(4){ white-space:nowrap; overflow-wrap:normal; }
   #review td:nth-child(5){ min-width:300px; }
+  .split{ display:flex; flex-wrap:wrap; gap:6px 14px; align-items:center; margin-top:9px; font-size:12.5px; }
+  .spl{ white-space:nowrap; } .spl i{ display:inline-block; width:9px; height:9px; border-radius:2px; margin-right:5px; vertical-align:0; }
   .narr.brief{ white-space:normal; }
   .narr.brief .bh{ font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:12px 0 4px; }
   .narr.brief p{ margin:4px 0; }
@@ -335,6 +337,7 @@
         <div class="k">Data health</div><div>How many live feeds updated vs fell back to baseline, when the AI agent last ran, and the overall trend &mdash; a trust check at a glance.</div>
         <div class="k">Scout</div><div>Watches credible feeds for developments the tracker doesn't already capture and <b>proposes</b> additions (re-rate existing / coverage gap / new risk) with a materiality rating. It only proposes &mdash; a human approves.</div>
         <div class="k">Agent review</div><div>The AI rating agent's worklist. Each row separates the <b>FACT</b> (the load-bearing measured datum + primary source) from the rule-applied rating, so the meter is driven by facts, not vibes. Where authoritative sources disagree, the conflict is shown as <b>Dissent</b> and annotated rather than silently resolved. Confidence/applied/held/overridden and reasoning + sources are shown; low-confidence calls are flagged, not applied. Readings outside an indicator's plausible range are caught, marked <b>auto-corrected</b>, and held at the last trusted value.</div>
+        <div class="k">What sets a level</div><div>Each story's score = its June 2026 starting level + small nudges from its indicators. The headline shows how much comes from each part: the starting level, <b>judgment</b> (ratings by the AI agent or the owner) and <b>data</b> (market feeds and measured ship counts). The backtest can only replay the data part, so a High reading that rests on judgment has not been tested against past crises. Scores are kept unrounded for every calculation and rounded half up only for display (methodology 3.0).</div>
         <div class="k">Consistency checks</div><div>Deterministic whole-picture cross-checks that run after scoring. They flag ratings the rest of the board contradicts — e.g. a chokepoint rated "closed" while crude oil stays benign, or a positive China PPI when the story tracks deflation. These are review flags, not auto-corrections.</div>
         <div class="k">Validation</div><div>Two honest tests. <b>Calibration</b> replays documented stress episodes (2008/2020/2022/2023) through the live engine and shows whether the overall rises and separates from a calm baseline (market indicators only, so a lower bound). <b>Dynamic range</b> shows the overall now spans ~4.7-9.0: it reaches High/Severe only under broad, correlated stress. <b>Sensitivity</b> ranks which indicators most move their story/set/overall, i.e. where a wrong fact matters most.</div>
         <div class="k">Backtest</div><div>Replays real 2020 &amp; 2022 market data through the engine to show it responds sensibly to stress. Only the market indicators vary (judgement ones are held at baseline), so it validates mechanics, not predictions.</div>
@@ -569,10 +572,11 @@ function healthBar(d){
     ot=`overall ${trendBadge(t)} vs ${t.since}`;
     if(t.crosses_methodology) ot=`overall vs ${t.since} <span class="htip" data-tip="Scoring methodology changed between then (v${t.ref_version}) and now (v${t.version}), so this delta mixes regimes and is not comparable. Story-level history is unaffected.">\u26A0 methodology changed (v${t.ref_version}\u2192v${t.version})</span>`;
   }
+  const fg=((h.carried||[]).length||(h.held||[]).length)?`<span class="htip" style="color:#E8710A;font-weight:700" data-tip="Carried = feed failed, last good value used. Held = a value outside its plausible range or an implausible jump, kept back until the next run confirms it.">\u26A0 ${(h.carried||[]).length} carried \u00B7 ${(h.held||[]).length} held</span>`:'';
   const pw=h.portwatch?`<span class="htip" data-tip="IMF PortWatch measured ship counts for the Hormuz and Red Sea chokepoints - used to set those ratings by rule.">PortWatch <b>${h.portwatch.ok}/${h.portwatch.total}</b> straits measured${h.portwatch.as_of?` (data to ${h.portwatch.as_of})`:''}</span>`:'';
   const mv=d.method_version?`<span class="htip" data-tip="Scoring methodology version. Every saved history row is stamped with it so trends and backtests never silently mix scoring regimes.">methodology v${d.method_version}</span>`:'';
   const lerr=h.ledger_ok===false?`<span class="htip" style="color:#C0392B;font-weight:700" data-tip="${String(h.ledger_error||'').replace(/"/g,'&quot;')}">\u26A0 track record not updated this run</span>`:'';
-  return `<div class="health"><span><span class="dot" style="background:${dot}"></span>${feeds}</span>${lerr}<span>${agent}</span>${pw}${ot?`<span>${ot}</span>`:''}${mv?`<span>${mv}</span>`:''}</div>`;
+  return `<div class="health"><span><span class="dot" style="background:${dot}"></span>${feeds}</span>${lerr}<span>${agent}</span>${fg}${pw}${ot?`<span>${ot}</span>`:''}${mv?`<span>${mv}</span>`:''}</div>`;
 }
 function consistencyPanel(d){
   const c=d.consistency;
@@ -606,6 +610,7 @@ function reviewRows(arr){ return arr.map(i=>{
   const rangeTag=i.out_of_range?`<span class="pill" style="background:#C0392B;color:#fff;margin-right:4px">out of range</span>`:'';
   const vinTag=i.vintage==='rejected'?`<span class="pill" style="background:#E8710A;color:#fff;margin-right:4px" title="the new read was based on OLDER source data than the prior applied value; the newer vintage was kept">older data rejected</span>`:'';
   const staleTag=i.stale_guard==='held'?`<span class="pill" style="background:#E8710A;color:#fff;margin-right:4px" title="the rating tried to rise on evidence older than 90 days; the prior value was kept until a human confirms">old-evidence upgrade held</span>`:'';
+  const evTag=i.evidence?`<span class="pill htip" style="background:${i.evidence==='A'?'#2E7D32':i.evidence==='B'?'#F5A623':'#C0392B'};margin-right:4px" data-tip="Evidence grade by rule (not the model's own confidence): ${(i.evidence_why||[]).join(', ')||'no supporting signals'}. A = 3-4 of: authoritative source, recent evidence, number verified at source, second read agreed.">evidence ${i.evidence}</span>`:'';
   const revTag=i.reversal_guard==='held'?`<span class="pill" style="background:#5b6170;color:#fff;margin-right:4px" title="this read would undo last week's change; it is held until a second consecutive read confirms it">reversal awaiting confirmation</span>`
     :i.reversal_guard==='confirmed'?`<span class="pill" style="background:var(--track);color:var(--text);margin-right:4px" title="a reversal confirmed by two consecutive weekly reads">reversal confirmed</span>`:'';
   const chgLine=i.change_reason?`<div style="margin-bottom:3px;font-size:11px"><span style="font-weight:700;color:var(--accent)">CHANGE:</span> ${String(i.change_reason).replace(/</g,'&lt;')}</div>`:'';
@@ -626,7 +631,7 @@ function reviewRows(arr){ return arr.map(i=>{
   return `<tr><td>${i.label}<div style="color:var(--muted);font-size:11px">${i.story}${i.domain?` \u00B7 <span style="color:var(--accent)">${i.domain} desk</span>`:''}</div></td>
     <td>${fmt(i.value)}</td>
     <td><span class="pill" style="background:${confColor(i.confidence)};text-transform:capitalize">${i.confidence||'-'}</span></td>
-    <td>${statusOf(i)}</td><td>${whyLine}${rangeTag}${vinTag}${staleTag}${revTag}${parseTag}${citeTag(i)}${xc}${chgLine}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
+    <td>${statusOf(i)}</td><td>${whyLine}${evTag}${rangeTag}${vinTag}${staleTag}${revTag}${parseTag}${citeTag(i)}${xc}${chgLine}${factLine}${i.rationale||''} ${src}${dissent}</td></tr>`;
 }).join(''); }
 function reviewPanel(d){
   const r=d.agent_review;
@@ -669,7 +674,7 @@ function reviewPanel(d){
 // The daily brief arrives as light markdown from the narrative writer. Render it
 // safely: escape everything first, then allow only **bold**, headings and bullets.
 function briefHTML(md){
-  const esc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const esc=t=>escT(t);
   const inline=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
   let out='', list=false;
   for(const raw of String(md).split(/\r?\n/)){
@@ -687,7 +692,7 @@ function briefHTML(md){
 }
 
 // keep dates whole ("2026-09-30" never splits at its hyphens); text around them still wraps
-function keepDates(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\d{4}-(?:\d{2}-\d{2}|\d{2}|Q[1-4](?:-end)?)/g,m=>`<span style="white-space:nowrap">${m}</span>`); }
+function keepDates(t){ return escT(t).replace(/\d{4}-(?:\d{2}-\d{2}|\d{2}|Q[1-4](?:-end)?)/g,m=>`<span style="white-space:nowrap">${m}</span>`); }
 
 let BACKTEST=null;
 let VALIDATION=null;
@@ -697,7 +702,18 @@ let SCOUT=null;
 let IHIST=null;
 let LEDGER=null;
 const RUBRIC_URL='https://github.com/San-Geo/macro-risk-tracker/blob/main/config/grading.yaml';
-function escT(t){ return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+// Idempotent HTML escape: an already-escaped string comes back unchanged, so text that
+// was sanitized on load (deepSafe) can safely pass through these helpers again.
+function escT(t){ return String(t==null?'':t).replace(/&(?![a-zA-Z]{2,8};|#\d{1,6};|#x[0-9a-fA-F]{1,6};)/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+// Every string the page loads (agent facts, scout headlines, grades, feed notes...) is
+// escaped HERE, once, before anything renders it - AI-written text can never become HTML
+// or script. Links with a javascript:/data:/vbscript: scheme are blanked.
+function deepSafe(o){
+  if(typeof o==='string') return /^\s*(javascript|data|vbscript):/i.test(o)?'':escT(o);
+  if(Array.isArray(o)) return o.map(deepSafe);
+  if(o&&typeof o==='object'){ const r={}; for(const k of Object.keys(o)) r[k]=deepSafe(o[k]); return r; }
+  return o;
+}
 function safeUrl(u){ return /^https?:\/\//.test(String(u||''))?escT(u):''; }
 function gradeBlock(e){
   const W=(LEDGER&&LEDGER.grading&&LEDGER.grading.window_days)||30;
@@ -762,8 +778,19 @@ function ledgerPanel(){
           <b>${e.story}</b> <span class="asof">High ${e.opened} \u2192 ${e.last_seen} (${days(e.opened,e.last_seen)} days, peak ${e.peak_level}/10) \u00B7 closed ${e.closed}</span>${brief}<div style="margin-top:4px">${gradeBlock(e)}</div></div>`;}).join('');
     }
   }
+  const misses=(led&&led.misses)||[];
+  if(misses.length){
+    const ms={needs_owner:['#8a8f98','possible miss \u2014 owner reviewing'],confirmed:['#C0392B','confirmed miss'],rejected:['#2E7D32','not a miss']};
+    body+=`<div class="asof" style="margin:12px 0 4px"><b>Misses</b> \u2014 stories <i>below</i> High whose risk materialized anyway (checked monthly against the same rubric; the owner confirms each one):</div>`;
+    body+=misses.slice().reverse().map(m=>{const st=ms[m.status]||ms.needs_owner;
+      const ev=(m.tests||[]).map(t=>{const u=safeUrl(t.source);return u?`<a href="${u}" target="_blank" rel="noopener" class="htip" data-tip="${escT(t.evidence)}">${escT(t.id)}</a>`:escT(t.id);}).join(' ');
+      return `<div style="border:1px solid var(--line);border-radius:10px;padding:10px 13px;margin-bottom:8px">
+        <b>${escT(m.story)}</b> <span class="asof">at ${m.level}/10 \u00B7 window ${escT((m.window||[]).join(' \u2192 '))}</span>
+        <div style="margin-top:4px"><span class="pill" style="background:${st[0]}">${st[1]}</span> <span class="asof">${escT(m.note||'')}${ev?' \u00B7 tests met: '+ev:''}${m.owner_note?' \u00B7 owner: '+escT(m.owner_note):''}</span>
+        ${m.status==='needs_owner'?` <code class="epid" style="font-size:11px;user-select:all">${escT(m.id)}</code>`:''}</div></div>`;}).join('');
+  }
   const right = eps.length
-    ? `${open.length} open \u00B7 ${graded.length}/${closed.length} closed graded`
+    ? `${open.length} open \u00B7 ${graded.length}/${closed.length} closed graded${misses.filter(m=>m.status==='confirmed').length?` \u00B7 ${misses.filter(m=>m.status==='confirmed').length} missed`:''}`
     : 'record begins';
   return `<div class="panel" id="ledger"><div class="phead" onclick="this.parentNode.classList.toggle('open')">
       <span><strong>Track record</strong> <span class="asof">every High call, and what happened next</span></span>
@@ -970,6 +997,28 @@ function contextStrip(d){
     <div class="ctxrow">${pills}</div></div>`;
 }
 
+// What actually sets the level: June starting levels vs AI/owner judgment vs measured data.
+function storySplit(s){
+  let data=0, judg=0;
+  for(const i of s.indicators||[]){
+    const measured = i.source!=='manual' || i.provenance==='PortWatch';
+    if(measured) data+=(i.delta||0); else judg+=(i.delta||0);
+  }
+  return {base:s.base_level, data, judg};
+}
+function driverSplit(d){
+  const n=d.stories.length||1; let b=0,j=0,m=0;
+  for(const s of d.stories){ const x=storySplit(s); b+=x.base; j+=x.judg; m+=x.data; }
+  b/=n; j/=n; m/=n;
+  const tot=Math.max(0.01, Math.abs(b)+Math.abs(j)+Math.abs(m)), pc=v=>Math.round(Math.abs(v)/tot*100);
+  const sg=v=>(v>=0?'+':'\u2212')+Math.abs(v).toFixed(2);
+  const bt=(BACKTEST&&BACKTEST.episodes)?Object.entries(BACKTEST.episodes).map(([k,e])=>[k,Math.max(...(e.overall||[0]))]).sort((x,y)=>y[1]-x[1])[0]:null;
+  return `<div class="split htip" data-tip="Each story's level = its June 2026 starting level + nudges from its indicators. 'Judgment' = ratings set by the AI agent or by you; 'data' = market feeds and measured counts. The backtest can only replay the data part${bt?` - on it, ${bt[0]} peaked at ${bt[1]}`:''}, so a High reading driven by judgment has not been tested against past crises.">
+      <span class="asof"><b>What sets today's level</b> (average story):</span>
+      <span class="spl"><i style="background:#94a3b8"></i>starting level ${b.toFixed(1)} <span class="asof">${pc(b)}%</span></span>
+      <span class="spl"><i style="background:#E8710A"></i>judgment ${sg(j)} <span class="asof">${pc(j)}%</span></span>
+      <span class="spl"><i style="background:#2563eb"></i>data ${sg(m)} <span class="asof">${pc(m)}%</span></span></div>`;
+}
 function gistHeader(d){
   const a=d.aggregates, ov=a.overall, bnd=bandName(Math.round(ov)), col=bandColor(Math.round(ov));
   const phrase={Low:'well below its normal range',Moderate:'below normal',Elevated:'a little above normal',
@@ -987,7 +1036,8 @@ function gistHeader(d){
   const sev=top.some(s=>s.level>=9)?'Some areas are at crisis level.':
             top.some(s=>s.level>=7)?'A few areas are running high \u2014 worth a look.':
             'Nothing is at crisis level right now.';
-  const LO=4.7,HI=9.0, pos=v=>Math.max(0,Math.min(100,(v-LO)/(HI-LO)*100));
+  const rng=(VALIDATION&&VALIDATION.calibration&&VALIDATION.calibration.range)||{};
+  const LO=rng.floor_all_low||4.7, HI=rng.ceiling_all_high||9.0, pos=v=>Math.max(0,Math.min(100,(v-LO)/(HI-LO)*100));
   // Color the strip with the SAME band colors used everywhere else on the page,
   // with hard stops exactly where the band cutoffs fall in the visible range -
   // so the marker's color always matches the track beneath it.
@@ -999,19 +1049,20 @@ function gistHeader(d){
     stops.push(`${colr} ${pos(a1).toFixed(1)}%`,`${colr} ${pos(b1).toFixed(1)}%`);
   }
   const anchor=`<div class="anchor"><div class="atrack" style="background:linear-gradient(90deg, ${stops.join(', ')})"></div>`+
-    (base?`<div class="atick" style="left:${pos(base)}%" title="usual level \u2248 ${base}"></div>`:'')+
+    (base?`<div class="atick" style="left:${pos(base)}%" title="starting level (June 2026) \u2248 ${base}"></div>`:'')+
     `<div class="amark" style="left:${pos(ov)}%;background:${col}"></div>
-     <span class="aend l htip" data-tip="The tracker's validated floor: even an all-calm world scores \u2248 4.7 here, because several stories have structurally elevated starting points.">calm</span><span class="aend r htip" data-tip="The validated ceiling (\u2248 9.0): a 2008-style everything-at-once crisis replayed through this gauge.">crisis</span></div>`;
+     <span class="aend l htip" data-tip="The lowest this gauge can read (\u2248 ${LO}): even if every indicator turned benign, several stories have elevated starting points.">calm</span><span class="aend r htip" data-tip="The highest this gauge can read (\u2248 ${HI}): every indicator at stress at once.">crisis</span></div>`;
   const movers=d.stories.filter(s=>s.trend&&Math.abs(s.trend.change)>=1)
     .sort((x,y)=>Math.abs(y.trend.change)-Math.abs(x.trend.change)).slice(0,6)
     .map(s=>`<span class="mv"><b style="color:${s.trend.change>0?'#C0392B':'#2E7D32'}">${s.trend.change>0?'\u25B2':'\u25BC'}</b> ${plab(s)} \u2192 ${s.band}</span>`).join('');
   return `<div class="gist">
     <div class="gistnum" style="color:${col}">${ov}<span class="den">/10</span>
       <span class="gistband" style="background:${col}">${bnd}</span>
-      ${base?`<span class="asof">usual \u2248 ${base}</span>`:''}</div>
+      ${base?`<span class="asof htip" data-tip="Where the gauge started in June 2026 (already mid-crisis, with Hormuz closed) - not a historical average.">start \u2248 ${base}</span>`:''}</div>
     ${anchor}
     <p class="gisttxt">Overall risk is <b>${phrase}</b> ${dir}. The main pressures right now are <b>${driverStr}</b>. ${sev}</p>
     ${movers?`<div class="gistmv"><span class="asof">What changed:</span> ${movers}</div>`:''}
+    ${driverSplit(d)}
     <div class="asof" style="margin-top:9px">A deliberate lens: this gauge tracks 21 under-covered structural risks \u2014 a complement to the mainstream dials, not a replacement. It measures <b>attention warranted</b>, never crash probability or timing.</div>
   </div>`;
 }
@@ -1090,7 +1141,8 @@ function render(d){
           <span class="bpill htip" style="background:${col}" data-tip="Severity band: Low 1\u20132 \u00B7 Moderate 3\u20134 \u00B7 Elevated 5\u20136 \u00B7 High 7\u20138 \u00B7 Severe 9\u201310.">${s.band}</span>
           ${trendBadge(s.trend)}<span class="asof">vs ${s.trend?s.trend.since:'\u2014'}</span>
           ${sparkSVG(s.spark,col)}
-        </div></div>`;
+        </div></div>
+      ${(()=>{const x=storySplit(s);const sg=v=>(v>=0?'+':'\u2212')+Math.abs(v).toFixed(2);return `<div class="asof htip" style="margin:4px 0 2px" data-tip="Unrounded score ${s.raw_level} = starting level + indicator nudges; the level shown rounds it half up.">Score ${s.raw_level}: starting level ${x.base} \u00B7 judgment ${sg(x.judg)} \u00B7 data ${sg(x.data)}</div>`;})()}`;
     if(s.summary||s.brief_url){
       const link = s.brief_url?`<a href="${s.brief_url}" target="_blank" rel="noopener">Full brief \u2197</a>`:'';
       html+=`<details class="bg"><summary class="asof">Background${link?' \u00B7 '+link:''}</summary>
@@ -1112,7 +1164,7 @@ function render(d){
       html+=`<tr class="${ind.stale?'stale':''}"><td>${ind.label}${mNote}</td><td>${fmt(ind.value)}${miniSpark(ind.id)}</td>
         <td><span class="pill" style="background:${bc}">${ind.band===null?'-':ind.band}</span></td>
         <td>${ind.delta>0?'+':''}${ind.delta||0}</td><td>${ind.cadence}</td>
-        <td class="asof">${ind.as_of?keepDates(ind.as_of):'\u2014'}${ageWarn}</td>
+        <td class="asof">${ind.as_of?keepDates(ind.as_of):'\u2014'}${ageWarn}${ind.carried?` <span class="pill htip" style="background:#8a8f98" data-tip="${ind.carried}. The last good value is used instead of the June starting value.">carried</span>`:''}${ind.held?` <span class="pill htip" style="background:#E8710A" data-tip="${ind.held}. The previous value is kept until the next run confirms the new one.">held</span>`:''}${ind.hybrid_note?` <span class="htip" style="cursor:default" data-tip="Weekly agent reading, ${ind.hybrid_note}.">\u2022</span>`:''}</td>
         <td style="color:var(--muted)">${srcCell}${ind.stale?' <span class="prov">baseline</span>':''}</td></tr>`;
     }
     html+=`</tbody></table></div>${escalationBox(d,s)}</div></div>`;
@@ -1147,9 +1199,9 @@ Promise.all([
   fetch('./scout_queue.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
   fetch('./indicator_history.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
   fetch('./ledger.json?_='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null)
-]).then(([d,bt,va,sc,ih,lg])=>{ BACKTEST=bt; VALIDATION=va; SCOUT=sc; IHIST=ih; LEDGER=lg; DATA_DATE=d.date||null; render(d); tickSchedule(); })
+]).then(([d,bt,va,sc,ih,lg])=>{ d=deepSafe(d); BACKTEST=deepSafe(bt); VALIDATION=deepSafe(va); SCOUT=deepSafe(sc); IHIST=deepSafe(ih); LEDGER=deepSafe(lg); DATA_DATE=d.date||null; render(d); tickSchedule(); })
   .catch(e=>{ document.getElementById('app').innerHTML=
-    `<div class="err"><strong>Could not load data.</strong><br>${e.message}<br><br>
+    `<div class="err"><strong>Could not load data.</strong><br>${escT(e.message)}<br><br>
      Run <code>python src/main.py --offline --no-ai</code>, then open this page via a local server
      (<code>python -m http.server</code> in <code>dashboard/</code>) or deploy via GitHub Pages.</div>`; });
 </script>

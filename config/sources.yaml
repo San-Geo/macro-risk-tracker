@@ -1,0 +1,72 @@
+# Authoritative sources (methodology 3.0) - used to grade the agent's evidence.
+# A domain matches if the source URL's host equals it or ends with "." + it.
+# An agent value CHANGE backed only by sources outside this list is flagged for a
+# glance, and every agent read gets an evidence grade (A/B/C) on the review panel.
+# Add trackers or publications you trust; this list is a judgment, not a rule of nature.
+
+official:          # governments, central banks, international bodies, statistics offices
+  - gov
+  - gov.uk
+  - go.jp
+  - gouv.fr
+  - gov.cn
+  - europa.eu
+  - int
+  - imf.org
+  - worldbank.org
+  - bis.org
+  - oecd.org
+  - fao.org
+  - wto.org
+  - un.org
+  - iea.org
+  - federalreserve.gov
+  - newyorkfed.org
+  - stlouisfed.org
+  - boj.or.jp
+  - bankofengland.co.uk
+  - banque-france.fr
+  - bundesbank.de
+  - ecb.europa.eu
+  - aft.gouv.fr
+  - droughtmonitor.unl.edu
+  - lbl.gov
+  - ifpri.org
+  - dtcc.com
+  - cboe.com
+  - cmegroup.com
+  - lme.com
+
+data_providers:    # ratings agencies and recognised market-data / industry sources
+  - fitchratings.com
+  - moodys.com
+  - spglobal.com
+  - kbra.com
+  - benchmarkminerals.com
+  - fastmarkets.com
+  - argusmedia.com
+  - trepp.com
+  - lloydslist.com
+  - kpler.com
+  - windward.ai
+  - proskauer.com
+  - ice.com
+
+press:             # major newswires and newspapers of record
+  - reuters.com
+  - bloomberg.com
+  - ft.com
+  - wsj.com
+  - apnews.com
+  - nikkei.com
+  - economist.com
+  - nytimes.com
+  - cnbc.com
+  - bbc.com
+  - bbc.co.uk
+  - aljazeera.com
+  - japantimes.co.jp
+  - scmp.com
+  - caixinglobal.com
+  - lemonde.fr
+  - handelsblatt.com

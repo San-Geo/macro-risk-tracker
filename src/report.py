@@ -151,6 +151,9 @@ def build_workbook(config, result, narrative, date, history_path, path):
             ind.cell(r, 8, indic.get("baseline_band", 0)).font = Font(name=ARIAL)
             if indic["direction"] == "higher_worse":
                 band_f = f"=IF(D{r}<=F{r},0,IF(D{r}<=G{r},1,2))"
+            elif indic["direction"] == "two_sided":   # distance from a neutral centre, either way
+                c = float(indic.get("center", 0.0))
+                band_f = f"=IF(ABS(D{r}-({c}))<=F{r},0,IF(ABS(D{r}-({c}))<=G{r},1,2))"
             else:
                 band_f = f"=IF(D{r}>=F{r},0,IF(D{r}>=G{r},1,2))"
             ind.cell(r, 9, band_f).font = Font(name=ARIAL)
@@ -171,8 +174,8 @@ def build_workbook(config, result, narrative, date, history_path, path):
     dash["A1"].font = Font(name=ARIAL, bold=True, size=16, color=BLUE)
     dash["A2"] = f"As of {date}  -  generated {_ts()}  -  levels recalculated from the Indicators tab"
     dash["A2"].font = Font(name=ARIAL, italic=True, color="595959")
-    _hdr(dash, 4, ["Story", "Story ID", "Set", "Base", "Indicator adj.", "Level (1-10)", "Band"],
-         [34, 16, 6, 7, 13, 12, 12])
+    _hdr(dash, 4, ["Story", "Story ID", "Set", "Base", "Indicator adj.", "Level (1-10)", "Band", "Raw level"],
+         [34, 16, 6, 7, 13, 12, 12, 11])
     start = 5
     for i, s in enumerate(config["stories"]):
         rr = start + i
@@ -181,9 +184,11 @@ def build_workbook(config, result, narrative, date, history_path, path):
         dash.cell(rr, 3, s["set"]).font = Font(name=ARIAL)
         dash.cell(rr, 4, s["base_level"]).font = Font(name=ARIAL)
         dash.cell(rr, 5, f"=ROUND(SUMIF(Indicators!$B:$B,B{rr},Indicators!$K:$K),2)").font = Font(name=ARIAL)
-        dash.cell(rr, 6, f"=MEDIAN(1,10,ROUND(D{rr}+E{rr},0))").font = Font(name=ARIAL, bold=True)
+        # methodology 3.0: raw level unrounded (H), displayed level rounds half up once (F)
+        dash.cell(rr, 8, f"=MEDIAN(1,10,D{rr}+E{rr})").font = Font(name=ARIAL)
+        dash.cell(rr, 6, f"=MEDIAN(1,10,ROUND(H{rr},0))").font = Font(name=ARIAL, bold=True)
         dash.cell(rr, 7, f'=IF(F{rr}<=2,"Low",IF(F{rr}<=4,"Moderate",IF(F{rr}<=6,"Elevated",IF(F{rr}<=8,"High","Severe"))))').font = Font(name=ARIAL)
-        for c in range(1, 8):
+        for c in range(1, 9):
             dash.cell(rr, c).border = BORDER
     last = start + len(config["stories"]) - 1
     # aggregates (one row per set, dynamic)
@@ -194,11 +199,16 @@ def build_workbook(config, result, narrative, date, history_path, path):
         nm = (set_names.get(sn) or {}).get("name", f"Set {sn}")
         dash.cell(agg_row + k, 1, f"Aggregate - {nm}").font = Font(name=ARIAL, bold=True)
         dash.cell(agg_row + k, 6,
-                  f"=ROUND(AVERAGEIF($C${start}:$C${last},{sn},$F${start}:$F${last}),1)"
+                  f"=ROUND(AVERAGEIF($C${start}:$C${last},{sn},$H${start}:$H${last}),1)"
                   ).font = Font(name=ARIAL, bold=True)
     orow = agg_row + len(set_nums)
     dash.cell(orow, 1, "Aggregate - Overall").font = Font(name=ARIAL, bold=True)
-    dash.cell(orow, 6, f"=ROUND(AVERAGE($F${start}:$F${last}),1)").font = Font(name=ARIAL, bold=True)
+    H = f"$H${start}:$H${last}"
+    k = score.round_half_up(len(config["stories"]) / 3)
+    ks = ",".join(str(i) for i in range(1, k + 1))
+    soft = f"(SUMPRODUCT(({H}-6>0)*({H}-6<1)*({H}-6))+COUNTIF({H},\">=7\"))"
+    dash.cell(orow, 6, (f"=ROUND(MEDIAN(1,10,0.5*AVERAGE({H})+0.5*AVERAGE(LARGE({H},{{{ks}}}))"
+                        f"+MIN(1.5,MAX(0,0.3*({soft}-2)))),1)")).font = Font(name=ARIAL, bold=True)
     dash.conditional_formatting.add(
         f"F{start}:F{last}",
         ColorScaleRule(start_type="num", start_value=1, start_color="2E7D32",

@@ -1,26 +1,40 @@
-PORTWATCH + TABLE-LAYOUT BUNDLE - 2026-10-14
-============================================
-Upload src, config, dashboard, FRAMEWORK.md and METHODOLOGY.md to the repo root,
-then Actions -> Run workflow (run_agent unticked, free). No workflow change.
+STRESS-TEST FIXES - 2026-10-14
+==============================
+1. Upload everything in this zip to the repo root (src, config, dashboard, data, tests,
+   FRAMEWORK.md, METHODOLOGY.md, requirements.txt).
+2. Paste daily.yml into .github/workflows/daily.yml (actions now pinned to exact commits).
+3. Create a NEW file .github/workflows/check.yml (Add file -> Create new file, type that
+   path as the name) and paste check.yml into it.
+4. Actions -> daily-risk-tracker -> Run workflow (free). The new "check" workflow also runs
+   on your upload and should show a green tick within a minute.
 
-1) MEASURED HORMUZ / RED SEA RATINGS (IMF PortWatch)
-   src/portwatch.py + config/portwatch.yaml (new). Every run reads the IMF's daily
-   ship counts for Hormuz and Bab el-Mandeb, takes the latest 7-day average and
-   compares it with the same month's normal (Hormuz: 2023-2025; Red Sea: 2021-Oct 2023,
-   before the Houthi attacks). Below 25% of normal = closed, 25-80% = contested -
-   set by rule. Above 80%, the agent decides only whether recent attacks make it
-   contested. A manual_input.csv pin still wins. If the feed fails or its data is
-   more than 21 days old, the agent's rating is used exactly as before.
-   On the page: "Measured: Strait of Hormuz 2.7 ships/day vs 92 normal (3%) ..." under
-   the indicator, source "PortWatch", and a PortWatch status in the health line.
-   The normal-level figures are cached in data/portwatch_baseline.json (created by
-   the first run; one small query per month after that).
+WHAT YOU WILL SEE
+- Overall moves from 7.1 to about 7.6: scoring method 3.0 rounds half up, so China price
+  spillover, AI build-out financing and Food & fertilizer (each at exactly 6.5) read 7/High.
+  Their Track record episodes open today. Trends and alerts compare like with like, so the
+  switch itself is not reported as a "move".
+- Headline card: "What sets today's level": starting level / judgment / data.
+- Each story shows its unrounded score and the same split.
+- Review panel: an A/B/C evidence grade per agent read; changes backed only by
+  non-authoritative sources are flagged.
+- Track record: a "Misses" section once the monthly check finds something.
 
-   CHECK AFTER THE FIRST RUN: the log of "Run tracker" should show two lines starting
-   "PortWatch Strait of Hormuz: ..." and "PortWatch Bab el-Mandeb (Red Sea): ...".
-   If they say "unavailable", nothing changes on the board - send me the line.
-
-2) STORY TABLES
-   Column headers and short cells (Band, delta, Cadence, Source) no longer break
-   letter by letter; dates stay whole; the Indicator column wraps at word breaks
-   only. Wide tables still scroll sideways on phones.
+FILES
+score.py        method 3.0: half-up, unrounded aggregates, smooth breadth premium
+feedguard.py    NEW - carry forward last good value; hold implausible values (feed_checks.yaml)
+main.py         wiring: feed guard, freshest France spread, evidence grade, weekly scout,
+                miss check, failure alerts
+grader.py       monthly miss check (primary agent only; you confirm each miss in grades.csv
+                with "confirmed" or "rejected")
+ledger.py       miss confirmations from grades.csv
+enrich/alerts/narrative.py   compare past and present under the same rounding rule;
+                alerts now also report pipeline failures (if an alert channel is set)
+scout.py        runs weekly only; items expire after 30 days; the page loads the newest 10
+report.py       Excel model now matches the engine (method 3.0 + two-sided PPI band fix)
+portwatch.py    normal shown as a whole number; IMF attribution line
+config/framework.yaml   NEW agent read: weekly France-Germany spread
+config/sources.yaml     NEW - which domains count as authoritative (edit freely)
+config/feed_checks.yaml NEW - plausible ranges and maximum daily moves per feed
+dashboard/index.html    all loaded text sanitized (no AI-written code can run); new displays
+tests/          NEW - 19 unit tests + a file-format check, run by check.yml on every push
+requirements.txt        exact package versions

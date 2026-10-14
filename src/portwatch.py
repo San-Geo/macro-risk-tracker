@@ -190,8 +190,9 @@ def apply(values, readings, pinned, cfg=None):
                         "as_of": min(r["as_of"] for r in got.values()),
                         "readings": {k: {kk: got[k][kk] for kk in ("name", "avg7", "baseline", "ratio", "as_of")}
                                      for k in got},
-                        "note": "; ".join(f"{r['name']} {r['avg7']:g} ships/day vs {r['baseline']:g} normal "
-                                          f"({r['ratio'] * 100:.0f}%)" for r in got.values())}
+                        "note": "; ".join(f"{r['name']} {r['avg7']:g} ships/day vs {r['baseline']:.0f} normal "
+                                          f"({r['ratio'] * 100:.0f}%)" for r in got.values())
+                                + ". Source: International Monetary Fund, PortWatch"}
     return applied
 
 

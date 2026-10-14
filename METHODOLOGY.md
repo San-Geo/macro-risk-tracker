@@ -1,6 +1,6 @@
 # Methodology
 
-**Version 1.3 — 2026.** This document explains exactly how the Global Macro Risk Tracker turns
+**Version 1.4 — 2026.** This document explains exactly how the Global Macro Risk Tracker turns
 data and current events into a 1–10 risk level for each story, what the numbers mean, and — just
 as importantly — what they do *not* mean. It is meant to be read by a skeptical professional.
 
@@ -24,10 +24,18 @@ Every level is produced by fixed arithmetic — no AI sets a number directly.
    → 0, ≤ warn → 1, else 2 (reversed for "lower-is-worse").
 2. **Delta.** Each indicator nudges its story by `delta = weight × (band − baseline_band) / 2`. An
    indicator sitting at its baseline contributes zero; weight sets how much a move matters.
-3. **Story level.** `level = clamp( base_level + Σ deltas , 1, 10 )`, rounded to an integer. The
-   `base_level` is the expert-anchored starting point from the published research.
+3. **Story score and level.** `score = clamp( base_level + Σ deltas , 1, 10 )`, kept unrounded.
+   The displayed level is that score rounded **half up** (6.5 → 7). Before scoring method 3.0 the
+   code used Python's round-half-to-even, which sent 6.5 to 6 but 7.5 to 8; because weights come in
+   halves, 47% of past story-days sat exactly on a .5, so the rule mattered. The `base_level` is the
+   expert-anchored starting point (June 2026).
 4. **Bands of the level.** 1–2 Low, 3–4 Moderate, 5–6 Elevated, 7–8 High, 9–10 Severe.
-5. **Aggregates.** Each set's score and the overall score are simple averages of story levels.
+5. **Aggregates.** All aggregates use the unrounded story scores and round once at the end.
+   Each set's score is the average of its stories. The overall is `0.5 × average of all 21 +
+   0.5 × average of the worst 7 + breadth premium`, where the premium is `0.3 × (H − 2)` capped at
+   1.5 and `H` counts stories at High smoothly (0 at a score of 6.0 or below, 1 at 7.0 or above,
+   proportional between). One indicator step can no longer jump the overall by a fixed amount.
+   Comparisons with earlier days use the same rule, so the rounding change never shows as a move.
 
 A key invariant, enforced by the CI self-test: each indicator's `baseline_band` must equal the band
 its `baseline_value` maps to. This guarantees the day-zero levels reproduce the published reports.
@@ -40,6 +48,11 @@ its `baseline_value` maps to. This guarantees the day-zero levels reproduce the 
 - **Judgment indicators** (e.g. Taiwan tension, the status of the Strait of Hormuz, China export
   curbs, government stability) have no clean numeric feed. These are set by the rating agent against
   a fixed rubric (Section 4), or pinned by a human.
+- **Feed safeguards.** If a feed fails, its last good value is carried forward with its real date
+  (it used to fall back to the June starting value, which reads as "normal"). A value outside its
+  plausible range, or an implausible one-day jump, is held until the next run confirms it
+  (`config/feed_checks.yaml`). The France spread also gets a weekly agent reading; the newer of that
+  and the OECD monthly figure is used.
 - **Measured where possible.** The two Strait of Hormuz / Red Sea ratings are set from the IMF's PortWatch
   ship counts (AIS transits): the latest 7-day average is compared with the same month's normal, and
   below 25% of normal the strait is rated closed by rule, 25-80% contested. The agent only judges whether
@@ -72,6 +85,11 @@ Safeguards that make this trustworthy rather than a black box:
 - **Measured anchors** — where a judgment can rest on a measurement, the rubric uses it (e.g. a strait is
   "closed" when commercial transits are below 25% of the pre-crisis baseline - talks and escorts alone do
   not change the rating), and event-based ratings only count events inside a stated recent window.
+- **Evidence grade, not self-reported confidence** — each agent read is graded A/B/C by rule: an
+  official, data-provider or major-press source (`config/sources.yaml`), evidence within the
+  staleness budget, the number verified at its cited source, and an agreeing second read. A value
+  change backed only by other sources is flagged for a glance. The scout runs once a week with the
+  agent, and its items expire after 30 days.
 - **Human-final** — anything pinned in `manual_input.csv` overrides the agent and is never changed.
 
 ## 5. Data sources
@@ -112,7 +130,10 @@ proxied by IG spreads) are also anachronistic before the story existed, and shou
   override exist precisely because it is not infallible.
 - Public data can be revised, delayed, or briefly unavailable; the data-health line flags when a feed
   has fallen back to baseline.
-- Aggregates are unweighted averages and can mask a single severe story — always read the stories.
+- The overall blends the average with the worst third of stories, so one severe story moves it only
+  modestly — always read the stories.
+- Most of each story's level is its June 2026 starting point; the page shows how much comes from the
+  starting level, from judgment and from data. The backtest replays only the data part.
 - This is informational analysis only, not investment, legal, tax, or financial advice.
 
 ## 9. Track record and outcome grading
@@ -137,7 +158,16 @@ otherwise the owner decides. The owner can also grade or override any episode, a
 never overwritten. Episodes of a week or less that were opened by a signal which flipped straight back
 are marked **brief crossing**, so base-rate analysis can treat them as boundary noise.
 
+**Misses count too.** Once a month the grader checks every story that is *below* High against its
+own materialized tests for the past 30 days. A test met while the tracker sat below High is logged
+as a possible miss; the owner confirms or rejects it. The record therefore shows hits, false alarms
+and misses side by side.
+
 ## Changelog
+
+- **1.4** - Scoring method 3.0 (half-up rounding, unrounded aggregation, smooth breadth premium);
+  feed carry-forward and plausibility checks; rule-based evidence grades; weekly scout; monthly
+  miss check; the page shows how much of the level is starting point, judgment and data.
 
 - **1.3** - Hormuz / Red Sea ratings set from measured IMF PortWatch transit counts where decisive.
 

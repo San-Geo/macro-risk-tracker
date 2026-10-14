@@ -30,7 +30,13 @@ def detect_crossings(today, prev, min_level=0):
     """Return list of band crossings (stories + overall) vs the previous run."""
     if not prev:
         return []
-    prev_levels = {s["id"]: s["level"] for s in prev.get("stories", [])}
+    # previous levels under the CURRENT rounding rule, so a methodology change is never
+    # reported as a band crossing
+    try:
+        from score import level_of
+        prev_levels = {s["id"]: level_of(s) for s in prev.get("stories", [])}
+    except Exception:
+        prev_levels = {s["id"]: s["level"] for s in prev.get("stories", [])}
     out = []
     for s in today["stories"]:
         old = prev_levels.get(s["id"])
@@ -44,6 +50,8 @@ def detect_crossings(today, prev, min_level=0):
     # overall aggregate
     o_new = today["aggregates"]["overall"]
     o_old = (prev.get("aggregates") or {}).get("overall")
+    if prev.get("method_version") and prev.get("method_version") != today.get("method_version", prev.get("method_version")):
+        o_old = None   # overall computed under a different method: not comparable
     if o_old is not None:
         nb, ob = band_name(round(o_new)), band_name(round(o_old))
         if nb != ob:
@@ -153,3 +161,36 @@ def send_test(env):
     res = send_all("Macro Risk Tracker: test alert. Channels are working.", env,
                    subject="Macro Risk Tracker test")
     print("  test alert ->", res)
+
+
+def health_problems(result, alog=None, agent_ran=False):
+    """Pipeline failures worth telling the owner about (methodology 3.0). Returns a list."""
+    probs = []
+    dh = result.get("data_health") or {}
+    if dh.get("ledger_ok") is False:
+        probs.append(f"Track record NOT updated: {dh.get('ledger_error', '')[:160]}")
+    stale = len(dh.get("carried") or []) + int(dh.get("fell_back") or 0)
+    if stale >= 2:
+        probs.append(f"{stale} market feeds failed (carried forward or missing): "
+                     f"{', '.join((dh.get('carried') or [])[:6])}")
+    if dh.get("held"):
+        probs.append("Implausible feed values held: " +
+                     "; ".join(f"{h['id']}={h['value']}" for h in dh["held"][:4]))
+    pw = dh.get("portwatch")
+    if pw and pw.get("ok", 0) < pw.get("total", 0):
+        probs.append(f"PortWatch measured only {pw.get('ok')}/{pw.get('total')} straits")
+    if agent_ran and alog:
+        errs = [k for k, a in (alog.get("assessments") or {}).items()
+                if str(a.get("confidence")) == "error"]
+        if len(errs) > 5:
+            first = (alog["assessments"][errs[0]].get("note") or "")[:160]
+            probs.append(f"Rating agent failed on {len(errs)} indicators ({first})")
+    return probs
+
+
+def maybe_alert_health(result, env, alog=None, agent_ran=False):
+    probs = health_problems(result, alog, agent_ran)
+    if not probs or not channels_configured(env):
+        return {"sent": False, "problems": probs}
+    text = "Macro Risk Tracker - pipeline problem(s) on " + str(result.get("date")) + ":\n- " + "\n- ".join(probs)
+    return {"sent": True, "problems": probs, "results": send_all(text, env, subject="Macro Risk Tracker: pipeline problem")}

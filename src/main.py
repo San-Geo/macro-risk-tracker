@@ -28,6 +28,56 @@ def fmt_v(v):
         return str(v)
 
 
+def _source_classes():
+    try:
+        with open(os.path.join(ROOT, "config", "sources.yaml")) as f:
+            return yaml.safe_load(f) or {}
+    except Exception:
+        return {}
+
+
+def source_class(url, classes):
+    """'official' | 'data_providers' | 'press' | None for a source URL."""
+    import urllib.parse
+    try:
+        host = urllib.parse.urlparse(str(url)).netloc.lower().split(":")[0]
+    except Exception:
+        return None
+    host = host[4:] if host.startswith("www.") else host
+    for cls in ("official", "data_providers", "press"):
+        for d in classes.get(cls) or []:
+            d = str(d).lower()
+            if host == d or host.endswith("." + d):
+                return cls
+    return None
+
+
+def evidence_grade(a, cadence, budget_days, today, classes):
+    """Rule-based evidence grade (replaces trust in the model's own 'confidence' label,
+    which research shows is overconfident and weakly informative):
+      +1 an official, data-provider or major-press source is cited
+      +1 the evidence is dated within the indicator's staleness budget
+      +1 the citation checker found the number at its cited source
+      +1 an independent second read agreed (where one was run)
+    A = 3+, B = 2, C = 0-1."""
+    pts, why = 0, []
+    srcs = a.get("sources") or []
+    if any(source_class(u, classes) for u in srcs):
+        pts += 1; why.append("authoritative source")
+    try:
+        k = agent._as_of_key(a.get("as_of"))
+        age = (datetime.date.fromisoformat(today) - datetime.date(*k)).days if k else None
+    except Exception:
+        age = None
+    if age is not None and budget_days and age <= budget_days:
+        pts += 1; why.append("recent evidence")
+    if ((a.get("citecheck") or {}).get("verdict")) == "verified":
+        pts += 1; why.append("number verified at source")
+    if ((a.get("crosscheck") or {}).get("agree")) is True:
+        pts += 1; why.append("second read agreed")
+    return ("A" if pts >= 3 else "B" if pts == 2 else "C"), why
+
+
 def load_config():
     with open(os.path.join(ROOT, "config", "stories.yaml")) as f:
         return yaml.safe_load(f)
@@ -70,9 +120,18 @@ def main():
 
     values = {}
     fetched = {}
+    guard = {}
     if not args.offline:
         print("Fetching live indicators ...")
         fetched = fetch.fetch_all_dated(config)
+        # Feed guard: a failed feed carries forward its last good value (not the June
+        # starting value), and an implausible value is held until the next run confirms it.
+        import feedguard
+        guard = feedguard.check(fetched, args.date)
+        for iid in guard.get("carried", []):
+            print(f"::warning title=Feed carried forward::{iid} - feed failed; using last good value")
+        for h in guard.get("held", []):
+            print(f"::warning title=Feed value held::{h['id']} = {h['value']} ({h['reason']}); kept {h['last']}")
         values.update({k: dv["value"] for k, dv in fetched.items() if dv["value"] is not None})
         print(f"  got {len(values)} live market/data values")
 
@@ -99,6 +158,24 @@ def main():
                   f"(run with --agent to refresh)")
         if args.agent and not key:
             print("  --agent requested but ANTHROPIC_API_KEY not set; using cached/baseline.")
+
+    # Hybrid indicators (a slow official feed AND a weekly agent read, e.g. the France
+    # spread): use whichever reading is newer; ties go to the official feed.
+    hybrid_used = {}
+    try:
+        _alog = agent.load_log().get("assessments", {})
+        for iid, dv in fetched.items():
+            a = _alog.get(iid)
+            if not a or not a.get("applied") or a.get("value") is None:
+                continue
+            fk, ak = agent._as_of_key(dv.get("as_of")), agent._as_of_key(a.get("as_of"))
+            if dv.get("value") is not None and (not ak or (fk and fk >= ak)):
+                values[iid] = dv["value"]          # official feed is as new or newer
+            else:
+                values[iid] = a["value"]
+                hybrid_used[iid] = a
+    except Exception as e:
+        print(f"  (hybrid selection skipped: {e})")
 
     values.update(manual)  # human overrides always win
 
@@ -221,6 +298,8 @@ def main():
             for ind in s.get("indicators", []):
                 idmap[ind["id"]] = (ind.get("label", ind["id"]), s["name"], s["set"])
         flags = set(alog.get("review_flags", []))
+        src_classes = _source_classes()
+        cad_of = {i["id"]: i.get("cadence") for s_ in config["stories"] for i in s_["indicators"]}
         items = []
         for ind_id, a in alog["assessments"].items():
             lbl, story, setno = idmap.get(ind_id, (ind_id, "", 0))
@@ -250,6 +329,10 @@ def main():
                 soft.append(f"reversal to {fmt_v(a.get('pending'))} held - applied next week only if the next read confirms it")
             if a.get("parse") == "repaired": soft.append("recovered from a malformed reply")
             if not (a.get("sources") or []): soft.append("no sources")
+            if changed and (a.get("sources") or []) and not any(source_class(u, src_classes) for u in a["sources"]):
+                soft.append("change rests only on non-authoritative sources")
+            ev_grade, ev_why = evidence_grade(a, cad_of.get(ind_id), enrich.STALENESS_BUDGET_DAYS.get(cad_of.get(ind_id)) or 90,
+                                              args.date, src_classes)
             if why:
                 tier = "act"
             elif soft:
@@ -272,7 +355,7 @@ def main():
                 "stale_guard": a.get("stale_guard"),
                 "reversal_guard": a.get("reversal_guard"), "pending": a.get("pending"),
                 "change_reason": a.get("change_reason") or "",
-                "tier": tier, "why": why,
+                "tier": tier, "why": why, "evidence": ev_grade, "evidence_why": ev_why,
             })
         items.sort(key=lambda x: ({"act": 0, "glance": 1, "ok": 2}[x["tier"]], x["set"], x["label"]))
         flags = {it["id"] for it in items if it["tier"] in ("act", "glance")}
@@ -306,6 +389,13 @@ def main():
     enrich.attach_trends(result, hist, args.date)
     enrich.attach_provenance(result, alog if alog.get("assessments") else None, fetched, args.date)
     result["data_health"] = enrich.data_health(config, fetched, alog, args.date, args.offline)
+    if guard:
+        dh = result["data_health"]
+        dh["carried"] = guard.get("carried", [])
+        dh["held"] = guard.get("held", [])
+        dh["live_ok"] = sum(1 for dv in fetched.values()
+                            if dv.get("value") is not None and not dv.get("carried") and not dv.get("held"))
+        dh["fell_back"] = sum(1 for dv in fetched.values() if dv.get("value") is None)
     if pw_readings:
         ok = [r for r in pw_readings.values() if "ratio" in r]
         result["data_health"]["portwatch"] = {"ok": len(ok), "total": len(pw_readings),
@@ -313,6 +403,17 @@ def main():
     # measured indicators: show where the number really came from
     for s_ in result["stories"]:
         for ind in s_["indicators"]:
+            dv = fetched.get(ind["id"]) or {}
+            if dv.get("carried"):
+                ind["carried"] = f"feed failed - last good value from {dv.get('as_of')}"
+            if dv.get("held"):
+                ind["held"] = dv["held"]
+            a = hybrid_used.get(ind["id"])
+            if a:
+                ind["provenance"] = "Agent"
+                ind["source_url"] = (a.get("sources") or [""])[0]
+                ind["as_of"] = a.get("as_of")
+                ind["hybrid_note"] = "newer than the monthly official figure"
             m = measured.get(ind["id"])
             if m:
                 ind["provenance"] = "PortWatch"
@@ -364,6 +465,17 @@ def main():
                               f"grade - the two agents disagreed or were unsure. See the dashboard.")
             except Exception as e:
                 print(f"::warning title=Auto-grader skipped::{e}")
+            try:
+                import grader
+                ms = grader.run_miss_check(key, args.date, [{"id": s_["id"], "name": s_["name"], "level": s_["level"]}
+                                                           for s_ in result["stories"]])
+                if ms and "checked" in ms:
+                    print(f"  miss check: {ms['checked']} stories below High checked, "
+                          f"{ms['possible_misses']} possible miss(es) for your review")
+                    if ms["possible_misses"]:
+                        print(f"::notice title=Track record::{ms['possible_misses']} possible miss(es) need your review")
+            except Exception as e:
+                print(f"::warning title=Miss check skipped::{e}")
         led = ledger.load_ledger()
         n_open = sum(1 for e in led["episodes"] if e.get("status") == "open")
         n_ungraded = sum(1 for e in led["episodes"] if e.get("status") == "closed" and not e.get("grade"))
@@ -399,13 +511,35 @@ def main():
         print(f"  (living brief skipped: {e})")
 
     if not args.no_alert:
+        try:
+            ha = alerts.maybe_alert_health(result, os.environ, alog=alog,
+                                           agent_ran=bool(args.agent and key and not args.offline))
+            for p_ in ha.get("problems", []):
+                print(f"::warning title=Pipeline problem::{p_}")
+            if ha.get("sent"):
+                print(f"  failure alert sent: {ha.get('results')}")
+        except Exception as e:
+            print(f"  (failure alert skipped: {e})")
         a = alerts.maybe_alert(result, prev, os.environ)
         if a.get("sent"):
             print(f"ALERT: {len(a['crossings'])} band crossing(s) sent -> {a['results']}")
         elif a.get("reason") == "no band crossings" and prev:
             print("Alerts: no band crossings since last run.")
 
-    if args.scout and key and not args.offline:
+    # The scout runs with the weekly agent pass only (it used to run on every run,
+    # manual ones included); on other runs its queue is just tidied (old items expire).
+    if args.scout and key and not args.offline and not args.agent:
+        try:
+            import scout
+            q = scout.load_queue()
+            if q.get("items"):
+                n = scout.expire(q, args.date)
+                scout.save_queue(q)
+                print(f"  scout: not run (weekly with the agent); {n} stale item(s) expired, "
+                      f"{q.get('pending_count', 0)} pending")
+        except Exception as e:
+            print(f"  (scout tidy skipped: {e})")
+    if args.scout and key and not args.offline and args.agent:
         import scout
         print("Running overnight-event scout ...")
         q = scout.run_scout(config, key, args.date)

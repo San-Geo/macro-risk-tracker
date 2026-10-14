@@ -505,3 +505,17 @@ indicators:
     - https://www.sec.gov
     - https://www.dtcc.com
     - https://www.risk.net
+  oat_bund:
+    type: value
+    min: -0.5
+    max: 5.0
+    query: France Germany 10-year bond yield spread OAT Bund basis points latest this week
+    rubric: 'Report the latest 10-year French OAT minus German Bund yield spread in PERCENTAGE POINTS
+      (e.g. 78 basis points = 0.78), as reported in the last 7 days by a major newswire (Reuters, Bloomberg,
+      FT), the ECB or the Banque de France. State the date of the reading as as_of. This is a weekly fresher
+      reading of the same spread the tracker otherwise takes from the OECD monthly average; the board uses
+      whichever reading is newer.'
+    sources:
+    - https://www.reuters.com/markets/rates-bonds
+    - https://www.ft.com/markets
+    - https://www.banque-france.fr

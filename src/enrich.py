@@ -4,18 +4,26 @@ import csv, os, datetime
 import score
 
 
+_RAWS = {}
+
+
 def load_history(path):
     """Return ({story_id: [(date, level), ...]}, {date: method_version}) ascending."""
     series, versions = {}, {}
+    global _RAWS
+    raws = {}
+    _RAWS = raws
     if not os.path.exists(path):
         return series, versions
     with open(path) as f:
         for row in csv.DictReader(f):
             try:
-                lvl = int(float(row["level"]))
-            except (ValueError, KeyError):
+                lvl = score.level_of(row)          # current rounding rule, from the raw score
+                raw = float(row.get("raw_level") or lvl)
+            except (ValueError, KeyError, TypeError):
                 continue
             series.setdefault(row["story_id"], []).append((row["date"], lvl))
+            raws.setdefault(row["date"], []).append(raw)
             # rows written before versioning have no column -> "1.x" (pre-stamp)
             versions[row["date"]] = (row.get("method_version") or "1.x")
     for k in series:
@@ -49,10 +57,8 @@ def attach_trends(result, history_path, today_date, window_days=7, spark_n=16):
 
     # overall aggregate trend: recompute each past date's overall with the CURRENT
     # aggregator (history stores per-story levels), so the series is self-consistent.
-    bydate = {}
-    for h in hist.values():
-        for d, l in h:
-            bydate.setdefault(d, []).append(l)
+    # (from the stored UNROUNDED story scores, as methodology 3.0 aggregates them)
+    bydate = dict(_RAWS)
     overall_series = sorted((d, score.aggregate_overall(v)["overall"]) for d, v in bydate.items())
     refagg = None
     for d, a in overall_series:
@@ -66,7 +72,9 @@ def attach_trends(result, history_path, today_date, window_days=7, spark_n=16):
         result["aggregates_trend"] = {
             "overall": {"prev": round(refagg[1], 1), "since": refagg[0],
                         "change": round(result["aggregates"]["overall"] - refagg[1], 1),
-                        "crosses_methodology": ref_ver != cur_ver,
+                        # 2.0 and 3.0 share the same unrounded story scores, and past
+                        # overalls are recomputed above with today's aggregator - comparable.
+                        "crosses_methodology": ref_ver != cur_ver and {ref_ver, cur_ver} != {"2.0", "3.0"},
                         "ref_version": ref_ver, "version": cur_ver}}
     return result
 

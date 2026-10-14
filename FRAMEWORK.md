@@ -321,6 +321,20 @@ Open `manual_input.csv` and put a number in the `value` column for any indicator
 
 **Authoritative sources.** https://www.milliman.com, https://equable.org
 
+### OAT-Bund 10y spread (%)  
+
+*Story:* France / eurozone fragility  
+*Indicator id:* `oat_bund`  
+*Type:* value  
+*Bands from thresholds:* good ≤ 0.6, warn ≈ 0.85  
+*Weight on the meter:* 1.0  
+
+**Rubric.** Report the latest 10-year French OAT minus German Bund yield spread in PERCENTAGE POINTS (e.g. 78 basis points = 0.78), as reported in the last 7 days by a major newswire (Reuters, Bloomberg, FT), the ECB or the Banque de France. State the date of the reading as as_of. This is a weekly fresher reading of the same spread the tracker otherwise takes from the OECD monthly average; the board uses whichever reading is newer.
+
+**What the agent searches.** France Germany 10-year bond yield spread OAT Bund basis points latest this week
+
+**Authoritative sources.** https://www.reuters.com/markets/rates-bonds, https://www.ft.com/markets, https://www.banque-france.fr
+
 
 ## Set 4 — Geoeconomics & Trade Weapons
 

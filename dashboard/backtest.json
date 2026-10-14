@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-06T18:18:19.758478+00:00",
+  "generated": "2026-10-13T16:46:59.953203+00:00",
   "version": "1.0",
   "mode": "sample",
   "scope": "Replays documented historical values of the market/data indicators through the live scoring engine. Judgment indicators are held at baseline (they have no historical series), so these levels reflect ONLY the market-driven component of each story - a partial validation of the engine's mechanics, not a claim the tracker would have predicted these events.",
@@ -27,12 +27,12 @@
         "2009-03-31"
       ],
       "overall": [
-        5.9,
-        6.2,
-        5.9,
-        5.9,
         5.8,
-        5.8
+        6.2,
+        6.0,
+        6.0,
+        6.0,
+        6.0
       ],
       "stories": {
         "s1_basis_trade": {
@@ -269,10 +269,10 @@
           "levels": [
             8,
             7,
-            6,
-            6,
-            6,
-            6
+            7,
+            7,
+            7,
+            7
           ]
         },
         "s21_clearinghouses": {
@@ -301,11 +301,11 @@
       ],
       "overall": [
         5.5,
-        5.5,
-        5.8,
-        5.7,
         5.6,
-        5.6
+        6.0,
+        5.7,
+        5.7,
+        5.7
       ],
       "stories": {
         "s1_basis_trade": {
@@ -397,7 +397,7 @@
           "set": 2,
           "levels": [
             6,
-            6,
+            7,
             7,
             7,
             7,
@@ -540,12 +540,12 @@
           "name": "Sea lanes & undersea cables",
           "set": 4,
           "levels": [
-            6,
-            6,
-            6,
-            6,
-            6,
-            6
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
           ]
         },
         "s21_clearinghouses": {
@@ -556,8 +556,8 @@
             5,
             6,
             5,
-            4,
-            4
+            5,
+            5
           ]
         }
       },
@@ -575,10 +575,10 @@
       "overall": [
         5.6,
         5.7,
-        5.9,
-        5.7,
+        6.0,
         5.8,
-        5.5
+        5.9,
+        5.6
       ],
       "stories": {
         "s1_basis_trade": {
@@ -587,9 +587,9 @@
           "levels": [
             5,
             6,
-            6,
-            6,
-            6,
+            7,
+            7,
+            7,
             6
           ]
         },
@@ -670,11 +670,11 @@
           "set": 2,
           "levels": [
             6,
-            6,
             7,
             7,
             7,
-            6
+            7,
+            7
           ]
         },
         "s9_cre": {
@@ -816,16 +816,16 @@
             7,
             8,
             8,
-            6,
             7,
-            6
+            7,
+            7
           ]
         },
         "s21_clearinghouses": {
           "name": "Clearinghouses (financial chokepoint)",
           "set": 1,
           "levels": [
-            4,
+            5,
             5,
             6,
             6,
@@ -844,10 +844,10 @@
         "2023-05-31"
       ],
       "overall": [
-        5.5,
         5.6,
-        5.5,
-        5.5
+        5.7,
+        5.7,
+        5.6
       ],
       "stories": {
         "s1_basis_trade": {
@@ -855,8 +855,8 @@
           "set": 1,
           "levels": [
             6,
-            6,
-            6,
+            7,
+            7,
             6
           ]
         },
@@ -924,10 +924,10 @@
           "name": "AI build-out circular financing",
           "set": 2,
           "levels": [
-            6,
             7,
-            6,
-            6
+            7,
+            7,
+            7
           ]
         },
         "s9_cre": {
@@ -1044,10 +1044,10 @@
           "name": "Sea lanes & undersea cables",
           "set": 4,
           "levels": [
-            6,
-            6,
-            6,
-            6
+            7,
+            7,
+            7,
+            7
           ]
         },
         "s21_clearinghouses": {
@@ -1056,7 +1056,7 @@
           "levels": [
             4,
             5,
-            4,
+            5,
             4
           ]
         }
