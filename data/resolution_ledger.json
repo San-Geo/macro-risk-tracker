@@ -67,7 +67,7 @@
       "open_level": 7,
       "peak_level": 8,
       "peak_date": "2026-07-06",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "status": "open",
       "drivers_at_open": [
         "30-year JGB yield (%): 3.937 (band 2)",
@@ -94,7 +94,7 @@
       "open_level": 8,
       "peak_level": 8,
       "peak_date": "2026-07-06",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "status": "open",
       "drivers_at_open": [
         "Direct-lending default rate (%): 6.0 (band 2)",
@@ -251,7 +251,7 @@
       "open_level": 7,
       "peak_level": 8,
       "peak_date": "2026-09-14",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "status": "open",
       "drivers_at_open": [
         "Hormuz/Red Sea status (0 open / 1 contested / 2 closed): 2 (band 2)",
@@ -337,7 +337,7 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-09-28",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "status": "open",
       "drivers_at_open": [
         "Grid interconnection wait (months): 61 (band 2)",
@@ -362,7 +362,7 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-10-12",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "status": "open",
       "drivers_at_open": [
         "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen): 1 (band 1)",
@@ -378,6 +378,64 @@
           "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed): 0 -> 1 (band 0 -> 1)"
         ]
       }
+    },
+    {
+      "id": "s5_china_deflation-2026-10-14",
+      "story_id": "s5_china_deflation",
+      "story": "China's price spillover (deflation or cost-push)",
+      "set": 4,
+      "opened": "2026-10-14",
+      "open_level": 7,
+      "peak_level": 7,
+      "peak_date": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "status": "open",
+      "drivers_at_open": [
+        "China PPI YoY (%) - large swing either way is worse: 3.8 (band 1)",
+        "New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating): 2 (band 2)"
+      ],
+      "closed": null,
+      "grade": null,
+      "grade_note": null
+    },
+    {
+      "id": "s8_ai_capex-2026-10-14",
+      "story_id": "s8_ai_capex",
+      "story": "AI build-out circular financing",
+      "set": 2,
+      "opened": "2026-10-14",
+      "open_level": 7,
+      "peak_level": 7,
+      "peak_date": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "status": "open",
+      "drivers_at_open": [
+        "AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast): 1 (band 1)",
+        "GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute): 1 (band 1)"
+      ],
+      "closed": null,
+      "grade": null,
+      "grade_note": null
+    },
+    {
+      "id": "s18_food_fertilizer-2026-10-14",
+      "story_id": "s18_food_fertilizer",
+      "story": "Food & fertilizer fragility",
+      "set": 5,
+      "opened": "2026-10-14",
+      "open_level": 7,
+      "peak_level": 7,
+      "peak_date": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "status": "open",
+      "drivers_at_open": [
+        "Food-price trend (0 falling / 1 elevated / 2 spiking): 1 (band 1)",
+        "China fertilizer export curbs (0 lifted / 1 in place / 2 tightened): 1 (band 1)",
+        "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut): 2 (band 2)"
+      ],
+      "closed": null,
+      "grade": null,
+      "grade_note": null
     }
   ],
   "note": "Record begins with the ledger feature (Jun 30 2026). Rebuilt on 2026-10-13 by replaying history.csv after a malformed hand edit had frozen the file since Jul 22.",

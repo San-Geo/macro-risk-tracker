@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-10-13 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-10-14 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 7.1/10** — Set 1 5.8, Set 2 5.2, Set 3 4.8, Set 4 6.5, Set 5 5.5.
+**Overall risk 7.6/10** — Set 1 6.0, Set 2 5.4, Set 3 4.6, Set 4 6.4, Set 5 5.8.
 
 
 ## Set 1 — Funding & Leverage
@@ -25,13 +25,13 @@ Lending has migrated from banks to lightly regulated private-credit funds, where
 
 *Indicators watched:* US high-yield OAS (%, ≈310bps), Direct-lending default rate (%, Fitch incl. distressed exchanges), Large-fund redemption gates (0 none / 1 isolated / 2 widespread)
 
-### Stablecoins & Treasury demand — 4/10 (Moderate)
+### Stablecoins & Treasury demand — 5/10 (Elevated)
 
 Dollar stablecoins have become sizeable holders of short-term Treasuries, linking crypto plumbing to the funding market. A large redemption wave could force rapid T-bill selling; the GENIUS Act's implementation is the key regulatory variable.
 
 *Indicators watched:* Largest stablecoin max peg deviation (%), Total USD stablecoin supply ($bn), GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)
 
-### Clearinghouses (financial chokepoint) — 4/10 (Moderate)
+### Clearinghouses (financial chokepoint) — 5/10 (Elevated)
 
 Central counterparties now concentrate the system's risk by design, and Treasury central-clearing mandates will route more activity through them. In a volatility spike, procyclical margin calls can amplify stress - they are a systemic single point of failure.
 
@@ -40,7 +40,7 @@ Central counterparties now concentrate the system's risk by design, and Treasury
 
 ## Set 2 — Credit, Consumers & Valuations
 
-### AI build-out circular financing — 6/10 (Elevated)
+### AI build-out circular financing — 7/10 (High)
 
 AI infrastructure spending vastly exceeds current AI revenue, increasingly financed with debt and circular vendor arrangements. If monetization disappoints or GPU-backed financing strains, the capex cycle could reverse sharply.
 
@@ -58,7 +58,7 @@ Beneath headline figures, subprime auto and buy-now-pay-later delinquencies are 
 
 *Indicators watched:* Subprime auto 60+ day delinquency (%), US unemployment rate (%), BNPL delinquency trend (0 stable / 1 rising / 2 spiking)
 
-### Insurance retreat — 4/10 (Moderate)
+### Insurance retreat — 5/10 (Elevated)
 
 Insurers are retreating from climate-exposed markets through non-renewals and exits, shifting risk onto homeowners and state backstops. Severe catastrophe seasons strain the system and feed into housing and mortgage stress.
 
@@ -94,7 +94,7 @@ Aging demographics and underfunded public pensions create slow fiscal pressure, 
 
 ## Set 4 — Geoeconomics & Trade Weapons
 
-### China's price spillover (deflation or cost-push) — 6/10 (Elevated)
+### China's price spillover (deflation or cost-push) — 7/10 (High)
 
 China's factory-gate prices spill into global goods markets in BOTH directions: years of PPI deflation exported disinflation and squeezed competitors, while a sharp 2026 reversal to positive PPI (energy/commodity cost-push) now exports input-cost pressure. Either large swing is destabilising; the indicator is scored on the size of the move, not its sign.
 
@@ -127,7 +127,7 @@ Data-center electricity demand is colliding with multi-year grid interconnection
 
 *Indicators watched:* Grid interconnection wait (months), Data-center moratoria / backlash (0 none / 1 spreading / 2 widespread), AI power-demand pressure (0 easing / 1 tight / 2 acute)
 
-### Copper & the electrification deficit — 4/10 (Moderate)
+### Copper & the electrification deficit — 5/10 (Elevated)
 
 Electrification and AI infrastructure point to structural copper deficits as demand outruns new mine supply, which takes a decade to build. Price is the live signal; mine disruptions and inventory draws would confirm tightening.
 
@@ -139,7 +139,7 @@ Water is systematically underpriced yet essential to chip fabrication, agricultu
 
 *Indicators watched:* Drought in a chip/farm hub (0 none / 1 emerging / 2 acute), Key reservoir / basin stress (0 normal / 1 low / 2 critical), Transboundary water dispute escalation (0 calm / 1 tense / 2 crisis)
 
-### Food & fertilizer fragility — 6/10 (Elevated)
+### Food & fertilizer fragility — 7/10 (High)
 
 Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag.
 

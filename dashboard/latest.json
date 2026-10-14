@@ -1,15 +1,15 @@
 {
-  "date": "2026-10-13",
-  "generated_at": "2026-10-13 18:29 UTC",
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14 10:16 UTC",
   "aggregates": {
-    "1": 5.8,
-    "3": 4.8,
-    "4": 6.5,
-    "2": 5.2,
-    "5": 5.5,
-    "overall": 7.1
+    "1": 6.0,
+    "3": 4.6,
+    "4": 6.4,
+    "2": 5.4,
+    "5": 5.8,
+    "overall": 7.6
   },
-  "narrative": "**HEADLINE**\nOverall macro risk stands at High, with five stories at High or above and no changes in driver readings since yesterday.\n\n**UNCHANGED STORIES**\nNo stories moved today. All 5 n_stories_at_high_or_above remain at High: Japan fiscal / JGB / carry trade, Private credit's opaque expansion, Critical minerals as a weapon, AI power & the grid bottleneck, and Sea lanes & undersea cables. Risk to financial stability and supply-chain resilience persists without new triggering conditions.\n\n**TOP WATCH**\nPrivate credit's opaque expansion (High) poses the sharpest near-term risk given its rapid growth outside regulated banking channels and opacity to systemic stress.",
+  "narrative": "**Macro Risk EOD Brief | 14 October 2026**\n\n**Headline:** Overall macro risk is High, with 8 stories at High or above and no intraday moves.\n\n**Key Stories:**\nNo stories changed band since the previous run.\n\n**Highest-Risk Watch:**\nPrivate credit's opaque expansion remains the most acute concern at level 8 (High), followed by Japan fiscal/JGB/carry trade, China's price spillover, Critical minerals as a weapon, AI build-out circular financing, AI power & the grid bottleneck, Food & fertilizer fragility, and Sea lanes & undersea cables\u2014all at level 7 (High).",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -38,7 +38,7 @@
         {
           "id": "move",
           "label": "MOVE index (Treasury volatility)",
-          "value": 100.9292,
+          "value": 101.09,
           "band": 1,
           "baseline_band": 0,
           "weight": 1.5,
@@ -88,7 +88,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-06",
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -104,7 +104,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 158.331,
+          "value": 158.456,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -113,13 +113,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/JPY=X",
-          "as_of": "2026-10-13",
+          "as_of": "2026-10-14",
           "provenance": "Market"
         },
         {
           "id": "jgb30",
           "label": "30-year JGB yield (%)",
-          "value": 4.085,
+          "value": 4.064,
           "band": 2,
           "baseline_band": 0,
           "weight": 1.0,
@@ -128,7 +128,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/index.htm",
-          "as_of": "2026-10-09",
+          "as_of": "2026-10-13",
           "provenance": "MOF"
         },
         {
@@ -169,7 +169,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-10-06",
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -250,7 +250,7 @@
       ],
       "trend": {
         "prev": 8,
-        "since": "2026-10-06",
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -266,7 +266,7 @@
         {
           "id": "dxy",
           "label": "Broad US dollar index (FRED DTWEXBGS)",
-          "value": 121.3848,
+          "value": 121.6023,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -275,15 +275,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/DTWEXBGS",
-          "as_of": "2026-10-02",
-          "provenance": "FRED",
-          "age_days": 11,
-          "stale_for_cadence": true
+          "as_of": "2026-10-09",
+          "provenance": "FRED"
         },
         {
           "id": "real10",
           "label": "US 10y real yield (TIPS, %)",
-          "value": 2.87,
+          "value": 2.91,
           "band": 2,
           "baseline_band": 0,
           "weight": 1.0,
@@ -292,7 +290,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/DFII10",
-          "as_of": "2026-10-08",
+          "as_of": "2026-10-09",
           "provenance": "FRED"
         },
         {
@@ -333,7 +331,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-06",
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -343,8 +341,8 @@
       "set": 4,
       "base_level": 6,
       "raw_level": 6.5,
-      "level": 6,
-      "band": "Elevated",
+      "level": 7,
+      "band": "High",
       "indicators": [
         {
           "id": "china_ppi",
@@ -364,7 +362,7 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.6807,
+          "value": 6.6811,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -373,7 +371,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CNY=X",
-          "as_of": "2026-10-13",
+          "as_of": "2026-10-14",
           "provenance": "Market"
         },
         {
@@ -395,26 +393,26 @@
       "summary": "China's factory-gate prices spill into global goods markets in BOTH directions: years of PPI deflation exported disinflation and squeezed competitors, while a sharp 2026 reversal to positive PPI (energy/commodity cost-push) now exports input-cost pressure. Either large swing is destabilising; the indicator is scored on the size of the move, not its sign.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=39",
       "spark": [
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
       ],
       "trend": {
-        "prev": 6,
-        "since": "2026-10-06",
+        "prev": 7,
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -510,7 +508,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-06",
+        "since": "2026-10-07",
         "change": 1
       }
     },
@@ -520,8 +518,8 @@
       "set": 1,
       "base_level": 4,
       "raw_level": 4.5,
-      "level": 4,
-      "band": "Moderate",
+      "level": 5,
+      "band": "Elevated",
       "indicators": [
         {
           "id": "peg_deviation",
@@ -535,13 +533,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-10-13",
+          "as_of": "2026-10-14",
           "provenance": "DefiLlama"
         },
         {
           "id": "stablecoin_supply",
           "label": "Total USD stablecoin supply ($bn)",
-          "value": 313.1,
+          "value": 312.3,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -550,7 +548,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-10-13",
+          "as_of": "2026-10-14",
           "provenance": "DefiLlama"
         },
         {
@@ -572,26 +570,26 @@
       "summary": "Dollar stablecoins have become sizeable holders of short-term Treasuries, linking crypto plumbing to the funding market. A large redemption wave could force rapid T-bill selling; the GENIUS Act's implementation is the key regulatory variable.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=12",
       "spark": [
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
       ],
       "trend": {
-        "prev": 4,
-        "since": "2026-10-06",
+        "prev": 5,
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -601,8 +599,8 @@
       "set": 2,
       "base_level": 6,
       "raw_level": 6.5,
-      "level": 6,
-      "band": "Elevated",
+      "level": 7,
+      "band": "High",
       "indicators": [
         {
           "id": "ig_oas",
@@ -653,26 +651,26 @@
       "summary": "AI infrastructure spending vastly exceeds current AI revenue, increasingly financed with debt and circular vendor arrangements. If monetization disappoints or GPU-backed financing strains, the capex cycle could reverse sharply.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=18",
       "spark": [
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
       ],
       "trend": {
-        "prev": 6,
-        "since": "2026-10-06",
+        "prev": 7,
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -738,7 +736,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-06",
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -765,7 +763,7 @@
           "source_url": "https://fred.stlouisfed.org/series/IRLTLT01FRM156N",
           "as_of": "2026-08-01",
           "provenance": "FRED",
-          "age_days": 73,
+          "age_days": 74,
           "stale_for_cadence": true
         },
         {
@@ -821,7 +819,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-10-06",
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -848,7 +846,7 @@
           "source_url": "https://blog.cucollector.com/the-seasonal-loan-delinquency-reprieve-may-be-ending/",
           "as_of": "2026-07",
           "provenance": "Agent",
-          "age_days": 77,
+          "age_days": 78,
           "stale_for_cadence": true
         },
         {
@@ -904,7 +902,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-10-06",
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -920,7 +918,7 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4183.2002,
+          "value": 4165.1001,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -929,7 +927,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/GC=F",
-          "as_of": "2026-10-13",
+          "as_of": "2026-10-14",
           "provenance": "Market"
         },
         {
@@ -985,7 +983,7 @@
       ],
       "trend": {
         "prev": 3,
-        "since": "2026-10-06",
+        "since": "2026-10-07",
         "change": 1
       }
     },
@@ -995,8 +993,8 @@
       "set": 2,
       "base_level": 5,
       "raw_level": 4.5,
-      "level": 4,
-      "band": "Moderate",
+      "level": 5,
+      "band": "Elevated",
       "indicators": [
         {
           "id": "insurer_exits",
@@ -1027,7 +1025,7 @@
           "source_url": "https://fred.stlouisfed.org/series/DRSFRMACBS",
           "as_of": "2026-04-01",
           "provenance": "FRED",
-          "age_days": 195,
+          "age_days": 196,
           "stale_for_cadence": true
         },
         {
@@ -1049,26 +1047,26 @@
       "summary": "Insurers are retreating from climate-exposed markets through non-renewals and exits, shifting risk onto homeowners and state backstops. Severe catastrophe seasons strain the system and feed into housing and mortgage stress.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=25",
       "spark": [
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
       ],
       "trend": {
-        "prev": 4,
-        "since": "2026-10-06",
+        "prev": 5,
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -1149,7 +1147,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-10-06",
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -1176,7 +1174,7 @@
           "source_url": "https://emp.lbl.gov/queues",
           "as_of": "2025-12-31",
           "provenance": "Agent",
-          "age_days": 289,
+          "age_days": 290,
           "stale_for_cadence": true
         },
         {
@@ -1213,10 +1211,10 @@
       "summary": "Data-center electricity demand is colliding with multi-year grid interconnection queues and slow capacity additions. Whether this is an acute shortfall or eases depends on the pace of AI build-out versus new supply - forecasts diverge widely.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=49",
       "spark": [
-        6,
-        6,
-        6,
-        6,
+        7,
+        7,
+        7,
+        7,
         7,
         7,
         7,
@@ -1232,7 +1230,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-10-06",
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -1242,13 +1240,13 @@
       "set": 5,
       "base_level": 4,
       "raw_level": 4.5,
-      "level": 4,
-      "band": "Moderate",
+      "level": 5,
+      "band": "Elevated",
       "indicators": [
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.732,
+          "value": 6.73,
           "band": 2,
           "baseline_band": 1,
           "weight": 0.5,
@@ -1257,7 +1255,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/HG=F",
-          "as_of": "2026-10-13",
+          "as_of": "2026-10-14",
           "provenance": "Market"
         },
         {
@@ -1289,33 +1287,33 @@
           "source_url": "https://www.marketscreener.com/news/world-refined-copper-balance-projections-indicate-a-surplus-of-about-96-000-tonnes-for-2026-and-377-ce7f59deda8ff526",
           "as_of": "2026-04-23",
           "provenance": "Agent",
-          "age_days": 173,
+          "age_days": 174,
           "stale_for_cadence": true
         }
       ],
       "summary": "Electrification and AI infrastructure point to structural copper deficits as demand outruns new mine supply, which takes a decade to build. Price is the live signal; mine disruptions and inventory draws would confirm tightening.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=52",
       "spark": [
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
       ],
       "trend": {
-        "prev": 4,
-        "since": "2026-10-06",
+        "prev": 5,
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -1381,23 +1379,23 @@
         5,
         5,
         5,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
         5,
         5,
         5
       ],
       "trend": {
-        "prev": 4,
-        "since": "2026-10-06",
-        "change": 1
+        "prev": 5,
+        "since": "2026-10-07",
+        "change": 0
       }
     },
     {
@@ -1406,8 +1404,8 @@
       "set": 5,
       "base_level": 6,
       "raw_level": 6.5,
-      "level": 6,
-      "band": "Elevated",
+      "level": 7,
+      "band": "High",
       "indicators": [
         {
           "id": "fao_food_trend",
@@ -1453,32 +1451,32 @@
           "source_url": "https://portwatch.imf.org",
           "as_of": "2026-10-04",
           "provenance": "PortWatch",
-          "measured_note": "Strait of Hormuz 2.7 ships/day vs 91.55 normal (3%)"
+          "measured_note": "Strait of Hormuz 2.7 ships/day vs 92 normal (3%). Source: International Monetary Fund, PortWatch"
         }
       ],
       "summary": "Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag.",
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=56",
       "spark": [
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
       ],
       "trend": {
-        "prev": 6,
-        "since": "2026-10-06",
+        "prev": 7,
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -1559,7 +1557,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-06",
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -1586,12 +1584,12 @@
           "source_url": "https://portwatch.imf.org",
           "as_of": "2026-10-04",
           "provenance": "PortWatch",
-          "measured_note": "Strait of Hormuz 2.7 ships/day vs 91.55 normal (3%); Bab el-Mandeb (Red Sea) 29.6 ships/day vs 69.42 normal (43%)"
+          "measured_note": "Strait of Hormuz 2.7 ships/day vs 92 normal (3%); Bab el-Mandeb (Red Sea) 29.6 ships/day vs 69 normal (43%). Source: International Monetary Fund, PortWatch"
         },
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 94.36,
+          "value": 95.27,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
@@ -1600,7 +1598,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CL=F",
-          "as_of": "2026-10-13",
+          "as_of": "2026-10-14",
           "provenance": "Market"
         },
         {
@@ -1641,7 +1639,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-10-06",
+        "since": "2026-10-07",
         "change": 0
       }
     },
@@ -1651,13 +1649,13 @@
       "set": 1,
       "base_level": 4,
       "raw_level": 4.5,
-      "level": 4,
-      "band": "Moderate",
+      "level": 5,
+      "band": "Elevated",
       "indicators": [
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 15.41,
+          "value": 15.22,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -1666,13 +1664,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^VIX",
-          "as_of": "2026-10-13",
+          "as_of": "2026-10-14",
           "provenance": "Market"
         },
         {
           "id": "move_ccp",
           "label": "Treasury volatility (MOVE)",
-          "value": 100.9292,
+          "value": 101.09,
           "band": 1,
           "baseline_band": 0,
           "weight": 0.5,
@@ -1706,23 +1704,23 @@
         4,
         4,
         4,
+        5,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
         4,
         4,
         4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4
+        5,
+        5
       ],
       "trend": {
-        "prev": 4,
-        "since": "2026-10-06",
+        "prev": 5,
+        "since": "2026-10-07",
         "change": 0
       }
     }
@@ -1776,6 +1774,10 @@
         "why": [
           "recovered from a malformed reply",
           "no sources"
+        ],
+        "evidence": "C",
+        "evidence_why": [
+          "recent evidence"
         ]
       },
       {
@@ -1806,6 +1808,10 @@
         "why": [
           "recovered from a malformed reply",
           "no sources"
+        ],
+        "evidence": "C",
+        "evidence_why": [
+          "recent evidence"
         ]
       },
       {
@@ -1847,7 +1853,13 @@
         "change_reason": "",
         "tier": "glance",
         "why": [
-          "changed 13.2 -> 12.16"
+          "changed 13.2 -> 12.16",
+          "change rests only on non-authoritative sources"
+        ],
+        "evidence": "B",
+        "evidence_why": [
+          "recent evidence",
+          "number verified at source"
         ]
       },
       {
@@ -1883,6 +1895,11 @@
         "why": [
           "recovered from a malformed reply",
           "no sources"
+        ],
+        "evidence": "B",
+        "evidence_why": [
+          "recent evidence",
+          "second read agreed"
         ]
       },
       {
@@ -1914,6 +1931,10 @@
           "changed 57.13 -> 56.7",
           "recovered from a malformed reply",
           "no sources"
+        ],
+        "evidence": "C",
+        "evidence_why": [
+          "recent evidence"
         ]
       },
       {
@@ -1944,6 +1965,10 @@
         "why": [
           "recovered from a malformed reply",
           "no sources"
+        ],
+        "evidence": "C",
+        "evidence_why": [
+          "recent evidence"
         ]
       },
       {
@@ -1983,7 +2008,12 @@
         "change_reason": "",
         "tier": "glance",
         "why": [
-          "changed 0 -> 1"
+          "changed 0 -> 1",
+          "change rests only on non-authoritative sources"
+        ],
+        "evidence": "C",
+        "evidence_why": [
+          "recent evidence"
         ]
       },
       {
@@ -2027,7 +2057,12 @@
         "change_reason": "",
         "tier": "glance",
         "why": [
-          "changed 2 -> 1"
+          "changed 2 -> 1",
+          "change rests only on non-authoritative sources"
+        ],
+        "evidence": "C",
+        "evidence_why": [
+          "recent evidence"
         ]
       },
       {
@@ -2070,6 +2105,11 @@
         "tier": "glance",
         "why": [
           "changed 1 -> 2"
+        ],
+        "evidence": "B",
+        "evidence_why": [
+          "authoritative source",
+          "number verified at source"
         ]
       },
       {
@@ -2100,6 +2140,10 @@
         "why": [
           "recovered from a malformed reply",
           "no sources"
+        ],
+        "evidence": "C",
+        "evidence_why": [
+          "recent evidence"
         ]
       },
       {
@@ -2156,7 +2200,13 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "A",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence",
+          "second read agreed"
+        ]
       },
       {
         "id": "genius_impl",
@@ -2200,7 +2250,13 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "A",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence",
+          "number verified at source"
+        ]
       },
       {
         "id": "clearing_status",
@@ -2243,7 +2299,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence"
+        ]
       },
       {
         "id": "plan_financing",
@@ -2286,7 +2347,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence"
+        ]
       },
       {
         "id": "treasury_clearing_rollout",
@@ -2329,7 +2395,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence"
+        ]
       },
       {
         "id": "ai_revenue_gap",
@@ -2372,7 +2443,11 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "C",
+        "evidence_why": [
+          "recent evidence"
+        ]
       },
       {
         "id": "cat_losses",
@@ -2410,7 +2485,11 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "C",
+        "evidence_why": [
+          "recent evidence"
+        ]
       },
       {
         "id": "gpu_refi_stress",
@@ -2452,7 +2531,11 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "C",
+        "evidence_why": [
+          "recent evidence"
+        ]
       },
       {
         "id": "insurer_exits",
@@ -2492,7 +2575,13 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "A",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence",
+          "number verified at source"
+        ]
       },
       {
         "id": "subprime_auto_dpd",
@@ -2536,7 +2625,11 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "C",
+        "evidence_why": [
+          "number verified at source"
+        ]
       },
       {
         "id": "govt_stability",
@@ -2571,7 +2664,13 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "A",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence",
+          "number verified at source"
+        ]
       },
       {
         "id": "funded_ratio",
@@ -2611,7 +2710,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "recent evidence",
+          "number verified at source"
+        ]
       },
       {
         "id": "new_imf_programs",
@@ -2649,7 +2753,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence"
+        ]
       },
       {
         "id": "pension_leverage_event",
@@ -2682,7 +2791,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence"
+        ]
       },
       {
         "id": "rating_action",
@@ -2720,7 +2834,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence"
+        ]
       },
       {
         "id": "weaponization_event",
@@ -2758,7 +2877,11 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "C",
+        "evidence_why": [
+          "recent evidence"
+        ]
       },
       {
         "id": "ss_reform_news",
@@ -2797,7 +2920,11 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "C",
+        "evidence_why": [
+          "authoritative source"
+        ]
       },
       {
         "id": "china_ppi",
@@ -2832,7 +2959,13 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "A",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence",
+          "number verified at source"
+        ]
       },
       {
         "id": "hree_premium",
@@ -2880,7 +3013,13 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "A",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence",
+          "number verified at source"
+        ]
       },
       {
         "id": "export_controls",
@@ -2918,7 +3057,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence"
+        ]
       },
       {
         "id": "hormuz_redsea_status",
@@ -2960,7 +3104,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence"
+        ]
       },
       {
         "id": "license_flow",
@@ -3007,7 +3156,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "recent evidence",
+          "second read agreed"
+        ]
       },
       {
         "id": "fab_concentration",
@@ -3047,7 +3201,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "recent evidence",
+          "number verified at source"
+        ]
       },
       {
         "id": "taiwan_tension",
@@ -3094,7 +3253,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "recent evidence",
+          "second read agreed"
+        ]
       },
       {
         "id": "re_blacklist",
@@ -3127,7 +3291,11 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "C",
+        "evidence_why": [
+          "authoritative source"
+        ]
       },
       {
         "id": "ai_power_pressure",
@@ -3170,7 +3338,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence"
+        ]
       },
       {
         "id": "china_export_curbs",
@@ -3210,7 +3383,13 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "A",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence",
+          "number verified at source"
+        ]
       },
       {
         "id": "dc_moratoria",
@@ -3248,7 +3427,11 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "C",
+        "evidence_why": [
+          "recent evidence"
+        ]
       },
       {
         "id": "copper_deficit_timing",
@@ -3292,7 +3475,11 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "C",
+        "evidence_why": [
+          "number verified at source"
+        ]
       },
       {
         "id": "fao_food_trend",
@@ -3327,7 +3514,13 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "A",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence",
+          "number verified at source"
+        ]
       },
       {
         "id": "interconnection_months",
@@ -3370,7 +3563,11 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "C",
+        "evidence_why": [
+          "authoritative source"
+        ]
       },
       {
         "id": "hormuz_fertilizer",
@@ -3404,7 +3601,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence"
+        ]
       },
       {
         "id": "reservoir_stress",
@@ -3448,7 +3650,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "recent evidence",
+          "number verified at source"
+        ]
       },
       {
         "id": "water_dispute",
@@ -3490,7 +3697,12 @@
         "pending": null,
         "change_reason": "",
         "tier": "ok",
-        "why": []
+        "why": [],
+        "evidence": "B",
+        "evidence_why": [
+          "authoritative source",
+          "recent evidence"
+        ]
       }
     ]
   },
@@ -3499,9 +3711,11 @@
     "live_total": 19,
     "fell_back": 0,
     "agent_last": "2026-10-12",
-    "agent_days_ago": 1,
+    "agent_days_ago": 2,
     "agent_flags": 10,
     "offline": false,
+    "carried": [],
+    "held": [],
     "portwatch": {
       "ok": 2,
       "total": 2,
@@ -3511,12 +3725,12 @@
   },
   "aggregates_trend": {
     "overall": {
-      "prev": 6.7,
-      "since": "2026-10-06",
-      "change": 0.4,
+      "prev": 7.4,
+      "since": "2026-10-07",
+      "change": 0.2,
       "crosses_methodology": false,
       "ref_version": "2.0",
-      "version": "2.0"
+      "version": "3.0"
     }
   },
   "sets": {
@@ -3569,14 +3783,15 @@
     ]
   },
   "overall_breakdown": {
-    "overall": 7.1,
-    "breadth_mean": 5.6,
-    "tail_mean": 6.9,
+    "overall": 7.6,
+    "breadth_mean": 5.64,
+    "tail_mean": 6.89,
     "tail_k": 7,
-    "n_high_stories": 5,
-    "correlated_premium": 0.9
+    "n_high_stories": 8,
+    "soft_high": 6.5,
+    "correlated_premium": 1.35
   },
-  "method_version": "2.0",
+  "method_version": "3.0",
   "plain": {
     "sets": {
       "1": {
@@ -4019,8 +4234,8 @@
       {
         "id": "curve",
         "label": "10y-2y curve",
-        "value": 0.44,
-        "as_of": "2026-10-09",
+        "value": 0.42,
+        "as_of": "2026-10-13",
         "unit": "pp",
         "note": "10-year minus 2-year Treasury yield. A negative (inverted) reading has historically preceded US recessions - with long and variable lags.",
         "url": "https://fred.stlouisfed.org/series/T10Y2Y"
@@ -4096,7 +4311,7 @@
             "as_of": "2026-10-04"
           }
         },
-        "note": "Strait of Hormuz 2.7 ships/day vs 91.55 normal (3%); Bab el-Mandeb (Red Sea) 29.6 ships/day vs 69.42 normal (43%)"
+        "note": "Strait of Hormuz 2.7 ships/day vs 92 normal (3%); Bab el-Mandeb (Red Sea) 29.6 ships/day vs 69 normal (43%). Source: International Monetary Fund, PortWatch"
       },
       "hormuz_fertilizer": {
         "value": 2,
@@ -4111,7 +4326,7 @@
             "as_of": "2026-10-04"
           }
         },
-        "note": "Strait of Hormuz 2.7 ships/day vs 91.55 normal (3%)"
+        "note": "Strait of Hormuz 2.7 ships/day vs 92 normal (3%). Source: International Monetary Fund, PortWatch"
       }
     }
   }
