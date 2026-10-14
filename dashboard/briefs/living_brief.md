@@ -2,7 +2,7 @@
 
 *Auto-generated 2026-10-14 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 7.6/10** — Set 1 6.0, Set 2 5.4, Set 3 4.6, Set 4 6.4, Set 5 5.8.
+**Overall risk 7.5/10** — Set 1 5.8, Set 2 5.4, Set 3 4.6, Set 4 6.4, Set 5 5.8.
 
 
 ## Set 1 — Funding & Leverage
@@ -31,7 +31,7 @@ Dollar stablecoins have become sizeable holders of short-term Treasuries, linkin
 
 *Indicators watched:* Largest stablecoin max peg deviation (%), Total USD stablecoin supply ($bn), GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)
 
-### Clearinghouses (financial chokepoint) — 5/10 (Elevated)
+### Clearinghouses (financial chokepoint) — 4/10 (Moderate)
 
 Central counterparties now concentrate the system's risk by design, and Treasury central-clearing mandates will route more activity through them. In a volatility spike, procyclical margin calls can amplify stress - they are a systemic single point of failure.
 

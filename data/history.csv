@@ -1868,7 +1868,7 @@ date,story_id,name,set,level,band,raw_level,method_version
 2026-10-13,s19_lithography,The lithography (ASML) chokepoint,4,6,Elevated,5.5,2.0
 2026-10-13,s20_sea_lanes,Sea lanes & undersea cables,4,7,High,7.0,2.0
 2026-10-13,s21_clearinghouses,Clearinghouses (financial chokepoint),1,4,Moderate,4.5,2.0
-2026-10-14,s1_basis_trade,Treasury basis trade (hidden leverage),1,6,Elevated,6.25,3.0
+2026-10-14,s1_basis_trade,Treasury basis trade (hidden leverage),1,6,Elevated,5.5,3.0
 2026-10-14,s2_japan,Japan fiscal / JGB / carry trade,1,7,High,7.0,3.0
 2026-10-14,s3_private_credit,Private credit's opaque expansion,1,8,High,7.5,3.0
 2026-10-14,s4_dev_debt,Developing-world debt crisis,3,6,Elevated,5.5,3.0
@@ -1888,4 +1888,4 @@ date,story_id,name,set,level,band,raw_level,method_version
 2026-10-14,s18_food_fertilizer,Food & fertilizer fragility,5,7,High,6.5,3.0
 2026-10-14,s19_lithography,The lithography (ASML) chokepoint,4,6,Elevated,5.5,3.0
 2026-10-14,s20_sea_lanes,Sea lanes & undersea cables,4,7,High,7.0,3.0
-2026-10-14,s21_clearinghouses,Clearinghouses (financial chokepoint),1,5,Elevated,4.5,3.0
+2026-10-14,s21_clearinghouses,Clearinghouses (financial chokepoint),1,4,Moderate,4.25,3.0

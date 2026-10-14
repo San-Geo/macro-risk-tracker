@@ -1,29 +1,29 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14 10:16 UTC",
+  "generated_at": "2026-10-14 15:57 UTC",
   "aggregates": {
-    "1": 6.0,
+    "1": 5.8,
     "3": 4.6,
     "4": 6.4,
     "2": 5.4,
     "5": 5.8,
-    "overall": 7.6
+    "overall": 7.5
   },
-  "narrative": "**Macro Risk EOD Brief | 14 October 2026**\n\n**Headline:** Overall macro risk is High, with 8 stories at High or above and no intraday moves.\n\n**Key Stories:**\nNo stories changed band since the previous run.\n\n**Highest-Risk Watch:**\nPrivate credit's opaque expansion remains the most acute concern at level 8 (High), followed by Japan fiscal/JGB/carry trade, China's price spillover, Critical minerals as a weapon, AI build-out circular financing, AI power & the grid bottleneck, Food & fertilizer fragility, and Sea lanes & undersea cables\u2014all at level 7 (High).",
+  "narrative": "# EOD Macro-Risk Brief | 2026-10-14\n\n**Overall risk remains High, with eight stories at High band or above.**\n\n**Changed story:**\n- **Clearinghouses (financial chokepoint)** moved from Moderate to Moderate. Treasury volatility (MOVE index) declined to 99.94 from 101.09, reducing acute stress on central counterparty infrastructure and the risk of procyclical margin spirals.\n\n**Highest-risk story to watch:**\nPrivate credit's opaque expansion remains at High\u2014the largest unmonitored leverage pool, most exposed to mark-to-market shocks and redemption pressure if rates or credit spreads spike.",
   "stories": [
     {
       "id": "s1_basis_trade",
       "name": "Treasury basis trade (hidden leverage)",
       "set": 1,
       "base_level": 5,
-      "raw_level": 6.25,
+      "raw_level": 5.5,
       "level": 6,
       "band": "Elevated",
       "indicators": [
         {
           "id": "sofr_effr_spread",
           "label": "SOFR minus EFFR (%)",
-          "value": -0.01,
+          "value": 0.01,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -32,22 +32,22 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/SOFR",
-          "as_of": "2026-10-09",
+          "as_of": "2026-10-13",
           "provenance": "FRED"
         },
         {
           "id": "move",
           "label": "MOVE index (Treasury volatility)",
-          "value": 101.09,
-          "band": 1,
+          "value": 99.9363,
+          "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
-          "delta": 0.75,
+          "delta": 0.0,
           "source": "market:^MOVE",
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-10-13",
+          "as_of": "2026-10-14",
           "provenance": "Market"
         },
         {
@@ -104,7 +104,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 158.456,
+          "value": 158.795,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -185,7 +185,7 @@
         {
           "id": "hy_oas",
           "label": "US high-yield OAS (%, \u2248310bps)",
-          "value": 3.11,
+          "value": 3.16,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -194,7 +194,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
-          "as_of": "2026-10-12",
+          "as_of": "2026-10-13",
           "provenance": "FRED"
         },
         {
@@ -315,7 +315,7 @@
         5,
         5,
         5,
-        5,
+        6,
         6,
         6,
         6,
@@ -362,7 +362,7 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.6811,
+          "value": 6.6867,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -492,16 +492,16 @@
         7,
         7,
         7,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
         7,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
         7,
         7,
         7
@@ -539,7 +539,7 @@
         {
           "id": "stablecoin_supply",
           "label": "Total USD stablecoin supply ($bn)",
-          "value": 312.3,
+          "value": 309.8,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -614,7 +614,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
-          "as_of": "2026-10-12",
+          "as_of": "2026-10-13",
           "provenance": "FRED"
         },
         {
@@ -720,7 +720,7 @@
         5,
         5,
         5,
-        5,
+        6,
         6,
         6,
         6,
@@ -918,7 +918,7 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4165.1001,
+          "value": 4107.0,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -976,7 +976,7 @@
         3,
         3,
         3,
-        3,
+        4,
         4,
         4,
         4
@@ -1246,7 +1246,7 @@
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.73,
+          "value": 6.665,
           "band": 2,
           "baseline_band": 1,
           "weight": 0.5,
@@ -1449,9 +1449,9 @@
           "cadence": "event",
           "stale": false,
           "source_url": "https://portwatch.imf.org",
-          "as_of": "2026-10-04",
+          "as_of": "2026-10-11",
           "provenance": "PortWatch",
-          "measured_note": "Strait of Hormuz 2.7 ships/day vs 92 normal (3%). Source: International Monetary Fund, PortWatch"
+          "measured_note": "Strait of Hormuz 4.1 ships/day vs 92 normal (4%). Source: International Monetary Fund, PortWatch"
         }
       ],
       "summary": "Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag.",
@@ -1582,14 +1582,14 @@
           "cadence": "event",
           "stale": false,
           "source_url": "https://portwatch.imf.org",
-          "as_of": "2026-10-04",
+          "as_of": "2026-10-11",
           "provenance": "PortWatch",
-          "measured_note": "Strait of Hormuz 2.7 ships/day vs 92 normal (3%); Bab el-Mandeb (Red Sea) 29.6 ships/day vs 69 normal (43%). Source: International Monetary Fund, PortWatch"
+          "measured_note": "Strait of Hormuz 4.1 ships/day vs 92 normal (4%); Bab el-Mandeb (Red Sea) 28.3 ships/day vs 69 normal (41%). Source: International Monetary Fund, PortWatch"
         },
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 95.27,
+          "value": 94.99,
           "band": 1,
           "baseline_band": 1,
           "weight": 1.0,
@@ -1648,14 +1648,14 @@
       "name": "Clearinghouses (financial chokepoint)",
       "set": 1,
       "base_level": 4,
-      "raw_level": 4.5,
-      "level": 5,
-      "band": "Elevated",
+      "raw_level": 4.25,
+      "level": 4,
+      "band": "Moderate",
       "indicators": [
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 15.22,
+          "value": 16.15,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -1670,16 +1670,16 @@
         {
           "id": "move_ccp",
           "label": "Treasury volatility (MOVE)",
-          "value": 101.09,
-          "band": 1,
+          "value": 99.9363,
+          "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
-          "delta": 0.25,
+          "delta": 0.0,
           "source": "market:^MOVE",
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-10-13",
+          "as_of": "2026-10-14",
           "provenance": "Market"
         },
         {
@@ -1703,7 +1703,6 @@
       "spark": [
         4,
         4,
-        4,
         5,
         4,
         5,
@@ -1716,12 +1715,13 @@
         4,
         4,
         5,
-        5
+        5,
+        4
       ],
       "trend": {
         "prev": 5,
         "since": "2026-10-07",
-        "change": 0
+        "change": -1
       }
     }
   ],
@@ -3719,7 +3719,7 @@
     "portwatch": {
       "ok": 2,
       "total": 2,
-      "as_of": "2026-10-04"
+      "as_of": "2026-10-11"
     },
     "ledger_ok": true
   },
@@ -3727,7 +3727,7 @@
     "overall": {
       "prev": 7.4,
       "since": "2026-10-07",
-      "change": 0.2,
+      "change": 0.1,
       "crosses_methodology": false,
       "ref_version": "2.0",
       "version": "3.0"
@@ -3776,20 +3776,20 @@
             "label": "US high-yield OAS (%, \u2248310bps)",
             "story": "Private credit's opaque expansion",
             "band": 0,
-            "value": 3.11
+            "value": 3.16
           }
         ]
       }
     ]
   },
   "overall_breakdown": {
-    "overall": 7.6,
-    "breadth_mean": 5.64,
+    "overall": 7.5,
+    "breadth_mean": 5.6,
     "tail_mean": 6.89,
     "tail_k": 7,
     "n_high_stories": 8,
-    "soft_high": 6.5,
-    "correlated_premium": 1.35
+    "soft_high": 6.25,
+    "correlated_premium": 1.27
   },
   "method_version": "3.0",
   "plain": {
@@ -4225,8 +4225,8 @@
       {
         "id": "vix",
         "label": "VIX",
-        "value": 15.21,
-        "as_of": "2026-10-12",
+        "value": 15.27,
+        "as_of": "2026-10-13",
         "unit": "",
         "note": "Expected US stock-market volatility - the most-watched fear gauge. Calm markets usually sit below ~20.",
         "url": "https://fred.stlouisfed.org/series/VIXCLS"
@@ -4243,8 +4243,8 @@
       {
         "id": "hy_oas",
         "label": "High-yield spread",
-        "value": 3.11,
-        "as_of": "2026-10-12",
+        "value": 3.16,
+        "as_of": "2026-10-13",
         "unit": "pp",
         "note": "The extra yield markets demand to lend to risky companies - the market's own price of credit stress. Calm is roughly below ~4.",
         "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
@@ -4275,18 +4275,18 @@
     "readings": {
       "hormuz": {
         "name": "Strait of Hormuz",
-        "avg7": 2.7,
+        "avg7": 4.1,
         "baseline": 91.55,
-        "ratio": 0.03,
-        "as_of": "2026-10-04",
+        "ratio": 0.045,
+        "as_of": "2026-10-11",
         "days": 7
       },
       "bab_el_mandeb": {
         "name": "Bab el-Mandeb (Red Sea)",
-        "avg7": 29.6,
+        "avg7": 28.3,
         "baseline": 69.42,
-        "ratio": 0.426,
-        "as_of": "2026-10-04",
+        "ratio": 0.407,
+        "as_of": "2026-10-11",
         "days": 7
       }
     },
@@ -4294,39 +4294,39 @@
       "hormuz_redsea_status": {
         "value": 2,
         "agent_value": 2,
-        "as_of": "2026-10-04",
+        "as_of": "2026-10-11",
         "readings": {
           "hormuz": {
             "name": "Strait of Hormuz",
-            "avg7": 2.7,
+            "avg7": 4.1,
             "baseline": 91.55,
-            "ratio": 0.03,
-            "as_of": "2026-10-04"
+            "ratio": 0.045,
+            "as_of": "2026-10-11"
           },
           "bab_el_mandeb": {
             "name": "Bab el-Mandeb (Red Sea)",
-            "avg7": 29.6,
+            "avg7": 28.3,
             "baseline": 69.42,
-            "ratio": 0.426,
-            "as_of": "2026-10-04"
+            "ratio": 0.407,
+            "as_of": "2026-10-11"
           }
         },
-        "note": "Strait of Hormuz 2.7 ships/day vs 92 normal (3%); Bab el-Mandeb (Red Sea) 29.6 ships/day vs 69 normal (43%). Source: International Monetary Fund, PortWatch"
+        "note": "Strait of Hormuz 4.1 ships/day vs 92 normal (4%); Bab el-Mandeb (Red Sea) 28.3 ships/day vs 69 normal (41%). Source: International Monetary Fund, PortWatch"
       },
       "hormuz_fertilizer": {
         "value": 2,
         "agent_value": 2,
-        "as_of": "2026-10-04",
+        "as_of": "2026-10-11",
         "readings": {
           "hormuz": {
             "name": "Strait of Hormuz",
-            "avg7": 2.7,
+            "avg7": 4.1,
             "baseline": 91.55,
-            "ratio": 0.03,
-            "as_of": "2026-10-04"
+            "ratio": 0.045,
+            "as_of": "2026-10-11"
           }
         },
-        "note": "Strait of Hormuz 2.7 ships/day vs 92 normal (3%). Source: International Monetary Fund, PortWatch"
+        "note": "Strait of Hormuz 4.1 ships/day vs 92 normal (4%). Source: International Monetary Fund, PortWatch"
       }
     }
   }

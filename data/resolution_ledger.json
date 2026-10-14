@@ -396,7 +396,10 @@
       ],
       "closed": null,
       "grade": null,
-      "grade_note": null
+      "grade_note": null,
+      "triggers": {
+        "open": []
+      }
     },
     {
       "id": "s8_ai_capex-2026-10-14",
@@ -415,7 +418,10 @@
       ],
       "closed": null,
       "grade": null,
-      "grade_note": null
+      "grade_note": null,
+      "triggers": {
+        "open": []
+      }
     },
     {
       "id": "s18_food_fertilizer-2026-10-14",
@@ -435,7 +441,10 @@
       ],
       "closed": null,
       "grade": null,
-      "grade_note": null
+      "grade_note": null,
+      "triggers": {
+        "open": []
+      }
     }
   ],
   "note": "Record begins with the ledger feature (Jun 30 2026). Rebuilt on 2026-10-13 by replaying history.csv after a malformed hand edit had frozen the file since Jul 22.",
