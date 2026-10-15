@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14T15:57:03.817326+00:00",
+  "generated": "2026-10-15T15:43:00.387215+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -126,7 +126,7 @@
     }
   },
   "sensitivity": {
-    "as_of_overall": 7.5,
+    "as_of_overall": 7.6,
     "max_story_swing": 2,
     "max_overall_swing": 0.4,
     "movers": [

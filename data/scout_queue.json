@@ -7583,7 +7583,7 @@
       },
       "proposed_story": null,
       "rationale": "The existing s6 indicator 'US domestic RE producer blacklist (0 none / 1 entity-specific / 2 sector-wide ban)' only captures US-side blacklisting of Chinese firms. China's entity-specific bans on Western firms are the mirror image and equally material \u2014 they represent active supply denial rather than passive export slowdown. The Nov-2026 pause expiry (tracked under s6 as '1 expiring') is now 8 weeks away; adding a firm-count indicator captures the escalating breadth of China's targeted approach and gives the tracker a continuous numeric signal ahead of the binary Nov-10 cliff.",
-      "status": "pending",
+      "status": "expired",
       "first_seen": "2026-09-14",
       "last_seen": "2026-09-14",
       "sightings": 1,
@@ -7614,7 +7614,7 @@
       },
       "proposed_story": null,
       "rationale": "A synchronized Fed + BOJ + ECB tightening episode is the classic exogenous shock that stresses basis trades and clearinghouse margin models simultaneously \u2014 it raises SOFR, compresses Treasury futures carry, and spikes MOVE. The existing s1 indicators (SOFR\u2013EFFR spread, MOVE index) will register the outcome but no indicator currently tracks the input driver \u2014 the simultaneity of CB actions. This gap is material because it's the coordination of tightening, not just any single hike, that historically triggers basis unwinds. The story also maps onto s21_clearinghouses (Treasury-clearing rollout stress) and s8_ai_capex (IG OAS widening).",
-      "status": "pending",
+      "status": "expired",
       "first_seen": "2026-09-14",
       "last_seen": "2026-09-14",
       "sightings": 1,
@@ -9850,5 +9850,5 @@
   "generated": "2026-10-13",
   "model": "claude-sonnet-4-6",
   "new_count": 3,
-  "pending_count": 95
+  "pending_count": 93
 }

@@ -67,7 +67,7 @@
       "open_level": 7,
       "peak_level": 8,
       "peak_date": "2026-07-06",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "status": "open",
       "drivers_at_open": [
         "30-year JGB yield (%): 3.937 (band 2)",
@@ -94,7 +94,7 @@
       "open_level": 8,
       "peak_level": 8,
       "peak_date": "2026-07-06",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "status": "open",
       "drivers_at_open": [
         "Direct-lending default rate (%): 6.0 (band 2)",
@@ -251,7 +251,7 @@
       "open_level": 7,
       "peak_level": 8,
       "peak_date": "2026-09-14",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "status": "open",
       "drivers_at_open": [
         "Hormuz/Red Sea status (0 open / 1 contested / 2 closed): 2 (band 2)",
@@ -337,7 +337,7 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-09-28",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "status": "open",
       "drivers_at_open": [
         "Grid interconnection wait (months): 61 (band 2)",
@@ -362,7 +362,7 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-10-12",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "status": "open",
       "drivers_at_open": [
         "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen): 1 (band 1)",
@@ -388,7 +388,7 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-10-14",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "status": "open",
       "drivers_at_open": [
         "China PPI YoY (%) - large swing either way is worse: 3.8 (band 1)",
@@ -410,7 +410,7 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-10-14",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "status": "open",
       "drivers_at_open": [
         "AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast): 1 (band 1)",
@@ -432,7 +432,7 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-10-14",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "status": "open",
       "drivers_at_open": [
         "Food-price trend (0 falling / 1 elevated / 2 spiking): 1 (band 1)",
