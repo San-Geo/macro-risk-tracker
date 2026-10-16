@@ -1,8 +1,8 @@
 # Global Macro Intelligence — Living Brief
 
-*Auto-generated 2026-10-15 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
+*Auto-generated 2026-10-16 from the live tracker. This always reflects the current set of stories (including any the scout has added). For the full curated write-ups, see the combined 2026 Edition brief.*
 
-**Overall risk 7.6/10** — Set 1 6.0, Set 2 5.4, Set 3 4.6, Set 4 6.4, Set 5 5.8.
+**Overall risk 7.5/10** — Set 1 5.8, Set 2 5.4, Set 3 4.7, Set 4 6.4, Set 5 5.8.
 
 
 ## Set 1 — Funding & Leverage
@@ -31,7 +31,7 @@ Dollar stablecoins have become sizeable holders of short-term Treasuries, linkin
 
 *Indicators watched:* Largest stablecoin max peg deviation (%), Total USD stablecoin supply ($bn), GENIUS implementation friction (0 smooth / 1 gaps / 2 problems)
 
-### Clearinghouses (financial chokepoint) — 5/10 (Elevated)
+### Clearinghouses (financial chokepoint) — 4/10 (Moderate)
 
 Central counterparties now concentrate the system's risk by design, and Treasury central-clearing mandates will route more activity through them. In a volatility spike, procyclical margin calls can amplify stress - they are a systemic single point of failure.
 
@@ -73,7 +73,7 @@ A strong dollar, high real rates, and heavy foreign-currency debt loads leave ma
 
 *Indicators watched:* Broad US dollar index (FRED DTWEXBGS), US 10y real yield (TIPS, %), New IMF programs / missed coupons (0 calm / 1 rising / 2 cluster)
 
-### France / eurozone fragility — 5/10 (Elevated)
+### France / eurozone fragility — 6/10 (Elevated)
 
 France combines a wide deficit, a fragmented parliament, and recurring budget standoffs, widening its spread over Germany. Political instability or a rating downgrade would test eurozone cohesion at its second-largest economy.
 
