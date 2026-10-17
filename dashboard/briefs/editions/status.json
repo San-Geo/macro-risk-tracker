@@ -1,0 +1,57 @@
+{
+ "due": true,
+ "cadence": "quarterly",
+ "reasons": [
+  "4 stories changed band",
+  "overall moved 1.1"
+ ],
+ "drift": {
+  "as_of": "2026-10-15",
+  "edition": "2026",
+  "months": 3.5,
+  "band_changes": 4,
+  "level_changes": 7,
+  "high_then": 6,
+  "high_now": 8,
+  "overall_then": 6.5,
+  "overall_now": 7.6,
+  "overall_move": 1.1,
+  "stories_added": [],
+  "stories_retired": [],
+  "indicator_band_changes": 12,
+  "moved": {
+   "s11_consumer_debt": [
+    6,
+    5
+   ],
+   "s20_sea_lanes": [
+    6,
+    7
+   ],
+   "s21_clearinghouses": [
+    4,
+    5
+   ],
+   "s3_private_credit": [
+    6,
+    8
+   ],
+   "s4_dev_debt": [
+    5,
+    6
+   ],
+   "s7_stablecoins": [
+    4,
+    5
+   ],
+   "s9_cre": [
+    5,
+    6
+   ]
+  }
+ },
+ "draft_pending": [],
+ "summary": "due now (quarterly: 4 stories changed band; overall moved 1.1)",
+ "current": "2026",
+ "checked": "2026-10-16"
+}

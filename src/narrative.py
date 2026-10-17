@@ -167,7 +167,10 @@ def diff_changes(today, yesterday):
                            "as_of": i.get("as_of") or "",
                            "evidence": facts.get(i["id"], ""),
                            "direction": "up" if (i.get("band") or 0) > (pi.get("band") or 0) else "down"})
+        # old_band too: given only the new band, the model wrote "moved from Moderate
+        # to Moderate" for a 5 -> 4 move (Elevated -> Moderate) on 2026-10-14.
         changes.append({"name": s["name"], "old": prev_level, "new": s["level"],
+                        "old_band": band_for_level(today, prev_level) if prev_level is not None else "",
                         "band": s["band"], "drivers": movers})
     return changes
 
@@ -218,7 +221,8 @@ def claude_narrative(today, changes, api_key):
         "BAND WORDS ARE FIXED BY THE ENGINE. When you describe the overall score, use EXACTLY "
         "the word given in 'overall_band' - never substitute your own judgement (e.g. if "
         "overall_band is 'High', do not call the score 'elevated'). For each story, use that "
-        "story's own 'band' value verbatim. If you say how many stories are at High, use "
+        "story's own 'band' value verbatim; for a changed story, its previous band is 'old_band' "
+        "(if old_band equals band, say it moved within that band - never 'from X to X'). If you say how many stories are at High, use "
         "'n_stories_at_high_or_above' exactly and name every one of them. These words have precise numeric thresholds; "
         "choosing a different one misstates the result.\n\nDATA:\n" + json.dumps(payload, indent=2)
     )

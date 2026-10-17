@@ -1,0 +1,110 @@
+{
+ "stories": {
+  "s1_basis_trade": {
+   "number": 1,
+   "title": "The Treasury “basis trade”: hidden leverage under the world’s safest asset"
+  },
+  "s2_japan": {
+   "number": 2,
+   "title": "Japan’s \\$2.3tn bet, the JGB market, and the carry-trade fuse"
+  },
+  "s3_private_credit": {
+   "number": 3,
+   "title": "Private credit’s quiet \\$2tn expansion — and its first cracks"
+  },
+  "s7_stablecoins": {
+   "number": 4,
+   "title": "Stablecoins quietly become a pillar — and a fault line — of Treasury demand"
+  },
+  "s21_clearinghouses": {
+   "number": 5,
+   "title": "Clearinghouses: the financial system’s hidden single point of failure"
+  },
+  "s8_ai_capex": {
+   "number": 6,
+   "title": "The AI build-out’s circular money machine"
+  },
+  "s9_cre": {
+   "number": 7,
+   "title": "The commercial real-estate “maturity wall” and your regional bank"
+  },
+  "s11_consumer_debt": {
+   "number": 8,
+   "title": "The hidden consumer-debt squeeze: subprime cars and “phantom” instalments"
+  },
+  "s13_insurance": {
+   "number": 9,
+   "title": "The quiet retreat of insurance — and why it threatens your home’s value"
+  },
+  "s4_dev_debt": {
+   "number": 10,
+   "title": "The silent debt crisis in the developing world"
+  },
+  "s10_france": {
+   "number": 11,
+   "title": "France: the eurozone’s quiet structural fault line"
+  },
+  "s12_gold_dedollar": {
+   "number": 12,
+   "title": "Central banks are quietly buying gold and trimming the dollar"
+  },
+  "s14_pensions": {
+   "number": 13,
+   "title": "The retirement math nobody wants to say out loud"
+  },
+  "s5_china_deflation": {
+   "number": 14,
+   "title": "China is exporting its deflation — the global transmission nobody frames clearly"
+  },
+  "s6_rare_earths": {
+   "number": 15,
+   "title": "Critical minerals as a weapon: “availability is not access”"
+  },
+  "s19_lithography": {
+   "number": 16,
+   "title": "The lithography chokepoint: one machine the whole digital world needs"
+  },
+  "s20_sea_lanes": {
+   "number": 17,
+   "title": "Sea lanes and undersea cables: the physical arteries of globalization"
+  },
+  "s15_ai_power": {
+   "number": 18,
+   "title": "AI’s power problem: the grid is the new bottleneck"
+  },
+  "s16_copper": {
+   "number": 19,
+   "title": "Copper: the metal the electric future can’t do without"
+  },
+  "s17_water": {
+   "number": 20,
+   "title": "Water: the economy’s most underpriced input"
+  },
+  "s18_food_fertilizer": {
+   "number": 21,
+   "title": "Food and fertilizer: a concentrated, fragile system"
+  }
+ },
+ "sections": {
+  "1": {
+   "name": "Funding & Leverage",
+   "intro": "These five stories share a single mechanism: leverage that lives in the plumbing of the financial system, funded by someone's very short-term money. The Treasury basis trade, Japan's carry trade, private credit, stablecoins, and the clearinghouses that sit behind them are rarely discussed together, but they fail the same way — through funding that can evaporate faster than the assets it supports can be sold.\n\nThe basis trade and the clearinghouses are mechanically linked: the same Treasury positions that hedge funds finance overnight in repo are the ones moving into central clearing, so a margin spiral in one is a margin spiral in the other. Japan's carry trade and stablecoins are the cross-border and crypto-native versions of the same bet — borrow cheap and short, hold something longer, and hope the funding rolls. Private credit is the slow-motion cousin: less liquid and less marked-to-market, but levered against the same business cashflows. What ties the set together is reflexivity — a shock to funding costs forces selling that worsens the very prices that triggered it. This is the part of the system that broke in March 2020, and that the post-crisis clearing reforms are racing to contain before it breaks again."
+  },
+  "2": {
+   "name": "Credit, Consumers & Valuations",
+   "intro": "If the previous section is about how fast money can leave, this one is about whether the underlying loans and asset values were ever worth what the books say. The AI build-out's circular financing, the commercial-real-estate maturity wall, the hidden consumer-debt squeeze, and the quiet retreat of insurance are all stories of deferred recognition — losses or risks that exist now but have not been booked yet.\n\nThe common thread is the gap between mark and reality: AI infrastructure financed against revenue not yet earned; office buildings carried near par that must refinance at double the rate; households whose buy-now-pay-later and subprime balances do not show up in headline credit stats; and homes whose insurability — and therefore value — is silently eroding as insurers withdraw. Each can extend for years on 'extend and pretend.' Each resolves the same way: when refinancing or repricing finally forces the mark to meet reality, the loss arrives all at once. These stories also feed the section before them — a credit shock here is exactly the kind of volatility spike that detonates the leverage there."
+  },
+  "3": {
+   "name": "Sovereigns & the Monetary Order",
+   "intro": "This section moves up a level, from private balance sheets to public ones and to the monetary system itself. Developing-world debt distress, France's slow fiscal-political fragility, central banks' steady accumulation of gold and gradual move away from the dollar, and the arithmetic of underfunded pensions are all stories about the solvency and credibility of the state and the money it issues.\n\nThey connect through trust: a sovereign's ability to borrow, a currency's role as a reserve, and a pension promise all rest on the belief that future taxpayers will honor today's commitments. When that belief erodes — through too much debt, too little growth, or too many promises — the adjustment shows up as higher yields, weaker currencies, or broken promises in the form of default, inflation, or benefit cuts. De-dollarization and gold-buying are the reserve manager's hedge against exactly this loss of faith. This is also the layer that constrains every other section: when sovereigns lose fiscal space, the backstops that contained funding and credit crises in the past become politically and financially harder to deploy."
+  },
+  "4": {
+   "name": "Geoeconomics & Trade Weapons",
+   "intro": "These four stories are about interdependence turned into leverage — the deliberate use of economic chokepoints as instruments of state power. China's export of deflation, the weaponization of rare earths and critical minerals, the single-company lithography chokepoint that gates advanced chips, and the contested sea lanes and undersea cables that physically carry trade and data are all nodes where one actor can squeeze the whole system.\n\nThe connective tissue is concentration: each is a point where global supply runs through a needle's eye — one country's overcapacity, one country's refining monopoly, one firm's machines, one strait's tankers. That concentration is efficient in peacetime and coercive in conflict. The 2026 Gulf disruption made the sea-lane risk concrete; the rare-earth and lithography stories show the same logic applied to inputs the digital and defense economies cannot substitute quickly. These risks move more slowly than a funding run but are harder to reverse, because rebuilding a supply chain takes years where a margin call takes minutes — and a trade shock here is often the exogenous spark that lights the leverage and credit fires elsewhere."
+  },
+  "5": {
+   "name": "Physical & Resource Limits",
+   "intro": "The final section grounds the whole brief in physical reality: the digital, electrified economy is colliding with hard limits in power, metal, water, and food. AI's power problem and the grid bottleneck, copper's structural deficit, the underpricing of water, and the concentrated fragility of food and fertilizer are stories where no amount of financial engineering changes the binding constraint — you cannot print electrons, copper, water, or calories.\n\nThey connect through the build-out: the same AI and electrification boom that drives the valuations two sections back and the mineral chokepoints one section back also runs straight into these physical ceilings. A data center needs power the grid cannot yet deliver; the energy transition needs more copper than is being mined; chips and agriculture need water that is increasingly scarce and mispriced; and the food system runs on a handful of fertilizer feedstocks and shipping routes. These are the slowest-moving risks in the brief and the most certain — they are arithmetic, not sentiment — which is precisely why they are under-priced. They are the long-term boundary conditions inside which every other risk plays out."
+  }
+ }
+}

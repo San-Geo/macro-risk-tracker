@@ -16,7 +16,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 bad = []
 n = 0
 for pattern in ("data/*.json", "dashboard/*.json", "config/*.yaml", "config/*.yml",
-                ".github/workflows/*.yml"):
+                ".github/workflows/*.yml", "dashboard/briefs/editions/*.json"):
     for p in sorted(glob.glob(os.path.join(ROOT, pattern))):
         n += 1
         try:
@@ -24,6 +24,16 @@ for pattern in ("data/*.json", "dashboard/*.json", "config/*.yaml", "config/*.ym
                 (json.load if p.endswith(".json") else yaml.safe_load)(f)
         except Exception as e:
             bad.append(f"{os.path.relpath(p, ROOT)}: {e}")
+for p in sorted(glob.glob(os.path.join(ROOT, "data", "archive", "*", "*.jsonl"))):
+    n += 1
+    with open(p) as f:
+        for i, line in enumerate(f, start=1):
+            if line.strip():
+                try:
+                    json.loads(line)
+                except Exception as e:
+                    bad.append(f"{os.path.relpath(p, ROOT)} line {i}: {e}")
+                    break
 for p in sorted(glob.glob(os.path.join(ROOT, "data", "*.csv"))) + [
         os.path.join(ROOT, f) for f in ("grades.csv", "manual_input.csv")]:
     if not os.path.exists(p):

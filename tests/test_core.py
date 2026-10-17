@@ -22,6 +22,10 @@ import agent  # noqa: E402
 import grader  # noqa: E402
 import ledger  # noqa: E402
 import narrative  # noqa: E402
+import build_brief  # noqa: E402
+import archive  # noqa: E402
+import edition  # noqa: E402
+import report  # noqa: E402
 
 
 class Scoring(unittest.TestCase):
@@ -161,6 +165,136 @@ class Narrative(unittest.TestCase):
         today = {"aggregates": {"overall": 7.1}, "stories": [{"level": 7, "band": "High"}]}
         text, fixes = narrative.enforce_band_words("Risk is elevated at 7.1 today.", today)
         self.assertIn("high at 7.1", text)  # case of the original word is kept
+
+    def test_changed_story_carries_old_band(self):
+        mk = lambda lvl, raw, band: {"stories": [{"id": "c", "name": "C", "level": lvl, "raw_level": raw,
+                                                  "band": band, "indicators": []},
+                                                 {"id": "d", "name": "D", "level": 5, "raw_level": 5.0,
+                                                  "band": "Elevated", "indicators": []}]}
+        ch = narrative.diff_changes(mk(4, 4.25, "Moderate"), mk(5, 4.5, "Elevated"))
+        self.assertEqual((ch[0]["old_band"], ch[0]["band"]), ("Elevated", "Moderate"))
+
+
+class LivingBrief(unittest.TestCase):
+    def test_note_is_escaped(self):
+        out = build_brief._narrative_html("**Bold** <img src=x onerror=alert(1)>\n- item")
+        self.assertIn("<strong>Bold</strong>", out)
+        self.assertNotIn("<img", out)
+        self.assertIn("<li>item</li>", out)
+
+    def test_html_rebuilt_from_latest(self):
+        # the linked HTML must be written every run (it once depended on pandoc and froze)
+        with tempfile.TemporaryDirectory() as d:
+            build_brief.OUTDIR = d
+            path = build_brief.build()
+            self.assertTrue(path.endswith("living_brief.html"))
+            with open(os.path.join(ROOT, "dashboard", "latest.json")) as f:
+                date = json.load(f)["date"]
+            with open(path) as f:
+                self.assertIn(f"Data as of {date}", f.read())
+            self.assertTrue(os.path.exists(os.path.join(d, "living_brief.md")))
+
+
+class Archive(unittest.TestCase):
+    def setUp(self):
+        self.d = tempfile.mkdtemp()
+        self._saved = (archive.DAILY_DIR, archive.AGENT_DIR)
+        archive.DAILY_DIR = os.path.join(self.d, "daily")
+        archive.AGENT_DIR = os.path.join(self.d, "agent")
+
+    def tearDown(self):
+        archive.DAILY_DIR, archive.AGENT_DIR = self._saved
+
+    def latest(self, date, raw):
+        return {"date": date, "aggregates": {"overall": 7.0, "1": 6.0},
+                "stories": [{"id": "a", "raw_level": raw, "level": 6, "band": "Elevated"}],
+                "narrative": "note " + date}
+
+    def test_same_day_rerun_replaces(self):
+        archive.record_daily(self.latest("2026-10-01", 5.5))
+        archive.record_daily(self.latest("2026-10-01", 6.0))
+        rows = archive._read_jsonl(os.path.join(archive.DAILY_DIR, "2026-10.jsonl"))
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["levels"]["a"]["raw"], 6.0)
+
+    def test_agent_pass_archived_once(self):
+        alog = {"generated": "2026-10-12T20:00:00+00:00", "date": "2026-10-12", "model": "m",
+                "assessments": {"x": {"value": 1, "fact": "f", "sources": ["https://a.org"], "prior": {}}},
+                "review_flags": ["x"]}
+        self.assertEqual(archive.record_agent_pass(alog), 1)
+        self.assertEqual(archive.record_agent_pass(alog), 0)
+        row = archive._read_jsonl(os.path.join(archive.AGENT_DIR, "2026.jsonl"))[0]
+        self.assertTrue(row["flagged"])
+        self.assertNotIn("prior", row)
+
+    def test_gap_rebuilt_from_history(self):
+        archive.record_daily(self.latest("2026-10-01", 5.5))
+        h = os.path.join(self.d, "h.csv")
+        with open(h, "w") as f:
+            f.write("date,story_id,name,set,level,band,raw_level,method_version\n"
+                    "2026-10-01,a,A,1,6,Elevated,5.5,3.0\n2026-10-02,a,A,1,7,High,6.5,3.0\n")
+        self.assertEqual(archive.fill_gaps("2026-10-03", h), 1)
+        rows = {r["date"]: r for r in archive._read_jsonl(os.path.join(archive.DAILY_DIR, "2026-10.jsonl"))}
+        self.assertTrue(rows["2026-10-02"]["rebuilt"])
+        self.assertEqual(rows["2026-10-02"]["levels"]["a"]["level"], 7)
+
+    def test_history_deduplicates(self):
+        p = os.path.join(self.d, "hist.csv")
+        with open(p, "w") as f:
+            f.write("date,story_id,name,set,level,band,raw_level,method_version\n"
+                    "2026-06-29,a,A,1,5,Elevated,5.0,2.0\n2026-06-29,a,A,1,6,Elevated,5.5,2.0\n")
+        report.append_history({"stories": [{"id": "a", "name": "A", "set": 1, "level": 6, "band": "Elevated",
+                                            "raw_level": 5.5}]}, "2026-06-30", p)
+        with open(p) as f:
+            rows = f.read().strip().splitlines()
+        self.assertEqual(len(rows), 3)          # header + one row per date
+        self.assertIn("5.5", rows[1])           # the LAST duplicate is kept
+
+
+class Editions(unittest.TestCase):
+    CFG = {"min_months": 3, "semiannual_months": 6, "max_months": 12,
+           "strong": {"band_changes": 4, "overall_move": 1.0, "high_count_change": 3, "story_set_changed": True},
+           "moderate": {"band_changes": 2, "level_changes": 5, "overall_move": 0.5, "indicator_band_changes": 12}}
+
+    def d(self, months, **kw):
+        base = {"months": months, "band_changes": 0, "level_changes": 0, "overall_move": 0.0,
+                "high_then": 3, "high_now": 3, "stories_added": [], "stories_retired": [],
+                "indicator_band_changes": 0}
+        base.update(kw)
+        return base
+
+    def test_never_before_min_months(self):
+        self.assertFalse(edition.decide(self.d(2.5, band_changes=9, overall_move=3), self.CFG)[0])
+
+    def test_quarterly_needs_strong_drift(self):
+        self.assertFalse(edition.decide(self.d(3.2, band_changes=3), self.CFG)[0])
+        due, cadence, _ = edition.decide(self.d(3.2, band_changes=4), self.CFG)
+        self.assertEqual((due, cadence), (True, "quarterly"))
+
+    def test_semiannual_on_moderate_drift(self):
+        self.assertEqual(edition.decide(self.d(6.1, band_changes=2), self.CFG)[:2], (True, "semi-annual"))
+        self.assertFalse(edition.decide(self.d(6.1, band_changes=1), self.CFG)[0])
+
+    def test_annual_always(self):
+        self.assertEqual(edition.decide(self.d(12.0), self.CFG)[:2], (True, "annual"))
+
+    def test_guard_catches_tickers_and_advice(self):
+        ok = ("**WHO THIS HITS:** *x*\n\n**Why this level:** y\n\n" +
+              "\n\n".join(edition.SECTION_HEADS) + "\n- A, B (2026) — <https://a.org>\n")
+        self.assertEqual(edition.guard(ok), [])
+        self.assertTrue(edition.guard(ok + "\nWatch $NVDA closely."))
+        self.assertTrue(edition.guard(ok + "\nYou should buy gold now."))
+        self.assertEqual(edition.guard(ok + "\nBuy Now, Pay Later plans."), [])
+
+    def test_refresh_edits_exact_only(self):
+        prev = "**Why this level:** old reason. **Raises it:** r\n\nRate is 0.5%.\n\n### Sources\n"
+        md, applied, failed = edition.apply_edits(prev, {"since": "Little changed.", "edits": [
+            {"old": "Rate is 0.5%.", "new": "Rate is 1.0%.", "source": "BoJ (Jun 2026) — <https://boj.or.jp>"},
+            {"old": "not in text", "new": "x"}]})
+        self.assertEqual((applied, failed), (1, 1))
+        self.assertIn("Rate is 1.0%.", md)
+        self.assertIn("**Since the last edition:** Little changed.", md)
+        self.assertIn("https://boj.or.jp", md)
 
 
 if __name__ == "__main__":

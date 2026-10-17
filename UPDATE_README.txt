@@ -1,40 +1,33 @@
-STRESS-TEST FIXES - 2026-10-14
-==============================
-1. Upload everything in this zip to the repo root (src, config, dashboard, data, tests,
-   FRAMEWORK.md, METHODOLOGY.md, requirements.txt).
-2. Paste daily.yml into .github/workflows/daily.yml (actions now pinned to exact commits).
-3. Create a NEW file .github/workflows/check.yml (Add file -> Create new file, type that
-   path as the name) and paste check.yml into it.
-4. Actions -> daily-risk-tracker -> Run workflow (free). The new "check" workflow also runs
-   on your upload and should show a green tick within a minute.
+EDITIONS + ARCHIVE + 2026 EDITION REVISION 1 - 2026-10-16
+==========================================================
+1. Upload the zip's folders (src, config, tests, dashboard, data) and METHODOLOGY.md at the
+   repo root. This also includes the living-brief fix from the previous bundle.
+2. Create ONE new workflow file: Add file > Create new file, name it
+   .github/workflows/edition.yml and paste the contents of edition.yml (sent separately).
+   daily.yml is unchanged.
+3. Optional: add a repository variable EDITION_MODEL to choose the model (default
+   claude-sonnet-4-6). It uses the same ANTHROPIC_API_KEY secret.
 
-WHAT YOU WILL SEE
-- Overall moves from 7.1 to about 7.6: scoring method 3.0 rounds half up, so China price
-  spillover, AI build-out financing and Food & fertilizer (each at exactly 6.5) read 7/High.
-  Their Track record episodes open today. Trends and alerts compare like with like, so the
-  switch itself is not reported as a "move".
-- Headline card: "What sets today's level": starting level / judgment / data.
-- Each story shows its unrounded score and the same split.
-- Review panel: an A/B/C evidence grade per agent read; changes backed only by
-  non-authoritative sources are flagged.
-- Track record: a "Misses" section once the monthly check finds something.
+WHAT YOU GET
+- 2026 Edition, revision 1: 13 factual corrections, 6 new cross-story connections, cleaned
+  sources, and a revision history at the back. Threat levels and story pages are unchanged,
+  so every "full write-up" link still lands on the right page. The first printing is kept
+  in dashboard/briefs/editions/2026/.
+- Archive (data/archive/): daily scores and notes since 28 Jun, plus every weekly agent
+  pass (facts, sources, reasoning) since 29 Jun, backfilled from git history. Monthly
+  frozen copies of the living brief: dashboard/briefs/archive/ (linked from the
+  dashboard as "Past editions & snapshots").
+- Editions on a data-driven schedule (config/editions.yaml, METHODOLOGY section 10):
+  checked daily for free; the "edition" workflow writes a DRAFT on the 2nd of each month
+  only when one is due. You publish it from Actions > edition > Run workflow >
+  action = publish, edition_id = (shown in the run summary). Nothing auto-publishes.
 
-FILES
-score.py        method 3.0: half-up, unrounded aggregates, smooth breadth premium
-feedguard.py    NEW - carry forward last good value; hold implausible values (feed_checks.yaml)
-main.py         wiring: feed guard, freshest France spread, evidence grade, weekly scout,
-                miss check, failure alerts
-grader.py       monthly miss check (primary agent only; you confirm each miss in grades.csv
-                with "confirmed" or "rejected")
-ledger.py       miss confirmations from grades.csv
-enrich/alerts/narrative.py   compare past and present under the same rounding rule;
-                alerts now also report pipeline failures (if an alert channel is set)
-scout.py        runs weekly only; items expire after 30 days; the page loads the newest 10
-report.py       Excel model now matches the engine (method 3.0 + two-sided PPI band fix)
-portwatch.py    normal shown as a whole number; IMF attribution line
-config/framework.yaml   NEW agent read: weekly France-Germany spread
-config/sources.yaml     NEW - which domains count as authoritative (edit freely)
-config/feed_checks.yaml NEW - plausible ranges and maximum daily moves per feed
-dashboard/index.html    all loaded text sanitized (no AI-written code can run); new displays
-tests/          NEW - 19 unit tests + a file-format check, run by check.yml on every push
-requirements.txt        exact package versions
+A NEW EDITION IS ALREADY DUE (quarterly: 4 stories changed band since June and the overall
+rose 1.1). Suggested timing: after Monday's agent run (19 Oct), so France's spread reading
+is current. Then: Actions > edition > Run workflow > action = write. Expect roughly
+$3-6 of API use (hard cap $12). Or just let the 2 Nov scheduled run do it.
+
+CHECK AFTER THE NEXT DAILY RUN
+- The log of "Run tracker" shows "archive: {...}" and "next edition: due now ...".
+- The dashboard's Brief line shows "2026 Edition (21 stories · rev. 1)" and a
+  "Past editions & snapshots" link.

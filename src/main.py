@@ -250,6 +250,27 @@ def main():
                     s["brief_url"] = set_pdf.get(osn) or set_pdf.get(str(osn))
         except Exception as e:
             print(f"  (briefs.yaml skipped: {e})")
+    # The CURRENT published edition (dashboard/briefs/editions/editions.json) wins over
+    # briefs.yaml: once the owner publishes a new edition, every "full write-up" link,
+    # the dashboard's edition link and the living brief switch to it.
+    try:
+        import edition as _edition
+        _cur = _edition.current_edition()
+        if _cur:
+            _st = _edition.load_json(_edition.STATUS, {})
+            result["edition"] = {
+                "id": _cur["id"], "title": _cur.get("title"), "published": _cur.get("published"),
+                "data_as_of": _cur.get("data_as_of"), "revision": _cur.get("revision"),
+                "pdf": "briefs/" + _cur["pdf"] if _cur.get("pdf") else None,
+                "html": "briefs/" + _cur["html"] if _cur.get("html") else None,
+                "next": _st.get("summary"), "n_stories": len(_cur.get("levels") or {})}
+            for s in result["stories"]:
+                if _cur.get("html"):
+                    s["brief_url"] = f"briefs/{_cur['html']}#{s['id']}"
+                elif _cur.get("pdf") and (_cur.get("pages") or {}).get(s["id"]):
+                    s["brief_url"] = f"briefs/{_cur['pdf']}#page={_cur['pages'][s['id']]}"
+    except Exception as e:
+        print(f"  (edition links skipped: {e})")
 
     # Attach the plain-language layer (config/plain.yaml) for the Plain/Expert toggle.
     plain_path = os.path.join(ROOT, "config", "plain.yaml")
@@ -508,7 +529,34 @@ def main():
         import build_brief
         build_brief.build()
     except Exception as e:
-        print(f"  (living brief skipped: {e})")
+        print(f"::warning title=Living brief not rebuilt::{e}")
+
+    # Permanent dated archive (scores, daily note, agent evidence, monthly brief snapshot)
+    try:
+        import archive
+        with open(os.path.join(ROOT, "data", "agent_assessments.json")) as f:
+            _alog_disk = json.load(f)
+    except Exception:
+        _alog_disk = alog if isinstance(alog, dict) else {}
+    try:
+        _rec = dict(payload if isinstance(payload, dict) else result)
+        if args.offline:
+            _rec["offline"] = True   # fallback run: baseline values, flagged in the archive
+        print(f"  archive: {archive.run(_rec, _alog_disk)}")
+    except Exception as e:
+        print(f"::warning title=Archive skipped::{e}")
+    # Is a new edition due? Free (no API): measures drift since the current edition.
+    # The writing itself happens in the separate "edition" workflow.
+    try:
+        import edition as _edition
+        _st = _edition.check(args.date)
+        print(f"  next edition: {_st.get('summary')}")
+        if _st.get("due"):
+            print(f"::notice title=New edition due::{_st.get('summary')} - the monthly edition run will "
+                  f"write a draft (or run the 'edition' workflow now).")
+        archive.write_index()
+    except Exception as e:
+        print(f"  (edition check skipped: {e})")
 
     if not args.no_alert:
         try:

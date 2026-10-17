@@ -515,6 +515,17 @@ function openHelp(){ document.getElementById('help').classList.add('open'); docu
 function closeHelp(){ document.getElementById('help').classList.remove('open'); document.body.style.overflow=''; }
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeHelp(); });
 
+// The current published edition comes from latest.json (main.py reads editions.json);
+// fallback = the 2026 Edition. Strings were sanitised on load (deepSafe).
+function editionLink(d){
+  const e=d.edition||{};
+  const href=e.html||e.pdf||'briefs/Global_Macro_Intelligence_Brief_2026.pdf';
+  const title=e.title||'Global Macro Intelligence Brief \u2014 2026 Edition';
+  const rev=e.revision?` \u00B7 rev. ${e.revision}`:'';
+  const n=e.n_stories||21;
+  const nxt=e.next?` title="Next edition: ${e.next}"`:'';
+  return `<a href="${href}" target="_blank" rel="noopener"${nxt}><b>${title}</b> (${n} stories${rev}) \u2197</a>`;
+}
 function bandColor(l){ return l<=2?'#2E7D32':l<=4?'#8BC34A':l<=6?'#F5A623':l<=8?'#E8710A':'#C0392B'; }
 function bandName(l){ return l<=2?'Low':l<=4?'Moderate':l<=6?'Elevated':l<=8?'High':'Severe'; }
 function fmt(v){ if(v===null||v===undefined) return '-'; return (typeof v==='number')? (Math.abs(v)<10? v.toFixed(2): v.toFixed(1)) : v; }
@@ -1115,8 +1126,9 @@ function render(d){
   }
   T+=healthBar(d);
   T+=`<div class="health" style="gap:10px"><span><b>Brief:</b></span>
-    <a href="briefs/Global_Macro_Intelligence_Brief_2026.pdf" target="_blank" rel="noopener"><b>Global Macro Intelligence Brief \u2014 2026 Edition</b> (5 sections, 21 stories) \u2197</a>
-    <a href="briefs/living_brief.html" target="_blank" rel="noopener">Living brief (auto-updated) \u2197</a></div>`;
+    ${editionLink(d)}
+    <a href="briefs/living_brief.html" target="_blank" rel="noopener">Living brief (auto-updated) \u2197</a>
+    <a href="briefs/archive/index.html" target="_blank" rel="noopener">Past editions &amp; snapshots \u2197</a></div>`;
   T+=`<div class="section-label">Summary</div>`;
   T+=`<div class="narr brief"><strong>Daily brief</strong>${briefHTML(d.narrative||'')}</div>`;
   const INS = plainQ('scout')+scoutPanel()+plainQ('review')+reviewPanel(d);

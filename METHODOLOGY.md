@@ -1,6 +1,6 @@
 # Methodology
 
-**Version 1.4 — 2026.** This document explains exactly how the Global Macro Risk Tracker turns
+**Version 1.5 — 2026.** This document explains exactly how the Global Macro Risk Tracker turns
 data and current events into a 1–10 risk level for each story, what the numbers mean, and — just
 as importantly — what they do *not* mean. It is meant to be read by a skeptical professional.
 
@@ -163,7 +163,41 @@ own materialized tests for the past 30 days. A test met while the tracker sat be
 as a possible miss; the owner confirms or rejects it. The record therefore shows hits, false alarms
 and misses side by side.
 
+## 10. Editions and the archive
+
+**Editions.** The Global Macro Intelligence Brief is published in editions. *When* a new edition is
+written is decided by fixed rules in `config/editions.yaml`, checked every day for free from the
+tracker's own data: never sooner than 3 months after the last edition; between 3 and 6 months only
+on **strong** drift (for example 4 or more stories changing band, or the overall score moving a full
+point); between 6 and 12 months on **moderate** drift (2 band changes, 5 level changes, a half-point
+overall move or 12 indicator band changes); and always at 12 months. Drift is measured from the
+tracker's level on the edition's data date to today, so it reflects the world changing, not
+differences of method. In practice this gives roughly quarterly editions in turbulent periods,
+semi-annual ones in normal times and annual ones when little moves.
+
+When an edition is due, the edition agent writes a **draft** (`src/edition.py`). Each story is
+*rewritten* with fresh research if its level or any of its indicators changed band since the last
+edition; otherwise it is *refreshed* with a few exact, sourced edits. Threat levels are the
+tracker's, inserted by code; the AI only writes the explanation. Every story is then checked by a
+second, independent agent against the tracker's data, and by deterministic guards (structure,
+sources present, no securities named, nothing that reads as investment advice). Problems are listed
+for the owner. A draft never becomes the current edition automatically: the owner reviews and
+publishes it. Spending per edition is estimated and capped.
+
+Corrections to a published edition are issued as numbered revisions with a revision history inside
+the document; the first printing is kept.
+
+**Archive.** Every run appends to `data/archive/`: the day's overall, set and story scores (unrounded)
+and the daily note (`daily/YYYY-MM.jsonl`), and every weekly agent pass with each indicator's value,
+confidence, facts, reasoning, dissent and sources (`agent/YYYY.jsonl`). The living brief is frozen on
+the first run of each month (`dashboard/briefs/archive/`). Nothing in the archive is rewritten, so
+past editions, snapshots and evidence remain comparable with today's.
+
 ## Changelog
+
+- **1.5** - Editions on a data-driven schedule, written as drafts by an agent and published by the
+  owner; 2026 Edition revision 1 (factual corrections); permanent archive of daily scores, notes and
+  agent evidence; monthly living-brief snapshots.
 
 - **1.4** - Scoring method 3.0 (half-up rounding, unrounded aggregation, smooth breadth premium);
   feed carry-forward and plausibility checks; rule-based evidence grades; weekly scout; monthly

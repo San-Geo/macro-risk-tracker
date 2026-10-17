@@ -1,0 +1,57 @@
+# =====================================================================
+# Editions: when a new edition of the Global Macro Intelligence Brief is written.
+#
+# A monthly check (free, no API) measures how far the world has moved since the
+# last published edition, using the tracker's own data. A new edition is written
+# only when enough has changed - so readers get a fresh edition when it matters,
+# and quiet periods don't cost API credits for a near-identical document.
+#
+#   under min_months            -> never (the daily living brief covers the gap)
+#   min_months .. 6 months      -> only on STRONG drift      (=> roughly quarterly in turbulent times)
+#   6 .. max_months             -> on MODERATE drift         (=> roughly semi-annual in normal times)
+#   max_months                  -> always                    (=> annual in calm times)
+#
+# Calibration (Jun-Oct 2026 history): quiet months move ~1 story across a band;
+# July 2026 moved 3. Three months of normal drift (~3 band changes) is not "strong";
+# a turbulent quarter (5 band changes by end-September 2026) is.
+# Drift is measured tracker-to-tracker: the tracker's levels on the edition's data
+# date vs today, so it reflects the world changing, not method differences.
+# =====================================================================
+version: "1.0"
+min_months: 3
+semiannual_months: 6
+max_months: 12
+
+strong:                     # any one of these, after min_months
+  band_changes: 4           # stories whose band (Low/Moderate/Elevated/High/Severe) changed
+  overall_move: 1.0         # |overall now - overall at the edition's data date|
+  high_count_change: 3      # change in the number of stories at High or above
+  story_set_changed: true   # a story added or retired since the edition
+
+moderate:                   # any one of these, after semiannual_months
+  band_changes: 2
+  level_changes: 5          # stories whose integer level changed at all
+  overall_move: 0.5
+  indicator_band_changes: 12
+
+# ---------------------------------------------------------------- writing
+writer:
+  model: claude-sonnet-4-6          # override with the EDITION_MODEL repository variable
+  # A story is REWRITTEN (fresh research) when its level changed or any of its
+  # indicators changed band since the last edition; otherwise it is REFRESHED (small,
+  # targeted edits + one search). This is where most of the cost saving comes from.
+  rewrite_searches: 3
+  refresh_searches: 1
+  synthesis_searches: 2
+  max_tokens_rewrite: 6000
+  max_tokens_refresh: 2500
+  max_tokens_synthesis: 6000
+  # Hard stop: the run aborts (keeping what it has) if the estimated spend passes this.
+  max_usd: 12
+  # Price assumptions used for the estimate (USD per million tokens; per 1,000 searches).
+  price_in: 3.0
+  price_out: 15.0
+  price_search: 10.0
+
+# The draft is never published automatically: the owner reviews it and publishes
+# from the Actions tab (workflow "edition", action = publish).

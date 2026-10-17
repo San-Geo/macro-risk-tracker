@@ -43,6 +43,8 @@ def write_json(result, narrative, date, path):
         payload["context"] = result["context"]
     if result.get("measured"):
         payload["measured"] = result["measured"]
+    if result.get("edition"):
+        payload["edition"] = result["edition"]
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(payload, f, indent=2)
@@ -65,6 +67,15 @@ def append_history(result, date, path):
             rows = [row for row in r[1:] if row and row[0] != date]
     for s in result["stories"]:
         rows.append([date, s["id"], s["name"], s["set"], s["level"], s["band"], s["raw_level"], ver])
+    # One row per (date, story): the first days (Jun 29 - Jul 3) were written before the
+    # same-date replacement existed and held up to 7 copies. Keep the LAST of each.
+    last, order = {}, []
+    for row in rows:
+        k = (row[0], row[1]) if len(row) > 1 else tuple(row)
+        if k not in last:
+            order.append(k)
+        last[k] = row
+    rows = [last[k] for k in order]
     with open(path, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(header)
