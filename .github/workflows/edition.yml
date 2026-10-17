@@ -1,0 +1,136 @@
+name: edition
+
+# New editions of the Global Macro Intelligence Brief.
+#
+#  * MONTHLY (2nd of each month): checks whether a new edition is due (free - no API).
+#    The rules are in config/editions.yaml: at least 3 months apart, at most 12; in
+#    between, only when the tracker shows enough drift since the last edition. If due,
+#    the agent writes a DRAFT (uses API credits; typically a few dollars, hard cap in
+#    config/editions.yaml) and commits it under dashboard/briefs/editions/<id>/.
+#  * You review the draft (link in the run summary and on the dashboard's archive page),
+#    then run this workflow by hand with action = publish and the edition ID.
+#    Nothing is ever published automatically.
+#
+# Run workflow form:
+#   action = check     -> just report whether an edition is due (free)
+#   action = write     -> write a draft if due
+#   action = write-now -> write a draft even if not due (uses API credits)
+#   action = publish   -> make the draft <edition_id> the current edition
+#   action = discard   -> delete the draft <edition_id>
+on:
+  schedule:
+    - cron: "23 12 2 * *"   # 12:23 UTC on the 2nd of each month (off-peak minute on purpose)
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "What to do"
+        type: choice
+        options: ["check", "write", "write-now", "publish", "discard"]
+        default: "check"
+      edition_id:
+        description: "Edition ID for publish/discard (e.g. 2026-10) - shown in the draft's run summary"
+        type: string
+        default: ""
+
+# Shares the daily tracker's queue, so the two never write to the repo at the same time.
+concurrency:
+  group: tracker
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  edition:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: |
+          pip install -r requirements.txt
+          sudo apt-get update -qq && sudo apt-get install -y -qq pandoc >/dev/null
+          pandoc --version | head -1
+          (google-chrome --version || chromium --version) 2>/dev/null || echo "no Chrome found - PDF will be skipped"
+
+      - name: Run
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EDITION_MODEL: ${{ vars.EDITION_MODEL || vars.AGENT_MODEL || 'claude-sonnet-4-6' }}
+          AGENT_MODEL_2: ${{ vars.AGENT_MODEL_2 || secrets.AGENT_MODEL_2 }}   # independent cross-check (e.g. asi1)
+          ASI1_API_KEY: ${{ secrets.ASI1_API_KEY }}
+          ACTION: ${{ github.event.inputs.action || 'write' }}
+          EID: ${{ github.event.inputs.edition_id }}
+        run: |
+          EID=$(echo "$EID" | xargs)
+          case "$ACTION" in
+            check)     python src/edition.py check ;;
+            write)     python src/edition.py write ;;
+            write-now) python src/edition.py write --force ;;
+            publish)   [ -n "$EID" ] || { echo "::error::Enter the edition ID to publish"; exit 1; }
+                       python src/edition.py publish "$EID" ;;
+            discard)   [ -n "$EID" ] || { echo "::error::Enter the edition ID to discard"; exit 1; }
+                       python src/edition.py discard "$EID" ;;
+          esac
+          python - <<'PY'
+          import json, os
+          owner, _, repo = os.environ.get("GITHUB_REPOSITORY", "/").partition("/")
+          site = f"https://{owner.lower()}.github.io/{repo}"
+          st = json.load(open("dashboard/briefs/editions/status.json"))
+          reg = json.load(open("dashboard/briefs/editions/editions.json"))
+          lines = ["### Edition status", "", f"**{st.get('summary', '')}**", ""]
+          for e in reg["editions"][-3:]:
+              cost = f" - est. cost ${e['cost_usd']}" if e.get("cost_usd") is not None else ""
+              flags = f" - {e['flags']} flag(s) to review" if e.get("flags") else ""
+              lines.append(f"- `{e['id']}` - {e['status']} - {e.get('title', '')}{cost}{flags}")
+              if e["status"] == "draft" and e.get("html"):
+                  lines.append(f"  - Review the draft: {site}/briefs/{e['html']} (after this run deploys)")
+                  lines.append(f"  - Then publish: Actions > edition > Run workflow > action = publish, edition_id = {e['id']}")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
+              f.write("\n".join(lines) + "\n")
+          PY
+
+      - name: Commit
+        run: |
+          git config user.name  "risk-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ dashboard/ || true
+          if git diff --cached --quiet; then
+            echo "No file changes."
+          else
+            git commit -m "edition: ${{ github.event.inputs.action || 'monthly check' }} $(date -u +%F)"
+            for i in 1 2 3; do
+              git push && break
+              git pull --rebase -X theirs origin main || { git rebase --abort || true; git pull --rebase -X ours origin main || true; }
+            done
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: dashboard
+          name: pages-ed-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: Deploy to Pages
+        id: deploy1
+        continue-on-error: true
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+        with:
+          artifact_name: pages-ed-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: Deploy to Pages (retry)
+        if: steps.deploy1.outcome == 'failure'
+        run: sleep 90
+
+      - name: Deploy to Pages (second attempt)
+        if: steps.deploy1.outcome == 'failure'
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+        with:
+          artifact_name: pages-ed-${{ github.run_id }}-${{ github.run_attempt }}
