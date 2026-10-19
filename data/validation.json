@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-16T15:30:40.302216+00:00",
+  "generated": "2026-10-19T18:08:52.536857+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -126,25 +126,25 @@
     }
   },
   "sensitivity": {
-    "as_of_overall": 7.5,
+    "as_of_overall": 7.8,
     "max_story_swing": 2,
     "max_overall_swing": 0.4,
     "movers": [
-      {
-        "id": "direct_lending_default",
-        "label": "Direct-lending default rate (%, Fitch incl. distressed exchanges)",
-        "story": "Private credit's opaque expansion",
-        "set": 1,
-        "weight": 1.5,
-        "story_swing": 2,
-        "set_swing": 0.3,
-        "overall_swing": 0.4
-      },
       {
         "id": "license_flow",
         "label": "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen)",
         "story": "Critical minerals as a weapon",
         "set": 4,
+        "weight": 1.5,
+        "story_swing": 2,
+        "set_swing": 0.4,
+        "overall_swing": 0.4
+      },
+      {
+        "id": "direct_lending_default",
+        "label": "Direct-lending default rate (%, Fitch incl. distressed exchanges)",
+        "story": "Private credit's opaque expansion",
+        "set": 1,
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.3,
@@ -158,7 +158,7 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.3,
-        "overall_swing": 0.2
+        "overall_swing": 0.1
       },
       {
         "id": "regional_bank_stress",
@@ -168,17 +168,17 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.3,
-        "overall_swing": 0.2
+        "overall_swing": 0.0
       },
       {
-        "id": "move",
-        "label": "MOVE index (Treasury volatility)",
-        "story": "Treasury basis trade (hidden leverage)",
-        "set": 1,
+        "id": "taiwan_tension",
+        "label": "Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis)",
+        "story": "The lithography (ASML) chokepoint",
+        "set": 4,
         "weight": 1.5,
         "story_swing": 1,
-        "set_swing": 0.3,
-        "overall_swing": 0.3
+        "set_swing": 0.4,
+        "overall_swing": 0.0
       },
       {
         "id": "china_ppi",
@@ -188,17 +188,47 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.4
       },
       {
-        "id": "usdcny",
-        "label": "USD/CNY (yuan depreciation = higher = risk)",
+        "id": "trade_actions",
+        "label": "New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating)",
         "story": "China's price spillover (deflation or cost-push)",
         "set": 4,
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.4
+      },
+      {
+        "id": "dc_moratoria",
+        "label": "Data-center moratoria / backlash (0 none / 1 spreading / 2 widespread)",
+        "story": "AI power & the grid bottleneck",
+        "set": 5,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.4
+      },
+      {
+        "id": "ai_power_pressure",
+        "label": "AI power-demand pressure (0 easing / 1 tight / 2 acute)",
+        "story": "AI power & the grid bottleneck",
+        "set": 5,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.4
+      },
+      {
+        "id": "hormuz_redsea_status",
+        "label": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
+        "story": "Sea lanes & undersea cables",
+        "set": 4,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.4
       },
       {
         "id": "truce_status",
@@ -215,36 +245,6 @@
         "label": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
         "story": "Critical minerals as a weapon",
         "set": 4,
-        "weight": 1.0,
-        "story_swing": 1,
-        "set_swing": 0.3,
-        "overall_swing": 0.3
-      },
-      {
-        "id": "ig_oas",
-        "label": "US investment-grade OAS (%) - big-issuer proxy",
-        "story": "AI build-out circular financing",
-        "set": 2,
-        "weight": 1.0,
-        "story_swing": 1,
-        "set_swing": 0.3,
-        "overall_swing": 0.3
-      },
-      {
-        "id": "ai_revenue_gap",
-        "label": "AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast)",
-        "story": "AI build-out circular financing",
-        "set": 2,
-        "weight": 1.0,
-        "story_swing": 1,
-        "set_swing": 0.3,
-        "overall_swing": 0.3
-      },
-      {
-        "id": "gpu_refi_stress",
-        "label": "GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)",
-        "story": "AI build-out circular financing",
-        "set": 2,
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
