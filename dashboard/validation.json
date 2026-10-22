@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T16:23:09.045730+00:00",
+  "generated": "2026-10-22T16:01:19.976421+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -126,9 +126,9 @@
     }
   },
   "sensitivity": {
-    "as_of_overall": 7.7,
+    "as_of_overall": 7.8,
     "max_story_swing": 2,
-    "max_overall_swing": 0.5,
+    "max_overall_swing": 0.4,
     "movers": [
       {
         "id": "license_flow",
@@ -138,7 +138,7 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.4,
-        "overall_swing": 0.5
+        "overall_swing": 0.4
       },
       {
         "id": "direct_lending_default",
@@ -168,7 +168,7 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.3,
-        "overall_swing": 0.1
+        "overall_swing": 0.0
       },
       {
         "id": "taiwan_tension",
@@ -178,7 +178,7 @@
         "weight": 1.5,
         "story_swing": 1,
         "set_swing": 0.4,
-        "overall_swing": 0.1
+        "overall_swing": 0.0
       },
       {
         "id": "china_ppi",
