@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-23T15:53:52.006344+00:00",
+  "generated": "2026-10-26T17:47:32.050416+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -126,9 +126,9 @@
     }
   },
   "sensitivity": {
-    "as_of_overall": 7.9,
+    "as_of_overall": 7.8,
     "max_story_swing": 2,
-    "max_overall_swing": 0.5,
+    "max_overall_swing": 0.4,
     "movers": [
       {
         "id": "license_flow",
@@ -148,12 +148,22 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.3,
-        "overall_swing": 0.5
+        "overall_swing": 0.4
       },
       {
         "id": "usdjpy",
         "label": "USD/JPY (yen strengthening = lower = risk)",
         "story": "Japan fiscal / JGB / carry trade",
+        "set": 1,
+        "weight": 1.5,
+        "story_swing": 2,
+        "set_swing": 0.3,
+        "overall_swing": 0.2
+      },
+      {
+        "id": "peg_deviation",
+        "label": "Largest stablecoin max peg deviation (%)",
+        "story": "Stablecoins & Treasury demand",
         "set": 1,
         "weight": 1.5,
         "story_swing": 2,
@@ -188,7 +198,7 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.4
+        "overall_swing": 0.3
       },
       {
         "id": "trade_actions",
@@ -198,7 +208,7 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.4
+        "overall_swing": 0.3
       },
       {
         "id": "dc_moratoria",
@@ -208,7 +218,7 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.4
+        "overall_swing": 0.3
       },
       {
         "id": "ai_power_pressure",
@@ -218,27 +228,17 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.4
-      },
-      {
-        "id": "hormuz_redsea_status",
-        "label": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
-        "story": "Sea lanes & undersea cables",
-        "set": 4,
-        "weight": 1.0,
-        "story_swing": 1,
-        "set_swing": 0.3,
         "overall_swing": 0.3
       },
       {
-        "id": "oil_price",
-        "label": "WTI crude oil (USD/bbl, CL=F)",
-        "story": "Sea lanes & undersea cables",
-        "set": 4,
-        "weight": 1.0,
+        "id": "move",
+        "label": "MOVE index (Treasury volatility)",
+        "story": "Treasury basis trade (hidden leverage)",
+        "set": 1,
+        "weight": 1.5,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.2
       },
       {
         "id": "ai_revenue_gap",
