@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26T17:47:32.050416+00:00",
+  "generated": "2026-10-27T16:55:06.551251+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -126,7 +126,7 @@
     }
   },
   "sensitivity": {
-    "as_of_overall": 7.8,
+    "as_of_overall": 7.5,
     "max_story_swing": 2,
     "max_overall_swing": 0.4,
     "movers": [
@@ -138,7 +138,7 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.4,
-        "overall_swing": 0.3
+        "overall_swing": 0.4
       },
       {
         "id": "direct_lending_default",
@@ -151,10 +151,10 @@
         "overall_swing": 0.4
       },
       {
-        "id": "usdjpy",
-        "label": "USD/JPY (yen strengthening = lower = risk)",
-        "story": "Japan fiscal / JGB / carry trade",
-        "set": 1,
+        "id": "regional_bank_stress",
+        "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
+        "story": "CRE maturity wall / regional banks",
+        "set": 2,
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.3,
@@ -171,16 +171,6 @@
         "overall_swing": 0.1
       },
       {
-        "id": "regional_bank_stress",
-        "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
-        "story": "CRE maturity wall / regional banks",
-        "set": 2,
-        "weight": 1.5,
-        "story_swing": 2,
-        "set_swing": 0.3,
-        "overall_swing": 0.1
-      },
-      {
         "id": "taiwan_tension",
         "label": "Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis)",
         "story": "The lithography (ASML) chokepoint",
@@ -189,6 +179,26 @@
         "story_swing": 1,
         "set_swing": 0.4,
         "overall_swing": 0.1
+      },
+      {
+        "id": "move",
+        "label": "MOVE index (Treasury volatility)",
+        "story": "Treasury basis trade (hidden leverage)",
+        "set": 1,
+        "weight": 1.5,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.3
+      },
+      {
+        "id": "usdjpy",
+        "label": "USD/JPY (yen strengthening = lower = risk)",
+        "story": "Japan fiscal / JGB / carry trade",
+        "set": 1,
+        "weight": 1.5,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.3
       },
       {
         "id": "china_ppi",
@@ -211,34 +221,14 @@
         "overall_swing": 0.3
       },
       {
-        "id": "dc_moratoria",
-        "label": "Data-center moratoria / backlash (0 none / 1 spreading / 2 widespread)",
-        "story": "AI power & the grid bottleneck",
-        "set": 5,
+        "id": "ig_oas",
+        "label": "US investment-grade OAS (%) - big-issuer proxy",
+        "story": "AI build-out circular financing",
+        "set": 2,
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
         "overall_swing": 0.3
-      },
-      {
-        "id": "ai_power_pressure",
-        "label": "AI power-demand pressure (0 easing / 1 tight / 2 acute)",
-        "story": "AI power & the grid bottleneck",
-        "set": 5,
-        "weight": 1.0,
-        "story_swing": 1,
-        "set_swing": 0.3,
-        "overall_swing": 0.3
-      },
-      {
-        "id": "move",
-        "label": "MOVE index (Treasury volatility)",
-        "story": "Treasury basis trade (hidden leverage)",
-        "set": 1,
-        "weight": 1.5,
-        "story_swing": 1,
-        "set_swing": 0.3,
-        "overall_swing": 0.2
       },
       {
         "id": "ai_revenue_gap",
@@ -248,7 +238,17 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.2
+        "overall_swing": 0.3
+      },
+      {
+        "id": "gpu_refi_stress",
+        "label": "GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)",
+        "story": "AI build-out circular financing",
+        "set": 2,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.3
       }
     ],
     "note": "The overall is tail-weighted, not a flat mean, so a single indicator still can't swing it far - the headline is robust by construction. The leverage that matters is on each STORY: the indicators below are where a wrong fact does the most damage and most deserves cross-checking."
