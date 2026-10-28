@@ -2,10 +2,10 @@
  "due": true,
  "cadence": "quarterly",
  "reasons": [
-  "overall moved 1.0"
+  "overall moved 1.1"
  ],
  "drift": {
-  "as_of": "2026-10-27",
+  "as_of": "2026-10-28",
   "edition": "2026",
   "months": 3.9,
   "band_changes": 2,
@@ -13,11 +13,11 @@
   "high_then": 6,
   "high_now": 8,
   "overall_then": 6.5,
-  "overall_now": 7.5,
-  "overall_move": 1.0,
+  "overall_now": 7.6,
+  "overall_move": 1.1,
   "stories_added": [],
   "stories_retired": [],
-  "indicator_band_changes": 14,
+  "indicator_band_changes": 15,
   "moved": {
    "s11_consumer_debt": [
     6,
@@ -38,7 +38,7 @@
   }
  },
  "draft_pending": [],
- "summary": "due now (quarterly: overall moved 1.0)",
+ "summary": "due now (quarterly: overall moved 1.1)",
  "current": "2026",
- "checked": "2026-10-27"
+ "checked": "2026-10-28"
 }

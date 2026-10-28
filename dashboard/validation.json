@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-27T16:55:06.551251+00:00",
+  "generated": "2026-10-28T17:20:31.540647+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -126,9 +126,9 @@
     }
   },
   "sensitivity": {
-    "as_of_overall": 7.5,
+    "as_of_overall": 7.6,
     "max_story_swing": 2,
-    "max_overall_swing": 0.4,
+    "max_overall_swing": 0.5,
     "movers": [
       {
         "id": "license_flow",
@@ -148,7 +148,17 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.3,
-        "overall_swing": 0.4
+        "overall_swing": 0.5
+      },
+      {
+        "id": "move",
+        "label": "MOVE index (Treasury volatility)",
+        "story": "Treasury basis trade (hidden leverage)",
+        "set": 1,
+        "weight": 1.5,
+        "story_swing": 2,
+        "set_swing": 0.3,
+        "overall_swing": 0.3
       },
       {
         "id": "regional_bank_stress",
@@ -168,7 +178,7 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.3,
-        "overall_swing": 0.1
+        "overall_swing": 0.0
       },
       {
         "id": "taiwan_tension",
@@ -181,26 +191,6 @@
         "overall_swing": 0.1
       },
       {
-        "id": "move",
-        "label": "MOVE index (Treasury volatility)",
-        "story": "Treasury basis trade (hidden leverage)",
-        "set": 1,
-        "weight": 1.5,
-        "story_swing": 1,
-        "set_swing": 0.3,
-        "overall_swing": 0.3
-      },
-      {
-        "id": "usdjpy",
-        "label": "USD/JPY (yen strengthening = lower = risk)",
-        "story": "Japan fiscal / JGB / carry trade",
-        "set": 1,
-        "weight": 1.5,
-        "story_swing": 1,
-        "set_swing": 0.3,
-        "overall_swing": 0.3
-      },
-      {
         "id": "china_ppi",
         "label": "China PPI YoY (%) - large swing either way is worse",
         "story": "China's price spillover (deflation or cost-push)",
@@ -208,7 +198,7 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.4
       },
       {
         "id": "trade_actions",
@@ -218,17 +208,7 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
-      },
-      {
-        "id": "ig_oas",
-        "label": "US investment-grade OAS (%) - big-issuer proxy",
-        "story": "AI build-out circular financing",
-        "set": 2,
-        "weight": 1.0,
-        "story_swing": 1,
-        "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.4
       },
       {
         "id": "ai_revenue_gap",
@@ -238,7 +218,7 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.4
       },
       {
         "id": "gpu_refi_stress",
@@ -248,7 +228,27 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.4
+      },
+      {
+        "id": "dc_moratoria",
+        "label": "Data-center moratoria / backlash (0 none / 1 spreading / 2 widespread)",
+        "story": "AI power & the grid bottleneck",
+        "set": 5,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.4
+      },
+      {
+        "id": "ai_power_pressure",
+        "label": "AI power-demand pressure (0 easing / 1 tight / 2 acute)",
+        "story": "AI power & the grid bottleneck",
+        "set": 5,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.4
       }
     ],
     "note": "The overall is tail-weighted, not a flat mean, so a single indicator still can't swing it far - the headline is robust by construction. The leverage that matters is on each STORY: the indicators below are where a wrong fact does the most damage and most deserves cross-checking."
