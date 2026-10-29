@@ -8423,7 +8423,7 @@
       },
       "proposed_story": null,
       "rationale": "The s8_ai_capex story tracks GPU-backed debt refinancing stress and the capex-vs-revenue gap, but has no indicator for critical-mineral input constraints on the AI buildout itself. The germanium-fiber chokepoint is distinct from GPU silicon risk: it is a China-controlled supply-side lever with no near-term substitute, already causing inventory exhaustion. CDS elevation on hyperscaler debt (noted by multiple sources) adds debt-market signal. This is a meaningful gap in s8's indicator set and is directly amplified by s6 (rare earths) dynamics.",
-      "status": "pending",
+      "status": "expired",
       "first_seen": "2026-09-28",
       "last_seen": "2026-09-28",
       "sightings": 1,
@@ -8481,7 +8481,7 @@
         ]
       },
       "rationale": "The Iran war's economic second-order effects\u2014persistent energy inflation re-accelerating global rates, BoJ forced to hike at a 30-year record pace, ECB facing energy shock, EM sovereigns squeezed by dollar strength and higher US yields\u2014constitute a distinct contagion pathway not fully captured by any single existing story. s20 tracks the physical strait; s4 tracks EM debt fundamentals; s2 tracks Japan specifically. None tracks the unified 'energy shock \u2192 global bond selloff \u2192 cross-asset tightening' transmission risk that is now the dominant macro regime driver as of late September 2026.",
-      "status": "pending",
+      "status": "expired",
       "first_seen": "2026-09-28",
       "last_seen": "2026-09-28",
       "sightings": 1,
@@ -9992,6 +9992,6 @@
   "generated": "2026-10-26",
   "model": "claude-sonnet-4-6",
   "new_count": 4,
-  "pending_count": 64,
+  "pending_count": 62,
   "expired_now": 8
 }
