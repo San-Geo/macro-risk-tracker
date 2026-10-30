@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-29",
-  "generated_at": "2026-10-29 17:34 UTC",
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30 17:11 UTC",
   "aggregates": {
     "1": 5.8,
     "3": 4.4,
@@ -9,7 +9,7 @@
     "5": 5.7,
     "overall": 7.8
   },
-  "narrative": "**Headline:**\nMacro risk remains High at 7.8, with eight stories at High or above and no intraday shifts.\n\n**Changed Stories:**\nNone.\n\n**Watch List:**\nSea lanes & undersea cables (High, level 8) is the highest-risk story to monitor.",
+  "narrative": "**HEADLINE**  \nMacro risk remains High, with eight stories at High or above, driven by structural vulnerabilities in credit, supply chains, and geopolitical leverage.\n\n**KEY STORIES (no changes today)**  \nNo stories moved between risk bands.\n\n**HIGHEST-RISK STORIES TO MONITOR**  \nPrivate credit's opaque expansion and Sea lanes & undersea cables, both at level 8 (High), pose the greatest systemic exposure; the former threatens leverage built outside regulatory view, the latter concentrates critical infrastructure risk in contested geographies.",
   "stories": [
     {
       "id": "s1_basis_trade",
@@ -32,13 +32,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/SOFR",
-          "as_of": "2026-10-28",
+          "as_of": "2026-10-29",
           "provenance": "FRED"
         },
         {
           "id": "move",
           "label": "MOVE index (Treasury volatility)",
-          "value": 92.9984,
+          "value": 97.9015,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -47,7 +47,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-10-29",
+          "as_of": "2026-10-30",
           "provenance": "Market"
         },
         {
@@ -88,7 +88,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -104,7 +104,7 @@
         {
           "id": "usdjpy",
           "label": "USD/JPY (yen strengthening = lower = risk)",
-          "value": 157.912,
+          "value": 157.454,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -113,13 +113,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/JPY=X",
-          "as_of": "2026-10-29",
+          "as_of": "2026-10-30",
           "provenance": "Market"
         },
         {
           "id": "jgb30",
           "label": "30-year JGB yield (%)",
-          "value": 3.941,
+          "value": 3.956,
           "band": 2,
           "baseline_band": 0,
           "weight": 1.0,
@@ -128,7 +128,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/index.htm",
-          "as_of": "2026-10-28",
+          "as_of": "2026-10-29",
           "provenance": "MOF"
         },
         {
@@ -169,7 +169,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -185,7 +185,7 @@
         {
           "id": "hy_oas",
           "label": "US high-yield OAS (%, \u2248310bps)",
-          "value": 3.14,
+          "value": 3.26,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -194,7 +194,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
-          "as_of": "2026-10-28",
+          "as_of": "2026-10-29",
           "provenance": "FRED"
         },
         {
@@ -250,7 +250,7 @@
       ],
       "trend": {
         "prev": 8,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -281,7 +281,7 @@
         {
           "id": "real10",
           "label": "US 10y real yield (TIPS, %)",
-          "value": 2.64,
+          "value": 2.67,
           "band": 1,
           "baseline_band": 0,
           "weight": 1.0,
@@ -290,7 +290,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/DFII10",
-          "as_of": "2026-10-27",
+          "as_of": "2026-10-28",
           "provenance": "FRED"
         },
         {
@@ -318,7 +318,7 @@
         6,
         6,
         6,
-        6,
+        5,
         5,
         5,
         5,
@@ -331,7 +331,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -362,7 +362,7 @@
         {
           "id": "usdcny",
           "label": "USD/CNY (yuan depreciation = higher = risk)",
-          "value": 6.6504,
+          "value": 6.6439,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -371,7 +371,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CNY=X",
-          "as_of": "2026-10-29",
+          "as_of": "2026-10-30",
           "provenance": "Market"
         },
         {
@@ -412,7 +412,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -490,7 +490,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=41",
       "spark": [
         6,
-        6,
+        7,
         7,
         7,
         7,
@@ -508,7 +508,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -524,7 +524,7 @@
         {
           "id": "peg_deviation",
           "label": "Largest stablecoin max peg deviation (%)",
-          "value": 0.08,
+          "value": 0.09,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.5,
@@ -533,13 +533,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-10-29",
+          "as_of": "2026-10-30",
           "provenance": "DefiLlama"
         },
         {
           "id": "stablecoin_supply",
           "label": "Total USD stablecoin supply ($bn)",
-          "value": 302.1,
+          "value": 300.4,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -548,7 +548,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://defillama.com/stablecoins",
-          "as_of": "2026-10-29",
+          "as_of": "2026-10-30",
           "provenance": "DefiLlama"
         },
         {
@@ -581,7 +581,7 @@
         5,
         5,
         5,
-        5,
+        4,
         4,
         4,
         4,
@@ -589,7 +589,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": -1
       }
     },
@@ -605,7 +605,7 @@
         {
           "id": "ig_oas",
           "label": "US investment-grade OAS (%) - big-issuer proxy",
-          "value": 0.86,
+          "value": 0.89,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -614,7 +614,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
-          "as_of": "2026-10-28",
+          "as_of": "2026-10-29",
           "provenance": "FRED"
         },
         {
@@ -670,7 +670,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -736,7 +736,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -804,8 +804,8 @@
         5,
         5,
         5,
-        5,
         6,
+        5,
         5,
         5,
         5,
@@ -818,7 +818,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -845,7 +845,7 @@
           "source_url": "https://finance.yahoo.com/economy/articles/repo-man-car-t-subprime-173000342.html",
           "as_of": "2026-07",
           "provenance": "Agent",
-          "age_days": 93,
+          "age_days": 94,
           "stale_for_cadence": true
         },
         {
@@ -901,7 +901,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -917,7 +917,7 @@
         {
           "id": "gold",
           "label": "Gold price (USD/oz)",
-          "value": 4033.3,
+          "value": 3903.3999,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -926,7 +926,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/GC=F",
-          "as_of": "2026-10-29",
+          "as_of": "2026-10-30",
           "provenance": "Market"
         },
         {
@@ -964,7 +964,7 @@
       "brief_url": "briefs/Global_Macro_Intelligence_Brief_2026.pdf#page=33",
       "spark": [
         3,
-        3,
+        4,
         4,
         4,
         4,
@@ -982,7 +982,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -1024,7 +1024,7 @@
           "source_url": "https://fred.stlouisfed.org/series/DRSFRMACBS",
           "as_of": "2026-04-01",
           "provenance": "FRED",
-          "age_days": 211,
+          "age_days": 212,
           "stale_for_cadence": true
         },
         {
@@ -1065,7 +1065,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -1146,7 +1146,7 @@
       ],
       "trend": {
         "prev": 4,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -1173,7 +1173,7 @@
           "source_url": "https://emp.lbl.gov/queues",
           "as_of": "2025-12-31",
           "provenance": "Agent",
-          "age_days": 305,
+          "age_days": 306,
           "stale_for_cadence": true
         },
         {
@@ -1229,7 +1229,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -1245,7 +1245,7 @@
         {
           "id": "copper_price",
           "label": "Copper price (USD/lb, COMEX HG=F)",
-          "value": 6.6005,
+          "value": 6.4845,
           "band": 2,
           "baseline_band": 1,
           "weight": 0.5,
@@ -1254,7 +1254,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/HG=F",
-          "as_of": "2026-10-29",
+          "as_of": "2026-10-30",
           "provenance": "Market"
         },
         {
@@ -1310,7 +1310,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -1391,7 +1391,7 @@
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -1473,7 +1473,7 @@
       ],
       "trend": {
         "prev": 7,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -1554,7 +1554,7 @@
       ],
       "trend": {
         "prev": 6,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": 0
       }
     },
@@ -1581,12 +1581,12 @@
           "source_url": "https://portwatch.imf.org",
           "as_of": "2026-10-25",
           "provenance": "PortWatch",
-          "measured_note": "Strait of Hormuz 3.3 ships/day vs 92 normal (4%); Bab el-Mandeb (Red Sea) 28.9 ships/day vs 69 normal (42%). Source: International Monetary Fund, PortWatch"
+          "measured_note": "Strait of Hormuz 3.3 ships/day vs 92 normal (4%). Source: International Monetary Fund, PortWatch"
         },
         {
           "id": "oil_price",
           "label": "WTI crude oil (USD/bbl, CL=F)",
-          "value": 101.42,
+          "value": 104.32,
           "band": 2,
           "baseline_band": 1,
           "weight": 1.0,
@@ -1595,7 +1595,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/CL=F",
-          "as_of": "2026-10-29",
+          "as_of": "2026-10-30",
           "provenance": "Market"
         },
         {
@@ -1627,7 +1627,7 @@
         7,
         7,
         7,
-        7,
+        8,
         8,
         8,
         8,
@@ -1635,9 +1635,9 @@
         8
       ],
       "trend": {
-        "prev": 7,
-        "since": "2026-10-22",
-        "change": 1
+        "prev": 8,
+        "since": "2026-10-23",
+        "change": 0
       }
     },
     {
@@ -1652,7 +1652,7 @@
         {
           "id": "vix",
           "label": "Equity volatility (VIX)",
-          "value": 16.51,
+          "value": 19.98,
           "band": 0,
           "baseline_band": 0,
           "weight": 1.0,
@@ -1661,13 +1661,13 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^VIX",
-          "as_of": "2026-10-29",
+          "as_of": "2026-10-30",
           "provenance": "Market"
         },
         {
           "id": "move_ccp",
           "label": "Treasury volatility (MOVE)",
-          "value": 92.9984,
+          "value": 97.9015,
           "band": 0,
           "baseline_band": 0,
           "weight": 0.5,
@@ -1676,7 +1676,7 @@
           "cadence": "daily",
           "stale": false,
           "source_url": "https://finance.yahoo.com/quote/^MOVE",
-          "as_of": "2026-10-29",
+          "as_of": "2026-10-30",
           "provenance": "Market"
         },
         {
@@ -1700,7 +1700,6 @@
       "spark": [
         4,
         4,
-        4,
         5,
         4,
         5,
@@ -1711,13 +1710,14 @@
         5,
         5,
         5,
+        4,
         4,
         4,
         4
       ],
       "trend": {
         "prev": 5,
-        "since": "2026-10-22",
+        "since": "2026-10-23",
         "change": -1
       }
     }
@@ -3699,13 +3699,13 @@
     "live_total": 19,
     "fell_back": 0,
     "agent_last": "2026-10-26",
-    "agent_days_ago": 3,
+    "agent_days_ago": 4,
     "agent_flags": 8,
     "offline": false,
     "carried": [],
     "held": [],
     "portwatch": {
-      "ok": 2,
+      "ok": 1,
       "total": 2,
       "as_of": "2026-10-25"
     },
@@ -3713,9 +3713,9 @@
   },
   "aggregates_trend": {
     "overall": {
-      "prev": 7.8,
-      "since": "2026-10-22",
-      "change": 0.0,
+      "prev": 7.9,
+      "since": "2026-10-23",
+      "change": -0.1,
       "crosses_methodology": false,
       "ref_version": "3.0",
       "version": "3.0"
@@ -3764,7 +3764,7 @@
             "label": "US high-yield OAS (%, \u2248310bps)",
             "story": "Private credit's opaque expansion",
             "band": 0,
-            "value": 3.14
+            "value": 3.26
           }
         ]
       }
@@ -4213,8 +4213,8 @@
       {
         "id": "vix",
         "label": "VIX",
-        "value": 16.91,
-        "as_of": "2026-10-28",
+        "value": 17.2,
+        "as_of": "2026-10-29",
         "unit": "",
         "note": "Expected US stock-market volatility - the most-watched fear gauge. Calm markets usually sit below ~20.",
         "url": "https://fred.stlouisfed.org/series/VIXCLS"
@@ -4222,8 +4222,8 @@
       {
         "id": "curve",
         "label": "10y-2y curve",
-        "value": 0.38,
-        "as_of": "2026-10-28",
+        "value": 0.37,
+        "as_of": "2026-10-29",
         "unit": "pp",
         "note": "10-year minus 2-year Treasury yield. A negative (inverted) reading has historically preceded US recessions - with long and variable lags.",
         "url": "https://fred.stlouisfed.org/series/T10Y2Y"
@@ -4231,8 +4231,8 @@
       {
         "id": "hy_oas",
         "label": "High-yield spread",
-        "value": 3.14,
-        "as_of": "2026-10-28",
+        "value": 3.26,
+        "as_of": "2026-10-29",
         "unit": "pp",
         "note": "The extra yield markets demand to lend to risky companies - the market's own price of credit stress. Calm is roughly below ~4.",
         "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
@@ -4271,11 +4271,7 @@
       },
       "bab_el_mandeb": {
         "name": "Bab el-Mandeb (Red Sea)",
-        "avg7": 28.9,
-        "baseline": 69.42,
-        "ratio": 0.416,
-        "as_of": "2026-10-25",
-        "days": 7
+        "error": "Invalid URL"
       }
     },
     "applied": {
@@ -4290,16 +4286,9 @@
             "baseline": 91.55,
             "ratio": 0.036,
             "as_of": "2026-10-25"
-          },
-          "bab_el_mandeb": {
-            "name": "Bab el-Mandeb (Red Sea)",
-            "avg7": 28.9,
-            "baseline": 69.42,
-            "ratio": 0.416,
-            "as_of": "2026-10-25"
           }
         },
-        "note": "Strait of Hormuz 3.3 ships/day vs 92 normal (4%); Bab el-Mandeb (Red Sea) 28.9 ships/day vs 69 normal (42%). Source: International Monetary Fund, PortWatch"
+        "note": "Strait of Hormuz 3.3 ships/day vs 92 normal (4%). Source: International Monetary Fund, PortWatch"
       },
       "hormuz_fertilizer": {
         "value": 2,
@@ -4326,7 +4315,7 @@
     "revision": 1,
     "pdf": "briefs/Global_Macro_Intelligence_Brief_2026.pdf",
     "html": null,
-    "next": "due now (quarterly: overall moved 1.1)",
+    "next": "due now (quarterly: overall moved 1.3)",
     "n_stories": 21
   }
 }

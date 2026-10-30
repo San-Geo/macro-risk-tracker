@@ -4143,7 +4143,7 @@
       "proposed_indicator": null,
       "proposed_story": null,
       "rationale": "The bilateral tariff partial rollback is a direct downward signal on the 'New tariff/anti-dumping actions' indicator in s5_china_deflation \u2014 it should move from escalating toward rising or calm in the near-term window. However, the truce is explicitly temporary (expires Nov 2026), structural decoupling in tech/defense remains intact, and the 25% YoY collapse in trade volume implies sustained deflation-export pressure from China persists even if headline tariff levels ease. The tracker should update the indicator rubric score downward but flag the binary reversal risk at the truce expiry.",
-      "status": "pending",
+      "status": "expired",
       "first_seen": "2026-07-30",
       "last_seen": "2026-09-29",
       "sightings": 4,
@@ -8512,7 +8512,7 @@
       },
       "proposed_story": null,
       "rationale": "The synchronized global long-duration sell-off \u2014 covering the US, Japan, UK, and Europe simultaneously \u2014 is not fully captured by any single existing indicator. s14_pensions tracks 'pension-fund leverage event, UK-2022 type' but has no leading indicator for the multi-sovereign term-premium surge that *precedes* such events. s2_japan captures JGB yields but only for Japan. A cross-G4 30yr co-movement measure would give the tracker an early-warning signal for LDI-style liability mismatches, pension funded-ratio deterioration, and CRE/corporate refinancing stress simultaneously, before a single-country blowup crystallizes.",
-      "status": "pending",
+      "status": "expired",
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "sightings": 1,
@@ -8568,7 +8568,7 @@
         ]
       },
       "rationale": "The US-China AI dialogue is not merely a diplomatic footnote \u2014 it is the governance meta-layer for the technology-decoupling risk running through s6 (rare earths/AI magnets), s8 (AI capex), s19 (ASML/lithography export controls), and indirectly s5 (China PPI via tech-sector demand). A new story node is warranted because: (1) the dialogue's success or failure will be a leading indicator for export-control trajectories across multiple existing stories; (2) no existing story tracks US-China diplomatic signaling channels specifically on AI/technology; and (3) the dialogue creates a new binary event risk \u2014 a high-profile collapse would likely trigger simultaneous escalation across s6, s8, and s19, making it a cross-story amplifier with no current home in the tracker.",
-      "status": "pending",
+      "status": "expired",
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "sightings": 1,
@@ -9992,6 +9992,6 @@
   "generated": "2026-10-26",
   "model": "claude-sonnet-4-6",
   "new_count": 4,
-  "pending_count": 62,
+  "pending_count": 59,
   "expired_now": 8
 }
