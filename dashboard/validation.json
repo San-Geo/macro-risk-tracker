@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-30T17:11:18.994294+00:00",
+  "generated": "2026-11-02T21:09:25.983401+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -128,7 +128,7 @@
   "sensitivity": {
     "as_of_overall": 7.8,
     "max_story_swing": 2,
-    "max_overall_swing": 0.5,
+    "max_overall_swing": 0.4,
     "movers": [
       {
         "id": "license_flow",
@@ -141,14 +141,14 @@
         "overall_swing": 0.4
       },
       {
-        "id": "direct_lending_default",
-        "label": "Direct-lending default rate (%, Fitch incl. distressed exchanges)",
-        "story": "Private credit's opaque expansion",
-        "set": 1,
+        "id": "regional_bank_stress",
+        "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
+        "story": "CRE maturity wall / regional banks",
+        "set": 2,
         "weight": 1.5,
         "story_swing": 2,
-        "set_swing": 0.3,
-        "overall_swing": 0.5
+        "set_swing": 0.4,
+        "overall_swing": 0.0
       },
       {
         "id": "move",
@@ -158,23 +158,23 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.3,
-        "overall_swing": 0.1
+        "overall_swing": 0.4
+      },
+      {
+        "id": "direct_lending_default",
+        "label": "Direct-lending default rate (%, Fitch incl. distressed exchanges)",
+        "story": "Private credit's opaque expansion",
+        "set": 1,
+        "weight": 1.5,
+        "story_swing": 2,
+        "set_swing": 0.3,
+        "overall_swing": 0.4
       },
       {
         "id": "usdjpy",
         "label": "USD/JPY (yen strengthening = lower = risk)",
         "story": "Japan fiscal / JGB / carry trade",
         "set": 1,
-        "weight": 1.5,
-        "story_swing": 2,
-        "set_swing": 0.3,
-        "overall_swing": 0.1
-      },
-      {
-        "id": "regional_bank_stress",
-        "label": "Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster)",
-        "story": "CRE maturity wall / regional banks",
-        "set": 2,
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.3,
@@ -198,7 +198,7 @@
         "weight": 1.5,
         "story_swing": 1,
         "set_swing": 0.4,
-        "overall_swing": 0.1
+        "overall_swing": 0.0
       },
       {
         "id": "china_ppi",
@@ -221,34 +221,34 @@
         "overall_swing": 0.4
       },
       {
-        "id": "dc_moratoria",
-        "label": "Data-center moratoria / backlash (0 none / 1 spreading / 2 widespread)",
-        "story": "AI power & the grid bottleneck",
-        "set": 5,
+        "id": "hormuz_redsea_status",
+        "label": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
+        "story": "Sea lanes & undersea cables",
+        "set": 4,
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
         "overall_swing": 0.4
       },
       {
-        "id": "ai_power_pressure",
-        "label": "AI power-demand pressure (0 easing / 1 tight / 2 acute)",
-        "story": "AI power & the grid bottleneck",
-        "set": 5,
+        "id": "truce_status",
+        "label": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
+        "story": "Critical minerals as a weapon",
+        "set": 4,
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.4
+        "overall_swing": 0.2
       },
       {
-        "id": "ai_revenue_gap",
-        "label": "AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast)",
-        "story": "AI build-out circular financing",
-        "set": 2,
+        "id": "re_blacklist",
+        "label": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
+        "story": "Critical minerals as a weapon",
+        "set": 4,
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.2
       }
     ],
     "note": "The overall is tail-weighted, not a flat mean, so a single indicator still can't swing it far - the headline is robust by construction. The leverage that matters is on each STORY: the indicators below are where a wrong fact does the most damage and most deserves cross-checking."

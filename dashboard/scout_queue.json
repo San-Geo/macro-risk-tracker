@@ -1,10 +1,153 @@
 {
- "generated": "2026-10-26",
+ "generated": "2026-11-02",
  "model": "claude-sonnet-4-6",
- "new_count": 4,
- "pending_count": 59,
- "expired_now": 8,
+ "new_count": 6,
+ "pending_count": 53,
+ "expired_now": 12,
  "items": {
+  "strait-of-hormuz-effectively-closed-by-us-iran-w-beb73d": {
+   "headline": "Strait of Hormuz Effectively Closed by US-Iran War; Brent Above $110\u2013$117, Global Inventories Down ~1 Billion Barrels",
+   "summary": "The US-Iran war that began February 28, 2026 has cut Hormuz throughput from 21.6 mb/d to ~10.9 mb/d by September, with OPEC+ freezing December targets for a third consecutive month on November 1 and Brent settling at $117.64 on October 30. Peace-talk optimism briefly pushed oil below $100 on November 2, but supply buffers are near exhaustion per ADNOC's CEO.",
+   "as_of": "2026-11-02",
+   "sources": [
+    "https://www.thenationalnews.com/business/energy/2026/11/01/opec-holds-december-oil-output-targets-steady-as-iran-war-disrupts-supply/",
+    "https://discoveryalert.com/news/opec-december-output-brent-hormuz-risk-november-2026/",
+    "https://energynow.com/2026/11/oil-prices-plunge-more-than-4-as-u-s-iran-peace-talks-raise-hopes-of-easing-middle-east-supply-disruptions/",
+    "https://debuglies.com/2026/11/02/iran-hormuz-and-the-risk-of-renewed-us-military-strikes-energy-security-and-great-power-diplomacy-through-mid-2027/"
+   ],
+   "materiality": "high",
+   "classification": "existing_indicator",
+   "target_story": "s20_sea_lanes",
+   "target_indicator": "Hormuz/Red Sea status \u2192 update to '2 closed'; WTI crude \u2192 ~$100/bbl; Undersea cable incidents \u2192 '0 none'",
+   "proposed_indicator": null,
+   "proposed_story": null,
+   "rationale": "The Strait of Hormuz is effectively shut (status = 2), representing the single largest physical supply disruption in oil-market history per CEPR/EIA/IEA data. Brent at $117.64 and WTI near $100 are directly captured by the s20 WTI indicator. The diesel/LNG transmission into industrial supply chains and the ~1bn-barrel inventory drawdown (ADNOC CEO, Nov 2) make this the highest-materiality live event in the tracker. The November 2 US-Iran peace-talk signal is a meaningful but fragile downside tail that should be monitored as a potential status shift from '2 closed' toward '1 contested'.",
+   "status": "pending",
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-02",
+   "sightings": 1,
+   "id": "strait-of-hormuz-effectively-closed-by-us-iran-w-beb73d"
+  },
+  "france-oat-bund-spread-hits-176-bp-crisis-era-hi-538645": {
+   "headline": "France OAT-Bund Spread Hits 176 bp \u2014 Crisis-Era Highs \u2014 as Moody's Cuts Outlook to Negative and Budget Vote Looms November 3",
+   "summary": "The 10-year OAT-Bund spread peaked at 176 bp on October 23 (widest since 2011), settling at 159 bp on October 30 as France's debt-to-GDP reaches 121.7% and a \u20ac43bn austerity package faces a divided parliament vote on November 3. Moody's left France at Aa3 but assigned a negative outlook on October 23; S&P review follows November 27.",
+   "as_of": "2026-10-30",
+   "sources": [
+    "https://admiralmarkets.com/analytics/traders-blog/oat-bund-spread-france-euro",
+    "https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html",
+    "https://www.tftc.io/france-oat-bund-spread-wider-italy-greece-debt-121-percent-gdp",
+    "https://eurasiabusinessnews.com/2026/10/01/eurozone-bond-spreads-hit-multi-year-highs-as-france-and-italy-face-debt-pressure/"
+   ],
+   "materiality": "high",
+   "classification": "existing_indicator",
+   "target_story": "s10_france",
+   "target_indicator": "OAT-Bund 10y spread \u2192 159 bp (peak 176 bp); Govt stability \u2192 '1 fragile'; Rating action \u2192 '1 negative outlook' (Moody's Aa3/negative, Oct 23)",
+   "proposed_indicator": null,
+   "proposed_story": null,
+   "rationale": "All three s10 indicators require simultaneous update. The spread has surpassed Italy's and Greece's (now wider-than-PIIGS), debt/GDP at 121.7% is a record, the Moody's negative outlook is a direct rating-action trigger (level 1), and the November 3 budget vote introduces binary tail risk toward level 2 (collapse/snap-election). The S&P review on November 27 is the next scheduled catalyst.",
+   "status": "pending",
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-02",
+   "sightings": 1,
+   "id": "france-oat-bund-spread-hits-176-bp-crisis-era-hi-538645"
+  },
+  "china-rare-earth-pause-legally-expires-november--29acbd": {
+   "headline": "China Rare-Earth Pause Legally Expires November 10; US Commerce Dept Has Not Published Matching Extension Notice",
+   "summary": "China's suspension of its October 2025 rare-earth export-control announcements (Nos. 55\u201362 including the 0.1%-rule Notice 61) expires under published legal text on November 10, 2026, despite MOFCOM's informal September 28 statement referencing a wider arrangement through January 10, 2027. The US has not issued a formal matching notice, creating a legal ambiguity that could allow controls to snap back in 8 days.",
+   "as_of": "2026-11-02",
+   "sources": [
+    "https://carraglobe.com/china-rare-earth-export-controls-2026/",
+    "https://www.technology.org/2026/10/19/china-rare-earth-export-pause-november-10/",
+    "https://bisi.org.uk/reports/chinas-rare-earth-processing-dominance-and-what-the-trump-xi-summit-didnt-change"
+   ],
+   "materiality": "high",
+   "classification": "existing_indicator",
+   "target_story": "s6_rare_earths",
+   "target_indicator": "Nov-2025 pause status \u2192 update to '1 expiring' (legal text ends Nov 10; informal extension to Jan 10 not yet codified in published Chinese notice); Rare-earth export license flow \u2192 '1 slowing' (April 2025 licensing already active; exports fell 9.6% YTD Jan\u2013Sep 2026)",
+   "proposed_indicator": null,
+   "proposed_story": null,
+   "rationale": "The gap between the published suspension-end date (Nov 10) and the informal bilateral extension (Jan 10) is uncodified on the Chinese side and unmatched by a US Federal Register notice\u2014creating an 8-day window where controls could legally re-activate without a further formal announcement. This is precisely the s6 'pause status' indicator scenario at level 1 (expiring). April 2025 heavy-RE licensing (dysprosium, terbium) remains fully in force regardless, keeping license-flow at '1 slowing'.",
+   "status": "pending",
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-02",
+   "sightings": 1,
+   "id": "china-rare-earth-pause-legally-expires-november--29acbd"
+  },
+  "ai-capex-debt-collision-drives-30-year-treasury--652dd0": {
+   "headline": "AI Capex-Debt Collision Drives 30-Year Treasury to 24-Year High (5.67%, Oct 7); CCC Junk Spreads Widen 319 bp Since August",
+   "summary": "Hyperscalers (Alphabet with negative free cash flow of -$9.1bn in Q3, Meta raising capex floor to $135\u2013145bn) are issuing 20\u201340-year corporate bonds en masse, competing directly with record sovereign supply and pushing the 30-year Treasury to 5.67% on October 7 (highest since 2002) and widening CCC-rated spreads by 319 bp since late August. The 10-year ACM term premium has surged to +92 bp.",
+   "as_of": "2026-10-30",
+   "sources": [
+    "https://www.lpl.com/content/dam/lpl-research/documents/rate-and-credit-view-10-28-26.pdf",
+    "https://martyau79.substack.com/p/29oct2026-traditional-markets-and",
+    "https://americanbazaaronline.com/2026/10/30/the-bill-comes-due-the-ai-trade-meets-its-cash-flow-test-491137/",
+    "https://www.nbcnews.com/business/markets/treasury-yields-hit-24-year-highs-global-sell-accelerates-rcna602045"
+   ],
+   "materiality": "high",
+   "classification": "existing_indicator",
+   "target_story": "s8_ai_capex",
+   "target_indicator": "AI capex-vs-revenue gap concern \u2192 '2 widening fast' (Alphabet FCF negative; CCC spreads +319bp); GPU-backed debt refinancing stress \u2192 '1 signs' (CoreWeave CDS cited as early-warning; broad HY not yet confirmed); US IG OAS \u2192 elevated but not yet crisis",
+   "proposed_indicator": null,
+   "proposed_story": null,
+   "rationale": "The Alphabet Q3 print (negative FCF, $98.2bn total corporate debt) and Meta's capex raise represent a qualitative regime shift: hyperscalers have flipped from net cash providers to net capital consumers. The AI-debt-Treasury-yield interaction loop (more AI issuance \u2192 higher term premium \u2192 tighter financial conditions \u2192 higher AI borrowing costs) is now cited by the Fed's own market desk and LPL Research. CCC spread widening of 319 bp is a material stress signal for s8, pushing the capex-gap indicator to level 2.",
+   "status": "pending",
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-02",
+   "sightings": 1,
+   "id": "ai-capex-debt-collision-drives-30-year-treasury--652dd0"
+  },
+  "boj-holds-at-1-25-oct-30-but-30-year-jgb-hits-re-d4538c": {
+   "headline": "BOJ Holds at 1.25% (Oct 30) but 30-Year JGB Hits Record 4.15\u20134.20%; December Hike Fully Priced; Yen Carry Unwind Risk Resurfaces",
+   "summary": "The Bank of Japan held its policy rate at 1.25% on October 30 as expected, but the 30-year JGB yield is at a record ~4.15\u20134.20% and markets are pricing a December hike to 1.50%. Seven CNBC-surveyed analysts see the 30-year JGB reaching 4%\u20134.1%, with BOJ normalization and shifting institutional repatriation flows compressing the rate differential \u2014 raising yen carry-trade reversal risk.",
+   "as_of": "2026-10-30",
+   "sources": [
+    "https://www.cnbc.com/2026/10/27/boj-october-meeting-rate-cnbc-survey.html",
+    "https://finance.yahoo.com/markets/currencies/articles/japan-bonds-steady-ahead-boj-054055160.html",
+    "https://admiralmarkets.com/analytics/traders-blog/global-macro-risks-2026"
+   ],
+   "materiality": "medium",
+   "classification": "existing_indicator",
+   "target_story": "s2_japan",
+   "target_indicator": "30-year JGB yield \u2192 ~4.15\u20134.20% (record high per Bloomberg/CNBC); Takaichi plan financing clarity \u2192 '1 unclear' (no credible fiscal consolidation path published); USD/JPY \u2192 monitor for yen strengthening as Dec hike approaches",
+   "proposed_indicator": null,
+   "proposed_story": null,
+   "rationale": "The 30-year JGB at a record is a direct indicator update for s2. With the BOJ at 1.25% and a December hike to 1.50% ~80% priced by CME-equivalent, the rate-differential compression accelerates carry-trade unwind risk. The simultaneous move in UK 30-year Gilts to a 28-year high and the US 30-year to 5.67% reflects a global long-bond repricing that amplifies Japan-specific fiscal risk. The Takaichi fiscal-clarity indicator remains at '1 unclear' given no published consolidation plan.",
+   "status": "pending",
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-02",
+   "sightings": 1,
+   "id": "boj-holds-at-1-25-oct-30-but-30-year-jgb-hits-re-d4538c"
+  },
+  "uk-30-year-gilt-at-28-year-high-gilt-bund-spread-ad9e91": {
+   "headline": "UK 30-Year Gilt at 28-Year High; Gilt-Bund Spread Widest Since 2022 Mini-Budget Ahead of November 26 Budget",
+   "summary": "The UK 10-year gilt-Bund spread has widened to 189 bp \u2014 the largest since the 2022 Liz Truss mini-budget crisis \u2014 with the 30-year gilt at a 28-year high and the Bank of England expected to hike to 4.0% in November. ING warns the November 26 budget could trigger significant gilt repricing if fiscal commitments are missed, with sovereign CDS up 6% to 47 bp.",
+   "as_of": "2026-10-30",
+   "sources": [
+    "https://www.itiger.com/news/1178339184",
+    "https://admiralmarkets.com/analytics/traders-blog/global-macro-risks-2026",
+    "https://www.abnamro.com/research/en/our-research/key-views-global-monthly-october-2026"
+   ],
+   "materiality": "medium",
+   "classification": "story_gap",
+   "target_story": "s10_france",
+   "proposed_indicator": {
+    "label": "UK gilt-Bund 10y spread (bp) & sovereign CDS stress",
+    "type": "band",
+    "rubric": "0 = spread <120 bp and CDS <30 bp (stable); 1 = spread 120\u2013200 bp or CDS 30\u201360 bp (stress, pre-budget); 2 = spread >200 bp or CDS >60 bp (crisis / LDI echo)",
+    "sources": [
+     "https://www.itiger.com/news/1178339184",
+     "https://admiralmarkets.com/analytics/traders-blog/global-macro-risks-2026"
+    ],
+    "suggested_weight": 0.25
+   },
+   "proposed_story": null,
+   "rationale": "The existing s10_france story covers France/eurozone fragility but has no indicator capturing UK gilt stress specifically. The UK situation is structurally distinct: a separate sovereign, a different central bank hiking cycle, a mini-budget precedent with proven LDI/pension contagion (2022), and a November 26 fiscal event with binary tail risk. The gilt-Bund spread at 189 bp \u2014 the widest since that crisis \u2014 and sovereign CDS jumping 6% are not captured by any existing tracker indicator. Given the 2022 UK LDI blow-up's systemic implications (s14_pensions crossover), this gap warrants a new composite indicator within s10 rather than a new story.",
+   "status": "pending",
+   "first_seen": "2026-11-02",
+   "last_seen": "2026-11-02",
+   "sightings": 1,
+   "id": "uk-30-year-gilt-at-28-year-high-gilt-bund-spread-ad9e91"
+  },
   "boj-officials-signal-rate-hikes-every-few-months-17d037": {
    "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
    "summary": "The 10-year JGB yield dropped to 2.755% on October 23 (below MUFG's Q4 forecast floor of 2.85%) as Takaichi's explicit rejection of Abenomics-style reflation calmed near-term BoJ-behind-the-curve fears, yet the 30-year JGB yield remains near 3.93% (auction Oct 8: 4.109%), reflecting a persistent long-end fiscal risk premium as the FY2027 budget \u2014 the Takaichi administration's first full cycle \u2014 remains unfunded.",
@@ -100,196 +243,6 @@
    "last_seen": "2026-10-26",
    "sightings": 1,
    "id": "houthi-attacks-push-brent-to-117-6-month-high-ir-badabc"
-  },
-  "china-ppi-surges-to-5-0-yoy-in-september-fastest-084bd0": {
-   "headline": "China PPI surges to +5.0% YoY in September \u2014 fastest since June 2022 \u2014 driven by energy costs; domestic demand remains 'lackluster', creating stagflationary export dynamic",
-   "summary": "China's factory-gate prices rose 5.0% YoY in September (vs 4.4% forecast, 3.8% prior), the fastest pace since June 2022, driven by the Middle East energy shock rather than a domestic demand recovery. Analysts warn the pass-through from PPI inflation to CPI is limited due to weak household demand, creating a cost-push squeeze on Chinese manufacturers and a potential stagflationary export signal for global trade partners.",
-   "as_of": "2026-10-14",
-   "sources": [
-    "https://www.investing.com/economic-calendar/chinese-ppi-464",
-    "https://www.cnbc.com/2026/10/14/producer-prices-in-china-rise-fastest-since-june-2022-on-fuel-costs.html",
-    "https://eu.36kr.com/en/p/4042010532877188"
-   ],
-   "materiality": "high",
-   "classification": "story_gap",
-   "target_story": "s5_china_deflation",
-   "target_indicator": null,
-   "proposed_indicator": {
-    "label": "China PPI-CPI wedge (pp) \u2014 cost-push vs demand-pull signal",
-    "type": "value",
-    "rubric": "Difference between China PPI YoY and CPI YoY in percentage points. A large positive wedge (PPI >> CPI) indicates energy/commodity cost-push squeezing manufacturers without demand recovery \u2014 a stagflationary export signal. A large negative wedge (PPI << CPI) indicates deflationary factory-gate prices. Threshold: wedge >3pp = elevated concern; >5pp = high concern. Current (Sep 2026): PPI +5.0%, CPI roughly flat/slightly positive \u2192 wedge ~4\u20135pp.",
-    "sources": [
-     "https://www.investing.com/economic-calendar/chinese-ppi-464",
-     "https://www.cnbc.com/2026/10/14/producer-prices-in-china-rise-fastest-since-june-2022-on-fuel-costs.html"
-    ],
-    "suggested_weight": 0.25
-   },
-   "proposed_story": null,
-   "rationale": "The existing s5 indicator tracks 'China PPI YoY (%) \u2014 large swing either way is worse,' which captures the directional risk. However, the current episode is qualitatively new: the PPI spike is energy-driven (external supply shock) while domestic demand stays weak, creating a PPI-CPI wedge that existing indicators don't differentiate. A +5pp PPI with near-flat CPI means Chinese exporters face margin compression and may ultimately export deflation to finished goods while importing inflation via energy \u2014 a dual-channel risk requiring its own indicator to track.",
-   "status": "pending",
-   "first_seen": "2026-10-26",
-   "last_seen": "2026-10-26",
-   "sightings": 1,
-   "id": "china-ppi-surges-to-5-0-yoy-in-september-fastest-084bd0"
-  },
-  "imf-gfsr-october-2026-identifies-ai-driven-syste-f18434": {
-   "headline": "IMF GFSR October 2026 identifies AI-driven systemic cyber risk as a top-three catalyst for sharp financial-conditions tightening; hyperscalers now 10% of global IG bond issuance",
-   "summary": "The IMF's October 2026 Global Financial Stability Report names increasingly sophisticated cyberattacks \u2014 amplified by frontier AI \u2014 as one of three near-term catalysts (alongside AI asset correction and sovereign yield spikes) capable of triggering a sharp tightening of global financial conditions; separately, the report flags that hyperscalers now account for 10% of global investment-grade bond issuance (up from under 1% in 2024), concentrating both cyber and credit risk in the same set of entities.",
-   "as_of": "2026-10-13",
-   "sources": [
-    "https://www.elibrary.imf.org/display/book/9798229055673/9798229055673.xml",
-    "https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks",
-    "https://www.fxstreet.com/analysis/french-risk-spreads-from-oats-into-the-euro-as-assembly-takes-up-the-budget-202610130958",
-    "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html"
-   ],
-   "materiality": "medium",
-   "classification": "new_risk",
-   "target_story": null,
-   "target_indicator": null,
-   "proposed_indicator": null,
-   "proposed_story": {
-    "name": "AI-amplified cyber risk as systemic financial-stability threat",
-    "why": "The IMF GFSR October 2026 elevates AI-enhanced cyberattacks to a top-three global financial-stability risk, co-equal with sovereign yield spikes and an AI-equity correction. Frontier AI models are increasing the sophistication of state-sponsored and criminal attacks on financial infrastructure. This is structurally new: the same AI buildout that is concentrating credit risk in hyperscalers (now 10% of IG issuance) is also generating the offensive cyber capability to attack the financial system's digital backbone \u2014 clearinghouses, payment rails, custodians. No existing story captures this intersection; s21_clearinghouses covers financial chokepoints operationally but not the cyber threat vector; s8_ai_capex covers the financing cycle but not the security externality.",
-    "proposed_level": 6,
-    "set": "Set 1",
-    "indicators": [
-     {
-      "label": "Major financial-infrastructure cyber incident (0 none / 1 attempted/disrupted / 2 successful breach with systemic impact)",
-      "type": "band",
-      "rubric": "Track confirmed cyberattacks on systemically important financial institutions, payment systems, clearinghouses, or central banks. Score 0 if no material incidents; 1 if attack attempted or disrupted by defenses; 2 if successful breach causes operational outage, data exfiltration, or market disruption with systemic spillover. Source: CISA advisories, BIS, central bank disclosures, ISAC reports.",
-      "sources": [
-       "https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks",
-       "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html"
-      ],
-      "suggested_weight": 0.4
-     },
-     {
-      "label": "AI-offensive cyber capability escalation (0 stable / 1 elevated \u2014 state-actor use confirmed / 2 AI-generated attacks on financial infrastructure confirmed)",
-      "type": "band",
-      "rubric": "Track intelligence and vendor reports of AI-enhanced cyberattack tools targeting financial services. Score 0 if threat landscape stable; 1 if credible reports of state-sponsored or criminal groups deploying AI to enhance attack speed, evasion, or targeting of financial firms; 2 if AI-generated attacks are publicly attributed to a successful breach of a financial institution.",
-      "sources": [
-       "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
-       "https://www.elibrary.imf.org/display/book/9798229055673/9798229055673.xml"
-      ],
-      "suggested_weight": 0.35
-     },
-     {
-      "label": "Hyperscaler IG bond concentration (% of global IG issuance)",
-      "type": "value",
-      "rubric": "Track the share of global investment-grade bond issuance by AI hyperscalers (Microsoft, Google, Amazon, Meta, Apple, Oracle, CoreWeave). A rising share concentrates cyber and credit risk in the same entities. IMF benchmark: ~10% as of Oct 2026 (up from <1% in 2024). Threshold: >12% = elevated; >15% = high concentration risk.",
-      "sources": [
-       "https://www.fxstreet.com/analysis/french-risk-spreads-from-oats-into-the-euro-as-assembly-takes-up-the-budget-202610130958",
-       "https://www.elibrary.imf.org/display/book/9798229055673/9798229055673.xml"
-      ],
-      "suggested_weight": 0.25
-     }
-    ]
-   },
-   "rationale": "The IMF GFSR is the most authoritative global financial-stability publication and its explicit identification of AI-amplified cyber risk as a top-three systemic threat \u2014 alongside the RBA FSR's parallel finding about 'frontier AI models increasing the complexity of the international cyber threat landscape' \u2014 constitutes a material new risk not captured by any existing story. The novel structural feature is the feedback loop: AI capex concentrates IG bond issuance in hyperscalers while simultaneously generating offensive cyber tools that threaten the same financial system those bonds finance. This warrants a new story at proposed level 6 (real, rising, not yet acute) in Set 1 (financial plumbing).",
-   "status": "pending",
-   "first_seen": "2026-10-26",
-   "last_seen": "2026-10-26",
-   "sightings": 1,
-   "id": "imf-gfsr-october-2026-identifies-ai-driven-syste-f18434"
-  },
-  "bofa-estimates-ai-hyperscaler-capex-approaching--36c944": {
-   "headline": "BofA estimates AI hyperscaler CapEx approaching $800bn in 2026 (+67% YoY), trending toward $1 trillion in 2027; capex-vs-revenue gap concern intensifying",
-   "summary": "The IMF's October 13 World Economic Outlook (released at Bangkok Annual Meetings) explicitly flagged AI-investment borrowing by technology firms as compounding advanced-economy benchmark yield pressure, with public debt in advanced economies projected to reach 115% of GDP by 2031 from 108% in 2025; the GFSR (also released October 13) is expected to quantify AI capex debt risks in financial stability terms.",
-   "as_of": "2026-10-13",
-   "sources": [
-    "https://www.cnbc.com/2026/10/12/imf-world-bank-annual-meetings-october-bangkok-asia-.html",
-    "https://www.click2houston.com/business/2026/10/13/imf-raises-its-forecast-for-world-growth-this-year-but-warns-of-risks-from-ai-boom-and-debt/",
-    "https://www.imf.org/en/publications/gfsr/issues/2026/10/13/global-financial-stability-report-october-2026"
-   ],
-   "materiality": "medium",
-   "classification": "existing_indicator",
-   "target_story": "s8_ai_capex",
-   "target_indicator": "AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast)",
-   "proposed_indicator": null,
-   "proposed_story": null,
-   "rationale": "The IMF's explicit call-out of AI-investment borrowing as a source of advanced-economy yield pressure \u2014 at the flagship WEO level \u2014 is a material policy signal for s8_ai_capex. The AI capex-vs-revenue gap concern indicator should move toward '2 widening fast' given multilateral institutional recognition of the risk. This is not a new story but a significant escalation in the official narrative around an existing tracked risk.",
-   "status": "pending",
-   "first_seen": "2026-06-29",
-   "last_seen": "2026-10-13",
-   "id": "bofa-estimates-ai-hyperscaler-capex-approaching--36c944",
-   "sightings": 4
-  },
-  "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c": {
-   "headline": "China's Nov-2026 extraterritorial rare-earth enforcement deadline is 4 months away; aerospace yttrium shortages already reported",
-   "summary": "Following the Trump-Xi summit in Washington in late September 2026, China extended its one-year suspension of the expanded rare-earth export controls (originally due to expire November 10, 2026) until January 10, 2027, with no jointly documented critical-minerals settlement; the April 2025 controls on seven heavy REEs remain fully active, and the blacklist of 10 US and 14 EU firms imposed in June-July 2026 (including MP Materials and USA Rare Earth) was not lifted.",
-   "as_of": "2026-10-01",
-   "sources": [
-    "https://bisi.org.uk/reports/chinas-rare-earth-processing-dominance-and-what-the-trump-xi-summit-didnt-change",
-    "https://tech-insider.org/china-rare-earth-export-controls-hardware-2026/",
-    "https://en.wikipedia.org/wiki/Rare_earths_trade_dispute",
-    "https://anderseninstitute.org/chinas-export-control-architecture-and-its-use-of-critical-minerals-as-strategic-pressure-points/"
-   ],
-   "materiality": "high",
-   "classification": "existing_indicator",
-   "target_story": "s6_rare_earths",
-   "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
-   "proposed_indicator": null,
-   "proposed_story": null,
-   "rationale": "The pause status indicator for s6_rare_earths must be updated: the November 2026 expiry date has shifted to January 10, 2027, meaning the indicator moves from '1 expiring' back to '0 extended' \u2014 but only by 60 days and without a formal deal. Critically, the US domestic RE producer blacklist indicator should move to '1 entity-specific ban' given the June 2026 MOFCOM actions against MP Materials and USA Rare Earth. These are high-materiality changes to two existing indicators in the same story.",
-   "status": "pending",
-   "first_seen": "2026-07-03",
-   "last_seen": "2026-10-13",
-   "id": "china-s-nov-2026-extraterritorial-rare-earth-enf-e7819c",
-   "sightings": 21
-  },
-  "japan-10-year-jgb-yield-surges-to-2-7-2-8-30-yea-d8fccc": {
-   "headline": "Japan 10-Year JGB Yield Surges to ~2.7\u20132.8% (30-Year High), Yen Near 4-Decade Low; BOJ Hikes to 1%",
-   "summary": "PM Takaichi's \u00a510 trillion two-year consumption-tax cut is scheduled for submission to parliament in mid-October, but funding clarity remains elusive: the government pledged to avoid deficit-financing bonds yet has not identified an alternative revenue source. Oxford Economics has raised its end-2026 10Y JGB forecast to 2.8%; actual 10Y yields have already blown through that to 3.02% on Oct 12, with 30Y at 4.06%, pressuring carry-trade unwinds and JGB market functioning amid BoJ QT.",
-   "as_of": "2026-10-12",
-   "sources": [
-    "https://tradingeconomics.com/japan/government-bond-yield",
-    "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-05-october-2026",
-    "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
-   ],
-   "materiality": "high",
-   "classification": "existing_indicator",
-   "target_story": "s2_japan",
-   "target_indicator": "30-year JGB yield (%) AND Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly)",
-   "proposed_indicator": null,
-   "proposed_story": null,
-   "rationale": "30Y JGB is at 4.06% (data from Oct 12 Trading Economics), well above any prior tracker levels. The Takaichi financing-clarity indicator should move from 1 (unclear) toward 2 (disorderly): the mid-October bill submission without a credible funding mechanism was flagged explicitly by MUFG Research as 'a critical test.' Trump administration pressure on Japan's fiscal stance (noted by MUFG) adds an external layer. Both existing s2 indicators need immediate updates.",
-   "status": "pending",
-   "first_seen": "2026-07-05",
-   "last_seen": "2026-10-13",
-   "sightings": 3,
-   "id": "japan-10-year-jgb-yield-surges-to-2-7-2-8-30-yea-d8fccc"
-  },
-  "japan-us-coordinated-fx-intervention-july-31-str-7cd83d": {
-   "headline": "Japan\u2013US coordinated FX intervention July 31: structural yen weakness unresolved as BOJ faces fiscal-monetary trilemma",
-   "summary": "The Bank of Japan raised its policy rate 25bps to 1.25% in a split 7-2 decision on September 18, citing upside inflation risk, taking rates to their highest since 1995. The yen remains near 156-157 post-intervention (Japan and US conducted coordinated yen-buying in late July), while the 10-yr JGB yield sits at ~3.10% and the 30-yr at ~4.04%, with the curve reflecting both BOJ tightening trajectory and unresolved Takaichi fiscal risk premium.",
-   "as_of": "2026-10-12",
-   "sources": [
-    "https://www.cnbc.com/2026/09/18/japan-raises-rates-30-year-high-yen-jgb.html",
-    "https://tradingeconomics.com/japan/interest-rate",
-    "https://tradingeconomics.com/japan/30-year-bond-yield",
-    "https://asianbondsonline.adb.org/japan/"
-   ],
-   "materiality": "medium",
-   "classification": "story_gap",
-   "target_story": "s2_japan",
-   "target_indicator": null,
-   "proposed_indicator": {
-    "label": "US-Japan coordinated FX intervention flag (0 none / 1 unilateral BoJ / 2 joint US-Japan)",
-    "type": "band",
-    "rubric": "0 = no intervention; 1 = BoJ acting alone (standard); 2 = joint US Treasury + BoJ intervention signaling systemic yen stress. Current reading: 2. Reset to 1 when joint action ceases; to 0 after 90 days of market stability.",
-    "sources": [
-     "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-10-august-2026/",
-     "https://newsonjapan.com/article/150259.php"
-    ],
-    "suggested_weight": 0.15
-   },
-   "proposed_story": null,
-   "rationale": "The US-Japan coordinated FX intervention in late July is a qualitative escalation not captured by the current USD/JPY level indicator alone. Coordinated intervention signals a geopolitical dimension to yen management (Treasury Secretary Bessent publicly confirmed US involvement), changing the risk topology: it creates a de facto floor but also a political tripwire if the yen depreciates past it again. This gap in the indicator set matters for carry-unwind risk assessment.",
-   "status": "pending",
-   "first_seen": "2026-08-12",
-   "last_seen": "2026-10-13",
-   "sightings": 2,
-   "id": "japan-us-coordinated-fx-intervention-july-31-str-7cd83d"
   }
  },
  "shown": 10
