@@ -1,0 +1,110 @@
+{
+ "stories": {
+  "s1_basis_trade": {
+   "number": 1,
+   "title": "The Treasury “basis trade”: hidden leverage under the world’s safest asset"
+  },
+  "s2_japan": {
+   "number": 2,
+   "title": "Japan’s \\$2.3tn bet, the JGB market, and the carry-trade fuse"
+  },
+  "s3_private_credit": {
+   "number": 3,
+   "title": "Private credit’s quiet \\$2tn expansion — and its first cracks"
+  },
+  "s7_stablecoins": {
+   "number": 4,
+   "title": "Stablecoins quietly become a pillar — and a fault line — of Treasury demand"
+  },
+  "s21_clearinghouses": {
+   "number": 5,
+   "title": "Clearinghouses: the financial system’s hidden single point of failure"
+  },
+  "s8_ai_capex": {
+   "number": 6,
+   "title": "The AI build-out’s circular money machine"
+  },
+  "s9_cre": {
+   "number": 7,
+   "title": "The commercial real-estate “maturity wall” and your regional bank"
+  },
+  "s11_consumer_debt": {
+   "number": 8,
+   "title": "The hidden consumer-debt squeeze: subprime cars and “phantom” instalments"
+  },
+  "s13_insurance": {
+   "number": 9,
+   "title": "The quiet retreat of insurance — and why it threatens your home’s value"
+  },
+  "s4_dev_debt": {
+   "number": 10,
+   "title": "The silent debt crisis in the developing world"
+  },
+  "s10_france": {
+   "number": 11,
+   "title": "France: the eurozone’s quiet structural fault line"
+  },
+  "s12_gold_dedollar": {
+   "number": 12,
+   "title": "Central banks are quietly buying gold and trimming the dollar"
+  },
+  "s14_pensions": {
+   "number": 13,
+   "title": "The retirement math nobody wants to say out loud"
+  },
+  "s5_china_deflation": {
+   "number": 14,
+   "title": "China is exporting its deflation — the global transmission nobody frames clearly"
+  },
+  "s6_rare_earths": {
+   "number": 15,
+   "title": "Critical minerals as a weapon: “availability is not access”"
+  },
+  "s19_lithography": {
+   "number": 16,
+   "title": "The lithography chokepoint: one machine the whole digital world needs"
+  },
+  "s20_sea_lanes": {
+   "number": 17,
+   "title": "Sea lanes and undersea cables: the physical arteries of globalization"
+  },
+  "s15_ai_power": {
+   "number": 18,
+   "title": "AI’s power problem: the grid is the new bottleneck"
+  },
+  "s16_copper": {
+   "number": 19,
+   "title": "Copper: the metal the electric future can’t do without"
+  },
+  "s17_water": {
+   "number": 20,
+   "title": "Water: the economy’s most underpriced input"
+  },
+  "s18_food_fertilizer": {
+   "number": 21,
+   "title": "Food and fertilizer: a concentrated, fragile system"
+  }
+ },
+ "sections": {
+  "1": {
+   "name": "Funding & Leverage",
+   "intro": "*Funding & Leverage (Stories 1, 2, 3, 4, 5)*\n\nThese five stories share a single mechanism: leverage that lives in the plumbing of the financial system, funded by someone's very short-term money. The Treasury basis trade, Japan's carry trade, private credit, stablecoins, and the clearinghouses that sit behind them are rarely discussed together, but they fail the same way — through funding that can evaporate faster than the assets it supports can be sold.\n\nWhat has changed since the last edition is that the rate environment has turned against the whole section simultaneously. The 10-year Treasury yield briefly touched 5.34%, the MOVE index surpassed 100, and the Fed's September hike pushed floating-rate private credit borrowers further into distress — all while private credit's default rate more than doubled to a record. These are not independent data points: they are the same higher-for-longer shock expressing itself across different plumbing. The SOFR–EFFR spread, though still modest at 0.07%, has widened, signalling that repo funding conditions are beginning to feel the strain [Established]. The SEC's 30 October exemptive relief for certain repo transactions resolves one edge-case ambiguity in the clearing mandate without loosening its core [Established]. The basis trade and the clearinghouses remain mechanically coupled: the same positions moving into central clearing are the ones that must be margined when volatility spikes. Private credit is the slow-motion cousin — less marked-to-market but directly exposed to the rate level that is now rising. What ties the set together is reflexivity: a shock to funding costs forces selling that worsens the very prices that triggered it.\n\n---"
+  },
+  "2": {
+   "name": "Credit, Consumers & Valuations",
+   "intro": "*Credit, Consumers & Valuations (Stories 6, 7, 8, 9)*\n\nIf the previous section is about how fast money can leave, this one is about whether the underlying loans and asset values were ever worth what the books say. The AI build-out's circular financing, the commercial-real-estate maturity wall, the hidden consumer-debt squeeze, and the quiet retreat of insurance are all stories of deferred recognition — losses or risks that exist now but have not been booked yet.\n\nThe gap between mark and reality has widened materially since June. Office CMBS delinquency crossed a new threshold (12.16% in September, per Trepp [Single-source]), six bank failures in 2026 is the highest this decade [Established], and S&P Global Market Intelligence estimates the CRE maturity wall peaks again at approximately \\$1.26 trillion in 2027 — meaning the problem is not receding but shifting forward [Single-source]. On the AI side, hyperscaler capex is running at extraordinary multiples of AI revenue — Microsoft's quarterly capex doubled year-on-year to \\$39.4bn, Amazon's full-year guide approaches \\$220bn — while GPU-backed debt stress has become measurable, with CoreWeave's five-year credit-default-swap spread hitting an intraday record above 1,190 basis points in October [Single-source]. Consumer stress (Story 8) remains steady rather than worsening, and insurance retreat (Story 9) is grinding slowly rather than breaking. The common resolution mechanism is unchanged: extend-and-pretend works until the refinancing date arrives, at which point the loss is instantaneous. The rate environment hardening in Section 1 simply moves those dates closer and makes the gap larger.\n\n---"
+  },
+  "3": {
+   "name": "Sovereigns & the Monetary Order",
+   "intro": "*Sovereigns & the Monetary Order (Stories 10, 11, 12, 13)*\n\nThis section moves up a level, from private balance sheets to public ones and to the monetary system itself. Developing-world debt distress, France's slow fiscal-political fragility, central banks' steady accumulation of gold and gradual move away from the dollar, and the arithmetic of underfunded pensions are all stories about the solvency and credibility of the state and the money it issues.\n\nThe section's defining development since June is France (Story 11). The OAT–Bund spread hit 176 basis points on 23 October 2026, the widest since 2011. The 10-year OAT yield slipped slightly to 4.97% after Fitch maintained France's sovereign rating while revising its outlook to negative, a decision markets had read as partial relief. Analysts at Allianz Research noted that contagion has switched direction — the OAT sell-off has already spilled over to other European government bonds, raising the possibility of a move from country-specific fragility to general fragmentation. This matters for the whole section: a France under sustained market pressure reduces the ECB's room to let rates drift lower, which keeps sovereign borrowing costs elevated for developing-world debtors (Story 10) and widens the gap between public pension assumptions and reality (Story 13). Gold's easing to around \\$3,953/oz and the dollar's marginal reserve-share decline (56.70% at end-June 2026, per IMF COFER [Established]) tell a slow, structural story that the acute French stress now illustrates in compressed time.\n\n---"
+  },
+  "4": {
+   "name": "Geoeconomics & Trade Weapons",
+   "intro": "*Geoeconomics & Trade Weapons (Stories 14, 15, 16, 17)*\n\nThese four stories are about interdependence turned into leverage — the deliberate use of economic chokepoints as instruments of state power. China's factory-gate price swing, the weaponisation of rare earths and critical minerals, the single-company lithography chokepoint that gates advanced chips, and the contested sea lanes and undersea cables that physically carry trade and data are all nodes where one actor can squeeze the whole system.\n\nThe section's character has shifted since June in one important way: the Hormuz closure (Story 17) has moved from an acute event to a structural feature of the global economy. Oil flows through the Strait of Hormuz fell roughly 26% between Q4 2025 and Q2 2026. IMF PortWatch recorded just two transits on 25 October against a pre-crisis baseline of 85 per day — Day 246 of closure [Single-source]. Inflation has been running comfortably ahead of the Fed's 2% target, driven primarily by oil prices: gasoline was up 34.2% year-on-year per the September Bureau of Labor Statistics report. The Fed's 25 basis-point hike can only restrain second-round wage and expectation effects — it cannot reopen a shipping lane. China's story (Story 14) has bifurcated: the PPI surged to +5.0% year-on-year in September, its fastest pace in four years, partly because of the same energy-cost transmission from the Gulf [Established]. The rare-earth extension to January 2027 (Story 15) remains unconfirmed in writing, while the lithography story (Story 16) is unchanged. The connective tissue — deliberate concentration of supply at points where one actor can close a valve — is more visible now than it was in June, because one valve has actually been closed for eight months.\n\n---"
+  },
+  "5": {
+   "name": "Physical & Resource Limits",
+   "intro": "*Physical & Resource Limits (Stories 18, 19, 20, 21)*\n\nThe final section grounds the whole brief in physical reality: the digital, electrified economy is colliding with hard limits in power, metal, water, and food. AI's power problem and the grid bottleneck, copper's structural surplus and mine disruptions, the underpricing of water, and the concentrated fragility of food and fertiliser are stories where no amount of financial engineering changes the binding constraint — you cannot print electrons, copper, water, or calories.\n\nSince June, the section has grown both louder and more internally contradictory. On one side, the AI power crisis (Story 18) has become a political battle: New York's data-centre moratorium has been followed by restricting orders across dozens of states, PJM's capacity auction left a 6.8 GW shortfall for the 2028/29 delivery year — the first such failure — and FERC largely struck down PJM's proposed curtailment-first fix, leaving the liability question unresolved [Established]. On the food side (Story 21), disruption to oil supply from the region, coupled with other production pressures, has sent energy-related costs rocketing, which flows directly into fertiliser inputs: ships have been struck in the Strait of Hormuz nearly every day in October, and the FAO Food Price Index averaged 136.0 points in September 2026, its highest since November 2022 [Established]. On the other side, Taiwan's reservoirs have recovered to roughly 59.2% of capacity (Story 20), easing one acute chip-hub risk, and the copper market remains in surplus through 2027 per the ICSG's October forecast (Story 19). The physical limits here are arithmetic, not sentiment, which is precisely why they are priced slowly — and why the Hormuz closure is the clearest demonstration in years of what happens when a physical constraint suddenly becomes binding.\n\n---"
+  }
+ }
+}

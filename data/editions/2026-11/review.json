@@ -1,0 +1,226 @@
+{
+ "edition": "2026-11",
+ "stories": {
+  "s1_basis_trade": {
+   "mode": "rewrite",
+   "note": "",
+   "issues": [],
+   "level": [
+    6,
+    7
+   ]
+  },
+  "s2_japan": {
+   "mode": "refresh",
+   "note": "3 edit(s) applied",
+   "issues": [
+    "1 suggested edit(s) did not match the text and were skipped",
+    "cross-check: BoJ claims have no source in the Sources list: the 16 June 2026 policy-rate hike to 1.0% ('highest since 1995') and the October BoJ 'hold' cited as the reason for the 10-year yield pullback",
+    "cross-check: Debt-to-GDP near 232% is tagged [Single-source] but no matching market write-up appears in the Sources list; the 'three fiscal scenarios' projection is likewise unsourced",
+    "cross-check: Nikkei 225 briefly topping 70,000 for the first time is a specific market claim with no supporting source among the listed Sources",
+    "cross-check: FSA 'accelerating a review of unrealised losses' goes beyond the cited Insurance Business source, which only covers midsize life insurers trimming superlong JGB exposure",
+    "cross-check: 10-year yield 'peaked above 3.1% in early October 2026' is not evidenced by the listed sources or the DATA PACK, which only documents an October 10y auction clearing at 3.101%"
+   ],
+   "level": [
+    7,
+    7
+   ]
+  },
+  "s3_private_credit": {
+   "mode": "rewrite",
+   "note": "",
+   "issues": [],
+   "level": [
+    6,
+    8
+   ]
+  },
+  "s7_stablecoins": {
+   "mode": "refresh",
+   "note": "2 edit(s) applied",
+   "issues": [
+    "2 suggested edit(s) did not match the text and were skipped"
+   ],
+   "level": [
+    4,
+    4
+   ]
+  },
+  "s21_clearinghouses": {
+   "mode": "rewrite",
+   "note": "",
+   "issues": [],
+   "level": [
+    4,
+    5
+   ]
+  },
+  "s8_ai_capex": {
+   "mode": "refresh",
+   "note": "4 edit(s) applied",
+   "issues": [
+    "2 suggested edit(s) did not match the text and were skipped"
+   ],
+   "level": [
+    7,
+    7
+   ]
+  },
+  "s9_cre": {
+   "mode": "rewrite",
+   "note": "",
+   "issues": [],
+   "level": [
+    5,
+    6
+   ]
+  },
+  "s11_consumer_debt": {
+   "mode": "refresh",
+   "note": "4 edit(s) applied",
+   "issues": [],
+   "level": [
+    6,
+    6
+   ]
+  },
+  "s13_insurance": {
+   "mode": "refresh",
+   "note": "4 edit(s) applied",
+   "issues": [
+    "cross-check: The plain-terms box says 'disasters are causing record losses' and the narrative says losses are 'mounting,' but the DATA PACK shows catastrophe-loss pressure at band 0 (normal): 9M-2026 insured losses of $91bn are the lowest since 2019 and well below the $135bn 5-year average.",
+    "cross-check: Story claims insurers are 'exiting whole regions' (present tense), but the DATA PACK agent fact states no top-10 insurer fully exited a major state post-Oct 7 2026, 6 of CA's top-10 committed to stay/grow, and Allstate refiled to re-enter CA; tracker band is 'rising,' not accelerating/exit.",
+    "cross-check: 'US insured catastrophe losses reached $112.7bn in 2024, up 36% year-on-year' has no fitting source in the Sources list — the only Aon source cited is the Q3 2026 recap, which covers 2026 losses.",
+    "cross-check: Quote attributed to 'a US Senate Budget Committee investigation' ('2008 all over again') has no corresponding source in the Sources list; appears unverifiable/possibly invented.",
+    "cross-check: 'Confirmed by the October 2026 NAIC MCAS data' misdates the source: the DATA PACK identifies the NAIC MCAS report as August 2026.",
+    "cross-check: Consumer Federation analysis figures (1 in 13 homeowners uninsured; ~$1.6tn unprotected home value) have no source in the Sources list covering them."
+   ],
+   "level": [
+    5,
+    5
+   ]
+  },
+  "s4_dev_debt": {
+   "mode": "rewrite",
+   "note": "",
+   "issues": [],
+   "level": [
+    5,
+    5
+   ]
+  },
+  "s10_france": {
+   "mode": "rewrite",
+   "note": "",
+   "issues": [],
+   "level": [
+    5,
+    5
+   ]
+  },
+  "s12_gold_dedollar": {
+   "mode": "refresh",
+   "note": "2 edit(s) applied",
+   "issues": [
+    "2 suggested edit(s) did not match the text and were skipped"
+   ],
+   "level": [
+    4,
+    4
+   ]
+  },
+  "s14_pensions": {
+   "mode": "refresh",
+   "note": "2 edit(s) applied",
+   "issues": [
+    "1 suggested edit(s) did not match the text and were skipped",
+    "cross-check: CURRENT THREAT LEVEL headline says 'Large but distant', which contradicts the DATA PACK band_now 'Moderate' (level 4, raw 4.25)",
+    "cross-check: Core Social Security claim (June 2026 Trustees Report: OASI depletion Q4 2032, ~22% automatic cut, ~78% coverage) is attributed in text to the Trustees report but no ssa.gov/Trustees source appears in the story's Sources list",
+    "cross-check: Sources list contains the same Milliman PPFI link duplicated three times instead of distinct sources for the other pension claims (e.g., the $68.3tn global-assets and dependency-ratio statistics)"
+   ],
+   "level": [
+    4,
+    4
+   ]
+  },
+  "s5_china_deflation": {
+   "mode": "rewrite",
+   "note": "",
+   "issues": [],
+   "level": [
+    7,
+    7
+   ]
+  },
+  "s6_rare_earths": {
+   "mode": "refresh",
+   "note": "4 edit(s) applied",
+   "issues": [
+    "1 suggested edit(s) did not match the text and were skipped"
+   ],
+   "level": [
+    7,
+    7
+   ]
+  },
+  "s19_lithography": {
+   "mode": "refresh",
+   "note": "1 edit(s) applied",
+   "issues": [
+    "1 suggested edit(s) did not match the text and were skipped",
+    "cross-check: Header 'CURRENT THREAT LEVEL: Extreme single point of failure' contradicts the DATA PACK band_now 'Elevated' (level 6, unchanged); the body itself correctly states the threat level remains Elevated."
+   ],
+   "level": [
+    6,
+    6
+   ]
+  },
+  "s20_sea_lanes": {
+   "mode": "rewrite",
+   "note": "",
+   "issues": [],
+   "level": [
+    6,
+    7
+   ]
+  },
+  "s15_ai_power": {
+   "mode": "rewrite",
+   "note": "",
+   "issues": [],
+   "level": [
+    7,
+    7
+   ]
+  },
+  "s16_copper": {
+   "mode": "refresh",
+   "note": "2 edit(s) applied",
+   "issues": [
+    "2 suggested edit(s) did not match the text and were skipped"
+   ],
+   "level": [
+    5,
+    5
+   ]
+  },
+  "s17_water": {
+   "mode": "rewrite",
+   "note": "",
+   "issues": [],
+   "level": [
+    5,
+    5
+   ]
+  },
+  "s18_food_fertilizer": {
+   "mode": "rewrite",
+   "note": "",
+   "issues": [],
+   "level": [
+    7,
+    7
+   ]
+  }
+ }
+}

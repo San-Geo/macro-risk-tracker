@@ -1,5 +1,5 @@
 {
- "due": true,
+ "due": false,
  "cadence": "quarterly",
  "reasons": [
   "4 stories changed band",
@@ -43,8 +43,10 @@
    ]
   }
  },
- "draft_pending": [],
- "summary": "due now (quarterly: 4 stories changed band; overall moved 1.3; stories at High went 6 -> 9)",
+ "draft_pending": [
+  "2026-11"
+ ],
+ "summary": "draft 2026-11 is waiting for review",
  "current": "2026",
  "checked": "2026-11-02"
 }
