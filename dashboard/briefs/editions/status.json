@@ -5,7 +5,7 @@
   "overall moved 1.0"
  ],
  "drift": {
-  "as_of": "2026-11-05",
+  "as_of": "2026-11-06",
   "edition": "2026",
   "months": 4.2,
   "band_changes": 3,
@@ -17,7 +17,7 @@
   "overall_move": 1.0,
   "stories_added": [],
   "stories_retired": [],
-  "indicator_band_changes": 15,
+  "indicator_band_changes": 14,
   "moved": {
    "s20_sea_lanes": [
     6,
@@ -42,5 +42,5 @@
  ],
  "summary": "draft 2026-11 is waiting for review",
  "current": "2026",
- "checked": "2026-11-05"
+ "checked": "2026-11-06"
 }

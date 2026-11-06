@@ -8891,7 +8891,7 @@
       },
       "proposed_story": null,
       "rationale": "S8_ai_capex already tracks AI capex circular financing and GPU-backed debt stress, but has no indicator capturing the specific and growing phenomenon of investment-grade structured debt backed by hyperscaler leases\u2014a form of off-balance-sheet leverage that a central bank FSR has now explicitly flagged. The Meta/Blue Owl $30 bn deal is a data point suggesting this market segment may already be material enough to affect credit spreads in ways not captured by the existing IG OAS proxy.",
-      "status": "pending",
+      "status": "expired",
       "first_seen": "2026-10-06",
       "last_seen": "2026-10-06",
       "sightings": 1,
@@ -8923,7 +8923,7 @@
       },
       "proposed_story": null,
       "rationale": "The existing s10_france indicators (OAT-Bund spread, govt stability, rating action) capture the symptoms but not the critical firebreak mechanism. Whether or not the ECB can ride to France's rescue is the single most important second-order question: if TPI is blocked (score 2), France faces a self-reinforcing spiral with no lender of last resort, analogous to 2011 Italy before Draghi's 'whatever it takes'. This gap is material enough to add as a new indicator immediately, given that legal and political debates over TPI eligibility are already live.",
-      "status": "pending",
+      "status": "expired",
       "first_seen": "2026-10-06",
       "last_seen": "2026-10-06",
       "sightings": 1,
@@ -10135,6 +10135,6 @@
   "generated": "2026-11-02",
   "model": "claude-sonnet-4-6",
   "new_count": 6,
-  "pending_count": 53,
+  "pending_count": 51,
   "expired_now": 12
 }
