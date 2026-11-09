@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06T18:28:10.397207+00:00",
+  "generated": "2026-11-09T21:44:51.516847+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -126,9 +126,9 @@
     }
   },
   "sensitivity": {
-    "as_of_overall": 7.5,
+    "as_of_overall": 7.3,
     "max_story_swing": 2,
-    "max_overall_swing": 0.4,
+    "max_overall_swing": 0.5,
     "movers": [
       {
         "id": "license_flow",
@@ -138,7 +138,7 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.4,
-        "overall_swing": 0.4
+        "overall_swing": 0.5
       },
       {
         "id": "regional_bank_stress",
@@ -151,6 +151,16 @@
         "overall_swing": 0.2
       },
       {
+        "id": "usdjpy",
+        "label": "USD/JPY (yen strengthening = lower = risk)",
+        "story": "Japan fiscal / JGB / carry trade",
+        "set": 1,
+        "weight": 1.5,
+        "story_swing": 2,
+        "set_swing": 0.3,
+        "overall_swing": 0.4
+      },
+      {
         "id": "direct_lending_default",
         "label": "Direct-lending default rate (%, Fitch incl. distressed exchanges)",
         "story": "Private credit's opaque expansion",
@@ -159,16 +169,6 @@
         "story_swing": 2,
         "set_swing": 0.3,
         "overall_swing": 0.4
-      },
-      {
-        "id": "usdjpy",
-        "label": "USD/JPY (yen strengthening = lower = risk)",
-        "story": "Japan fiscal / JGB / carry trade",
-        "set": 1,
-        "weight": 1.5,
-        "story_swing": 2,
-        "set_swing": 0.3,
-        "overall_swing": 0.2
       },
       {
         "id": "peg_deviation",
@@ -198,7 +198,7 @@
         "weight": 1.5,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.4
       },
       {
         "id": "china_ppi",
@@ -208,7 +208,7 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.4
       },
       {
         "id": "trade_actions",
@@ -218,7 +218,7 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.4
       },
       {
         "id": "truce_status",
@@ -228,7 +228,7 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.4
       },
       {
         "id": "re_blacklist",
@@ -238,7 +238,7 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.4
       },
       {
         "id": "ai_revenue_gap",
@@ -248,7 +248,7 @@
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,
-        "overall_swing": 0.3
+        "overall_swing": 0.4
       }
     ],
     "note": "The overall is tail-weighted, not a flat mean, so a single indicator still can't swing it far - the headline is robust by construction. The leverage that matters is on each STORY: the indicators below are where a wrong fact does the most damage and most deserves cross-checking."

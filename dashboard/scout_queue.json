@@ -1,10 +1,194 @@
 {
- "generated": "2026-11-02",
+ "generated": "2026-11-09",
  "model": "claude-sonnet-4-6",
- "new_count": 6,
- "pending_count": 51,
- "expired_now": 12,
+ "new_count": 2,
+ "pending_count": 43,
+ "expired_now": 10,
  "items": {
+  "boj-officials-signal-rate-hikes-every-few-months-17d037": {
+   "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
+   "summary": "The Bank of Japan held its policy rate at 1.25% at the October 29\u201330 meeting but its September minutes explicitly flagged the case for further hikes, with markets pricing a December move to 1.50%. The 30-year JGB yield stands at 3.83%\u201473bp above a year ago\u2014driven by a combination of BOJ normalisation, Japan's fiscal expansion programme and the global energy-shock repricing of real rates. Real wages rose for a ninth consecutive month in September, reinforcing the hike narrative.",
+   "as_of": "2026-11-06",
+   "sources": [
+    "https://tradingeconomics.com/japan/interest-rate",
+    "https://tradingeconomics.com/japan/30-year-bond-yield",
+    "https://asianbondsonline.adb.org/japan/",
+    "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
+   ],
+   "materiality": "medium",
+   "classification": "existing_indicator",
+   "target_story": "s2_japan",
+   "target_indicator": "30-year JGB yield (%)",
+   "proposed_indicator": null,
+   "proposed_story": null,
+   "rationale": "The 30-year JGB yield at 3.83% (up 73bp YoY) is a material update to the s2_japan tracker. A December hike to 1.50% would further compress the yen carry-trade spread and tighten the fiscal arithmetic. The Takaichi-plan financing clarity indicator should also be reviewed: Oxford Economics has raised its end-2026 10-year JGB yield forecast to 2.8% and flags ongoing fiscal expansion risk, keeping that rubric at '1 unclear'. The yen carry-trade unwind risk (USD/JPY implications) remains live.",
+   "status": "pending",
+   "first_seen": "2026-06-30",
+   "last_seen": "2026-11-09",
+   "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
+   "sightings": 44
+  },
+  "strait-of-hormuz-partial-reopening-in-early-june-3cc554": {
+   "headline": "Strait of Hormuz: partial reopening in early June after ~3-month near-total blockade, but mines uncleared and flows well below pre-war levels (as of late June 2026)",
+   "summary": "The 2026 Iran-war Hormuz disruption remains the dominant macro shock in energy markets, with the IEA characterising it as the largest oil-supply disruption in history (~12 Mbpd net shortfall). On November 9, oil fell ~4% as Trump signalled diplomatic restraint on Iran, but a drone strike suspending production at Iraq's Khor Mor gas field and a Houthi missile hitting an Aramco building in Riyadh underscore that physical supply-chain fragility persists.",
+   "as_of": "2026-11-09",
+   "sources": [
+    "https://www.everhint.com/commodities-futures-november-09-2026-morning-update-last-24-hours-pacific-time/",
+    "https://cepr.org/voxeu/columns/energy-markets-under-chokepoint-stress-2026-hormuz-shock",
+    "https://www.utilities-me.com/news/iea-details-middle-east-energy-shock",
+    "https://www.axios.com/2026/11/06/iran-war-renewables-iea-report"
+   ],
+   "materiality": "high",
+   "classification": "existing_indicator",
+   "target_story": "s20_sea_lanes",
+   "target_indicator": "Hormuz/Red Sea status",
+   "proposed_indicator": null,
+   "proposed_story": null,
+   "rationale": "The Hormuz/Red Sea status indicator in s20_sea_lanes should be maintained at '2 closed/contested'. The Nov-9 Khor Mor gas-field drone strike is a fresh incremental supply disruption (Iraq gas, not just Hormuz crude) and the Aramco symbolic strike keeps escalation risk alive even as Trump's diplomatic signalling temporarily depressed prices. WTI/Brent price and the Hormuz status indicator both require updates. The energy shock also feeds directly into s18_food_fertilizer (Qatar LNG force-majeure affects nitrogen-fertilizer feedstock) and s4_dev_debt (EM energy-import bills surging).",
+   "status": "pending",
+   "first_seen": "2026-07-01",
+   "last_seen": "2026-11-09",
+   "id": "strait-of-hormuz-partial-reopening-in-early-june-3cc554",
+   "sightings": 16
+  },
+  "china-japan-rare-earth-dual-use-controls-expand--f24a9c": {
+   "headline": "China\u2013Japan Rare-Earth / Dual-Use Controls Expand to Trigger GDP-Level Supply Chain Risk; November 2026 Broader Suspension Expiry Looms",
+   "summary": "China's Ministry of Commerce on Nov 9 formally extended the suspension of October-2025 rare-earth export controls\u2014covering 7 heavy rare earths, superhard materials, magnet/recycling technology, and the extraterritorial 0.1% rule\u2014for two additional months, alongside a parallel pause on a 24% tariff surcharge on US goods. The extension preserves the Busan/Oct-2025 trade truce ahead of an expected Trump-Xi APEC summit in Shenzhen, but leaves the April-2025 licensing regime for dysprosium, terbium, and five other heavy rare earths intact.",
+   "as_of": "2026-11-09",
+   "sources": [
+    "https://www.thenationalnews.com/news/us/2026/11/09/china-extends-pause-on-rare-earth-export-curbs-for-two-months/",
+    "https://www.usnews.com/news/world/articles/2026-11-09/china-extends-suspension-of-new-rare-earth-controls-until-january",
+    "https://www.theepochtimes.com/china/china-extends-pause-on-us-tariffs-rare-earth-curbs-for-another-2-months-6122442"
+   ],
+   "materiality": "high",
+   "classification": "existing_indicator",
+   "target_story": "s6_rare_earths",
+   "target_indicator": "Nov-2025 pause status",
+   "proposed_indicator": null,
+   "proposed_story": null,
+   "rationale": "The Nov-10 pause-expiry date was the single most watched trigger in s6_rare_earths. The 2-month roll (not a full settlement) updates the 'Nov-2025 pause status' indicator from '1 expiring' back to '0 extended', but the April-2025 licensing regime remains live and the Jan-10 cliff now becomes the next critical date. The US defense ban on Chinese-origin rare earths also takes effect Jan 1, 2027, meaning two countdowns now converge inside 60 days. Materially updates the rubric for the pause-status indicator.",
+   "status": "pending",
+   "first_seen": "2026-07-04",
+   "last_seen": "2026-11-09",
+   "sightings": 6,
+   "id": "china-japan-rare-earth-dual-use-controls-expand--f24a9c"
+  },
+  "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb": {
+   "headline": "Synchronized global sovereign bond rout: US 10y at 4.80%, UK 30y at 5.82% (highest since 1998), German 10y at 2011 highs",
+   "summary": "France's 10-year OAT\u2013Bund spread reached 176 bps on October 23 and stood at 148 bps on November 5\u2014the widest since the 2011 eurozone sovereign-debt crisis\u2014driven by a fiscal deficit estimated at 5.4% of GDP, political paralysis over the budget, and a November 3 budget revenue-vote that failed to restore confidence. A Moody's rating review is due November 27, and analysts warn that a downgrade or continued spread widening toward 200 bps could trigger contagion to Italy and test ECB TPI activation eligibility.",
+   "as_of": "2026-11-05",
+   "sources": [
+    "https://www.lseg.com/en/insights/ftse-russell/how-do-you-like-your-oats",
+    "https://www.zerohedge.com/markets/france-braces-moodys-downgrade-oat-bund-spread-hits-eu-crisis-level-highs",
+    "https://seekingalpha.com/article/4962280-european-bond-spreads-duel-with-bad",
+    "https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html"
+   ],
+   "materiality": "high",
+   "classification": "existing_indicator",
+   "target_story": "s10_france",
+   "target_indicator": "OAT-Bund 10y spread (%)",
+   "proposed_indicator": null,
+   "proposed_story": null,
+   "rationale": "The OAT-Bund spread has escalated materially since the last tracker update\u2014now at multi-year highs and approaching a critical Moody's review date (Nov 27). The Rating action indicator for s10_france should be upgraded from '1 negative outlook' toward '2 downgrade' watch. The budget vote failure and ECB's explicit reluctance to invoke TPI for France (due to deficit disqualification) make this a live systemic risk for eurozone fragility, not just a French idiosyncratic story.",
+   "status": "pending",
+   "first_seen": "2026-09-11",
+   "last_seen": "2026-11-09",
+   "sightings": 11,
+   "id": "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb"
+  },
+  "nasdaq-enters-correction-11-9-after-democratic-m-9fb1dd": {
+   "headline": "Nasdaq enters correction (-11.9%) after Democratic midterm sweep triggers data-center moratorium fears",
+   "summary": "On November 5, the Nasdaq Composite fell 5.52% and the Nasdaq-100 dropped 6.4%\u2014its worst single day since March 2020\u2014wiping ~$2.5 trillion in market value as investors priced in tighter AI-infrastructure regulation following Democratic 'blue-wave' midterm victories. 40 of 41 state ballot measures on data-center construction restrictions passed, and ING simultaneously sought to offload a $500M portfolio of 12 data-center loans, the first visible bank-to-private-credit deleveraging in AI infrastructure.",
+   "as_of": "2026-11-05",
+   "sources": [
+    "https://www.cnn.com/2026/11/05/investing/tech-heavy-nasdaq-plunges",
+    "https://www.cnbc.com/2026/11/06/ing-ai-data-center-loans-debt.html",
+    "https://thenextweb.com/news/ai-stocks-sell-off-nasdaq-correction",
+    "https://finance.yahoo.com/technology/ai/articles/ai-data-center-stocks-slip-112314079.html"
+   ],
+   "materiality": "high",
+   "classification": "story_gap",
+   "target_story": "s8_ai_capex",
+   "target_indicator": null,
+   "proposed_indicator": {
+    "label": "AI-capex political/regulatory headwind (0 none / 1 emerging / 2 acute)",
+    "type": "band",
+    "rubric": "0 = no material legislative or ballot-measure threat to data-center construction pipeline; 1 = isolated state-level moratoria or proposed regulation affecting <10% of planned US capacity; 2 = multi-state moratoria or federal legislation that credibly delays >10% of the announced hyperscaler/Stargate capex pipeline. Current reading: 2 (40/41 ballot measures passed restricting data-center construction across 10 states; Texas Governor-elect campaigned on a moratorium).",
+    "sources": [
+     "https://www.cnn.com/2026/11/05/investing/tech-heavy-nasdaq-plunges",
+     "https://thenextweb.com/news/ai-stocks-sell-off-nasdaq-correction",
+     "https://en.sedaily.com/international/2026/11/06/nasdaq-plunges-55-percent-into-correction-on-ai-regulation"
+    ],
+    "suggested_weight": 0.25
+   },
+   "proposed_story": null,
+   "rationale": "s8_ai_capex already tracks capex-vs-revenue gap and GPU-backed debt stress, but has no indicator for the political/regulatory risk to the construction pipeline itself. The midterm ballot-measure wave is a structurally new transmission channel: it simultaneously raises the capex overhang risk (projects delayed = sunk-cost debt with no revenue) and the GPU-backed debt refinancing stress. The ING loan-sale is a leading edge of GPU/data-center debt redistribution into private credit (crosslinks s3_private_credit). A new ordinal indicator is needed to track this dimension.",
+   "status": "pending",
+   "first_seen": "2026-11-09",
+   "last_seen": "2026-11-09",
+   "sightings": 1,
+   "id": "nasdaq-enters-correction-11-9-after-democratic-m-9fb1dd"
+  },
+  "euro-area-ppi-hits-record-11-1-global-energy-sho-90bf86": {
+   "headline": "Euro Area PPI hits record 11.1%; global energy shock feeding sticky upstream inflation and ECB rate-hike pressure",
+   "summary": "Eurozone producer-price inflation rose to a record 11.1% in October (the highest in the series), driven by energy-cost pass-through from the Hormuz oil shock, with the ECB holding its deposit rate at 2.5% despite inflation hitting a three-year high of 3.8% in September. Markets are pricing a December ECB hike, while China's factory-gate prices rose 5.0% YoY and UK motor-fuel prices were up ~30%, signalling a broad-based, energy-driven PPI shock across major economies.",
+   "as_of": "2026-11-08",
+   "sources": [
+    "https://tanaysuthar.substack.com/p/global-macro-weekly-8th-november",
+    "https://analysisofficial.substack.com/p/global-macro-week-ahead-nov-913-2026",
+    "https://www.hitchell.com/post/november-2026-market-update",
+    "https://research-center.amundi.com/article/global-investment-views-november-2026"
+   ],
+   "materiality": "high",
+   "classification": "new_risk",
+   "target_story": null,
+   "target_indicator": null,
+   "proposed_indicator": null,
+   "proposed_story": {
+    "name": "Energy-shock second-round inflation (stagflation corridor)",
+    "why": "The 2026 Hormuz disruption has now produced a simultaneous, multi-economy PPI surge (Eurozone record 11.1%, China +5.0%, UK fuel +30%) that is feeding into consumer prices and forcing central banks in both developed markets (ECB, BOE, RBA) and emerging markets to tighten even as growth slows. This is distinct from s20_sea_lanes (physical disruption) and s18_food_fertilizer (food/fertilizer specific); it represents a macro-financial transmission risk\u2014rising real rates, compressed corporate margins, EM hard-currency stress from imported inflation\u2014that cuts across multiple existing stories but is not fully captured by any single one. The IMF projects global headline inflation at 4.7% in 2026, and the feedback loop between energy prices, wage expectations, and central-bank credibility is the dominant macro risk for H1 2027.",
+    "proposed_level": 8,
+    "set": "Set 3",
+    "indicators": [
+     {
+      "label": "Eurozone PPI YoY (%)",
+      "type": "value",
+      "rubric": "Current: 11.1% (Oct 2026 record). Threshold: >8% = elevated; >10% = acute second-round risk. Source: Eurostat flash PPI release.",
+      "sources": [
+       "https://tanaysuthar.substack.com/p/global-macro-weekly-8th-november",
+       "https://analysisofficial.substack.com/p/global-macro-week-ahead-nov-913-2026"
+      ],
+      "suggested_weight": 0.3
+     },
+     {
+      "label": "Number of G20 CBs actively hiking (count, rolling 3-month)",
+      "type": "value",
+      "rubric": "0\u20132 = contained; 3\u20135 = coordinated tightening; 6+ = synchronised shock risk. Tracks ECB, BOE, RBA, Banxico, SARB, etc. Current: at least 4 (ECB Dec hike priced, RBA hiked to 6.85%, EM CBs turning hawkish per Nov-8 data).",
+      "sources": [
+       "https://www.marketintelshot.com/2026/11/2026-11-08-yield-inflation-rates-global.html",
+       "https://tanaysuthar.substack.com/p/global-macro-weekly-8th-november"
+      ],
+      "suggested_weight": 0.35
+     },
+     {
+      "label": "Stagflation signal composite (0 no / 1 partial / 2 confirmed)",
+      "type": "band",
+      "rubric": "0 = inflation falling AND growth above trend in all G7; 1 = inflation sticky + growth slowing in \u22652 G7; 2 = inflation rising + contraction in \u22651 G7 or global PMI <49. Current: 1 (inflation sticky across G7, Eurozone growth mixed, UK/Germany stagnating).",
+      "sources": [
+       "https://research-center.amundi.com/article/global-investment-views-november-2026",
+       "https://allaboutshipping.co.uk/wp-content/uploads/2026/11/GLOBAL_AND_REGIONAL_MONTHLY_November-2026.pdf"
+      ],
+      "suggested_weight": 0.35
+     }
+    ]
+   },
+   "rationale": "No existing story fully captures the second-order macro-financial transmission of the Hormuz energy shock into a synchronised global tightening cycle. s20_sea_lanes tracks the physical chokepoint; s18_food_fertilizer tracks food/fertilizer; s4_dev_debt tracks EM debt stress. But the cross-cutting risk\u2014record Eurozone PPI forcing ECB hikes even as growth slows, compressing sovereign fiscal space (France, Italy), raising EM hard-currency debt servicing costs, and tightening the AI-capex financing environment simultaneously\u2014warrants a dedicated story. The IMF's 4.7% global inflation forecast for 2026 and the ECB's reluctance to backstop French debt while also hiking rates is the core fragility.",
+   "status": "pending",
+   "first_seen": "2026-11-09",
+   "last_seen": "2026-11-09",
+   "sightings": 1,
+   "id": "euro-area-ppi-hits-record-11-1-global-energy-sho-90bf86"
+  },
   "strait-of-hormuz-effectively-closed-by-us-iran-w-beb73d": {
    "headline": "Strait of Hormuz Effectively Closed by US-Iran War; Brent Above $110\u2013$117, Global Inventories Down ~1 Billion Barrels",
    "summary": "The US-Iran war that began February 28, 2026 has cut Hormuz throughput from 21.6 mb/d to ~10.9 mb/d by September, with OPEC+ freezing December targets for a third consecutive month on November 1 and Brent settling at $117.64 on October 30. Peace-talk optimism briefly pushed oil below $100 on November 2, but supply buffers are near exhaustion per ADNOC's CEO.",
@@ -95,154 +279,6 @@
    "last_seen": "2026-11-02",
    "sightings": 1,
    "id": "ai-capex-debt-collision-drives-30-year-treasury--652dd0"
-  },
-  "boj-holds-at-1-25-oct-30-but-30-year-jgb-hits-re-d4538c": {
-   "headline": "BOJ Holds at 1.25% (Oct 30) but 30-Year JGB Hits Record 4.15\u20134.20%; December Hike Fully Priced; Yen Carry Unwind Risk Resurfaces",
-   "summary": "The Bank of Japan held its policy rate at 1.25% on October 30 as expected, but the 30-year JGB yield is at a record ~4.15\u20134.20% and markets are pricing a December hike to 1.50%. Seven CNBC-surveyed analysts see the 30-year JGB reaching 4%\u20134.1%, with BOJ normalization and shifting institutional repatriation flows compressing the rate differential \u2014 raising yen carry-trade reversal risk.",
-   "as_of": "2026-10-30",
-   "sources": [
-    "https://www.cnbc.com/2026/10/27/boj-october-meeting-rate-cnbc-survey.html",
-    "https://finance.yahoo.com/markets/currencies/articles/japan-bonds-steady-ahead-boj-054055160.html",
-    "https://admiralmarkets.com/analytics/traders-blog/global-macro-risks-2026"
-   ],
-   "materiality": "medium",
-   "classification": "existing_indicator",
-   "target_story": "s2_japan",
-   "target_indicator": "30-year JGB yield \u2192 ~4.15\u20134.20% (record high per Bloomberg/CNBC); Takaichi plan financing clarity \u2192 '1 unclear' (no credible fiscal consolidation path published); USD/JPY \u2192 monitor for yen strengthening as Dec hike approaches",
-   "proposed_indicator": null,
-   "proposed_story": null,
-   "rationale": "The 30-year JGB at a record is a direct indicator update for s2. With the BOJ at 1.25% and a December hike to 1.50% ~80% priced by CME-equivalent, the rate-differential compression accelerates carry-trade unwind risk. The simultaneous move in UK 30-year Gilts to a 28-year high and the US 30-year to 5.67% reflects a global long-bond repricing that amplifies Japan-specific fiscal risk. The Takaichi fiscal-clarity indicator remains at '1 unclear' given no published consolidation plan.",
-   "status": "pending",
-   "first_seen": "2026-11-02",
-   "last_seen": "2026-11-02",
-   "sightings": 1,
-   "id": "boj-holds-at-1-25-oct-30-but-30-year-jgb-hits-re-d4538c"
-  },
-  "uk-30-year-gilt-at-28-year-high-gilt-bund-spread-ad9e91": {
-   "headline": "UK 30-Year Gilt at 28-Year High; Gilt-Bund Spread Widest Since 2022 Mini-Budget Ahead of November 26 Budget",
-   "summary": "The UK 10-year gilt-Bund spread has widened to 189 bp \u2014 the largest since the 2022 Liz Truss mini-budget crisis \u2014 with the 30-year gilt at a 28-year high and the Bank of England expected to hike to 4.0% in November. ING warns the November 26 budget could trigger significant gilt repricing if fiscal commitments are missed, with sovereign CDS up 6% to 47 bp.",
-   "as_of": "2026-10-30",
-   "sources": [
-    "https://www.itiger.com/news/1178339184",
-    "https://admiralmarkets.com/analytics/traders-blog/global-macro-risks-2026",
-    "https://www.abnamro.com/research/en/our-research/key-views-global-monthly-october-2026"
-   ],
-   "materiality": "medium",
-   "classification": "story_gap",
-   "target_story": "s10_france",
-   "proposed_indicator": {
-    "label": "UK gilt-Bund 10y spread (bp) & sovereign CDS stress",
-    "type": "band",
-    "rubric": "0 = spread <120 bp and CDS <30 bp (stable); 1 = spread 120\u2013200 bp or CDS 30\u201360 bp (stress, pre-budget); 2 = spread >200 bp or CDS >60 bp (crisis / LDI echo)",
-    "sources": [
-     "https://www.itiger.com/news/1178339184",
-     "https://admiralmarkets.com/analytics/traders-blog/global-macro-risks-2026"
-    ],
-    "suggested_weight": 0.25
-   },
-   "proposed_story": null,
-   "rationale": "The existing s10_france story covers France/eurozone fragility but has no indicator capturing UK gilt stress specifically. The UK situation is structurally distinct: a separate sovereign, a different central bank hiking cycle, a mini-budget precedent with proven LDI/pension contagion (2022), and a November 26 fiscal event with binary tail risk. The gilt-Bund spread at 189 bp \u2014 the widest since that crisis \u2014 and sovereign CDS jumping 6% are not captured by any existing tracker indicator. Given the 2022 UK LDI blow-up's systemic implications (s14_pensions crossover), this gap warrants a new composite indicator within s10 rather than a new story.",
-   "status": "pending",
-   "first_seen": "2026-11-02",
-   "last_seen": "2026-11-02",
-   "sightings": 1,
-   "id": "uk-30-year-gilt-at-28-year-high-gilt-bund-spread-ad9e91"
-  },
-  "boj-officials-signal-rate-hikes-every-few-months-17d037": {
-   "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-   "summary": "The 10-year JGB yield dropped to 2.755% on October 23 (below MUFG's Q4 forecast floor of 2.85%) as Takaichi's explicit rejection of Abenomics-style reflation calmed near-term BoJ-behind-the-curve fears, yet the 30-year JGB yield remains near 3.93% (auction Oct 8: 4.109%), reflecting a persistent long-end fiscal risk premium as the FY2027 budget \u2014 the Takaichi administration's first full cycle \u2014 remains unfunded.",
-   "as_of": "2026-10-26",
-   "sources": [
-    "https://www.mufgresearch.com/rates/japan-economic-financial-weekly-26-october-2026",
-    "https://tradingeconomics.com/japan/government-bond-yield",
-    "https://tradingeconomics.com/japan/30-year-bond-yield",
-    "https://www.investing.com/economic-calendar/30-year-jgb-auction-726",
-    "https://asia.nikkei.com/business/markets/bonds/japan-bond-yields-spike-on-takaichi-budget-fears-worries-over-us-view"
-   ],
-   "materiality": "medium",
-   "classification": "existing_indicator",
-   "target_story": "s2_japan",
-   "target_indicator": "30-year JGB yield (%)",
-   "proposed_indicator": null,
-   "proposed_story": null,
-   "rationale": "Both named JGB indicators in s2_japan are updated: the 30-year yield remains elevated at ~3.93% (auction cleared at 4.109%), confirming the long-end fiscal premium persists. The 10-year's drop below 2.8% \u2014 while calming near-term carry-trade risk \u2014 reflects flight-to-haven demand from global risk aversion (AI selloff, Middle East) rather than fiscal improvement, keeping the 'Takaichi plan financing clarity' sub-indicator at 1 (unclear): the FY2027 budget has no deficit-bond solution yet. Net assessment: short-end calm, long-end stress intact.",
-   "status": "pending",
-   "first_seen": "2026-06-30",
-   "last_seen": "2026-10-26",
-   "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-   "sightings": 43
-  },
-  "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb": {
-   "headline": "Synchronized global sovereign bond rout: US 10y at 4.80%, UK 30y at 5.82% (highest since 1998), German 10y at 2011 highs",
-   "summary": "The 10-year OAT/Bund spread hit 174.6 bps on Oct 22 (171.8 bps on Oct 23), with French 10-year yields at 5.05%, after the National Assembly finance committee rejected the 2027 budget revenue package 31-to-3, injecting acute political risk ahead of the April 2027 presidential election. Early contagion signals are visible in Italian and Spanish spreads, and Moody's already holds France at Aa3 with a negative outlook.",
-   "as_of": "2026-10-23",
-   "sources": [
-    "https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html",
-    "https://www.fxstreet.com/analysis/french-risk-spreads-from-oats-into-the-euro-as-assembly-takes-up-the-budget-202610130958",
-    "https://www.investmenthouse.com/2026/10/18/frances-budget-has-no-majority-the-oat-spread-keeps-score/",
-    "https://www.bankofsingapore.com/research/oats-on-the-edge.html",
-    "https://www.allianz-trade.com/en_global/news-insights/economic-insights/Toasted-not-burnt-France-bond-and-the-road-2027-election.html"
-   ],
-   "materiality": "high",
-   "classification": "existing_indicator",
-   "target_story": "s10_france",
-   "target_indicator": "OAT-Bund 10y spread (%)",
-   "proposed_indicator": null,
-   "proposed_story": null,
-   "rationale": "The OAT-Bund spread at 171.8 bps \u2014 now wider than Italy and Greece \u2014 is a direct, named indicator in s10_france. The budget's parliamentary collapse (finance committee 31-3 rejection) also escalates the 'Govt stability' sub-indicator from 1 (fragile) toward 2 (collapse-or-snap-election risk), and Moody's negative outlook keeps the 'Rating action' sub-indicator at 1 with downgrade risk rising. This is the most acute near-term eurozone financial-stability signal of the week.",
-   "status": "pending",
-   "first_seen": "2026-09-11",
-   "last_seen": "2026-10-26",
-   "sightings": 10,
-   "id": "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb"
-  },
-  "coreweave-bond-yields-hit-16-stock-40-in-october-2a201c": {
-   "headline": "CoreWeave bond yields hit ~16%, stock -40% in October: GPU-backed debt refinancing stress turns acute across neocloud sector",
-   "summary": "CoreWeave's ~$50\u201352 billion debt load triggered a simultaneous stock and bond selloff \u2014 bonds implying 15\u201316% yields, CDS spreads above 11%, stock down ~40% in October \u2014 spreading to Oracle and dragging the Philadelphia Semiconductor Index down >13% in October. Elon Musk warned debt markets have 'almost entirely shut off access' for AI data-center companies without independent revenue, signaling sector-wide refinancing stress rather than a single-name event.",
-   "as_of": "2026-10-26",
-   "sources": [
-    "https://cryptobriefing.com/coreweave-debt-selloff-ai-financing-strain/",
-    "https://cryptobriefing.com/coreweave-shares-tumble-ai-debt-fears/",
-    "https://beincrypto.com/coreweave-ai-selloff-crypto-origins-debt/",
-    "https://www.advisorperspectives.com/articles/2026/10/26/coreweave-rout-sends-warning-stock-market",
-    "https://www.tradingkey.com/analysis/stocks/us-stocks/262236638-coreweave-oracle-shares-selloff-ai-infrastructure-debt-risk-rising-tradingkey",
-    "https://agora-intelligence.com/en/blog/ai-capex-debt-repricing-coreweave-oil/"
-   ],
-   "materiality": "high",
-   "classification": "existing_indicator",
-   "target_story": "s8_ai_capex",
-   "target_indicator": "GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)",
-   "proposed_indicator": null,
-   "proposed_story": null,
-   "rationale": "CoreWeave's bond yields at 15\u201316% and CDS spreads >11%, combined with Musk's statement that debt markets have shut off for neocloud firms, directly activates the 'GPU-backed debt refinancing stress' indicator from 1 (signs) to 2 (acute). The AI capex-vs-revenue gap indicator also widens (CoreWeave guiding $35\u201339B capex vs ~$13B revenue). The Philadelphia Semis -13% in October further registers in AI-circular-financing systemic risk. This is the clearest single new data point for s8 this week.",
-   "status": "pending",
-   "first_seen": "2026-10-26",
-   "last_seen": "2026-10-26",
-   "sightings": 1,
-   "id": "coreweave-bond-yields-hit-16-stock-40-in-october-2a201c"
-  },
-  "houthi-attacks-push-brent-to-117-6-month-high-ir-badabc": {
-   "headline": "Houthi attacks push Brent to $117 (6-month high); Iran accelerates Hormuz surveillance with new naval units; October flows volatile and below pre-war average",
-   "summary": "Brent crude briefly topped $117/bbl on Oct 23 after Yemen's Houthis launched fresh attacks on Saudi Aramco facilities and the port of Yanbu, while Iran deployed new military units to expand surveillance of the Strait of Hormuz. Although some daily crude readings near prewar levels, October-to-date Middle East exports remain below pre-war averages, ~40% of oil is bypassing Hormuz via alternatives, and Saudi Aramco's CEO warned inventory rebuilding could take up to two years.",
-   "as_of": "2026-10-23",
-   "sources": [
-    "https://www.thenationalnews.com/business/energy/2026/10/23/oil-prices-rise-as-houthis-launch-another-wave-of-attacks-on-saudi-arabia/",
-    "https://www.aljazeera.com/news/2026/10/14/iran-steps-up-hormuz-surveillance-attacks-soar-oil-flows-crash-again",
-    "https://www.bloomberg.com/news/articles/2026-10-21/middle-east-oil-flows-near-prewar-levels-defy-hormuz-attacks",
-    "https://www.aljazeera.com/news/2026/10/6/hormuz-ship-attacks-surge-are-increased-oil-exports-sustainable"
-   ],
-   "materiality": "high",
-   "classification": "existing_indicator",
-   "target_story": "s20_sea_lanes",
-   "target_indicator": "WTI crude oil (USD/bbl, CL=F)",
-   "proposed_indicator": null,
-   "proposed_story": null,
-   "rationale": "Fresh Houthi attacks on Saudi infrastructure and Iranian Hormuz surveillance escalation directly update s20_sea_lanes. WTI/Brent at ~$113\u2013117 is a live indicator reading. The Hormuz/Red Sea status indicator should remain at 1 (contested) given that flows are partial and volatile with convoy rerouting. This also has cascading effects on s5_china_deflation (cost-push via energy), s18_food_fertilizer (fertilizer input disruption via Hormuz), and s4_dev_debt (energy-import stress on frontier economies), but the primary home is s20.",
-   "status": "pending",
-   "first_seen": "2026-10-26",
-   "last_seen": "2026-10-26",
-   "sightings": 1,
-   "id": "houthi-attacks-push-brent-to-117-6-month-high-ir-badabc"
   }
  },
  "shown": 10

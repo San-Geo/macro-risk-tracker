@@ -89,7 +89,12 @@
           "withdrawn": "2026-10-13",
           "reason": "Under the one-week close rule this episode never closed: the story dipped below High for only two runs (Jul 20-21) and has been High again since Jul 22."
         }
-      ]
+      ],
+      "cooling": {
+        "runs_below": 1,
+        "of": 5,
+        "level": 6
+      }
     },
     {
       "id": "s3_private_credit-2026-07-06",
@@ -100,7 +105,7 @@
       "open_level": 8,
       "peak_level": 8,
       "peak_date": "2026-07-06",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-09",
       "status": "open",
       "drivers_at_open": [
         "Direct-lending default rate (%): 6.0 (band 2)",
@@ -257,7 +262,7 @@
       "open_level": 7,
       "peak_level": 8,
       "peak_date": "2026-09-14",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-09",
       "status": "open",
       "drivers_at_open": [
         "Hormuz/Red Sea status (0 open / 1 contested / 2 closed): 2 (band 2)",
@@ -581,7 +586,7 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-09-28",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-09",
       "status": "open",
       "drivers_at_open": [
         "Grid interconnection wait (months): 61 (band 2)",
@@ -606,7 +611,7 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-10-12",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-09",
       "status": "open",
       "drivers_at_open": [
         "Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen): 1 (band 1)",
@@ -632,7 +637,7 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-10-14",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-09",
       "status": "open",
       "drivers_at_open": [
         "China PPI YoY (%) - large swing either way is worse: 3.8 (band 1)",
@@ -654,7 +659,7 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-10-14",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-09",
       "status": "open",
       "drivers_at_open": [
         "AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast): 1 (band 1)",
@@ -676,7 +681,7 @@
       "open_level": 7,
       "peak_level": 7,
       "peak_date": "2026-10-14",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-09",
       "status": "open",
       "drivers_at_open": [
         "Food-price trend (0 falling / 1 elevated / 2 spiking): 1 (band 1)",
@@ -700,25 +705,25 @@
       "peak_level": 7,
       "peak_date": "2026-11-02",
       "last_seen": "2026-11-02",
-      "status": "open",
+      "status": "closed",
       "drivers_at_open": [
         "SOFR minus EFFR (%): 0.07 (band 1)",
         "MOVE index (Treasury volatility): 100.3679 (band 1)",
         "SEC central clearing on track (0 ok / 1 slipping / 2 delayed): 1 (band 1)"
       ],
-      "closed": null,
+      "closed": "2026-11-09",
       "grade": null,
       "grade_note": null,
-      "cooling": {
-        "runs_below": 4,
-        "of": 5,
-        "level": 6
-      },
       "triggers": {
         "open": [
           "MOVE index (Treasury volatility): 97.9015 -> 100.3679 (band 0 -> 1)"
+        ],
+        "close": [
+          "MOVE index (Treasury volatility): 100.3679 -> 99.9296 (band 1 -> 0)"
         ]
-      }
+      },
+      "close_level": 6,
+      "brief_crossing": true
     }
   ],
   "note": "Record begins with the ledger feature (Jun 30 2026). Rebuilt on 2026-10-13 by replaying history.csv after a malformed hand edit had frozen the file since Jul 22.",
