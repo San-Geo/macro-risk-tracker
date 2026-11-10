@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T21:44:51.516847+00:00",
+  "generated": "2026-11-10T18:47:43.193114+00:00",
   "version": "1.0",
   "calibration": {
     "calm_overall": 5.5,
@@ -126,7 +126,7 @@
     }
   },
   "sensitivity": {
-    "as_of_overall": 7.3,
+    "as_of_overall": 7.5,
     "max_story_swing": 2,
     "max_overall_swing": 0.5,
     "movers": [
@@ -151,16 +151,6 @@
         "overall_swing": 0.2
       },
       {
-        "id": "usdjpy",
-        "label": "USD/JPY (yen strengthening = lower = risk)",
-        "story": "Japan fiscal / JGB / carry trade",
-        "set": 1,
-        "weight": 1.5,
-        "story_swing": 2,
-        "set_swing": 0.3,
-        "overall_swing": 0.4
-      },
-      {
         "id": "direct_lending_default",
         "label": "Direct-lending default rate (%, Fitch incl. distressed exchanges)",
         "story": "Private credit's opaque expansion",
@@ -178,7 +168,7 @@
         "weight": 1.5,
         "story_swing": 2,
         "set_swing": 0.3,
-        "overall_swing": 0.1
+        "overall_swing": 0.0
       },
       {
         "id": "taiwan_tension",
@@ -189,16 +179,6 @@
         "story_swing": 1,
         "set_swing": 0.4,
         "overall_swing": 0.1
-      },
-      {
-        "id": "move",
-        "label": "MOVE index (Treasury volatility)",
-        "story": "Treasury basis trade (hidden leverage)",
-        "set": 1,
-        "weight": 1.5,
-        "story_swing": 1,
-        "set_swing": 0.3,
-        "overall_swing": 0.4
       },
       {
         "id": "china_ppi",
@@ -221,30 +201,50 @@
         "overall_swing": 0.4
       },
       {
-        "id": "truce_status",
-        "label": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
-        "story": "Critical minerals as a weapon",
-        "set": 4,
-        "weight": 1.0,
-        "story_swing": 1,
-        "set_swing": 0.3,
-        "overall_swing": 0.4
-      },
-      {
-        "id": "re_blacklist",
-        "label": "US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban)",
-        "story": "Critical minerals as a weapon",
-        "set": 4,
-        "weight": 1.0,
-        "story_swing": 1,
-        "set_swing": 0.3,
-        "overall_swing": 0.4
-      },
-      {
         "id": "ai_revenue_gap",
         "label": "AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast)",
         "story": "AI build-out circular financing",
         "set": 2,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.4
+      },
+      {
+        "id": "gpu_refi_stress",
+        "label": "GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute)",
+        "story": "AI build-out circular financing",
+        "set": 2,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.4
+      },
+      {
+        "id": "ai_power_pressure",
+        "label": "AI power-demand pressure (0 easing / 1 tight / 2 acute)",
+        "story": "AI power & the grid bottleneck",
+        "set": 5,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.4
+      },
+      {
+        "id": "china_export_curbs",
+        "label": "China fertilizer export curbs (0 lifted / 1 in place / 2 tightened)",
+        "story": "Food & fertilizer fragility",
+        "set": 5,
+        "weight": 1.0,
+        "story_swing": 1,
+        "set_swing": 0.3,
+        "overall_swing": 0.4
+      },
+      {
+        "id": "hormuz_fertilizer",
+        "label": "Hormuz/Gulf disruption to fertilizer inputs (0 clear / 1 disrupted / 2 cut)",
+        "story": "Food & fertilizer fragility",
+        "set": 5,
         "weight": 1.0,
         "story_swing": 1,
         "set_swing": 0.3,

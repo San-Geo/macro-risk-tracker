@@ -2,19 +2,20 @@
  "due": false,
  "cadence": "quarterly",
  "reasons": [
-  "4 stories changed band"
+  "4 stories changed band",
+  "overall moved 1.0"
  ],
  "drift": {
-  "as_of": "2026-11-09",
+  "as_of": "2026-11-10",
   "edition": "2026",
-  "months": 4.3,
+  "months": 4.4,
   "band_changes": 4,
   "level_changes": 5,
   "high_then": 6,
-  "high_now": 7,
+  "high_now": 8,
   "overall_then": 6.5,
-  "overall_now": 7.3,
-  "overall_move": 0.8,
+  "overall_now": 7.5,
+  "overall_move": 1.0,
   "stories_added": [],
   "stories_retired": [],
   "indicator_band_changes": 14,
@@ -27,9 +28,9 @@
     6,
     7
    ],
-   "s2_japan": [
-    7,
-    6
+   "s21_clearinghouses": [
+    4,
+    5
    ],
    "s3_private_credit": [
     6,
@@ -46,5 +47,5 @@
  ],
  "summary": "draft 2026-11 is waiting for review",
  "current": "2026",
- "checked": "2026-11-09"
+ "checked": "2026-11-10"
 }
