@@ -1385,7 +1385,7 @@
       "proposed_indicator": null,
       "proposed_story": null,
       "rationale": "China's deflation story remains active. CPI at 0.5-0.8% (well below target) and persistent property-sector drag confirm continued deflationary pressure, keeping China PPI as a key risk indicator. The Oct 14 release (Sept data) may move the indicator meaningfully \u2014 prior July print was 0.5% CPI. Goldman Sachs notes 4% Q3 GDP growth, but goods inflation is being exported (s5's tariff/anti-dumping sub-indicator also remains elevated given ongoing trade friction context). Tracker should be watching Oct 14 release as a near-term catalyst.",
-      "status": "pending",
+      "status": "expired",
       "first_seen": "2026-07-04",
       "last_seen": "2026-10-12",
       "sightings": 15,
@@ -8620,7 +8620,7 @@
       "proposed_indicator": null,
       "proposed_story": null,
       "rationale": "The RBA FSR is a credible multilateral financial-stability source, and its specific naming of default events (First Brands, Tricolor, Market Financial Solutions) across late 2025\u2013early 2026 confirms the direct-lending default rate is rising materially. The tracker's current indicator baseline (~Fitch incl. distressed exchanges) should be refreshed. The RBA's 'idiosyncratic but elevated' framing is consistent with the large-fund redemption gates indicator remaining at '0 none' for now, but default clustering warrants a watchlist upgrade.",
-      "status": "pending",
+      "status": "expired",
       "first_seen": "2026-09-30",
       "last_seen": "2026-10-12",
       "sightings": 2,
@@ -9195,7 +9195,7 @@
       },
       "proposed_story": null,
       "rationale": "The existing Hormuz/Red Sea status indicator captures the strait's open/closed state, but the current situation is a new regime: the strait is 'contested' (level 1) yet exports are partially recovering via expensive rerouting. This creates a false sense of normalcy while hiding war-risk insurance cost spikes, refining capacity mismatches (s20 also notes undersea cable exposure from Middle East conflict). A rerouting-recovery rate indicator would distinguish 'flow restored at high cost' from 'flow genuinely safe,' which matters for inflation and fertilizer input paths (s18 also affected).",
-      "status": "pending",
+      "status": "expired",
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "sightings": 1,
@@ -9265,7 +9265,7 @@
         ]
       },
       "rationale": "The global long-bond re-pricing is now a confirmed, multi-source, cross-asset phenomenon as of early October 2026. It is not adequately represented by any single existing story: s1 watches MOVE/SOFR but not the underlying term-premium driver; s2 watches Japanese yields but not the crowding-out mechanism; s8 watches AI capex financing but not the sovereign-demand competition. A dedicated story would capture how this single macro factor transmits simultaneously into basis-trade stress, pension funded-ratio deterioration, CRE cap-rate pressure, AI debt refinancing risk, and EM currency pressure \u2014 making it a high-leverage entry point for tracker alerts.",
-      "status": "pending",
+      "status": "expired",
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "sightings": 1,
@@ -10225,6 +10225,6 @@
   "generated": "2026-11-09",
   "model": "claude-sonnet-4-6",
   "new_count": 2,
-  "pending_count": 43,
+  "pending_count": 39,
   "expired_now": 10
 }
