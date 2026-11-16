@@ -2,23 +2,29 @@
  "due": false,
  "cadence": "quarterly",
  "reasons": [
-  "overall moved 1.0"
+  "6 stories changed band",
+  "overall moved 1.3",
+  "stories at High went 6 -> 9"
  ],
  "drift": {
-  "as_of": "2026-11-13",
+  "as_of": "2026-11-16",
   "edition": "2026",
   "months": 4.5,
-  "band_changes": 3,
-  "level_changes": 4,
+  "band_changes": 6,
+  "level_changes": 7,
   "high_then": 6,
-  "high_now": 8,
+  "high_now": 9,
   "overall_then": 6.5,
-  "overall_now": 7.5,
-  "overall_move": 1.0,
+  "overall_now": 7.8,
+  "overall_move": 1.3,
   "stories_added": [],
   "stories_retired": [],
-  "indicator_band_changes": 13,
+  "indicator_band_changes": 18,
   "moved": {
+   "s16_copper": [
+    5,
+    4
+   ],
    "s17_water": [
     5,
     4
@@ -27,9 +33,17 @@
     6,
     7
    ],
+   "s21_clearinghouses": [
+    4,
+    5
+   ],
    "s3_private_credit": [
     6,
     8
+   ],
+   "s4_dev_debt": [
+    5,
+    7
    ],
    "s9_cre": [
     5,
@@ -42,5 +56,5 @@
  ],
  "summary": "draft 2026-11 is waiting for review",
  "current": "2026",
- "checked": "2026-11-13"
+ "checked": "2026-11-16"
 }

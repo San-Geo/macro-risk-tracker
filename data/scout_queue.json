@@ -200,26 +200,26 @@
     },
     "boj-officials-signal-rate-hikes-every-few-months-17d037": {
       "headline": "BOJ officials signal rate hikes every few months; 30yr JGB yields at 3.88%, 10yr at 2.61% \u2014 carry trade unwind risk acute",
-      "summary": "The Bank of Japan held its policy rate at 1.25% at the October 29\u201330 meeting but its September minutes explicitly flagged the case for further hikes, with markets pricing a December move to 1.50%. The 30-year JGB yield stands at 3.83%\u201473bp above a year ago\u2014driven by a combination of BOJ normalisation, Japan's fiscal expansion programme and the global energy-shock repricing of real rates. Real wages rose for a ninth consecutive month in September, reinforcing the hike narrative.",
-      "as_of": "2026-11-06",
+      "summary": "Japan's 30-year JGB yield reached 4.01\u20134.20% on Nov 13\u201316, 2026 (the highest level in decades), while the 10-year climbed to 2.88%. The BOJ faces a dilemma between fragile household consumption and imported inflation from a weak yen, with elevated Middle East oil prices compounding the fiscal burden.",
+      "as_of": "2026-11-16",
       "sources": [
-        "https://tradingeconomics.com/japan/interest-rate",
         "https://tradingeconomics.com/japan/30-year-bond-yield",
-        "https://asianbondsonline.adb.org/japan/",
-        "https://www.oxfordeconomics.com/resource/why-we-expect-jgb-yields-to-stay-high/"
+        "https://tradingeconomics.com/japan/government-bond-yield",
+        "https://www.bloomberg.com/markets/rates-bonds/government-bonds/japan",
+        "https://www.fxcm.com/au/insights/global-macro-and-markets-briefing-16-november-2026/"
       ],
-      "materiality": "medium",
+      "materiality": "high",
       "classification": "existing_indicator",
       "target_story": "s2_japan",
       "target_indicator": "30-year JGB yield (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The 30-year JGB yield at 3.83% (up 73bp YoY) is a material update to the s2_japan tracker. A December hike to 1.50% would further compress the yen carry-trade spread and tighten the fiscal arithmetic. The Takaichi-plan financing clarity indicator should also be reviewed: Oxford Economics has raised its end-2026 10-year JGB yield forecast to 2.8% and flags ongoing fiscal expansion risk, keeping that rubric at '1 unclear'. The yen carry-trade unwind risk (USD/JPY implications) remains live.",
+      "rationale": "The 30-year JGB at 4.01\u20134.20% is a fresh multi-decade high and significantly above any prior risk-tracker reading. With Japan holding >$1.1 trillion of US Treasuries, life insurers deeply underwater on duration, and an estimated $280bn of leveraged short-yen carry still outstanding, further yield rises could trigger a disorderly unwind. The BOJ's explicit acknowledgment that oil-price/Middle East tensions are cutting into corporate profits and household real income adds a new cross-story link to s20_sea_lanes.",
       "status": "pending",
       "first_seen": "2026-06-30",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-16",
       "id": "boj-officials-signal-rate-hikes-every-few-months-17d037",
-      "sightings": 44
+      "sightings": 45
     },
     "china-blacklists-mp-materials-and-usa-rare-earth-ccacd6": {
       "headline": "China blacklists MP Materials and USA Rare Earth \u2014 first entity-specific ban on US domestic RE producers effective June 22",
@@ -7473,13 +7473,13 @@
     },
     "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb": {
       "headline": "Synchronized global sovereign bond rout: US 10y at 4.80%, UK 30y at 5.82% (highest since 1998), German 10y at 2011 highs",
-      "summary": "France's 10-year OAT\u2013Bund spread reached 176 bps on October 23 and stood at 148 bps on November 5\u2014the widest since the 2011 eurozone sovereign-debt crisis\u2014driven by a fiscal deficit estimated at 5.4% of GDP, political paralysis over the budget, and a November 3 budget revenue-vote that failed to restore confidence. A Moody's rating review is due November 27, and analysts warn that a downgrade or continued spread widening toward 200 bps could trigger contagion to Italy and test ECB TPI activation eligibility.",
-      "as_of": "2026-11-05",
+      "summary": "France's 10-year OAT\u2013Bund spread reached 155bp on Nov 16 2026, up from ~86bp in September, as parliamentary budget negotiations stall and earlier social unrest added 13\u201315bp in a single session. France's 10-year OAT yield is 4.93%, public debt has risen above 119% of GDP, and the ECB has signalled reluctance to intervene with targeted purchases while focused on fresh inflation.",
+      "as_of": "2026-11-16",
       "sources": [
-        "https://www.lseg.com/en/insights/ftse-russell/how-do-you-like-your-oats",
-        "https://www.zerohedge.com/markets/france-braces-moodys-downgrade-oat-bund-spread-hits-eu-crisis-level-highs",
-        "https://seekingalpha.com/article/4962280-european-bond-spreads-duel-with-bad",
-        "https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html"
+        "https://www.ideal-investisseur.fr/en/markets/oat-bund-spread.html",
+        "https://www.capmad.com/post/frances-oat-selloff-forces-governments-to-face-the-political-cost-of-debt",
+        "https://am.jpmorgan.com/au/en/asset-management/adv/insights/market-insights/market-updates/on-the-minds-of-investors/france-update-our-take-on-equity-bond-and-policy-implications/",
+        "https://www.cnbc.com/2026/09/24/france-budget-debt-deficit-government.html"
       ],
       "materiality": "high",
       "classification": "existing_indicator",
@@ -7487,11 +7487,11 @@
       "target_indicator": "OAT-Bund 10y spread (%)",
       "proposed_indicator": null,
       "proposed_story": null,
-      "rationale": "The OAT-Bund spread has escalated materially since the last tracker update\u2014now at multi-year highs and approaching a critical Moody's review date (Nov 27). The Rating action indicator for s10_france should be upgraded from '1 negative outlook' toward '2 downgrade' watch. The budget vote failure and ECB's explicit reluctance to invoke TPI for France (due to deficit disqualification) make this a live systemic risk for eurozone fragility, not just a French idiosyncratic story.",
+      "rationale": "At 155bp the spread is at its widest since the early-2000s eurozone sovereign crisis and materially above any prior tracker reading. This is now a France-specific premium layered on top of a global rates repricing, not a general eurozone spread event (Italian/Spanish spreads are not moving similarly). Budget passage remains uncertain; a government collapse would likely push the spread toward 200bp and trigger rating action. The 'Govt stability' indicator should sit at 1 (fragile) to 2 (collapse risk). The ECB's reluctance to intervene with targeted bond purchases while fighting inflation is an amplifying factor.",
       "status": "pending",
       "first_seen": "2026-09-11",
-      "last_seen": "2026-11-09",
-      "sightings": 11,
+      "last_seen": "2026-11-16",
+      "sightings": 12,
       "id": "synchronized-global-sovereign-bond-rout-us-10y-a-b800bb"
     },
     "ai-hyperscaler-bond-issuance-hits-194bn-ytd-in-2-33afc6": {
@@ -10220,11 +10220,110 @@
       "last_seen": "2026-11-09",
       "sightings": 1,
       "id": "euro-area-ppi-hits-record-11-1-global-energy-sho-90bf86"
+    },
+    "iran-mines-strait-of-hormuz-at-scale-six-tankers-d26bdb": {
+      "headline": "Iran mines Strait of Hormuz at scale: six tankers struck on Nov 15\u201316, UKMTO confirms attack",
+      "summary": "Iran's IRGC Navy mined the southern transit route of the Strait of Hormuz, claiming six oil tankers caught fire over Nov 15\u201316 alone; a 3rd US aircraft carrier arrived in the region the same day. The strait \u2014 which carries ~20% of global oil \u2014 has been contested since Iran began restricting traffic in late February 2026 following US-Israeli strikes.",
+      "as_of": "2026-11-16",
+      "sources": [
+        "https://iranwire.com/en/news/160297-irgc-reports-explosions-aboard-two-oil-tankers-in-the-strait-of-hormuz/",
+        "https://houseofsaud.com/iran-tankers-mines-hormuz-ukmto-nov16/",
+        "https://oilprice.com/Latest-Energy-News/World-News/Iran-Claims-Two-More-Oil-Tankers-Hit-Mines-in-Strait-of-Hormuz.html",
+        "https://abcnews.com/International/live-updates/iran-live-updates-tanker-attacked-strait-hormuz-ukmto/?id=138171071&entryId=138171210"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s20_sea_lanes",
+      "target_indicator": "Hormuz/Red Sea status (0 open / 1 contested / 2 closed)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Six tankers struck by mines in a 48-hour window, with UKMTO confirming at least one attack independently and Iran explicitly warning commercial shipping off the southern transit route \u2014 this is an escalation from 'contested' toward 'functionally closed' for unescorted traffic. WTI crude and the Bund yield trajectory are directly affected; the s20 Hormuz/Red Sea status indicator should move to 2 (closed/near-closed for commercial unescorted transit). Also applies second-order pressure to s18_food_fertilizer (Hormuz fertilizer input disruption) and s6_rare_earths (Persian Gulf freight corridors).",
+      "status": "pending",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "sightings": 1,
+      "id": "iran-mines-strait-of-hormuz-at-scale-six-tankers-d26bdb"
+    },
+    "china-us-extend-rare-earth-export-control-suspen-7b2ee0": {
+      "headline": "China\u2013US extend rare-earth export-control suspension to Jan 10 2027, but heavy-RE prices already up 242%",
+      "summary": "On Nov 9 2026, MOFCOM formally extended the suspension of the Oct-2025 rare-earth export-control package (Announcements 55\u201362) until Jan 10 2027 as part of a two-month US\u2013China trade-truce rollover. Despite the extension, the April 2025 licensing regime on dysprosium, terbium and yttrium remains fully in force, with Platts dysprosium oxide now at ~$4,100/kg outside China \u2014 a ~19x premium over domestic Chinese prices.",
+      "as_of": "2026-11-13",
+      "sources": [
+        "https://www.thompsonhinesmartrade.com/2026/11/china-extends-suspension-of-rare-earth-export-controls/",
+        "https://discoveryalert.com/analysis/rare-earth-export-controls-china-pause-prices-november-2026/",
+        "https://rawmaterials.net/rare-earth-export-controls-china-confirms-extension-of-trade-arrangements-with-u-s/"
+      ],
+      "materiality": "high",
+      "classification": "existing_indicator",
+      "target_story": "s6_rare_earths",
+      "target_indicator": "Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "The Nov-2025 pause status indicator moves from '1 expiring' back to '0 extended' \u2014 the cliff-edge lapse was avoided. However, the concurrent data point that the April-2025 dysprosium/terbium/yttrium license regime remains intact and has produced a ~19x ex-China price premium is highly material for the 'Ex-China heavy rare-earth price premium' indicator, which should be updated to reflect ~19x for Dy and ~125x for Y. The partial extension also reveals the fragility: each two-month rollover is a fresh negotiating pressure point.",
+      "status": "pending",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "sightings": 1,
+      "id": "china-us-extend-rare-earth-export-control-suspen-7b2ee0"
+    },
+    "fed-december-hike-now-near-certain-us-cpi-2-8-10-e8254a": {
+      "headline": "Fed December hike now near-certain; US CPI 2.8%, 10-year Treasury near 4.86% \u2014 tightening cycle resumes",
+      "summary": "US inflation came in at 2.8% (Nov 2026), ISM Manufacturing jumped to 55.5, and the Fed (now led by Chair Kevin Warsh) is widely expected to hike by 25bp in December with ~72\u201380% market probability. The US 10-year Treasury yield settled near 4.86% after strong October jobs data, putting renewed upward pressure on global sovereign yields and the dollar.",
+      "as_of": "2026-11-13",
+      "sources": [
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-9-november-2026/",
+        "https://www.fxcm.com/au/insights/global-macro-and-markets-briefing-16-november-2026/",
+        "https://tanaysuthar.substack.com/p/global-macro-weekly-15th-november",
+        "https://financefeeds.com/global-fx-market-summary-fed-hikes-ecb-divergence-and-energy-risks-drive-market-shifts-13-november-2026/"
+      ],
+      "materiality": "medium",
+      "classification": "story_gap",
+      "target_story": "s4_dev_debt",
+      "target_indicator": null,
+      "proposed_indicator": {
+        "label": "Fed funds rate / next-hike probability (%)",
+        "type": "value",
+        "rubric": "Track market-implied probability of the next Fed hike (OIS-derived) and the current effective Fed funds rate. A resuming tightening cycle with >50% Dec-hike probability and 10y UST above 4.75% = elevated stress for EM borrowers and dollar-denominated debt; flag at >70% probability.",
+        "sources": [
+          "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-9-november-2026/",
+          "https://www.fxcm.com/au/insights/global-macro-and-markets-briefing-16-november-2026/"
+        ],
+        "suggested_weight": 0.15
+      },
+      "proposed_story": null,
+      "rationale": "A resuming Fed tightening cycle (not a pause or cut) is a material state-change versus prior tracker assumptions. The existing s4_dev_debt story already tracks US 10y real yield and the broad dollar index, but neither captures the forward policy signal (hike probability) that is now the primary driver of EM capital outflows, dollar strength, and sovereign spread widening across developing-world debt. Adding a Fed-hike probability indicator to s4 fills this gap. It also cross-pressures s2_japan (USD/JPY and JGB/UST spread), s10_france (ECB divergence), and s11_consumer_debt (US household rate exposure).",
+      "status": "pending",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "sightings": 1,
+      "id": "fed-december-hike-now-near-certain-us-cpi-2-8-10-e8254a"
+    },
+    "ai-capex-revenue-gap-widens-alphabet-q3-eps-miss-a13e44": {
+      "headline": "AI capex\u2013revenue gap widens: Alphabet Q3 EPS misses by ~12%, AI equity sell-off signals circular-financing stress",
+      "summary": "Alphabet's Q3 2026 adjusted EPS of $2.67 missed the $3.02 consensus by ~12% despite cloud revenue more than doubling to $30.71bn, and AI-related shares have fallen broadly as investors question cash-flow sustainability. Wall Street is explicitly beginning to question AI valuations, while TSMC and CoreWeave offered strong guidance the same week \u2014 widening the divergence between infrastructure suppliers and hyperscaler profitability.",
+      "as_of": "2026-11-09",
+      "sources": [
+        "https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-02-november-2026/",
+        "https://www.deloitte.com/us/en/insights/topics/economy/global-economic-outlook/weekly-update.html",
+        "https://tanaysuthar.substack.com/p/global-macro-weekly-15th-november"
+      ],
+      "materiality": "medium",
+      "classification": "existing_indicator",
+      "target_story": "s8_ai_capex",
+      "target_indicator": "AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast)",
+      "proposed_indicator": null,
+      "proposed_story": null,
+      "rationale": "Alphabet's EPS miss on enormous capex spend is a live data point for the AI circular-financing story: capex is rising faster than monetisable revenue, the equity market is repricing that gap, and both Deloitte and FXCM cite it as a primary investor concern this week. The 'AI capex-vs-revenue gap concern' indicator should move from 1 (wide) toward 2 (widening fast), particularly given simultaneous IG-spread pressure from large-scale AI-linked debt issuance. The Anthropic IPO drawing 6x demand adds a secondary signal that private AI funding appetite remains strong even as public-market patience shrinks.",
+      "status": "pending",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "sightings": 1,
+      "id": "ai-capex-revenue-gap-widens-alphabet-q3-eps-miss-a13e44"
     }
   },
-  "generated": "2026-11-09",
+  "generated": "2026-11-16",
   "model": "claude-sonnet-4-6",
-  "new_count": 2,
-  "pending_count": 16,
-  "expired_now": 10
+  "new_count": 4,
+  "pending_count": 20,
+  "expired_now": 0
 }
