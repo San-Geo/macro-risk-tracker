@@ -7,7 +7,7 @@
   "stories at High went 6 -> 9"
  ],
  "drift": {
-  "as_of": "2026-11-18",
+  "as_of": "2026-11-19",
   "edition": "2026",
   "months": 4.6,
   "band_changes": 6,
@@ -56,5 +56,5 @@
  ],
  "summary": "draft 2026-11 is waiting for review",
  "current": "2026",
- "checked": "2026-11-18"
+ "checked": "2026-11-19"
 }
