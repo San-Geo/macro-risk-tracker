@@ -1,87 +1,84 @@
 # Global Macro Intelligence — Living Brief
 
-*Data as of 2026-11-19 (run 2026-11-19 19:36 UTC). Rebuilt automatically on every tracker run from the live scores. For the full curated write-ups, see the current edition.*
+*Data as of 2026-11-20 (run 2026-11-20 19:14 UTC). Rebuilt automatically on every tracker run from the live scores. For the full curated write-ups, see the current edition.*
 
-**Overall risk 7.8/10 (High)** — Funding & Leverage 5.7, Credit, Consumers & Valuations 5.6, Sovereigns & the Monetary Order 4.9, Geoeconomics & Trade Weapons 6.6, Physical & Resource Limits 5.5.
+**Overall risk 7.8/10 (High)** — Funding & Leverage 6.0, Credit, Consumers & Valuations 5.6, Sovereigns & the Monetary Order 4.9, Geoeconomics & Trade Weapons 6.6, Physical & Resource Limits 5.5.
 
 **9 stories are at High or above:** Private credit's opaque expansion (8); AI build-out circular financing (7); AI power & the grid bottleneck (7); China's price spillover (deflation or cost-push) (7); Critical minerals as a weapon (7); Developing-world debt crisis (7); Food & fertilizer fragility (7); Japan fiscal / JGB / carry trade (7); Sea lanes & undersea cables (7).
 
 ## Today's note
 
-# EOD Macro-Risk Brief | 2026-11-19
+**Headline**
+Overall macro risk stands at High, with 9 stories at High or above as clearinghouse resilience faces fresh volatility shocks.
 
-**Headline:** System-wide risk remains High, with nine stories at High or above and no movement today.
+**Changed Story**
+• **Clearinghouses (financial chokepoint)** moved within Elevated. Equity volatility (VIX) rose to 31.43 from 27.66, moving from band 1 to band 2; Treasury volatility (MOVE) climbed to 103.812 from 94.928, moving from band 0 to band 1. Both moves increase margin calls and collateral rehypothecation stress across central counterparties, a core plumbing risk.
 
-**Story Changes:** None recorded.
-
-**Highest-risk watch:** Private credit's opaque expansion (level 8, High) — the largest single concentration among tracked risks.
-
----
-
-**Context:** Overall risk score of 7.8 sits in High band. Nine stories occupy High band or above: Japan fiscal / JGB / carry trade, Private credit's opaque expansion, Developing-world debt crisis, China's price spillover (deflation or cost-push), Critical minerals as a weapon, AI build-out circular financing, AI power & the grid bottleneck, Food & fertilizer fragility, and Sea lanes & undersea cables. Five additional stories remain Elevated. No driver changes registered; risk posture unchanged from prior run.
+**Watch**
+Private credit's opaque expansion remains the highest-risk story, at High band with no near-term circuit breakers for redemption or repricing shocks.
 
 ## Set 1 — Funding & Leverage
 
 ### Treasury basis trade (hidden leverage) — 6/10 (Elevated)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 Hedge funds run a highly leveraged arbitrage between Treasury cash bonds and futures. It is a major source of liquidity, but a spike in funding costs or Treasury volatility can force rapid unwinds, as briefly happened in March 2020 and again in 2025.
 
-*Indicators:* SOFR minus EFFR (%) = 0.02 (as of 2026-11-18); MOVE index (Treasury volatility) = 94.9 (as of 2026-11-19); SEC central clearing on track (0 ok / 1 slipping / 2 delayed) = 1 (as of 2026-10-30)
+*Indicators:* SOFR minus EFFR (%) = 0.03 (as of 2026-11-19); MOVE index (Treasury volatility) = 103.8 (as of 2026-11-20); SEC central clearing on track (0 ok / 1 slipping / 2 delayed) = 1 (as of 2026-10-30)
 
 ### Japan fiscal / JGB / carry trade — 7/10 (High)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 Decades of near-zero rates made Japan the funding leg of a vast global carry trade. As the BoJ normalizes and JGB yields rise, fiscal financing gets harder and carry unwinds can transmit stress worldwide - the August 2024 mini-crash was a preview.
 
-*Indicators:* USD/JPY (yen strengthening = lower = risk) = 159.7 (as of 2026-11-19); 30-year JGB yield (%) = 4.08 (as of 2026-11-18); Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly) = 0 (as of 2026-11-16)
+*Indicators:* USD/JPY (yen strengthening = lower = risk) = 158.8 (as of 2026-11-20); 30-year JGB yield (%) = 4.03 (as of 2026-11-19); Takaichi plan financing clarity (0 ok / 1 unclear / 2 disorderly) = 0 (as of 2026-11-16)
 
 ### Private credit's opaque expansion — 8/10 (High)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 Lending has migrated from banks to lightly regulated private-credit funds, where assets are marked infrequently and leverage is opaque. Defaults are rising from a low base; the risk is that losses surface suddenly rather than being visible in real time.
 
-*Indicators:* US high-yield OAS (%, ≈310bps) = 3.47 (as of 2026-11-18); Direct-lending default rate (%, Fitch incl. distressed exchanges) = 6.30 (as of 2026-Q3 (TTM ended Sep 2026, published Oct 2026)); Large-fund redemption gates (0 none / 1 isolated / 2 widespread) = 2 (as of 2026-11-07)
+*Indicators:* US high-yield OAS (%, ≈310bps) = 3.52 (as of 2026-11-19); Direct-lending default rate (%, Fitch incl. distressed exchanges) = 6.30 (as of 2026-Q3 (TTM ended Sep 2026, published Oct 2026)); Large-fund redemption gates (0 none / 1 isolated / 2 widespread) = 2 (as of 2026-11-07)
 
 ### Stablecoins & Treasury demand — 4/10 (Moderate)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 Dollar stablecoins have become sizeable holders of short-term Treasuries, linking crypto plumbing to the funding market. A large redemption wave could force rapid T-bill selling; the GENIUS Act's implementation is the key regulatory variable.
 
-*Indicators:* Largest stablecoin max peg deviation (%) = 0.10 (as of 2026-11-19); Total USD stablecoin supply ($bn) = 284.9 (as of 2026-11-19); GENIUS implementation friction (0 smooth / 1 gaps / 2 problems) = 1 (as of 2026-11-16)
+*Indicators:* Largest stablecoin max peg deviation (%) = 0.12 (as of 2026-11-20); Total USD stablecoin supply ($bn) = 283.9 (as of 2026-11-20); GENIUS implementation friction (0 smooth / 1 gaps / 2 problems) = 1 (as of 2026-11-16)
 
-### Clearinghouses (financial chokepoint) — 5/10 (Elevated)
-*▲ 1 since 2026-11-12 (was 4)*
+### Clearinghouses (financial chokepoint) — 6/10 (Elevated)
+*▲ 2 since 2026-11-13 (was 4)*
 
 Central counterparties now concentrate the system's risk by design, and Treasury central-clearing mandates will route more activity through them. In a volatility spike, procyclical margin calls can amplify stress - they are a systemic single point of failure.
 
-*Indicators:* Equity volatility (VIX) = 27.7 (as of 2026-11-19); Treasury volatility (MOVE) = 94.9 (as of 2026-11-19); Treasury-clearing rollout stress (0 smooth / 1 friction / 2 problems) = 1 (as of 2026-11-09)
+*Indicators:* Equity volatility (VIX) = 31.4 (as of 2026-11-20); Treasury volatility (MOVE) = 103.8 (as of 2026-11-20); Treasury-clearing rollout stress (0 smooth / 1 friction / 2 problems) = 1 (as of 2026-11-09)
 
 ## Set 2 — Credit, Consumers & Valuations
 
 ### AI build-out circular financing — 7/10 (High)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 AI infrastructure spending vastly exceeds current AI revenue, increasingly financed with debt and circular vendor arrangements. If monetization disappoints or GPU-backed financing strains, the capex cycle could reverse sharply.
 
-*Indicators:* US investment-grade OAS (%) - big-issuer proxy = 0.93 (as of 2026-11-18); AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast) = 1 (as of 2026-10-29); GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute) = 1 (as of 2026-11-11)
+*Indicators:* US investment-grade OAS (%) - big-issuer proxy = 0.94 (as of 2026-11-19); AI capex-vs-revenue gap concern (0 closing / 1 wide / 2 widening fast) = 1 (as of 2026-10-29); GPU-backed debt refinancing stress (0 none / 1 signs / 2 acute) = 1 (as of 2026-11-11)
 
 ### CRE maturity wall / regional banks — 6/10 (Elevated)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 A wall of commercial real-estate loans - especially office - matures into higher rates and lower valuations, concentrated at regional banks. Rising delinquencies and 'extend and pretend' practices defer, rather than resolve, the losses.
 
 *Indicators:* CMBS office delinquency rate (%) = 12.3 (as of 2026-10); Regional-bank CRE stress (0 calm / 1 isolated / 2 cluster) = 1 (as of 2026-11-15)
 
 ### Hidden consumer debt — 6/10 (Elevated)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 Beneath headline figures, subprime auto and buy-now-pay-later delinquencies are climbing, and the labor market is the swing factor. A rise in unemployment would convert stretched-but-current borrowers into defaults quickly.
 
 *Indicators:* Subprime auto 60+ day delinquency (%) = 6.64 (as of 2026-09); US unemployment rate (%) = 4.10 (as of 2026-10-01); BNPL delinquency trend (0 stable / 1 rising / 2 spiking) = 1 (as of 2026-09-30)
 
 ### Insurance retreat — 5/10 (Elevated)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 Insurers are retreating from climate-exposed markets through non-renewals and exits, shifting risk onto homeowners and state backstops. Severe catastrophe seasons strain the system and feed into housing and mortgage stress.
 
@@ -90,28 +87,28 @@ Insurers are retreating from climate-exposed markets through non-renewals and ex
 ## Set 3 — Sovereigns & the Monetary Order
 
 ### Developing-world debt crisis — 7/10 (High)
-*▲ 2 since 2026-11-12 (was 5)*
+*▲ 2 since 2026-11-13 (was 5)*
 
 A strong dollar, high real rates, and heavy foreign-currency debt loads leave many developing economies vulnerable to a sudden stop. A cluster of sovereign defaults or new IMF programs would signal the slow-burn crisis turning acute.
 
-*Indicators:* Broad US dollar index (FRED DTWEXBGS) = 122.7 (as of 2026-11-13); US 10y real yield (TIPS, %) = 2.89 (as of 2026-11-17); New IMF programs / missed coupons (0 calm / 1 rising / 2 cluster) = 2 (as of 2026-11-16)
+*Indicators:* Broad US dollar index (FRED DTWEXBGS) = 122.7 (as of 2026-11-13); US 10y real yield (TIPS, %) = 2.88 (as of 2026-11-18); New IMF programs / missed coupons (0 calm / 1 rising / 2 cluster) = 2 (as of 2026-11-16)
 
 ### France / eurozone fragility — 5/10 (Elevated)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 France combines a wide deficit, a fragmented parliament, and recurring budget standoffs, widening its spread over Germany. Political instability or a rating downgrade would test eurozone cohesion at its second-largest economy.
 
 *Indicators:* OAT-Bund 10y spread (%) = 1.55 (as of 2026-11-16); Govt stability (0 stable / 1 fragile / 2 collapse-or-snap-election) = 1 (as of 2026-11-14); Rating action (0 stable / 1 negative outlook / 2 downgrade) = 1 (as of 2026-11-16)
 
 ### Gold / de-dollarization — 4/10 (Moderate)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 Central banks are accumulating gold and building non-dollar settlement arrangements at the margin. It is a slow erosion rather than a sudden shift, but reserve 'weaponization' events can accelerate diversification away from the dollar.
 
-*Indicators:* Gold price (USD/oz) = 3,678.6 (as of 2026-11-19); USD share of FX reserves (%, IMF COFER) = 56.7 (as of 2026-Q2 (end-June 2026)); Reserve-weaponization / settlement shift (0 none / 1 talk / 2 action) = 1 (as of 2026-11-16)
+*Indicators:* Gold price (USD/oz) = 3,529.6 (as of 2026-11-20); USD share of FX reserves (%, IMF COFER) = 56.7 (as of 2026-Q2 (end-June 2026)); Reserve-weaponization / settlement shift (0 none / 1 talk / 2 action) = 1 (as of 2026-11-16)
 
 ### Pensions / demographics — 4/10 (Moderate)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 Aging demographics and underfunded public pensions create slow fiscal pressure, while leveraged liability-driven strategies can blow up fast - as the UK gilt/LDI crisis showed in 2022. Benefit-reform fights are the political pressure valve.
 
@@ -120,58 +117,58 @@ Aging demographics and underfunded public pensions create slow fiscal pressure, 
 ## Set 4 — Geoeconomics & Trade Weapons
 
 ### China's price spillover (deflation or cost-push) — 7/10 (High)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 China's factory-gate prices spill into global goods markets in BOTH directions: years of PPI deflation exported disinflation and squeezed competitors, while a sharp 2026 reversal to positive PPI (energy/commodity cost-push) now exports input-cost pressure. Either large swing is destabilising; the indicator is scored on the size of the move, not its sign.
 
-*Indicators:* China PPI YoY (%) - large swing either way is worse = 5.70 (as of 2026-10); USD/CNY (yuan depreciation = higher = risk) = 6.68 (as of 2026-11-19); New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating) = 2 (as of 2026-11-16)
+*Indicators:* China PPI YoY (%) - large swing either way is worse = 5.70 (as of 2026-10); USD/CNY (yuan depreciation = higher = risk) = 6.66 (as of 2026-11-20); New tariff/anti-dumping actions (0 calm / 1 rising / 2 escalating) = 2 (as of 2026-11-16)
 
 ### Critical minerals as a weapon — 7/10 (High)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 China dominates the mining and especially the processing of rare earths and critical minerals, and has shown willingness to use export licensing as leverage. Supply chains for magnets and defense inputs have little near-term substitute.
 
 *Indicators:* Rare-earth export license flow (0 flowing / 1 slowing / 2 frozen) = 1 (as of 2026-11-09); Nov-2025 pause status (0 extended / 1 expiring / 2 lapsed) = 1 (as of 2026-11-16); US domestic RE producer blacklist (0 none / 1 entity-specific ban / 2 sector-wide ban) = 1 (as of 2026-11-16); Ex-China heavy rare-earth price premium (x China) = 17 (as of 2026-11-12)
 
 ### The lithography (ASML) chokepoint — 6/10 (Elevated)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 ASML is the sole maker of EUV lithography machines, with Zeiss the sole optics supplier - a single point of failure for advanced chips. Export controls, retaliation, or any disruption to this chain would ripple across the entire tech economy.
 
 *Indicators:* Taiwan / cross-strait tension (0 calm / 1 elevated / 2 crisis) = 1 (as of 2026-11-14); Export-control escalation (0 stable / 1 tightening / 2 retaliation) = 2 (as of 2026-11-15); Single-point concentration (0 easing / 1 high / 2 extreme) = 2 (as of 2026-11-16)
 
 ### Sea lanes & undersea cables — 7/10 (High)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 A few maritime chokepoints and undersea cables carry most global trade and data. The 2026 Hormuz/Red Sea disruptions showed how quickly closures spike energy and shipping costs; cable cuts are a parallel, under-watched vulnerability.
 
-*Indicators:* Hormuz/Red Sea status (0 open / 1 contested / 2 closed) = 2 (as of 2026-11-15); WTI crude oil (USD/bbl, CL=F) = 82.6 (as of 2026-11-19); Undersea cable incidents (0 none / 1 threatened / 2 cut) = 1 (as of 2026-11-13)
+*Indicators:* Hormuz/Red Sea status (0 open / 1 contested / 2 closed) = 2 (as of 2026-11-15); WTI crude oil (USD/bbl, CL=F) = 83.1 (as of 2026-11-20); Undersea cable incidents (0 none / 1 threatened / 2 cut) = 1 (as of 2026-11-13)
 
 ## Set 5 — Physical & Resource Limits
 
 ### AI power & the grid bottleneck — 7/10 (High)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 Data-center electricity demand is colliding with multi-year grid interconnection queues and slow capacity additions. Whether this is an acute shortfall or eases depends on the pace of AI build-out versus new supply - forecasts diverge widely.
 
 *Indicators:* Grid interconnection wait (months) = 61 (as of 2025-12-31); Data-center moratoria / backlash (0 none / 1 spreading / 2 widespread) = 2 (as of 2026-11-13); AI power-demand pressure (0 easing / 1 tight / 2 acute) = 1 (as of 2026-11-14)
 
 ### Copper & the electrification deficit — 4/10 (Moderate)
-*▼ 1 since 2026-11-12 (was 5)*
+*▼ 1 since 2026-11-13 (was 5)*
 
 Electrification and AI infrastructure point to structural copper deficits as demand outruns new mine supply, which takes a decade to build. Price is the live signal; mine disruptions and inventory draws would confirm tightening.
 
-*Indicators:* Copper price (USD/lb, COMEX HG=F) = 5.63 (as of 2026-11-19); Major mine disruptions (0 none / 1 some / 2 cluster) = 2 (as of 2026-11-09); Deficit timing (0 surplus / 1 balanced / 2 deficit) = 0 (as of 2026-10-15)
+*Indicators:* Copper price (USD/lb, COMEX HG=F) = 5.49 (as of 2026-11-20); Major mine disruptions (0 none / 1 some / 2 cluster) = 2 (as of 2026-11-09); Deficit timing (0 surplus / 1 balanced / 2 deficit) = 0 (as of 2026-10-15)
 
 ### Water - the underpriced input — 4/10 (Moderate)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 Water is systematically underpriced yet essential to chip fabrication, agriculture, and power. Droughts in key hubs (Taiwan's fabs, major farming regions) and transboundary disputes can disrupt supply chains in ways markets rarely price in advance.
 
 *Indicators:* Drought in a chip/farm hub (0 none / 1 emerging / 2 acute) = 0 (as of 2026-11-10); Key reservoir / basin stress (0 normal / 1 low / 2 critical) = 2 (as of 2026-11-15); Transboundary water dispute escalation (0 calm / 1 tense / 2 crisis) = 2 (as of 2026-11-02)
 
 ### Food & fertilizer fragility — 7/10 (High)
-*unchanged since 2026-11-12*
+*unchanged since 2026-11-13*
 
 Food security depends on concentrated fertilizer supply chains - potash, phosphate, and gas-derived nitrogen - exposed to export curbs and shipping chokepoints. Curbs or input shocks feed through to prices with a lag.
 
